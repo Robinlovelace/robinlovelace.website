@@ -32,7 +32,6 @@ a:visited {
 }
 
 #header {
-  text-transform: lowercase;
   text-align: left;
   background: #000000;
   -moz-border-radius-topleft: 1em;
