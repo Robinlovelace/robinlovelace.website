@@ -7,7 +7,7 @@ This is my first post on Github pages. For a while I've been sharing some though
 
 It's a bit limited, so testing out [Jekyll](http://github.com/mojombo/jekyll/tree/master), a website compiler and blogging platform written in Ruby. 
 
-Instead of starting from scratch, I cloned [Scott Chacon's](http://github.com/chacon/schacon.github.com) pages website.
+Instead of starting from scratch, I cloned [Scott Chacon's](http://github.com/schacon/schacon.github.com) pages website.
 
 In Scott's words, this is how it works: "I keep the source for
 my blog in a specially named GitHub repository and every time I push to it, 
