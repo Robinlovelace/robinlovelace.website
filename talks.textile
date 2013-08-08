@@ -1,5 +1,5 @@
 ---
-title: Scott Chacons Talks
+title: Robin Lovelaces Talks
 layout: master
 ---
 
