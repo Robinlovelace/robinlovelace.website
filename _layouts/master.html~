@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" >
     <title>Robin Lovelace - {{ page.title }}</title>
-    <link rel="stylesheet" href="/home/robin/robinlovelace.github.io/stylesheets/master.css" media="screen" charset="utf-8"/>
+    <link rel="stylesheet" href="stylesheets/master.css" media="screen" charset="utf-8"/>
     <script src="/javascripts/jquery.js" type="text/javascript" charset="utf-8"></script>
     <script src="/javascripts/jquery.github.js" type="text/javascript" charset="utf-8"></script>
     <link rel='alternate' type='application/rss+xml' href='http://feeds.feedburner.com/robinlovelace' />
@@ -18,10 +18,10 @@
       </div>
       <div id='menu'>
         <ul>
-          <li><a href='/'>Home</a></li>
+          <li><a href='index.html'>Home</a></li>
           <li><a href='http://robinlovelace.wordpress.com/'>Blog</a></li>
-          <li><a href='/about.html'>About</a></li> 
-          <li><a href='/publications.html'>Publications</a></li>
+          <li><a href='about.html'>About</a></li> 
+          <li><a href='publications.html'>Publications</a></li>
           <li><a href='http://github.com/robinlovelace' target='_blank' rel='me'>GitHub</a></li>
           <li><a href='http://twitter.com/robinlovelace' target='_blank' rel='me'>Twitter</a></li>
         </ul>
@@ -44,4 +44,4 @@
         pageTracker._trackPageview();
         } catch(err) {}</script>
   </body>
-</html><div id="header">
+</html>
