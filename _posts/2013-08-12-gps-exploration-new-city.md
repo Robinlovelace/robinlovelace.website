@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Daily GPS data to study exploration of a new city
-category: [ideas]
-tags: [geography, GIS, paper ideas, fun]
+category: ideas
+tags: geography, GIS
 ---
 The inspiration for this idead came one night curled up in bed in Sheffield, dreaming of my move to Leeds. How would I fit-in to my new surroundings? How long would it take to adapt? What would I do? and, crucially for this idea, where would I go?
 
