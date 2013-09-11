@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Github pages - blogging for free
-category: [computing]
-tags: [open source, linux, internet] 
+category: computing
+tags: open source, linux, internet
 ---
 
 This is my first post on Github pages. For a while I've been sharing some thoughts and files with the world via my  [wordpress.com](http://robinlovelace.wordpress.com/) account. 

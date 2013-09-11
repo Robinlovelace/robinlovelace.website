@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Austerity Sheffield
-category: [policy]
-tag: [austerity]
+category: policy
+tag: austerity
 ---
 
 Here's a little post about Austerity Sheffield, a new site about the impact of the spending cuts in South Yorkshire. You can find the website [here](http://jus.shef.ac.uk/mawebdissertations2013/austerity-sheffield/).
