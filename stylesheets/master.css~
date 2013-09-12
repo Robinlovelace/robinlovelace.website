@@ -200,7 +200,7 @@ div.related {
 }
 
 #home_right {
-  overflow: auto
+  word-wrap: break-word
   width: 10 em;
   margin-left: 1em;
   margin-right: 1em;
