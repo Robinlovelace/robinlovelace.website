@@ -200,11 +200,12 @@ div.related {
 }
 
 #home_right {
-  overflow: auto
+  overflow: auto;
   width: 10 em;
   margin-left: 1em;
   margin-right: 1em;
   color: green;
+  word-wrap: break-word;
 }
 
 .clearfix { clear: both;}
