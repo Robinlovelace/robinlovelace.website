@@ -1,3 +1,5 @@
 ipygments: true
 limit_posts: 5
 comments: true 
+paginate: 10
+
