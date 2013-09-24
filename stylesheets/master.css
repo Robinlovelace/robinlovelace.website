@@ -201,11 +201,10 @@ div.related {
 
 #home_right {
   overflow: auto;
-  width: 10 em;
+  width: 220px;
   margin-left: 1em;
   margin-right: 1em;
   color: green;
-  word-wrap: break-word;
 }
 
 .clearfix { clear: both;}
