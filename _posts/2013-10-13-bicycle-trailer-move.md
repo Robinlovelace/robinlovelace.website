@@ -6,11 +6,11 @@ categories:
 - Bicycles
 - Pedal power
 ---
-Back in 2009 I moved from York to Sheffield to start a PhD on the (Energy Futures)[http://e-futures.group.shef.ac.uk/page/home/] 4 year course. 
+Back in 2009 I moved from York to Sheffield to start a PhD on the [Energy Futures](http://e-futures.group.shef.ac.uk/page/home/) 4 year course. 
 Young and naive, some friends and I decided to do it by bicycle, with one bicycle trailer filled to the brim and 4 large panniers carrying most of my stuff. 
  
 4 years later and I've moved again, this time to Leeds. I've got a new a job at Leeds University,
- working on the (Geotalisman)[http://www.geotalisman.org/] project in the department of geography. 
+ working on the [Geotalisman](http://www.geotalisman.org/) project in the department of geography. 
 Older and hopefully wiser, I decided to move house by bicycle again: it's shorter than the trip to York 
 (40 miles, not 60), I was more organised with planning (providing a month's notice for friends and 
 family to attend and after 4 years in Sheffield I knew many people who would be up for the ride. 
