@@ -17,7 +17,7 @@ family to attend and after 4 years in Sheffield I knew many people who would be 
 To make it more exciting, this time we brought music, in the form of a 12v sound system.
 See the map, words, images and video below for the full low-down on this epic ride. 
 
-<iframe height='405' width='590' frameborder='0' allowtransparency='true' scrolling='no' src='http://www.strava.com/activities/85890714/embed/d5c2ef90fb2cabe6678b32b81c8d95bd95c25915'></iframe>
+<iframe src="http://www.gpsies.com/mapOnly.do?fileId=nueyoqzfqmingzgc" width="600" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
 
 ## Introduction: preparation and kit
 The first stage was to recruit people. With a month's notice, I managed to get around 15 people to 
@@ -118,4 +118,4 @@ below, sounds and all.
 
 I will be forever grateful to all the people who helped out with this move. 
 
-<iframe src="http://www.gpsies.com/mapOnly.do?fileId=nueyoqzfqmingzgc" width="600" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+<iframe width="420" height="315" src="//www.youtube.com/embed/6a8QLiC4LV8" frameborder="0" allowfullscreen></iframe>
