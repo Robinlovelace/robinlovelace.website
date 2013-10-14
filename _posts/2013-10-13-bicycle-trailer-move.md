@@ -118,5 +118,4 @@ below, sounds and all.
 
 I will be forever grateful to all the people who helped out with this move. 
 
-<iframe width="420" height="315" src="//www.youtube.com/embed/6a8QLiC4LV8" frameborder="0" allowfullscreen></iframe>
-
+<iframe src="http://www.gpsies.com/mapOnly.do?fileId=nueyoqzfqmingzgc" width="600" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
