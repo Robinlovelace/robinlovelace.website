@@ -20,7 +20,7 @@ As with many things in Linux, the solution is not provided on a plate.
 A tiny program called `u1-publish-folder` is used. No actual coding is reqired:
 all you need to do is type the following into a terminal, and the program should be accessible:
 
-{% highlight bash linenos %}
+{% highlight bash %}
 # download the program script from the internet
 wget http://bazaar.launchpad.net/~sil/+junk/utility-programs/download/head:/u1publishfolder-20120417145707-dzynnctfx0qgro9a-1/u1-publish-folder
 sudo mv u1-publish-folder /bin/ # place the binary into the right directory
