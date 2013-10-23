@@ -20,12 +20,11 @@ As with many things in Linux, the solution is not provided on a plate.
 A tiny program called `u1-publish-folder` is used. No actual coding is reqired:
 all you need to do is type the following into a terminal, and the program should be accessible:
 
-
-```bash
+{% highlight bash lineos %}
 # download the program script from the internet
 wget http://bazaar.launchpad.net/~sil/+junk/utility-programs/download/head:/u1publishfolder-20120417145707-dzynnctfx0qgro9a-1/u1-publish-folder
 sudo mv u1-publish-folder /bin/ # place the binary into the right directory
-```
+{% endhighlight %}
 
 This is a good start, but it will still not work: try typing `u1-publish-folder`
 into a terminal: you should get an error saying `command not found`.
@@ -33,9 +32,11 @@ The reason why this has happened is probably because the *permissions* in the
 binary script are not set-up correctly.
 
 We can check this from the command line with the following code:
-```bash
+
+{% highlight ruby %}
 ls -l /bin/ # list the binary files available to your system
-```
+{% endhighlight %}
+
 
 This will generate a list of files and tell you about what permissions
 different users have. It's not worth worrying about this if all you
