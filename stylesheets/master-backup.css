@@ -3,10 +3,10 @@ body {
   background: #9F93F3;
   color: #333333;
 }
-.content h1{padding:.5em 0;}
+
 .listing-item,.listing-seperator{list-style-type:none;}
 .listing-item a{padding:.2em 1em;}
-.listing-item time{color:#474684;}
+.listing-item time{color:#999999;}
 .listing-seperator{font-weight:bold;}
 
 .more { font-size: 1em;}

@@ -5,21 +5,33 @@ title: Robin Lovelace on the WWWeb
 
 <div class='home_box' id='home_left'>
   <h2><a href='http://feeds.feedburner.com/rlspowerstar' class='float-right'><img src='/images/subscribe-icon.gif' alt='Subscribe'/></a> Latest Blog Post <span class="more">(<a href='/blog.html'>More</a>)</span></h2>
-   <ul class="listing">
-{% for post in site.posts %}
-  {% capture y %}{{post.date | date:"%Y"}}{% endcapture %}
-  {% if year != y %}
-    {% assign year = y %}
-    <li class="listing-seperator">{{ y }}</li>
-  {% endif %}
-  <li class="listing-item">
-    <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-    <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-  </li>
-{% endfor %}
-</ul> 
+  
+  <div class='post'>
+    <h1><a href='{{site.posts.first.url}}'>{{site.posts.first.title}}</a></h1>
+    <div class='body'>{{ site.posts.first.content }}
+    <h2>Previous posts </h2>
+    
+    <ul>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+      <p>{{ post.excerpt }}</p>
+    </li>
+  {% endfor %}
+</ul>
+
+
+    </div>
+    <a href='{{site.posts.first.url}}#disqus_thread'>Comments</a>
+    
+  </div>
 </div>
 <div class='home_box' id='home_right'>
+Watch this space! 
+<br> <br>
+<h3>Link of the day </h3>
+<br>
+<a href ="http://www.joabbess.com/">Jo Abbess's blog</a>: Possibly the most under-appreciated energy-climate resource on the internet, a wealth of information. 
 </div>
 
 <script type="text/javascript" charset="utf-8">
@@ -50,20 +62,4 @@ title: Robin Lovelace on the WWWeb
   ga('create', 'UA-33321165-2', 'robinlovelace.net');
   ga('send', 'pageview');
 
-//var text = ['foo', 'bar', 'baz'];
-  //  i = 0,
-    //$div = $('#home_right');
-
-//setInterval(function ()
-//{
-  //  $div.text(text[i++ % text.length]);
-//}, 1000);
-
-var now = new Date(Date.now());
-var daysOfYear = [];
-for (var d = new Date(2012, 0, 1); d <= now; d.setDate(d.getDate() + 1)) {
-    daysOfYear.push(new Date(d));
-}
-    $div = $('#home_right');
-    $div.d;
 </script>
