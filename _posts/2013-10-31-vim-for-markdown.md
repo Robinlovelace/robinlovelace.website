@@ -20,7 +20,7 @@ Kingsoft's elegant Microsof Word clone, 'Writer', and LibreOffice's open source 
 are both stable, native on Linux and visually attractive. Much nicer writing in fancy fonts than
 boring monospace right? Well not always - sometimes the visual content of these GUI-based text
 editors can get in the way and distract from the main task - communication.
-<a href="http://www.zimagez.com/zimage/screenshot-311013-162900.php">
+<br><a href="http://www.zimagez.com/zimage/screenshot-311013-162900.php">
   <img src="http://www.zimagez.com/miniature/screenshot-311013-162900.php" />
   </a>
 
