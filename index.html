@@ -4,19 +4,17 @@ title: Robin Lovelace on the WWWeb
 ---
 
 <div class='home_box' id='home_left'>
+<<<<<<< HEAD
   <h2><a href='http://feeds.feedburner.com/rlspowerstar' class='float-right'><img src='/images/subscribe-icon.gif' alt='Subscribe'/></a> Posts <span class="more"></span></h2>
+=======
+>>>>>>> 483353dd42b4938f013286aa15e1fb49c877ef3f
    <ul class="listing">
-{% for post in site.posts %}
-  {% capture y %}{{post.date | date:"%Y"}}{% endcapture %}
-  {% if year != y %}
-    {% assign year = y %}
-    <li class="listing-seperator">{{ y }}</li>
-  {% endif %}
-  <li class="listing-item">
-    <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-    <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-  </li>
-{% endfor %}
+  {% for post in site.posts %}
+    <li>
+		<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+        <p>{{ post.excerpt }}</p>
+    </li>
+  {% endfor %}
 </ul> 
 </div>
 <div class='home_box' id='home_right'>

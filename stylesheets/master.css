@@ -3,6 +3,7 @@ body {
   background: #9F93F3;
   color: #333333;
 }
+
 .content h1{padding:.5em 0;}
 .listing-item,.listing-seperator{list-style-type:none;}
 .listing-item a{padding:.2em 1em;}
@@ -188,16 +189,31 @@ div.related {
 }
 
 #content .home_box h2 {
-  background: #417378;
+  font-size: 1.6em;
   padding: 0.3em 0.5em;
-  border-bottom: 3px solid #255;
+  border-bottom: 3px solid;
   margin-bottom: 0em;
-  color: white;
+  color: black;  
+}
+
+.home_box ul
+{
+list-style-type: none;
+padding: 0px;
+margin: 0px;
 }
 
 .home_box h2 a {
-  color: white;
+  color: black;
   margin: 0 0.2em;
+  text-decoration:none;
+}
+
+.home_box h2 a:hover {
+  font-size: 1.1em;
+  color: red;
+  margin: 0 0.1em;
+  text-decoration:none;
 }
 
 #home_left {

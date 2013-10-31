@@ -1,5 +1,6 @@
 ipygments: true
 limit_posts: 5
 comments: true 
+markdown: redcarpet
 paginate: 10
 

@@ -2,9 +2,10 @@
 layout: post
 title: Moving house by bicycle trailer 
 categories:
-- Ecotech 
-- Bicycles
-- Pedal power
+- Ecotech
+tags:
+- bicycles
+- pedal power
 ---
 Back in 2009 I moved from York to Sheffield to start a PhD on the [Energy Futures](http://e-futures.group.shef.ac.uk/page/home/) 4 year Doctoral Training Centre. 
 Young and naive, some friends and I decided to do it by bicycle, with one bicycle trailer filled to the brim and 4 large panniers carrying most of my stuff. 
