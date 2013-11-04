@@ -1,4 +1,3 @@
-<script type="text/javascript">
 var d = new Date()
 var quote=new Array("Jan",
 "Feb",
@@ -16,4 +15,3 @@ var quote=new Array("Jan",
 //document.write(d.getDate() + ". ")
 //document.write(monthname[d.getMonth()] + " ")
 //document.write(d.getFullYear())
-</script>
