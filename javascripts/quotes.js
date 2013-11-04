@@ -1,4 +1,4 @@
-var d = 30
+var d = new Date()
 var quote=new Array("Jan",
 "Feb",
 "Ownership of cars, once considered a rite of passage into the adult world of property relationships, has increasingly lost ground to leasing arrangements. (Rifkin, 2001, p. 220).",
