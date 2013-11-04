@@ -1,7 +1,5 @@
-var d = new Date()
-var quote=new Array("Jan",
-"Feb",
-"Ownership of cars, once considered a rite of passage into the adult world of property relationships, has increasingly lost ground to leasing arrangements. (Rifkin, 2001, p. 220).",
+var d = new Date()%/10
+var quote=new Array("Ownership of cars, once considered a rite of passage into the adult world of property relationships, has increasingly lost ground to leasing arrangements. (Rifkin, 2001, p. 220).",
 "[Poor people] travel less often and over shorter distances than the average population, but the social and economic consequances of this behaviour, such as reduced work and educational opportunities and poor access to healthcare and other essential services, all to often have been overlooked. In part this is because the policy professionals have poorly understood `transport poverty' and its impact on social welfare (Lucas, 2004)",
 "Simplicity is the hallmark of any good theory and apparent complexity is often simplicity in disguise. (Batty 1976) Urban Modelling.",
 "The general importance of transport is not in doubt, but its very ordinariness leads to to its general acceptance and to a widespread assumption that transport is not a particularly interesting subject of study, except when things go wrong. (Hoyle and Knowles, 1992).",
