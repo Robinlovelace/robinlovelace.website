@@ -225,7 +225,10 @@ margin: 0px;
   width: 220px;
   margin-left: 1em;
   margin-right: 1em;
-  color: green;
+}
+
+home_right h3{
+    color: green;
 }
 
 .clearfix { clear: both;}
