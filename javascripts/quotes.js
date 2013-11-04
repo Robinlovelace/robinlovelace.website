@@ -11,6 +11,7 @@ var quote=new Array("Jan",
 "Oct",
 "Nov",
 "Dec")
+document.write(quote[d.getDay()] + " ")
 //document.write(weekday[d.getDay()] + " ")
 //document.write(d.getDate() + ". ")
 //document.write(monthname[d.getMonth()] + " ")
