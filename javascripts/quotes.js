@@ -8,7 +8,7 @@ var quote=new Array("Ownership of cars, once considered a rite of passage into t
 "Future ages will certainly look back upon us as a people so immersed in the pursuit of wealth as to be blind to high considerations. They will charge us with having culpably allowed the destruction of some of those records of Creation which we had it in our power to preserve; and while professing to regard every living thing as the direct handiwork and best evidence of a Creator, yet, with a strange inconsistency, seeing many of them perish irrecoverably from the face of the earth, uncared for and unkown. Alfred Russel Wallace, 1863.",
 "Mass production of liquid biofuels fermented from annual harvests of crop or residual biomass would require large storages of either cereal or cellulosic feed stocks or the produced ethanol (or both), and the bulkiness of residues and relatively low energy densities of all of these materials would make such storages more costly than those of refined oils. (Smil 2010)")
 //document.write(d.getDate())
-document.write(quote[d.getDate() %/10] + " ")
+document.write(quote[d.getDate()%10] + " ")
 //document.write(weekday[d.getDay()] + " ")
 //document.write(d.getDate() + ". ")
 //document.write(monthname[d.getMonth()] + " ")
