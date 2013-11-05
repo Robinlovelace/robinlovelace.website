@@ -10,14 +10,15 @@ tags:
 ---
 
 [Vim](http://www.vim.org/) is rapidly becoming my favourite text editor. This may seem strange
-because progress is often seen in terms of larger, flashier and, in terms of computing at least,
+because progress is often seen in terms of larger, flashier and - in terms of computing at least -
 bulkier and more resource intensive. Vim long ago overtook the grotesquely obese and colourful
 Microsoft Word, which does not even work properly on my favourite operating system Linux without
-resorting to Wine or booting up an entire virtual machine solves that problem now anyway. Both of these solutions add complexity
-and bother.(although the 
+resorting to Wine or booting up an entire virtual machine. Both of these solutions add complexity
+and bother. In any case, the 
 free [M$ Office clone Kingsoft Office](http://www.noobslab.com/2013/05/microsoft-office-alternative-kingsoft.html)  
 Kingsoft's elegant Microsof Word clone, 'Writer', and LibreOffice's open source 'Writer'
-are both stable, native on Linux and visually attractive. Much nicer writing in fancy fonts than
+are both stable, native on Linux and visually attractive, largely solving the problem.
+Much nicer writing in fancy fonts than
 boring monospace right? Well not always - sometimes the visual content of these GUI-based text
 editors can get in the way and distract from the main task - communication.
 <br><a href="http://www.zimagez.com/zimage/screenshot-311013-162900.php">
