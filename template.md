@@ -8,5 +8,4 @@ tags:
 - GIS
 - maps
 ---
-
-<iframe frameborder="0" width="100%" height="300" src="http://bl.ocks.org/d/d7defc8f828f444b5e25"></iframe>
+This is a template for posts written in Markdown.
