@@ -8,5 +8,6 @@ tags:
 - GIS
 - maps
 ---
-This was the topic of a talk I am doing tomorrow at the University of Sheffield.
-All slides, the tutorial and example data can be found on slideshare.net.
+This is the topic of a talk for a lecture and tutorial I'm delivering at the University of Sheffield.
+All slides, the tutorial and example data can be found in this [zip file](https://github.com/Robinlovelace/robinlovelace.github.io).
+<iframe src="http://www.slideshare.net/robinlovelace1985/slideshelf" width="760px" height="570px" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:none;" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe>
