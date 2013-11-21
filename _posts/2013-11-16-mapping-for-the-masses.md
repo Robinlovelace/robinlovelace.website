@@ -55,4 +55,4 @@ But given that MapBox specialize in making beautiful maps this should be the eas
 <iframe src="http://infoamazonia.org/embed/?map_id=6731&width=600&height=400" width="600" height="400" frameborder="0"></iframe>
 
 
-... To be continued.
+
