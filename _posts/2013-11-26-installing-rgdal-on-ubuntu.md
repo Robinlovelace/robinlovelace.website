@@ -25,6 +25,7 @@ Having installed rgdal on several computers, I still find it tricky to set-up co
 on new machines. The aim of this post is to make it less painful to others.
 
 R provides a cryptic response to the install command `install.packages("rgdal")` first time around:
+
 ```
 downloaded 1.5 Mb
 
@@ -47,7 +48,8 @@ If you have installed the GDAL libraries, then make sure that
 gdal-config is in your path. Try typing gdal-config at a
 shell prompt and see if it runs. If not, use:
  --configure-args='--with-gdal-config=/usr/local/bin/gdal-config'
-with appropriate values for your installation. ```
+with appropriate values for your installation. 
+```
 
 Essentially what this is telling you is that GDAL is not 
 visibly installed on your system. Typing `gdal-config` in 
