@@ -22,7 +22,7 @@ to represent statistics on cause of death during the Crimean War.
 In fact, I had been asked to make a "[spie chart](http://www.cs.huji.ac.il/~feit/papers/Spie03TR.pdf)."
 This post demonstrates, for the first time to my knowledge, how it can be done 
 using ggplot2:
-![plot of chunk unnamed-chunk-5](figure/unnamed-chunk-53.png) 
+![plot of chunk unnamed-chunk-5](https://raw.github.com/Robinlovelace/robinlovelace.github.io/master/figure/unnamed-chunk-53.png) 
 
 # Reading and looking at the data
 
@@ -32,10 +32,6 @@ This is the original dataset I was given:
 ```r
 f <- read.csv("F2.csv")
 f[1:10, 1:12]
-```
-
-```
-## Error: undefined columns selected
 ```
 
 
@@ -58,13 +54,13 @@ The first stage, however, is to demonstrate how the addition of
     width = 1))
 ```
 
-![plot of chunk unnamed-chunk-2](figure/unnamed-chunk-21.png) 
+![plot of chunk unnamed-chunk-2](https://raw.github.com/Robinlovelace/robinlovelace.github.io/master/figure/unnamed-chunk-21.png) 
 
 ```r
 p + coord_polar()
 ```
 
-![plot of chunk unnamed-chunk-2](figure/unnamed-chunk-22.png) 
+![plot of chunk unnamed-chunk-2](https://raw.github.com/Robinlovelace/robinlovelace.github.io/master/figure/unnamed-chunk-22.png) 
 
 
 The above example works well, but notice that all the bars are of equal widths. 
@@ -81,13 +77,13 @@ pos <- 0.5 * (cumsum(w) + cumsum(c(0, w[-length(w)])))
     stat = "identity"))
 ```
 
-![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-31.png) 
+![plot of chunk unnamed-chunk-3](https://raw.github.com/Robinlovelace/robinlovelace.github.io/master/figure/unnamed-chunk-31.png) 
 
 ```r
 p + coord_polar(theta = "x") + scale_x_continuous(labels = f$H, breaks = pos)
 ```
 
-![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-32.png) 
+![plot of chunk unnamed-chunk-3](https://raw.github.com/Robinlovelace/robinlovelace.github.io/master/figure/unnamed-chunk-32.png) 
 
 
 Finally a spie chart has been created. After that revelation, it was essentially about adding the 'bells and 
@@ -115,7 +111,7 @@ p + geom_bar(aes(x = pos, y = Allocation), width = w, color = "black", stat = "i
         fill = "green") + coord_polar()
 ```
 
-![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-41.png) 
+![plot of chunk unnamed-chunk-4](https://raw.github.com/Robinlovelace/robinlovelace.github.io/master/figure/unnamed-chunk-41.png) 
 
 ```r
 
@@ -128,7 +124,7 @@ p + geom_bar(aes(x = pos, y = Allo, width = w), color = "black", stat = "identit
         fill = "green") + coord_polar()
 ```
 
-![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-42.png) 
+![plot of chunk unnamed-chunk-4](https://raw.github.com/Robinlovelace/robinlovelace.github.io/master/figure/unnamed-chunk-42.png) 
 
 ```r
 
@@ -143,7 +139,7 @@ p + geom_bar(aes(x = pos, y = Allo, width = w), color = "black", stat = "identit
     breaks = pos)
 ```
 
-![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-43.png) 
+![plot of chunk unnamed-chunk-4](https://raw.github.com/Robinlovelace/robinlovelace.github.io/master/figure/unnamed-chunk-43.png) 
 
 ```r
 
@@ -156,7 +152,7 @@ p + geom_bar(aes(x = pos, y = Allo, width = w), color = "grey40", stat = "identi
     linetype = 3) + geom_abline(intercept = sqrt(0.9), slope = 0, linetype = 3)
 ```
 
-![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-44.png) 
+![plot of chunk unnamed-chunk-4](https://raw.github.com/Robinlovelace/robinlovelace.github.io/master/figure/unnamed-chunk-44.png) 
 
 ```r
 
@@ -170,7 +166,7 @@ p + geom_bar(aes(x = pos, y = Allo, width = w), color = "grey40", stat = "identi
     linetype = 5) + geom_vline(x = v3, linetype = 5) + coord_polar()
 ```
 
-![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-45.png) 
+![plot of chunk unnamed-chunk-4](https://raw.github.com/Robinlovelace/robinlovelace.github.io/master/figure/unnamed-chunk-45.png) 
 
 ```r
 
@@ -187,7 +183,7 @@ p + geom_bar(aes(x = pos, y = Allo, width = w), color = "grey40", stat = "identi
     theme_classic()
 ```
 
-![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-46.png) 
+![plot of chunk unnamed-chunk-4](https://raw.github.com/Robinlovelace/robinlovelace.github.io/master/figure/unnamed-chunk-46.png) 
 
 
 The above looks great, but ideally, for an 'infographic' feel, it would 
@@ -203,7 +199,7 @@ theme_infog <- theme_classic() + theme(axis.line = element_blank(), axis.title =
 last_plot() + theme_infog
 ```
 
-![plot of chunk unnamed-chunk-5](figure/unnamed-chunk-5.png) 
+![plot of chunk unnamed-chunk-5](https://raw.github.com/Robinlovelace/robinlovelace.github.io/master/figure/unnamed-chunk-5.png) 
 
 
 # Creating a ring
@@ -225,7 +221,7 @@ p + geom_bar(aes(x = pos, y = Allo, width = w), color = "grey40", stat = "identi
     fill = "lightgrey")
 ```
 
-![plot of chunk unnamed-chunk-6](figure/unnamed-chunk-61.png) 
+![plot of chunk unnamed-chunk-6](https://raw.github.com/Robinlovelace/robinlovelace.github.io/master/figure/unnamed-chunk-61.png) 
 
 ```r
 # we need the axes to be bigger for starters - try 1.3 to 1.5
@@ -237,7 +233,7 @@ p + geom_bar(aes(x = pos, y = Cap.r, width = w), color = "grey40", stat = "ident
     y = 1.196, width = w), color = "white", stat = "identity", fill = "white")
 ```
 
-![plot of chunk unnamed-chunk-6](figure/unnamed-chunk-62.png) 
+![plot of chunk unnamed-chunk-6](https://raw.github.com/Robinlovelace/robinlovelace.github.io/master/figure/unnamed-chunk-62.png) 
 
 ```r
 
@@ -251,7 +247,7 @@ last_plot() + geom_bar(aes(x = pos, y = Allo, width = w), color = "grey40",
     theme_infog
 ```
 
-![plot of chunk unnamed-chunk-6](figure/unnamed-chunk-63.png) 
+![plot of chunk unnamed-chunk-6](https://raw.github.com/Robinlovelace/robinlovelace.github.io/master/figure/unnamed-chunk-63.png) 
 
 
 # Just inner
@@ -271,7 +267,7 @@ p + geom_bar(aes(x = pos, y = Allo, width = w), color = "grey40", stat = "identi
     coord_polar() + scale_x_continuous(labels = f$H, breaks = pos) + theme_infog
 ```
 
-![plot of chunk unnamed-chunk-7](figure/unnamed-chunk-7.png) 
+![plot of chunk unnamed-chunk-7](https://raw.github.com/Robinlovelace/robinlovelace.github.io/master/figure/unnamed-chunk-7.png) 
 
 ```r
 ggsave("just-inner.png", width = 7, height = 7, dpi = 800)
