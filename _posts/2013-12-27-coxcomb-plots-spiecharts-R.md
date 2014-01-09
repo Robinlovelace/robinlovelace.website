@@ -2,7 +2,7 @@
 layout: post
 title: Coxcomb plots and 'spiecharts' in R
 categories:
-- software
+- R
 tags:
 - visualisation
 - open source

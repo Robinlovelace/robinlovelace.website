@@ -2,7 +2,7 @@
 layout: post
 title: Introduction to R and ggplot2 course  
 categories:
-- Software 
+- R
 tags:
 - open source
 - GIS

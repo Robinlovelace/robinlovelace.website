@@ -2,10 +2,11 @@
 layout: post
 title: Installing rgdal in Ubuntu 13.04 
 categories:
-- Software 
+- R
 tags:
 - open source
 - GIS
+- R
 ---
 The Geospatial Data Abstraction Library (GDAL) is a workhorse of digital mapping.
 Written in c++, it underpins many online and desktop geoprocessing programs including
