@@ -16,7 +16,8 @@ the values contained in the points to correspond with the polygons.
 These are complex computational problems. In this post 
 we will see how recent updates to R's `sp` package make
 the solution surprisingly intuitive and incredibly terse.
-![Input data for spatial clipping/aggregation](figure/Sampling_and_plotting_stations.png)
+
+![Input data for spatial clipping/aggregation](http://robinlovelace.net/figure/Sampling_and_plotting_stations.png)
 
 # Loading the data
 
@@ -39,7 +40,7 @@ plot(stations[sample(1:nrow(stations), 500), ])
 plot(lnd, add = T, col = "red")
 ```
 
-![plot of chunk Input data](figure/Input_data.png) 
+![plot of chunk Input data](http://robinlovelace.net/figure/Input_data.png) 
 
 
 # Spatial subsetting (clipping)
@@ -70,7 +71,7 @@ stations <- stations[lnd, ]
 plot(stations)
 ```
 
-![plot of chunk The clipped stations dataset](figure/The_clipped_stations_dataset.png) 
+![plot of chunk The clipped stations dataset](http://robinlovelace.net/figure/The_clipped_stations_dataset.png) 
 
 
 As the figure shows, only stations within the London borroughs are now shown.
@@ -142,7 +143,7 @@ plot(stations.m, col = clr)
 legend(legend = paste0("q", 1:4), fill = paste0("grey", seq(20, 80, 20)), "topright")
 ```
 
-![plot of chunk Choropleth map of mean values of stations in each borrough](figure/Choropleth_map_of_mean_values_of_stations_in_each_borrough.png) 
+![plot of chunk Choropleth map of mean values of stations in each borrough](http://robinlovelace.net/figure/Choropleth_map_of_mean_values_of_stations_in_each_borrough.png) 
 
 ```r
 areas <- sapply(stations.m@polygons, function(x) x@area)
