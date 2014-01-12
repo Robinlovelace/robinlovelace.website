@@ -3,10 +3,8 @@ title: Inspiring quotations
 layout: master
 ---
 
-This is a selection of some of my favourite phrases, harvested from a variety of sources.
-Rather than simply providing a list, each quote is given a topic and, in some cases, is followed by a
-brief explanation. Links to to the source material are made wherever possible;
-good quotes are best seen in the wider context.
+This is a selection of some of my favourite phrases from a variety of sources
+on a variety of topics. 
 
 ## Friendship
 
@@ -14,10 +12,6 @@ good quotes are best seen in the wider context.
 > hands of opportunity
 
 Robert Louis Stevenson, [Dr Jekyll and Mr Hyde](http://www.gutenberg.org/ebooks/42), 1886, p. 1.
-
-This quote for me sums up the importance of accepting people who are different from oneself in 
-everyday life. Those who try to hand pick their acquaintances based on hasty value judgements, 
-rather than simply based on *who they are* are the implicit arrogant target of this beautiful sentence.
 
 ## Fear
 
@@ -39,7 +33,7 @@ as discussed in an [article for Now Then Magazine](http://nowthenmagazine.com/is
 > Towards the end of the 20th century, and thanks to the private automobile, a simple worker could live in one place but carry out their work,
 > daily, 50 to 60 km away. This fact, which for the citizen formed part of their everyday routine, constitutes, without doubt, one of the greatest enigmas of Anthropology and History.
 
-Jose Ardillo, 2011, *[El Salario del Gigante](http://www.pepitas.net/libro/el-salario-del-gigante)*
+Jose Ardillo, 2011, [El Salario del Gigante](http://www.pepitas.net/libro/el-salario-del-gigante)
 
 This was the opening quote of my thesis. It appeared in a Spanish novel set in 2099 in a
 dystopian future where energy supplies and other resources are depleted. It expresses
@@ -52,7 +46,7 @@ by oil shortages.
 > Human beings are remarkably adept at discerning relationships from visual
 > representations. A well-crafted graph can help you make meaningful comparisons among thousands of pieces of information, extracting patterns not easily found through other methods. This is one reason why advances in the field of statistical graphics have had such a major impact on data analysis. Data analysts need to look at their data, and this is one area where R shines.
 
-([Kabacoff, 2009](http://www.manning.com/kabacoff/), p. 45).
+Robert Kabacoff, 2009, [R in Action, 2009](http://www.manning.com/kabacoff/), p. 45.
 
 
 
