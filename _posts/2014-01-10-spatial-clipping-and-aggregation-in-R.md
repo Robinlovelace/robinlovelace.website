@@ -16,7 +16,6 @@ the values contained in the points to correspond with the polygons.
 These are complex computational problems. In this post 
 we will see how recent updates to R's `sp` package make
 the solution surprisingly intuitive and incredibly terse.
-
 ![Input data for spatial clipping/aggregation](http://robinlovelace.net/figure/Sampling_and_plotting_stations.png)
 
 # Loading the data
