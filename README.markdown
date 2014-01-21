@@ -1,6 +1,5 @@
 Robin Lovelaces site
 ==================
 
-This is the Jekyll source for my blog.
+This is the Jekyll source for my website http://robinlovelace.net 
 
-Many thanks to Scott Chacon - it's based on his.
