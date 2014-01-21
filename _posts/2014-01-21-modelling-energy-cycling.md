@@ -1,5 +1,5 @@
 ---
-layout: blog
+layout: default
 title: Modelling the energy savings of cycling
 category: talks
 tags:
