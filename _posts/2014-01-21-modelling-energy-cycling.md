@@ -1,5 +1,11 @@
 ---
-published: false
+layout: blog
+title: Modelling the energy savings of cycling
+category: talks
+tags:
+ - transport
+ - energy
+ - modelling
 ---
 
 Below are the slides of a talk on modelling the energy and emissions savings offered by increased cycling. This is for a seminar on [Cycling and Transport Modelling](http://modellingonthemove.org/events/modelling-on-the-move-6-cycling-transport-modelling/). Audio and additional materials from the talk to be uploaded in due course.
