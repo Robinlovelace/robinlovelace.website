@@ -2,9 +2,10 @@
 layout: post
 title: Feral, a book review 
 categories:
-- Reviews 
-- Books
-
+ - Books
+tags:
+ - Reviews
+ - Environmentalism
 ---
 
 George Monbiot is a well-known environmentalist. He has a regular column in the Guardian newspaper, writes occasionally for a number of other publications (all his articles can be viewed on the clutter free website [www.monbiot.com](http://www.monbiot.com)) and a [number of books](http://en.wikipedia.org/wiki/George_Monbiot#Published_works) already under his name. As a child, I sometimes dreamed of 'saving the rainforest' and probably for this reason Monbiot became a natural role model as I grew up, even though he quickly destroyed my overly simplistic views of 'good' conservationists vs the 'bad' deforesters. His writing is broad, encapsulating the links between many different elements of what is, invariably, a more complex problem than what first impressions indicate. In the mid 2000s, George Monbiot took-on the 'greatest environmental threat' - climate change - almost head-on in his acclaimed book Heat. This provided motivation for me to seek solutions, not only on some abstract policy level, but in my everyday life. 
