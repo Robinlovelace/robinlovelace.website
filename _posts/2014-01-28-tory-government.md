@@ -8,10 +8,10 @@ tags:
  - short-termism
 ---
 Amidst the clamour of onrunning news stories and various 
-'crises' affecting different parts of the economy and society
-(some of which arguably caused by the government), it's 
+'crises' affecting different parts of the economy and society,
+it's 
 hard to step back and take stock of the kind of people who are in power. 
-"What kind of government is this?" is difficult to answer: 
+"What kind of government is this?" is a difficult question to answer: 
 "Not sure what you call this strange mutant of a Government, words fail"
 I was recently told. Well, in response to this failure I am happy to say 
 that I have found a neat summary of the current government in the form 
