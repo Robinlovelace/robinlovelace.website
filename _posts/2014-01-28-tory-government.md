@@ -16,7 +16,10 @@ hard to step back and take stock of the kind of people who are in power.
 I was recently told. Well, in response to this failure I am happy to say 
 that I have found a neat summary of the current government in the form 
 of a cartoon and a comment on it. Both can be found [here](http://www.theguardian.com/commentisfree/cartoon/2014/jan/27/flooding-defence-cuts-steve-bell).
+
 ![bell-gov](http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2014/1/27/1390860385428/Steve-Bell-28.1.2014-001.jpg).
+
+<!--more-->
 
 From the party that brings you abject lies dressed as obvious and self-evident truths - "We're all in this together", "the NHS is safe in our hands", and "labour-caused deficit (no mention of global banking collapse and Thatcher-loving idiot-Brown/Darling's foolish attempt to re-capitalise and re-finance every single failed bank with "our money" that hadn't been earned and paid as tax yet) - comes the most obvious proof of living in Cloud-Cuckoo Land that any government can provide: Denying the laws of physics and meteorology for ideological reasons.
 

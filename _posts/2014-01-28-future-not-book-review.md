@@ -26,7 +26,10 @@ that the book also has something important to offer optimists: a sober
 reality check about the severity of the situation we're in and a motivation
 to make our actions more intelligently. All in all, I still stand by
 everything I said in the original review, found below.
+
 ![fnot-book](http://www.ox.ac.uk/images/maincolumn/17660_Joerg_Friedrichs_book.jpg)
+
+<!--more-->
 
 
 ## My take on it
