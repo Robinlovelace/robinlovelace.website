@@ -7,6 +7,11 @@ layout: master
 
 This is a list of my publications to date:
 
+## Book chapters
+- Cheshire, J. & Lovelace, R. (2014).  Spatial data visualisation with R. In *Geocomputation, a Practical Primer*. In Press with Sage. Preprint [available online](https://github.com/geocomPP/sdv/raw/master/chapter.pdf).
+
+- Lovelace, R., & McLoughlin, A. (2014). Transport in Development. Engineers Without Borders (UK), [In Press](http://eprints.whiterose.ac.uk/77557/).
+
 ## Journal articles
 - Lovelace, R., Ballas, D., & Watson, M. (in press, August 2013). A spatial microsimulation approach for the analysis of commuter patterns: from individual to regional levels. Journal of Transport Geography. [doi: 10.1016/j.jtrangeo.2013.07.008](http://dx.doi.org/10.1016/j.jtrangeo.2013.07.008). [Preprint available here](http://www.personal.leeds.ac.uk/~georl/papers/smsim-4-transport.pdf)
 
@@ -16,7 +21,7 @@ This is a list of my publications to date:
 
 - Lovelace, R., & Temple, L. (2012). Carbon Capture and Storage: bury the myth and focus on alternatives. [Metis](http://www.ippr.org/publication/55/9674/metis-volume-3), 3. Full article available [here](http://www.personal.leeds.ac.uk/~georl/papers/CCS-myth-IPPR.pdf)
 
-- Lovelace, R., Beck, S. B. M., Watson, M., &amp; Wild, A. (2011). 
+- Lovelace, R., Beck, S. B. M., Watson, M., & Wild, A. (2011). 
 Assessing the energy implications of replacing car trips with bicycle 
 trips in Sheffield, UK. <em>Energy Policy</em>, <em>39</em>(4), 2075-2087. Elsevier. [doi:10.1016/j.enpol.2011.01.051](http://doi.org/10.1016/j.enpol.2011.01.051) preprint [available online](http://www.personal.leeds.ac.uk/~georl/papers/modal-shift-preprint.pdf)
 
@@ -45,6 +50,8 @@ trips in Sheffield, UK. <em>Energy Policy</em>, <em>39</em>(4), 2075-2087. Elsev
 - Lovelace, R. (2010). How to Set Up and Run a Bicycle Repair Company. <em><a href="http://campfire.theoildrum.com/node/5976">The Oil Drum</a>: Campfire</em>.
 
 ## User guides and manuals
+
+
 - Lovelace, R. (2013). Supplementary information: a user manual for the integerisation of IPF weights using R, 1–18. Available online on arXiv or from the [University of Leeds](http://www.personal.leeds.ac.uk/~georl/papers/supplement-3.pdf)
 
 -  Acosta, L. and Sergio, A. (2012) gvSIG Batoví: an educational resource for Plan Ceibal. Guide to open source GIS software (translator from Spanish to English). [Available here](http://elogeo.nottingham.ac.uk/xmlui/handle/url/149), on the [E-learning of the Open Geospatial comuunity (ELOGeo) ](http://elogeo.nottingham.ac.uk/xmlui/)website.
