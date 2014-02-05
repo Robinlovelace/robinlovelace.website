@@ -1,6 +1,7 @@
 ---
 title: Publications
 layout: master
+published: true
 ---
 
 # Publications
@@ -50,12 +51,10 @@ trips in Sheffield, UK. <em>Energy Policy</em>, <em>39</em>(4), 2075-2087. Elsev
 - Lovelace, R. (2010). How to Set Up and Run a Bicycle Repair Company. <em><a href="http://campfire.theoildrum.com/node/5976">The Oil Drum</a>: Campfire</em>.
 
 ## User guides and manuals
+- Lovelace, R. (2014). Harnessing Open Street Map Data with R and QGIS. Leeds School of Geography practical Working Paper. Available on [EloGeo](http://elogeo.nottingham.ac.uk/xmlui/browse?value=Lovelace%2C+Robin&type=author).
 
+- Lovelace, R. and Cheshire, J. (2014 and ongoing). Introduction to visualising spatial data in R. Tutorial for NCRM Short Course. Updated version hosted on [GitHub](https://github.com/Robinlovelace/Creating-maps-in-R).
 
 - Lovelace, R. (2013). Supplementary information: a user manual for the integerisation of IPF weights using R, 1–18. Available online on arXiv or from the [University of Leeds](http://www.personal.leeds.ac.uk/~georl/papers/supplement-3.pdf)
 
 -  Acosta, L. and Sergio, A. (2012) gvSIG Batoví: an educational resource for Plan Ceibal. Guide to open source GIS software (translator from Spanish to English). [Available here](http://elogeo.nottingham.ac.uk/xmlui/handle/url/149), on the [E-learning of the Open Geospatial comuunity (ELOGeo) ](http://elogeo.nottingham.ac.uk/xmlui/)website.
-
-
-
-
