@@ -14,7 +14,7 @@ This is a list of my publications to date:
 - Lovelace, R., & McLoughlin, A. (2014). Transport in Development. Engineers Without Borders (UK), [In Press](http://eprints.whiterose.ac.uk/77557/).
 
 ## Journal articles
-- Lovelace, R., Ballas, D., & Watson, M. (in press, August 2013). A spatial microsimulation approach for the analysis of commuter patterns: from individual to regional levels. Journal of Transport Geography. [doi: 10.1016/j.jtrangeo.2013.07.008](http://dx.doi.org/10.1016/j.jtrangeo.2013.07.008). [Preprint available here](http://www.personal.leeds.ac.uk/~georl/papers/smsim-4-transport.pdf)
+- Lovelace, R., Ballas, D., & Watson, M. (2014). A spatial microsimulation approach for the analysis of commuter patterns: from individual to regional levels. *Journal of Transport Geography, 34, 282-296.* [doi: 10.1016/j.jtrangeo.2013.07.008](http://dx.doi.org/10.1016/j.jtrangeo.2013.07.008). Preprint [available online](http://www.personal.leeds.ac.uk/~georl/papers/smsim-4-transport.pdf)
 
 - Lovelace, R., & Ballas, D. (2013). “Truncate, replicate, sample”: A method for creating integer weights for spatial microsimulation. Computers, Environment and Urban Systems, 41, 1–11. [doi10.1016/j.compenvurbsys.2013.03.004](http://dx.doi.org/10.1016/j.compenvurbsys.2013.03.004), [arXiv](http://arxiv.org/abs/1303.5228) and 
 [preprint](http://www.personal.leeds.ac.uk/~georl/papers/truncate-replicate-sample-preprint.pdf). Also see 
