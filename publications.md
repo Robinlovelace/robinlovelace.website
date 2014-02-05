@@ -36,6 +36,8 @@ trips in Sheffield, UK. *Energy Policy, 39(4)*, 2075-2087. Elsevier. [doi:10.101
 
 - On Yer Bike. *Now Then*, December 2012. Sheffield. Available [online](http://nowthenmagazine.com/issue-57/on-yer-bike/).
 
+- The mystery of Sheffield’s steepest hill. _Now Then_, February 2012. Sheffield. Available online as in [Html](http://nowthenmagazine.com/issue-47/hills/) or [pdf](http://www.personal.leeds.ac.uk/~georl/papers/steepest-hill-draft-5-rl.pdf).
+
 - Bike trailers. *Now Then*, September 2011. Sheffield. Available [online](http://nowthenmagazine.com/issue-42/bike-trailers/).
 
 - The Ecotechnic Future. <em>Now Then</em>, March 2011. Sheffield. <a href="http://nowthenmagazine.com/issue-37/the-ecotechnic-future/">Html</a> or <a href="http://www.personal.leeds.ac.uk/~georl/papers/Trailer12-accepted.pdf">pdf</a>.
@@ -43,8 +45,6 @@ trips in Sheffield, UK. *Energy Policy, 39(4)*, 2075-2087. Elsevier. [doi:10.101
 - Fear. <em>Now Then</em>, November 2010, p. 22-23. Sheffield. <a href="http://nowthenmagazine.com/issue-33/fear/">Html</a> or <a href="http://www.personal.leeds.ac.uk/Ecotechnic-NT-37.pdf">pdf</a>.
 
 - Energy futures. <em>Now Then</em>, June 2010, p. 16-17. Sheffield. <a href="http://www.personal.leeds.ac.uk/~georl/papers/Energy_futures.pdf">Html</a> or [pdf](http://nowthenmagazine.com/wp-content/themes/nowthen/backissues/nt27_jun10.pdf).
-
-- The mystery of Sheffield’s steepest hill. _Now Then_, February 2012. Sheffield. Available online as in [Html](http://nowthenmagazine.com/issue-47/hills/) or [pdf](http://www.personal.leeds.ac.uk/~georl/papers/steepest-hill-draft-5-rl.pdf).
 
 ## Online magazines and blogs
 - Lovelace, R. and Temple, L. (2012). Carbon capture and storage: time to bury the myth? [*Responding to Climate Change*](http://www.rtcc.org/2012/10/02/carbon-capture-and-storage-time-to-bury-the-myth/), 15 October. 
