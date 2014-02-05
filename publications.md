@@ -38,9 +38,9 @@ trips in Sheffield, UK. *Energy Policy, 39(4)*, 2075-2087. Elsevier. [doi:10.101
 
 - The mystery of Sheffield’s steepest hill. _Now Then_, February 2012. Sheffield. Available online as in [Html](http://nowthenmagazine.com/issue-47/hills/) or [pdf](http://www.personal.leeds.ac.uk/~georl/papers/steepest-hill-draft-5-rl.pdf).
 
-- Bike trailers. *Now Then*, September 2011. Sheffield. Available [online](http://nowthenmagazine.com/issue-42/bike-trailers/).
+- Bike trailers. *Now Then*, September 2011. Sheffield. Available online as [html](http://nowthenmagazine.com/issue-42/bike-trailers/) or [pdf](http://www.personal.leeds.ac.uk/~georl/papers/Trailer12-accepted.pdf).
 
-- The Ecotechnic Future. <em>Now Then</em>, March 2011. Sheffield. <a href="http://nowthenmagazine.com/issue-37/the-ecotechnic-future/">Html</a> or <a href="http://www.personal.leeds.ac.uk/~georl/papers/Trailer12-accepted.pdf">pdf</a>.
+- The Ecotechnic Future. <em>Now Then</em>, March 2011. Sheffield. <a href="http://nowthenmagazine.com/issue-37/the-ecotechnic-future/">Html</a> or <a href="http://ubuntuone.com/p/1FBU/">pdf</a>.
 
 - Fear. <em>Now Then</em>, November 2010, p. 22-23. Sheffield. <a href="http://nowthenmagazine.com/issue-33/fear/">Html</a> or <a href="http://www.personal.leeds.ac.uk/Ecotechnic-NT-37.pdf">pdf</a>.
 
