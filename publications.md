@@ -63,3 +63,6 @@ trips in Sheffield, UK. *Energy Policy, 39(4)*, 2075-2087. Elsevier. [doi:10.101
 - Lovelace, R. (2013). Supplementary information: a user manual for the integerisation of IPF weights using R, 1–18. Available online on arXiv or from the [University of Leeds](http://www.personal.leeds.ac.uk/~georl/papers/supplement-3.pdf)
 
 -  Acosta, L. and Sergio, A. (2012) gvSIG Batoví: an educational resource for Plan Ceibal. Guide to open source GIS software (translator from Spanish to English). [Available here](http://elogeo.nottingham.ac.uk/xmlui/handle/url/149), on the [E-learning of the Open Geospatial comuunity (ELOGeo) ](http://elogeo.nottingham.ac.uk/xmlui/)website.
+
+## Thesis
+- Lovelace, R. (2014). The energy costs of commuting: a spatial microsimulation approach. University of Sheffield. Viva (16/12/2013) examined by professors [Michael Batty](http://www.ucl.ac.uk/bartlett/people/?school=casa&upi=JMBAT23) and [Charles Pattie](http://www.sheffield.ac.uk/geography/staff/pattie_charles). Entire thesis document and example code and data available from a [GitHub repository](https://github.com/robinlovelace/thesis-reproducible).
