@@ -53,7 +53,7 @@ and was heartened to see that, after forcing the route onto the exciting
 [Snake Pass](http://en.wikipedia.org/wiki/Snake_Pass) the 
 [result](http://goo.gl/maps/2uwXz) was similar to the CycleStreets option:
 
-![Sheffield to Manchester - google option](https://www.dropbox.com/s/2t5oyfk4rghrygq/shef2mancg.png)
+![Sheffield to Manchester - google option](https://www.dropbox.com/s/e0buv5a171j659d/shef2mancg.png)
 
 Basically, I was happy with the distance (~40 miles), time estimated by CycleStreets (4 1/2 hours) and Google (4 1/4 hours) and was confident that I could get onto the Snake Pass without 
 need for navigation. Owning a smartphone, I decided to play it by ear and wait for instructions
@@ -62,18 +62,31 @@ As explained below, I was pleasantly surprised.
 
 ## The ride itself
 
-Speed vs fun vs safety compromise. 
+The ride itself was fun, fast and felt safe. My friend Woody
+accompanied to [Ladybower resevoir](http://en.wikipedia.org/wiki/Ladybower_Reservoir), after which point I was on my own. 
+Riding up to the summit of the Pennine Pass (1600 ft, a climb of 1300 ft from the 
+starting height of 300 ft in Sheffield) was a mission, but not arduous on my
+road bike, lightly loaded with a single pannier and a rucksack. 
 
-Google maps navigation.
+Before I knew it I was on the fast descent into Glossop. This made the trip worth it on 
+its own, as the Snake Pass is ultra smooth and has pleasant curves around beautiful 
+scenery. Having never been into Glossop centre, I stopped for a cup of tea and relax there. 
 
-Glossop.
+It was raining when I left, recharged after a brew. The route planning was also more 
+complicated from this point onwards, unless you are *really* in a rush in which 
+case you would just continue on the A57. At this point I got my smartphone out. 
 
-Sheffield to Manchester is a well worn path ...
+Initially CycleStreets "live ride" journey planner was my first choice, but it crashed a 
+couple of times at which point I switched to Google Maps' navigation app. 
+I wore earphones, allowing the soothing lady's voice to tell me "turn left onto Mottram Road in 1000 ft" and other clear instructions. Obediently I followed. 
 
-With the ascendency of cycling as a fun, healthy cheap and environmentally friendly form of 
-transport, there has also been much interest in doing the trip by bike. 
+The great thing about following route planners like this is that you can appear on completely unexpected paths. This happened spectacularly for me, as I was guided onto 
+a hidden canal path which took me 5 miles all the way to my destination. 
 
-## Alternative routes
+To re-trace this track - which I wholy recommend - you can download the GPS trace from 
+[here, on Open Street Map](http://www.openstreetmap.org/user/RobinLovelace/traces/1655684). Of course there are other route options, but I'd say that this one combines the a great combination of speed, fun and canal towpaths!
+
+## Alternative routes and final reflections
 
 I am 
 by no means the first to attempt the journey, and many alternative routes are available online.
@@ -96,4 +109,6 @@ An even more rural route is the [trans pennine trail](http://www.gps-routes.co.u
 only a part: it runs from coast to coast. Again, this route is ideal for leisure purposes, but 
 will be much slower than the road option I took.
 
-## Reflections and doing it again
+All in all it was a great ride, even given the rain. I would fully recommend inter-city cycling to anyone - just take a day out and go for it - and with smartphones and
+the recent emergence fantastic
+bicycle-specific online route planners, planning and executing the journey is easier than ever before.
