@@ -53,7 +53,7 @@ and was heartened to see that, after forcing the route onto the exciting
 [Snake Pass](http://en.wikipedia.org/wiki/Snake_Pass) the 
 [result](http://goo.gl/maps/2uwXz) was similar to the CycleStreets option:
 
-![Sheffield to Manchester - google option](https://www.dropbox.com/s/e0buv5a171j659d/shef2mancg.png)
+![Sheffield to Manchester Google option](https://www.dropbox.com/s/e0buv5a171j659d/shef2mancg.png)
 
 Basically, I was happy with the distance (~40 miles), time estimated by CycleStreets (4 1/2 hours) and Google (4 1/4 hours) and was confident that I could get onto the Snake Pass without 
 need for navigation. Owning a smartphone, I decided to play it by ear and wait for instructions
@@ -63,7 +63,7 @@ As explained below, I was pleasantly surprised.
 ## The ride itself
 
 The ride itself was fun, fast and felt safe. My friend Woody
-accompanied to [Ladybower resevoir](http://en.wikipedia.org/wiki/Ladybower_Reservoir), after which point I was on my own. 
+accompanied me to [Ladybower resevoir](http://en.wikipedia.org/wiki/Ladybower_Reservoir), after which point I was on my own. 
 Riding up to the summit of the Pennine Pass (1600 ft, a climb of 1300 ft from the 
 starting height of 300 ft in Sheffield) was a mission, but not arduous on my
 road bike, lightly loaded with a single pannier and a rucksack. 
