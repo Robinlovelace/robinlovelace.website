@@ -1,9 +1,11 @@
 ---
 layout: post
 title: Sheffield to Manchester cycle
+published: true
 ---
 
-I have recently arrived in Manchester, having cycled all the way from Sheffield. 
+I arrived in Manchester around 2pm, having set-off from Sheffield and 9am and 
+cycled all the way. 
 This may sound like a [masochistic](http://en.wikipedia.org/wiki/Sadomasochism) 
 mid February activity. But I can only report good vibes: a subtle rush of 
 [endorphins](http://en.wikipedia.org/wiki/Endorphins) released from pushing the 
@@ -11,13 +13,45 @@ body and the satisfaction of knowing I got here with my own energies alone,
 rather than depending on [ancient sunlight](http://techalive.mtu.edu/meec/module19/Page4.htm)
 stored in fossil fuels and imported from afar. 
 
-The route I took was fast, fun, safe yet exciting. Having done the trip multiple times
-and feeling sure that this is the best route I've taken so far I feel compelled to share
-it with the world (see map below). 
+The route I took was fast, fun, safe yet exciting. 
+Having done the trip a few times before,
+and feeling sure that this was the best route 
+I've taken so far, I'm to share
+it with the world. The actual route I took was recorded by the 
+GPS on my smartphone (which I uploaded to [GPSies](http://gpsies.com/)), 
+enabling it to be stored for posterity and downloaded by others for 
+future reference. I wouldn't say this is the *best* possible 
+route from Sheffield to Manchester, but I would recommend it to most 
+cyclists, for reasons outlined below.
 
 <iframe src="http://www.gpsies.com/mapOnly.do?fileId=xaczqjszydrvitus" width="600" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
 
 <!--more-->
+
+## Deciding the route in advance
+
+To be honest, I didn't put a lot of thought into planning the route 
+in advance. Simply typing "Sheffield" and "Manchester" into the 
+from and to fields in the open source bicycle route planner
+[CycleStreets.net](http://www.cyclestreets.net/) yields 3 options, 
+the fastest of which looked reasonable to me. Each of these can 
+be seen on the [route's own web page]()http://www.cyclestreets.net/journey/39363548/, automatically generated and 
+stored for posterity.
+
+![Route options from CycleStreets.net](https://www.dropbox.com/s/2t5oyfk4rghrygq/shef2manc.png)
+
+As you'll see from the [route's page](http://www.cyclestreets.net/journey/39363548/), 
+CycleStreets.net very handily provides turn-by-turn breakdown of the trip, including 
+[links to photos uploaded to the internet by enthusiasts](http://www.cyclestreets.net/location/33925/) and sub-maps of key parts of the route, such as the one 
+displayed below.
+
+![key route part](http://www.cyclestreets.net/journey/39363548/maplet39363548fastest44075for4398.png)
+
+
+
+
+
+
 
 Speed vs fun vs safety compromise. 
 
