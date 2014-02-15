@@ -4,10 +4,10 @@ title: Sheffield to Manchester cycle
 published: true
 ---
 
-I arrived in Manchester around 2pm, having set-off from Sheffield and 9am and 
+I arrived in Manchester around 2pm, having set-off from Sheffield at 9am and 
 cycled all the way. 
 This may sound like a [masochistic](http://en.wikipedia.org/wiki/Sadomasochism) 
-mid February activity. But I can only report good vibes: a subtle rush of 
+mid-February activity. But I can only report good vibes: a subtle rush of 
 [endorphins](http://en.wikipedia.org/wiki/Endorphins) released from pushing the 
 body and the satisfaction of knowing I got here with my own energies alone, 
 rather than depending on [ancient sunlight](http://techalive.mtu.edu/meec/module19/Page4.htm)
@@ -35,7 +35,7 @@ in advance. Simply typing "Sheffield" and "Manchester" into the
 from and to fields in the open source bicycle route planner
 [CycleStreets.net](http://www.cyclestreets.net/) yields 3 options, 
 the fastest of which looked reasonable to me. Each of these can 
-be seen on the [route's own web page]()http://www.cyclestreets.net/journey/39363548/, automatically generated and 
+be seen on the [route's own web page](http://www.cyclestreets.net/journey/39363548/), automatically generated and 
 stored for posterity.
 
 ![Route options from CycleStreets.net](https://www.dropbox.com/s/2t5oyfk4rghrygq/shef2manc.png)
@@ -47,11 +47,20 @@ displayed below.
 
 ![key route part](http://www.cyclestreets.net/journey/39363548/maplet39363548fastest44075for4398.png)
 
+I did also try planning the route using 
+[Google's bicycle route planning option](https://maps.google.com/maps?saddr=Sheffield,+United+Kingdom&daddr=Manchester,+United+Kingdom&hl=en&ll=53.466796,-1.841583&spn=0.409566,0.883026&sll=53.426314,-1.86006&sspn=0.409953,0.883026&geocode=FQmILgMde5Hp_ykVvuj6qQp5SDF4sAav9ScoPg%3BFZwHMAMd27Dd_ynb9SZSTE16SDGqa_4EOBS-2Q&oq=man&dirflg=b&mra=ltm&t=m&z=10&lci=bike)
+and was heartened to see that, after forcing the route onto the exciting 
+[Snake Pass](http://en.wikipedia.org/wiki/Snake_Pass) the 
+[result](http://goo.gl/maps/2uwXz) was similar to the CycleStreets option:
 
+![Sheffield to Manchester - google option](https://www.dropbox.com/s/2t5oyfk4rghrygq/shef2mancg.png)
 
+Basically, I was happy with the distance (~40 miles), time estimated by CycleStreets (4 1/2 hours) and Google (4 1/4 hours) and was confident that I could get onto the Snake Pass without 
+need for navigation. Owning a smartphone, I decided to play it by ear and wait for instructions
+from CycleStreets.net or Google on how to navigate myself to Manchester city centre. 
+As explained below, I was pleasantly surprised.
 
-
-
+## The ride itself
 
 Speed vs fun vs safety compromise. 
 
@@ -86,3 +95,5 @@ and right turns and other urban phonomena).
 An even more rural route is the [trans pennine trail](http://www.gps-routes.co.uk/routes/home.nsf/RoutesLinksCycle/trans-pennine-trail-walking-and-cycle-route), a completely off-road trail of which Sheffield-Manchester is 
 only a part: it runs from coast to coast. Again, this route is ideal for leisure purposes, but 
 will be much slower than the road option I took.
+
+## Reflections and doing it again
