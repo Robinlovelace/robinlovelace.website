@@ -14,7 +14,7 @@ they would be:
 
 > It's hard for many people today
 > to imagine what the world was like when only big business and big government ran all
-> the computers. Let's just say, you couldn't get much done ([Schotts 2013](http://linuxcommand.org/tlcl.php)).
+> the computers. Let's just say, you couldn't get much done ([Shotts 2013](http://linuxcommand.org/tlcl.php)).
  
 In other words, people now take computers for granted. They're toys, for playing Angry Birds, 
 communicating with friends and shopping. But back in the early days of the digital revolution
@@ -28,7 +28,7 @@ described in the same book in more optimistic terms:
  control over most of the world's computers and deciding what you can and cannot do
  with them. Fortunately, people from all over the world are doing something about it. They
  are fighting to maintain control of their computers by writing their own software. They
- are building Linux ([Schotts 2013](http://linuxcommand.org/tlcl.php)).
+ are building Linux ([Shotts 2013](http://linuxcommand.org/tlcl.php)).
 
 If users of computers are not aware of this history, there is a danger that we sleepwalk into a
 situation where all computing is controlled from above, where nobody has complete control 
