@@ -13,15 +13,15 @@ body and the satisfaction of knowing I got here with my own energies alone,
 rather than depending on [ancient sunlight](http://techalive.mtu.edu/meec/module19/Page4.htm)
 stored in fossil fuels and imported from afar. 
 
-The route I took was fast, fun, safe yet exciting. 
+The route I took was fast, fun and felt safe yet exciting. 
 Having done the trip a few times before,
 and feeling sure that this was the best route 
-I've taken so far, I'm to share
+I've taken so far, I'm going to share
 it with the world. The actual route I took was recorded by the 
 GPS on my smartphone (which I uploaded to [GPSies](http://gpsies.com/)), 
 enabling it to be stored for posterity and downloaded by others for 
 future reference. I wouldn't say this is the *best* possible 
-route from Sheffield to Manchester, but I would recommend it to most 
+route from Sheffield to Manchester, but I would certainly recommend it to most 
 cyclists, for reasons outlined below.
 
 <iframe src="http://www.gpsies.com/mapOnly.do?fileId=xaczqjszydrvitus" width="600" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
@@ -38,7 +38,7 @@ the fastest of which looked reasonable to me. Each of these can
 be seen on the [route's own web page](http://www.cyclestreets.net/journey/39363548/), automatically generated and 
 stored for posterity.
 
-![Route options from CycleStreets.net](https://www.dropbox.com/s/2t5oyfk4rghrygq/shef2manc.png)
+![Route options from CycleStreets.net](https://dl.dropboxusercontent.com/u/15008199/Images-2-share/shef2manc.png)
 
 As you'll see from the [route's page](http://www.cyclestreets.net/journey/39363548/), 
 CycleStreets.net very handily provides turn-by-turn breakdown of the trip, including 
@@ -57,7 +57,7 @@ and was heartened to see that, after forcing the route onto the exciting
 
 Basically, I was happy with the distance (~40 miles), time estimated by CycleStreets (4 1/2 hours) and Google (4 1/4 hours) and was confident that I could get onto the Snake Pass without 
 need for navigation. Owning a smartphone, I decided to play it by ear and wait for instructions
-from CycleStreets.net or Google on how to navigate myself to Manchester city centre. 
+from CycleStreets.net or Google on how to navigate myself to Manchester city centre once in Glossop. 
 As explained below, I was pleasantly surprised.
 
 ## The ride itself
@@ -80,8 +80,9 @@ Initially CycleStreets "live ride" journey planner was my first choice, but it c
 couple of times at which point I switched to Google Maps' navigation app. 
 I wore earphones, allowing the soothing lady's voice to tell me "turn left onto Mottram Road in 1000 ft" and other clear instructions. Obediently I followed. 
 
-The great thing about following route planners like this is that you can appear on completely unexpected paths. This happened spectacularly for me, as I was guided onto 
-a hidden canal path which took me 5 miles all the way to my destination. 
+The great thing about following route planners like 
+this is that you can appear on completely unexpected paths. This happened spectacularly for me, as I was guided onto 
+a canal path which is hidden from the road. This took me 5 miles all the way to my destination. 
 
 To re-trace this track - which I wholy recommend - you can download the GPS trace from 
 [here, on Open Street Map](http://www.openstreetmap.org/user/RobinLovelace/traces/1655684). Of course there are other route options, but I'd say that this one combines the a great combination of speed, fun and canal towpaths!
@@ -90,20 +91,21 @@ To re-trace this track - which I wholy recommend - you can download the GPS trac
 
 I am 
 by no means the first to attempt the journey, and many alternative routes are available online.
-[Cycle Sheffield](http://www.cyclesheffield.org.uk/), offers a 
+[Cycle Sheffield](http://www.cyclesheffield.org.uk/), for example, offers a 
 [detailed description](http://www.cyclesheffield.org.uk/route-planning/long-distance-routes/sheffield-to-manchester/)
 of a 
 largely rural route (see map below). 
 
 <iframe src="http://maps.google.com/maps/ms?msa=0&amp;msid=204112132629730101627.0004a38bf89ff2c48e1cb&amp;ie=UTF8&amp;t=h&amp;ll=53.390534,-1.793089&amp;spn=0.112659,0.661068&amp;output=embed" height="350" width="425" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe><br />
 
-This route avoids the car-infested Snake and Woodhead Pass, the former 
-because "it is narrow and has fast traffic", the latter being "a highly undesirable place to be for a cyclist". 
+This route avoids the busier Snake and Woodhead passes. The former 
+because it is described as "narrow and has fast traffic", the latter being "a highly undesirable place to be for a cyclist". 
 Having ridden both routes, I would say that both descriptions are a little exagerated: yes cars tend to 
 whizz over the snake pass and yes there is a high proportion of trucks in the traffic in the flow over Woodhead. 
 But neither felt inherently dangerous at any time: in some ways the long expanses of road space felt safer
 per kilometre than urban traffic, which is far less predictable (due to cars pulling out, traffic lights, left
-and right turns and other urban phonomena).
+and right turns and other urban phonomena). Wynnat's pass is probably the least busy option, but still requires
+busy roads to get there quickly and is slightly longer than the swooping Snake Pass.
 
 An even more rural route is the [trans pennine trail](http://www.gps-routes.co.uk/routes/home.nsf/RoutesLinksCycle/trans-pennine-trail-walking-and-cycle-route), a completely off-road trail of which Sheffield-Manchester is 
 only a part: it runs from coast to coast. Again, this route is ideal for leisure purposes, but 
