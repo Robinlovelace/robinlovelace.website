@@ -4,6 +4,7 @@ title: Finding and replacing character strings in multiple files with the Linux 
 categories:
 - Software
 tags:
+ - software
  - Linux
  - regex
  - sed
