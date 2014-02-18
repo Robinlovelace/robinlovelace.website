@@ -12,9 +12,9 @@ Now that everyone has a computer available to them, more often than not in their
 it is easy to forget how empowering the pioneers of *personal computer* (PCs) thought 
 they would be:
 
-- It's hard for many people today
-- to imagine what the world was like when only big business and big government ran all
-- the computers. Let's just say, you couldn't get much done ([Schotts 2013](http://linuxcommand.org/tlcl.php)).
+> It's hard for many people today
+> to imagine what the world was like when only big business and big government ran all
+> the computers. Let's just say, you couldn't get much done ([Schotts 2013](http://linuxcommand.org/tlcl.php)).
  
 In other words, people now take computers for granted. They're toys, for playing Angry Birds, 
 communicating with friends and shopping. But back in the early days of the digital revolution
@@ -24,11 +24,11 @@ people's computing life, pushing the DIY ethic that drove the digital revolution
 The stark reality of this situation, and ways to rejuvenate that exciting DIY ethic are
 described in the same book in more optimistic terms:
 
-- A few giant corporations have been imposing their
-- control over most of the world's computers and deciding what you can and cannot do
-- with them. Fortunately, people from all over the world are doing something about it. They
-- are fighting to maintain control of their computers by writing their own software. They
-- are building Linux ([Schotts 2013](http://linuxcommand.org/tlcl.php)).
+> A few giant corporations have been imposing their
+ control over most of the world's computers and deciding what you can and cannot do
+ with them. Fortunately, people from all over the world are doing something about it. They
+ are fighting to maintain control of their computers by writing their own software. They
+ are building Linux ([Schotts 2013](http://linuxcommand.org/tlcl.php)).
 
 If users of computers are not aware of this history, there is a danger that we sleepwalk into a
 situation where all computing is controlled from above, where nobody has complete control 
@@ -57,6 +57,8 @@ specific problems, assuming no previous knowledge of computers. As a first stage
 installing some form of [Linux](http://en.wikipedia.org/wiki/Linux) on your computer. The easiest way to 
 do this is probably by installing [Ubuntu](http://www.ubuntu.com/) or politely asking a mate who is into 
 that kind of thing to do it for you, and perhaps offering to buy them a pint of the effort!
+
+## Articles about software
 
 <ul class="posts">
 {% for post in site.tags.software limit: 20 %}
