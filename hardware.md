@@ -4,7 +4,7 @@ layout: master
 published: true
 ---
 
-"Man shall not live on bread alone" ([Jesus Christ, ~0 AD](http://biblehub.com/niv/matthew/4.htm)), meaning that one's material possessions and cannot lead to deep satisfaction, or [katastematic happiness](http://books.google.co.uk/books?id=TTtLRPVAvtEC&pg=PA77&lpg=PA77&dq=katastematic+happiness&source=bl&ots=azmT3fAv5x&sig=JMQoANBUj-IjvkaGKyOPL3mFvYs&hl=en&sa=X&ei=IfsAU7bHH_Oe7AbfjYDICA&ved=0CE0Q6AEwBA#v=onepage&q=katastematic%20happiness&f=false) as Epicurus would call it. 
+"Man shall not live on bread alone" ([Jesus Christ, ~0 AD](http://biblehub.com/niv/matthew/4.htm)). The usual interpretation of this nugget of knowledge from perhaps the most famous person in human history is that one's material possessions alone cannot lead to deep [satisfaction](http://books.google.co.uk/books?id=TTtLRPVAvtEC&pg=PA77&lpg=PA77&dq=katastematic+happiness&source=bl&ots=azmT3fAv5x&sig=JMQoANBUj-IjvkaGKyOPL3mFvYs&hl=en&sa=X&ei=IfsAU7bHH_Oe7AbfjYDICA&ved=0CE0Q6AEwBA#v=onepage&q=katastematic%20happiness&f=false). 
 Yet our physical possessions greatly influence our ability to 
 interact with, participate in and enjoy the world. 
 
