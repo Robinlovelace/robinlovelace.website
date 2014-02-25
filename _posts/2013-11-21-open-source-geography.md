@@ -4,6 +4,7 @@ title: The open source movement and geography
 categories:
 - Software 
 tags:
+- software
 - open source
 - GIS
 - maps
