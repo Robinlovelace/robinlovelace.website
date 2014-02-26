@@ -2,10 +2,11 @@
 layout: post
 title: Joining the Bumblebee Conservation Trust
 categories: 
- - book review
+ - Books
 tags:
  - nature
- - books
+ - conservation
+ - academia
  - land
 ---
 
@@ -19,20 +20,21 @@ as a child but only during fleeting moments when they flew into view and
 then enigmatically flew off into the distance again, always impossible to follow.
 
 My interest in bumblebees has been reawakened by a 
-book I was given for Christmas. [A Sting in the Tail]() by Dave Goulson is
+book I was given for Christmas. [A Sting in the Tail](http://www.sussex.ac.uk/lifesci/goulsonlab/astinginthetale)
+ by Dave Goulson is
 is a non-fiction "public engagement in science" type book, that one would naturally assume to be 
 quite boring. But after the first few pages, I was hooked. The narrative progresses steadily not just
 through the life and plight of these creatures, but also the story of their author, probably
 the foremost bumblebee expert worldwide. Deliberately avoiding the stuffy and rigid language of 
 scientific articles, Goulson describes his work in crystal clear language that is accessible to all.
-Perhaps because of this straightforward style his book is [wildly popular]() (for a natural history 
+Perhaps because of this straightforward style his book is [wildly popular](http://www.amazon.co.uk/A-Sting-Tale-Dave-Goulson/dp/0224096893) (for a natural history 
 book at least!), with over 60 enthusiastic 5 star review on Amazon. It seems there is a demand
 for unpretentious writing about the natural world. 
 
 This post is not about the book per se, which for the record is excellent and highly recommended
 to anyone interested in nature. Instead it's about how it persuaded me to sign up to the 
 charity that Professor Goulson set up shortly before writing the book: the Bumblebee Conservation
-Trust (BBCT). 
+Trust ([BBCT](http://bumblebeeconservation.org/)). 
 
 <!--more-->
 
@@ -42,7 +44,7 @@ Towards the end of the book Goulson has this to say:
 > It is easy to get depressed and despondent at the impending extinctions
 > of the polar bear or the tiger, or at the horrific progress of 
 > deforestation in the tropics. Perhaps governments or scientists or 
-> organisations such as [WWF]() can do something to help address 
+> organisations such as [WWF](http://wwwf.org) can do something to help address 
 > these situations, but as an individual it is very hard to know where to start -
 > it is all so remote and dauntingly complex.
 
