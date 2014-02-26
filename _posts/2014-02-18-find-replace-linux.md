@@ -74,6 +74,6 @@ extrememly rewarding to get such a huge amount of work done with such little cod
 If nothing else, the process of learning should be fun and rewarding in itself, in a way that 
 the developers of Angry Birds can only dream of.
 
-<div align="center"><object width="640" height="480"><param name="movie" value="http://www.gamesforblog.com/gamesforyou/angrybirds.swf"><param name="quality" value="high"><embed src="http://www.gamesforblog.com/gamesforyou/angrybirds.swf" quality="high" width="640" height="400" type="application/x-shockwave-flash" pluginspage= "http://www.macromedia.com/go/getflashplayer"></embed></object><br/>games by <a href="http://www.knugo.com">www.knugo.com</a></div>
-<p>
+
+
 
