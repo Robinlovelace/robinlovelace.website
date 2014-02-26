@@ -49,7 +49,7 @@ write a love letter, for example, but this may not get you very far. Best use a 
 software by its very nature revels in diversity and choice: the analogy to ecosystems
 here is apt - biodiversity is associated with resilience ([Gunderson 2002](http://books.google.co.uk/books?id=35sKi-QXKGgC&pg=PA136&lpg=PA136&dq=resilience+odum&source=bl&ots=oyZSbO9v9G&sig=3OsbkUlySUFjm_ylJwTzOSLiiKk&hl=en&sa=X&ei=SWoDU9eON8GAhAfKjoDACg&ved=0CFcQ6AEwBQ#v=onepage&q=resilience%20odum&f=false)).
 Open source tools thus make you think about what you want to achieve *before* starting a project.
-This, in my experience, means that the addition time spent learning free software is generally outweighed 
+This, in my experience, means that the additional time spent learning free software is generally outweighed 
 by the time savings once you get started: there are less distractions.
 
 So articles about software on this site will be *task-orientated*, miniature "how to" guides for solving 
