@@ -276,7 +276,10 @@ these offer amazing opportunities for displaying our geographical data
 in new ways. The example of cycle path planning shows the potential for 
 democratic empowerment that such technologies offer. However, 
 for such potential to be realised, and not just gobbled by massive 
-corporations like google, we need diversity. Google, for example, 
+corporations like Google, we need diversity.
+The importance of this for our online future is well described in an 
+[article by Serge Wroclawski](http://www.theguardian.com/technology/2014/jan/14/why-the-world-needs-openstreetmap).
+Google, for example, 
 can easily insert adverts into its maps without us knowing. 
 Leaflet and OpenLayers, being open source, cannot. 
 That said, if your aim is just to get attractive 'off the shelf' maps
