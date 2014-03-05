@@ -4,6 +4,12 @@ body {
   color: #333333;
 }
 
+.outputty{
+color:#CCCCCC;
+background‐color:#DF8B8B;
+font‐weight:bold;
+}
+
 .content h1{padding:.5em 0;}
 .listing-item,.listing-seperator{list-style-type:none;}
 .listing-item a{padding:.2em 1em;}
@@ -38,28 +44,27 @@ a:visited {
 }
 
 #header {
-  text-align: left;
-  background: #000000;
+/* background: #000000; */
+  background: url(/figure/bike-header.JPG) no-repeat top center;
+  background-size: 60em;
   -moz-border-radius-topleft: 1em;
   -webkit-border-top-left-radius: 1em;
   -moz-border-radius-topright: 1em;
   -webkit-border-top-right-radius: 1em;  
   border-top-left-radius: 1em;  
-  border-top-right-radius: 1em;  
-  padding: 1.5em;
-  text-align: center;
+  border-top-right-radius: 1em; 
+/*  padding: 3em; */
+  height: 220px
 }
 
 #header h1 {
   font-size: 4em;
-  display: inline;
-  letter-spacing: -0.08em;
   color: #fff;
   font-weight: normal;
+  text-align: center
 }
 
 #header h2 {
-  display: inline;
   margin-left: 0.5em;
   font-size: 2em;
   font-weight: normal;
@@ -100,7 +105,6 @@ a:visited {
 
 #content p {
   line-height: 140%;
-  letter-spacing: -0.03em;
 }
 
 span.date {
@@ -247,7 +251,6 @@ margin: 0px;
   border: 2px solid #dda;
   padding: 0.7em 1em;
   font-size: 0.8em;
-  letter-spacing: -0.03em;
   margin: 1em 1em 0 0;
   -moz-border-radius: 0.5em;
   -webkit-border-radius: 0.5em;
@@ -302,3 +305,6 @@ a img { border: 0; }
 .float-right { float: right; }
 
 a img { border: 0; }
+
+#map { height: 180px; }
+
