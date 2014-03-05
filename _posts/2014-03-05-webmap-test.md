@@ -18,7 +18,12 @@ source software for geo-applications) and affiliated with the umbrella
 body of the Open Source Geospatial Foundation ([OSGeo](http://www.osgeo.org/)), 
 web mapping can now by undertaken by anyone with a computer and an internet connection.
 
-It has never been easier to make and communicate a map. 
+Inspired by a [web mapping course](http://www.sigte.udg.edu/summerschool2014/) at the 
+University of Girona's [SIGTE](http://www.sigte.udg.edu/) service - much of which can now be done online via 
+[UNIGIS](http://www.unigis.es/Oferta-Formativa/Cursos-Especializacion/Programacion-Aplicaciones-Web-Map-ce) -
+I decided to test out three of the major options, Google Maps, 
+OpenLayers and Leaflet.
+Thanks to such software, it has never been easier to make and communicate a map. 
 To illustrate the empowering potential of this, take a look at the 
 recently implemented [City Connect](http://www.cyclecityconnect.co.uk/participate.php)
 consultation map:
