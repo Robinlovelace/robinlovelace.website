@@ -6,6 +6,7 @@ tags:
  - GIS
  - visualisation
  - web maps
+ - map
 ---
 
 The use of web maps has rocketed over the last decade. Back in 2005, 

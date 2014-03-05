@@ -2,7 +2,10 @@
 layout: post
 title: Mapping on Google Maps
 category: maps
-tag: open, FOSS4G
+tags: 
+ - open
+ - FOSS4G
+ - map
 ---
 
 Below is a map made by uploading my data to Google Fusion Tables using an online tool called [shpescape](http://www.shpescape.com/). It shows the average energy costs of commuting to work in England, at the Ward level. 

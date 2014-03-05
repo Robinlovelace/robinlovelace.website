@@ -6,7 +6,7 @@ categories:
 tags:
 - open source
 - GIS
-- maps
+- map
 ---
 Finally, after weeks of deliberation and numerous conversations, [on-line](http://gis.stackexchange.com/questions/77734/can-osms-id-editor-be-used-on-custom-maps)
 and off, I think I've found 
