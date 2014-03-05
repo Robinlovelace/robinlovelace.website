@@ -149,39 +149,54 @@ Take a look at the [list of examples](http://ol3js.org/en/master/examples/)
 for more beautiful and advanced maps written in OpenLayers3. 
 
 For the record, the below map was created with even fewer lines than the 
-Google Maps example:
+Google Maps example. The following code, taken from the 
+[OpenLayers3 Quickstart](http://ol3js.org/en/master/doc/quickstart.html) goes in the html head:
 
 ```{js}
-<link rel="stylesheet" href="../theme/default/style.css" type="text/css" /> 
-<link rel="stylesheet" href="style.css" type="text/css" /> 
-<script src="http://www.openlayers.org/api/OpenLayers.js" type="text/javascript"></script> 
-<script type="text/javascript">
-function init() {
-    map = new OpenLayers.Map('map2');
-    var ol_wms = new OpenLayers.Layer.WMS( "OpenLayers WMS", "http://vmap0.tiles.osgeo.org/wms/vmap0", {layers: 'basic'} );
-    map.addLayer(ol_wms);
-    map.zoomToMaxExtent();
-}
+<link rel="stylesheet" href="http://ol3js.org/en/master/css/ol.css" type="text/css">
+<script src="http://ol3js.org/en/master/build/ol.js" type="text/javascript"></script>
+```
+
+And then the following goes in the body:
+
+```
+<div id="mapOL3" style="width: 100%, height: 400px"></div>
+<script>
+  new ol.Map({
+    layers: [
+      new ol.layer.Tile({source: new ol.source.OSM()})
+    ],
+    view: new ol.View2D({
+      center: [0, 0],
+      zoom: 2
+    }),
+    target: 'mapOL3'
+  });
 </script>
 ```
 
-And then this in the body:
+<div id="mapOL3" style="width: 100%, height: 400px"></div>
 
-```{html}
-<div id="map2" style="width: 600px; height: 400px"></div> 
-```
+<script>
+  new ol.Map({
+    layers: [
+      new ol.layer.Tile({source: new ol.source.OSM()})
+    ],
+    view: new ol.View2D({
+      center: [0, 0],
+      zoom: 2
+    }),
+    target: 'mapOL3'
+  });
+</script>
+<script src="ol3.js"></script>
 
-<div id="map2" style="width: 600px; height: 400px"></div> 
-
-
-Also, when adding an OpenLayers map, you need to initialise it in the 
-`body` tag and this also applies for the Google Maps version. 
-Hence, to load the above maps, I needed to add this to the page's 
-body: `<body onload="initialize(); init()">`, 
-the `init()` function applying to OpenLayers.
-
-
-
+One improvement over OpenLayers2 is that when adding an OpenLayers map, you
+no longer need to initialise it in the 
+`body` tag, as is for the Google Maps version. 
+Hence, to load the Google Map, one needs to add this to the page's 
+body: `<body onload="initialize()">`.
+This is not needed for Leaflet maps either.
 
 ## Leaflet
 Leaflet is in fashion at the moment as a fast moving, lightweight and 
