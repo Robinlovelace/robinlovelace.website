@@ -10,7 +10,7 @@ tags:
 
 The use of web maps has rocketed over the last decade. Back in 2005, 
 Google Maps [was released](http://en.wikipedia.org/wiki/Web_mapping#History_of_web_mapping), 
-facilitating the use of online maps by the masses everyday life. 
+facilitating the use of online maps by the masses for everyday life. 
 Initially, web mapping was the domain of a few large companies like 
 Google, ESRI and NASA. However, with the explosion of open source 
 mapping projects under the banner of [FOSS4G](http://foss4g.org/) (short for free open 
@@ -62,7 +62,7 @@ You may also want to consider map servers such as GeoServer if you
 are dealing with large applications but, for small application, an updated 
 [.geojson file](http://geojson.org/) hosted for free can work work just fine. 
 This is amazing. It means that you, me or anyone can take control of our 
-geographic information and communicate it to the world how we want
+geographic information and communicate it to the world how we want.
 
 <!--more-->
 
@@ -89,7 +89,7 @@ myOptions);
 </script>
 ```
 
-After that, you just add a single line of html in the pages body:
+After that, you just add a single line of html in the page's body:
 
 ```{html}
 <div id="map_canvas" style="width: 600px; height: 200px"></div> 
@@ -103,8 +103,8 @@ with the brute force of
 Google maps are guaranteed to load quickly. The same applies to the code base:
 with some of the 
 [best payed junior programmers in the world](http://www.forbes.com/sites/robinferracone/2013/12/19/larry-vs-larry-oracle-ceo-pay-vs-google-ceo-pay/), 
-it is unlikely that bugs in Google maps survive more than a couple of days, unlike
-in the community-run Leaflet and OpenLayers projects. 
+it is unlikely that bugs in Google maps survive more than a couple of days. See below an image of Google's relatively 
+flat pay structure compared with the quite unequal one of Oracle.
 
 <p><a href="http://b-i.forbesimg.com/robinferracone/files/2013/12/oracle-google_updated.png"><img class="alignnone size-large wp-image-593" alt="oracle-google_updated" src="http://b-i.forbesimg.com/robinferracone/files/2014/01/oracle-google_updated-1024x716.png" width="800" height="500" /></a></p> 
 
@@ -212,12 +212,16 @@ Leaflet asks for it to be called *after* the
 map object is called, like so:
 
 ```{js}
+<div id="map" style="width: 600px; height: 400px"></div>
+ 
+<script>
 		var map = L.map('map').setView([51.505, -0.09], 13);
 
 		L.tileLayer('http://{s}.tile.cloudmade.com/BC9A493B41014CAABB98F0471D759707/997/256/{z}/{x}/{y}.png', {
 			maxZoom: 18,
 			attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery Â© <a href="http://cloudmade.com">CloudMade</a>'
 		}).addTo(map);
+</script>
 ```
 
 <div id="map" style="width: 600px; height: 400px"></div>
@@ -261,7 +265,8 @@ map object is called, like so:
 </script>
 
 In fact the actual code used for the above map has a few more lines 
-of code, but the snippet shown works as a stand-alone map. 
+of code, to add the point, the blog and the triangle. 
+But the snippet shown still works as a stand-alone map. 
 The example can be found [here](http://leafletjs.com/examples/quick-start.html).
 
 ## Conclusion
