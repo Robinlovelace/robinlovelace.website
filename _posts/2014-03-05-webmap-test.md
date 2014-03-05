@@ -290,7 +290,7 @@ Leaflet, as the new kid on the block is the most exciting for me and
 encapsulates many of the benefits of open source software in general:
 speed of development, flexibility, efficiency. All three can probably 
 do 80% of the web mapping applications that are commonly required so the 
-choice should depend more on what you enjoy more than on what it can 
+choice should, in many cases, depend more on what you enjoy than on what it can 
 and can't do. Lightness considered, for me that would mean Leaflet for 
-most applications, but watch this space because maybe another even faster
-product will arrive soon. 
+many applications, but watch this space for the final version of 
+OpenLayers3 (due very soon) and perhaps even better web mapping options.
