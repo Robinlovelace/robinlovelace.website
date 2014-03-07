@@ -19,7 +19,7 @@ of bicycle friendliness (this has since slipped to 12th) and bicycles are now a 
 sight in the city. 
 
 The rate of cycle uptake overall and the effectiveness the Bicing scheme specifically 
-are open to debate, as illustrated by [an article questionning the cost effectiveness](http://barcelonabicycle.blogspot.com/2012/06/barcelona-bicycle-mumbers.html)
+are open to debate, as illustrated by [an article questioning the cost effectiveness](http://barcelonabicycle.blogspot.com/2012/06/barcelona-bicycle-mumbers.html)
 of the scheme and a [presentation](http://www2.uwe.ac.uk/services/Marketing/research/pdf/ISHEpdfs/ISHE-events/Bike%20sharing%20020713%20M%20Ricci.pdf) 
 criticising the lack of evidence on the subject.
 
@@ -67,7 +67,7 @@ personal experience suggest you get hounded if you dare to stray onto the road! 
 barely be greater. Bicycles are generally permitted to go where they please, and the 
 bicycle paths tend only to provide general guidance. The above photo is a good example of this:
 one can choose whether to go in the dedicated bike lane or, because the pavement is wide and 
-relatively empty, can equally meander accross the pedestrian zone. The fact that this 
+relatively empty, can equally meander across the pedestrian zone. The fact that this 
 is tolerated makes cycling in Barcelona feel liberating compared with other cities where 
 one is corralled into small spaces.
 
@@ -78,10 +78,42 @@ good cycle infrastructure design: the streets are generally amply wide for
 pedestrians, cyclists and even cars to rub along quite nicely together, 
 with a level of self-autonomy (red light jumping and jay walking are the norm)
 that seems to be accepted. This differs from London, where the politics to 
-of traffic lights and road ettiquette seems to generate infinite debate and intrigue. 
-In Barcelona's bicycle culture, I argue (based on admitedly sparse evidence), there 
+of traffic lights and road etiquette seems to generate infinite debate and intrigue. 
+In Barcelona's bicycle culture, I argue (based on admittedly sparse evidence), there 
 is a tendency just to get on with where you are going without worrying too much about 
 the underlying politics of mobility.  
+
+## Bicycle paths
+
+Bike paths in Barcelona employ various of techniques to separate the cyclist from 
+traffic motor traffic and pedestrians, ranging from the painted paths displayed above 
+through small humps in the road to keep cars out of the bike lane to large concrete 
+barriers. 
+
+![humps in the road](http://farm4.staticflickr.com/3689/12935300713_504a87603f_z.jpg)
+
+The above photo captures the intermediate option well, with a typically relaxed 
+Bicing user taking advantage of the safety of a physical barrier, even though 
+they are only small (and inexpensive) blocks. 
+
+## Cyclists in Barcelona
+As in many cities, cyclists in Barcelona are primarily utility cyclists, 
+simply using the bicycle as a vehicle to get from A to B. As in Holland, 
+comfort is generally prized over speed. 
+
+![typical barca cycltist1](http://farm4.staticflickr.com/3711/12935610644_9cb8031ee5_z.jpg)
+
+Protective clothing and helmets are comparatively rare (I estimate around 1/4 of 
+cyclists I saw in the city wore helmets) leading to the impression that cycling 
+is an entirely normal and safe activity in the city. Also, I did not find 
+distinctive groups of cyclists in London, neither the hardened lycra-clad 
+long distance commuters nor the fixed gear fashionistas of London. 
+I would not go so far as to say that cycling in Barcelona is a mundane activity.
+There are a number of bicycles on the streets which are clearly highly 
+prized by their owners including Bromptons - seemingly a particular favourite 
+Barcelona high flyers - 
+
+
  
 ## Lessons for elsewhere
 

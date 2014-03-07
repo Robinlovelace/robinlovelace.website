@@ -3,21 +3,21 @@
 "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
                                                                                 
 "features": [
-{ "type": "Feature", "properties": { "Person": "RL", "Place (home, work or danger)": "Home", "Severity: 1, 2 or 3": null }, "geometry": { "type": "Point", "coordinates": [ -1.534566879272461, 53.819554420318752 ] } },
-{ "type": "Feature", "properties": { "Person": "RL", "Place (home, work or danger)": "Work", "Severity: 1, 2 or 3": null }, "geometry": { "type": "Point", "coordinates": [ -1.554908752441406, 53.808659287554562 ] } },
-{ "type": "Feature", "properties": { "Person": "RL", "Place (home, work or danger)": "Danger", "Severity: 1, 2 or 3": "2" }, "geometry": { "type": "Point", "coordinates": [ -1.546883583068848, 53.814259232792004 ] } },
-{ "type": "Feature", "properties": { "Person": "RL", "Place (home, work or danger)": "Danger", "Severity: 1, 2 or 3": "3" }, "geometry": { "type": "Point", "coordinates": [ -1.539373397827148, 53.817324949222971 ] } },
-{ "type": "Feature", "properties": { "Person": "RL", "Place (home, work or danger)": "Danger", "Severity: 1, 2 or 3": "2" }, "geometry": { "type": "Point", "coordinates": [ -1.552419662475586, 53.808570594620988 ] } },
-{ "type": "Feature", "properties": { "Person": "IK", "Place (home, work or danger)": "Home", "Severity: 1, 2 or 3": "" }, "geometry": { "type": "Point", "coordinates": [ -1.695327758789062, 53.904338156274704 ] } },
-{ "type": "Feature", "properties": { "Person": "IK", "Place (home, work or danger)": "Work", "Severity: 1, 2 or 3": null }, "geometry": { "type": "Point", "coordinates": [ -1.554050445556641, 53.807696325663088 ] } },
-{ "type": "Feature", "properties": { "Person": "IK", "Place (home, work or danger)": "Danger", "Severity: 1, 2 or 3": "3" }, "geometry": { "type": "Point", "coordinates": [ -1.579885482788086, 53.823354381743982 ] } },
-{ "type": "Feature", "properties": { "Person": "IK", "Place (home, work or danger)": "Danger", "Severity: 1, 2 or 3": "3" }, "geometry": { "type": "Point", "coordinates": [ -1.58778190612793, 53.829990821084003 ] } },
-{ "type": "Feature", "properties": { "Person": "IK", "Place (home, work or danger)": "Danger", "Severity: 1, 2 or 3": "2" }, "geometry": { "type": "Point", "coordinates": [ -1.577825546264648, 53.821429111024166 ] } },
-{ "type": "Feature", "properties": { "Person": "IK", "Place (home, work or danger)": "Danger", "Severity: 1, 2 or 3": "1" }, "geometry": { "type": "Point", "coordinates": [ -1.576173305511475, 53.819668424175639 ] } },
-{ "type": "Feature", "properties": { "Person": "RO", "Place (home, work or danger)": "Home", "Severity: 1, 2 or 3": null }, "geometry": { "type": "Point", "coordinates": [ -1.548793315887451, 53.793591468074993 ] } },
-{ "type": "Feature", "properties": { "Person": "RO", "Place (home, work or danger)": "Work", "Severity: 1, 2 or 3": null }, "geometry": { "type": "Point", "coordinates": [ -1.556984782218933, 53.807899056320551 ] } },
-{ "type": "Feature", "properties": { "Person": "RO", "Place (home, work or danger)": "Danger", "Severity: 1, 2 or 3": "2" }, "geometry": { "type": "Point", "coordinates": [ -1.546669006347656, 53.794187186937535 ] } },
-{ "type": "Feature", "properties": { "Person": "RO", "Place (home, work or danger)": "Danger", "Severity: 1, 2 or 3": "2" }, "geometry": { "type": "Point", "coordinates": [ -1.547420024871826, 53.796139057547975 ] } },
-{ "type": "Feature", "properties": { "Person": "RO", "Place (home, work or danger)": "Danger", "Severity: 1, 2 or 3": "3" }, "geometry": { "type": "Point", "coordinates": [ -1.547141075134277, 53.799586295427609 ] } }
+{ "type": "Feature", "properties": { "Person": "RL", "Place": "Home", "Severity": null }, "geometry": { "type": "Point", "coordinates": [ -1.534566879272461, 53.819554420318752 ] } },
+{ "type": "Feature", "properties": { "Person": "RL", "Place": "Work", "Severity": null }, "geometry": { "type": "Point", "coordinates": [ -1.554908752441406, 53.808659287554562 ] } },
+{ "type": "Feature", "properties": { "Person": "RL", "Place": "Danger", "Severity": "2" }, "geometry": { "type": "Point", "coordinates": [ -1.546883583068848, 53.814259232792004 ] } },
+{ "type": "Feature", "properties": { "Person": "RL", "Place": "Danger", "Severity": "3" }, "geometry": { "type": "Point", "coordinates": [ -1.539373397827148, 53.817324949222971 ] } },
+{ "type": "Feature", "properties": { "Person": "RL", "Place": "Danger", "Severity": "2" }, "geometry": { "type": "Point", "coordinates": [ -1.552419662475586, 53.808570594620988 ] } },
+{ "type": "Feature", "properties": { "Person": "IK", "Place": "Home", "Severity": "" }, "geometry": { "type": "Point", "coordinates": [ -1.695327758789062, 53.904338156274704 ] } },
+{ "type": "Feature", "properties": { "Person": "IK", "Place": "Work", "Severity": null }, "geometry": { "type": "Point", "coordinates": [ -1.554050445556641, 53.807696325663088 ] } },
+{ "type": "Feature", "properties": { "Person": "IK", "Place": "Danger", "Severity": "3" }, "geometry": { "type": "Point", "coordinates": [ -1.579885482788086, 53.823354381743982 ] } },
+{ "type": "Feature", "properties": { "Person": "IK", "Place": "Danger", "Severity": "3" }, "geometry": { "type": "Point", "coordinates": [ -1.58778190612793, 53.829990821084003 ] } },
+{ "type": "Feature", "properties": { "Person": "IK", "Place": "Danger", "Severity": "2" }, "geometry": { "type": "Point", "coordinates": [ -1.577825546264648, 53.821429111024166 ] } },
+{ "type": "Feature", "properties": { "Person": "IK", "Place": "Danger", "Severity": "1" }, "geometry": { "type": "Point", "coordinates": [ -1.576173305511475, 53.819668424175639 ] } },
+{ "type": "Feature", "properties": { "Person": "RO", "Place": "Home", "Severity": null }, "geometry": { "type": "Point", "coordinates": [ -1.548793315887451, 53.793591468074993 ] } },
+{ "type": "Feature", "properties": { "Person": "RO", "Place": "Work", "Severity": null }, "geometry": { "type": "Point", "coordinates": [ -1.556984782218933, 53.807899056320551 ] } },
+{ "type": "Feature", "properties": { "Person": "RO", "Place": "Danger", "Severity": "2" }, "geometry": { "type": "Point", "coordinates": [ -1.546669006347656, 53.794187186937535 ] } },
+{ "type": "Feature", "properties": { "Person": "RO", "Place": "Danger", "Severity": "2" }, "geometry": { "type": "Point", "coordinates": [ -1.547420024871826, 53.796139057547975 ] } },
+{ "type": "Feature", "properties": { "Person": "RO", "Place": "Danger", "Severity": "3" }, "geometry": { "type": "Point", "coordinates": [ -1.547141075134277, 53.799586295427609 ] } }
 ]
 }
