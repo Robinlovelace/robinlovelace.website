@@ -4,9 +4,10 @@ title: Introduction to R and ggplot2 course
 categories:
 - R
 tags:
+- software
 - open source
 - GIS
-- software
+ - computing
 ---
 This course is about getting to grips with the basics of the R command line
 for basic data analysis and visualisation. There's a focus on maps and ggplot2.

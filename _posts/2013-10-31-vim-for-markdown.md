@@ -2,7 +2,7 @@
 layout: post
 title: Vim for Markdown (md) file editing
 categories:
-- Software
+- computing
 tags:
 - open source
 - Linux tips
@@ -95,6 +95,12 @@ characters, more than would have been necessary had we known the date of the ent
 still beneficial when we know the a string contained with the file we want to edit but not its
 beginning or its full name. This is especially common when editing Markdown files for personal
 websites.
+
+An even quicker way to open the file is as follows:
+
+```{bash}
+vim _posts/*trailer*.md
+```
 
 ## Syntax highlighting 
 There are a number of discussion threads on the internet about Vim not formatting Markdown 

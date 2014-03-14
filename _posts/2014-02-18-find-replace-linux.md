@@ -2,9 +2,10 @@
 layout: post
 title: Finding and replacing character strings in multiple files with the Linux command line
 categories:
-- Software
+- computing
 tags:
  - software
+ - computing
  - Linux
  - regex
  - sed
@@ -42,7 +43,7 @@ To most Linux users this product is simply hilarious, as all of the tools needed
 `ctl-t` or just searching for the terminal. How? Well let me show you how I performed the 
 task and explain it after. The single line to solve the problem described above was as follows:
 
-```
+```{bash}
 find . -name "*.R" -exec sed -i "s/ = / <- /g" '{}' \;
 ``` 
 

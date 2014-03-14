@@ -2,10 +2,11 @@
 layout: post
 title: Sharing folders with Ubuntu One
 categories:
-- softare 
+ - computing 
 tags:
 - open source
-- Linux tips
+- linux
+- software 
 ---
 [Ubuntu One](https://one.ubuntu.com/) - U1 for short -  is an alternative to other internet storage spaces such as Dropbox. 
 It's useful because it gives you 5Gb of storage for free, works on any common operating system and 

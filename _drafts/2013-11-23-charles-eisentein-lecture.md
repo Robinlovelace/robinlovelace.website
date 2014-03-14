@@ -2,7 +2,7 @@
 layout: post
 title: Charles Eisenstein: sacred economics and spirituality  
 categories:
-- Software 
+- politics
 tags:
 - open source
 - GIS

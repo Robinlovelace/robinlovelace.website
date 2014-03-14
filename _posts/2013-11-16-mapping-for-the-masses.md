@@ -2,11 +2,12 @@
 layout: post
 title: Mapping for the masses with geojson.io 
 categories:
-- Software 
+- maps
 tags:
 - open source
 - GIS
 - map
+- software
 ---
 Finally, after weeks of deliberation and numerous conversations, [on-line](http://gis.stackexchange.com/questions/77734/can-osms-id-editor-be-used-on-custom-maps)
 and off, I think I've found 

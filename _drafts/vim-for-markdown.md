@@ -2,11 +2,12 @@
 layout: post
 title: Vim for Markdown (md) file editing
 categories:
-- Software
+ - computing
 tags:
 - open source
-- Linux tips
+- linux
 - software
+- vim
 ---
 
 [Vim](http://www.vim.org/) is rapidly becoming my favourite text editor. This may seem strange

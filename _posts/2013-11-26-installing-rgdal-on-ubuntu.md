@@ -7,7 +7,7 @@ tags:
 - open source
 - GIS
 - R
-- software
+ - computing
 ---
 The Geospatial Data Abstraction Library (GDAL) is a workhorse of digital mapping.
 Written in c++, it underpins many online and desktop geoprocessing programs including
