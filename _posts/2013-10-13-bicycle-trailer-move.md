@@ -20,6 +20,7 @@ See the map, words, images and video below for the full low-down on this epic ri
 
 <iframe src="http://www.gpsies.com/mapOnly.do?fileId=nueyoqzfqmingzgc" width="600" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
 
+<!--more-->
 ## Introduction: preparation and kit
 The first stage was to recruit people. With a month's notice, I managed to get around 15 people to 
 sign-up to the challenge. One issue for some people was lack of a suitable bicycle, so additional 

@@ -14,7 +14,11 @@ and off, I think I've found
 a satisfactory solution to my long-standing question: how do you build collaborative maps online 
 in realtime using open source software? The one word answer, [geojson.io](http://geojson.io), is contained in the map below. A 
 more detailed answer is provided below.
+
 <iframe frameborder="0" width="100%" height="300" src="http://bl.ocks.org/d/d7defc8f828f444b5e25"></iframe>
+
+
+<!--more-->
 
 This problem emerged for me when I move to a new city and wanted to help out their equivalent of [Abundance](http://growsheffield.com/abundance/).
 Now, if you plan on collecting food in a city, even if you think you know it well, you will need maps.

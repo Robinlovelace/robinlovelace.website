@@ -11,7 +11,10 @@ tags:
 ---
 This is the topic of a talk for a lecture and tutorial I delivered at the University of Sheffield.
 All slides, the tutorial and example data can be found in this [zip file](https://dl.dropboxusercontent.com/u/15008199/osm-challenge-public.zip).
+
 <iframe src="http://www.slideshare.net/robinlovelace1985/slideshelf" width="615px" height="470px" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:none;" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe>
+
+<!--more-->
 
 The students were asked to install and test QGIS, the free and open source mapping software, before the course. 
 Thankfully everyone managed to get the software installed and working on their own laptops which came

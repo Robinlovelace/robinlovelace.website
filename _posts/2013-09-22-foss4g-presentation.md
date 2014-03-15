@@ -10,6 +10,8 @@ categories:
 
 I presented last Thursday at [FOSS4G](http://2013.foss4g.org/), THE conference to go to for Free Open Source Software for Geo applications (get it?). It was an interesting event, with hundreds of delegates dressing up in one form or another as Robin Hood, fantastic food and a very wide range of talks. Just take a look at the [second day](http://2013.foss4g.org/conf/programme/daily/2/) of talks: packed to the rafters with sessions, including [mine](http://2013.foss4g.org/conf/programme/sessions/36/), on visualisation. 
 
+<!--more-->
+
 The slides can be seen below. With these as a backdrop, I discussed the various techniques I had used to 'get my work out there', to make it as accessible as possible to other people, especially those not involved in the stuffy world of academia. There was good feedback from the audience. Ben Hennig suggesting that I coloured only populated areas on my visualisations, to avoid attributing excessive visual importance to large uninhabited spaces. This technique can be witnessed to great effect on [Olly O'brien's blog](http://oliverobrien.co.uk/2012/02/). 
 
 All of the talks were recorded, so if you are REALLY interested in the talk, you should also be able to listen to it - keep an eye out on the FOSS4G website to see when these go up live. For now, sit back and enjoy the visuals: 

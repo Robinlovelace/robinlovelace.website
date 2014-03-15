@@ -21,9 +21,12 @@ are both stable, native on Linux and visually attractive, largely solving the pr
 Much nicer writing in fancy fonts than
 boring monospace right? Well not always - sometimes the visual content of these GUI-based text
 editors can get in the way and distract from the main task - communication.
+
 <br><a href="http://www.zimagez.com/zimage/screenshot-311013-162900.php">
   <img src="http://www.zimagez.com/miniature/screenshot-311013-162900.php" />
   </a>
+
+<!--more-->
 
 To deal with this issue, some people prefer to write their work in LaTeX, which brings me to the
 final and hardest-to-beat competitors for text editing: Kile and Rstudio. At the outset these are

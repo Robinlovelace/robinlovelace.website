@@ -15,8 +15,10 @@ Downsides of U1 are that it does not back-up your work, and does not have a 'pub
 For these reasons, I use U1 for sharing big files that I could live without if I lost them, like films I want to share with friends. 
 Below I show how a little Python script can be used to share entire folders, 
 like [this one](http://ubuntuone.com/03U1iH0VJGDbK3qa7iXzqp) of documentaries to share.
+
 ![U1-image](https://dl.dropboxusercontent.com/u/15008199/Images-2-share/U1-share.png)
 
+<!--more-->
 As with many things in Linux, the solution is not provided on a plate. 
 A tiny program called `u1-publish-folder` is used. No actual coding is reqired:
 all you need to do is type the following into a terminal, and the program should be accessible:

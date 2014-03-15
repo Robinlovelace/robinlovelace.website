@@ -26,6 +26,7 @@ is that installing GDAL in a way that is accessible to R in Linux is tricky, to 
 Having installed rgdal on several computers, I still find it tricky to set-up correctly 
 on new machines. The aim of this post is to make it less painful to others.
 
+<!--more-->
 R provides a cryptic response to the install command `install.packages("rgdal")` first time around:
 
 ```
