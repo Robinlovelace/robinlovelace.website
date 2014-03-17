@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "A study exchange: one month at the University of Girona"
+title: Presentation to the Geography department at the University of Girona
 category:
  - presentation
 tags:
-  - software
+ - software
  - academia
  - spain
  - open source
