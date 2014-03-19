@@ -22,7 +22,8 @@ plot, invented by
 to represent statistics on cause of death during the Crimean War.
 In fact, I had been asked to make a "[spie chart](http://www.cs.huji.ac.il/~feit/papers/Spie03TR.pdf)."
 This post demonstrates, for the first time to my knowledge, how it can be done 
-using ggplot2:
+using ggplot2. A reproducible example of this, including sample data input, can be 
+found on the project's github repository: https://github.com/Robinlovelace/lilacPlot . Please fork and attribute as appropriate!
 
 ![plot of chunk unnamed-chunk-5](https://raw.github.com/Robinlovelace/robinlovelace.github.io/master/figure/unnamed-chunk-53.png) 
 
