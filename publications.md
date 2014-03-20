@@ -42,7 +42,7 @@ trips in Sheffield, UK. *Energy Policy, 39(4)*, 2075-2087. Elsevier. [doi:10.101
 
 - The Ecotechnic Future. <em>Now Then</em>, March 2011. Sheffield. <a href="http://nowthenmagazine.com/issue-37/the-ecotechnic-future/">Html</a> or <a href="http://ubuntuone.com/p/1FBU/">pdf</a>.
 
-- Fear. <em>Now Then</em>, November 2010, p. 22-23. Sheffield. <a href="http://nowthenmagazine.com/issue-33/fear/">Html</a> or <a href="http://www.personal.leeds.ac.uk/Ecotechnic-NT-37.pdf">pdf</a>.
+- Fear. <em>Now Then</em>, November 2010, p. 22-23. Sheffield. <a href="http://nowthenmagazine.com/issue-33/fear/">Html</a> or <a href="http://www.personal.leeds.ac.uk/Ecotechnic-NT-37.pdf">pdf</a>. [Pdf version](http://eprints.whiterose.ac.uk/77321/13/lovelacecycle-touring.pdf) also available.
 
 - Energy futures. <em>Now Then</em>, June 2010, p. 16-17. Sheffield. <a href="http://www.personal.leeds.ac.uk/~georl/papers/Energy_futures.pdf">Html</a> or [pdf](http://nowthenmagazine.com/wp-content/themes/nowthen/backissues/nt27_jun10.pdf).
 
@@ -51,7 +51,7 @@ trips in Sheffield, UK. *Energy Policy, 39(4)*, 2075-2087. Elsevier. [doi:10.101
 
 - Lovelace, R. (2011). Assessing the energy implication of political intervention. <em><a href="http://www.theoildrum.com/node/7798#more">The Oil Drum</a></em>.
 
-- Lovelace, R. (2010). Cycle-touring: a vision of post-peak holidays? <em><a href="http://campfire.theoildrum.com/node/6396">The Oil Drum</a>: Campfire</em>.
+- Lovelace, R. (2010). Cycle-touring: a vision of post-peak holidays? <em><a href="http://campfire.theoildrum.com/node/6396">The Oil Drum</a>: Campfire</em>. 
 
 - Lovelace, R. (2010). How to Set Up and Run a Bicycle Repair Company. <em><a href="http://campfire.theoildrum.com/node/5976">The Oil Drum</a>: Campfire</em>.
 
