@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Curve fitting with R's nls function
-category:
+categories:
 - R
 tags:
 - R

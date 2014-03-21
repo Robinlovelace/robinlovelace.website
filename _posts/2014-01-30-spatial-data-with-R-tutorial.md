@@ -1,7 +1,7 @@
 ---
 layout: post
 title: R for spatial analysis tutorial + video
-category:
+categories:
  - R 
 tags:
  - open source

@@ -1,7 +1,7 @@
 ---
   layout: post
 title: E-Futures conference presentation
-category: presentation
+categories: presentation
 tags: open source, linux, internet, maps
 ---
 Testing of the upload.

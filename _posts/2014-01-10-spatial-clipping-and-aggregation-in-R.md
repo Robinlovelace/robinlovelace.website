@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Spatial clipping and aggregation in R
-category:
+categories:
 - R
 tags:
 - spatial data

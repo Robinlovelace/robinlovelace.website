@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Mapping on Google Maps
-category: maps
+categories: maps
 tags: 
  - open
  - FOSS4G

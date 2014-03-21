@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Presentation to the Geography department at the University of Girona
-category:
+categories:
  - presentation
 tags:
  - software

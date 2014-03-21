@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Austerity Sheffield
-category: policy
+categories: policy
 tag: austerity
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: webmapost
 title: Testing web map APIs - Google vs OpenLayers vs Leaflet
-category: software
+categories: software
 tags:
  - GIS
  - visualisation

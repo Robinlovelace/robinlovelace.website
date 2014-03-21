@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Mapping for the masses with geojson.io 
-category:
+categories:
 - maps
 tags:
 - open source

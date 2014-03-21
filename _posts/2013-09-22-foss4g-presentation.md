@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Presentation at FOSS4G
-category:
+categories:
 - Visualisation
 - Open Source
 - Conferences

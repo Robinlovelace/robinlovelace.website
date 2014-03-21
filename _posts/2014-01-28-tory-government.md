@@ -1,7 +1,7 @@
 ---
 layout: post
 title: A summary of the current UK government 
-category:
+categories:
  - Politics 
 tags:
  - flooding

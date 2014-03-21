@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Aggregating spatial points by clusters 
-category:
+categories:
  - R
 tags:
  - GIS

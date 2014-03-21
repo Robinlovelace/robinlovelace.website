@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Github pages - blogging for free
-category: computing
+categories: computing
 tags: open source, linux, internet
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Vim for Markdown (md) file editing
-category:
+categories:
  - computing
 tags:
 - open source

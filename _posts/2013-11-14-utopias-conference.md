@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Utopias conference, Ecuador
-category:
+categories:
 - Conferences
 ---
 Check out this post about a festival about petrol-free future utopias in 

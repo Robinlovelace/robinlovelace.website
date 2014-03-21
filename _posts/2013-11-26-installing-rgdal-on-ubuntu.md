@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Installing rgdal in Ubuntu 13.04 
-category:
+categories:
 - R
 tags:
 - open source

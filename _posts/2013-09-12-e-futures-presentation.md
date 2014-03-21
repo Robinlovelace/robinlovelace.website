@@ -1,7 +1,7 @@
 ---
 layout: post
 title: E-Futures Presentation
-category: Conferences, presentation
+categories: Conferences, presentation
 tag: energy, transport
 ---
 

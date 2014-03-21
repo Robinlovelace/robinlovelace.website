@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Sharing folders with Ubuntu One
-category:
+categories:
  - computing 
 tags:
 - open source
