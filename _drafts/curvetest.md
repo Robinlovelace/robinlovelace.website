@@ -3,8 +3,10 @@ layout: post
 title: Curve fitting with R's nls function
 category:
 - R
-- Software
-- Computing
+tags:
+- R
+- modelling
+- software
 ---
 This tutorial on general curve fitting is taken from 
 a technical note entitled "Curve fitting with the R Environment for Statistical

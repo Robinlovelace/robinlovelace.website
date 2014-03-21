@@ -5,6 +5,7 @@ category:
 - R
 tags:
 - spatial data
+ - R
 - visualisation
 - open source
 ---

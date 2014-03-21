@@ -4,8 +4,9 @@ title: Aggregation of point data to polygons MKII - US states
 category:
  - R
 tags:
-- software
-  - computing
+ - software
+ - R
+ - computing
  - spatial
  - visualisation
 ---

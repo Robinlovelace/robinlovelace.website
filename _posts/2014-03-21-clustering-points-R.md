@@ -5,6 +5,7 @@ category:
  - R
 tags:
  - GIS
+ - R
  - software
  - visualisation 
  - tutorials

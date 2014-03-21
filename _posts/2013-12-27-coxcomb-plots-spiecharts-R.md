@@ -5,8 +5,9 @@ category:
 - R
 tags:
 - visualisation
+- R
 - open source
- - computing
+- computing
 ---
 
 

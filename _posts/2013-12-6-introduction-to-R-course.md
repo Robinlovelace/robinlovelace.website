@@ -5,6 +5,7 @@ category:
 - R
 tags:
 - software
+ - R
 - open source
 - GIS
  - computing
