@@ -1,7 +1,7 @@
 ---
 layout: post
 title: The open source movement and geography 
-categories:
+category:
 - computing 
 tags:
 - software

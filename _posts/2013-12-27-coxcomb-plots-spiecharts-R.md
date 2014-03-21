@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Coxcomb plots and 'spiecharts' in R
-categories:
+category:
 - R
 tags:
 - visualisation

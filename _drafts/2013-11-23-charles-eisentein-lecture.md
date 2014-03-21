@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Charles Eisenstein: sacred economics and spirituality  
-categories:
+category:
 - politics
 tags:
 - open source

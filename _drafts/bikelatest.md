@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Moving house by bicycle trailer 
-categories:
+category:
 - Ecotech 
 - Bicycles
 - Pedal power

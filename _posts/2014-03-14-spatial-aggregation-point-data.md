@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Aggregation of point data to polygons MKII - US states
-categories:
+category:
  - R
 tags:
 - software

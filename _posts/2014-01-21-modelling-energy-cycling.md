@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Modelling the energy savings of cycling
-categories: talks
+category: talks
 tags: 
   - transport
   - energy

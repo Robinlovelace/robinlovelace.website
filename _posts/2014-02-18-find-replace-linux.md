@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Finding and replacing character strings in multiple files with the Linux command line
-categories:
+category:
 - computing
 tags:
  - software

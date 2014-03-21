@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Joining the Bumblebee Conservation Trust
-categories: 
+category: 
  - Books
 tags:
  - nature

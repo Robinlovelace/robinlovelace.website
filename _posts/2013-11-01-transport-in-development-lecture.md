@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Transport in development lecture, Birmingham
-categories:
+category:
 - Conferences
 - Presentation
 tags:

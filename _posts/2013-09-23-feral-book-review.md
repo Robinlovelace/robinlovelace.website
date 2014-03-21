@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Feral, a book review 
-categories:
+category:
  - Books
 tags:
  - Reviews

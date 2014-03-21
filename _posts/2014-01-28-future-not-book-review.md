@@ -1,7 +1,7 @@
 ---
 layout: post
 title: The Future Is Not What It Used To Be - Book review
-categories:
+category:
  - Books
 tags:
  - reviews

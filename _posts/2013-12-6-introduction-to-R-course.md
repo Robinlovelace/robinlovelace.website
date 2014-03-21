@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Introduction to R and ggplot2 course  
-categories:
+category:
 - R
 tags:
 - software
