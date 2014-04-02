@@ -140,7 +140,7 @@ basic `sp` package.
 ```r
 Dsg <- as(Dens, "SpatialGridDataFrame")  # convert to spatial grid class
 Dim <- as.image.SpatialGridDataFrame(Dsg)  # convert again to an image
-Dcl <- contourLines(Dim, nlevels = 9)  # create contour object - change 8 for more/fewer levels
+Dcl <- contourLines(Dim, nlevels = 8)  # create contour object - change 8 for more/fewer levels
 SLDF <- ContourLines2SLDF(Dcl, CRS(proj4string(lnd)))  # convert to SpatialLinesDataFrame
 plot(SLDF, col = terrain.colors(8))
 ```
@@ -178,7 +178,7 @@ plot(Polyclust)
 ![plot of chunk Polygons representing areas of high dot density](/figure/Polygons_representing_areas_of_high_dot_density.png) 
 
 
-## Aggregated the points within high density zones
+## Aggregate the points within high density zones
 
 The next task is to aggregate the points within each high density zone.
 This is done automatically with base R's `aggregate` function. Note that 
@@ -201,7 +201,7 @@ graphics::text(coordinates(cAg) + 1000, labels = cAg$CODE)
 ![plot of chunk Aggregated data for culters](/figure/Aggregated_data_for_culters.png) 
 
 
-## Save points inside and outside the points
+## Save points inside and outside polygons
 
 In terms of visualisation, our work here is done. 
 But that is not enough for most projects: we need to export the 
