@@ -1,0 +1,26 @@
+Regular expressions in RStudio
+========================================================
+
+Many R users are accustomed to 'regex' the family of languages and
+commands used for manipulating text strings. More specifically, 
+regualar expressions are typically used for finding specific patterns and
+replacing them with others.
+
+In this post we are going to see a few reproducible examples of R's
+implementation of regular expressions and how it can make your life easier.
+To differentiate this information from previous articles on regex in 
+in R () and in an attempt to adhere to the DRY principle, the focus will
+be on the basic commands, flavours of regex in R and a topic that appears to
+be rather under-documented online: RStudio's implementation of regex with
+is confusingly different from R's default regex behaviour.
+
+```{r}
+summary(cars)
+```
+
+You can also embed plots, for example:
+
+```{r fig.width=7, fig.height=6}
+plot(cars)
+```
+

@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=9" >
+
+<title>Regular expressions in R vs RStudio</title>
+
+<style type="text/css">
+body, td {
+   font-family: sans-serif;
+   background-color: white;
+   font-size: 12px;
+   margin: 8px;
+}
+
+tt, code, pre {
+   font-family: 'DejaVu Sans Mono', 'Droid Sans Mono', 'Lucida Console', Consolas, Monaco, monospace;
+}
+
+h1 { 
+   font-size:2.2em; 
+}
+
+h2 { 
+   font-size:1.8em; 
+}
+
+h3 { 
+   font-size:1.4em; 
+}
+
+h4 { 
+   font-size:1.0em; 
+}
+
+h5 { 
+   font-size:0.9em; 
+}
+
+h6 { 
+   font-size:0.8em; 
+}
+
+a:visited {
+   color: rgb(50%, 0%, 50%);
+}
+
+pre {	
+   margin-top: 0;
+   max-width: 95%;
+   border: 1px solid #ccc;
+   white-space: pre-wrap;
+}
+
+pre code {
+   display: block; padding: 0.5em;
+}
+
+code.r, code.cpp {
+   background-color: #F8F8F8;
+}
+
+table, td, th {
+  border: none;
+}
+
+blockquote {
+   color:#666666;
+   margin:0;
+   padding-left: 1em;
+   border-left: 0.5em #EEE solid;
+}
+
+hr {
+   height: 0px;
+   border-bottom: none;
+   border-top-width: thin;
+   border-top-style: dotted;
+   border-top-color: #999999;
+}
+
+@media print {
+   * { 
+      background: transparent !important; 
+      color: black !important; 
+      filter:none !important; 
+      -ms-filter: none !important; 
+   }
+
+   body { 
+      font-size:12pt; 
+      max-width:100%; 
+   }
+       
+   a, a:visited { 
+      text-decoration: underline; 
+   }
+
+   hr { 
+      visibility: hidden;
+      page-break-before: always;
+   }
+
+   pre, blockquote { 
+      padding-right: 1em; 
+      page-break-inside: avoid; 
+   }
+
+   tr, img { 
+      page-break-inside: avoid; 
+   }
+
+   img { 
+      max-width: 100% !important; 
+   }
+
+   @page :left { 
+      margin: 15mm 20mm 15mm 10mm; 
+   }
+     
+   @page :right { 
+      margin: 15mm 10mm 15mm 20mm; 
+   }
+
+   p, h2, h3 { 
+      orphans: 3; widows: 3; 
+   }
+
+   h2, h3 { 
+      page-break-after: avoid; 
+   }
+}
+
+</style>
+
+<!-- Styles for R syntax highlighter -->
+<style type="text/css">
+   pre .operator,
+   pre .paren {
+     color: rgb(104, 118, 135)
+   }
+
+   pre .literal {
+     color: rgb(88, 72, 246)
+   }
+
+   pre .number {
+     color: rgb(0, 0, 205);
+   }
+
+   pre .comment {
+     color: rgb(76, 136, 107);
+   }
+
+   pre .keyword {
+     color: rgb(0, 0, 255);
+   }
+
+   pre .identifier {
+     color: rgb(0, 0, 0);
+   }
+
+   pre .string {
+     color: rgb(3, 106, 7);
+   }
+</style>
+
+<!-- R syntax highlighter -->
+<script type="text/javascript">
+var hljs=new function(){function m(p){return p.replace(/&/gm,"&amp;").replace(/</gm,"&lt;")}function f(r,q,p){return RegExp(q,"m"+(r.cI?"i":"")+(p?"g":""))}function b(r){for(var p=0;p<r.childNodes.length;p++){var q=r.childNodes[p];if(q.nodeName=="CODE"){return q}if(!(q.nodeType==3&&q.nodeValue.match(/\s+/))){break}}}function h(t,s){var p="";for(var r=0;r<t.childNodes.length;r++){if(t.childNodes[r].nodeType==3){var q=t.childNodes[r].nodeValue;if(s){q=q.replace(/\n/g,"")}p+=q}else{if(t.childNodes[r].nodeName=="BR"){p+="\n"}else{p+=h(t.childNodes[r])}}}if(/MSIE [678]/.test(navigator.userAgent)){p=p.replace(/\r/g,"\n")}return p}function a(s){var r=s.className.split(/\s+/);r=r.concat(s.parentNode.className.split(/\s+/));for(var q=0;q<r.length;q++){var p=r[q].replace(/^language-/,"");if(e[p]){return p}}}function c(q){var p=[];(function(s,t){for(var r=0;r<s.childNodes.length;r++){if(s.childNodes[r].nodeType==3){t+=s.childNodes[r].nodeValue.length}else{if(s.childNodes[r].nodeName=="BR"){t+=1}else{if(s.childNodes[r].nodeType==1){p.push({event:"start",offset:t,node:s.childNodes[r]});t=arguments.callee(s.childNodes[r],t);p.push({event:"stop",offset:t,node:s.childNodes[r]})}}}}return t})(q,0);return p}function k(y,w,x){var q=0;var z="";var s=[];function u(){if(y.length&&w.length){if(y[0].offset!=w[0].offset){return(y[0].offset<w[0].offset)?y:w}else{return w[0].event=="start"?y:w}}else{return y.length?y:w}}function t(D){var A="<"+D.nodeName.toLowerCase();for(var B=0;B<D.attributes.length;B++){var C=D.attributes[B];A+=" "+C.nodeName.toLowerCase();if(C.value!==undefined&&C.value!==false&&C.value!==null){A+='="'+m(C.value)+'"'}}return A+">"}while(y.length||w.length){var v=u().splice(0,1)[0];z+=m(x.substr(q,v.offset-q));q=v.offset;if(v.event=="start"){z+=t(v.node);s.push(v.node)}else{if(v.event=="stop"){var p,r=s.length;do{r--;p=s[r];z+=("</"+p.nodeName.toLowerCase()+">")}while(p!=v.node);s.splice(r,1);while(r<s.length){z+=t(s[r]);r++}}}}return z+m(x.substr(q))}function j(){function q(x,y,v){if(x.compiled){return}var u;var s=[];if(x.k){x.lR=f(y,x.l||hljs.IR,true);for(var w in x.k){if(!x.k.hasOwnProperty(w)){continue}if(x.k[w] instanceof Object){u=x.k[w]}else{u=x.k;w="keyword"}for(var r in u){if(!u.hasOwnProperty(r)){continue}x.k[r]=[w,u[r]];s.push(r)}}}if(!v){if(x.bWK){x.b="\\b("+s.join("|")+")\\s"}x.bR=f(y,x.b?x.b:"\\B|\\b");if(!x.e&&!x.eW){x.e="\\B|\\b"}if(x.e){x.eR=f(y,x.e)}}if(x.i){x.iR=f(y,x.i)}if(x.r===undefined){x.r=1}if(!x.c){x.c=[]}x.compiled=true;for(var t=0;t<x.c.length;t++){if(x.c[t]=="self"){x.c[t]=x}q(x.c[t],y,false)}if(x.starts){q(x.starts,y,false)}}for(var p in e){if(!e.hasOwnProperty(p)){continue}q(e[p].dM,e[p],true)}}function d(B,C){if(!j.called){j();j.called=true}function q(r,M){for(var L=0;L<M.c.length;L++){if((M.c[L].bR.exec(r)||[null])[0]==r){return M.c[L]}}}function v(L,r){if(D[L].e&&D[L].eR.test(r)){return 1}if(D[L].eW){var M=v(L-1,r);return M?M+1:0}return 0}function w(r,L){return L.i&&L.iR.test(r)}function K(N,O){var M=[];for(var L=0;L<N.c.length;L++){M.push(N.c[L].b)}var r=D.length-1;do{if(D[r].e){M.push(D[r].e)}r--}while(D[r+1].eW);if(N.i){M.push(N.i)}return f(O,M.join("|"),true)}function p(M,L){var N=D[D.length-1];if(!N.t){N.t=K(N,E)}N.t.lastIndex=L;var r=N.t.exec(M);return r?[M.substr(L,r.index-L),r[0],false]:[M.substr(L),"",true]}function z(N,r){var L=E.cI?r[0].toLowerCase():r[0];var M=N.k[L];if(M&&M instanceof Array){return M}return false}function F(L,P){L=m(L);if(!P.k){return L}var r="";var O=0;P.lR.lastIndex=0;var M=P.lR.exec(L);while(M){r+=L.substr(O,M.index-O);var N=z(P,M);if(N){x+=N[1];r+='<span class="'+N[0]+'">'+M[0]+"</span>"}else{r+=M[0]}O=P.lR.lastIndex;M=P.lR.exec(L)}return r+L.substr(O,L.length-O)}function J(L,M){if(M.sL&&e[M.sL]){var r=d(M.sL,L);x+=r.keyword_count;return r.value}else{return F(L,M)}}function I(M,r){var L=M.cN?'<span class="'+M.cN+'">':"";if(M.rB){y+=L;M.buffer=""}else{if(M.eB){y+=m(r)+L;M.buffer=""}else{y+=L;M.buffer=r}}D.push(M);A+=M.r}function G(N,M,Q){var R=D[D.length-1];if(Q){y+=J(R.buffer+N,R);return false}var P=q(M,R);if(P){y+=J(R.buffer+N,R);I(P,M);return P.rB}var L=v(D.length-1,M);if(L){var O=R.cN?"</span>":"";if(R.rE){y+=J(R.buffer+N,R)+O}else{if(R.eE){y+=J(R.buffer+N,R)+O+m(M)}else{y+=J(R.buffer+N+M,R)+O}}while(L>1){O=D[D.length-2].cN?"</span>":"";y+=O;L--;D.length--}var r=D[D.length-1];D.length--;D[D.length-1].buffer="";if(r.starts){I(r.starts,"")}return R.rE}if(w(M,R)){throw"Illegal"}}var E=e[B];var D=[E.dM];var A=0;var x=0;var y="";try{var s,u=0;E.dM.buffer="";do{s=p(C,u);var t=G(s[0],s[1],s[2]);u+=s[0].length;if(!t){u+=s[1].length}}while(!s[2]);if(D.length>1){throw"Illegal"}return{r:A,keyword_count:x,value:y}}catch(H){if(H=="Illegal"){return{r:0,keyword_count:0,value:m(C)}}else{throw H}}}function g(t){var p={keyword_count:0,r:0,value:m(t)};var r=p;for(var q in e){if(!e.hasOwnProperty(q)){continue}var s=d(q,t);s.language=q;if(s.keyword_count+s.r>r.keyword_count+r.r){r=s}if(s.keyword_count+s.r>p.keyword_count+p.r){r=p;p=s}}if(r.language){p.second_best=r}return p}function i(r,q,p){if(q){r=r.replace(/^((<[^>]+>|\t)+)/gm,function(t,w,v,u){return w.replace(/\t/g,q)})}if(p){r=r.replace(/\n/g,"<br>")}return r}function n(t,w,r){var x=h(t,r);var v=a(t);var y,s;if(v){y=d(v,x)}else{return}var q=c(t);if(q.length){s=document.createElement("pre");s.innerHTML=y.value;y.value=k(q,c(s),x)}y.value=i(y.value,w,r);var u=t.className;if(!u.match("(\\s|^)(language-)?"+v+"(\\s|$)")){u=u?(u+" "+v):v}if(/MSIE [678]/.test(navigator.userAgent)&&t.tagName=="CODE"&&t.parentNode.tagName=="PRE"){s=t.parentNode;var p=document.createElement("div");p.innerHTML="<pre><code>"+y.value+"</code></pre>";t=p.firstChild.firstChild;p.firstChild.cN=s.cN;s.parentNode.replaceChild(p.firstChild,s)}else{t.innerHTML=y.value}t.className=u;t.result={language:v,kw:y.keyword_count,re:y.r};if(y.second_best){t.second_best={language:y.second_best.language,kw:y.second_best.keyword_count,re:y.second_best.r}}}function o(){if(o.called){return}o.called=true;var r=document.getElementsByTagName("pre");for(var p=0;p<r.length;p++){var q=b(r[p]);if(q){n(q,hljs.tabReplace)}}}function l(){if(window.addEventListener){window.addEventListener("DOMContentLoaded",o,false);window.addEventListener("load",o,false)}else{if(window.attachEvent){window.attachEvent("onload",o)}else{window.onload=o}}}var e={};this.LANGUAGES=e;this.highlight=d;this.highlightAuto=g;this.fixMarkup=i;this.highlightBlock=n;this.initHighlighting=o;this.initHighlightingOnLoad=l;this.IR="[a-zA-Z][a-zA-Z0-9_]*";this.UIR="[a-zA-Z_][a-zA-Z0-9_]*";this.NR="\\b\\d+(\\.\\d+)?";this.CNR="\\b(0[xX][a-fA-F0-9]+|(\\d+(\\.\\d*)?|\\.\\d+)([eE][-+]?\\d+)?)";this.BNR="\\b(0b[01]+)";this.RSR="!|!=|!==|%|%=|&|&&|&=|\\*|\\*=|\\+|\\+=|,|\\.|-|-=|/|/=|:|;|<|<<|<<=|<=|=|==|===|>|>=|>>|>>=|>>>|>>>=|\\?|\\[|\\{|\\(|\\^|\\^=|\\||\\|=|\\|\\||~";this.ER="(?![\\s\\S])";this.BE={b:"\\\\.",r:0};this.ASM={cN:"string",b:"'",e:"'",i:"\\n",c:[this.BE],r:0};this.QSM={cN:"string",b:'"',e:'"',i:"\\n",c:[this.BE],r:0};this.CLCM={cN:"comment",b:"//",e:"$"};this.CBLCLM={cN:"comment",b:"/\\*",e:"\\*/"};this.HCM={cN:"comment",b:"#",e:"$"};this.NM={cN:"number",b:this.NR,r:0};this.CNM={cN:"number",b:this.CNR,r:0};this.BNM={cN:"number",b:this.BNR,r:0};this.inherit=function(r,s){var p={};for(var q in r){p[q]=r[q]}if(s){for(var q in s){p[q]=s[q]}}return p}}();hljs.LANGUAGES.cpp=function(){var a={keyword:{"false":1,"int":1,"float":1,"while":1,"private":1,"char":1,"catch":1,"export":1,virtual:1,operator:2,sizeof:2,dynamic_cast:2,typedef:2,const_cast:2,"const":1,struct:1,"for":1,static_cast:2,union:1,namespace:1,unsigned:1,"long":1,"throw":1,"volatile":2,"static":1,"protected":1,bool:1,template:1,mutable:1,"if":1,"public":1,friend:2,"do":1,"return":1,"goto":1,auto:1,"void":2,"enum":1,"else":1,"break":1,"new":1,extern:1,using:1,"true":1,"class":1,asm:1,"case":1,typeid:1,"short":1,reinterpret_cast:2,"default":1,"double":1,register:1,explicit:1,signed:1,typename:1,"try":1,"this":1,"switch":1,"continue":1,wchar_t:1,inline:1,"delete":1,alignof:1,char16_t:1,char32_t:1,constexpr:1,decltype:1,noexcept:1,nullptr:1,static_assert:1,thread_local:1,restrict:1,_Bool:1,complex:1},built_in:{std:1,string:1,cin:1,cout:1,cerr:1,clog:1,stringstream:1,istringstream:1,ostringstream:1,auto_ptr:1,deque:1,list:1,queue:1,stack:1,vector:1,map:1,set:1,bitset:1,multiset:1,multimap:1,unordered_set:1,unordered_map:1,unordered_multiset:1,unordered_multimap:1,array:1,shared_ptr:1}};return{dM:{k:a,i:"</",c:[hljs.CLCM,hljs.CBLCLM,hljs.QSM,{cN:"string",b:"'\\\\?.",e:"'",i:"."},{cN:"number",b:"\\b(\\d+(\\.\\d*)?|\\.\\d+)(u|U|l|L|ul|UL|f|F)"},hljs.CNM,{cN:"preprocessor",b:"#",e:"$"},{cN:"stl_container",b:"\\b(deque|list|queue|stack|vector|map|set|bitset|multiset|multimap|unordered_map|unordered_set|unordered_multiset|unordered_multimap|array)\\s*<",e:">",k:a,r:10,c:["self"]}]}}}();hljs.LANGUAGES.r={dM:{c:[hljs.HCM,{cN:"number",b:"\\b0[xX][0-9a-fA-F]+[Li]?\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"number",b:"\\b\\d+(?:[eE][+\\-]?\\d*)?L\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"number",b:"\\b\\d+\\.(?!\\d)(?:i\\b)?",e:hljs.IMMEDIATE_RE,r:1},{cN:"number",b:"\\b\\d+(?:\\.\\d*)?(?:[eE][+\\-]?\\d*)?i?\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"number",b:"\\.\\d+(?:[eE][+\\-]?\\d*)?i?\\b",e:hljs.IMMEDIATE_RE,r:1},{cN:"keyword",b:"(?:tryCatch|library|setGeneric|setGroupGeneric)\\b",e:hljs.IMMEDIATE_RE,r:10},{cN:"keyword",b:"\\.\\.\\.",e:hljs.IMMEDIATE_RE,r:10},{cN:"keyword",b:"\\.\\.\\d+(?![\\w.])",e:hljs.IMMEDIATE_RE,r:10},{cN:"keyword",b:"\\b(?:function)",e:hljs.IMMEDIATE_RE,r:2},{cN:"keyword",b:"(?:if|in|break|next|repeat|else|for|return|switch|while|try|stop|warning|require|attach|detach|source|setMethod|setClass)\\b",e:hljs.IMMEDIATE_RE,r:1},{cN:"literal",b:"(?:NA|NA_integer_|NA_real_|NA_character_|NA_complex_)\\b",e:hljs.IMMEDIATE_RE,r:10},{cN:"literal",b:"(?:NULL|TRUE|FALSE|T|F|Inf|NaN)\\b",e:hljs.IMMEDIATE_RE,r:1},{cN:"identifier",b:"[a-zA-Z.][a-zA-Z0-9._]*\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"operator",b:"<\\-(?!\\s*\\d)",e:hljs.IMMEDIATE_RE,r:2},{cN:"operator",b:"\\->|<\\-",e:hljs.IMMEDIATE_RE,r:1},{cN:"operator",b:"%%|~",e:hljs.IMMEDIATE_RE},{cN:"operator",b:">=|<=|==|!=|\\|\\||&&|=|\\+|\\-|\\*|/|\\^|>|<|!|&|\\||\\$|:",e:hljs.IMMEDIATE_RE,r:0},{cN:"operator",b:"%",e:"%",i:"\\n",r:1},{cN:"identifier",b:"`",e:"`",r:0},{cN:"string",b:'"',e:'"',c:[hljs.BE],r:0},{cN:"string",b:"'",e:"'",c:[hljs.BE],r:0},{cN:"paren",b:"[[({\\])}]",e:hljs.IMMEDIATE_RE,r:0}]}};
+hljs.initHighlightingOnLoad();
+</script>
+
+
+
+
+</head>
+
+<body>
+<h1>Regular expressions in R vs RStudio</h1>
+
+<p>The &#39;regex&#39; family of languages and
+commands is used for manipulating text strings. More specifically, 
+regular expressions are typically used for finding specific patterns of characters and
+replacing them with others. These technique have a range of applications
+and R&#39;s base installation has powerful regex tools (not to mention
+add-on packages for string manipulation such as
+<a href="http://cran.r-project.org/web/packages/stringr/index.html">stringr</a>).
+Yet regex in R is cause of much confusion, as indicated by the multitude of
+<a href="http://stackoverflow.com/search?q=%5Br%5D+regex">stackoverflow questions on the subject</a>
+and the documentation is difficult for novices to the world of regex.</p>
+
+<p>In this post we are going to see a few reproducible examples of R&#39;s
+implementation of regular expressions and how it can make your life easier.
+There is already much useful information on the topic such as a simple
+how-to on using
+<a href="http://www.r-bloggers.com/making-regex-examples-work-for-you/">regex to load files with specific names</a>,
+an excellent introduction from <a href="http://www.regular-expressions.info/rlanguage.html">Regular-Expressions.info</a>
+and R&#39;s terse documentation on the matter triggered with <code>?regex</code>.
+In an attempt to adhere to the DRY principle, this article will focus on
+just three topics: R&#39;s basic regex commands, search and replace in R and
+R Studio&#39;s implementation of regex. The final topic has rarely been discussed
+yet understanding the differences between regex in R Studio&#39;s search panel
+and in standard R can save much time.
+R Studio&#39;s implementation of regex is <a href="https://support.rstudio.com/hc/communities/public/questions/200641328-regex-replace?locale=en-us">confusingly different</a>
+from R&#39;s default regex behavior.</p>
+
+<h2>R&#39;s basic regex commands</h2>
+
+<p>Let us start with an example: illegal column names that describe
+age categories, attributes and which we want to eventually
+prefix with &#39;m&#39;. Here are the original column names imported from Excel:</p>
+
+<pre><code class="r">x &lt;- c(&quot;16_24cat&quot;, &quot;25_34cat&quot;, &quot;35_44catch&quot;, &quot;45_54Cat&quot;, &quot;55_104fat&quot;)
+</code></pre>
+
+<p>Imagine we first want to select all items in this string containing
+&#39;cat&#39;. The basic regex command in R is <code>grep</code>, which simply
+returns the index of the matching elements:</p>
+
+<pre><code class="r">grep(pattern = &quot;cat&quot;, x = x)
+</code></pre>
+
+<pre><code>## [1] 1 2 3
+</code></pre>
+
+<p>Note that &#39;catch&#39; was included whereas &#39;Cat&#39; was not: the matching
+pattern can appear anywhere in the text string but is case specific.
+To make the search ignore cases, simply add the <code>ignore.case = T</code> argument.
+To exclude &#39;catch&#39;, the dollar sign can be used. These arguments can be used
+to extract the names we are really interested in:</p>
+
+<pre><code class="r">grep(&quot;cat$&quot;, x, ignore.case = T)
+</code></pre>
+
+<pre><code>## [1] 1 2 4
+</code></pre>
+
+<p><code>grepl</code> is the same as <code>grep</code>, only it outputs a yes/now output for each element:</p>
+
+<pre><code class="r">grepl(&quot;cat$&quot;, x, ignore.case = T)
+</code></pre>
+
+<pre><code>## [1]  TRUE  TRUE FALSE  TRUE FALSE
+</code></pre>
+
+<p>The final regex-related command worth knowing <code>strsplit</code>. Imagine
+we want all characters on the right-hand side of the underscore.</p>
+
+<pre><code class="r">strsplit(x, split = &quot;_&quot;)
+</code></pre>
+
+<pre><code>## [[1]]
+## [1] &quot;16&quot;    &quot;24cat&quot;
+## 
+## [[2]]
+## [1] &quot;25&quot;    &quot;34cat&quot;
+## 
+## [[3]]
+## [1] &quot;35&quot;      &quot;44catch&quot;
+## 
+## [[4]]
+## [1] &quot;45&quot;    &quot;54Cat&quot;
+## 
+## [[5]]
+## [1] &quot;55&quot;     &quot;104fat&quot;
+</code></pre>
+
+<p>Strangely, the hardest part of the <code>strsplit</code> function
+is to re-combine the list output into a useful form.
+For this, in base R, we need the power of <code>sapply</code>:</p>
+
+<pre><code class="r">sapply(strsplit(x, split = &quot;_&quot;), &quot;[&quot;, 2)
+</code></pre>
+
+<pre><code>## [1] &quot;24cat&quot;   &quot;34cat&quot;   &quot;44catch&quot; &quot;54Cat&quot;   &quot;104fat&quot;
+</code></pre>
+
+<p>A simpler way to achieve this same result would be to use the
+<code>str_split_fixed</code> function of the <code>stringr</code> package:</p>
+
+<pre><code class="r">library(stringr)
+str_split_fixed(x, &quot;_&quot;, 2)[, 2]
+</code></pre>
+
+<pre><code>## [1] &quot;24cat&quot;   &quot;34cat&quot;   &quot;44catch&quot; &quot;54Cat&quot;   &quot;104fat&quot;
+</code></pre>
+
+<h2>Finding and replacing in R</h2>
+
+<p>To search and replace the first instance of a pattern, use <code>sub</code>.
+Much more useful is <code>gsub</code>, which replaces all instances.
+To replace all instances of &#39;cat&#39; with &#39;fat&#39;, use the following:</p>
+
+<pre><code class="r">gsub(pattern = &quot;cat$&quot;, replacement = &quot;fat&quot;, x = x, ignore.case = T)
+</code></pre>
+
+<pre><code>## [1] &quot;16_24fat&quot;   &quot;25_34fat&quot;   &quot;35_44catch&quot; &quot;45_54fat&quot;   &quot;55_104fat&quot;
+</code></pre>
+
+<p>Let&#39;s try something more complicated. We want all instances of
+two numbers followed by an alphabet letter to have an additional character
+inserted, but only if the first of those numbers is 3 or less:</p>
+
+<pre><code class="r">gsub(&quot;([1-3][1-9][a-z])&quot;, &quot;m\\1&quot;, x, perl = T, )
+</code></pre>
+
+<pre><code>## [1] &quot;16_m24cat&quot;  &quot;25_m34cat&quot;  &quot;35_44catch&quot; &quot;45_54Cat&quot;   &quot;55_104fat&quot;
+</code></pre>
+
+<p>The above syntax is bizarre, so let&#39;s run 
+through it. </p>
+
+<ul>
+<li>We have specified that we want <a href="http://www.regular-expressions.info/perl.html">Perl-esque</a>
+regex, allowing us to store groups for later referral. </li>
+<li>The curved brackets
+have no impact on the search result, but are used by Perl to store the contents
+of the group. </li>
+<li>The square brackets refer to any character matching the range of values indicated.</li>
+<li>the <code>\\1</code> symbol means &ldquo;replace this with the value captured in group 1&rdquo;,
+meaning that the same numbers are retained, even though the numbers were used in the match.</li>
+</ul>
+
+<h2>Regular expressions in RStudio</h2>
+
+<p>The above bullet points may seem like a daunting amount of explanation 
+for only one line of code, and the regex is still 
+relatively simple! More complex commands can be done, especially when
+the <code>perl = T</code> argument is enabled or using the more coherent <code>stringr</code>
+package. However, one of the main uses that R users may have for regular
+expressions is not their data per se - R is most useful for <em>quantitative</em> not
+character information after all. Regular expressions can be hugely useful for
+editing long R scripts to do different jobs.</p>
+
+<p>R Studio&#39;s search and replace functionality is well known but the little &ldquo;Regex&rdquo;
+tick mark is less so. </p>
+
+<p><img src="data:image/png;base64,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" alt="button"/></p>
+
+<p>Hitting that tick mark brings the whole power of Perl regex to bear on your
+code editing: time spent learning the functionality of
+regular expressions can pay dividends in fast code modification and
+automation of repetitive tasks.</p>
+
+<p>In fact, the example used throughout this article was originally implemented
+in RStudio to change the name of text strings so they would be valid
+column names. The text in the previous image means, in English, &ldquo;search
+for any instance of <code>&quot;</code> followed by a number and then insert the letter <code>m</code>
+directly after the quote mark and the number&rdquo;. This altered all the column names 
+in an instant. </p>
+
+<p>Unfortunately, R Studio&#39;s website has little in the way of documentation
+for this little feature (hint hint to any on the RStudio team reading this),
+other than a
+<a href="https://support.rstudio.com/hc/communities/public/questions/200641328-regex-replace?locale=en-us">thread about how it differs from R&#39;s implementation</a>, as covered
+in this article.</p>
+
+<h2>Conclusion</h2>
+
+<p>Clearly, there is large potential for confusion in R&#39;s implementation of
+regular expressions. To pick one example, the group
+register <code>$1</code> in RStudio and pure Perl is different from the <code>\\1</code> register used in R.
+Yet it is well worth the effort of learning regex in R, as it opens up
+huge possibility for the manipulation and analysis of text data as well
+as automation of your own code re-writing.</p>
+
+<p>This article and the reproducible examples, should be of use
+to others. Understanding regular expressions in R and RStudio can make the
+R programming process more powerful, less prone to human error and
+faster. It is hoped that this will allow R users more time away from their computers,
+to enjoy nature and hopefully to return to their computers with a refreshed desire
+to learn and use their specialist skills for the greater good.</p>
+
+</body>
+
+</html>
+
