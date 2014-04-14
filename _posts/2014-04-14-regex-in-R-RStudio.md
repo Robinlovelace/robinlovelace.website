@@ -81,7 +81,7 @@ grep("cat$", x, ignore.case = T)
 ```
 
 
-`grepl` is the same as `grep`, only it outputs a yes/now output for each element:
+`grepl` is the same as `grep`, only it outputs a yes/no output for each element:
 
 
 ```r
@@ -93,7 +93,7 @@ grepl("cat$", x, ignore.case = T)
 ```
 
 
-The final regex-related command worth knowing `strsplit`. Imagine
+Another regex-related command worth knowing `strsplit`. Imagine
 we want all characters on the right-hand side of the underscore.
 
 
@@ -179,11 +179,16 @@ gsub("([1-3][1-9][a-z])", "m\\1", x, perl = T, )
 
 The above syntax is bizarre, so let's run 
 through it. 
+
 - We have specified that we want [Perl-esque](http://www.regular-expressions.info/perl.html)
-regex, allowing us to store groups for later referral. 
+regex, "as you should", according to [a source of authority on the
+matter](http://www.regular-expressions.info/rlanguage.html), as this allows
+'[mode modifiers](http://www.regular-expressions.info/modifiers.html)' to change the
+behaviour of specific chunks of regex within curved brackets. (Although the same result
+would be acheived without Perl in this case.)
 - The curved brackets
-have no impact on the search result, but are used by Perl to store the contents
-of the group. 
+have no impact on the search result, but are used to store the contents
+of the group, to be referred to subsequently.
 - The square brackets refer to any character matching the range of values indicated.
 - the `\\1` symbol means "replace this with the value captured in group 1",
 meaning that the same numbers are retained, even though the numbers were used in the match.
