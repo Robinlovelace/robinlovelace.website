@@ -1,7 +1,7 @@
 ---
 layout: post
 title: GISRUK 2014 presentation
-categories
+categories:
  - presentation
 tags:
  - open source
