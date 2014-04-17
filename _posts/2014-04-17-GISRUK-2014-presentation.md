@@ -2,11 +2,11 @@
 layout: post
 title: GISRUK 2014 presentation
 categories:
- - presentation
+- presentation
 tags:
- - open source
- - GIS
- - academia
+- open source
+- GIS
+- academia
 ---
 
 These are my presentation slides for the Geographic Information System
