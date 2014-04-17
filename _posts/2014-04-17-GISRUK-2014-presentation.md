@@ -19,3 +19,10 @@ or less, useful for improving our understanding of the world.
 Check the final slides for follow-ups on this.
 
 <script async class="speakerdeck-embed" data-id="6db3cca0a7d90131f453524187cb86b1" data-ratio="1.29129886506936" src="//speakerdeck.com/assets/embed.js"></script>
+
+To rerun the code underlying the results presented in the presentation is simple:
+download the [.zip file](https://github.com/Robinlovelace/twitter-leeds/archive/master.zip)
+of the [twitter-leeds GitHub repository](https://github.com/Robinlovelace/twitter-leeds):
+https://github.com/Robinlovelace/twitter-leeds
+
+
