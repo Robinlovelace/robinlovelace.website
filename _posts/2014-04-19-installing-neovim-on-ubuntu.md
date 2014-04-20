@@ -34,7 +34,8 @@ in the region of £50.
 
 Happy to say that neovim is up and running on my computer
 and can be called from the terminal with `nvim`.
-The installation is described on the website, but can seem a little daunting to
+The installation is
+[described on the website](https://github.com/neovim/neovim/wiki/Installing), but can seem a little daunting to
 people new to the world of Linux. So here's my brief 'how to':
 
 ## 1: Unpack the neovim folder onto your computer
