@@ -58,7 +58,7 @@ trips in Sheffield, UK. *Energy Policy, 39(4)*, 2075-2087. Elsevier. [doi:10.101
 ## User guides and manuals
 - Lovelace, R. (2014). Harnessing Open Street Map Data with R and QGIS. Leeds School of Geography practical Working Paper. Available on [EloGeo](http://elogeo.nottingham.ac.uk/xmlui/browse?value=Lovelace%2C+Robin&type=author).
 
-- Lovelace, R. and Cheshire, J. (2014 and ongoing). Introduction to visualising spatial data in R. Tutorial for NCRM Short Course. Updated version hosted on [GitHub](https://github.com/Robinlovelace/Creating-maps-in-R).
+- Lovelace, R. and Cheshire, J. (2014 and ongoing). Introduction to visualising spatial data in R. Tutorial for NCRM Short Course. Updated version hosted on [GitHub](https://github.com/Robinlovelace/Creating-maps-in-R), original hosted by the [National Centre for Research Methods](http://eprints.ncrm.ac.uk/3295/).
 
 - Lovelace, R. (2013). Supplementary information: a user manual for the integerisation of IPF weights using R, 1–18. Available online on arXiv or from the [University of Leeds](http://www.personal.leeds.ac.uk/~georl/papers/supplement-3.pdf)
 
