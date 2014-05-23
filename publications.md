@@ -8,12 +8,18 @@ published: true
 
 This is a list of my publications to date:
 
+## Books
+
+- Lovelace, R., & McLoughlin, A. (2014). Engineering in Development: Transport. Engineers Without Borders (UK), [In Press](http://eprints.whiterose.ac.uk/77557/).
+
 ## Book chapters
+
 - Cheshire, J. & Lovelace, R. (2014).  Spatial data visualisation with R. In *Geocomputation, a Practical Primer*. In Press with Sage. Preprint [available online](https://github.com/geocomPP/sdv/raw/master/chapter.pdf).
 
-- Lovelace, R., & McLoughlin, A. (2014). Transport in Development. Engineers Without Borders (UK), [In Press](http://eprints.whiterose.ac.uk/77557/).
 
 ## Journal articles
+- Uttley, J and Lovelace, R (2014) Cycling promotion schemes and long-term behavioural change: A case study from the University of Sheffield. *Case Studies on Transport Policy*. Under review.
+
 - Lovelace, R., Ballas, D., & Watson, M. (2014). A spatial microsimulation approach for the analysis of commuter patterns: from individual to regional levels. *Journal of Transport Geography, 34, 282-296.* [doi: 10.1016/j.jtrangeo.2013.07.008](http://dx.doi.org/10.1016/j.jtrangeo.2013.07.008). Preprint [available online](http://www.personal.leeds.ac.uk/~georl/papers/smsim-4-transport.pdf).
 
 - Lovelace, R., & Philips, I. (2014). The ‘oil vulnerability’of commuter patterns: A case study from Yorkshire and the Humber, UK. *Geoforum*, 51, 169-182 [doi: 10.1016/j.geoforum.2013.11.005](http://dx.doi.org/10.1016/j.geoforum.2013.11.005) . Preprint [available online](http://eprints.whiterose.ac.uk/77115/).
@@ -24,7 +30,7 @@ This is a list of my publications to date:
 
 - Lovelace, R., & Temple, L. (2012). Carbon Capture and Storage: bury the myth and focus on alternatives. [Metis](http://www.ippr.org/publication/55/9674/metis-volume-3), 3. Full article available [here](http://www.personal.leeds.ac.uk/~georl/papers/CCS-myth-IPPR.pdf).
 
-- Lovelace, R., Beck, S. B. M., Watson, M., & Wild, A. (2011). 
+- Lovelace, R., Beck, S. B. M., Watson, M., & Wild, A. (2011).
 Assessing the energy implications of replacing car trips with bicycle 
 trips in Sheffield, UK. *Energy Policy, 39(4)*, 2075-2087. Elsevier. [doi:10.1016/j.enpol.2011.01.051](http://doi.org/10.1016/j.enpol.2011.01.051) preprint [available online](http://www.personal.leeds.ac.uk/~georl/papers/modal-shift-preprint.pdf).
 
@@ -46,7 +52,15 @@ trips in Sheffield, UK. *Energy Policy, 39(4)*, 2075-2087. Elsevier. [doi:10.101
 
 - Energy futures. <em>Now Then</em>, June 2010, p. 16-17. Sheffield. <a href="http://www.personal.leeds.ac.uk/~georl/papers/Energy_futures.pdf">Html</a> or [pdf](http://nowthenmagazine.com/wp-content/themes/nowthen/backissues/nt27_jun10.pdf).
 
-## Online magazines and blogs
+## Book reviews
+
+- Sage Handbook of Transport Studies, Jean-Paul Rodrigue, Theo Notteboom, Jon Shaw (Eds.). Sage, London (2013). £95, Hardback, ISBN: 978-1-84920-789-8, *Journal of Transport Geography*, [http://dx.doi.org/10.1016/j.jtrangeo.2014.05.002](http://dx.doi.org/10.1016/j.jtrangeo.2014.05.002).
+
+- The future Is not what it used to be: a review for optimists. *Environmental Values*. 23, 2, 114. Preprint [available online](http://eprints.whiterose.ac.uk/77320/).
+
+- [Sacred Economics](http://sacred-economics.com/). *Now Then Magazine*, 59, February, p. 8. [Available online](http://nowthenmagazine.com/issue-59/sacred-economics/).
+
+## Online magazines
 - Lovelace, R. and Temple, L. (2012). Carbon capture and storage: time to bury the myth? [*Responding to Climate Change*](http://www.rtcc.org/2012/10/02/carbon-capture-and-storage-time-to-bury-the-myth/), 15 October. 
 
 - Lovelace, R. (2011). Assessing the energy implication of political intervention. <em><a href="http://www.theoildrum.com/node/7798#more">The Oil Drum</a></em>.
@@ -55,7 +69,10 @@ trips in Sheffield, UK. *Energy Policy, 39(4)*, 2075-2087. Elsevier. [doi:10.101
 
 - Lovelace, R. (2010). How to Set Up and Run a Bicycle Repair Company. <em><a href="http://campfire.theoildrum.com/node/5976">The Oil Drum</a>: Campfire</em>.
 
-## User guides and manuals
+## User guides and tutorials
+
+- Lovelace, R. (2014). Introducing spatial microsimulation with R: a practical. In-depth tutorial on spatial microsimulation for an [NCRM Short Course](http://www.ncrm.ac.uk/training/show.php?article=4786) and available as an NCRM working paper. Latest version [available on GitHub](https://github.com/Robinlovelace/smsim-course/raw/master/handout.pdf).
+
 - Lovelace, R. (2014). Harnessing Open Street Map Data with R and QGIS. Leeds School of Geography practical Working Paper. Available on [EloGeo](http://elogeo.nottingham.ac.uk/xmlui/browse?value=Lovelace%2C+Robin&type=author).
 
 - Lovelace, R. and Cheshire, J. (2014 and ongoing). Introduction to visualising spatial data in R. Tutorial for NCRM Short Course. Updated version hosted on [GitHub](https://github.com/Robinlovelace/Creating-maps-in-R), original hosted by the [National Centre for Research Methods](http://eprints.ncrm.ac.uk/3295/).
