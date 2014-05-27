@@ -18,7 +18,12 @@ This is a list of my publications to date:
 
 
 ## Journal articles
-- Uttley, J and Lovelace, R (2014) Cycling promotion schemes and long-term behavioural change: A case study from the University of Sheffield. *Case Studies on Transport Policy*. Under review.
+
+<!-- Lovelace, R. (under review). How to ‘make cycling soar’: A geographical exploration of the factors associated with changes in bicycle commuting in England between 2001 and 2011. *Journal of Transport and Health*.-->
+
+<!-- Uttley, J and Lovelace, R (under review) Cycling promotion schemes and long-term behavioural change: A case study from the University of Sheffield. *Case Studies on Transport Policy*.-->
+
+- Lovelace, R., Malleson, N., Harland, K., & Birkin, M. (2014). Geotagged tweets to inform a spatial interaction model: a case study of museums. [arXiv preprint](http://arxiv.org/abs/1403.5118).
 
 - Lovelace, R., Ballas, D., & Watson, M. (2014). A spatial microsimulation approach for the analysis of commuter patterns: from individual to regional levels. *Journal of Transport Geography, 34, 282-296.* [doi: 10.1016/j.jtrangeo.2013.07.008](http://dx.doi.org/10.1016/j.jtrangeo.2013.07.008). Preprint [available online](http://www.personal.leeds.ac.uk/~georl/papers/smsim-4-transport.pdf).
 
@@ -38,6 +43,11 @@ trips in Sheffield, UK. *Energy Policy, 39(4)*, 2075-2087. Elsevier. [doi:10.101
 <em>Nature</em>, <em>455</em>(7212), 460. Nature Publishing Group. [doi:10.1038/455461a](http://doi.org/10.1038/455461a), also available <a href="http://www.personal.leeds.ac.uk/~georl/papers/Lovelace%20-%202008%20-%20Energy%20efficiency%20gains%20alone%20won%27t%20reduce%20emissions.pdf">here</a>.
 
 ## Printed magazine articles
+
+- Lovelace, R. (2014). Jornadas de SIG Libre: A European Digital Mapping Conference. Geoinformatics, 17(4), 12. Available online from [Geoinformatics.com](http://fluidbook.geoinformatics.com/GEO-Informatics_4_2014/#/12/).
+
+<!--TODO: add link2 preprint-->
+
 - Doctoral Students Who Publish. University of Sheffield Doctoral Times, Spring 2013, p. 6. Sheffield. Magazine [available online](http://www.sheffield.ac.uk/polopoly_fs/1.271737!/file/DoctoralTimes-Spring2013.pdf).
 
 - On Yer Bike. *Now Then*, December 2012. Sheffield. Available [online](http://nowthenmagazine.com/issue-57/on-yer-bike/).
@@ -61,6 +71,7 @@ trips in Sheffield, UK. *Energy Policy, 39(4)*, 2075-2087. Elsevier. [doi:10.101
 - [Sacred Economics](http://sacred-economics.com/). *Now Then Magazine*, 59, February, p. 8. [Available online](http://nowthenmagazine.com/issue-59/sacred-economics/).
 
 ## Online magazines
+
 - Lovelace, R. and Temple, L. (2012). Carbon capture and storage: time to bury the myth? [*Responding to Climate Change*](http://www.rtcc.org/2012/10/02/carbon-capture-and-storage-time-to-bury-the-myth/), 15 October. 
 
 - Lovelace, R. (2011). Assessing the energy implication of political intervention. <em><a href="http://www.theoildrum.com/node/7798#more">The Oil Drum</a></em>.
@@ -82,4 +93,5 @@ trips in Sheffield, UK. *Energy Policy, 39(4)*, 2075-2087. Elsevier. [doi:10.101
 -  Acosta, L. and Sergio, A. (2012) gvSIG Batoví: an educational resource for Plan Ceibal. Guide to open source GIS software (translator from Spanish to English). [Available here](http://elogeo.nottingham.ac.uk/xmlui/handle/url/149), on the [E-learning of the Open Geospatial community (ELOGeo) ](http://elogeo.nottingham.ac.uk/xmlui/)website.
 
 ## Thesis
+
 - Lovelace, R. (2014). The energy costs of commuting: a spatial microsimulation approach. University of Sheffield. Viva (16/12/2013) examined by professors [Michael Batty](http://www.ucl.ac.uk/bartlett/people/?school=casa&upi=JMBAT23) and [Charles Pattie](http://www.sheffield.ac.uk/geography/staff/pattie_charles). Entire thesis document and example code and data available from a [GitHub repository](https://github.com/robinlovelace/thesis-reproducible).

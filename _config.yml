@@ -7,8 +7,8 @@ email: rob00x@gmail.com
 
 
 ipygments: true
-comments: true 
-markdown: redcarpet
+comments: true
+markdown: kramdown
 paginate: 5
 
 scholar:
