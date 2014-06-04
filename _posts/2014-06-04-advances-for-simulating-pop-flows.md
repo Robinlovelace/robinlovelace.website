@@ -1,5 +1,8 @@
 ---
-published: false
+layout: post
+title: Advances in datasets and models for simulating flow: opportunities and risks
+categories: presentations
+tags: visualisation
 ---
 
 These are slides of a talk I'm doing tomorrow on advances in datasets and models for simulating flows of people over space. 
