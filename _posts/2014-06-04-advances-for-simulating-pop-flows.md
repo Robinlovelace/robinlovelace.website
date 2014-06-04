@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Advances in datasets and models for simulating flow: opportunities and risks
+title: "Advances in datasets and models for simulating flows: opportunities and risks"
 categories: presentations
 tags: visualisation
 ---
