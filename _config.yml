@@ -14,4 +14,7 @@ paginate: 5
 scholar:
   bibliography_template: "%{reference}"
 
+gems:
+  - jekyll-redirect-from
+
 

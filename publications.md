@@ -82,7 +82,7 @@ trips in Sheffield, UK. *Energy Policy, 39(4)*, 2075-2087. Elsevier. [doi:10.101
 
 ## User guides and tutorials
 
-- Lovelace, R. (2014). Introducing spatial microsimulation with R: a practical. In-depth tutorial on spatial microsimulation for an [NCRM Short Course](http://www.ncrm.ac.uk/training/show.php?article=4786) and available as an NCRM working paper. Latest version [available on GitHub](https://github.com/Robinlovelace/smsim-course/raw/master/handout.pdf).
+- Lovelace, R. (2014). Introducing spatial microsimulation with R: a practical. In-depth tutorial on spatial microsimulation for an [NCRM Short Course](http://www.ncrm.ac.uk/training/show.php?article=4786) and available as an [NCRM working paper](http://eprints.ncrm.ac.uk/3348/). Latest version [available on GitHub](https://github.com/Robinlovelace/smsim-course/raw/master/handout.pdf).
 
 - Lovelace, R. (2014). Harnessing Open Street Map Data with R and QGIS. Leeds School of Geography practical Working Paper. Available on [EloGeo](http://elogeo.nottingham.ac.uk/xmlui/browse?value=Lovelace%2C+Robin&type=author).
 
