@@ -65,7 +65,6 @@ points(stations)
 ```
 
 ![plot of chunk unnamed-chunk-3](https://raw.githubusercontent.com/Robinlovelace/Creating-maps-in-R/master/vignettes/clipping-with-bounding-box_files/figure-markdown_github/unnamed-chunk-3.png)
-https://github.com/Robinlovelace/Creating-maps-in-R/raw/master/vignettes/clipping-with-bounding-box_files/figure-markdown_github/unnamed-chunk-3.png
 
 So how do we select only points that are are within the zones of London? Believe it or not, it's as simple as subsetting the matrix `M` above. This is an amazingly concise and convenient way of spatial subsetting that was added to R at some point between versions 1 and 2 of [Applied Spatial Data Analysis with R](http://www.asdar-book.org/). In the earlier (2008) book, one had to use `overlay(x, y)` just to get the selection, and then another line of code was required to actually make the subset. Now things are much simpler. As Bivand et al. put it in the [latest edtion](http://www.springer.com/statistics/life+sciences,+medicine+%26+health/book/978-1-4614-7617-7) (p. 131), "the selection syntax for features was estended such that it understands:"
 
