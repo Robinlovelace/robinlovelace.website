@@ -15,8 +15,6 @@ This miniature vignette shows how to clip spatial data based on different spatia
 
 ![plot of chunk Westminster](https://raw.githubusercontent.com/Robinlovelace/Creating-maps-in-R/master/vignettes/clipping-with-bounding-box_files/figure-markdown_github/Westminster.png)
 
-<!--more-->
-
 Loading the data
 ----------------
 
