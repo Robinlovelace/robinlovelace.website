@@ -10,6 +10,7 @@ tags:
 - software
 ---
 
+
 This miniature vignette shows how to clip spatial data based on different spatial objects in R and a 'bounding box'. Spatial overlays are common in GIS applications and R users are fortunate that the clipping and spatial subsetting functions are mature and fairly fast. We'll also write a new function called `gClip()`, that will make clipping by bounding boxes easier.
 
 ![plot of chunk Westminster](https://raw.githubusercontent.com/Robinlovelace/Creating-maps-in-R/master/vignettes/clipping-with-bounding-box_files/figure-markdown_github/Westminster.png)
@@ -141,4 +142,4 @@ plot(zones_clipped_w); plot(westminster, col = "red", add = T)
 Conclusion
 ----------
 
-I hope this is post has been useful. If so, there are many more spatial tips available from the [Introduction to visualising spatial data in R](https://github.com/Robinlovelace/Creating-maps-in-R/raw/master/intro-spatial-rl.pdf) that [James Cheshire](http://spatial.ly/). The source code of this post can also be viewed [online](https://github.com/Robinlovelace/Creating-maps-in-R/blob/master/vignettes/clipping-with-bounding-box.Rmd) as just one of a series of [vignettes](https://github.com/Robinlovelace/Creating-maps-in-R/tree/master/vignettes) to showcase some of R's impressive spatial capabilities.
+There are many more spatial tips available from the [Introduction to visualising spatial data in R](https://github.com/Robinlovelace/Creating-maps-in-R/raw/master/intro-spatial-rl.pdf) that [James Cheshire](http://spatial.ly/). The source code of this post can also be viewed [online](https://github.com/Robinlovelace/Creating-maps-in-R/blob/master/vignettes/clipping-with-bounding-box.Rmd) as just one of a series of [vignettes](https://github.com/Robinlovelace/Creating-maps-in-R/tree/master/vignettes) to showcase some of R's impressive spatial capabilities.
