@@ -1,4 +1,7 @@
-
+---
+layout: default
+title: Influential geographers
+---
 
 Colin Poley - Historical geographer, focussing on shifts in travel behaviour
 
