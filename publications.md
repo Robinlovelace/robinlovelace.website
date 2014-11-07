@@ -10,7 +10,7 @@ This is a list of my publications to date:
 
 ## Books
 
-- Lovelace, R., & McLoughlin, A. (2014). Engineering in Development: Transport. Engineers Without Borders (UK), [Draft (high resolution images - 24 Mb)](http://eprints.whiterose.ac.uk/77557/). [Final version (portable: robinlovelace.net/publications/eind-transport-mcloughlin-lovelace-2014-final.pdf)](http://robinlovelace.net/publications/eind-transport-mcloughlin-lovelace-2014-final.pdf).
+- Lovelace, R., & McLoughlin, A. (2014). Engineering in Development: Transport. Engineers Without Borders (UK), [Draft](http://eprints.whiterose.ac.uk/77557/) (high resolution images - 24 Mb). [Final version (2.4 Mb - recommended)](http://robinlovelace.net/publications/eind-transport-mcloughlin-lovelace-2014-final.pdf).
 
 ## Book chapters
 
