@@ -1,0 +1,158 @@
+---
+layout: post
+title: Basic mapping and attribute joins in R
+categories:
+ - R
+tags:
+ - maps
+---
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+
+<p>This post is based on the free and open source <a href="https://github.com/Robinlovelace/Creating-maps-in-R">Creating-maps-in-R</a> teaching resource for introducing R as a command-line GIS.</p>
+<p>R is well known as an language ideally suited for data processing, statistics and modelling. R has a number of spatial packages, allowing analyses that would require hundreds of lines of code in other languages to be implemented with relative ease. Geographically weighted regression, analysis of space-time data and raster processing are three niche areas where R outperform much of the competition, thanks to community contributions such as <strong><a href="http://cran.r-project.org/web/packages/spgwr/index.html">spgwr</a></strong>, <strong><a href="http://cran.r-project.org/web/packages/spacetime/index.html">spacetime</a></strong> and the wonderfully straightforward <strong><a href="http://cran.r-project.org/web/packages/raster/index.html">raster</a></strong> packages.</p>
+<p>What seems to be less well known is that R performs well as a self standing Geographical Information System (GIS) in its own right. Everyday tasks such as reading and writing geographical data formats, reprojecting, joining, subsetting and overlaying spatial objects can be easy and intuitive in R, once you understand the slightly specialist data formats and syntax of spatial R objects and functions. These basic operations are the basic foundations of GIS. Mastering them will make much more advanced operations much easier. Based on the saying ‘master walking before trying to run’, this mini tutorial demonstrates how to load and plot a simple geographical object in R, illustrating that the ease with which continuous and binned choropleth map color schemes can be created using <strong><a href="http://cran.r-project.org/web/packages/ggmap/index.html">ggmap</a></strong>, an extension of the popular <strong><a href="http://cran.r-project.org/package=ggplot2">ggplot2</a></strong> graphics package. Crucially, we will also see how to <em>join</em> spatial and non spatial datasets, resulting in a map of where the Conservative party succeeded and failed in gaining council seats in the <a href="http://en.wikipedia.org/wiki/United_Kingdom_local_elections,_2014">2014 local elections</a>.</p>
+
+<p><img src="https://dl.dropboxusercontent.com/u/15008199/egs2stay/figure-html-at/unnamed-chunk-12-1.png" /></p>
+
+<!--more-->
+
+<p>As with any project, the starting point is to load the data we’ll be using. In this case we can download all the datasets from a single souce: the <a href="https://github.com/Robinlovelace/Creating-maps-in-R">Creating-maps-in-R</a> github repository which is designed to introduce R’s basic geographical functionality to beginners. We can use R to download and unzip the files using the following commands (from a Linux-based <a href="http://lubuntu.net/">operating system</a>). This ensures reproducibility:</p>
+<pre class="r"><code># load the packages we&#39;ll be using for this tutorial
+x &lt;- c(&quot;rgdal&quot;, &quot;dplyr&quot;, &quot;ggmap&quot;, &quot;RColorBrewer&quot;)
+lapply(x, library, character.only = TRUE)</code></pre>
+<pre class="r"><code># download the repository:
+download.file(&quot;https://github.com/Robinlovelace/Creating-maps-in-R/archive/master.zip&quot;, destfile = &quot;rmaps.zip&quot;, method = &quot;wget&quot;)
+unzip(&quot;rmaps.zip&quot;) # unzip the files</code></pre>
+<p>Once ‘in’ the folder, R has easy access to all the datasets we need for this tutorial. As this is about GIS, the first stage is to load and plot some spatial data: a map of London:</p>
+<pre class="r"><code>setwd(&quot;/home/robin/Desktop/Creating-maps-in-R-master/&quot;) # navigate into the unzipped folder
+london &lt;- readOGR(&quot;data/&quot;, layer = &quot;london_sport&quot;)</code></pre>
+<pre><code>## OGR data source with driver: ESRI Shapefile 
+## Source: &quot;data/&quot;, layer: &quot;london_sport&quot;
+## with 33 features and 4 fields
+## Feature type: wkbPolygon with 2 dimensions</code></pre>
+<pre class="r"><code>plot(london)</code></pre>
+<p><img src="https://dl.dropboxusercontent.com/u/15008199/egs2stay/figure-html-at/unnamed-chunk-3-1.png" /></p>
+<p>The data has clearly loaded correctly and can be visualised, but where <em>is</em> it? The <code>london</code> is simply printed, a load of unreadable information is printed, including the coordinates defining the geographical extent of each zone and additional non-geographical attributes. The <a href="http://heather.cs.ucdavis.edu/~matloff/R/RProg.pdf">polymophic</a> means that <a href="http://adv-r.had.co.nz/OO-essentials.html#s3">generic functions</a> behave differently depending on the type of data they are fed. The following command, for example, is actually calling <code>mean.Date</code> behind the scenes, allowing R to tell us that the the 2<sup>nd</sup> of July was half way through the year. The default <code>mean.default</code> function does not work:</p>
+<pre class="r"><code>mean(as.Date(c(&quot;01/01/2014&quot;, &quot;31/12/2014&quot;), format = &quot;%d/%m/%Y&quot;))</code></pre>
+<pre><code>## [1] &quot;2014-07-02&quot;</code></pre>
+<p>In the same way, we can use the trusty <code>summary</code> function to summarise our R object:</p>
+<pre class="r"><code>summary(london)</code></pre>
+<pre><code>## Object of class SpatialPolygonsDataFrame
+## Coordinates:
+##        min      max
+## x 503571.2 561941.1
+## y 155850.8 200932.5
+## Is projected: TRUE 
+## proj4string :
+## [+proj=tmerc +lat_0=49 +lon_0=-2 +k=0.9996012717 +x_0=400000
+## +y_0=-100000 +ellps=airy +units=m +no_defs]
+## Data attributes:
+##    ons_label                    name      Partic_Per       Pop_2001     
+##  00AA   : 1   Barking and Dagenham: 1   Min.   : 9.10   Min.   :  7181  
+##  00AB   : 1   Barnet              : 1   1st Qu.:17.60   1st Qu.:181284  
+##  00AC   : 1   Bexley              : 1   Median :19.40   Median :216505  
+##  00AD   : 1   Brent               : 1   Mean   :20.05   Mean   :217335  
+##  00AE   : 1   Bromley             : 1   3rd Qu.:21.70   3rd Qu.:248917  
+##  00AF   : 1   Camden              : 1   Max.   :28.40   Max.   :330584  
+##  (Other):27   (Other)             :27</code></pre>
+<p>This has outputed some very useful information: the bounding box of the object, its coordinate reference system (CRS) and even summaries of the attributes associated with each zone. <code>nrow(london)</code> will tell us that there are 33 polygons represented within the object.</p>
+<p>To gain a fuller understanding of the structure of the <code>london</code> object, we can use the <code>str</code> function (but only on the first polygon, to avoid an extrememly long output):</p>
+<pre class="r"><code>str(london[1,])</code></pre>
+<pre><code>## Formal class &#39;SpatialPolygonsDataFrame&#39; [package &quot;sp&quot;] with 5 slots
+##   ..@ data       :&#39;data.frame&#39;:  1 obs. of  4 variables:
+##   .. ..$ ons_label : Factor w/ 33 levels &quot;00AA&quot;,&quot;00AB&quot;,..: 6
+##   .. ..$ name      : Factor w/ 33 levels &quot;Barking and Dagenham&quot;,..: 5
+##   .. ..$ Partic_Per: num 21.7
+##   .. ..$ Pop_2001  : int 295535
+##   ..@ polygons   :List of 1
+##   .. ..$ :Formal class &#39;Polygons&#39; [package &quot;sp&quot;] with 5 slots
+##   .. .. .. ..@ Polygons :List of 1
+##   .. .. .. .. ..$ :Formal class &#39;Polygon&#39; [package &quot;sp&quot;] with 5 slots
+##   .. .. .. .. .. .. ..@ labpt  : num [1:2] 542917 165647
+##   .. .. .. .. .. .. ..@ area   : num 1.51e+08
+##   .. .. .. .. .. .. ..@ hole   : logi FALSE
+##   .. .. .. .. .. .. ..@ ringDir: int 1
+##   .. .. .. .. .. .. ..@ coords : num [1:63, 1:2] 541178 541872 543442 544362 546662 ...
+##   .. .. .. ..@ plotOrder: int 1
+##   .. .. .. ..@ labpt    : num [1:2] 542917 165647
+##   .. .. .. ..@ ID       : chr &quot;0&quot;
+##   .. .. .. ..@ area     : num 1.51e+08
+##   ..@ plotOrder  : int 1
+##   ..@ bbox       : num [1:2, 1:2] 533569 156481 550541 173556
+##   .. ..- attr(*, &quot;dimnames&quot;)=List of 2
+##   .. .. ..$ : chr [1:2] &quot;x&quot; &quot;y&quot;
+##   .. .. ..$ : chr [1:2] &quot;min&quot; &quot;max&quot;
+##   ..@ proj4string:Formal class &#39;CRS&#39; [package &quot;sp&quot;] with 1 slots
+##   .. .. ..@ projargs: chr &quot;+proj=tmerc +lat_0=49 +lon_0=-2 +k=0.9996012717 +x_0=400000 +y_0=-100000 +ellps=airy +units=m +no_defs&quot;</code></pre>
+<p>This shows us that the fundamental structure of a <code>SpatialPolygonsDataFrame</code> is actually rather complicated. This complexity is useful, allowing R to store the full range of information needed to describe almost any polygon-based dataset. The <code>@</code> symbol in the structure represents <em>slots</em> which are specific to the <a href="http://adv-r.had.co.nz/OO-essentials.html#s4">S4 object class</a> and contain specific pieces of information within the wider <code>london</code> object. The basic slots within the london object are:</p>
+<ul>
+<li><code>@data</code>, which contains the the attribute data for the zones</li>
+<li><code>@polygons</code>, the geographic data associated with each polygon (this confusingly contains the <code>@Polygons</code> slot: each polygon feature can contain multiple <code>Polygons</code>, e.g. if an administrative zone is non-contiguous)</li>
+<li><code>@plotOrder</code> is simply the order in which the polygons are plotted</li>
+<li><code>@bbox</code> is a slot associated with all spatial objects, representing its spatial extent</li>
+<li><code>@proj4string</code> the CRS associated with the object</li>
+</ul>
+<p>Critically for exploring the attributes of <code>london</code> is the <code>data</code> slot. We can look at and modify the attributes of the subdivisions of <code>london</code> easily using the <code>@</code> notation:</p>
+<pre class="r"><code>head(london@data)</code></pre>
+<pre><code>##   ons_label                 name Partic_Per Pop_2001
+## 0      00AF              Bromley       21.7   295535
+## 1      00BD Richmond upon Thames       26.6   172330
+## 2      00AS           Hillingdon       21.5   243006
+## 3      00AR             Havering       17.9   224262
+## 4      00AX Kingston upon Thames       24.4   147271
+## 5      00BF               Sutton       19.3   179767</code></pre>
+<p>Having seen his notation, many (if not most) R beginners will tend to always use it to refer to attribute data in spatial objects. Yet <code>@</code> is often not needed. To refer to the population of London, for example, the following lines of code yield the same result:</p>
+<pre class="r"><code>mean(london@data$Pop_2001)</code></pre>
+<pre><code>## [1] 217335.1</code></pre>
+<pre class="r"><code>mean(london$Pop_2001)</code></pre>
+<pre><code>## [1] 217335.1</code></pre>
+<p>Thus we can treat the S4 spatial data classes as if they were regular data frames in <em>some</em> contexts, which is extremely useful for concise code. To plot the population of London zones on a map, the following code <a href="http://www.stat.ubc.ca/~jenny/STAT545A/block14_colors.html">works</a>:</p>
+<pre class="r"><code>cols &lt;- brewer.pal(n = 4, name = &quot;Greys&quot;)
+lcols &lt;- cut(london$Pop_2001,
+  breaks = quantile(london$Pop_2001),
+  labels = cols)
+plot(london, col = as.character(lcols))</code></pre>
+<p><img src="https://dl.dropboxusercontent.com/u/15008199/egs2stay/figure-html-at/unnamed-chunk-9-1.png" /></p>
+<p>Now, how about joining additional variables to the spatial object? To join information to the existing variables, the <em>join</em> functions from <strong>dplyr</strong> (which replaces and improves on <strong>plyr</strong>) are a godsend. The following code loads a non-geographical dataset and joins an additional variable to <code>london@data</code>:</p>
+<pre class="r"><code>ldat &lt;- read.csv(&quot;/home/robin/Desktop/Creating-maps-in-R-master/data/london-borough-profiles-2014.csv&quot;)
+dat &lt;- select(ldat, Code, contains(&quot;Anxiety&quot;))
+dat &lt;- rename(dat, ons_label = Code, Anxiety = Anxiety.score.2012.13..out.of.10.)
+dat$Anxiety &lt;- as.numeric(as.character(dat$Anxiety))</code></pre>
+<pre><code>## Warning: NAs introduced by coercion</code></pre>
+<pre class="r"><code>london@data &lt;- left_join(london@data, dat)</code></pre>
+<pre><code>## Joining by: &quot;ons_label&quot;</code></pre>
+<pre class="r"><code>head(london@data) # the new data has been added</code></pre>
+<pre><code>##   ons_label                 name Partic_Per Pop_2001 Anxiety
+## 1      00AF              Bromley       21.7   295535    3.20
+## 2      00BD Richmond upon Thames       26.6   172330    3.56
+## 3      00AS           Hillingdon       21.5   243006    3.34
+## 4      00AR             Havering       17.9   224262    3.17
+## 5      00AX Kingston upon Thames       24.4   147271    3.23
+## 6      00BF               Sutton       19.3   179767    3.34</code></pre>
+<div id="plotting-maps-with-ggplot" class="section level2">
+<h2>Plotting maps with <strong>ggplot</strong></h2>
+<p>In order to plot the average anxiety scores across london we can use <strong>ggplot2</strong>:</p>
+<pre class="r"><code>lf &lt;- fortify(london, region = &quot;ons_label&quot;)</code></pre>
+<pre><code>## Loading required package: rgeos
+## rgeos version: 0.2-19, (SVN revision 394)
+##  GEOS runtime version: 3.4.2-CAPI-1.8.2 r3921 
+##  Polygon checking: TRUE</code></pre>
+<pre class="r"><code>lf &lt;- rename(lf, ons_label = id)
+lf &lt;- left_join(lf, london@data)</code></pre>
+<pre><code>## Joining by: &quot;ons_label&quot;</code></pre>
+<pre class="r"><code>ggplot(lf) + geom_polygon(aes(long, lat, group = group, fill = Anxiety))</code></pre>
+<p><img src="https://dl.dropboxusercontent.com/u/15008199/egs2stay/figure-html-at/unnamed-chunk-11-1.png" /></p>
+</div>
+<div id="the-challenge" class="section level2">
+<h2>The challenge</h2>
+<p>Using the skills you have learned in the above tutorial, see if you can replicate the graph below: the proportion of Conservative councilors selected in different parts of London. Hint: the data is contained in <code>ldat</code>, as downloaded from here: <a href="http://data.london.gov.uk/dataset/london-borough-profiles">http://data.london.gov.uk/dataset/london-borough-profiles</a>.</p>
+<p><img src="https://dl.dropboxusercontent.com/u/15008199/egs2stay/figure-html-at/unnamed-chunk-12-1.png" /></p>
+</div>
+
