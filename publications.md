@@ -90,7 +90,7 @@ trips in Sheffield, UK. *Energy Policy, 39(4)*, 2075-2087. Elsevier. [doi:10.101
 
 - Lovelace, R. (2013). Supplementary information: a user manual for the integerisation of IPF weights using R, 1–18. Available online on arXiv or from the [University of Leeds](http://www.personal.leeds.ac.uk/~georl/papers/supplement-3.pdf)
 
-Lovelace, R. (2013). Open Source Data and Methods: A tutorial using crowd-sourced data for store location analysis (p. 20). Sheffield. Download from [here](http://robinlovelace.net/publications/osm-tutorial-final-2.pdf).
+- Lovelace, R. (2013). Open Source Data and Methods: A tutorial using crowd-sourced data for store location analysis (p. 20). Sheffield. Download from [here](http://robinlovelace.net/publications/osm-tutorial-final-2.pdf).
 
 -  Acosta, L. and Sergio, A. (2012) gvSIG Batoví: an educational resource for Plan Ceibal. Guide to open source GIS software (translator from Spanish to English). [Available here](http://elogeo.nottingham.ac.uk/xmlui/handle/url/149), on the [E-learning of the Open Geospatial community (ELOGeo) ](http://elogeo.nottingham.ac.uk/xmlui/)website.
 
