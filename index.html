@@ -48,8 +48,10 @@ title: Robin Lovelace on the WWWeb
 
 <div class='home_box' id='home_right'>
 		<h2>My space</h2>
+    <h3>What I'm up to</h3>
+<iframe src="https://www.google.com/calendar/embed?showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;mode=AGENDA&amp;height=300&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=mi07cb7tmpfoleji0s3ik5ah2g%40group.calendar.google.com&amp;color=%23711616&amp;ctz=Europe%2FLondon" style=" border-width:0 " width="230" height="300" frameborder="0" scrolling="no"></iframe>
 <h3> Search this site!</h3>
-		
+
 <script>
   (function() {
     var cx = '001105394112844622908:wl-djutr_dc';
@@ -77,32 +79,32 @@ title: Robin Lovelace on the WWWeb
 <!-- <p>More quotes can be found on the <a href="http://robinlovelace.net/quotes">quotes</a> page.</p> -->
 
                 <h3>Some interesting links</h3>
-<p>The internet is awash with detritus. In the name of navigating the 
+<p>The internet is awash with detritus. In the name of navigating the
 maze, these links highlight some more enlightened online content.</p>
 		<p><a href="http://www.monbiot.com/">George Monbiot</a>: investigative journalism at its best</p>
 		<p><a href="http://www.r-bloggers.com/">R-Bloggers</a>: a site endevouring to make statistics accessible and fun </p>
 		<p><a href="http://tomsbiketrip.com/">Tom's bike trip</a>: there are many 'bike trip' sites out there; this is one of the best</p>
 		<h3>Personal links:</h3>
 		<p><a href="http://tgrg.wordpress.com/">TGRG website</a>: the Transport Geography group I'm involved with </p>
-		<p><a href="http://mass.leeds.ac.uk/people/robin-lovelace/">MASS profile</a>: academic profile at Leeds</p> 
+		<p><a href="http://mass.leeds.ac.uk/people/robin-lovelace/">MASS profile</a>: academic profile at Leeds</p>
 		<p><a href="www.youtube.com/user/RobinLovelace/">Powerstar Youtube channel</a>: check out my videos</p>
-		<p><a href="http://robinlovelace.net/feed.R.xml">R-Bloggers feed</a>: posts about R</p> 
+		<p><a href="http://robinlovelace.net/feed.R.xml">R-Bloggers feed</a>: posts about R</p>
 		<a class="twitter-timeline"  href="https://twitter.com/robinlovelace"  data-widget-id="382065766264086528">Tweets by @robinlovelace</a>
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 		</p><a href="https://plus.google.com/113816626221939649963" rel="publisher">G</a><a href="https://plus.google.com/u/0/+RobinLovelace" rel="publisher">ooooogle+</a></p>
 
-		
+
 </div>
 
 <script type="text/javascript" charset="utf-8">
   $.githubUser('robinlovelace', function(data) {
     $('#github-projects').html('');
-    
+
     var repos = data.user.repositories;
     repos.sort(function(a,b) {
       return b.watchers - a.watchers;
     });
-    
+
     $(repos.slice(0,6)).each(function() {
       $('#github-projects').append("\
 <div class='repo'>\
