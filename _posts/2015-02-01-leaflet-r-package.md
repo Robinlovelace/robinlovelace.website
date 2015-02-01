@@ -1,6 +1,6 @@
 ---
 layout: post
-title: The leaflet R package for online mapping in R
+title: The leaflet package for online mapping in R
 categories:
  - R
 tags:
