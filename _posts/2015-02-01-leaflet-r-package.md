@@ -149,8 +149,8 @@ what it is. The `data` argument can also be placed inside the initial
 `leaflet()` function call.
 
 That was quite a painless process that would many more lines of code if you
-were to JavaScript. But not as painless as the bicycle trip itself, which
-involved few lines of code still: 0! This can be seen in the following video.
+were to use JavaScript. But not as painless as the bicycle trip itself, which
+involved fewer lines of code still: 0! This can be seen in the following video.
 
 <iframe width="420" height="315" src="//www.youtube.com/embed/6a8QLiC4LV8" frameborder="0" allowfullscreen></iframe>
 
