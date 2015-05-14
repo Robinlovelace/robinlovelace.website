@@ -1,24 +1,11 @@
 ---
 layout: post
-title: 'Creating new class-specific methods in R: a demo with plot.bike()'
+title: 'Learning about classes in R by plotting a bike'
 categories:
  - R
 tags:
  - reviews
 ---
-
-
-<style type="text/css">
-code {
-  color: inherit;
-  background-color: rgba(0, 0, 0, 0.04);
-}
-img {
-  max-width:100%;
-  height: auto;
-}
-</style>
-
 
 <p>A useful feature of R is its ability to implement a function differently depending on the ‘class’ of the object acted on. This article explores this behaviour with reference to a playful modification of the ‘generic’ function <code>plot()</code> to allow plotting of cartoon bicycles. Although the example is quite simple and fun, the concepts it touches on are complex and serious.</p>
 <p>The example demonstrates several of the programming language paradigms that R operates under. R is simultaneously object-orientated, functional and polymorphic. The example also demonstrates the paradigm of inheritance, through the passing of arguments from <code>plot.bike()</code> to <code>plot()</code> via the <code>...</code> symbol. There has been much written about programming paradigms and R’s adherence to (or flouting of!) them. Two useful references on the subject are a <a href="http://en.wikibooks.org/wiki/C%2B%2B_Programming/Programming_Languages/Paradigms">Wikibook page on programming language paradigms</a> and Hadley Wickham's <a href="http://adv-r.had.co.nz/">Advanced R book</a>. There is a huge amount of information on these topics. For the purposes of the examples presented here suffice to say that R uses multiple paradigms and is extremely flexible.</p>
