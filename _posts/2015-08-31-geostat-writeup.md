@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'GEOSTAT 2015: a write-up geostatistical novices'
+title: 'GEOSTAT 2015: a write-up'
 categories:
  - R
 tags:
