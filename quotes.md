@@ -1,11 +1,24 @@
 ---
-title: Inspiring quotations
+title: Quotes
 layout: master
 ---
 
-These are some quotations that bear repeating. 
+## General
 
-## On the difference between Windows and Linux
+> Every piece of information that can be translated into mathematical script is stored, spread and processed with mind-boggling speed and efficiency. A person who wishes to influence the decisions of governments, organisations and companies must therefore learn to speak in numbers. Experts do their best to translate even ideas such as ‘poverty’, ‘happiness’ and ‘honesty’ into numbers (‘the poverty line’, ‘subjective well-being levels’, ‘credit rating’). Entire fields of knowledge, such as physics and engineering, have already lost almost all touch with the spoken human language, and are maintained solely by mathematical script.
+
+> future ages will certainly look back upon us as a people so immersed in the pursuit of wealth as to be blind to high considerations. They will charge us with having culpably allowed the destruction of some of those records of Creation which we had it in our power to preserve; and while professing to regard every living thing as the direct handiwork and best evidence of a Creator, yet, with a strange inconsistency, seeing many of them perish irrecoverably from the face of the earth, uncared for and unkown. Alfred Russel Wallace, 1863
+
+
+
+[Yuval Noah Harari](http://www.ynharari.com/)
+
+## Energy
+
+Mass production of liquid biofuels fermented from annual harvests of crop or residual biomass would require large storages of either cereal or cellulosic feed stocks or the produced ethanol (or both), and the bulkiness of residues and rel atively low energy densities of all of these materials would make such storages
+more costly than those of refined oils. (Smil 2010)
+
+## Computing
 
 > When I am asked to explain the difference between Windows and Linux, I often use a toy analogy.  Windows is like a Game Boy. You go to the store and buy one all shiny new in the box. You take it home, turn it on, and play with it. Pretty graphics, cute sounds. After a while, though, you get tired of the game that came with it, so you go back to the store and buy another one. This cycle repeats over and over. Finally, you go back to the store and say to the person behind the counter, “I want a game that does this!” only to be told that no such game exists because there is no “market demand” for it. Then you say, “But I only need to change this one thing!” The person behind the counter says you can’t change it. The games are all sealed up 
 > in their cartridges. You discover that your toy is limited to the games that others have decided that you need and no more.
@@ -17,6 +30,7 @@ These are some quotations that bear repeating.
 William Shotts, 2013, [The Linux Command Line](http://linuxcommand.org/tlcl.php).
 
 # Friendship
+
 > It is the mark of a modest man to accept his friendly circle ready made from the 
 > hands of opportunity
 
@@ -57,8 +71,8 @@ by oil shortages.
 
 Robert Kabacoff, 2009, [R in Action, 2009](http://www.manning.com/kabacoff/), p. 45.
 
-## To do
+> Simplicity is the hallmark of any good theory and apparent complexity is often simplicity in disguise." (Batty 1976) Urban Modelling
 
-Combine page with rotating quotes.
+
 
 
