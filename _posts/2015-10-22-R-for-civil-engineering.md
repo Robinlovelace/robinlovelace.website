@@ -7,7 +7,7 @@ tags:
  - presentations
 ---
 
-Open source software has caused a quiet revolution in computing since the release of
+Open source software has caused a quiet revolution in computing since
 the creation of the GPL license by Richard Stallman back in
 [1989](https://en.wikipedia.org/wiki/GNU_General_Public_License). Yet it has been slow
 to gain ascendency in many areas, including Civil Engineering. This short post discusses this
