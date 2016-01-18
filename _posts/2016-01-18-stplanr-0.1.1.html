@@ -1,0 +1,210 @@
+---
+layout: post
+title: "stplanr 0.1.1"
+categories:
+ - R
+tags:
+ - presentations
+---
+
+
+<p>Version 0.1.1 of the package <a href="https://cran.r-project.org/web/packages/stplanr/">stplanr</a> has been released on CRAN. This is a major update with many new functions and a new class definition, <code>SpatialLinesNetwork</code>, for route planning and network analysis using <a href="https://cran.r-project.org/web/packages/igraph/index.html">igraph</a>.</p>
+<p>This short post, by myself and package co-author <a href="http://sydney.edu.au/business/itls/staff/richarde">Richard Ellison</a> describes how stplanr can be used for transport research with a few simple examples from the package documentation. We hope that stplanr is of use to transport researchers and practitioners worldwide and encourage contributions to the development version hosted on <a href="https://github.com/ropensci/stplanr">GitHub</a>.</p>
+<div id="working-with-origin-destination-data" class="section level2">
+<h2>Working with origin-destination data</h2>
+<p>Origin-destination (OD) data is one of the basic data sources for understanding travel behaviour. Usually OD data in R is represented by a table containing at least the following columns:</p>
+<ul>
+<li>Origin ID: a text string identifying the zone in which journeys originate</li>
+<li>Destination ID: a test string identifying the destination zone</li>
+<li>Number of trips: the rate of travel between the unique OD pair</li>
+</ul>
+<p>Additional columns can provide a break-down by trip type such as by mode of travel (e.g. car) and time of day. A sample of this data (also referred to as ‘Flow data’ by some statistical organsiations) is provided in the example dataset <code>flows</code>, as illustrated in the Table below.</p>
+<pre class="r"><code>library(stplanr)</code></pre>
+<pre><code>## Loading required package: sp</code></pre>
+<pre class="r"><code>library(tmap)
+data(&quot;flow&quot;)
+knitr::kable(flow[1:3,c(1, 2, 3, 13)])</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left">Area.of.residence</th>
+<th align="left">Area.of.workplace</th>
+<th align="right">All</th>
+<th align="right">On.foot</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">920573</td>
+<td align="left">E02002361</td>
+<td align="left">E02002361</td>
+<td align="right">109</td>
+<td align="right">59</td>
+</tr>
+<tr class="even">
+<td align="left">920575</td>
+<td align="left">E02002361</td>
+<td align="left">E02002363</td>
+<td align="right">38</td>
+<td align="right">4</td>
+</tr>
+<tr class="odd">
+<td align="left">920578</td>
+<td align="left">E02002361</td>
+<td align="left">E02002367</td>
+<td align="right">10</td>
+<td align="right">1</td>
+</tr>
+</tbody>
+</table>
+<p>To link this data to geographical space we use a dataset stored as a <code>SpatialPointsDataFrame</code> from the sp package in <code>cents</code>:</p>
+<pre class="r"><code>data(cents)
+plot(cents)</code></pre>
+<p><img src="2016-01-18-stplanr-0.1.1_files/figure-html/unnamed-chunk-2-1.png" title="" alt="" width="672" /></p>
+<p>To link the flow data we can use the command <code>od2line()</code> to create <code>SpatialLinesDataFrame</code>:</p>
+<pre class="r"><code>odlines &lt;- od2line(flow = flow, zones = cents)
+plot(cents)
+plot(odlines, add = TRUE)</code></pre>
+<p><img src="2016-01-18-stplanr-0.1.1_files/figure-html/unnamed-chunk-3-1.png" title="" alt="" width="672" /></p>
+<p>Note that the function also accepts a <code>SpatialPolygonsDataFrame</code> as an input by setting the line start and end point to the zone’s geographic centroid:</p>
+<pre class="r"><code>odlines &lt;- od2line(flow = flow, zones = zones)
+plot(zones)
+plot(odlines, add = TRUE)</code></pre>
+<p><img src="2016-01-18-stplanr-0.1.1_files/figure-html/unnamed-chunk-4-1.png" title="" alt="" width="672" /></p>
+<p>To gain a basic understanding of the rate of travel in this simple travel system, we can plot the <code>odlines</code> with width proportional to the number of people travelling:</p>
+<pre class="r"><code>plot(odlines, lwd = odlines$All / mean(odlines$All) * 3, col = &quot;red&quot;)
+plot(odlines, lwd = odlines$On.foot / mean(odlines$All) * 3, col = &quot;green&quot;, add = T)</code></pre>
+<p><img src="2016-01-18-stplanr-0.1.1_files/figure-html/unnamed-chunk-5-1.png" title="" alt="" width="672" /></p>
+<p>In the resulting plot the total rate of travel is represented by the width of red lines. The proportion of people who walk is illustrated by the relationship between the width of the green and red lines. We can use this data to explore the relationship between walking and distance:</p>
+<pre class="r"><code>odlines &lt;- spTransform(odlines, CRS(&quot;+init=epsg:27700&quot;))
+odlines$dist &lt;- rgeos::gLength(odlines, byid = T)
+plot(odlines$dist, odlines$On.foot / odlines$All)
+
+# fit a model to the curve
+m &lt;- lm(On.foot / All ~ dist, odlines@data)
+lines(odlines$dist, m$fitted.values)</code></pre>
+<p><img src="2016-01-18-stplanr-0.1.1_files/figure-html/unnamed-chunk-6-1.png" title="" alt="" width="672" /></p>
+<pre class="r"><code>summary(m)</code></pre>
+<pre><code>## 
+## Call:
+## lm(formula = On.foot/All ~ dist, data = odlines@data)
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -0.26915 -0.06987 -0.00694  0.06190  0.63195 
+## 
+## Coefficients:
+##               Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)  5.365e-01  4.503e-02  11.915 8.36e-16 ***
+## dist        -1.409e-04  2.501e-05  -5.633 9.64e-07 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 0.1585 on 47 degrees of freedom
+## Multiple R-squared:  0.403,  Adjusted R-squared:  0.3903 
+## F-statistic: 31.73 on 1 and 47 DF,  p-value: 9.638e-07</code></pre>
+<p>This is useful information: we can see a clear negative relationship between the distance of the trip (in metres) and the proportion who are willing to make the journey on foot.</p>
+</div>
+<div id="working-with-route-allocated-flow-data" class="section level2">
+<h2>Working with route-allocated ‘flow’ data</h2>
+<p>stplanr includes functions for allocating OD pairs to the transport network, including <code>route_cyclestreet()</code>, <code>route_graphhopper()</code> and, most rececently <code>viaroute()</code> which provides an R interface to the superfast <a href="https://github.com/Project-OSRM/osrm-backend/wiki/Server-api">OSRM routing API</a>. This is useful because roads rarely take you directly from origin to destination, as illustrated below for the trip from Leeds to London attend the upcoming <a href="http://www.gre.ac.uk/ach/services/events/gisruk2016/home">GISRUK conference</a>:</p>
+<pre class="r"><code>route &lt;- route_cyclestreet(&quot;Leeds&quot;, &quot;Greenwich&quot;)
+library(tmap)
+tiles &lt;- read_osm(bb(route, ext = 2))
+tm_shape(tiles) +
+  tm_raster() +
+  tm_shape(route) +
+  tm_lines()</code></pre>
+<p><img src="2016-01-18-stplanr-0.1.1_files/figure-html/unnamed-chunk-8-1.png" title="" alt="" width="672" /></p>
+<p>We can allocate all of the OD pairs in <code>odlines</code> to the transport network using these functions. The <code>routes_fast</code> dataset, for example, was created using <code>line2route()</code> and represents the rastest route that a cyclist may take, according to the <a href="http://www.cyclestreets.net/api/">CycleStreets.net API</a>. A sample of this dataset is illustrated below:</p>
+<pre class="r"><code>routes_fast$weight &lt;- c(5, 10)
+plot(routes_fast[1:2,], lwd = routes_fast$weight)</code></pre>
+<p><img src="2016-01-18-stplanr-0.1.1_files/figure-html/unnamed-chunk-9-1.png" title="" alt="" width="672" /></p>
+<p>Note that there is some overlap between the two lines above. It is sometimes useful to take aggregate statistics for the attributes of overlapping lines, for example to estimate the number of people using any particular part of the transport network. This can be acheived using <a href="http://gis.stackexchange.com/questions/139681/overlaying-lines-and-aggregating-their-values-for-overlapping-segments">Barry Rowlingson’s</a> function <code>overline()</code>:</p>
+<pre class="r"><code>rnet &lt;- overline(routes_fast[1:2,], attrib = &quot;weight&quot;, fun = sum)</code></pre>
+<p>Note that in the above plot the final segment to the east has a <code>weight</code> value that is the sum of the two overlapping lines in <code>routes_fast[1:2,]</code>: 5 + 10 = 15. We can verify this with Barry’s neat function</p>
+<pre class="r"><code>plot(rnet, lwd = rnet$weight, col = &quot;red&quot;)
+lineLabels(rnet, &quot;weight&quot;)</code></pre>
+<p><img src="2016-01-18-stplanr-0.1.1_files/figure-html/unnamed-chunk-11-1.png" title="" alt="" width="672" /></p>
+</div>
+<div id="other-functions" class="section level2">
+<h2>Other functions</h2>
+<p>There are many other functions designed to help transport researchers in <code>stplanr</code>. These include:</p>
+<ul>
+<li><code>read_stats19*</code> functions which import and format UK ‘Stats19’ road traffic casualty data</li>
+<li><code>calc_catchment*</code> functions for calculating transport ‘catchment areas’ using buffers around transport facilities</li>
+<li><code>gtfs2sldf()</code> for reading-in Google’s <a href="https://developers.google.com/transit/gtfs/?hl=en">GTFS</a> format into R</li>
+<li><code>toptail*</code> functions for removing the beginning and ends of <code>SpatialLines</code> objects</li>
+</ul>
+<p>The use of the <code>calc_catchment*</code> functions can be illustrated using some simple data from Sydney showing the potential catchment of a possible separated cycle paths. First we import the data that we want to use:</p>
+<pre class="r"><code>library(rgdal)</code></pre>
+<pre><code>## rgdal: version: 1.1-3, (SVN revision 594)
+##  Geospatial Data Abstraction Library extensions to R successfully loaded
+##  Loaded GDAL runtime: GDAL 1.11.2, released 2015/02/10
+##  Path to GDAL shared files: /usr/share/gdal/1.11
+##  Loaded PROJ.4 runtime: Rel. 4.8.0, 6 March 2012, [PJ_VERSION: 480]
+##  Path to PROJ.4 shared files: (autodetected)
+##  Linking to sp version: 1.2-2</code></pre>
+<pre class="r"><code>data_dir &lt;- system.file(&quot;extdata&quot;, package = &quot;stplanr&quot;)
+unzip(file.path(data_dir, &#39;smallsa1.zip&#39;))
+unzip(file.path(data_dir, &#39;testcycleway.zip&#39;))
+sa1income &lt;- readOGR(&quot;.&quot;,&quot;smallsa1&quot;) # Import some population data</code></pre>
+<pre><code>## OGR data source with driver: ESRI Shapefile 
+## Source: &quot;.&quot;, layer: &quot;smallsa1&quot;
+## with 638 features
+## It has 19 fields</code></pre>
+<pre class="r"><code>testcycleway &lt;- readOGR(&quot;.&quot;,&quot;testcycleway&quot;) # Import the path of the cycleways to test</code></pre>
+<pre><code>## OGR data source with driver: ESRI Shapefile 
+## Source: &quot;.&quot;, layer: &quot;testcycleway&quot;
+## with 2 features
+## It has 2 fields</code></pre>
+<p>We can then use our population data and the path of the cycleways to estimate the population catchment for a given distance. If our population layer contains fields with multiple subsets of data for which we want to calculate the catchment area (e.g., men, women and children), we can calculate the individual catchments. For this example, we will simply use the ‘Total’ field containing the total population:</p>
+<pre class="r"><code>cycle_catchment &lt;- calc_catchment(
+  polygonlayer = sa1income, # The SpatialPolygonsDataFrame containing the population data
+  targetlayer = testcycleway, # The Spatial* object containing the transport infrastructure of interest
+  calccols = c(&#39;Total&#39;), # The columns to summarise
+  distance = 500, # The desired distance,
+  projection = &#39;austalbers&#39;, # The projection to use for calculating the area
+  dissolve = TRUE # Collapse all the population zones into a single polygon for the catchment
+)
+cycle_catchment$Total # Print the total catchment population</code></pre>
+<pre><code>## [1] 23944.32</code></pre>
+<p>We can also plot the catchment area and the cycle paths. You will notice that in this example, there are gaps in the buffers. These gaps are because of the gaps in the population layer where Sydney harbour passes through the area. To take into account the road network and not simply straight-line distance, we can use the <code>calc_network_catchment</code> function.</p>
+<pre class="r"><code>plot(cycle_catchment)
+plot(testcycleway, col=&quot;red&quot;, add=TRUE, lwd=2)</code></pre>
+<p><img src="2016-01-18-stplanr-0.1.1_files/figure-html/unnamed-chunk-14-1.png" title="" alt="" width="672" /></p>
+<p>The toptail functionality is useful for removing the beginning and ends of SpatialLines, both for improving aestetchics of plots and for ensuring that lines do not overlap. This functionality is illustrated below using the <code>routes_fast</code> data.</p>
+<pre class="r"><code>proj4string(routes_fast) &lt;- CRS(&quot;+init=epsg:4326&quot;)
+rf_toptailed &lt;- toptail(routes_fast, toptail_dist = 300)
+plot(routes_fast, col = &quot;red&quot;, lwd = 5)
+plot(rf_toptailed, add = T)</code></pre>
+<p><img src="2016-01-18-stplanr-0.1.1_files/figure-html/unnamed-chunk-15-1.png" title="" alt="" width="672" /></p>
+<p>The package <a href="https://cran.r-project.org/web/packages/stplanr/vignettes/introducing-stplanr.html">vignette</a> contains some further illustrations of <code>stplanr</code>‘s functions which we plan to improve on over time. While become almost ’industry standard’ in fields such as diverse as <a href="http://www.nature.com/news/programming-tools-adventures-with-r-1.16609">genetics, astronomy and epidemiology</a>, R has received limited attention in transport planning. We believe that there is great potential for R, via new packages such as stplanr, to help solve real world transport problems such as <a href="http://arxiv.org/abs/1509.04425">estimating the geographical distribution of cycling potential</a>.</p>
+<p>The ‘sustainable’ in the package name relates to the emphasis on low-carbon modes in the package such as cycling and public transport. There is a huge amount of work to be done to plan for a transition away from fossil fuels in the sector, for <a href="http://www.bma.org.uk/transport">health</a> and <a href="http://www.sciencedirect.com/science/article/pii/S0966692314001586">environmental</a> reasons. In this context we hope that software such as <code>stplanr</code> contributes to the evidence base needed to design better transport systems.</p>
+</div>
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+$(document).ready(function () {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+});
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
