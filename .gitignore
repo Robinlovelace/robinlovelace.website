@@ -2,3 +2,5 @@
 examples
 *.txt
 .Rproj.user
+serve/
+*.Rmd
