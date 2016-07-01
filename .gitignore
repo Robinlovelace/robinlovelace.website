@@ -4,3 +4,4 @@ examples
 .Rproj.user
 serve/
 *.Rmd
+.Rhistory
