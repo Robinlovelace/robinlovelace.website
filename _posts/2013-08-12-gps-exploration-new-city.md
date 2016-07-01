@@ -16,4 +16,3 @@ This ideas would be fun but could also be useful: it could inform about 'spatial
 
 Will this plan ever become reality? I hope so - will need to remember to charge my second-hand Galaxy S2 nightly for it to work!
 
-Test of {% gist 7219443 %}

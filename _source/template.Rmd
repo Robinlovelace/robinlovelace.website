@@ -1,0 +1,10 @@
+---
+layout: post
+title:  "Serve Jekyll Websites with servr and knitr"
+categories: [maps]
+tags: [knitr, servr, httpuv, websocket]
+---
+
+
+
+<!--more-->
