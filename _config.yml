@@ -14,5 +14,5 @@ scholar:
   bibliography_template: "%{reference}"
 
 gems: [jekyll-paginate, jekyll-redirect-from]
-
+encoding: UTF-8
 
