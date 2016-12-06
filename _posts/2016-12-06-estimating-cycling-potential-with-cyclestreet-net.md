@@ -1,9 +1,9 @@
 ---
 layout: post
 title:  Estimating cycling potential with CycleStreet.net
-date: "2016-12-06 10:14:33"
+date: "2016-12-06 10:39:45"
 published: true
-tags: [example1, example2]
+tags: [R, maps]
 bibliography: ~/repos/foss4t/references.bib
 ---
 
@@ -109,7 +109,7 @@ What's interesting about this `cents` dataset is that it's *geographical*, and c
 
 {% highlight r %}
 library(tmap)
-osm_tiles = read_osm(bb(cents, 1.3))
+osm_tiles = read_osm(bb(cents, 1.4))
 (map = qtm(osm_tiles) +
   qtm(cents, symbols.size = 5) )
 {% endhighlight %}
@@ -125,6 +125,55 @@ desire_line_single = od2line(flow = flow_single_line, zones = cents)
 {% endhighlight %}
 
 Now we can plot this on the map as follows:
+
+
+{% highlight r %}
+map +
+  qtm(desire_line_single, lines.lwd = 5)
+{% endhighlight %}
+
+![plot of chunk unnamed-chunk-8](/figure/source/estimating-cycling-potential-with-cyclestreet-net/2016-12-06-estimating-cycling-potential-with-cyclestreet-net/unnamed-chunk-8-1.png)
+
+Note that the R *function* `od2line()` is generic in the sense that it will work the same if you give it a single OD pair or a table of thousands. To create desire lines for all OD pairs stored in the dataset `flowlines`, we enter the following R command:
+
+
+{% highlight r %}
+l = od2line(flow = flow, zones = cents)
+{% endhighlight %}
+
+This creates the geographic data object `l`, which can be visualised as follows:
+
+
+{% highlight r %}
+map +
+  qtm(l)
+{% endhighlight %}
+
+![plot of chunk unnamed-chunk-10](/figure/source/estimating-cycling-potential-with-cyclestreet-net/2016-12-06-estimating-cycling-potential-with-cyclestreet-net/unnamed-chunk-10-1.png)
+
+Now the data is set-up thanks to the work done by **stplanr**, we can change the visual appearance of the desire lines with a single extra argument passed to the plotting function. Let's make width depend on the total number of people travelling along the desire line:
+
+
+{% highlight r %}
+map + 
+  tm_shape(l) + tm_lines(lwd = "All", scale = 10)
+{% endhighlight %}
+
+![plot of chunk unnamed-chunk-11](/figure/source/estimating-cycling-potential-with-cyclestreet-net/2016-12-06-estimating-cycling-potential-with-cyclestreet-net/unnamed-chunk-11-1.png)
+
+Another fun thing we can do is to set the colour relative to the number of people cycling, as follows:
+
+
+{% highlight r %}
+map + 
+  tm_shape(l) + tm_lines(lwd = "All", scale = 10, col = "Bicycle")
+{% endhighlight %}
+
+![plot of chunk unnamed-chunk-12](/figure/source/estimating-cycling-potential-with-cyclestreet-net/2016-12-06-estimating-cycling-potential-with-cyclestreet-net/unnamed-chunk-12-1.png)
+
+OK, with all that fun out of the way (which is really the core of the data processing behind the PCT), we can now move onto the purpose of this article: to describe the routing functionality of CycleStreets.net.
+
+## Routing with CycleStreets.net
 
 
 
