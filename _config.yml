@@ -10,7 +10,7 @@ email: rob00x@gmail.com
 url: "http://robinlovelace.net" 
 twitter_username: robinlovelace
 github_username:  robinlovelace
-permalink: /:year/:month/:day/:title.html
+permalink: /:categories/:year/:month/:day/:title.html
 
 # Build settings
 markdown: kramdown

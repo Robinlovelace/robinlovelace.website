@@ -23,5 +23,10 @@ knitr::kable(od_eg)
 
 What this example OD table means is that 100 units of 'V1' and 3 units of V2 travel between zone 1 and zone 2. There is also movement represented between Zone 2 and 3.
 
-Now, imagine that V1 represents the total number of people travelling between the origin and destination and that V2 represents the number who regularly cycle. That is the basic input dataset that we are using as an input into the PCT. We use 2011 OD data on travel to work, because that is the most
+Now, imagine that V1 represents the total number of people travelling between the origin and destination and that V2 represents the number who regularly cycle. That is the basic input dataset that we are using as an input into the PCT. We use 2011 OD data on travel to work, because that is the most comprehensive dataset on travel patterns available.
+
+```{r}
+library(stplanr)
+```
+
 

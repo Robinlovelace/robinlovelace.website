@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Estimating cycling potential with CycleStreet.net</title>
+    <title>Estimating cycling potential with CycleStreets.net</title>
     <meta name="description" content="environmental geographer, transport modeller, energy researcher
 ">
 
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="canonical" href="http://localhost:4000/2016/12/06/estimating-cycling-potential-with-cyclestreet-net.html">
+    <link rel="canonical" href="http://localhost:4000/2016/12/06/estimating-cycling-potential-with-cyclestreets-net.html">
 </head>
 
 
@@ -101,52 +101,16 @@
         <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">Estimating cycling potential with CycleStreet.net</h1>
+    <h1 class="post-title">Estimating cycling potential with CycleStreets.net</h1>
     <p class="post-meta">Dec 6, 2016</p>
   </header>
 
   <article class="post-content">
-    <p>Today was released the <a href="https://www.jtlu.org/index.php/jtlu/article/view/862/824">paper</a> that describes the Propensity to Cycle Tool (PCT) and some of the thinking behind it.</p>
+    <p>Your markdown here!</p>
 
-<p>There are many things to say about the PCT, from the methods that underly it to evidence-based policy. This post focusses on just one aspect of the PCT, however: its use of CycleStreets.net to convert straight travel desire lines into wiggly paths on the road network that someone cycling could plausibly take.</p>
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="n">plot</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">10</span><span class="p">)</span></code></pre></figure>
 
-<p>Before saying something about the routes themselves it’s worth taking a step back to look at the underlying data behind the PCT. The PCT relies on orgin-destination (OD) data. That is simply data in the following form:</p>
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: right">origin</th>
-      <th style="text-align: right">destination</th>
-      <th style="text-align: right">V1</th>
-      <th style="text-align: right">V2</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: right">1</td>
-      <td style="text-align: right">2</td>
-      <td style="text-align: right">100</td>
-      <td style="text-align: right">3</td>
-    </tr>
-    <tr>
-      <td style="text-align: right">1</td>
-      <td style="text-align: right">3</td>
-      <td style="text-align: right">50</td>
-      <td style="text-align: right">5</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>What this example OD table means is that 100 units of ‘V1’ and 3 units of V2 travel between zone 1 and zone 2. There is also movement represented between Zone 2 and 3.</p>
-
-<p>Now, imagine that V1 represents the total number of people travelling between the origin and destination and that V2 represents the number who regularly cycle. That is the basic input dataset that we are using as an input into the PCT. We use 2011 OD data on travel to work, because that is the most comprehensive dataset on travel patterns available.</p>
-
-<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="n">library</span><span class="p">(</span><span class="n">stplanr</span><span class="p">)</span></code></pre></figure>
-
-<figure class="highlight"><pre><code class="language-text" data-lang="text">## Loading required package: sp</code></pre></figure>
-
-<figure class="highlight"><pre><code class="language-text" data-lang="text">## Loading required package: methods</code></pre></figure>
-
+<p><img src="/figure/source/estimating-cycling-potential-with-cyclestreets-net/2016-12-06-estimating-cycling-potential-with-cyclestreets-net/unnamed-chunk-1-1.png" alt="plot of chunk unnamed-chunk-1" /></p>
 
   </article>
 

@@ -6,8 +6,8 @@
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 06 Dec 2016 01:30:23 +0000</pubDate>
-    <lastBuildDate>Tue, 06 Dec 2016 01:30:23 +0000</lastBuildDate>
+    <pubDate>Tue, 06 Dec 2016 02:01:19 +0000</pubDate>
+    <lastBuildDate>Tue, 06 Dec 2016 02:01:19 +0000</lastBuildDate>
     <generator>Jekyll v3.3.1</generator>
     
       <item>
@@ -45,12 +45,37 @@
 
 &lt;p&gt;What this example OD table means is that 100 units of ‘V1’ and 3 units of V2 travel between zone 1 and zone 2. There is also movement represented between Zone 2 and 3.&lt;/p&gt;
 
-&lt;p&gt;Now, imagine that V1 represents the total number of people travelling between the origin and destination and that V2 represents the number who regularly cycle. That is the basic input dataset that we are using as an input into the PCT. We use 2011 OD data on travel to work, because that is the most&lt;/p&gt;
+&lt;p&gt;Now, imagine that V1 represents the total number of people travelling between the origin and destination and that V2 represents the number who regularly cycle. That is the basic input dataset that we are using as an input into the PCT. We use 2011 OD data on travel to work, because that is the most comprehensive dataset on travel patterns available.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-r&quot; data-lang=&quot;r&quot;&gt;&lt;span class=&quot;n&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stplanr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;## Loading required package: sp&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;## Loading required package: methods&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 </description>
-        <pubDate>Tue, 06 Dec 2016 01:21:14 +0000</pubDate>
+        <pubDate>Tue, 06 Dec 2016 02:00:58 +0000</pubDate>
         <link>http://localhost:4000/2016/12/06/estimating-cycling-potential-with-cyclestreet-net.html</link>
         <guid isPermaLink="true">http://localhost:4000/2016/12/06/estimating-cycling-potential-with-cyclestreet-net.html</guid>
+        
+        <category>example1</category>
+        
+        <category>example2</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Estimating cycling potential with CycleStreets.net</title>
+        <description>&lt;p&gt;Your markdown here!&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-r&quot; data-lang=&quot;r&quot;&gt;&lt;span class=&quot;n&quot;&gt;plot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;img src=&quot;/figure/source/estimating-cycling-potential-with-cyclestreets-net/2016-12-06-estimating-cycling-potential-with-cyclestreets-net/unnamed-chunk-1-1.png&quot; alt=&quot;plot of chunk unnamed-chunk-1&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Tue, 06 Dec 2016 01:58:42 +0000</pubDate>
+        <link>http://localhost:4000/2016/12/06/estimating-cycling-potential-with-cyclestreets-net.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/12/06/estimating-cycling-potential-with-cyclestreets-net.html</guid>
         
         <category>example1</category>
         
@@ -1369,113 +1394,6 @@ will you use it for? Let me know at &lt;a href=&quot;https://twitter.com/robinlo
         <pubDate>Sun, 01 Feb 2015 00:00:00 +0000</pubDate>
         <link>http://localhost:4000/2015/02/01/leaflet-r-package.html</link>
         <guid isPermaLink="true">http://localhost:4000/2015/02/01/leaflet-r-package.html</guid>
-        
-        <category>open source</category>
-        
-        <category>GIS</category>
-        
-        <category>maps</category>
-        
-        
-        <category>R</category>
-        
-      </item>
-    
-      <item>
-        <title>Practical introduction to Shiny - workshop write-up</title>
-        <description>&lt;p&gt;I recently delivered a workshop on a practical introduction to
-&lt;a href=&quot;http://shiny.rstudio.com/&quot;&gt;shiny&lt;/a&gt;, an R package that enables development,
-testing and deployment of interactive web applications.
-Delivered at the University of Sydney’s Institute for Transport and Logistics
-Studies (&lt;a href=&quot;http://sydney.edu.au/business/itls&quot;&gt;ITLS&lt;/a&gt;), it was designed for people
-who are a) fairly new to R (which can seem intimidating) and b) completely new to
-shiny.&lt;/p&gt;
-
-&lt;p&gt;This article provides resources for people wanting to apply shiny to
-real-world applications and some context which explains the motivations
-behind running the workshop. The pdf tutorial, example code
-to create and modify your own apps and a place to contribute to this
-free teaching resource is available at the following GitHub repository:
-&lt;a href=&quot;https://github.com/Robinlovelace/learning-shiny&quot;&gt;github.com/Robinlovelace/learning-shiny&lt;/a&gt;&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;h2 id=&quot;my-first-shiny-app&quot;&gt;My first shiny app&lt;/h2&gt;
-
-&lt;p&gt;My first shiny app was &lt;a href=&quot;https://robinlovelace.shinyapps.io/rentSplit/&quot;&gt;rentSplit&lt;/a&gt;,
-which overcomes the problem faced when people move in together but can’t decide
-on who should pay what because some rooms are better than others. (I would
-like to add ‘income’ to this app to allow for minted people to pay more!):&lt;/p&gt;
-
-&lt;iframe src=&quot;https://robinlovelace.shinyapps.io/rentSplit/&quot; style=&quot;border: none; width: 600px; height: 800px&quot;&gt;&lt;/iframe&gt;
-
-&lt;p&gt;The relatively painless experience of creating this app made me wonder if shiny
-could be used in transport policy applications and help us achieve the transition
-away from &lt;a href=&quot;http://www.postcarbon.org/&quot;&gt;fossil fuels&lt;/a&gt; that 
-&lt;a href=&quot;http://www.nature.com/nature/journal/v517/n7533/full/nature14016.html&quot;&gt;scientists say is needed to avoid dangerous climate change&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;context&quot;&gt;Context&lt;/h2&gt;
-
-&lt;p&gt;To put shiny in the context of transport planning I began with a talk on the 
-motivations behind online visualisation tools: the increased
-focus on ‘&lt;a href=&quot;http://www.esrc.ac.uk/funding-and-guidance/impact-toolkit/&quot;&gt;impact&lt;/a&gt;’
-in academic funding decisions, the need for public engagement and the
-democratisation of decision-making processes, as illustrated by the
-interactive &lt;a href=&quot;http://www.cyclecityconnect.co.uk/participate.php&quot;&gt;web map&lt;/a&gt; created by transport consultancy Steer Davies Gleave
-(&lt;a href=&quot;http://www.steerdaviesgleave.com/&quot;&gt;SDG&lt;/a&gt;) to enable geolocated online discussion
-of a new £20 million &lt;a href=&quot;http://www.cyclecityconnect.co.uk/&quot;&gt;cycle path&lt;/a&gt;
-that will connect the English cities of &lt;a href=&quot;http://leeds.gisruk.org/&quot;&gt;Leeds&lt;/a&gt;
-and &lt;a href=&quot;http://en.wikipedia.org/wiki/Bradford&quot;&gt;Bradford&lt;/a&gt;:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://robinlovelace.net/figure/cconnect.png&quot; alt=&quot;cityconnect&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;This is a fantastic example of the new levels of engagement unleashed by
-online digital technologies such as &lt;a href=&quot;http://leafletjs.com/&quot;&gt;Leaflet&lt;/a&gt;
-and &lt;a href=&quot;http://www.r-bloggers.com/search/shiny&quot;&gt;shiny&lt;/a&gt;: for the first time ever,
-people can voice their opinions and pinpoint them to a specific place on the map
-in a real-time discussion. The potential for improving transparency and
-accountability in transport decision making is huge, as I described
-in a short &lt;a href=&quot;http://robinlovelace.net/software/2014/03/05/webmap-test.html&quot;&gt;article on web-mapping&lt;/a&gt; and as outlined in
-an academic paper on the subject
-(&lt;a href=&quot;http://onlinelibrary.wiley.com/doi/10.1002/eet.1655/full&quot;&gt;Schulz and Newig, 2014&lt;/a&gt;).&lt;/p&gt;
-
-&lt;p&gt;As stated in the &lt;a href=&quot;http://rpubs.com/RobinLovelace/54614&quot;&gt;talk&lt;/a&gt;,
-the &lt;a href=&quot;https://soundcloud.com/robin-lovelace-1/r-and-shiny-for-transport-applications&quot;&gt;audio&lt;/a&gt;
-of which is available online (see below),
-this is a fast-moving area that is likely to grow rapidly in the coming years.
-So it’s worth knowing what’s out there and what is possible at present.&lt;/p&gt;
-
-&lt;iframe width=&quot;100%&quot; height=&quot;166&quot; scrolling=&quot;no&quot; frameborder=&quot;no&quot; src=&quot;https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/187078099&amp;amp;color=ff5500&amp;amp;auto_play=false&amp;amp;hide_related=false&amp;amp;show_comments=true&amp;amp;show_user=true&amp;amp;show_reposts=false&quot;&gt;&lt;/iframe&gt;
-
-&lt;p&gt;The &lt;a href=&quot;https://github.com/Robinlovelace/learning-shiny/raw/master/learning-shiny.pdf&quot;&gt;practical&lt;/a&gt; avoids &lt;a href=&quot;http://en.wikipedia.org/wiki/Reinventing_the_wheel&quot;&gt;reinventing the wheel&lt;/a&gt;
-by building on and creating a narrative for &lt;a href=&quot;http://shiny.rstudio.com/tutorial/&quot;&gt;RStudio’s excellent tutorial and documentation of shiny&lt;/a&gt;. For example, the
-&lt;a href=&quot;https://robinlovelace.shinyapps.io/himod/&quot;&gt;himod&lt;/a&gt; shiny app is simply a modified
-version of the ‘&lt;a href=&quot;http://glimmer.rstudio.com/shiny/01_hello/&quot;&gt;01_hello&lt;/a&gt;’
-demonstration app used to illustrate how new
-&lt;a href=&quot;http://shiny.rstudio.com/tutorial/lesson3/&quot;&gt;widgets&lt;/a&gt; are created and how to
-use their id’s as objects (via &lt;code class=&quot;highlighter-rouge&quot;&gt;input$id&lt;/code&gt;) in server.R:&lt;/p&gt;
-
-&lt;iframe src=&quot;https://robinlovelace.shinyapps.io/himod/&quot; style=&quot;border: none; width: 600px; height: 650px&quot;&gt;&lt;/iframe&gt;
-
-&lt;p&gt;So please take a look at the resources generated for this practical. I’d
-be interested to hear peoples’ thoughts on online interactive tools for
-transport planning and the
-&lt;a href=&quot;http://theconversation.com/digital-democracy-lets-you-write-your-own-laws-21483&quot;&gt;digital democracy&lt;/a&gt; agenda. More specifically, what’s the simplest way to get
-an interactive map on shiny, as illustrated by the impressive
-&lt;a href=&quot;http://shiny.rstudio.com/gallery/superzip-example.html&quot;&gt;map of the USA in the SuperZip shiny Gallery example&lt;/a&gt;?&lt;/p&gt;
-
-&lt;h2 id=&quot;resources&quot;&gt;Resources&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;An evolving &lt;a href=&quot;https://github.com/Robinlovelace/learning-shiny/raw/master/learning-shiny.pdf&quot;&gt;tutorial&lt;/a&gt; (which is may contain some errors)&lt;/li&gt;
-  &lt;li&gt;A &lt;a href=&quot;https://github.com/Robinlovelace/learning-shiny&quot;&gt;GitHub repo&lt;/a&gt; where you can access the source code for this tutorial and contribute to it for the community if you wish.&lt;/li&gt;
-  &lt;li&gt;The &lt;a href=&quot;http://rpubs.com/RobinLovelace/54614&quot;&gt;slides from my talk&lt;/a&gt;, complete with an
-&lt;a href=&quot;https://soundcloud.com/robin-lovelace-1/r-and-shiny-for-transport-applications&quot;&gt;audio recording&lt;/a&gt; of the introduction to it.&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Thu, 22 Jan 2015 00:00:00 +0000</pubDate>
-        <link>http://localhost:4000/2015/01/22/practical-introduction-shiny.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2015/01/22/practical-introduction-shiny.html</guid>
         
         <category>open source</category>
         
