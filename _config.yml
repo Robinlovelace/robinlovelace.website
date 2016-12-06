@@ -1,18 +1,16 @@
 title: Robin Lovelace
 tagline: 'Time to understand the world'
 description: 'Geographer, environmental scientist, cyclist'
+description: > # this means to ignore newlines until "baseurl:"
+  environmental geographer, transport modeller, energy researcher
 url: http://robinlovelace.net
 name: Robin Lovelace
 email: rob00x@gmail.com
 
-ipygments: true
-comments: true
+url: "http://robinlovelace.net" 
+twitter_username: robinlovelace
+github_username:  robinlovelace
+permalink: /:year/:month/:day/:title.html
+
+# Build settings
 markdown: kramdown
-paginate: 5
-
-scholar:
-  bibliography_template: "%{reference}"
-
-gems: [jekyll-paginate, jekyll-redirect-from]
-encoding: UTF-8
-

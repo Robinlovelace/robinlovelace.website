@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Aggregating spatial points by clusters</title>
+    <meta name="description" content="environmental geographer, transport modeller, energy researcher
+">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="http://localhost:4000/2014/03/21/clustering-points-R.html">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">Robin Lovelace</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about">About Robin Lovelace</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/book-reviews">Book reviews</a>
+          
+        
+          
+        
+          
+        
+          
+          <a class="page-link" href="/sketches/foss4g-2014-r-abstract">FOSS4G-E Abstract</a>
+          
+        
+          
+          <a class="page-link" href="/hardware">Hardware</a>
+          
+        
+          
+          <a class="page-link" href="/ideas">Ideas</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/influential-geographers">Influential geographers</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/software/pandoc">Pandoc</a>
+          
+        
+          
+          <a class="page-link" href="/presentations">Presentations</a>
+          
+        
+          
+          <a class="page-link" href="/publications">Publications</a>
+          
+        
+          
+          <a class="page-link" href="/quotes">Quotes</a>
+          
+        
+          
+          <a class="page-link" href="/software">Software</a>
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Aggregating spatial points by clusters</h1>
+    <p class="post-meta">Mar 21, 2014</p>
+  </header>
+
+  <article class="post-content">
+    <p>With ubiquitous collection devices (e.g. smartphones), having <em>too much</em>
+data may become an increasingly common problem for spatial analysts, 
+even with increasingly powerful computers. This is ironic, 
+because a few short decades ago, <em>too little</em> data was a primary constraint.</p>
+
+<p>This tutorial builds on the ‘Attribute joins’ section of the 
+<a href="https://github.com/Robinlovelace/Creating-maps-in-R/raw/master/intro-spatial-rl.pdf">Creating maps in R tutorial</a>
+to demonstrate how clusters can be identified 
+in a field of spatial points and then used as the basis of aggregation 
+to reduce the total number of points. It is also available 
+on <a href="http://rpubs.com/RobinLovelace/14465">rpubs</a>.
+As well as providing a useful way of manipulating data, 
+the tutorial also demonstrates the creation of a multi-layered map
+with R’s base graphics.</p>
+
+<p><img src="/figure/Aggregated_data_for_culters.png" alt="plot of chunk Aggregated data for culters" /></p>
+
+<!--more-->
+<h2 id="load-the-data">Load the data</h2>
+
+<p>So, starting from within the project’s folder (which can be downloaded 
+from <a href="https://github.com/Robinlovelace/Creating-maps-in-R/archive/master.zip">here</a>),
+lets start by reaffirming our starting point: 
+transport points in London:</p>
+
+<div class="language-r highlighter-rouge"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">sp</span><span class="p">)</span><span class="w">  </span><span class="c1"># add spatial package to load the S4 spatial objects
+</span><span class="n">load</span><span class="p">(</span><span class="s2">"data/stations.RData"</span><span class="p">)</span><span class="w">  </span><span class="c1"># load 731 station points
+</span><span class="nf">class</span><span class="p">(</span><span class="n">stations</span><span class="p">)</span><span class="w">  </span><span class="c1"># double-check what type of data we have
+</span></code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>## [1] "SpatialPointsDataFrame"
+## attr(,"package")
+## [1] "sp"
+</code></pre>
+</div>
+
+<div class="language-r highlighter-rouge"><pre class="highlight"><code><span class="n">load</span><span class="p">(</span><span class="s2">"data/lnd.RData"</span><span class="p">)</span><span class="w">  </span><span class="c1"># load London zones for context
+</span><span class="n">plot</span><span class="p">(</span><span class="n">stations</span><span class="p">)</span><span class="w">
+</span></code></pre>
+</div>
+
+<p><img src="/figure/Plot_of_the_point_data.png" alt="plot of chunk Plot of the point data" /></p>
+
+<h2 id="plotting-density">Plotting density</h2>
+
+<p>From the above plot it seems that these points are quite evenly distributed, with 
+some minor clusters. How can we identify these? A common option is to 
+convert the point data into a 2d continuous field of <em>point density</em>.
+In order to do this,
+and then create density contours, we will first convert them into the <code class="highlighter-rouge">ppp</code>
+class. This allows us to use the powerful functions of the <code class="highlighter-rouge">spatstat</code>
+package to be used on the points.</p>
+
+<div class="language-r highlighter-rouge"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">spatstat</span><span class="p">)</span><span class="w">  </span><span class="c1"># to calculate field of point density
+</span></code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>## Loading required package: mgcv
+## Loading required package: nlme
+## This is mgcv 1.7-28. For overview type 'help("mgcv-package")'.
+## Loading required package: deldir
+## deldir 0.0-22
+## 
+## spatstat 1.32-0     (nickname: 'Logistical Nightmare') 
+## For an introduction to spatstat, type 'beginner'
+</code></pre>
+</div>
+
+<div class="language-r highlighter-rouge"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">maptools</span><span class="p">)</span><span class="w">  </span><span class="c1"># to convert to point pattern
+</span></code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>## Checking rgeos availability: TRUE
+</code></pre>
+</div>
+
+<div class="language-r highlighter-rouge"><pre class="highlight"><code><span class="n">sSp</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">as</span><span class="p">(</span><span class="n">SpatialPoints</span><span class="p">(</span><span class="n">stations</span><span class="p">),</span><span class="w"> </span><span class="s2">"ppp"</span><span class="p">)</span><span class="w">  </span><span class="c1"># convert points to pp class
+</span><span class="n">Dens</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">density</span><span class="p">(</span><span class="n">sSp</span><span class="p">,</span><span class="w"> </span><span class="n">adjust</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.2</span><span class="p">)</span><span class="w">  </span><span class="c1"># create density object
+</span><span class="nf">class</span><span class="p">(</span><span class="n">Dens</span><span class="p">)</span><span class="w">  </span><span class="c1"># just for interest: it's got it's of pixel image class
+</span></code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>## [1] "im"
+</code></pre>
+</div>
+
+<div class="language-r highlighter-rouge"><pre class="highlight"><code><span class="n">plot</span><span class="p">(</span><span class="n">Dens</span><span class="p">)</span><span class="w">  </span><span class="c1"># default plot for density
+</span></code></pre>
+</div>
+
+<p><img src="/figure/Density_plot.png" alt="plot of chunk Density plot" /></p>
+
+<p>The density plot illustrates that there are some areas of relatively 
+high density close to the centre of London. This is as we’d expect. 
+Another way to represent this density information is with contours of 
+equal value, similar to those used in topographic maps to simultaneously 
+represent slope (the closeness of the lines) and altitude.
+<code class="highlighter-rouge">spatstat</code> enables simple plotting of countours with the sensibly named
+<code class="highlighter-rouge">contour</code> function.</p>
+
+<div class="language-r highlighter-rouge"><pre class="highlight"><code><span class="n">contour</span><span class="p">(</span><span class="n">density</span><span class="p">(</span><span class="n">sSp</span><span class="p">,</span><span class="w"> </span><span class="n">adjust</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.2</span><span class="p">),</span><span class="w"> </span><span class="n">nlevels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">4</span><span class="p">)</span><span class="w">  </span><span class="c1"># plot as contours - this is where we're heading
+</span></code></pre>
+</div>
+
+<p><img src="/figure/Contour_plot.png" alt="plot of chunk Contour plot" /></p>
+
+<p>In the above image, it is the “islands” of high dot density that we are most 
+interested in. Having successfully visualised these, the next stage is to
+save them into R’s native spatial data format, before extracting the polygons.
+These polygons will be used to aggregate the points.</p>
+
+<h2 id="save-the-contour-lines">Save the contour lines</h2>
+
+<p>To extract the contours, first as lines and then finally as polygons, 
+we need to convert the data into two more formats: a spatial grid and 
+then as a raster image. Both of these file formats are supported by the 
+basic <code class="highlighter-rouge">sp</code> package.</p>
+
+<div class="language-r highlighter-rouge"><pre class="highlight"><code><span class="n">Dsg</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">as</span><span class="p">(</span><span class="n">Dens</span><span class="p">,</span><span class="w"> </span><span class="s2">"SpatialGridDataFrame"</span><span class="p">)</span><span class="w">  </span><span class="c1"># convert to spatial grid class
+</span><span class="n">Dim</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">as.image.SpatialGridDataFrame</span><span class="p">(</span><span class="n">Dsg</span><span class="p">)</span><span class="w">  </span><span class="c1"># convert again to an image
+</span><span class="n">Dcl</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">contourLines</span><span class="p">(</span><span class="n">Dim</span><span class="p">,</span><span class="w"> </span><span class="n">nlevels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">8</span><span class="p">)</span><span class="w">  </span><span class="c1"># create contour object - change 8 for more/fewer levels
+</span><span class="n">SLDF</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">ContourLines2SLDF</span><span class="p">(</span><span class="n">Dcl</span><span class="p">,</span><span class="w"> </span><span class="n">CRS</span><span class="p">(</span><span class="n">proj4string</span><span class="p">(</span><span class="n">lnd</span><span class="p">)))</span><span class="w">  </span><span class="c1"># convert to SpatialLinesDataFrame
+</span><span class="n">plot</span><span class="p">(</span><span class="n">SLDF</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">terrain.colors</span><span class="p">(</span><span class="m">8</span><span class="p">))</span><span class="w">
+</span></code></pre>
+</div>
+
+<p><img src="/figure/unnamed-chunk-1.png" alt="plot of chunk unnamed-chunk-1" /></p>
+
+<h2 id="extract-the-density-polygons">Extract the density polygons</h2>
+
+<p>Now the lines have been saved as the <code class="highlighter-rouge">SLDF</code> object, it is 
+time to convert the level we are are interested in into polygons. 
+This is quite a tricky task and can involve many steps using the basic 
+<code class="highlighter-rouge">sp</code> package (see from code chunk 60 onwards <a href="http://www.asdar-book.org/book2ed/cm_mod.R">here</a>).
+Fortunately, the wonderful <code class="highlighter-rouge">rgeos</code> provides a single line solution, with the 
+intuitively named <code class="highlighter-rouge">gPolygonize</code> function.</p>
+
+<div class="language-r highlighter-rouge"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">rgeos</span><span class="p">)</span><span class="w">
+</span></code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>## rgeos version: 0.2-19, (SVN revision 394)
+##  GEOS runtime version: 3.3.8-CAPI-1.7.8 
+##  Polygon checking: TRUE
+</code></pre>
+</div>
+
+<div class="language-r highlighter-rouge"><pre class="highlight"><code><span class="n">Polyclust</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">gPolygonize</span><span class="p">(</span><span class="n">SLDF</span><span class="p">[</span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="p">])</span><span class="w">
+</span><span class="n">gas</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">gArea</span><span class="p">(</span><span class="n">Polyclust</span><span class="p">,</span><span class="w"> </span><span class="n">byid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">T</span><span class="p">)</span><span class="o">/</span><span class="m">10000</span><span class="w">
+</span><span class="n">Polyclust</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">SpatialPolygonsDataFrame</span><span class="p">(</span><span class="n">Polyclust</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">data.frame</span><span class="p">(</span><span class="n">gas</span><span class="p">),</span><span class="w"> </span><span class="n">match.ID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">F</span><span class="p">)</span><span class="w">
+</span><span class="n">plot</span><span class="p">(</span><span class="n">Polyclust</span><span class="p">)</span><span class="w">
+</span></code></pre>
+</div>
+
+<p><img src="/figure/Polygons_representing_areas_of_high_dot_density.png" alt="plot of chunk Polygons representing areas of high dot density" /></p>
+
+<h2 id="aggregate-the-points-within-high-density-zones">Aggregate the points within high density zones</h2>
+
+<p>The next task is to aggregate the points within each high density zone.
+This is done automatically with base R’s <code class="highlighter-rouge">aggregate</code> function. Note that 
+when the <code class="highlighter-rouge">sp</code> package is installed, <code class="highlighter-rouge">aggregate</code> behaves differently if it is provided 
+with spatial data as its input, outputting spatial data with aggregate statistics for the 
+specified variable (or indeed all variables). 
+Now summarise the data for each of the polygons.</p>
+
+<div class="language-r highlighter-rouge"><pre class="highlight"><code><span class="n">cAg</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">aggregate</span><span class="p">(</span><span class="n">stations</span><span class="p">,</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Polyclust</span><span class="p">,</span><span class="w"> </span><span class="n">FUN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">length</span><span class="p">)</span><span class="w">
+</span><span class="c1"># lb &lt;- gBoundary(lnd)
+</span><span class="n">plot</span><span class="p">(</span><span class="n">Dens</span><span class="p">,</span><span class="w"> </span><span class="n">main</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">""</span><span class="p">)</span><span class="w">
+</span><span class="n">plot</span><span class="p">(</span><span class="n">lnd</span><span class="p">,</span><span class="w"> </span><span class="n">border</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"grey"</span><span class="p">,</span><span class="w"> </span><span class="n">lwd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="n">add</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">T</span><span class="p">)</span><span class="w">
+</span><span class="n">plot</span><span class="p">(</span><span class="n">SLDF</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">terrain.colors</span><span class="p">(</span><span class="m">8</span><span class="p">),</span><span class="w"> </span><span class="n">add</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">T</span><span class="p">)</span><span class="w">
+</span><span class="n">plot</span><span class="p">(</span><span class="n">cAg</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"red"</span><span class="p">,</span><span class="w"> </span><span class="n">border</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"white"</span><span class="p">,</span><span class="w"> </span><span class="n">add</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">T</span><span class="p">)</span><span class="w">
+</span><span class="n">graphics</span><span class="o">::</span><span class="n">text</span><span class="p">(</span><span class="n">coordinates</span><span class="p">(</span><span class="n">cAg</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">1000</span><span class="p">,</span><span class="w"> </span><span class="n">labels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cAg</span><span class="o">$</span><span class="n">CODE</span><span class="p">)</span><span class="w">
+</span></code></pre>
+</div>
+
+<p><img src="/figure/Aggregated_data_for_culters.png" alt="plot of chunk Aggregated data for culters" /></p>
+
+<h2 id="save-points-inside-and-outside-polygons">Save points inside and outside polygons</h2>
+
+<p>In terms of visualisation, our work here is done. 
+But that is not enough for most projects: we need to export the 
+results. Remember from the beginning that the aim was to reduce the 
+number of points we had to deal with? Well it is in this stage
+that we find out how many points we’ve removed by aggregation
+and save only the points lying outside the aggregation zones.</p>
+
+<div class="language-r highlighter-rouge"><pre class="highlight"><code><span class="n">sIn</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">stations</span><span class="p">[</span><span class="n">cAg</span><span class="p">,</span><span class="w"> </span><span class="p">]</span><span class="w">  </span><span class="c1"># select the stations inside the clusters
+</span><span class="n">sOut</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">stations</span><span class="p">[</span><span class="o">!</span><span class="n">row.names</span><span class="p">(</span><span class="n">stations</span><span class="p">)</span><span class="w"> </span><span class="o">%in%</span><span class="w"> </span><span class="n">row.names</span><span class="p">(</span><span class="n">sIn</span><span class="p">),</span><span class="w"> </span><span class="p">]</span><span class="w">  </span><span class="c1"># stations outside the clusters
+</span><span class="n">plot</span><span class="p">(</span><span class="n">sOut</span><span class="p">)</span><span class="w">  </span><span class="c1"># the more sparsely distributed points - notice the 'holes' of low density
+</span><span class="n">plot</span><span class="p">(</span><span class="n">cAg</span><span class="p">,</span><span class="w"> </span><span class="n">border</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"red"</span><span class="p">,</span><span class="w"> </span><span class="n">lwd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="n">add</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">T</span><span class="p">)</span><span class="w">
+</span></code></pre>
+</div>
+
+<p><img src="/figure/Points_outside_the_clusters.png" alt="plot of chunk Points outside the clusters" /></p>
+
+<p>The plot shows that we’ve reduced the number of points, by removing those in 
+areas of high density. But how much space have saved by removing closely clustered points?</p>
+
+<div class="language-r highlighter-rouge"><pre class="highlight"><code><span class="n">nrow</span><span class="p">(</span><span class="n">sIn</span><span class="p">)</span><span class="o">/</span><span class="n">nrow</span><span class="p">(</span><span class="n">stations</span><span class="p">)</span><span class="w">  </span><span class="c1"># proportion of points in cluster
+</span></code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>## [1] 0.3406
+</code></pre>
+</div>
+
+<div class="language-r highlighter-rouge"><pre class="highlight"><code><span class="n">gArea</span><span class="p">(</span><span class="n">cAg</span><span class="p">)</span><span class="o">/</span><span class="n">gArea</span><span class="p">(</span><span class="n">lnd</span><span class="p">)</span><span class="w">
+</span></code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>## [1] 0.1178
+</code></pre>
+</div>
+
+<p>The results of the final commands show that we have squeezed out 1/3
+of the points from only only of the area. This is not a huge saving
+because the points are quite evenly distributed. For more highly clustered 
+datasets, however, the savings could be vast.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>We have seen how to create polygons of high point density in R and then, 
+in relatively few lines of code, we have identified and aggregated the 
+points that fit into these high density zones. This has applications for 
+reducing data redundancy in highly clustered datasets. But the methods 
+shown here have many other applications, including:</p>
+
+<ul>
+  <li>Objective identification of zones to “target” based on point data</li>
+  <li>Visualisation of zones of interest from the point data</li>
+  <li>Provision of spatial data on which to base a stratified spatial sampling strategy</li>
+</ul>
+
+<p>This final application could be of interest if one is trying to identify if the 
+density of certain points of pollutants (e.g. petrol stations) related to 
+other variables (e.g. species diversity). By creating zones of low density
+and high density, and then taking measurements from each zone type, one could 
+test the hypothesis that the former has an impact on the latter.</p>
+
+<p>Other applications could be found for the method. The take home message is 
+that R has powerful spatial capabilities that would be difficult to implement
+in conventional GIS software. By usin scripts, we can ensure that the code to create the results of 
+such an analysis are reproducible and can be used by others. 
+To this end, all the example code and data used in this example are reproducible - 
+see the vignettes folder of the “Creating-maps-in-R”
+<a href="https://github.com/Robinlovelace/Creating-maps-in-R">GitHub repository</a>.</p>
+
+
+  </article>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Robin Lovelace</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>Robin Lovelace</li>
+          <li><a href="mailto:rob00x@gmail.com">rob00x@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/robinlovelace">
+              <span class="icon  icon--github">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+                </svg>
+              </span>
+
+              <span class="username">robinlovelace</span>
+            </a>
+          </li>
+          
+
+          
+          <li>
+            <a href="https://twitter.com/robinlovelace">
+              <span class="icon  icon--twitter">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809
+                  c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/>
+                </svg>
+              </span>
+
+              <span class="username">robinlovelace</span>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text">environmental geographer, transport modeller, energy researcher
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

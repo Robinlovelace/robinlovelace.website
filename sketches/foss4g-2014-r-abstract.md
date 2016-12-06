@@ -1,5 +1,5 @@
 ---
-layout: master 
+layout: post 
 title: FOSS4G-E Abstract
 ---
 

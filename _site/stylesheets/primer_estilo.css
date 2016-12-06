@@ -1,0 +1,14 @@
+/*Estilo Etiquetas*/
+label{
+color:#337FC1;
+font‐family:arial;
+     font‐size: 12pt;
+font‐weight:bold;
+}
+
+/*Estilo Botón*/
+.boton{
+color:#CCCCCC;
+background‐color:#DF8B8B;
+font‐weight:bold;
+}

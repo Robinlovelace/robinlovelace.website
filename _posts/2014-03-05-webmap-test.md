@@ -1,5 +1,5 @@
 ---
-layout: webmapost
+layout: post
 title: Testing web map APIs - Google vs OpenLayers vs Leaflet
 categories: software
 tags:

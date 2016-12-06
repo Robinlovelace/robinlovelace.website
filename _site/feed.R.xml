@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+        <channel>
+                <title>Robin Lovelace - R</title>
+                <description>Posts categorized as 'R'</description>
+                <link>http://localhost:4000</link>
+                <atom:link href="http://localhost:4000/feed.R.xml" rel="self" type="application/rss+xml" />
+                
+                        <item>
+                                <title>Consistent naming conventions in R</title>
+                                <description>&lt;p&gt;Naming conventions in R are famously anarchic, with no clear winner and multiple conventions in use &lt;em&gt;simultaneously&lt;/em&gt; in the same package. This has been written about before, in a lucid article in the &lt;a href=&quot;http://journal.r-project.org/archive/2012-2/RJournal_2012-2_Baaaath.pdf&quot;&gt;R Journal&lt;/a&gt;, a detailed exploration of names in R source code &lt;a href=&quot;http://cran.r-project.org/web/packages/rockchalk/vignettes/Rstyle.pdf&quot;&gt;hosted on CRAN&lt;/a&gt; and general discussion on &lt;a href=&quot;http://stackoverflow.com/questions/1944910/what-is-your-preferred-style-for-naming-variables-in-r&quot;&gt;stackoverflow&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Basically, there are 5 naming conventions to choose from:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;alllowercase: e.g. &lt;code class=&quot;highlighter-rouge&quot;&gt;adjustcolor&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;period.separated: e.g. &lt;code class=&quot;highlighter-rouge&quot;&gt;plot.new&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;underscore_separated: e.g. &lt;code class=&quot;highlighter-rouge&quot;&gt;numeric_version&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;lowerCamelCase: e.g. &lt;code class=&quot;highlighter-rouge&quot;&gt;addTaskCallback&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;UpperCamelCase: e.g. &lt;code class=&quot;highlighter-rouge&quot;&gt;SignatureMethod&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;There are clear advantages to choosing one naming convention and sticking to it, regardless which one it is:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“Use common sense and BE CONSISTENT”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The &lt;a href=&quot;https://google-styleguide.googlecode.com/svn/trunk/Rguide.xml&quot;&gt;Google Style Guide&lt;/a&gt; is ironically written in a rather inconsistent way (mixing capitals with lowercase in a single sentence surely breaks their own rule!)&lt;/p&gt;
+
+&lt;p&gt;But which one to choose? Read below to find out about the thorny issue
+of naming conventions in R, based on a &lt;a href=&quot;https://github.com/Robinlovelace/Creating-maps-in-R/raw/master/intro-spatial-rl.pdf&quot;&gt;tutorial on geo-spatial data handling
+in R&lt;/a&gt;.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;naming-convention-chaos&quot;&gt;Naming convention chaos&lt;/h2&gt;
+
+&lt;p&gt;I recently encountered this question when I looked at the CRAN hosted version of the tutorial I co-authored ‘Introduction to visualising spatial data in R’. To my dismay, this document was littered with inconsistencies: here are just a few of the object names used, breaking almost every naming convention:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Partic_Per&lt;/code&gt;: This variable is trying to be simultaneously UpperCamelBack and underscore_separated: a new naming convention I’d like to coin Upper_Underscore_Separated (joke). Here’s another example: &lt;code class=&quot;highlighter-rouge&quot;&gt;Spatial_DistrictName&lt;/code&gt; These styles should not be mixed according to &lt;a href=&quot;http://adv-r.had.co.nz/Style.html&quot;&gt;Hadley Wickham&lt;/a&gt; and &lt;a href=&quot;http://csgillespie.wordpress.com/2010/11/23/r-style-guide/&quot;&gt;Colin Gillespie&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;sport.wgs84&lt;/code&gt;: An example of period.separation&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;crimeDat$MajorText&lt;/code&gt;: lowerCamelBack and UpperCamelBack &lt;em&gt;in the same object&lt;/em&gt;!&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ons_label&lt;/code&gt;: a rare example of a consistent use of a naming convention, although this was in a variable name, not an object.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Does any of your code look like this? If so I suggest sorting it out. Ironically, we had a section on typographic conventions &lt;em&gt;in the error strewn document&lt;/em&gt;. This states that:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“it is a good idea to get into the habit of consistent and clear writing in any language, and R is no exception”.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;It was time to follow our own advice!&lt;/p&gt;
+
+&lt;h2 id=&quot;a-trigger-to-remedy-chaotic-code&quot;&gt;A trigger to remedy chaotic code&lt;/h2&gt;
+
+&lt;p&gt;The tutorial was used as the basis for a &lt;a href=&quot;http://foss4g-e.org/content/using-r-command-line-gis&quot;&gt;workshop&lt;/a&gt; delivered at the Free and Open Source Software for Geo-spatial (&lt;a href=&quot;http://foss4g.org/&quot;&gt;FOSS4G&lt;/a&gt;) conference in &lt;a href=&quot;http://foss4g-e.org/&quot;&gt;Bremen&lt;/a&gt;. The event is affiliated with the The Open Source Geospatial Foundation (&lt;a href=&quot;http://www.osgeo.org/&quot;&gt;OSGeo&lt;/a&gt;), who are big advocates of consistency and &lt;a href=&quot;http://live.osgeo.org/en/standards/standards.html&quot;&gt;standards&lt;/a&gt;. With many experienced programmers at the event, it was the perfect opportunity to update the tutorial on the project’s &lt;a href=&quot;https://github.com/Robinlovelace/Creating-maps-in-R&quot;&gt;github repository&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;which-naming-convention&quot;&gt;Which naming convention?&lt;/h2&gt;
+
+&lt;p&gt;We decided to use the &lt;strong&gt;underscore_separated&lt;/strong&gt; naming convention. Why? It wasn’t because we love typing underscores (which can cause problems in some contexts), but because of more fundamental issues with the other options:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;alllowercase names are difficult to read, especially for non-native readers.&lt;/li&gt;
+  &lt;li&gt;period.separated names are confusing for users of &lt;a href=&quot;http://python4astronomers.github.io/python/objects.html&quot;&gt;Python&lt;/a&gt; and other languages in which dots are meaningful.&lt;/li&gt;
+  &lt;li&gt;UpperCamelBack is &lt;em&gt;ugly&lt;/em&gt; and requires excessive use of the shift button.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;There are also a couple of reasons why we positively like underscores:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Underscores are &lt;strong&gt;fast&lt;/strong&gt; to read: 10% to 20% faster than camelBack, which is especially confusing to non-native English readers, according to &lt;a href=&quot;http://whathecode.wordpress.com/2011/02/10/camelcase-vs-underscores-scientific-showdown/&quot;&gt;one article&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Underscores are recommended by some prominent R users, including &lt;a href=&quot;http://adv-r.had.co.nz/Style.html&quot;&gt;Hadley Wickham&lt;/a&gt;, &lt;a href=&quot;http://csgillespie.wordpress.com/2010/11/23/r-style-guide/&quot;&gt;Colin Gillespie&lt;/a&gt; and &lt;a href=&quot;http://andrewgelman.com/2012/08/28/migrating-from-dot-to-underscore/&quot;&gt;Andrew Gellman&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;implementing-a-consistent-coding-convention&quot;&gt;Implementing a consistent coding convention&lt;/h2&gt;
+
+&lt;p&gt;After overcoming the mental inertia to decide on a new naming convention, actually implementing it should be the easy part. A series of &lt;a href=&quot;http://robinlovelace.net/r/2014/04/14/regex-in-R-RStudio.html&quot;&gt;regex&lt;/a&gt; commands could help, including the following (the ‘Regex’ tickbox must be enabled if you’re searching in RStudio):&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[a-z]\.[a-z] # will search for dots between lowercase chars (period.separation)
+[a-z][A-Z] # find camelBack code
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Unfortunately, these commands will also find many R commands that use these naming convention, so just re-reading the code may be just as fast.&lt;/p&gt;
+
+&lt;p&gt;The below image shows the github diff of a typical change as part of a renaming strategy. Note in this example that not only are we implementing a consistent naming convention, we also added a new comment in this commit, improving the code’s ‘understandability’. Implementing a naming convention can be part of a wider campaign to improve your R projects. This could include adding comments, &lt;a href=&quot;http://robinlovelace.net/r/2014/06/25/pruning-a-giant-gh-repo.html&quot;&gt;removing redundant information&lt;/a&gt; from large projects and reformatting code, perhaps using the &lt;a href=&quot;http://cran.r-project.org/web/packages/formatR/index.html&quot;&gt;formatR package&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/Robinlovelace/Creating-maps-in-R/commit/b6729590a5c9bbf3f4e5332c46e57c732412345c&quot;&gt;&lt;img src=&quot;https://dl.dropboxusercontent.com/u/15008199/img/r_style.png&quot; alt=&quot;commit&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;It &lt;em&gt;is&lt;/em&gt; important to think about style in writing any languages, especially if your code will be &lt;a href=&quot;http://journal.r-project.org/archive/2012-2/RJournal_2012-2_Baaaath.pdf&quot;&gt;read by others&lt;/a&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“What could help might be to raise awareness in the R community about naming conventions; writers of books and tutorials on R could make a difference here by treating naming conventions when introducing the R language.”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;In conclusion, it is lazy and irresponsible to write and maintain messy code that is difficult to read. By contrast, consistent, clear and well-commented code will help you and others use your code and ensure its longevity. Adoption of a clearly defined &lt;a href=&quot;http://en.wikipedia.org/wiki/Naming_convention_%28programming%29&quot;&gt;naming convention&lt;/a&gt; such as the &lt;strong&gt;underscore_separation&lt;/strong&gt; adopted in our &lt;a href=&quot;https://github.com/Robinlovelace/Creating-maps-in-R/raw/master/intro-spatial-rl.pdf&quot;&gt;tutorial&lt;/a&gt; can be an easy step one can take &lt;em&gt;now&lt;/em&gt; towards this aim.&lt;/p&gt;
+
+&lt;p&gt;The only question that remains is which naming convention &lt;code class=&quot;highlighter-rouge&quot;&gt;WiLL.U_uSe&lt;/code&gt;!&lt;/p&gt;
+</description>
+                                <pubDate>Tue, 15 Jul 2014 00:00:00 +0100</pubDate>
+                                <link>http://localhost:4000/2014/07/15/naming-conventions-r.html</link>
+                                <guid isPermaLink="true">http://localhost:4000/2014/07/15/naming-conventions-r.html</guid>
+                        </item>
+                
+        </channel>
+</rss>

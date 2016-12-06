@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Geostat2016 Albacete: a write-up</title>
+    <meta name="description" content="environmental geographer, transport modeller, energy researcher
+">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="http://localhost:4000/2016/09/28/geostat-2016.html">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">Robin Lovelace</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about">About Robin Lovelace</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/book-reviews">Book reviews</a>
+          
+        
+          
+        
+          
+        
+          
+          <a class="page-link" href="/sketches/foss4g-2014-r-abstract">FOSS4G-E Abstract</a>
+          
+        
+          
+          <a class="page-link" href="/hardware">Hardware</a>
+          
+        
+          
+          <a class="page-link" href="/ideas">Ideas</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/influential-geographers">Influential geographers</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/software/pandoc">Pandoc</a>
+          
+        
+          
+          <a class="page-link" href="/presentations">Presentations</a>
+          
+        
+          
+          <a class="page-link" href="/publications">Publications</a>
+          
+        
+          
+          <a class="page-link" href="/quotes">Quotes</a>
+          
+        
+          
+          <a class="page-link" href="/software">Software</a>
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Geostat2016 Albacete: a write-up</h1>
+    <p class="post-meta">Sep 28, 2016</p>
+  </header>
+
+  <article class="post-content">
+    <p>Last week I went to <a href="http://geostat-course.org/2016">GEOSTAT 2016</a>. Given the amount of fun had at <a href="http://robinlovelace.net/r/2015/08/31/geostat-writeup.html">GEOSTAT 2015</a>, expectations were high. The local organisers did not disappoint, with a week of lectures, workshops, spatial data competitions and of course lots of Geostatistics. It would be unwise to try to systematically document such a diverse range of activities, and the <a href="http://geostat-course.org/node">GEOSTAT website</a> provides much further info. Instead this ‘miniwriteup’ is designed to summarise some of my memories from the event, and encourage you to get involved for GEOSTAT 2017.</p>
+
+<!--more-->
+<p>To put things in context, the first session was a brief overview of the history of GEOSTAT. This is the 12<sup>th</sup> GEOSTAT summer school. In some ways GEOSTAT can be seen as a physical manifestation of the lively <a href="https://stat.ethz.ch/mailman/listinfo/r-sig-geo">R-SIG-GEO email list</a>. That may not sound very exciting. But there is a strong community spirit at the event and, unlike other academic conferences, the focus is on practical learning rather than transmitting research findings or theories. And the event was so much more than that.</p>
+
+<p>There were 5 action packed days covering many topics within the broad field of Geostatistics. What follows is an overview of each that I went to (there were 2 streams), with links to the source material. It is hoped that this will be of use to people who were not present in person.</p>
+
+<h2 id="day-1">Day 1</h2>
+
+<p>After an introduction to the course and spatial data by Tom Hengl, Roger Bivand delivered a technical and applied webinar on <a href="http://geostat-course.org/system/files/geostat_talk16.pdf">bridges between R and other GIS software</a>. With a focus on GRASS, we learned how R could be used as a ‘front end’ to other programs. An example using the famous ‘Cholera pump’ data mapped by <a href="https://en.wikipedia.org/wiki/John_Snow">John Snow</a> was used to demonstrate the potential benefits of ‘bridging’ to other software. The data can be downloaded and partially plotted in R as follows:</p>
+
+<div class="language-r highlighter-rouge"><pre class="highlight"><code><span class="n">u</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"http://geostat-course.org/system/files/data_0.zip"</span><span class="w">
+</span><span class="n">download.file</span><span class="p">(</span><span class="n">u</span><span class="p">,</span><span class="w"> </span><span class="s2">"data_0.zip"</span><span class="p">)</span><span class="w">
+</span><span class="n">unzip</span><span class="p">(</span><span class="s2">"data_0.zip"</span><span class="p">)</span><span class="w">
+</span></code></pre>
+</div>
+
+<div class="language-r highlighter-rouge"><pre class="highlight"><code><span class="n">old</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">setwd</span><span class="p">(</span><span class="s2">"~/repos/geostat2016-rl/"</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">raster</span><span class="p">)</span><span class="w">
+</span></code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>## Loading required package: sp
+</code></pre>
+</div>
+
+<div class="language-r highlighter-rouge"><pre class="highlight"><code><span class="n">bbo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">shapefile</span><span class="p">(</span><span class="s2">"data/bbo.shp"</span><span class="p">)</span><span class="w">
+</span><span class="n">buildings</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">shapefile</span><span class="p">(</span><span class="s2">"data/buildings.shp"</span><span class="p">)</span><span class="w">
+</span><span class="n">deaths</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">shapefile</span><span class="p">(</span><span class="s2">"data/deaths.shp"</span><span class="p">)</span><span class="w">
+</span><span class="n">b_pump</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">shapefile</span><span class="p">(</span><span class="s2">"data/b_pump.shp"</span><span class="p">)</span><span class="w">
+</span><span class="n">nb_pump</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">shapefile</span><span class="p">(</span><span class="s2">"data/nb_pump.shp"</span><span class="p">)</span><span class="w">
+</span><span class="n">plot</span><span class="p">(</span><span class="n">buildings</span><span class="p">)</span><span class="w">
+</span></code></pre>
+</div>
+
+<p><img src="https://github.com/npct/pct/raw/master/figures/unnamed-chunk-3-1.png" alt="" /></p>
+
+<div class="language-r highlighter-rouge"><pre class="highlight"><code><span class="n">setwd</span><span class="p">(</span><span class="n">old</span><span class="p">)</span><span class="w">
+</span></code></pre>
+</div>
+
+<p>In the afternoon Robert Hijmans gave a high level overview of software for spatial data analysis, with a discussion of the <a href="http://www.diva-gis.org/">Diva GIS</a> software he developed and why he now uses R for most of his geospatial analysis.</p>
+
+<p>The talk touched on the <a href="https://cran.r-project.org/web/packages/gdistance/"><strong>gdistance</strong></a> package, and many others. Robert showcased the power of R for understanding major civilisational problems such as the impacts of climate change on agriculture. His animated global maps of agricultural productivity and precipitation showed how R can scale to tackle large datasets, up to the global level involving spatial and temporal data simultaneously.</p>
+
+<p>There were a few political asides. Robert mentioned how agrotech giant Monsanto paid almost <a href="https://www.fastcoexist.com/3019387/why-monsanto-just-spent-1-billion-to-buy-a-climate-data-company">$1 billion</a> for a weather prediction company. He detoured deftly through a discussion of ‘big data’, making the observation that often ensembles of models can provide better predictions than any single model working on its own, with political analogies about the importance of democracy.</p>
+
+<p>More examples included health and estimates of dietary deficiencies at high levels of geographic resolution. A paper showing fish and fruit consumption across Rwanda illustrated how map making in R, used intelligently, can save lives.</p>
+
+<p>It was revealing to learn how Robert got into R. While he was working at the <a href="http://irri.org/">International Rice Research Institute</a>. “It forces you to write scripts.” This is good for ensuring reproducibility, a critical component of scientific research. It encourages you to focus on and understand the data primarily, rather than visualising it. On the other hand, R is not always the fastest way to do things, although “people often worry too much about this”. Your time is more important than your computers, so setting an analysis running is fine. Plus there are ways to make things run faster, as mentioned in a book that I’m working on, <a href="https://csgillespie.github.io/efficientR/">Efficient R Programming</a>.</p>
+
+<blockquote>
+  <p>R is great if you use it every data, but if you only use it less than once a week it becomes difficult.</p>
+</blockquote>
+
+<p>If you just want a one-off spatial analysis data program, Robert recommended QGIS. After a brief overview of spatial data in R, Robert moved on to talk about the <a href="https://cran.r-project.org/web/packages/raster/index.html"><strong>raster</strong></a> package, which he developed. This package was developed to overcome some of the limitations with <strong>sp</strong>, the foundational package for spatial data in R.</p>
+
+<!-- This led on to discussion of C++ code, which Robert is increasingly developing in to extend **raster**. Here is a brief benchmark to show how much faster C++ code can be: -->
+<!-- ```{r} -->
+<!-- sumR = function(x){ -->
+<!--   b = NULL -->
+<!--   for(i in 1:length(x)){ -->
+<!--     b = b + a[i] -->
+<!--   } -->
+<!-- } -->
+<!-- ``` -->
+<!-- ```{r, engine='cpp', eval=FALSE} -->
+<!-- library(Rcpp) -->
+<!-- cppFunction(code =  -->
+<!--               "// [[Rcpp::export]] -->
+<!-- double cumulater(std::vector<doubl>d) { -->
+<!--   int n = x.size(); -->
+<!--   double result = 0; -->
+<!--   for (int i=0;i < n; i++) { -->
+<!--     result = result + d[i]; -->
+<!--   } -->
+<!--   double r = cumulater(v) -->
+<!-- }return r;") -->
+<!-- ``` -->
+<!-- According to Robert, once you can write R functions, "writing C++ functions is relatively easy". While I'm not quite convinced, based on the number of characters needed to write a simple sum code, he certainly convinced me of the merits of developing new spatial functions in this low level language, because of its speed and the fact that it's the main development language of GDAL.  -->
+<p>A final resource that Robert promoted was <a href="http://www.rspatial.org/">RSpatial.org</a>, a free online resource for teaching R as a command line GIS.</p>
+
+<p>Edzer Pebesmer delivered the final session of the first day, on <strong>Free and Open Source Software (FOSS) for Geoinformatics and Geosciences</strong>. After the highly technical final C++ examples from the previous talk, I was expecting a high level overview of the landscape. Instead Edzer went straight in to talk about source code, the raw material that defines all software. The fundamental feature of open source software is that its source code is free, and will remain free.</p>
+
+<!-- An example of this is Apple, the most profitable computer company on Earth, used parts of the BSD kernel in its proprietary operating system. -->
+<!-- Another feature of open source software is that it must have a license. It has a legal meaning, the details of which vary from licence to license. By deciding a license, you can choose whether you use a more *restrictive* license (which prevents people from using the software in software that is solved) or a more *permisive* license. R's 'backend' is licensed -->
+<!-- GPL is used for R's. ESRI is now using R as a back-end in commercial software. Its lawers have explored the legal implications of this and concluded that it is not breaking the law by doing so. -->
+<!-- GitHub is an online system for developing open source software. It is free to use, but some of the best things in GitHub are not open source. Edzer says that the advantages of using their service, in terms of community engagement and ease of use and accessibility, currently outweigh any potential future disbenefits of GitHub not being completely open source.  -->
+<!-- Another example is open source software for geosciences. Researchers may want to make their software open for anyone to use, while remaining protected from exploitation from large companies like oil com -->
+<p>Day 2
+—–</p>
+
+<p>The second day of the course was divided in two: stream A focussed on environmental modelling and stream B compositional data. I attended the environmental modelling course taught by Robert Hijmans. The course was based on his teaching material at <a href="http://rspatial.org/spatial/index.html">rspatial.org</a> and can be found <a href="http://gfc.ucdavis.edu/events/albacete/day2.html">online</a>.</p>
+
+<p>We started off by looking at the fundamental data structures underlying spatial data in R. Why? It’s useful to be able to create simple example datasets from scratch, to understand them.</p>
+
+<div class="language-r highlighter-rouge"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">sp</span><span class="p">)</span><span class="w">
+</span><span class="n">x</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">4</span><span class="p">,</span><span class="m">7</span><span class="p">,</span><span class="m">3</span><span class="p">,</span><span class="m">8</span><span class="p">)</span><span class="w">
+</span><span class="n">y</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">9</span><span class="p">,</span><span class="m">6</span><span class="p">,</span><span class="m">12</span><span class="p">,</span><span class="m">11</span><span class="p">)</span><span class="w">
+</span><span class="n">xy</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">data.frame</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">)</span><span class="w">
+</span><span class="n">SpatialPoints</span><span class="p">(</span><span class="n">xy</span><span class="p">)</span><span class="w">
+</span></code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>## class       : SpatialPoints 
+## features    : 4 
+## extent      : 3, 8, 6, 12  (xmin, xmax, ymin, ymax)
+## coord. ref. : NA
+</code></pre>
+</div>
+
+<div class="language-r highlighter-rouge"><pre class="highlight"><code><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">data.frame</span><span class="p">(</span><span class="n">v</span><span class="m">1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="n">v</span><span class="m">2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">LETTERS</span><span class="p">[</span><span class="m">1</span><span class="o">:</span><span class="m">4</span><span class="p">])</span><span class="w">
+</span><span class="n">spd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SpatialPointsDataFrame</span><span class="p">(</span><span class="n">coords</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">xy</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">d</span><span class="p">)</span><span class="w">
+</span><span class="n">plot</span><span class="p">(</span><span class="n">spd</span><span class="p">)</span><span class="w">
+</span></code></pre>
+</div>
+
+<p><img src="https://github.com/npct/pct/raw/master/figures/unnamed-chunk-6-1.png" alt="" /></p>
+
+<p>The basic functions of the <strong>raster</strong> package are similar.</p>
+
+<div class="language-r highlighter-rouge"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">raster</span><span class="p">)</span><span class="w">
+</span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">raster</span><span class="p">(</span><span class="n">nc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="n">nr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="p">)</span><span class="w">
+</span><span class="n">values</span><span class="p">(</span><span class="n">r</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="n">ncell</span><span class="p">(</span><span class="n">r</span><span class="p">)</span><span class="w">
+</span><span class="n">plot</span><span class="p">(</span><span class="n">r</span><span class="p">)</span><span class="w">
+</span></code></pre>
+</div>
+
+<p><img src="https://github.com/npct/pct/raw/master/figures/unnamed-chunk-7-1.png" alt="" /></p>
+
+<div class="language-r highlighter-rouge"><pre class="highlight"><code><span class="n">as.matrix</span><span class="p">(</span><span class="n">r</span><span class="p">)</span><span class="w">
+</span></code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>##       [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9] [,10]
+##  [1,]    1    2    3    4    5    6    7    8    9    10
+##  [2,]   11   12   13   14   15   16   17   18   19    20
+##  [3,]   21   22   23   24   25   26   27   28   29    30
+##  [4,]   31   32   33   34   35   36   37   38   39    40
+##  [5,]   41   42   43   44   45   46   47   48   49    50
+##  [6,]   51   52   53   54   55   56   57   58   59    60
+##  [7,]   61   62   63   64   65   66   67   68   69    70
+##  [8,]   71   72   73   74   75   76   77   78   79    80
+##  [9,]   81   82   83   84   85   86   87   88   89    90
+## [10,]   91   92   93   94   95   96   97   98   99   100
+</code></pre>
+</div>
+
+<div class="language-r highlighter-rouge"><pre class="highlight"><code><span class="n">q</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">sqrt</span><span class="p">(</span><span class="n">r</span><span class="p">)</span><span class="w">
+</span><span class="n">plot</span><span class="p">(</span><span class="n">q</span><span class="p">)</span><span class="w">
+</span></code></pre>
+</div>
+
+<p><img src="https://github.com/npct/pct/raw/master/figures/unnamed-chunk-7-2.png" alt="" /></p>
+
+<div class="language-r highlighter-rouge"><pre class="highlight"><code><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">q</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">r</span><span class="w">
+</span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">stack</span><span class="p">(</span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="n">q</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w">
+</span><span class="n">ss</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="c1"># r is recycled so each layer is multiplied by r
+</span><span class="m">1</span><span class="o">:</span><span class="m">3</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="c1"># here 2 is recycled
+</span></code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>## [1] 2 4 6
+</code></pre>
+</div>
+
+<p>Raster also provides simple yet powerful functions for manipulating and analysing raster data, including <code class="highlighter-rouge">crop()</code>, <code class="highlighter-rouge">merge()</code> for manipulation and <code class="highlighter-rouge">predict()</code>, <code class="highlighter-rouge">focal()</code> and <code class="highlighter-rouge">distance()</code>. <code class="highlighter-rouge">predict()</code> is particularly interesting as it allows raster values to be estimated using any of R’s powerful statistical methods.</p>
+
+<div class="language-r highlighter-rouge"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">dismo</span><span class="p">)</span><span class="w">
+</span><span class="n">g</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">gmap</span><span class="p">(</span><span class="s2">"Albacete, Spain"</span><span class="p">,</span><span class="w"> </span><span class="n">scale</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">T</span><span class="p">,</span><span class="w"> </span><span class="n">lonlat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">T</span><span class="p">)</span><span class="w">
+</span></code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>## Loading required namespace: XML
+</code></pre>
+</div>
+
+<div class="language-r highlighter-rouge"><pre class="highlight"><code><span class="n">plot</span><span class="p">(</span><span class="n">g</span><span class="p">,</span><span class="w"> </span><span class="n">interpolate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">T</span><span class="p">)</span><span class="w">
+</span></code></pre>
+</div>
+
+<p><img src="https://github.com/npct/pct/raw/master/figures/unnamed-chunk-9-1.png" alt="" /><img src="https://github.com/npct/pct/raw/master/figures/unnamed-chunk-9-2.png" alt="" /></p>
+
+<div class="language-r highlighter-rouge"><pre class="highlight"><code><span class="n">dismo</span><span class="o">::</span><span class="n">geocode</span><span class="p">(</span><span class="s2">"Universidad Castilla la Mancha"</span><span class="p">)</span><span class="w">
+</span></code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>##                    originalPlace
+## 1 Universidad Castilla la Mancha
+##                                          interpretedPlace longitude
+## 1 Paseo Universidad, 13005 Ciudad Real, Cdad. Real, Spain -3.921711
+##   latitude      xmin      xmax     ymin     ymax uncertainty
+## 1 38.99035 -3.922007 -3.919309 38.98919 38.99189         131
+</code></pre>
+</div>
+
+<!-- Supervised learning is the process of allowing a computer to estimate predictor variables based on explanatory variables. -->
+<!-- There are 2 main things to consider when model fitting: the functional form to use and the explanatory variables X. -->
+<!-- We worked through a practical on spatial interpolation from [rspatial.org](http://rspatial.org/analysis/rst/4-interpolation.html): -->
+<!-- ```{r} -->
+<!-- dir.create("data") -->
+<!-- download.file("http://rspatial.org/analysis/data/precipitation.csv", "data/precipitation.csv") -->
+<!-- d = read.csv("data/precipitation.csv") -->
+<!-- d$prec <- rowSums(d[, c(6:17)]) -->
+<!-- plot(sort(d$prec), ylab='Annual precipitation (mm)', las=1, xlab='Stations') -->
+<!-- library(sp) -->
+<!-- dsp <- SpatialPoints(d[,4:3], proj4string=CRS("+proj=longlat +datum=NAD83")) -->
+<!-- dsp <- SpatialPointsDataFrame(dsp, d) -->
+<!-- download.file("http://rspatial.org/analysis/data/counties.rds", "data/counties.rds") -->
+<!-- CA <- readRDS("data/counties.rds") -->
+<!-- # define groups for mapping -->
+<!-- cuts <- c(0,200,300,500,1000,3000) -->
+<!-- # set up a palette of interpolated colors -->
+<!-- blues <- colorRampPalette(c('yellow', 'orange', 'blue', 'dark blue')) -->
+<!-- pols <- list("sp.polygons", CA, fill = "lightgray") -->
+<!-- spplot(dsp, 'prec', cuts=cuts, col.regions=blues(5), sp.layout=pols, pch=20, cex=2) -->
+<!-- TA <- CRS("+proj=aea +lat_1=34 +lat_2=40.5 +lat_0=0 +lon_0=-120 +x_0=0 +y_0=-4000000 +datum=NAD83 +units=m +ellps=GRS80 +towgs84=0,0,0") -->
+<!-- library(rgdal) -->
+<!-- dta <- spTransform(dsp, TA) -->
+<!-- cata <- spTransform(CA, TA) -->
+<!-- ``` -->
+<!-- Now the modelling work can begin.  -->
+<!-- ```{r} -->
+<!-- # First create a function to calculate the error: -->
+<!-- RMSE <- function(observed, predicted) { -->
+<!--   sqrt(mean((predicted - observed)^2, na.rm=TRUE)) -->
+<!-- } -->
+<!-- null <- RMSE(mean(dsp$prec), dsp$prec) -->
+<!-- null -->
+<!-- library(dismo) -->
+<!-- v <- voronoi(dta) -->
+<!-- ## Loading required namespace: deldir -->
+<!-- plot(dsp) -->
+<!-- plot(v) -->
+<!-- points(dta, col = "red") -->
+<!-- ca = aggregate(cata) -->
+<!-- plot(ca) -->
+<!-- vca = intersect(v, ca) -->
+<!-- plot(vca) -->
+<!-- vca2 = rgeos::gIntersection(v, ca, byid = T) -->
+<!-- names(vca2) -->
+<!-- plot(vca2) # not the same! -->
+<!-- plot(vca) -->
+<!-- names(vca) -->
+<!-- ``` -->
+<!-- Testing a first model -->
+<!-- ```{r} -->
+<!-- kf = kfold(dta@data) -->
+<!-- rmse = NULL -->
+<!-- for(k in 1:length(unique(kf))){ -->
+<!--   test = dta[kf == k,] -->
+<!--   train = dta[kf != k,] -->
+<!--   v = voronoi(train) -->
+<!--   p = extract(v, test) -->
+<!--   rmse[k] = RMSE(observed = test$prec, predicted = p$prec) -->
+<!-- } -->
+<!-- rmse -->
+<!-- ``` -->
+<p>Day 3
+—–</p>
+
+<p>The third day started with a live R demo by Edzer Pebesmer on <a href="https://edzer.github.io/UseR2016/">space-time data</a>. Refreshingly for a conference primarily on spatial data, it started with an in-depth discussion of time. While base R natively supports temporal units (knowing the difference between days and seconds, for example) it does not know the difference between metres and miles.</p>
+
+<p>This led to the creation of the <strong>units</strong> library, an taster of which is shown below:</p>
+
+<div class="language-r highlighter-rouge"><pre class="highlight"><code><span class="n">install.packages</span><span class="p">(</span><span class="s2">"units"</span><span class="p">)</span><span class="w">
+</span></code></pre>
+</div>
+
+<div class="language-r highlighter-rouge"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">units</span><span class="p">)</span><span class="w">
+</span><span class="n">m</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">with</span><span class="p">(</span><span class="n">ud_units</span><span class="p">,</span><span class="w">  </span><span class="n">m</span><span class="p">)</span><span class="w">
+</span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">with</span><span class="p">(</span><span class="n">ud_units</span><span class="p">,</span><span class="w">  </span><span class="n">s</span><span class="p">)</span><span class="w">
+</span><span class="n">km</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">with</span><span class="p">(</span><span class="n">ud_units</span><span class="p">,</span><span class="w"> </span><span class="n">km</span><span class="p">)</span><span class="w">
+</span><span class="n">h</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">with</span><span class="p">(</span><span class="n">ud_units</span><span class="p">,</span><span class="w">  </span><span class="n">h</span><span class="p">)</span><span class="w">
+</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="m">3</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">m</span><span class="o">/</span><span class="n">s</span><span class="w">
+</span></code></pre>
+</div>
+
+<p>The rest of the day was spent analysing a range of spatio-temporal datasets using <strong>spacetime</strong>, <strong>trajectories</strong> and <strong>rgl</strong> for interactive 3d spacetime plots.</p>
+
+<p>In the parallel session there were sessions on <a href="http://geostat-course.org/node/1328">CARTO</a> and the <a href="http://geostat-course.org/node/1329">R gvSIG bridge</a>.</p>
+
+<h2 id="day-4">Day 4</h2>
+
+<p>Day 4 was a highlight for me as I’ve wanted to learn how to use the <strong>INLA</strong> package for ages. It was explained lucidly by Marta Blangiardo and Michela Cameletti, who have written an excellent book on the subject, which has a <a href="https://sites.google.com/a/r-inla.org/stbook/">website that I recommend checking out</a>. Their materials can be found here: <a href="http://geostat-course.org/node/1330">http://geostat-course.org/node/1330</a> .</p>
+
+<p>In parallel to this there was a session on <a href="http://geostat-course.org/node/1326">Spatial and Spatiotemporal point process analysis in R</a> data in R by Virgilio Gomez Rubio and one on automated <a href="http://geostat-course.org/node/1323">spatial prediction and visualisation</a> by Tom Hengl.</p>
+
+<h2 id="day-5">Day 5</h2>
+
+<p>After all that intense geospatial analysis and programming activity, and a night out in Albacete for some participants, we were relieved to learn that this final day of learning was more relaxed. Furthermore, by tradition, it was largely participant-led. I gave a talk on <a href="https://csgillespie.github.io/efficientR/">Efficient R Programming</a>, a book I’ve written in collaboration with Colin Gillespie; Teresa Rojos gave a fascinating talk about her research into the spatial distribution of cancer rates in Peru; and S.J. Norder gave us the low-down on the Biogeography of islands with R.</p>
+
+<p>One of the most exciting sessions was the revelation of the results of the spatial prediction game. Interestingly, a team using a relatively simple approach with <a href="https://cran.r-project.org/web/packages/randomForestSRC/index.html"><strong>randomForestSRC</strong></a> (and <a href="https://github.com/ehrlinger/ggRandomForests"><strong>ggRandomForests</strong></a> for visualisation) one against others who had spent hours training complex multi-level models.</p>
+
+<h2 id="summary">Summary</h2>
+
+<p>Overall it was an amazing event and inspiring to spend time with so many researchers using open geospatial software for tackling <a href="https://t.co/UqMyCnXOsG">pressing real world issues</a>. Furthermore, it was great fun. I strongly recommend people dipping their toes in the <a href="https://cran.r-project.org/web/views/Spatial.html">sea of spatial capabilities</a> provided by R check out the <a href="http://geostat-course.org/node">GEOSTAT website</a>, not least for the excellent <a href="http://archive.org/search.php?query=GEOSTAT">video resources to be found there</a>.</p>
+
+<p>I look forward to hearing plans for future GEOSTATs and recommend the event, and associated materials, to researchers interested in using free geospatial software for the greater good.</p>
+
+  </article>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Robin Lovelace</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>Robin Lovelace</li>
+          <li><a href="mailto:rob00x@gmail.com">rob00x@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/robinlovelace">
+              <span class="icon  icon--github">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+                </svg>
+              </span>
+
+              <span class="username">robinlovelace</span>
+            </a>
+          </li>
+          
+
+          
+          <li>
+            <a href="https://twitter.com/robinlovelace">
+              <span class="icon  icon--twitter">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809
+                  c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/>
+                </svg>
+              </span>
+
+              <span class="username">robinlovelace</span>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text">environmental geographer, transport modeller, energy researcher
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
