@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  CycleStreets.net in the Propensity to Cycle Tool
-date: "2016-12-21 13:34:01"
+date: "2016-12-21 13:35:12"
 published: true
 tags: [R, maps]
 ---
@@ -68,7 +68,7 @@ The results of all this routing work is illustrated in the future below, which s
 
 Interestingly, the big fat line up to the north-west is Otley Road, well-known to have very high level of cycling. This also shows up in Strava data as having high current levels of cycling:
 
-![plot of chunk unnamed-chunk-7](/./figures/pct-vs-strava-for-leeds.png)
+![plot of chunk unnamed-chunk-7](/../figures/pct-vs-strava-for-leeds.png)
 
 This is not formal validation but it is a good sign that the PCT and other data sources line-up for the current level of cycling. The big question is whether the PCT's estimates of cycling levels under various cycling futures, including Go Dutch.
 
