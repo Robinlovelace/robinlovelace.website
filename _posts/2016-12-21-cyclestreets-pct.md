@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  CycleStreets.net in the Propensity to Cycle Tool
-date: "2016-12-21 12:46:23"
+date: "2016-12-21 13:13:40"
 published: true
 tags: [R, maps]
 bibliography: ~/repos/foss4t/references.bib
@@ -25,7 +25,7 @@ Under the 2011 Census scenario, the PCT represents levels of cycling to work bas
 
 The first thing the user sees on the front page is a map of England, broken into 44 regions:
 
-![plot of chunk unnamed-chunk-1](//home/robin/npct/pct/figures/regions1.png)
+![plot of chunk unnamed-chunk-1](/figures/regions1.png)
 
 We used deliberately large regions because successful cycling plans should be strategic and joined up, covering both large areas and large spans of time. This discourages the stop-start investment plans that have typified funding for active travel.
 
@@ -33,7 +33,7 @@ By hovering over different regions, the user can see what the current level of c
 
 An exciting feature of the PCT is its ability to allow the user to imagine 'cycling futures'. This can be seen on the front page map by clicking on the different scenarios (set to Census 2011 by default). We can see, for example, that under the Government Target to double cycling levels by 2025, West Yorkshire's level would rise to 3.3% (more than a doubling) whereas Cambridgeshire would see cycling levels grow to 13.7% (a larger rise in absolute terms):
 
-<img src="//home/robin/npct/pct/figures/regions2.png" title="plot of chunk unnamed-chunk-2" alt="plot of chunk unnamed-chunk-2" width="50%" /><img src="//home/robin/npct/pct/figures/regions3.png" title="plot of chunk unnamed-chunk-2" alt="plot of chunk unnamed-chunk-2" width="50%" />
+<img src="/figures/regions2.png" title="plot of chunk unnamed-chunk-2" alt="plot of chunk unnamed-chunk-2" width="50%" /><img src="/figures/regions3.png" title="plot of chunk unnamed-chunk-2" alt="plot of chunk unnamed-chunk-2" width="50%" />
 
 Under the Go Dutch scenarios, these regions would see 23.1 and 13.5% of people cycling to work, respectively. This represents a huge leveling-out of cycling levels across the country, but still highlights the fact that some regions have higher cycling potentials than others, due to average trip distances and levels of hilliness.
 
@@ -41,7 +41,7 @@ Under the Go Dutch scenarios, these regions would see 23.1 and 13.5% of people c
 
 To launch the PCT for a region, click on it.  Try clicking on West Yorkshire. You should be presented with the following image, which shows the area-based level of cycling to work from the 2011 Census. (When using the PCT, it is worth remembering that the visualisations work for every scenario.)
 
-![plot of chunk unnamed-chunk-3](//home/robin/npct/pct/figures/west-yorkshire-front.png)
+![plot of chunk unnamed-chunk-3](/figures/west-yorkshire-front.png)
 
 This shows that West Yorkshire has very low levels of cycling to work, hovering around 1% to 2% in most places. This suggests strongly that the region has low levels of utility cycling overall (despite the successes of the region's sport cyclists). There is a cluster of zones with a higher level of cycling to the north of Leeds city centre (around Headingly) but even there the percentage of people cycling as their main mode of travel to work does not exceed 5%.
 
@@ -51,7 +51,7 @@ This is all useful information, especially when we look at how the cycling poten
 
 ![plot of chunk unnamed-chunk-4](//home/robin/npct/pct/flow-model/od-data-leeds.png)
 
-![plot of chunk unnamed-chunk-5](//home/robin/npct/pct/figures/leeds-desire-godutch.png)
+![plot of chunk unnamed-chunk-5](/figures/leeds-desire-godutch.png)
 
 What the above figures show is that as the level of cycling increases in a city, the spatial distribution of cycling can be expected to change. Under current conditions (be they related to socio-demographics or infrastructure or other factors), cycling in Leeds is dominated by the travel corridor to the north of the city centre. Yet there are clearly many short trips taking place from the south into the centre, as illustrated by the high cycling potential south of the city under the Go Dutch scenario.
 
@@ -60,3 +60,19 @@ What the above figures show is that as the level of cycling increases in a city,
 This is where CycleStreets.net comes into play.
 
 We know how many people go from A to B by cycling from Census data. But we have very little idea of how they are likely to travel. This is where the routing algorithm of CycleStreets.net comes in handy. We used their [routing API](https://www.cyclestreets.net/api/apply/) to estimate the 'fastest' route for all short (well, up to 20 KM in Euclidean distance) desire lines in England.
+
+Not only does CycleStreets.net allow us to find all the fastest routes (a good indication of where new infrastructure should be built as people, especially women and elderly) have a strong preference for cycling along the most direct routes.
+
+The results of all this routing work is illustrated in the future below, which shows the fastest and quietest routes associated with the top cycled routes in Leeds.
+
+![plot of chunk unnamed-chunk-6](//home/robin/npct/pct/flow-model/od-data-fast-quiet.png)
+
+Interestingly, the big fat line up to the north-west is Otley Road, well-known to have very high level of cycling. This also shows up in Strava data as having high current levels of cycling:
+
+![plot of chunk unnamed-chunk-7](/figures/pct-vs-strava-for-leeds.png)
+
+This is not formal validation but it is a good sign that the PCT and other data sources line-up for the current level of cycling. The big question is whether the PCT's estimates of cycling levels under various cycling futures, including Go Dutch.
+
+Here is not the place to answer such a question. Only the passage of time, and commitment from people (perhaps informed by models such as the PCT) to sustainable travel will help answer that one.
+
+There is much more to say about the use of CycleStreets.net in the PCT but it gets rather technical very quickly. I plan to follow this overview article up with a more technical blog post in the New Year. Watch this space!
