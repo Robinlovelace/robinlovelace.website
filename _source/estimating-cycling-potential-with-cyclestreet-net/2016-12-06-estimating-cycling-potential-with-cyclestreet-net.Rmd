@@ -120,7 +120,7 @@ OK, with all that fun out of the way (which is really the core of the data proce
 
 ## Routing with CycleStreets.net
 
-
+Obviously the straight lines represented in previous images are not real travel patterns. Straight lines cannot tell policy-makers where to invest on the *route network*. So some kind of route allocation service would be useful, to highlight road segments most in need of new cycle paths. (Traffic calming measures, 'road diets' or other interventions described by )
 
 
 
