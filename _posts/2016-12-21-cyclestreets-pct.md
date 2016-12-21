@@ -1,13 +1,12 @@
 ---
 layout: post
 title:  CycleStreets.net in the Propensity to Cycle Tool
-date: "2016-12-21 13:13:40"
+date: "2016-12-21 13:17:48"
 published: true
 tags: [R, maps]
-bibliography: ~/repos/foss4t/references.bib
 ---
 
-After 2 years in the making, the [paper](https://www.jtlu.org/index.php/jtlu/article/view/862/824) describing the Propensity to Cycle Tool (PCT), and the thinking behind it, has finally been published [@lovelace_propensity_2016]. The PCT is an online tool for helping to decide where to prioritise cycling policies such as new cycle paths.
+After 2 years in the making, the [paper](https://www.jtlu.org/index.php/jtlu/article/view/862/824) describing the Propensity to Cycle Tool (PCT), and the thinking behind it, has finally been published (Lovelace et al. 2016). The PCT is an online tool for helping to decide where to prioritise cycling policies such as new cycle paths.
 
 The PCT would not have been possible without CycleStreets.net, so as well as describing the PCT and it's use of their routing services, this article serves as a big Thank You from PCT to CycleStreet.net.
 
@@ -76,3 +75,7 @@ This is not formal validation but it is a good sign that the PCT and other data 
 Here is not the place to answer such a question. Only the passage of time, and commitment from people (perhaps informed by models such as the PCT) to sustainable travel will help answer that one.
 
 There is much more to say about the use of CycleStreets.net in the PCT but it gets rather technical very quickly. I plan to follow this overview article up with a more technical blog post in the New Year. Watch this space!
+
+## Reference
+
+Lovelace, R., Goodman, A., Aldred, R., Berkoff, N., Abbas, A., & Woodcock, J. (2016). The Propensity to Cycle Tool: An open source online system for sustainable transport planning. Journal Of Transport And Land Use, 0. doi:http://dx.doi.org/10.5198/jtlu.2016.862
