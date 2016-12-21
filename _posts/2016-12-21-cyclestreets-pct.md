@@ -1,14 +1,14 @@
 ---
 layout: post
 title:  CycleStreets.net in the Propensity to Cycle Tool
-date: "2016-12-21 18:58:21"
+date: "2016-12-21 19:01:21"
 published: true
 tags: [R, maps]
 ---
 
 After 2 years in the making, the [paper](https://www.jtlu.org/index.php/jtlu/article/view/862/824) describing the Propensity to Cycle Tool (PCT), and the thinking behind it, has finally been published (Lovelace et al. 2016). The PCT is an online tool for helping to decide where to prioritise cycling policies such as new cycle paths.
 
-The PCT would not have been possible without CycleStreets.net, so as well as describing the PCT and it's use of their routing services, this article serves as a big Thank You from PCT to CycleStreet.net.
+The PCT would not have been possible without CycleStreets.net, so as well as describing the PCT and it's use of their routing services, this article serves as a big Thank You from PCT to CycleStreets.net.
 
 ## What is the Propensity to Cycle Tool?
 
@@ -62,9 +62,9 @@ What the above figures show is that as the level of cycling increases in a city,
 
 This is where CycleStreets.net comes into play.
 
-We know how many people go from A to B by cycling from Census data. But we have very little idea of how they are likely to travel. This is where the routing algorithm of CycleStreets.net comes in handy. We used their [routing API](https://www.cyclestreets.net/api/apply/) to estimate the 'fastest' route for all short (well, up to 20 KM in Euclidean distance) desire lines in England.
+We know how many people go from A to B by cycling from Census data. But we have very little idea of how they are likely to travel. This is where the routing algorithm of CycleStreets.net comes in handy. We used their [routing API](https://www.cyclestreets.net/api/apply/) to estimate the 'fastest' route for all short (well, up to 20 km in Euclidean distance) desire lines in England.
 
-Not only does CycleStreets.net allow us to find all the fastest routes (a good indication of where new infrastructure should be built as people, especially women and elderly) have a strong preference for cycling along the most direct routes.
+Not only does CycleStreets.net allow us to find all the fastest routes, a good indication of where new infrastructure should be built as people (especially women and elderly) have a strong preference for cycling along the most direct routes.
 
 The results of all this routing work is illustrated in the future below, which shows the fastest and quietest routes associated with the top cycled routes in Leeds.
 
@@ -105,7 +105,7 @@ leaflet() %>% addTiles() %>% addPolylines(data = route)
 
  <iframe src="http://robinlovelace.net/leeds-cam-map.html"></iframe> 
 
-There is much more I could say about the technical side of things but at the request of the editors I will leave it there for now. For more infor please see the [**stplanr** vignette](https://github.com/ropensci/stplanr/blob/master/vignettes/stplanr-paper.Rmd).
+There is much more I could say about the technical side of things but at the request of the editors I will leave it there for now. For more info please see the [**stplanr** vignette](https://github.com/ropensci/stplanr/blob/master/vignettes/stplanr-paper.Rmd).
 
 I plan to follow this overview article up with a more technical blog post in the New Year. Watch this space!
 
