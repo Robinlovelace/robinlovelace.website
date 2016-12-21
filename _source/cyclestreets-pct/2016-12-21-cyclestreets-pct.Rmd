@@ -1,13 +1,15 @@
 ---
 layout: post
-title:  Using CycleStreets.net in the Propensity to Cycle Tool
+title:  CycleStreets.net in the Propensity to Cycle Tool
 date: "`r Sys.time()`"
-published: false
+published: true
 tags: [R, maps]
 bibliography: ~/repos/foss4t/references.bib
 ---
 
-Today was released the [paper](https://www.jtlu.org/index.php/jtlu/article/view/862/824) that describes the Propensity to Cycle Tool (PCT) and some of the thinking behind it [@lovelace_propensity_2016].
+After 2 years in the making, the [paper](https://www.jtlu.org/index.php/jtlu/article/view/862/824) describing the Propensity to Cycle Tool (PCT), and the thinking behind it, has finally been published [@lovelace_propensity_2016]. The PCT is an online tool for helping to decide where to prioritise cycling policies such as new cycle paths.
+
+The PCT would not have been possible without CycleStreets.net, so as well as describing the PCT and it's use of their routing services, this article serves as a big Thank You from PCT to CycleStreet.net.
 
 ## What is the Propensity to Cycle Tool?
 
@@ -22,7 +24,7 @@ Under the 2011 Census scenario, the PCT represents levels of cycling to work bas
 The first thing the user sees on the front page is a map of England, broken into 44 regions:
 
 ```{r, echo=FALSE}
-knitr::include_graphics("/home/robin/Pictures/regions1.png")
+knitr::include_graphics("/home/robin/npct/pct/figures/regions1.png")
 ```
 
 We used deliberately large regions because successful cycling plans should be strategic and joined up, covering both large areas and large spans of time. This discourages the stop-start investment plans that have typified funding for active travel.
