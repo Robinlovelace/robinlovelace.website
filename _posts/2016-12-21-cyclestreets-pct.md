@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  CycleStreets.net in the Propensity to Cycle Tool
-date: "2016-12-21 19:01:21"
+date: "2016-12-21 19:05:46"
 published: true
 tags: [R, maps]
 ---
@@ -79,13 +79,16 @@ This is not formal validation but it is a good sign that the PCT and other data 
 Here is not the place to answer such a question. Only the passage of time, and commitment from people (perhaps informed by models such as the PCT) to sustainable travel will help answer that one.
 
 There is much more to say about the use of CycleStreets.net in the PCT but it gets rather technical very quickly.
-Suffice to say at this stage that it involved writing lots of code in R, a language for statistical programming, and that this has now resulted in the publication of **stplanr**, [an R package for sustainable transport](https://github.com/ropensci/stplanr), which can be installed by entering the following command:^[For more on how to
-[install R](https://cran.r-project.org/) and (for bells and whistles) RStudio, which this blog post was written in, please see the relevant sections of the book [Efficent R Programming](https://csgillespie.github.io/efficientR/set-up.html#installing-r) (Gillespie and Lovelace, 2016).]
+Suffice to say at this stage that it involved writing lots of code in R, a language for statistical programming, and that this has now resulted in the publication of **stplanr**, [an R package for sustainable transport](https://github.com/ropensci/stplanr). 
+(For more on how to
+[install R](https://cran.r-project.org/) and (for bells and whistles) RStudio, which this blog post was written in, please see the relevant sections of the book [Efficent R Programming](https://csgillespie.github.io/efficientR/set-up.html#installing-r) (Gillespie and Lovelace, 2016).)
+With R installed, **stplanr** can be installed with:
 
 
 {% highlight r %}
 install.packages("stplanr")
 {% endhighlight %}
+
 
 With this package installed, you can start using the CycleStreets.net routing algorithm with the following function:
 
