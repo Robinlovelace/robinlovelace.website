@@ -2,7 +2,7 @@
 layout: post
 title:  Estimating cycling potential with CycleStreet.net
 date: "`r Sys.time()`"
-published: true
+published: false
 tags: [R, maps]
 bibliography: ~/repos/foss4t/references.bib
 ---

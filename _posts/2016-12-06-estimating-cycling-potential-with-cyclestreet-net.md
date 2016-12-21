@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  Estimating cycling potential with CycleStreet.net
-date: "2016-12-06 10:39:45"
-published: true
+date: "2016-12-21 12:42:37"
+published: false
 tags: [R, maps]
 bibliography: ~/repos/foss4t/references.bib
 ---
