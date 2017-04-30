@@ -52,12 +52,12 @@ The PCT would not have been possible without CycleStreets.net, so as well as des
     </item>
     
     <item>
-      <title>The Future Is Not What It Used To Be - Book review</title>
-      <link>/2014-01-28-future-not-book-review/</link>
-      <pubDate>Tue, 28 Jan 2014 00:00:00 +0000</pubDate>
+      <title>R vs QGIS for sustainable transport planning</title>
+      <link>/2015/01/20/r-vs-qgis-for-sustainable-transport-planning/</link>
+      <pubDate>Tue, 20 Jan 2015 00:00:00 +0000</pubDate>
       
-      <guid>/2014-01-28-future-not-book-review/</guid>
-      <description>This is a review I was invited to write for Environmental Values, a journal for academics to publish their musings on the state of the environment and what is to be done about it. I found the book good, but was perhaps overly gushing in my review on their website in hindsight. Why? Well since my review there have been another couple of assessments from respected sources that are mixed to say the least.</description>
+      <guid>/2015/01/20/r-vs-qgis-for-sustainable-transport-planning/</guid>
+      <description>The 23rd iteration of the GIS Research UK conference (#GISRUK) conference was the largest ever. 250 researchers, industry representatives and academics attended from the vibrant geospatial research communities in the UK, Europe and beyond. GISRUK has become a centrepoint for discussion of new methods, software and applications in the field. I was on the organising committee, reviewed some excellent papers for the event (a full list of these is available for download here) and attended some truly ground-breaking talks.</description>
     </item>
     
     <item>
@@ -89,15 +89,6 @@ See the map, words, images and video below for the full low-down on this epic ri
 &lt;iframe src=&#34;http://www.gpsies.com/mapOnly.do?fileId=nueyoqzfqmingzgc&#34; width=&#34;600&#34; height=&#34;400&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; marginheight=&#34;0&#34; marginwidth=&#34;0&#34;&gt;&lt;/iframe&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>/1/01/01/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/1/01/01/</guid>
-      <description>Geostat2016 Albacete: a write-up       code{white-space: pre;} pre:not([class]) { background-color: white; }  if (window.hljs &amp;&amp; document.readyState &amp;&amp; document.readyState === &#34;complete&#34;) { window.setTimeout(function() { hljs.initHighlighting(); }, 0); }  h1 { font-size: 34px; } h1.title { font-size: 38px; } h2 { font-size: 30px; } h3 { font-size: 24px; } h4 { font-size: 18px; } h5 { font-size: 16px; } h6 { font-size: 12px; } .</description>
     </item>
     
   </channel>

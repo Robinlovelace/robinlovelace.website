@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gis on A Hugo website</title>
+    <link>/tags/gis/</link>
+    <description>Recent content in Gis on A Hugo website</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 20 Jan 2015 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/gis/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>R vs QGIS for sustainable transport planning</title>
+      <link>/2015/01/20/r-vs-qgis-for-sustainable-transport-planning/</link>
+      <pubDate>Tue, 20 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>/2015/01/20/r-vs-qgis-for-sustainable-transport-planning/</guid>
+      <description>The 23rd iteration of the GIS Research UK conference (#GISRUK) conference was the largest ever. 250 researchers, industry representatives and academics attended from the vibrant geospatial research communities in the UK, Europe and beyond. GISRUK has become a centrepoint for discussion of new methods, software and applications in the field. I was on the organising committee, reviewed some excellent papers for the event (a full list of these is available for download here) and attended some truly ground-breaking talks.</description>
+    </item>
+    
+  </channel>
+</rss>

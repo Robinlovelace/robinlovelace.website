@@ -48,11 +48,29 @@
     </item>
     
     <item>
+      <title>Gis</title>
+      <link>/tags/gis/</link>
+      <pubDate>Tue, 20 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/gis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Maps</title>
       <link>/tags/maps/</link>
       <pubDate>Wed, 21 Dec 2016 00:00:00 +0000</pubDate>
       
       <guid>/tags/maps/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Open Source</title>
+      <link>/tags/open-source/</link>
+      <pubDate>Tue, 20 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/open-source/</guid>
       <description></description>
     </item>
     

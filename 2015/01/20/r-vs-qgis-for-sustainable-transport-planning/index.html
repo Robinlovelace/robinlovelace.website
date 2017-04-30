@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.20.6" />
+
+
+<title>R vs QGIS for sustainable transport planning - A Hugo website</title>
+<meta property="og:title" content="R vs QGIS for sustainable transport planning - A Hugo website">
+
+
+
+  
+
+
+
+
+
+
+
+
+<link href='//cdn.bootcss.com/highlight.js/9.10.0/styles/github.min.css' rel='stylesheet' type='text/css'>
+
+
+
+<link rel="stylesheet" href="../../../../css/fonts.css" media="all">
+<link rel="stylesheet" href="../../../../css/main.css" media="all">
+
+
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="../../../../" class="nav-logo">
+    <img src="../../../../images/logo.png"
+         width="50"
+         height="50"
+         alt="Logo">
+  </a>
+
+  <ul class="nav-links">
+    
+    <li><a href="../../../../about/">About</a></li>
+    
+    <li><a href="https://github.com/rstudio/blogdown">GitHub</a></li>
+    
+    <li><a href="https://twitter.com/rstudio">Twitter</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+
+  <article class="article">
+    
+    <span class="article-duration">5 min read</span>
+    
+
+    <h1 class="article-title">R vs QGIS for sustainable transport planning</h1>
+
+    
+    <span class="article-date">2015/01/20</span>
+    
+
+    <div class="article-content">
+      
+
+<p>The 23rd iteration of the GIS Research UK conference
+(<a href="https://github.com/Robinlovelace/stplanr">#GISRUK</a>)
+conference was the largest ever. 250 researchers,
+industry representatives and academics attended from the
+vibrant geospatial research communities in the
+UK, Europe and beyond. GISRUK has become a centrepoint for discussion
+of new methods, software and applications in the field. I
+was on the <a href="http://leeds.gisruk.org/contact.html">organising committee</a>,
+reviewed some excellent papers for the event
+(a full list of these is
+<a href="http://leeds.gisruk.org/programme.html">available for download here</a>) and
+attended some truly ground-breaking talks.
+This experience has shown that the geospatial community
+in the UK is strong,
+especially with regards to growth in open access
+data and open source software in the field.</p>
+
+<p><a href="https://www.flickr.com/photos/97888609@N02/17025120518" title="img_2814 by Robin Lovelace, on Flickr"><img src="https://farm6.staticflickr.com/5450/17025120518_ebfba47bff_s.jpg" width="75" height="75" alt="img_2814"></a></p>
+
+<p>This article is about one part of GISRUK and insights gleaned from it
+about R, QGIS and other tools for sustainable transport planning.
+<a href="https://github.com/Robinlovelace/GIS4TA">GIS for Transport Applications</a>
+(<a href="https://twitter.com/hashtag/gis4ta?src=hash">#GIS4TA for short</a>) was a practical day-long workshop
+that preceded the main event.
+I organised the workshop and (with help from
+<a href="http://www.geog.leeds.ac.uk/people/e.odiari">Eusebio Odiari</a>,
+<a href="https://tgrg.wordpress.com/">The Transport Geography Research Group</a>
+and the
+<a href="http://www.rgs.org/HomePage.htm">Royal Geographical Society</a>)
+it seems to have been a great success. More than 30
+people attended, including a decent portion
+from transport consultancies such as
+<a href="http://www.itpworld.net/index.html">Integrated Transport Planning Ltd</a>
+<a href="http://www.trpconsult.com/">TRP Consulting</a> and the
+<a href="http://www.era.europa.eu/Pages/Home.aspx">European Railway Association (ERA)</a>.
+Specifically, it is about the use of R
+and QGIS tools for transport planning and the potential for their
+adoption in academic, public and private-sector transport planning.
+The focus of the workshop was deliberately on open source software
+and sustainable transport because these are growth
+areas in the field that are essential for
+democratic
+and healthy
+transport systems compatible with the
+science of climate change (<a href="http://www.opentraffic.net/en/"><span class="citation">Tamminga, 2012</span></a>).
+A recent report, for example, suggests we need to almost completely
+transition away from fossil fuels by 2050
+(<a href="http://dx.doi.org/10.1038/nature14016">McGlade et al., 2015</a>).
+New datasets and methods for analysing and modelling them can
+help get us there in the recalcitrant transport sector
+(<a href="http://dx.doi.org/10.1016/j.jtrangeo.2014.07.010">Gossling, 2014</a>).</p>
+
+<h1 id="r-for-transport-applications">R for transport applications</h1>
+
+<p>The workshop kicked-off with a short
+talk on &lsquo;R and QGIS for transport applications&rsquo;,
+which laid out some of the motivations for running the
+workshop outlined above. Other than a few
+&lsquo;early adopters&rsquo;, the transport modelling community
+is generally conservative, based largely on mature
+proprietary products such as
+<a href="http://www.saturnsoftware.co.uk/7.html">SATURN</a>
+and
+<a href="http://vision-traffic.ptvgroup.com/en-us/products/ptv-vissim/">Vissim</a>.</p>
+
+<p>The slides from this talk are available here:</p>
+
+<script async class="speakerdeck-embed" data-id="91fce9cf5c36405b8969c6b6954c4fe6" data-ratio="1.41436464088398" src="//speakerdeck.com/assets/embed.js"></script>
+
+<p><strong>Tutorial: <a href="https://github.com/Robinlovelace/GIS4TA/releases/download/0.1/intro-r-qgis-4ta.pdf">Introduction to R and QGIS for transport applications</a></strong></p>
+
+<h1 id="routing-with-r">Routing with R</h1>
+
+<p>The second talk was by Nick Bearman, who provided an overview of
+routing in R, as well as an excellent
+<a href="https://github.com/nickbearman/transport-workshop/blob/master/transport-workshop.pdf">practical tutorial</a>.</p>
+
+<p>The practical demonstrated 2 ways of routing in R:</p>
+
+<ol>
+<li>Using <strong>ggmap</strong>. The following code was used to navigate to the event!</li>
+</ol>
+
+<pre><code>from &lt;- 'Leeds station, New Station Street, Leeds LS1 5DL, United Kingdom'
+to &lt;- 'LS2 9JT'
+route_df &lt;- route(from, to, structure = 'route', mode = 'walking')
+</code></pre>
+
+<pre><code>qmap('Merrion Centre', zoom = 15) +
+  geom_path(
+    aes(x = lon, y = lat),  colour = 'red', size = 1.5,
+    data = route_df, lineend = 'round')
+</code></pre>
+
+<p><img src="https://github.com/Robinlovelace/robinlovelace.github.io/raw/master/_posts/writeup_files/figure-html/unnamed-chunk-2-1.png" alt="" /></p>
+
+<ol>
+<li>The <a href="https://github.com/Robinlovelace/stplanr">package I created, <strong>stplanr</strong></a>,
+to get routes optimised for cyclists (see <a href="https://github.com/nickbearman/transport-workshop/blob/master/transport-workshop.Rmd">transport-workshop.Rmd</a> for a working version):</li>
+</ol>
+
+<pre><code>rquiet &lt;- gLines2CyclePath(l = rlines, plan = &quot;quietest&quot;)
+plot(rquiet[1,]) # route from Leeds station to Leeds University (North - South)
+plot(rquiet[2,]) # route from Leeds to Manchester!
+</code></pre>
+
+<p><img src="https://github.com/Robinlovelace/robinlovelace.github.io/raw/master/_posts/writeup_files/figure-html/unnamed-chunk-4-1.png" alt="" /></p>
+
+<p><strong>Tutorial: <a href="https://github.com/nickbearman/transport-workshop/blob/master/transport-workshop.pdf">Route analysis using R</a></strong></p>
+
+<h1 id="large-gps-datasets-with-postgis">Large gps datasets with PostGIS</h1>
+
+<p>The most technical session involved using R to query huge datasets storing
+GPS data containing 100,000+ rows. Amazingly, Richard and Adrian Ellison
+set up a remotely accessible database instance <strong>from their laptop</strong> which
+participants queried via
+<a href="http://cran.r-project.org/web/packages/RPostgreSQL/index.html"><strong>RPostgreSQL</strong></a>.
+Their session information can be seen here:</p>
+
+<p><a href="https://github.com/richardellison/GIS4TA_GPS"><strong>github.com/richardellison/GIS4TA_GPS</strong></a></p>
+
+<h1 id="a-hackathon">A hackathon</h1>
+
+<p>Finally there was a miniature hackathon organised by Godwin Yeboah.
+Participants made progress in better understanding the travel
+patterns of cyclists using real data. The hackathon notes can be found here:</p>
+
+<p><a href="https://github.com/spatialscientist/GIS4TA2015">github.com/spatialscientist/GIS4TA2015</a></p>
+
+<h1 id="summary">Summary</h1>
+
+<p>GIS is a field of knowledge that has a huge amount to offer transport
+planners and researchers, especially regarding new and open source
+software tools that can effectively generate, process and analyse
+transport-related data. R is well-suited to fill this research gap and
+has a wide range of tools to help. Packages such as <strong>ggmap</strong>
+(Kahle and Wickham 2013),
+<strong>RPostgreSQL</strong>
+and the new <a href="https://github.com/Robinlovelace/stplanr"><strong>stplanr</strong></a>
+have great potential to help plan the transport systems of the future.
+QGIS is also increasingly attractive for transport applications, with
+it inbuilt support for
+<a href="http://planet.qgis.org/planet/tag/pgrouting/">PGRouting</a>,
+<a href="http://plugins.qgis.org/plugins/FlowMapper/">flow analysis</a>
+and a friendly user interface that many will be used to.</p>
+
+<p>Photos taken during the hackathon are testament to its role as a forum
+for not only learning but also debate about the future of GIS in transport.
+These can be seen here:</p>
+
+<p><a href="https://www.flickr.com/photos/97888609@N02/sets/72157652012715766">flickr.com/photos/97888609@N02/sets/72157652012715766</a></p>
+
+<p>Hearing feedback from users new to R using it to solve transport problems
+provided an insight into how it compares to traditional tools. The removal
+of &lsquo;glass ceilings&rsquo; imposed by restrictive licenses or the need to buy
+&lsquo;add-on&rsquo; features was one comment, but that applies equally to QGIS and
+other <a href="http://foss4g.org/">FOSS4G</a>
+offerings. The steep learning curve of R seems to still
+be an issue compared with QGIS, although this is becoming less of an issue
+with the evolution of RStudio as an GUI for R. In conclusion, both R and
+QGIS are coming of age as tools in the transport planner&rsquo;s &lsquo;war cabinet&rsquo;.
+The latest evidence unequivocally shows the impact of transport decisions
+on obesity, environmental degradation and quality of life. So it is time,
+surely, to harness this new open source software to &lsquo;save the world&rsquo;!</p>
+
+<h1 id="acknowledgements">Acknowledgements</h1>
+
+<p>Thanks to the Consumer Data Research Centre and the Royal Geographical
+society for subsidising the event. Thanks to all the participants and
+especially the demonstrators Godwin, Nick, Adrian and Richard for making it
+happen.</p>
+
+<h1 id="references">References</h1>
+
+<p>Gössling, Stefan, and Scott Cohen. 2014. “Why sustainable transport policies will fail: EU climate policy in the light of transport taboos.” Journal of Transport Geography 39 (July). Elsevier Ltd: 197–207. doi:10.1016/j.jtrangeo.2014.07.010.</p>
+
+<p>Kahle, D, and Hadley Wickham. 2013. “ggmap: Spatial Visualization with ggplot2.” The R Journal 5: 144–61. <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.375.8693&amp;rep=rep1&amp;type=pdf">citeseerx.ist.psu.edu</a>.</p>
+
+<p>McGlade, Christophe, and Paul Ekins. 2015. “The geographical distribution of fossil fuels unused when limiting global warming to 2 °C.” Nature 517 (7533). Nature Publishing Group: 187–90. doi:10.1038/nature14016.</p>
+
+<p>Tamminga, Guus, Marc Miska, Edgar Santos, Hans van Lint, Arturo Nakasone, Helmut Prendinger, and Serge Hoogendoorn. 2012. “Design of Open Source Framework for Traffic and Travel Simulation.” Transportation Research Record: Journal of the Transportation Research Board 2291 (-1): 44–52. doi:10.<sup>3141</sup>&frasl;<sub>2291</sub>-06.</p>
+
+    </div>
+  </article>
+
+  
+
+
+</main>
+
+      <footer class="footer">
+        <ul class="footer-links">
+          <li>
+            <a href="../../../../index.xml" type="application/rss+xml" target="_blank">RSS feed</a>
+          </li>
+          <li>
+            <a href="https://gohugo.io/" class="footer-links-kudos">Made with <img src="../../../../images/hugo-logo.png" width="22" height="22"></a>
+          </li>
+        </ul>
+      </footer>
+
+    </div>
+    
+
+
+
+<script src="//cdn.bootcss.com/highlight.js/9.10.0/highlight.min.js"></script>
+
+<script src="//cdn.bootcss.com/highlight.js/9.10.0/languages/r.min.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.10.0/languages/yaml.min.js"></script>
+<script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+
+
+
+    
+
+    
+  </body>
+</html>
+

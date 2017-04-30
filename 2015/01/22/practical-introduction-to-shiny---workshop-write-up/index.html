@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.20.6" />
+
+
+<title>Practical introduction to Shiny - workshop write-up - A Hugo website</title>
+<meta property="og:title" content="Practical introduction to Shiny - workshop write-up - A Hugo website">
+
+
+
+  
+
+
+
+
+
+
+
+<link rel="stylesheet" href="../../../../css/fonts.css" media="all">
+<link rel="stylesheet" href="../../../../css/main.css" media="all">
+
+
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="../../../../" class="nav-logo">
+    <img src="../../../../images/logo.png"
+         width="50"
+         height="50"
+         alt="Logo">
+  </a>
+
+  <ul class="nav-links">
+    
+    <li><a href="../../../../about/">About</a></li>
+    
+    <li><a href="https://github.com/rstudio/blogdown">GitHub</a></li>
+    
+    <li><a href="https://twitter.com/rstudio">Twitter</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+
+  <article class="article">
+    
+    <span class="article-duration">3 min read</span>
+    
+
+    <h1 class="article-title">Practical introduction to Shiny - workshop write-up</h1>
+
+    
+    <span class="article-date">2015/01/22</span>
+    
+
+    <div class="article-content">
+      <p>I recently delivered a workshop on a practical introduction to
+<a href="http://shiny.rstudio.com/">shiny</a>, an R package that enables development,
+testing and deployment of interactive web applications.
+Delivered at the University of Sydney&rsquo;s Institute for Transport and Logistics
+Studies (<a href="http://sydney.edu.au/business/itls">ITLS</a>), it was designed for people
+who are a) fairly new to R (which can seem intimidating) and b) completely new to
+shiny.</p>
+
+<p>This article provides resources for people wanting to apply shiny to
+real-world applications and some context which explains the motivations
+behind running the workshop. The pdf tutorial, example code
+to create and modify your own apps and a place to contribute to this
+free teaching resource is available at the following GitHub repository:
+<a href="https://github.com/Robinlovelace/learning-shiny">github.com/Robinlovelace/learning-shiny</a></p>
+
+<p></p>
+
+<h2 id="my-first-shiny-app">My first shiny app</h2>
+
+<p>My first shiny app was <a href="https://robinlovelace.shinyapps.io/rentSplit/">rentSplit</a>,
+which overcomes the problem faced when people move in together but can&rsquo;t decide
+on who should pay what because some rooms are better than others. (I would
+like to add &lsquo;income&rsquo; to this app to allow for minted people to pay more!):</p>
+
+<iframe src="https://robinlovelace.shinyapps.io/rentSplit/" style="border: none; width: 600px; height: 800px"></iframe>
+
+<p>The relatively painless experience of creating this app made me wonder if shiny
+could be used in transport policy applications and help us achieve the transition
+away from <a href="http://www.postcarbon.org/">fossil fuels</a> that
+<a href="http://www.nature.com/nature/journal/v517/n7533/full/nature14016.html">scientists say is needed to avoid dangerous climate change</a>.</p>
+
+<h2 id="context">Context</h2>
+
+<p>To put shiny in the context of transport planning I began with a talk on the
+motivations behind online visualisation tools: the increased
+focus on &lsquo;<a href="http://www.esrc.ac.uk/funding-and-guidance/impact-toolkit/">impact</a>&lsquo;
+in academic funding decisions, the need for public engagement and the
+democratisation of decision-making processes, as illustrated by the
+interactive <a href="http://www.cyclecityconnect.co.uk/participate.php">web map</a> created by transport consultancy Steer Davies Gleave
+(<a href="http://www.steerdaviesgleave.com/">SDG</a>) to enable geolocated online discussion
+of a new £20 million <a href="http://www.cyclecityconnect.co.uk/">cycle path</a>
+that will connect the English cities of <a href="http://leeds.gisruk.org/">Leeds</a>
+and <a href="http://en.wikipedia.org/wiki/Bradford">Bradford</a>:</p>
+
+<p><img src="http://robinlovelace.net/figure/cconnect.png" alt="cityconnect" /></p>
+
+<p>This is a fantastic example of the new levels of engagement unleashed by
+online digital technologies such as <a href="http://leafletjs.com/">Leaflet</a>
+and <a href="http://www.r-bloggers.com/search/shiny">shiny</a>: for the first time ever,
+people can voice their opinions and pinpoint them to a specific place on the map
+in a real-time discussion. The potential for improving transparency and
+accountability in transport decision making is huge, as I described
+in a short <a href="http://robinlovelace.net/software/2014/03/05/webmap-test.html">article on web-mapping</a> and as outlined in
+an academic paper on the subject
+(<a href="http://onlinelibrary.wiley.com/doi/10.1002/eet.1655/full">Schulz and Newig, 2014</a>).</p>
+
+<p>As stated in the <a href="http://rpubs.com/RobinLovelace/54614">talk</a>,
+the <a href="https://soundcloud.com/robin-lovelace-1/r-and-shiny-for-transport-applications">audio</a>
+of which is available online (see below),
+this is a fast-moving area that is likely to grow rapidly in the coming years.
+So it&rsquo;s worth knowing what&rsquo;s out there and what is possible at present.</p>
+
+<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/187078099&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+
+<p>The <a href="https://github.com/Robinlovelace/learning-shiny/raw/master/learning-shiny.pdf">practical</a> avoids <a href="http://en.wikipedia.org/wiki/Reinventing_the_wheel">reinventing the wheel</a>
+by building on and creating a narrative for <a href="http://shiny.rstudio.com/tutorial/">RStudio&rsquo;s excellent tutorial and documentation of shiny</a>. For example, the
+<a href="https://robinlovelace.shinyapps.io/himod/">himod</a> shiny app is simply a modified
+version of the &lsquo;<a href="http://glimmer.rstudio.com/shiny/01_hello/">01_hello</a>&lsquo;
+demonstration app used to illustrate how new
+<a href="http://shiny.rstudio.com/tutorial/lesson3/">widgets</a> are created and how to
+use their id&rsquo;s as objects (via <code>input$id</code>) in server.R:</p>
+
+<iframe src="https://robinlovelace.shinyapps.io/himod/" style="border: none; width: 600px; height: 650px"></iframe>
+
+<p>So please take a look at the resources generated for this practical. I&rsquo;d
+be interested to hear peoples&rsquo; thoughts on online interactive tools for
+transport planning and the
+<a href="http://theconversation.com/digital-democracy-lets-you-write-your-own-laws-21483">digital democracy</a> agenda. More specifically, what&rsquo;s the simplest way to get
+an interactive map on shiny, as illustrated by the impressive
+<a href="http://shiny.rstudio.com/gallery/superzip-example.html">map of the USA in the SuperZip shiny Gallery example</a>?</p>
+
+<h2 id="resources">Resources</h2>
+
+<ul>
+<li>An evolving <a href="https://github.com/Robinlovelace/learning-shiny/raw/master/learning-shiny.pdf">tutorial</a> (which is may contain some errors)</li>
+<li>A <a href="https://github.com/Robinlovelace/learning-shiny">GitHub repo</a> where you can access the source code for this tutorial and contribute to it for the community if you wish.</li>
+<li>The <a href="http://rpubs.com/RobinLovelace/54614">slides from my talk</a>, complete with an
+<a href="https://soundcloud.com/robin-lovelace-1/r-and-shiny-for-transport-applications">audio recording</a> of the introduction to it.</li>
+</ul>
+    </div>
+  </article>
+
+  
+
+
+</main>
+
+      <footer class="footer">
+        <ul class="footer-links">
+          <li>
+            <a href="../../../../index.xml" type="application/rss+xml" target="_blank">RSS feed</a>
+          </li>
+          <li>
+            <a href="https://gohugo.io/" class="footer-links-kudos">Made with <img src="../../../../images/hugo-logo.png" width="22" height="22"></a>
+          </li>
+        </ul>
+      </footer>
+
+    </div>
+    
+
+    
+<script src="../../../../js/math-code.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    processEscapes: true
+  }
+});
+</script>
+<script async type="text/javascript"
+  src="https://cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+    
+  </body>
+</html>
+
