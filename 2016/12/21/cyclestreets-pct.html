@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>CycleStreets.net in the Propensity to Cycle Tool</title>
+    <meta name="description" content="environmental geographer, transport modeller, energy researcher
+">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="http://robinlovelace.net/2016/12/21/cyclestreets-pct.html">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">Robin Lovelace</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about">About Robin Lovelace</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/book-reviews">Book reviews</a>
+          
+        
+          
+        
+          
+        
+          
+          <a class="page-link" href="/sketches/foss4g-2014-r-abstract">FOSS4G-E Abstract</a>
+          
+        
+          
+          <a class="page-link" href="/hardware">Hardware</a>
+          
+        
+          
+          <a class="page-link" href="/ideas">Ideas</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/influential-geographers">Influential geographers</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/software/pandoc">Pandoc</a>
+          
+        
+          
+          <a class="page-link" href="/presentations">Presentations</a>
+          
+        
+          
+          <a class="page-link" href="/publications">Publications</a>
+          
+        
+          
+          <a class="page-link" href="/quotes">Quotes</a>
+          
+        
+          
+          <a class="page-link" href="/software">Software</a>
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">CycleStreets.net in the Propensity to Cycle Tool</h1>
+    <p class="post-meta">Dec 21, 2016</p>
+  </header>
+
+  <article class="post-content">
+    <p>After 2 years in the making, the <a href="https://www.jtlu.org/index.php/jtlu/article/view/862/824">paper</a> describing the Propensity to Cycle Tool (PCT), and the thinking behind it, has finally been published (Lovelace et al. 2016). The PCT is an online tool for helping to decide where to prioritise cycling policies such as new cycle paths.</p>
+
+<p>The PCT would not have been possible without CycleStreets.net, so as well as describing the PCT and it’s use of their routing services, this article serves as a big Thank You from PCT to CycleStreets.net.</p>
+
+<h2 id="what-is-the-propensity-to-cycle-tool">What is the Propensity to Cycle Tool?</h2>
+
+<p>For those new to the PCT, it’s an online tool for helping to decide where to prioritise cycling policies such as new cycle paths. It lives at http://www.pct.bike - check it out!</p>
+
+<p>The context of its development is explained in the accompanying video on that page. This article reports how the tool itself works and how it uses data from CycleStreets.net.</p>
+
+<p>The PCT is best understood by using it to explore current cycling levels, at regional, area, desire line, route and route network levels. We will take a look at how the PCT works at each of these levels, after a brief look at the scenario results at the regional level (the senarios are described in more detail in the <a href="https://www.jtlu.org/index.php/jtlu/article/view/862/824">paper</a>).</p>
+
+<p>Under the 2011 Census scenario, the PCT represents levels of cycling to work based on the Census. This is a reasonable proxy for levels of utility cycling overall. We used origin-destination (OD) data from the Census as the basis of the PCT as this is best publicly available dataset on English travel patterns. The input data is described in the <a href="https://www.jtlu.org/index.php/jtlu/article/view/862">paper</a> and can be freely downloaded from the official http://wicid.ukdataservice.ac.uk/ website.</p>
+
+<h3 id="the-regional-picture-and-scenarios">The regional picture and scenarios</h3>
+
+<p>The first thing the user sees on the front page is a map of England, broken into 44 regions:</p>
+
+<p><img src="https://github.com/npct/pct/blob/master/figures/regions1.png?raw=true" alt="" /></p>
+
+<p>We used deliberately large regions because successful cycling plans should be strategic and joined up, covering both large areas and large spans of time. This discourages the stop-start investment plans that have typified funding for active travel.</p>
+
+<p>By hovering over different regions, the user can see what the current level of cycling to work is. We can discover that West Yorkshire has a low current level of cycling to work, 1.3% in the 2011 census, and that Cambridgeshire has a relatively high (but low by Dutch standards) level of cycling of 9.7%.</p>
+
+<p>An exciting feature of the PCT is its ability to allow the user to imagine ‘cycling futures’. This can be seen on the front page map by clicking on the different scenarios (set to Census 2011 by default). We can see, for example, that under the Government Target to double cycling levels by 2025, West Yorkshire’s level would rise to 3.3% (more than a doubling) whereas Cambridgeshire would see cycling levels grow to 13.7% (a larger rise in absolute terms):</p>
+
+<p><img src="https://github.com/npct/pct/blob/master/figures/regions2.png?raw=true" title="plot of chunk unnamed-chunk-2" alt="plot of chunk unnamed-chunk-2" width="50%" /><img src="https://github.com/npct/pct/blob/master/figures/regions3.png?raw=true" title="plot of chunk unnamed-chunk-2" alt="plot of chunk unnamed-chunk-2" width="50%" /></p>
+
+<p>Under the Go Dutch scenarios, these regions would see 23.1 and 13.5% of people cycling to work, respectively. This represents a huge leveling-out of cycling levels across the country, but still highlights the fact that some regions have higher cycling potentials than others, due to average trip distances and levels of hilliness.</p>
+
+<h2 id="cycling-levels-at-the-area-level">Cycling levels at the area level</h2>
+
+<p>To launch the PCT for a region, click on it.  Try clicking on West Yorkshire. You should be presented with the following image, which shows the area-based level of cycling to work from the 2011 Census. (When using the PCT, it is worth remembering that the visualisations work for every scenario.)</p>
+
+<p><img src="https://github.com/npct/pct/blob/master/figures/west-yorkshire-front.png?raw=true" alt="" /></p>
+
+<p>This shows that West Yorkshire has very low levels of cycling to work, hovering around 1% to 2% in most places. This suggests strongly that the region has low levels of utility cycling overall (despite the successes of the region’s sport cyclists). There is a cluster of zones with a higher level of cycling to the north of Leeds city centre (around Headingly) but even there the percentage of people cycling as their main mode of travel to work does not exceed 5%.</p>
+
+<h2 id="cycling-potential-at-the-desire-line-level">Cycling potential at the desire line level</h2>
+
+<p>This is all useful information, especially when we look at how the cycling potential could shift in the future. However, it provides little information about where current and future cyclists actually go. This is where the desire line level can be useful. This can be selected by clicking on the Straight Lines option from the Cycling Flows dropdown menu. The results (zoomed in for Leeds) are shown in the figures below (see Figure 3 in the paper).</p>
+
+<p><img src="https://github.com/npct/pct/blob/master/flow-model/od-data-leeds.png?raw=true" alt="" /></p>
+
+<p><img src="https://github.com/npct/pct/blob/master/figures/leeds-desire-godutch.png?raw=true" alt="" /></p>
+
+<p>What the above figures show is that as the level of cycling increases in a city, the spatial distribution of cycling can be expected to change. Under current conditions (be they related to socio-demographics or infrastructure or other factors), cycling in Leeds is dominated by the travel corridor to the north of the city centre. Yet there are clearly many short trips taking place from the south into the centre, as illustrated by the high cycling potential south of the city under the Go Dutch scenario.</p>
+
+<h2 id="allocating-cycling-potential-to-the-route-network">Allocating cycling potential to the route network</h2>
+
+<p>This is where CycleStreets.net comes into play.</p>
+
+<p>We know how many people go from A to B by cycling from Census data. But we have very little idea of how they are likely to travel. This is where the routing algorithm of CycleStreets.net comes in handy. We used their <a href="https://www.cyclestreets.net/api/apply/">routing API</a> to estimate the ‘fastest’ route for all short (well, up to 20 km in Euclidean distance) desire lines in England.</p>
+
+<p>Not only does CycleStreets.net allow us to find all the fastest routes, a good indication of where new infrastructure should be built as people (especially women and elderly) have a strong preference for cycling along the most direct routes.</p>
+
+<p>The results of all this routing work is illustrated in the future below, which shows the fastest and quietest routes associated with the top cycled routes in Leeds.</p>
+
+<p><img src="https://github.com/npct/pct/blob/master/flow-model/od-data-fast-quiet.png?raw=true" alt="" /></p>
+
+<p>Interestingly, the big fat line up to the north-west is Otley Road, well-known to have very high level of cycling. This also shows up in Strava data as having high current levels of cycling:</p>
+
+<p><img src="https://github.com/npct/pct/blob/master/figures/pct-vs-strava-for-leeds.png?raw=true" alt="" /></p>
+
+<p>This is not formal validation but it is a good sign that the PCT and other data sources line-up for the current level of cycling. The big question is whether the PCT’s estimates of cycling levels under various cycling futures, including Go Dutch.</p>
+
+<p>Here is not the place to answer such a question. Only the passage of time, and commitment from people (perhaps informed by models such as the PCT) to sustainable travel will help answer that one.</p>
+
+<p>There is much more to say about the use of CycleStreets.net in the PCT but it gets rather technical very quickly.
+Suffice to say at this stage that it involved writing lots of code in R, a language for statistical programming, and that this has now resulted in the publication of <strong>stplanr</strong>, <a href="https://github.com/ropensci/stplanr">an R package for sustainable transport</a>. 
+(For more on how to
+<a href="https://cran.r-project.org/">install R</a> and (for bells and whistles) RStudio, which this blog post was written in, please see the relevant sections of the book <a href="https://csgillespie.github.io/efficientR/set-up.html#installing-r">Efficent R Programming</a> (Gillespie and Lovelace, 2016).)
+With R installed, <strong>stplanr</strong> can be installed with:</p>
+
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="n">install.packages</span><span class="p">(</span><span class="s2">"stplanr"</span><span class="p">)</span></code></pre></figure>
+
+<p>With this package installed, you can start using the CycleStreets.net routing algorithm with the following function:</p>
+
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="n">library</span><span class="p">(</span><span class="n">stplanr</span><span class="p">)</span><span class="w">
+</span><span class="n">route</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">route_cyclestreet</span><span class="p">(</span><span class="n">from</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Leeds"</span><span class="p">,</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Cambridge"</span><span class="p">)</span></code></pre></figure>
+
+<p>which results in spatial data, which can be visualised as follows:</p>
+
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="n">library</span><span class="p">(</span><span class="n">leaflet</span><span class="p">)</span><span class="w">
+</span><span class="n">leaflet</span><span class="p">()</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">addTiles</span><span class="p">()</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">addPolylines</span><span class="p">(</span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">route</span><span class="p">)</span></code></pre></figure>
+
+<iframe src="http://robinlovelace.net/leeds-cam-map.html"></iframe>
+
+<p>There is much more I could say about the technical side of things but at the request of the editors I will leave it there for now. For more info please see the <a href="https://github.com/ropensci/stplanr/blob/master/vignettes/stplanr-paper.Rmd"><strong>stplanr</strong> vignette</a>.</p>
+
+<p>I plan to follow this overview article up with a more technical blog post in the New Year. Watch this space!</p>
+
+<h2 id="reference">Reference</h2>
+
+<p>Lovelace, R., Goodman, A., Aldred, R., Berkoff, N., Abbas, A., &amp; Woodcock, J. (2016). The Propensity to Cycle Tool: An open source online system for sustainable transport planning. Journal Of Transport And Land Use, 0. doi:http://dx.doi.org/10.5198/jtlu.2016.862</p>
+
+  </article>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Robin Lovelace</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>Robin Lovelace</li>
+          <li><a href="mailto:rob00x@gmail.com">rob00x@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/robinlovelace">
+              <span class="icon  icon--github">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+                </svg>
+              </span>
+
+              <span class="username">robinlovelace</span>
+            </a>
+          </li>
+          
+
+          
+          <li>
+            <a href="https://twitter.com/robinlovelace">
+              <span class="icon  icon--twitter">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809
+                  c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/>
+                </svg>
+              </span>
+
+              <span class="username">robinlovelace</span>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text">environmental geographer, transport modeller, energy researcher
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
