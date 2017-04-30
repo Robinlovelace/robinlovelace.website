@@ -3,4 +3,5 @@
 .RData
 .Ruserdata
 _site/*.*
-.sass*
+.sass*_site/
+_site
