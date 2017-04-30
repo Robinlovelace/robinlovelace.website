@@ -6,10 +6,19 @@
     <description>Recent content in Tags on A Hugo website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 30 Apr 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 13 Oct 2013 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Bicycles</title>
+      <link>/tags/bicycles/</link>
+      <pubDate>Sun, 13 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/bicycles/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Blogging</title>
@@ -35,6 +44,15 @@
       <pubDate>Wed, 21 Dec 2016 00:00:00 +0000</pubDate>
       
       <guid>/tags/maps/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Pedal Power</title>
+      <link>/tags/pedal-power/</link>
+      <pubDate>Sun, 13 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/pedal-power/</guid>
       <description></description>
     </item>
     

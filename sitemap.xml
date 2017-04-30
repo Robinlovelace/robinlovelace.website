@@ -22,12 +22,23 @@
   </url>
   
   <url>
+    <loc>/2013/10/13/moving-house-by-bicycle-trailer/</loc>
+    <lastmod>2013-10-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/1/01/01/</loc>
   </url>
   
   <url>
     <loc>/</loc>
     <lastmod>2017-04-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/bicycles/</loc>
+    <lastmod>2013-10-13T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -39,6 +50,12 @@
   
   <url>
     <loc>/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/ecotech/</loc>
+    <lastmod>2013-10-13T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -55,13 +72,13 @@
   </url>
   
   <url>
-    <loc>/post/</loc>
-    <lastmod>2017-04-30T00:00:00+00:00</lastmod>
+    <loc>/tags/pedal-power/</loc>
+    <lastmod>2013-10-13T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/r/</loc>
+    <loc>/post/</loc>
     <lastmod>2017-04-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -73,8 +90,14 @@
   </url>
   
   <url>
-    <loc>/tags/</loc>
+    <loc>/categories/r/</loc>
     <lastmod>2017-04-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2013-10-13T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
