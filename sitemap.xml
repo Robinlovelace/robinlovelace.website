@@ -43,12 +43,6 @@
   </url>
   
   <url>
-    <loc>/tags/bicycles/</loc>
-    <lastmod>2013-10-13T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/tags/blogging/</loc>
     <lastmod>2017-04-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -103,12 +97,6 @@
   </url>
   
   <url>
-    <loc>/tags/pedal-power/</loc>
-    <lastmod>2013-10-13T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/post/</loc>
     <lastmod>2017-04-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -134,7 +122,7 @@
   
   <url>
     <loc>/tags/</loc>
-    <lastmod>2013-10-13T00:00:00+00:00</lastmod>
+    <lastmod>2017-04-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
