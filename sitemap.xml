@@ -22,6 +22,16 @@
   </url>
   
   <url>
+    <loc>/2014-01-28-future-not-book-review/</loc>
+    <lastmod>2014-01-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/2014/01/28/the-future-is-not-what-it-used-to-be---book-review/</loc>
+    <lastmod>2014-01-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/2013/10/13/moving-house-by-bicycle-trailer/</loc>
     <lastmod>2013-10-13T00:00:00+00:00</lastmod>
   </url>
@@ -49,7 +59,20 @@
   </url>
   
   <url>
+    <loc>/categories/books/</loc>
+    <lastmod>2014-01-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/categories/</loc>
+    <lastmod>2014-01-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/collapse/</loc>
+    <lastmod>2014-01-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -92,6 +115,12 @@
   <url>
     <loc>/categories/r/</loc>
     <lastmod>2017-04-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/reviews/</loc>
+    <lastmod>2014-01-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Collapse on A Hugo website</title>
+    <link>/tags/collapse/</link>
+    <description>Recent content in Collapse on A Hugo website</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 28 Jan 2014 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/collapse/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>The Future Is Not What It Used To Be - Book review</title>
+      <link>/2014-01-28-future-not-book-review/</link>
+      <pubDate>Tue, 28 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/2014-01-28-future-not-book-review/</guid>
+      <description>This is a review I was invited to write for Environmental Values, a journal for academics to publish their musings on the state of the environment and what is to be done about it. I found the book good, but was perhaps overly gushing in my review on their website in hindsight. Why? Well since my review there have been another couple of assessments from respected sources that are mixed to say the least.</description>
+    </item>
+    
+    <item>
+      <title>The Future Is Not What It Used To Be - Book review</title>
+      <link>/2014/01/28/the-future-is-not-what-it-used-to-be---book-review/</link>
+      <pubDate>Tue, 28 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/2014/01/28/the-future-is-not-what-it-used-to-be---book-review/</guid>
+      <description>This is a review I was invited to write for Environmental Values, a journal for academics to publish their musings on the state of the environment and what is to be done about it. I found the book good, but was perhaps overly gushing in my review on their website in hindsight. Why? Well since my review there have been another couple of assessments from respected sources that are mixed to say the least.</description>
+    </item>
+    
+  </channel>
+</rss>
