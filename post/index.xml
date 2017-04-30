@@ -23,5 +23,14 @@ plot(1:9) Now that I have a quick-fire and fun way of getting new content onto t
 Watch this space!</description>
     </item>
     
+    <item>
+      <title>Geostat2016 Albacete: a write-up</title>
+      <link>/2016/09/28/geostat2016-albacete-a-write-up/</link>
+      <pubDate>Wed, 28 Sep 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/2016/09/28/geostat2016-albacete-a-write-up/</guid>
+      <description>&lt;p&gt;Last week I went to &lt;a href=&#34;http://geostat-course.org/2016&#34;&gt;GEOSTAT 2016&lt;/a&gt;. Given the amount of fun had at &lt;a href=&#34;http://robinlovelace.net/r/2015/08/31/geostat-writeup.html&#34;&gt;GEOSTAT 2015&lt;/a&gt;, expectations were high. The local organisers did not disappoint, with a week of lectures, workshops, spatial data competitions and of course lots of Geostatistics. It would be unwise to try to systematically document such a diverse range of activities, and the &lt;a href=&#34;http://geostat-course.org/node&#34;&gt;GEOSTAT website&lt;/a&gt; provides much further info. Instead this &amp;lsquo;miniwriteup&amp;rsquo; is designed to summarise some of my memories from the event, and encourage you to get involved for GEOSTAT 2017.&lt;/p&gt;</description>
+    </item>
+    
   </channel>
 </rss>

@@ -20,5 +20,23 @@
       <description></description>
     </item>
     
+    <item>
+      <title>Geostat</title>
+      <link>/tags/geostat/</link>
+      <pubDate>Wed, 28 Sep 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/geostat/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Maps</title>
+      <link>/tags/maps/</link>
+      <pubDate>Wed, 28 Sep 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/maps/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

@@ -7,6 +7,11 @@
   </url>
   
   <url>
+    <loc>/2016/09/28/geostat2016-albacete-a-write-up/</loc>
+    <lastmod>2016-09-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/about/</loc>
     <lastmod>2016-05-05T21:48:51-07:00</lastmod>
   </url>
@@ -25,6 +30,18 @@
   
   <url>
     <loc>/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/geostat/</loc>
+    <lastmod>2016-09-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/maps/</loc>
+    <lastmod>2016-09-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
