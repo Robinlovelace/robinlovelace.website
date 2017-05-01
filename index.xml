@@ -43,15 +43,6 @@ The PCT would not have been possible without CycleStreets.net, so as well as des
     </item>
     
     <item>
-      <title>About</title>
-      <link>/about/</link>
-      <pubDate>Thu, 05 May 2016 21:48:51 -0700</pubDate>
-      
-      <guid>/about/</guid>
-      <description>This is a &amp;ldquo;hello world&amp;rdquo; example website for the blogdown package. The theme was forked from @jrutheiser/hugo-lithium-theme and modified by Yihui Xie.</description>
-    </item>
-    
-    <item>
       <title>R vs QGIS for sustainable transport planning</title>
       <link>/2015/01/20/r-vs-qgis-for-sustainable-transport-planning/</link>
       <pubDate>Tue, 20 Jan 2015 00:00:00 +0000</pubDate>
@@ -89,6 +80,26 @@ See the map, words, images and video below for the full low-down on this epic ri
 &lt;iframe src=&#34;http://www.gpsies.com/mapOnly.do?fileId=nueyoqzfqmingzgc&#34; width=&#34;600&#34; height=&#34;400&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; marginheight=&#34;0&#34; marginwidth=&#34;0&#34;&gt;&lt;/iframe&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/about/</guid>
+      <description>Welcome Welcome to my website. My aim for it is to provide a place for me to get my work and ideas out-there quickly and link together my outputs across the internet into a single place. Enjoy your visit!
+ About me I’m a geographer and environmental scientist specialising in spatial data analysis and R programming. Based at the Institute for Transport Studies (ITS) I have a growing interest in transport modelling, as illustrated by a book review of a book on the subject Boyce and Williams (2015).</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/about/</guid>
+      <description>Welcome Welcome to my website. My aim for it is to provide a place for me to get my work and ideas out-there quickly and link together my outputs across the internet into a single place. Enjoy your visit!
+About me I&amp;rsquo;m a geographer and environmental scientist specialising in spatial data analysis and R programming. Based at the Institute for Transport Studies (ITS) I have a growing interest in transport modelling, as illustrated by a book review of a book on the subject Boyce and Williams (2015).</description>
     </item>
     
     <item>
