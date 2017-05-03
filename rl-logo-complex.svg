@@ -339,143 +339,109 @@
        inkscape:export-filename="/home/robin/blog/themes/hugo-lithium-theme/static/images/logo.png"
        inkscape:export-xdpi="41.736382"
        inkscape:export-ydpi="41.736382" />
-    <rect
-       style="opacity:1;fill:none;stroke:#000000;stroke-width:6.25;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="rect5365"
-       width="271.5"
-       height="271"
-       x="2.7700706e-08"
-       y="139.86221"
+    <path
        inkscape:export-filename="/home/robin/blog/themes/hugo-lithium-theme/static/images/logo.png"
        inkscape:export-xdpi="41.736382"
-       inkscape:export-ydpi="41.736382" />
-    <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:3.25352287;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 217.26651,353.98308 c 0,0 -0.39086,9.20812 13.28906,18.95789 13.67993,9.7498 27.7507,11.91641 38.30379,14.35386"
-       id="path5369"
-       inkscape:connector-curvature="0"
-       inkscape:export-filename="/home/robin/blog/themes/hugo-lithium-theme/static/images/logo.png"
-       inkscape:export-xdpi="41.736382"
-       inkscape:export-ydpi="41.736382" />
-    <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:3.26344919;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 49.574625,354.95122 c 0,0 0.393314,9.20658 -13.372505,18.95472 -13.76583,9.74817 -27.9249545,11.91442 -38.5443091,14.35147"
-       id="path5369-6"
-       inkscape:connector-curvature="0"
-       inkscape:export-filename="/home/robin/blog/themes/hugo-lithium-theme/static/images/logo.png"
-       inkscape:export-xdpi="41.736382"
-       inkscape:export-ydpi="41.736382" />
-    <path
+       inkscape:export-ydpi="41.736382"
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
        d="m 75,335.36221 c 0,0 24.5,24.5 55,24 30.5,-0.5 54.5,-16.5 63,-25"
        id="path5386"
-       inkscape:connector-curvature="0"
+       inkscape:connector-curvature="0" />
+    <path
        inkscape:export-filename="/home/robin/blog/themes/hugo-lithium-theme/static/images/logo.png"
        inkscape:export-xdpi="41.736382"
-       inkscape:export-ydpi="41.736382" />
-    <path
-       style="opacity:1;fill:#b3b3b3;stroke:#000000;stroke-width:2.5;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 3.5264034,398.13597 0,-9.24047 1.375,-0.30021 c 3.817641,-0.83351 12.7817226,-3.40535 15.8749996,-4.55461 12.333027,-4.58215 23.376998,-12.66921 27.744277,-20.31603 l 1.425503,-2.49597 15.16511,-7.18628 c 8.34081,-3.95245 15.84678,-7.43398 16.67993,-7.73672 1.402025,-0.50945 1.83019,-0.34556 5.75,2.20097 8.28502,5.38242 18.271667,9.74753 27.195337,11.88693 2.17809,0.52218 4.11694,1.20311 4.30858,1.51318 0.19163,0.31006 3.44744,9.31759 7.23514,20.01672 3.7877,10.69913 7.02384,19.45125 7.19142,19.44915 0.16759,-0.002 3.59078,-9.27396 7.6071,-20.60414 l 7.3024,-20.60033 6.4476,-1.85383 c 9.64418,-2.77293 17.25176,-6.14526 27.4476,-12.16714 l 1.5,-0.88594 16.67768,7.9326 16.67768,7.9326 1.76837,2.75 c 4.98094,7.74592 15.91586,15.2814 28.66437,19.75323 4.23081,1.48405 18.60524,5.23734 20.0869,5.24486 0.20625,10e-4 0.375,4.16441 0.375,9.25191 l 0,9.25 -132.25,0 -132.2499966,0 0,-9.24048 z"
-       id="path5388"
-       inkscape:connector-curvature="0"
-       inkscape:export-filename="/home/robin/blog/themes/hugo-lithium-theme/static/images/logo.png"
-       inkscape:export-xdpi="41.736382"
-       inkscape:export-ydpi="41.736382" />
-    <path
+       inkscape:export-ydpi="41.736382"
        style="opacity:1;fill:#ffff00;stroke:#000000;stroke-width:2.5;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 33.401403,278.94494 c -7.35625,-2.6474 -13.375,-4.9515 -13.375,-5.12023 0,-0.16873 4.33125,-1.8314 9.625,-3.69481 5.29375,-1.86342 11.3125,-4.00635 13.375,-4.76208 l 3.75,-1.37404 0,9.94133 0,9.88231 c 0,-0.0325 -6.01875,-2.22508 -13.375,-4.87248 z"
        id="path5390"
-       inkscape:connector-curvature="0"
+       inkscape:connector-curvature="0" />
+    <path
        inkscape:export-filename="/home/robin/blog/themes/hugo-lithium-theme/static/images/logo.png"
        inkscape:export-xdpi="41.736382"
-       inkscape:export-ydpi="41.736382" />
-    <path
+       inkscape:export-ydpi="41.736382"
        style="opacity:1;fill:#ffff00;stroke:#000000;stroke-width:2.5;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 53.109737,353.94933 c 0.939679,-2.40811 12.153129,-25.56874 12.373318,-25.55626 0.161341,0.009 1.868348,1.86539 3.793348,4.125 1.925,2.25961 4.820717,5.41266 6.434927,7.00678 1.614209,1.59413 2.851709,2.96362 2.75,3.04333 -0.407309,0.3192 -24.94875,11.80827 -25.223265,11.80827 -0.162247,0 -0.219995,-0.19221 -0.128328,-0.42712 z"
        id="path5392"
-       inkscape:connector-curvature="0"
+       inkscape:connector-curvature="0" />
+    <path
        inkscape:export-filename="/home/robin/blog/themes/hugo-lithium-theme/static/images/logo.png"
        inkscape:export-xdpi="41.736382"
-       inkscape:export-ydpi="41.736382" />
-    <path
+       inkscape:export-ydpi="41.736382"
        style="opacity:1;fill:#ffff00;stroke:#000000;stroke-width:2.5;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 128.721,374.97525 -4.55541,-12.8488 8.30541,-0.294 c 4.56797,-0.16171 8.81165,-0.45812 9.4304,-0.6587 0.61875,-0.20058 1.125,-0.24677 1.125,-0.10265 0,0.52501 -9.1237,26.06549 -9.43223,26.40415 -0.17477,0.19185 -2.3677,-5.43315 -4.87317,-12.5 z"
        id="path5394"
-       inkscape:connector-curvature="0"
+       inkscape:connector-curvature="0" />
+    <path
        inkscape:export-filename="/home/robin/blog/themes/hugo-lithium-theme/static/images/logo.png"
        inkscape:export-xdpi="41.736382"
-       inkscape:export-ydpi="41.736382" />
-    <path
+       inkscape:export-ydpi="41.736382"
        style="opacity:1;fill:#ffff00;stroke:#000000;stroke-width:2.5;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 209.2764,352.33411 c -2.2,-1.09084 -7.86214,-3.83382 -12.58253,-6.0955 l -8.58253,-4.11216 3.33253,-2.76877 c 1.83289,-1.52283 3.33253,-2.99991 3.33253,-3.28242 0,-0.61727 6.64635,-7.98076 6.92087,-7.66764 0.18503,0.21105 11.64998,24.07299 12.17695,25.34383 0.38956,0.93944 -0.22964,0.74857 -4.59782,-1.41734 z"
        id="path5396"
-       inkscape:connector-curvature="0"
+       inkscape:connector-curvature="0" />
+    <path
        inkscape:export-filename="/home/robin/blog/themes/hugo-lithium-theme/static/images/logo.png"
        inkscape:export-xdpi="41.736382"
-       inkscape:export-ydpi="41.736382" />
-    <path
+       inkscape:export-ydpi="41.736382"
        style="opacity:1;fill:#ffff00;stroke:#000000;stroke-width:2.5;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 220.19307,274.07614 c 0,-5.33483 0.0832,-9.69969 0.18499,-9.69969 0.18994,0 24.6366,8.62185 26.35318,9.29424 0.9789,0.38344 0.15788,0.70541 -18.9965,7.44971 l -7.54167,2.65544 0,-9.6997 z"
        id="path5398"
-       inkscape:connector-curvature="0"
+       inkscape:connector-curvature="0" />
+    <path
        inkscape:export-filename="/home/robin/blog/themes/hugo-lithium-theme/static/images/logo.png"
        inkscape:export-xdpi="41.736382"
-       inkscape:export-ydpi="41.736382" />
-    <path
+       inkscape:export-ydpi="41.736382"
        style="opacity:1;fill:#ffff00;stroke:#000000;stroke-width:2.5;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 198.5264,216.50493 c -1.5125,-1.79073 -4.49437,-4.8015 -6.62638,-6.6906 -2.13202,-1.88911 -3.93202,-3.57694 -4,-3.75075 -0.13237,-0.33839 25.72603,-12.75415 25.99759,-12.4826 0.19434,0.19435 -11.76739,25.40584 -12.27019,25.86163 -0.19306,0.17501 -1.58852,-1.14695 -3.10102,-2.93768 z"
        id="path5400"
-       inkscape:connector-curvature="0"
+       inkscape:connector-curvature="0" />
+    <path
        inkscape:export-filename="/home/robin/blog/themes/hugo-lithium-theme/static/images/logo.png"
        inkscape:export-xdpi="41.736382"
-       inkscape:export-ydpi="41.736382" />
-    <path
+       inkscape:export-ydpi="41.736382"
        style="opacity:1;fill:#ffff00;stroke:#000000;stroke-width:2.5;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 123.80249,186.87817 c 0.15793,-0.41155 2.342,-6.5428 4.85349,-13.625 2.51149,-7.0822 4.69101,-12.87547 4.84338,-12.87393 0.15237,0.002 1.47288,3.43279 2.93447,7.625 1.46158,4.19221 3.61846,10.32221 4.79306,13.62221 l 2.13564,6 -9.92359,0 c -8.60539,0 -9.88545,-0.0994 -9.63645,-0.74828 z"
        id="path5402"
-       inkscape:connector-curvature="0"
+       inkscape:connector-curvature="0" />
+    <path
        inkscape:export-filename="/home/robin/blog/themes/hugo-lithium-theme/static/images/logo.png"
        inkscape:export-xdpi="41.736382"
-       inkscape:export-ydpi="41.736382" />
-    <path
+       inkscape:export-ydpi="41.736382"
        style="opacity:1;fill:#ffff00;stroke:#000000;stroke-width:2.5;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 59.111057,206.69092 c -3.350273,-7.13592 -6.014732,-13.05106 -5.921019,-13.14478 0.09371,-0.0937 5.776482,2.52775 12.628376,5.82547 6.851894,3.29772 12.663006,6.06621 12.913581,6.15221 0.250576,0.086 -2.691061,3.30301 -6.53697,7.14892 l -6.992563,6.99256 -6.091405,-12.97438 z"
        id="path5404"
-       inkscape:connector-curvature="0"
+       inkscape:connector-curvature="0" />
+    <path
        inkscape:export-filename="/home/robin/blog/themes/hugo-lithium-theme/static/images/logo.png"
        inkscape:export-xdpi="41.736382"
-       inkscape:export-ydpi="41.736382" />
-    <path
+       inkscape:export-ydpi="41.736382"
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 173.75,264.61221 6,5.5"
        id="path5416"
-       inkscape:connector-curvature="0"
+       inkscape:connector-curvature="0" />
+    <path
        inkscape:export-filename="/home/robin/blog/themes/hugo-lithium-theme/static/images/logo.png"
        inkscape:export-xdpi="41.736382"
-       inkscape:export-ydpi="41.736382" />
-    <path
+       inkscape:export-ydpi="41.736382"
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 177,259.86221 6.5,6"
        id="path5418"
-       inkscape:connector-curvature="0"
+       inkscape:connector-curvature="0" />
+    <path
        inkscape:export-filename="/home/robin/blog/themes/hugo-lithium-theme/static/images/logo.png"
        inkscape:export-xdpi="41.736382"
-       inkscape:export-ydpi="41.736382" />
-    <path
+       inkscape:export-ydpi="41.736382"
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 85.25,272.61221 -5,6.75"
        id="path5420"
-       inkscape:connector-curvature="0"
+       inkscape:connector-curvature="0" />
+    <path
        inkscape:export-filename="/home/robin/blog/themes/hugo-lithium-theme/static/images/logo.png"
        inkscape:export-xdpi="41.736382"
-       inkscape:export-ydpi="41.736382" />
-    <path
+       inkscape:export-ydpi="41.736382"
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 80.75,268.61221 -5.5,7.5"
        id="path5422"
-       inkscape:connector-curvature="0"
-       inkscape:export-filename="/home/robin/blog/themes/hugo-lithium-theme/static/images/logo.png"
-       inkscape:export-xdpi="41.736382"
-       inkscape:export-ydpi="41.736382" />
+       inkscape:connector-curvature="0" />
   </g>
 </svg>
