@@ -139,7 +139,7 @@
 Figure 1: The Route Network layer illustrating the shifting spatial distribution of cycling flows in Leeds under Government Target (top) and Go Dutch (bottom) scenarios.
 </p>
 </div>
-<p>For a detailed account of the methods (or geographic data science if you like) underlying information on the Propensity to Cycle Tool, I recommend checking out a paper on the subject by myself and other members of the team published in the <a href="https://www.jtlu.org/index.php/jtlu/article/view/862">Journal of Transport and Land Use</a> <span class="citation">(Lovelace et al. 2017)</span>.</p>
+<p>For a detailed account of the methods (or geographic data science if you like) underlying the Propensity to Cycle Tool, I recommend checking out a paper on the subject by myself and other members of the team published in the <a href="https://www.jtlu.org/index.php/jtlu/article/view/862">Journal of Transport and Land Use</a> <span class="citation">(Lovelace et al. 2017)</span>.</p>
 </div>
 <div id="a-reproducible-example" class="section level2">
 <h2>A reproducible example</h2>
@@ -147,8 +147,8 @@ Figure 1: The Route Network layer illustrating the shifting spatial distribution
 <blockquote>
 <p>Talk is cheap. Show me the code.</p>
 </blockquote>
-<p>On that basis, to show what I meant by reproducibility and ‘data carpentry’ <span class="citation">(Gillespie and Lovelace 2016)</span> (a concept mentioned in the slides not discussed in audio for lack of time) I provided some some example code that illustrated the kinds of techniques underlying the PCT.</p>
-<p>First download and visualise some transport data (from the Isle of Wight as, the smallest region in the PCT):</p>
+<p>On that basis, to show what I meant by reproducibility and ‘data carpentry’ <span class="citation">(Gillespie and Lovelace 2016)</span> (a concept mentioned in the slides not discussed in audio for lack of time) I provided some example code that illustrated the kinds of techniques underlying the PCT.</p>
+<p>First download and visualise some transport data (from the Isle of Wight the smallest region in the PCT):</p>
 <pre class="r"><code>u_pct = &quot;https://github.com/npct/pct-data/raw/master/isle-of-wight/l.Rds&quot;
 if(!file.exists(&quot;l.Rds&quot;))
   download.file(u_pct, &quot;l.Rds&quot;)
@@ -166,7 +166,7 @@ plot(l_walk, add = T, col = &quot;red&quot;, lwd = 3)</code></pre>
 <pre class="r"><code>library(dplyr) # for next slide...</code></pre>
 <p>The above code subsets all the lines that have 10 or more people walking to work in the 2011 census and plots the results (as you’d expect the shorter trips are more commonly walked). It works, but could be interpretted as a little clunky. Enter <a href="https://github.com/tidyverse/dplyr"><strong>dplyr</strong></a>, a package for data science <span class="citation">(Grolemund and Wickham 2016)</span>:</p>
 <pre class="r"><code>l_walk1 = l %&gt;% filter(All &gt; 10) # fails</code></pre>
-<p>Doh! That code nice ‘clean’ (well certainly consistent) code does not work because <code>Spatial</code> objects are not compatible with the pipe operator <code>%&gt;%</code> syntax.</p>
+<p>Doh! That nice ‘clean’ (well certainly consistent, using easily understood functions rather than the potentially confusing <code>[</code> operator]) code does not work because <code>Spatial</code> objects are not compatible with <strong>dplyr</strong>.</p>
 <p>Enter the <a href="https://github.com/edzer/sfr"><strong>sf</strong></a> package, which represents a step change in how R handles spatial data. First let’s convert that <code>l</code> object into a ‘simple feature’ object:</p>
 <pre class="r"><code>library(sf)</code></pre>
 <pre><code>## Linking to GEOS 3.5.1, GDAL 2.1.3, proj.4 4.9.2, lwgeom 2.3.2 r15302</code></pre>
