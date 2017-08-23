@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Spatial data and the tidyverse</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Robin Lovelace and Jakub Nowosad" />
+    <meta name="date" content="2017-08-23" />
+    <link href="libs/remark-css-0.0.1/example.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Spatial data and the tidyverse
+## 🌐<br/> new tools for geocomputation with R
+### Robin Lovelace and Jakub Nowosad
+### 2017-08-23
+
+---
+
+
+
+
+This mini-workshop will introduce you to recent developments that enable work with spatial data 'in the tidyverse'. By this we mean handling spatial datasets using functions (such as ` %&gt;% ` and `filter()`) and concepts (such as type stability) from R packages that are part of the metapackage **tidyverse**, which can now be installed from CRAN with the following command:
+
+
+```r
+install.packages("tidyverse")
+```
+
+This functionality is possible thanks to **sf**, a recent package (first release in 2016) that implements the open standard data model *simple features*. Get **sf** with:
+
+
+```r
+install.packages("sf")
+```
+
+The workshop will briefly introduce both packages (which should be installed on your computer before attending) before demonstrating how they can work in harmony using a dataset from the **spData** package, which can be installed with:
+
+
+```r
+install.packages("spData")
+```
+
+The workshop is based on our work on the forthcoming book *Geocomputation with R* - please take a look at the book and its source code prior to the workshop here: [github.com/Robinlovelace/geocompr](https://github.com/Robinlovelace/geocompr). 
+
+---
+
+
+# Context
+
+- Software for 'data science' is evolving
+- In R, packages **ggplot2** and **dplyr** have become immensly popular
+- These use 'tidy data' for consistency and speed of processing, from ):
+
+
+```r
+vignette("tidy-data")
+```
+
+
+&gt;    - Each variable forms a column.
+&gt;    - Each observation forms a row.
+&gt;    - Each type of observational unit forms a table
+
+- Historically spatial R packages have not been compatible with the **tidyverse**
+
+---
+
+background-image: url("https://pbs.twimg.com/media/CvzEQcfWIAAIs-N.jpg")
+background-size: cover
+
+---
+
+# Enter sf
+
+- **sf** is a recently developed package for spatial (vector) data
+- Combines the functionality of 3 previous packages: **sp**, **rgeos** and **rgdal**
+- Has many advantages, including:
+    - Faster data I/O
+    - More geometry types supported
+    - Compatibility with the *tidyverse*
+    
+That's the topic of this workshop
+
+---
+
+# Geocomputation with R
+
+- A book we are working on for CRC Press (to be published in 2018)
+- Chapters 3 and 4 of this book form the basis of the worked examples presented here
+
+background-image: url("https://media1.giphy.com/media/Hw5LkPYy9yfVS/giphy.gif")
+
+---
+
+# Prerequisites
+
+- Install the required packages
+
+
+```r
+devtools::install_github("robinlovelace/geocompr")
+```
+
+- Load the ones we need
+
+
+```r
+library(spData)
+library(dplyr)
+library(sf)
+```
+
+- Check it's all working, e.g. with this command:
+
+
+```r
+world %&gt;%
+  plot()
+```
+
+![](spatial-tidyverse_files/figure-html/unnamed-chunk-8-1.png)&lt;!-- --&gt;
+
+---
+
+# Thanks + references
+
+Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan).
+    </textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {window.dispatchEvent(new Event('resize'));});
+(function() {var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler"); if (!r) return; s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }"; d.head.appendChild(s);})();</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+  }
+});
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
