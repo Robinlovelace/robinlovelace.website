@@ -7,7 +7,6 @@
     <meta name="author" content="Ricardo Marqués (Universidad de Sevilla)" />
     <meta name="author" content="Manuel Calvo-Salazar (Independent consultant)" />
     <meta name="author" content="Javier Herrera-Sánchez (Independent consultant)" />
-    <meta name="date" content="2017-09-05" />
     <link href="pres_files/remark-css-0.0.1/example.css" rel="stylesheet" />
   </head>
   <body>
@@ -20,7 +19,7 @@ class: center, middle, inverse, title-slide
 ### Ricardo Marqués (Universidad de Sevilla)
 ### Manuel Calvo-Salazar (Independent consultant)
 ### Javier Herrera-Sánchez (Independent consultant)
-### 2017-09-05
+### By <span class="citation">@robinlovelace</span>, University of Leeds 2017-09-20
 
 ---
 
@@ -94,6 +93,7 @@ Needs origin-destination (OD) data, available from many places (in roughly desce
 -   Travel survey data
 -   Mobile telephone company data
 -   Modelled data using a spatial interaction model
+-   Stated preference surveys (used in this case)
 
 &gt; - Each of these has advantages and disadvantages.
 
@@ -210,7 +210,7 @@ routes = stplanr::line2route(l = l, route_fun = route_graphhopper, vehicle = "bi
 
 # Route network generation
 
-The final stage is to aggregate the values of overlapping lines:
+The final stage is to aggregate the values of overlapping lines (Lovelace et al., 2017):
 
 ``` r
 rnet = overline(routes, "potential")
@@ -233,7 +233,7 @@ rnet = overline(routes, "potential")
  &lt;thead&gt;
   &lt;tr&gt;
    &lt;th style="text-align:left;"&gt; Catchment areas &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; Trips to the city center &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Trips to center (all modes) &lt;/th&gt;
    &lt;th style="text-align:right;"&gt; Long &lt;/th&gt;
    &lt;th style="text-align:right;"&gt; Medium &lt;/th&gt;
    &lt;th style="text-align:right;"&gt; Short &lt;/th&gt;
@@ -279,6 +279,14 @@ rnet = overline(routes, "potential")
 - International scalability
 - Citizen health, congestion and air pollution estimates possible
 
+Next step: invest in cycling to stations (cycle paths, cycle parking, ...)
+
+Image: 3000 space cycle parking facility in Cambridge ([£2.5 million](http://www.itv.com/news/anglia/2016-02-15/on-the-rack-cycle-commuters-grapple-with-new-multi-storey/))
+
+![](http://news.images.itv.com/image/file/902125/stream_img.jpg)
+
+
+
 &lt;!-- --- --&gt;
 
 &lt;!-- # Could it help mitigate 'bikelash' --&gt;
@@ -291,9 +299,19 @@ rnet = overline(routes, "potential")
 
 ---
 
-# Questions and acknowledgements
+# References and acknowledgements
 
 Thanks for listening
+
+- Consejería de Fomento, Junta de Andalucía, FEDER grant G-GI3001/IDID
+- Consorcio de Transportes de Sevilla (servey)
+- UK Department for Transport (PCT)
+
+## References
+
+- Lovelace, R., Goodman, A., Aldred, R., Berkoff, N., Abbas, A., Woodcock, J., 2017. The Propensity to Cycle Tool: An open source online system for sustainable transport planning. Journal of Transport and Land Use 10. doi:10.5198/jtlu.2016.862
+
+- Marques et al (under review). ANALYZING THE POTENTIAL OF ‘BIKE &amp; RIDE’ TO PRIORITISE INVESTMENT IN SUBURBAN CYCLING AND PUBLIC TRANSPORT INFRASTRUCTURE: A CASE STUDY OF SEVILLE
 
 &lt;!-- ![](http://s3.amazonaws.com/lcc_production_bucket/files/10016/in_content.PNG?1453218623) --&gt;
 
