@@ -120,86 +120,18 @@ Two main data sources that can be used to model OD-level travel in Seville: offi
 - Randomly generated points
 - OSM data used because it is smaller and more generalisable
 
+Problem: where to build?
+
+Solution...
+
 ---
 
-&lt;!-- Randomly generated data --&gt;
-&lt;!-- ----------------------- --&gt;
+# Use the 'Propensity to Cycle' method (Lovelace et al. 2017)
 
-&lt;!-- Let's split that region into 100 evenly sized areas, and give each cell a random value between 1 and 100: --&gt;
-
-&lt;!-- ``` r --&gt;
-&lt;!-- raster::values(r) = runif(n = 100, min = 0, max = 100) --&gt;
-&lt;!-- (m = qtm(region_poly) + --&gt;
-&lt;!--   tm_shape(r) + tm_raster()) --&gt;
-&lt;!-- ``` --&gt;
-
-&lt;!-- ![](https://github.com/Robinlovelace/pctSeville/raw/master/figures/README-unnamed-chunk-4-1.png) --&gt;
-
-&lt;!-- --- --&gt;
-
-&lt;!-- # Converting residential zones to 'centroid' points --&gt;
-
-
-&lt;!-- ``` r --&gt;
-&lt;!-- o = as(r, "SpatialPointsDataFrame") --&gt;
-&lt;!-- m + --&gt;
-&lt;!--   qtm(o) --&gt;
-&lt;!-- ``` --&gt;
-
-&lt;!-- ![](https://github.com/Robinlovelace/pctSeville/raw/master/figures/README-unnamed-chunk-5-1.png) --&gt;
-
-&lt;!-- # Simulating (10) destinations  --&gt;
-
-&lt;!-- ``` r --&gt;
-&lt;!-- region_centre = rgeos::gCentroid(region_poly) --&gt;
-&lt;!-- ``` --&gt;
-
-&lt;!-- ![](https://github.com/Robinlovelace/pctSeville/raw/master/figures/README-unnamed-chunk-6-1.png) --&gt;
-
-&lt;!-- --- --&gt;
-
-&lt;!-- # Estimating flow --&gt;
-
-&lt;!-- We can estimate the 'flow' (T) between origins (`o`) and destinations (`d`) in many ways. The simplest is a simple gravity model, whereby, for each OD pair: --&gt;
-
-&lt;!-- $$ --&gt;
-&lt;!-- T = \\frac{mn}{d^2} --&gt;
-&lt;!-- $$ --&gt;
-&lt;!--  whereby m and n are some measure of size/attractiveness of `o` and `d` respectively. Implementing this in code, we can calculate all the flows as follows: --&gt;
-
-&lt;!-- ``` r --&gt;
-&lt;!-- T_od = matrix(nrow = nrow(o), ncol = nrow(d)) --&gt;
-&lt;!-- for(i in 1:nrow(o)) { --&gt;
-&lt;!--   for(j in 1:nrow(d)) { --&gt;
-&lt;!--     T_od[i, j] = o$layer[i] * d$w[j] / geosphere::distHaversine(o[i,], d[j,]) --&gt;
-&lt;!--   } --&gt;
-&lt;!-- } --&gt;
-&lt;!-- ``` --&gt;
-
-&lt;!-- --- --&gt;
-
-&lt;!-- # Conversion into spatial lines --&gt;
-
-&lt;!-- ``` r --&gt;
-&lt;!-- l = od2line(flow = T_odp, zones = o, destinations = d) --&gt;
-&lt;!-- ``` --&gt;
-
-&lt;!-- On the map of Seville, and with width and opacity proportional to flow, this looks as follows: --&gt;
-
-&lt;!-- ![](https://github.com/Robinlovelace/pctSeville/raw/master/figures/README-unnamed-chunk-9-1.png) --&gt;
-
-&lt;!-- --- --&gt;
-
-&lt;!-- Using real data --&gt;
-&lt;!-- --------------- --&gt;
-
-&lt;!-- ![](https://github.com/Robinlovelace/pctSeville/raw/master/figures/README-unnamed-chunk-13-1.png) --&gt;
-
-# Creation of 'flowlines'
-
-- Lines between residential origins and nearest station
+- See [www.pct.bike](http://www.pct.bike/)
 
 ![](https://github.com/Robinlovelace/pctSeville/raw/master/figures/README-unnamed-chunk-14-1.png)
+
 
 ---
 
