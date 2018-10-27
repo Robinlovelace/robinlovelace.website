@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.49.2" />
+
+
+<title>Aggregating lines - Robin Lovelace&#39;s website. Energy. Transport. Technology. Change the World.</title>
+<meta property="og:title" content="Aggregating lines - Robin Lovelace&#39;s website. Energy. Transport. Technology. Change the World.">
+
+
+
+  
+
+
+
+
+
+
+
+
+<link href='//cdn.bootcss.com/highlight.js/9.10.0/styles/github.min.css' rel='stylesheet' type='text/css' />
+
+
+
+<link rel="stylesheet" href="../../../../css/fonts.css" media="all">
+<link rel="stylesheet" href="../../../../css/main.css" media="all">
+
+
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="../../../../" class="nav-logo">
+    <img src="../../../../images/logo.png"
+         width="50"
+         height="50"
+         alt="Logo">
+  </a>
+
+  <ul class="nav-links">
+    
+    <li><a href="../../../../about/">About</a></li>
+    
+    <li><a href="https://github.com/robinlovelace">GitHub</a></li>
+    
+    <li><a href="../../../../presentations/">Presentations</a></li>
+    
+    <li><a href="../../../../publications/">Publications</a></li>
+    
+    <li><a href="https://twitter.com/robinlovelace">Twitter</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+
+  <article class="article">
+    
+    <span class="article-duration">4 min read</span>
+    
+
+    <h1 class="article-title">Aggregating lines</h1>
+
+    
+    <span class="article-date">2018/10/27</span>
+    
+
+    <div class="article-content">
+      <p>The transport ‘flow’ on any particular segment of the transport networks is the aggregate (sum) of trips that pass through it.
+Finding the flow across a transport network based on input data composed of individual routes, is therefore an aggregation problem.
+It requires a more complex solution than that provided by the <code>aggregate()</code> function in the base R package <strong>stats</strong>, however, because the geometry of the output <code>LINESTRING</code>s will be fundamentally different than the input <code>LINESTRINGS</code> of the routes: a route network is composed of many small way segments, but a route is a single long <code>LINESTRING</code>.</p>
+<p>Creating such a route network, with aggregated values per segment, is the problem that the <code>overline()</code> function in <strong>stplanr</strong> was designed to solve.
+Rather that starting from scratch and writing a geographic algorithm from the ground-up, we will start by exploring solutions provided by existing packages, notably <strong>sf</strong>, which provides an interface to the <code>GEOS</code> library.</p>
+<p>Let’s start simple, with just 2 lines, which have an associated amount of flow (with illustrative values of 2 and 5 in this case):</p>
+<pre class="r"><code>library(stplanr)
+sl = routes_fast_sf[2:3, ]
+sl$value = c(2, 5)</code></pre>
+<p>These lines clearly have a decent amount of overlap, which can be extracted using the function <code>st_intersection()</code>:</p>
+<pre class="r"><code>sl_intersection = sf::st_intersection(sl[1, ], sl[2, ])</code></pre>
+<pre><code>## although coordinates are longitude/latitude, st_intersection assumes that they are planar</code></pre>
+<pre><code>## Warning: attribute variables are assumed to be spatially constant
+## throughout all geometries</code></pre>
+<pre class="r"><code>plot(sl$geometry, lwd = 9, col = sf::sf.colors(2, alpha = 0.5))
+plot(sl_intersection, add = TRUE)</code></pre>
+<pre><code>## Warning in plot.sf(sl_intersection, add = TRUE): ignoring all but the first
+## attribute</code></pre>
+<p><img src="../../../../post/2018-10-27-aggregating-lines_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p>Furthermore, we can find the aggregated value associated with this new segment as follows:</p>
+<pre class="r"><code>sl_intersection$value = sum(sl_intersection$value, sl_intersection$value.1)</code></pre>
+<p>We still do not have a full route network composed of 3 non-overlapping lines, however:
+the original lines need to be ‘clipped’ so that they do not overlap with <code>sl_intersection</code>.
+This can be done as follows:</p>
+<pre class="r"><code>sl_seg1 = sf::st_difference(sl[1, ], sl_intersection)</code></pre>
+<pre><code>## although coordinates are longitude/latitude, st_difference assumes that they are planar</code></pre>
+<pre><code>## Warning: attribute variables are assumed to be spatially constant
+## throughout all geometries</code></pre>
+<pre class="r"><code>sl_seg2 = sf::st_difference(sl[2, ], sl_intersection)</code></pre>
+<pre><code>## although coordinates are longitude/latitude, st_difference assumes that they are planar</code></pre>
+<pre><code>## Warning: attribute variables are assumed to be spatially constant
+## throughout all geometries</code></pre>
+<pre class="r"><code>plot(sl$geometry, lwd = 9, col = sf::sf.colors(2, alpha = 0.5))
+plot(sl_seg1, add = TRUE)</code></pre>
+<pre><code>## Warning in plot.sf(sl_seg1, add = TRUE): ignoring all but the first
+## attribute</code></pre>
+<pre class="r"><code>plot(sl_seg2, add = TRUE)</code></pre>
+<pre><code>## Warning in plot.sf(sl_seg2, add = TRUE): ignoring all but the first
+## attribute</code></pre>
+<p><img src="../../../../post/2018-10-27-aggregating-lines_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p>We now have all the geographic components needed for a route network.
+The only remaining task is to combine them, using <code>rbind</code>, right?
+Not quite: the following command fails:</p>
+<pre class="r"><code>rnet = rbind(sl_seg1, sl_seg2, sl_intersection)</code></pre>
+<pre><code>## Error in rbind.data.frame(...): numbers of columns of arguments do not match</code></pre>
+<p>Lesson: we need to be more careful in isolating the value to aggregate.
+We will therefore run the previous stages again, but with <code>attrib</code> set to the attribute we would like to aggregate over (<code>value</code> in this case):</p>
+<pre class="r"><code>attrib = &quot;value&quot;
+attrib1 = paste0(attrib, &quot;.1&quot;)
+sl_intersection = sf::st_intersection(sl[1, attrib], sl[2, attrib])</code></pre>
+<pre><code>## although coordinates are longitude/latitude, st_intersection assumes that they are planar</code></pre>
+<pre><code>## Warning: attribute variables are assumed to be spatially constant
+## throughout all geometries</code></pre>
+<pre class="r"><code>sl_intersection[[attrib]] = sl_intersection[[attrib]] + sl_intersection[[attrib1]]
+sl_intersection[[attrib1]] = NULL</code></pre>
+<p>That leaves us with a ‘clean’ object that only has a value (7) for the attribute column name we want (<code>value</code>).</p>
+<p>On this basis we can proceed to create the other segments, keeping only the column we’re interested in. To save time and typing, we’ll create both segments in a single command:</p>
+<pre class="r"><code>sl_seg = sf::st_difference(sl[attrib], sf::st_geometry(sl_intersection))</code></pre>
+<pre><code>## although coordinates are longitude/latitude, st_difference assumes that they are planar</code></pre>
+<pre><code>## Warning: attribute variables are assumed to be spatially constant
+## throughout all geometries</code></pre>
+<pre class="r"><code>rnet = rbind(sl_intersection, sl_seg)</code></pre>
+<p>It worked! Now we’re in a position to plot the resulting route network, with ‘width’ proportional to the flow along each segment:</p>
+<pre class="r"><code>plot(rnet, lwd = rnet$value)</code></pre>
+<p><img src="../../../../post/2018-10-27-aggregating-lines_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<p>The next step is to generalise this method so it works for many (potentially thousands) of lines in a way that scales. That will (hopefully) be the topic of the next blog post.</p>
+
+    </div>
+  </article>
+
+  
+
+
+</main>
+
+      <footer class="footer">
+        <ul class="footer-links">
+          <li>
+            <a href="../../../../index.xml" type="application/rss+xml" target="_blank">RSS feed</a>
+          </li>
+          <li>
+            <a href="https://gohugo.io/" class="footer-links-kudos">Made with <img src="../../../../images/hugo-logo.png" alt="Img link to Hugo website" width="22" height="22"></a>
+          </li>
+        </ul>
+      </footer>
+
+    </div>
+    
+
+
+
+<script src="//cdn.bootcss.com/highlight.js/9.10.0/highlight.min.js"></script>
+
+
+
+<script src="//cdn.bootcss.com/highlight.js/9.10.0/languages/r.min.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.10.0/languages/yaml.min.js"></script>
+<script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+
+
+
+    
+<script src="../../../../js/math-code.js"></script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+    
+  </body>
+</html>
+

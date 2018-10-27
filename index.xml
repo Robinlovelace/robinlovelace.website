@@ -6,10 +6,19 @@
     <description>Recent content on Robin Lovelace&#39;s website. Energy. Transport. Technology. Change the World.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 02 May 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 27 Oct 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Aggregating lines</title>
+      <link>/2018/10/27/aggregating-lines/</link>
+      <pubDate>Sat, 27 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/10/27/aggregating-lines/</guid>
+      <description>The transport ‘flow’ on any particular segment of the transport networks is the aggregate (sum) of trips that pass through it. Finding the flow across a transport network based on input data composed of individual routes, is therefore an aggregation problem. It requires a more complex solution than that provided by the aggregate() function in the base R package stats, however, because the geometry of the output LINESTRINGs will be fundamentally different than the input LINESTRINGS of the routes: a route network is composed of many small way segments, but a route is a single long LINESTRING.</description>
+    </item>
     
     <item>
       <title>Can Geographic Data Save the World?</title>
@@ -18,7 +27,18 @@
       
       <guid>/2017/05/02/can-geographic-data-save-the-world/</guid>
       <description>I presented yesterday on the use of geographic data in policy in a flamboyantly named talk: Can geographic data save the world (slides available from rpubs.com/Robinlovelace). The purpose of this post is to share the slides, audio and some of the ideas resulting from the talk, for the benefit of people interested in the topic but unable to attend.
-If you just want to sit back and hear the talk, click here for the audio and enjoy the slides below.</description>
+If you just want to sit back and enjoy the slides with audio, rather than read this article, click here for the audio and enjoy the slides below.</description>
+    </item>
+    
+    <item>
+      <title>Can Geographic Data Save the World?</title>
+      <link>/presentations/can-gds-save-world/</link>
+      <pubDate>Tue, 02 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/presentations/can-gds-save-world/</guid>
+      <description>Contents  Introductory comments An example: the propensity to cycle tool dplyr and tibbles (if time allows) Discussion: can GDS save the world?   Introduction What is saving the world? Many ways of saying the same thing:
+  ‘Policy-led research’ ‘Impact’ ‘Socially beneficial research’ Don’t be evil (Google)   My definition: building an evidence-base for sustainable systems.
+ In the context of climate change that means:    Building an evidence-base to transition away from fossil fuels    But could also be interpretted in terms of other (quantifiable) social/economic/environmental indicators   Why bother?</description>
     </item>
     
     <item>
@@ -101,18 +121,6 @@ See the map, words, images and video below for the full low-down on this epic ri
       <description>Welcome Welcome to my website. The aim is to provide a place for getting my work and ideas out there quickly and better linked-in with the wider world. I hope you find something here of use and interest. Enjoy your visit!
  About me I’m a geographer and environmental scientist specialising in spatial data analysis and computing, especially R programming.
 Based at the Leeds Institute for Transport Studies (ITS) I have a strong interest in transport modelling.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>/publications/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/publications/</guid>
-      <description>This is a list of my publications to date:
-Books  Gillespie, C., Lovelace, R., 2016. Efficient R Programming: A Practical Guide to Smarter Programming. O’Reilly Media, and as a free learning resource from its website.
- Lovelace, R., Dumont, M., 2016. Spatial microsimulation with R. CRC Press and (to see source code) github.
- Lovelace, R., &amp;amp; McLoughlin, A., 2014. Engineering in Development: Transport. Engineers Without Borders (UK), Draft (high resolution images - 24 Mb).</description>
     </item>
     
     <item>
