@@ -88,7 +88,7 @@ It requires a more complex solution than that provided by the <code>aggregate()<
 <h2>Aggregating lines with overline() MKI</h2>
 <p>Creating such a route network, with aggregated values per segment, is the problem that the <a href="https://ropensci.github.io/stplanr/reference/overline.html"><code>overline()</code></a> function in the R package <a href="https://github.com/ropensci/stplanr"><strong>stplanr</strong></a> was designed to solve (see a 3.5 yr-old question on <a href="https://gis.stackexchange.com/questions/139681/overlaying-lines-and-aggregating-their-values-for-overlapping-segments">gis.stackexchange.com</a> for more context).</p>
 <p>The function works well and is the basis of the Route Network layer (MSOA) in the Propensity to Cycle Tool (<a href="http://www.pct.bike/">PCT</a>).
-In fact it was developed precisely for this purpose, as illustrated in the image below, which shows a common visualisation/analysis problem encountered by transport researchers when working with multiple routes: overlapping routes are not easy to identify from non-overlapping routes:
+In fact it was developed precisely for this purpose, as illustrated in the image below, which shows a common visualization/analysis problem encountered by transport researchers when working with multiple routes: overlapping routes are not easy to identify from non-overlapping routes:
 notice the red lines in the centre of Leeds in the image look the same as the red lines on the outskirts, despite representing much more movement.</p>
 <div class="figure"><span id="fig:unnamed-chunk-2"></span>
 <img src="https://raw.githubusercontent.com/npct/pct-team/master/figures/early.png" alt="Demonstration of the need for line aggregation from a very early version of the Propensity to Cycle Tool, developed at the 'Hack my Route' data dive at [ODI Leeds](https://twitter.com/search?q=%23hackmyroute&amp;src=typd)."  />
@@ -96,7 +96,7 @@ notice the red lines in the centre of Leeds in the image look the same as the re
 Figure 1: Demonstration of the need for line aggregation from a very early version of the Propensity to Cycle Tool, developed at the ‘Hack my Route’ data dive at <a href="https://twitter.com/search?q=%23hackmyroute&amp;src=typd">ODI Leeds</a>.
 </p>
 </div>
-<p>To overcome the problem <code>overline()</code> was born, and it works (on a tiny datset of 2 lines) as follows:</p>
+<p>To overcome the problem <code>overline()</code> was born, and it works (on a tiny dataset of 2 lines) as follows:</p>
 <pre class="r"><code>library(stplanr)
 sl_sp = routes_fast[2:3, ]
 sl_sp@data = data.frame(value = c(2, 5))
@@ -118,8 +118,8 @@ Figure 3: Early version of the route network layer in the Propensity to Cycle To
 </div>
 <p>This works great and the resulting network is used for strategic network planning: you can download route network data in the ‘Region data’ tab of the PCT<span class="citation"><sup>2</sup></span>. The route network data for Leeds can, for example, be downloaded as a <code>.geojson</code> file from <a href="https://github.com/npct/pct-outputs-regional-notR/raw/master/commute/msoa/west-yorkshire/rnet.geojson">here</a>.</p>
 <p>But there are some issues: the function works on the older <code>SpatialLinesDataFrame</code> class defined in the <strong>sp</strong> package.
-This data class has been superceded by the simpler <code>sf</code> class in the <a href="https://github.com/r-spatial/sf"><strong>sf</strong></a> package, which is faster than <strong>sp</strong> for <a href="https://github.com/ATFutures/geobench">some</a> (if not many) operations.
-Furthermore, another issue with <code>overline()</code> is that in edge cases when 2 lines meet, the resulting aggregated line can be loner than it should.
+This data class has been superseded by the simpler <code>sf</code> class in the <a href="https://github.com/r-spatial/sf"><strong>sf</strong></a> package, which is faster than <strong>sp</strong> for <a href="https://github.com/ATFutures/geobench">some</a> (if not many) operations.
+Another issue with <code>overline()</code> is that in some cases when 2 lines meet, the resulting aggregated line can be longer than it should be.
 So there are performance and functionality issues to address.
 Rather than solve them all here, this post sets-out the issue using reproducible code and suggests next steps for a new <code>overline()</code> function (or perhaps just an updated <code>overline.sf()</code> function which currently just wraps <code>overline.sp()</code>).</p>
 </div>
@@ -190,7 +190,7 @@ Figure 5: Illustration of a route network generated with sf functions.
   return(rnet)
 }</code></pre>
 <p>If you are new to scripts/algorithms/functions, it may be worth taking a look at the new <a href="https://geocompr.robinlovelace.net/algorithms.html">Algorithms</a> chapter in our near-complete book that teaches a range of geographic methods that use R<span class="citation"><sup>3</sup></span>.
-Now the method has been put in a function, we can compare its performance with the pre-existing <code>overline()</code> function for comparison:</p>
+Now the method has been put in a function, we can compare its performance with the per-existing <code>overline()</code> function for comparison:</p>
 <pre class="r"><code>bench::mark(check = F,
             overline.sp = overline(sl_sp, attrib = &quot;value&quot;),
             overline.sf = overline(sl, attrib = &quot;value&quot;),
@@ -199,9 +199,9 @@ Now the method has been put in a function, we can compare its performance with t
 <pre><code>## # A tibble: 3 x 10
 ##   expression      min   mean median    max `itr/sec` mem_alloc  n_gc n_itr
 ##   &lt;bch:expr&gt;   &lt;bch:&gt; &lt;bch:&gt; &lt;bch:&gt; &lt;bch:&gt;     &lt;dbl&gt; &lt;bch:byt&gt; &lt;dbl&gt; &lt;int&gt;
-## 1 overline.sp  14.7ms 18.3ms   15ms 37.9ms      54.6    71.3KB     3    24
-## 2 overline.sf  18.3ms 21.1ms 18.8ms 42.7ms      47.4   372.6KB     3    20
-## 3 overline_sf2 12.3ms 19.8ms 19.5ms 35.7ms      50.5     125KB     3    22
+## 1 overline.sp  14.9ms 15.9ms 15.1ms 27.8ms      62.9    71.3KB     3    27
+## 2 overline.sf  18.2ms 25.8ms 19.9ms 52.7ms      38.7   372.6KB     3    17
+## 3 overline_sf2 12.1ms 13.1ms 12.5ms   22ms      76.2     125KB     5    32
 ## # ... with 1 more variable: total_time &lt;bch:tm&gt;</code></pre>
 <p>The results are not Earth-shattering: the new function seems to be around the same speed as the original, if a little faster.
 This is great news, but remember: the new function only works on 2 lines so is much simpler.
@@ -209,8 +209,8 @@ More work needed!</p>
 </div>
 <div id="next-steps" class="section level2">
 <h2>Next steps</h2>
-<p>The next step is to generalise this method so it works for many (potentially thousands) of lines in a way that scales, something that should help on the visualisation side, a topic that attracts much interest (see for example this <a href="https://gis.stackexchange.com/questions/778/representation-of-network-flows">gis.stackexchange post</a> on the subject and, more broadly, a recent <a href="https://nowosad.github.io/post/maps-distortion/">article</a> showing how to make animated maps by Jakub Nowosad).
-There is also work to do on performance but, as Donal Knuth said<span class="citation"><sup>4</sup></span>:</p>
+<p>The next step is to generalist this method so it works for many (potentially thousands) of lines in a way that scales, something that should help on the visualization side, a topic that attracts much interest (see for example this <a href="https://gis.stackexchange.com/questions/778/representation-of-network-flows">gis.stackexchange post</a> on the subject and, more broadly, a recent <a href="https://nowosad.github.io/post/maps-distortion/">article</a> showing how to make animated maps by Jakub Nowosad).
+There is also work to do on performance but, as Donald Knuth said<span class="citation"><sup>4</sup></span>:</p>
 <blockquote>
 <p>premature optimization is the root of all evil (or at least most of it) in programming</p>
 </blockquote>
