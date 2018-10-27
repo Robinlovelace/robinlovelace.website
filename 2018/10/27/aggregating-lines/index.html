@@ -82,7 +82,7 @@ I’ve finally found some time to update my blog and do a bit of thinking, about
 <h2>Why aggregate lines?</h2>
 <p>The transport ‘flow’ on any particular segment of the transport networks is the aggregate (sum) of trips that pass through it<span class="citation"><sup>1</sup></span>.
 Finding the flow across a transport network based on input data composed of individual routes, is therefore an aggregation problem.
-It requires a more complex solution than that provided by the <code>aggregate()</code> function in the base R package <strong>stats</strong>, however, because the geometry of the output <code>LINESTRING</code>s will be fundamentally different than the input <code>LINESTRINGS</code> of the routes: a route network is composed of many small way segments, but a route is a single long <code>LINESTRING</code>.</p>
+It requires a more complex solution than that provided by the <code>aggregate()</code> function in the base R<span class="citation"><sup>2</sup></span> package <strong>stats</strong>, however, because the geometry of the output <code>LINESTRING</code>s will be fundamentally different than the input <code>LINESTRINGS</code> of the routes: a route network is composed of many small way segments, but a route is a single long <code>LINESTRING</code>.</p>
 </div>
 <div id="aggregating-lines-with-overline-mki" class="section level2">
 <h2>Aggregating lines with overline() MKI</h2>
@@ -96,7 +96,7 @@ notice the red lines in the centre of Leeds in the image look the same as the re
 Figure 1: Demonstration of the need for line aggregation from a very early version of the Propensity to Cycle Tool, developed at the ‘Hack my Route’ data dive at <a href="https://twitter.com/search?q=%23hackmyroute&amp;src=typd">ODI Leeds</a>.
 </p>
 </div>
-<p>To overcome the problem <code>overline()</code> was born, and it works (on a tiny dataset of 2 lines) as follows:</p>
+<p>To overcome the problem <code>overline()</code> was born (credit to Barry Rowlingson who wrote the foundations of the function), and it works (on a tiny dataset of 2 lines) as follows:</p>
 <pre class="r"><code>library(stplanr)
 sl_sp = routes_fast[2:3, ]
 sl_sp@data = data.frame(value = c(2, 5))
@@ -116,8 +116,8 @@ Figure 2: Illustration of the overline() function for line aggregation in action
 Figure 3: Early version of the route network layer in the Propensity to Cycle Tool.
 </p>
 </div>
-<p>This works great and the resulting network is used for strategic network planning: you can download route network data in the ‘Region data’ tab of the PCT<span class="citation"><sup>2</sup></span>. The route network data for Leeds can, for example, be downloaded as a <code>.geojson</code> file from <a href="https://github.com/npct/pct-outputs-regional-notR/raw/master/commute/msoa/west-yorkshire/rnet.geojson">here</a>.</p>
-<p>But there are some issues: the function works on the older <code>SpatialLinesDataFrame</code> class defined in the <strong>sp</strong> package.
+<p>This works great and the resulting network is used for strategic network planning: you can download route network data in the ‘Region data’ tab of the PCT<span class="citation"><sup>3</sup></span>. The route network data for Leeds can, for example, be downloaded as a <code>.geojson</code> file from <a href="https://github.com/npct/pct-outputs-regional-notR/raw/master/commute/msoa/west-yorkshire/rnet.geojson">here</a>.</p>
+<p>But there are some issues: the function works on the older <code>SpatialLinesDataFrame</code> class defined in the <strong>sp</strong> package<span class="citation"><sup>4</sup></span>.
 This data class has been superseded by the simpler <code>sf</code> class in the <a href="https://github.com/r-spatial/sf"><strong>sf</strong></a> package, which is faster than <strong>sp</strong> for <a href="https://github.com/ATFutures/geobench">some</a> (if not many) operations.
 Another issue with <code>overline()</code> is that in some cases when 2 lines meet, the resulting aggregated line can be longer than it should be.
 So there are performance and functionality issues to address.
@@ -189,7 +189,7 @@ Figure 5: Illustration of a route network generated with sf functions.
   rnet = rbind(sl_intersection, sl_seg)
   return(rnet)
 }</code></pre>
-<p>If you are new to scripts/algorithms/functions, it may be worth taking a look at the new <a href="https://geocompr.robinlovelace.net/algorithms.html">Algorithms</a> chapter in our near-complete book that teaches a range of geographic methods that use R<span class="citation"><sup>3</sup></span>.
+<p>If you are new to scripts/algorithms/functions, it may be worth taking a look at the new <a href="https://geocompr.robinlovelace.net/algorithms.html">Algorithms</a> chapter in our near-complete book that teaches a range of geographic methods that use R<span class="citation"><sup>5</sup></span>.
 Now the method has been put in a function, we can compare its performance with the per-existing <code>overline()</code> function for comparison:</p>
 <pre class="r"><code>bench::mark(check = F,
             overline.sp = overline(sl_sp, attrib = &quot;value&quot;),
@@ -199,9 +199,9 @@ Now the method has been put in a function, we can compare its performance with t
 <pre><code>## # A tibble: 3 x 10
 ##   expression      min   mean median    max `itr/sec` mem_alloc  n_gc n_itr
 ##   &lt;bch:expr&gt;   &lt;bch:&gt; &lt;bch:&gt; &lt;bch:&gt; &lt;bch:&gt;     &lt;dbl&gt; &lt;bch:byt&gt; &lt;dbl&gt; &lt;int&gt;
-## 1 overline.sp  14.9ms 15.9ms 15.1ms 27.8ms      62.9    71.3KB     3    27
-## 2 overline.sf  18.2ms 25.8ms 19.9ms 52.7ms      38.7   372.6KB     3    17
-## 3 overline_sf2 12.1ms 13.1ms 12.5ms   22ms      76.2     125KB     5    32
+## 1 overline.sp  14.8ms   18ms 15.1ms 46.5ms      55.6    71.3KB     3    24
+## 2 overline.sf  18.2ms 18.9ms 18.7ms 20.9ms      53.0   372.6KB     3    23
+## 3 overline_sf2 12.2ms 13.8ms 12.6ms   25ms      72.5     125KB     5    31
 ## # ... with 1 more variable: total_time &lt;bch:tm&gt;</code></pre>
 <p>The results are not Earth-shattering: the new function seems to be around the same speed as the original, if a little faster.
 This is great news, but remember: the new function only works on 2 lines so is much simpler.
@@ -210,7 +210,7 @@ More work needed!</p>
 <div id="next-steps" class="section level2">
 <h2>Next steps</h2>
 <p>The next step is to generalist this method so it works for many (potentially thousands) of lines in a way that scales, something that should help on the visualization side, a topic that attracts much interest (see for example this <a href="https://gis.stackexchange.com/questions/778/representation-of-network-flows">gis.stackexchange post</a> on the subject and, more broadly, a recent <a href="https://nowosad.github.io/post/maps-distortion/">article</a> showing how to make animated maps by Jakub Nowosad).
-There is also work to do on performance but, as Donald Knuth said<span class="citation"><sup>4</sup></span>:</p>
+There is also work to do on performance but, as Donald Knuth said<span class="citation"><sup>6</sup></span>:</p>
 <blockquote>
 <p>premature optimization is the root of all evil (or at least most of it) in programming</p>
 </blockquote>
@@ -223,14 +223,20 @@ That will (hopefully) be the topic of the next blog post.</p>
 <div id="ref-hollander_transport_2016">
 <p>1. Hollander, Y. <em>Transport Modelling for a Complete Beginner</em>. (CTthink!, 2016).</p>
 </div>
+<div id="ref-rcoreteam_language_2018">
+<p>2. R Core Team. <em>R: A Language and Environment for Statistical Computing</em>. (R Foundation for Statistical Computing, 2018).</p>
+</div>
 <div id="ref-lovelace_propensity_2017">
-<p>2. Lovelace, R. <em>et al.</em> The Propensity to Cycle Tool: An open source online system for sustainable transport planning. <em>Journal of Transport and Land Use</em> <strong>10,</strong> (2017).</p>
+<p>3. Lovelace, R. <em>et al.</em> The Propensity to Cycle Tool: An open source online system for sustainable transport planning. <em>Journal of Transport and Land Use</em> <strong>10,</strong> (2017).</p>
+</div>
+<div id="ref-pebesma_simple_2018">
+<p>4. Pebesma, E. Simple Features for R: Standardized Support for Spatial Vector Data. <em>The R Journal</em> (2018).</p>
 </div>
 <div id="ref-lovelace_geocomputation_2019">
-<p>3. Lovelace, R., Nowosad, J. &amp; Meunchow, J. <em>Geocomputation with R</em>. (CRC Press, 2019).</p>
+<p>5. Lovelace, R., Nowosad, J. &amp; Meunchow, J. <em>Geocomputation with R</em>. (CRC Press, 2019).</p>
 </div>
 <div id="ref-knuth_computer_1974">
-<p>4. Knuth, D. E. Computer Programming As an Art. <em>Commun. ACM</em> <strong>17,</strong> 667–673 (1974).</p>
+<p>6. Knuth, D. E. Computer Programming As an Art. <em>Commun. ACM</em> <strong>17,</strong> 667–673 (1974).</p>
 </div>
 </div>
 </div>
