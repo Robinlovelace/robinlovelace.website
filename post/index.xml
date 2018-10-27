@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Robin Lovelace&#39;s website. Energy. Transport. Technology. Change the World.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 02 May 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 27 Oct 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Aggregating lines</title>
+      <link>/2018/10/27/aggregating-lines/</link>
+      <pubDate>Sat, 27 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/10/27/aggregating-lines/</guid>
+      <description>The transport ‘flow’ on any particular segment of the transport networks is the aggregate (sum) of trips that pass through it. Finding the flow across a transport network based on input data composed of individual routes, is therefore an aggregation problem. It requires a more complex solution than that provided by the aggregate() function in the base R package stats, however, because the geometry of the output LINESTRINGs will be fundamentally different than the input LINESTRINGS of the routes: a route network is composed of many small way segments, but a route is a single long LINESTRING.</description>
+    </item>
     
     <item>
       <title>Can Geographic Data Save the World?</title>
@@ -18,7 +27,7 @@
       
       <guid>/2017/05/02/can-geographic-data-save-the-world/</guid>
       <description>I presented yesterday on the use of geographic data in policy in a flamboyantly named talk: Can geographic data save the world (slides available from rpubs.com/Robinlovelace). The purpose of this post is to share the slides, audio and some of the ideas resulting from the talk, for the benefit of people interested in the topic but unable to attend.
-If you just want to sit back and hear the talk, click here for the audio and enjoy the slides below.</description>
+If you just want to sit back and enjoy the slides with audio, rather than read this article, click here for the audio and enjoy the slides below.</description>
     </item>
     
     <item>
