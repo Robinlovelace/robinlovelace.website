@@ -12,12 +12,13 @@
     
     
     <item>
-      <title>Aggregating lines</title>
+      <title>Aggregating lines, Part I</title>
       <link>/2018/10/27/aggregating-lines/</link>
       <pubDate>Sat, 27 Oct 2018 00:00:00 +0000</pubDate>
       
       <guid>/2018/10/27/aggregating-lines/</guid>
-      <description>The transport ‘flow’ on any particular segment of the transport networks is the aggregate (sum) of trips that pass through it. Finding the flow across a transport network based on input data composed of individual routes, is therefore an aggregation problem. It requires a more complex solution than that provided by the aggregate() function in the base R package stats, however, because the geometry of the output LINESTRINGs will be fundamentally different than the input LINESTRINGS of the routes: a route network is composed of many small way segments, but a route is a single long LINESTRING.</description>
+      <description>Introduction It’s been a busy 12 months but with the Geocomputation with R book nearing completion1 I’ve finally found some time to update my blog and do a bit of thinking, about the tangled topic of line aggregation.
+ Why aggregate lines? The transport ‘flow’ on any particular segment of the transport networks is the aggregate (sum) of trips that pass through it1. Finding the flow across a transport network based on input data composed of individual routes, is therefore an aggregation problem.</description>
     </item>
     
     <item>
