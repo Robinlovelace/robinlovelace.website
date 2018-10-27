@@ -31,17 +31,6 @@ If you just want to sit back and enjoy the slides with audio, rather than read t
     </item>
     
     <item>
-      <title>Can Geographic Data Save the World?</title>
-      <link>/presentations/can-gds-save-world/</link>
-      <pubDate>Tue, 02 May 2017 00:00:00 +0000</pubDate>
-      
-      <guid>/presentations/can-gds-save-world/</guid>
-      <description>Contents  Introductory comments An example: the propensity to cycle tool dplyr and tibbles (if time allows) Discussion: can GDS save the world?   Introduction What is saving the world? Many ways of saying the same thing:
-  ‘Policy-led research’ ‘Impact’ ‘Socially beneficial research’ Don’t be evil (Google)   My definition: building an evidence-base for sustainable systems.
- In the context of climate change that means:    Building an evidence-base to transition away from fossil fuels    But could also be interpretted in terms of other (quantifiable) social/economic/environmental indicators   Why bother?</description>
-    </item>
-    
-    <item>
       <title>Switching to blogdown</title>
       <link>/2017/04/30/switching-to-blogdown/</link>
       <pubDate>Sun, 30 Apr 2017 00:00:00 +0000</pubDate>

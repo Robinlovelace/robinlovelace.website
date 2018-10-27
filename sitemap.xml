@@ -13,11 +13,6 @@
   </url>
   
   <url>
-    <loc>/presentations/can-gds-save-world/</loc>
-    <lastmod>2017-05-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/2017/04/30/switching-to-blogdown/</loc>
     <lastmod>2017-04-30T00:00:00+00:00</lastmod>
   </url>
@@ -108,12 +103,6 @@
   <url>
     <loc>/post/</loc>
     <lastmod>2018-10-27T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/presentations/</loc>
-    <lastmod>2017-05-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
