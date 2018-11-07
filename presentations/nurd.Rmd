@@ -951,17 +951,14 @@ knitr::include_graphics("https://raw.githubusercontent.com/Robinlovelace/erum18-
 
 - E.g. 3: [geoplumber](http://www.geoplumber.com/)
 
---
 
 Challenge: balance between innovation and tool overload
 
---
 
 Challenge: balance between transparency/simplicity and sophistication of analysis
 
---
 
-That's a balance R is ideally set-up to strike
+That is a balance R is ideally set-up to strike
 
 ---
 class: center, middle
