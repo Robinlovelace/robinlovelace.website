@@ -199,9 +199,9 @@ Now the method has been put in a function, we can compare its performance with t
 <pre><code>## # A tibble: 3 x 10
 ##   expression      min   mean median    max `itr/sec` mem_alloc  n_gc n_itr
 ##   &lt;bch:expr&gt;   &lt;bch:&gt; &lt;bch:&gt; &lt;bch:&gt; &lt;bch:&gt;     &lt;dbl&gt; &lt;bch:byt&gt; &lt;dbl&gt; &lt;int&gt;
-## 1 overline.sp  14.8ms   18ms 15.1ms 46.5ms      55.6    71.3KB     3    24
-## 2 overline.sf  18.2ms 18.9ms 18.7ms 20.9ms      53.0   372.6KB     3    23
-## 3 overline_sf2 12.2ms 13.8ms 12.6ms   25ms      72.5     125KB     5    31
+## 1 overline.sp  16.5ms 29.1ms 21.4ms   64ms      34.3    71.3KB     2    16
+## 2 overline.sf  19.7ms 25.6ms 24.5ms 43.7ms      39.1   365.5KB     2    16
+## 3 overline_sf2 12.7ms 23.1ms 17.9ms 48.4ms      43.3     125KB     3    19
 ## # ... with 1 more variable: total_time &lt;bch:tm&gt;</code></pre>
 <p>The results are not Earth-shattering: the new function seems to be around the same speed as the original, if a little faster.
 This is great news, but remember: the new function only works on 2 lines so is much simpler.
