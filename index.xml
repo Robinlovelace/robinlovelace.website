@@ -130,8 +130,8 @@ Based at the Leeds Institute for Transport Studies (ITS) I have a strong interes
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/publications/</guid>
-      <description>This is a list of my publications to date:
-Books  Gillespie, C., Lovelace, R., 2016. Efficient R Programming: A Practical Guide to Smarter Programming. O’Reilly Media, and as a free learning resource from its website.
+      <description>Books  Lovelace, R., Nowosad, J., Meunchow, J., 2019. Geocomputation with R. CRC Press.
+ Gillespie, C., Lovelace, R., 2016. Efficient R Programming: A Practical Guide to Smarter Programming. O’Reilly Media, and as a free learning resource from its website.
  Lovelace, R., Dumont, M., 2016. Spatial microsimulation with R. CRC Press and (to see source code) github.
  Lovelace, R., &amp;amp; McLoughlin, A., 2014. Engineering in Development: Transport. Engineers Without Borders (UK), Draft (high resolution images - 24 Mb).</description>
     </item>
