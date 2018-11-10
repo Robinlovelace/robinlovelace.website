@@ -1,6 +1,7 @@
 ---
-layout: post
-title: Presentation at FOSS4G
+title: Presentation at FOSS4G 2013
+author: "Robin Lovelace"
+date: '2013-09-22'
 categories:
 - Visualisation
 - Open Source

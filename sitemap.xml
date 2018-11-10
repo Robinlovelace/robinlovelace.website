@@ -43,6 +43,11 @@
   </url>
   
   <url>
+    <loc>/2013/09/22/presentation-at-foss4g-2013/</loc>
+    <lastmod>2013-09-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/about/</loc>
   </url>
   
@@ -71,6 +76,12 @@
   <url>
     <loc>/tags/collapse/</loc>
     <lastmod>2014-01-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/conferences/</loc>
+    <lastmod>2013-09-22T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -105,8 +116,20 @@
   </url>
   
   <url>
+    <loc>/categories/open-source/</loc>
+    <lastmod>2013-09-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/post/</loc>
     <lastmod>2018-10-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/presentation/</loc>
+    <lastmod>2013-09-22T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -115,14 +138,14 @@
   </url>
   
   <url>
-    <loc>/categories/r/</loc>
-    <lastmod>2017-04-30T00:00:00+00:00</lastmod>
+    <loc>/tags/r/</loc>
+    <lastmod>2016-12-21T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/r/</loc>
-    <lastmod>2016-12-21T00:00:00+00:00</lastmod>
+    <loc>/categories/r/</loc>
+    <lastmod>2017-04-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -145,6 +168,12 @@
   <url>
     <loc>/tags/</loc>
     <lastmod>2017-04-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/visualisation/</loc>
+    <lastmod>2013-09-22T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

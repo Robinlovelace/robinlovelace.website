@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Visualisation on Robin Lovelace&#39;s website. Energy. Transport. Technology. Change the World.</title>
+    <link>/categories/visualisation/</link>
+    <description>Recent content in Visualisation on Robin Lovelace&#39;s website. Energy. Transport. Technology. Change the World.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 22 Sep 2013 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/visualisation/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Presentation at FOSS4G 2013</title>
+      <link>/2013/09/22/presentation-at-foss4g-2013/</link>
+      <pubDate>Sun, 22 Sep 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/2013/09/22/presentation-at-foss4g-2013/</guid>
+      <description>&lt;p&gt;I presented last Thursday at &lt;a href=&#34;http://2013.foss4g.org/&#34;&gt;FOSS4G&lt;/a&gt;, THE conference to go to for Free Open Source Software for Geo applications (get it?). It was an interesting event, with hundreds of delegates dressing up in one form or another as Robin Hood, fantastic food and a very wide range of talks. Just take a look at the &lt;a href=&#34;http://2013.foss4g.org/conf/programme/daily/2/&#34;&gt;second day&lt;/a&gt; of talks: packed to the rafters with sessions, including &lt;a href=&#34;http://2013.foss4g.org/conf/programme/sessions/36/&#34;&gt;mine&lt;/a&gt;, on visualisation.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
