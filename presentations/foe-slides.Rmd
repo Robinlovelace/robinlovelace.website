@@ -1,5 +1,5 @@
 ---
-title: 'Digital tools to transform cities'
+title: 'Simulating cities'
 subtitle: "🚗🚌🚲🚶<br/>from streets to the global level"
 author: "Robin Lovelace, University of Leeds"
 date: "University of Leeds, ITS `r Sys.Date()`"
@@ -73,6 +73,19 @@ my_bib = ReadBib("/home/robin/h/allrefs.bib", check = FALSE)
 ```{r, echo=FALSE}
 knitr::include_graphics("https://raw.githubusercontent.com/npct/pct-team/master/figures/front-page-leeds-pct-demo.png")
 ```
+
+---
+
+## International work
+
+- Contracts with the World Health Organisation
+- Prototype [Active Transport Tool](http://35.233.61.182/)
+
+```{r, echo=FALSE, out.width="100%"}
+knitr::include_graphics("https://raw.githubusercontent.com/ATFutures/who/master/fig/accra-flow1-interactive.png")
+```
+
+
 
 ---
 
