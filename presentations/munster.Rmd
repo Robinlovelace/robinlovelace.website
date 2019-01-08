@@ -255,6 +255,13 @@ track_points = read_sf("trace.gpx", "track_points")
 
 ---
 
+### Static plotting
+
+```{r, out.width="50%", fig.show='hold'}
+plot(track[1])
+plot(track_points)
+```
+
 ### 'Data science' approach to transport modelling
 
 - Problem: gpx files do not always contain speed
@@ -276,7 +283,35 @@ points2line_trajectory = function(p) {
 }
 ```
 
-Source: [geocompr.github.io](https://geocompr.github.io/geocompkg/articles/gps-tracks.html) 
+Source: [geocompr.github.io](https://geocompr.github.io/geocompkg/articles/gps-tracks.html)
+
+---
+
+## Creating lines with attributes
+
+```{r}
+l = points2line_trajectory(p = track_points)
+plot(l["s"])
+```
+
+## All slow sections
+
+```{r}
+l_slow = l[l$s < 20, ]
+plot(l_slow["s"])
+```
+
+---
+
+## Interactive plot!
+
+```{r, warning=FALSE}
+library(tmap)
+ttm()
+tm_shape(l_slow) +
+  tm_lines(col = "s", palette = "magma", n = 9)
+```
+
 
 ---
 
@@ -290,7 +325,7 @@ A few links and references
 
 - The Propensity to Cycle Tool: http://www.pct.bike/ - Lovelace, R., Goodman, A., Aldred, R., Berkoff, N., Abbas, A., Woodcock, J., 2017. The Propensity to Cycle Tool: An open source online system for sustainable transport planning. Journal of Transport and Land Use 10. https://doi.org/10.5198/jtlu.2016.862
 
-- 'geocompr' book: Lovelace, R., Nowosad, J., Meunchow, J., 2019. Geocomputation with R. CRC Press.
+- Open source 'geocompr' book: Lovelace, R., Nowosad, J., Meunchow, J., 2019. Geocomputation with R. CRC Press.
 
 
 - The Cycling Infrastructure Prioritisation Toolkit: https://www.cyipt.bike/
