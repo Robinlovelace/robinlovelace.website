@@ -257,10 +257,12 @@ track_points = read_sf("trace.gpx", "track_points")
 
 ### Static plotting
 
-```{r, out.width="50%", fig.show='hold'}
+```{r, out.width="50%", fig.show='hold', warning=FALSE}
 plot(track[1])
 plot(track_points)
 ```
+
+---
 
 ### 'Data science' approach to transport modelling
 
@@ -294,6 +296,8 @@ l = points2line_trajectory(p = track_points)
 plot(l["s"])
 ```
 
+---
+
 ## All slow sections
 
 ```{r}
@@ -305,7 +309,7 @@ plot(l_slow["s"])
 
 ## Interactive plot!
 
-```{r, warning=FALSE}
+```{r, warning=FALSE, message=FALSE}
 library(tmap)
 ttm()
 tm_shape(l_slow) +
