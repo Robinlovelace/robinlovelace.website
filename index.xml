@@ -40,6 +40,16 @@ This is the result of around 3 years of work: it took us (co-author Richard Elli
     </item>
     
     <item>
+      <title>Geocomputation with R: Empower yourself with geo data</title>
+      <link>/presentations/nurd-keynote/</link>
+      <pubDate>Wed, 31 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/presentations/nurd-keynote/</guid>
+      <description> Keynote lecture for the Northwest Universities R Day, Manchester In this, titled Geocomputation with R: Empower yourself with free software and geo* data, I provide an overview of the evolving landscape for working with geographic data using open source, command-line driven software.
+ Slides Audio   </description>
+    </item>
+    
+    <item>
       <title>Aggregating lines, Part I</title>
       <link>/2018/10/27/aggregating-lines/</link>
       <pubDate>Sat, 27 Oct 2018 00:00:00 +0000</pubDate>
@@ -59,6 +69,26 @@ This is the result of around 3 years of work: it took us (co-author Richard Elli
     </item>
     
     <item>
+      <title>Severance, parallels and integration</title>
+      <link>/presentations/cycling-and-society-plenary/</link>
+      <pubDate>Thu, 06 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/presentations/cycling-and-society-plenary/</guid>
+      <description> Plenary lecture at the Cycling &amp;amp; Society conference, Bristol Talk on methods for estimating severance in active transport networks.
+ Slides: Severance, parallels and integration Audio from the talk is available here   </description>
+    </item>
+    
+    <item>
+      <title>Invited seminar: can geographic data save the world?</title>
+      <link>/presentations/geocompr-jena/</link>
+      <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/presentations/geocompr-jena/</guid>
+      <description> This was the finale of a week of research collaboration and teaching at the Friedrich-Schiller-Universität Jena Institut für Geographie. During the study visit I also worked on Geocomputation with R with fellow co-author Jannes Muenchow and wrote a tutorial on route network analysis in R that can be found at https://github.com/Robinlovelace/geocomp-tranport-workshop
+ Slides: Can Geographic Data Save the World?  </description>
+    </item>
+    
+    <item>
       <title>Can Geographic Data Save the World?</title>
       <link>/2017/05/02/can-geographic-data-save-the-world/</link>
       <pubDate>Tue, 02 May 2017 00:00:00 +0000</pubDate>
@@ -66,6 +96,16 @@ This is the result of around 3 years of work: it took us (co-author Richard Elli
       <guid>/2017/05/02/can-geographic-data-save-the-world/</guid>
       <description>I presented yesterday on the use of geographic data in policy in a flamboyantly named talk: Can geographic data save the world (slides available from rpubs.com/Robinlovelace). The purpose of this post is to share the slides, audio and some of the ideas resulting from the talk, for the benefit of people interested in the topic but unable to attend.
 If you just want to sit back and enjoy the slides with audio, rather than read this article, click here for the audio and enjoy the slides below.</description>
+    </item>
+    
+    <item>
+      <title>Seminar: invited talk at Geographic Data Science lab</title>
+      <link>/presentations/gds-seminar/</link>
+      <pubDate>Tue, 02 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/presentations/gds-seminar/</guid>
+      <description> Talk at the Geographic Data Science (GDS) Lab in Liverpool.
+ Slides  </description>
     </item>
     
     <item>
@@ -97,6 +137,15 @@ The PCT would not have been possible without CycleStreets.net, so as well as des
       
       <guid>/2016/09/28/geostat2016-albacete-a-write-up/</guid>
       <description>Last week I went to GEOSTAT 2016. Given the amount of fun had at GEOSTAT 2015, expectations were high. The local organisers did not disappoint, with a week of lectures, workshops, spatial data competitions and of course lots of Geostatistics. It would be unwise to try to systematically document such a diverse range of activities, and the GEOSTAT website provides much further info. Instead this &amp;lsquo;miniwriteup&amp;rsquo; is designed to summarise some of my memories from the event, and encourage you to get involved for GEOSTAT 2017.</description>
+    </item>
+    
+    <item>
+      <title>Keynote: Cycling and transport policy</title>
+      <link>/presentations/hackney-keynote/</link>
+      <pubDate>Fri, 10 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/presentations/hackney-keynote/</guid>
+      <description>Invited keynote lecture titled Cycling and transport policy: embedding active travel in every stage of the planning process, at the Hackney Cycling Conference - Slides</description>
     </item>
     
     <item>
