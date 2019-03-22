@@ -47,9 +47,9 @@
     
     <li><a href="https://github.com/robinlovelace">GitHub</a></li>
     
-    <li><a href="../../../../presentations/index.html">Presentations</a></li>
-    
     <li><a href="../../../../publications/">Publications</a></li>
+    
+    <li><a href="../../../../presentations/">Seminars</a></li>
     
     <li><a href="https://twitter.com/robinlovelace">Twitter</a></li>
     
@@ -202,10 +202,10 @@ Now the method has been put in a function, we can compare its performance with t
 <pre><code>## # A tibble: 3 x 10
 ##   expression      min   mean median    max `itr/sec` mem_alloc  n_gc n_itr
 ##   &lt;bch:expr&gt;   &lt;bch:&gt; &lt;bch:&gt; &lt;bch:&gt; &lt;bch:&gt;     &lt;dbl&gt; &lt;bch:byt&gt; &lt;dbl&gt; &lt;int&gt;
-## 1 overline.sp  16.5ms 29.1ms 21.4ms   64ms      34.3    71.3KB     2    16
-## 2 overline.sf  19.7ms 25.6ms 24.5ms 43.7ms      39.1   365.5KB     2    16
-## 3 overline_sf2 12.7ms 23.1ms 17.9ms 48.4ms      43.3     125KB     3    19
-## # ... with 1 more variable: total_time &lt;bch:tm&gt;</code></pre>
+## 1 overline.sp  14.7ms 15.9ms 15.1ms 27.7ms      62.8    71.3KB     3    26
+## 2 overline.sf  18.3ms 19.3ms 18.6ms 32.8ms      51.9   369.9KB     3    23
+## 3 overline_sf2 12.2ms 12.7ms 12.6ms 18.3ms      78.5     125KB     6    32
+## # … with 1 more variable: total_time &lt;bch:tm&gt;</code></pre>
 <p>The results are not Earth-shattering: the new function seems to be around the same speed as the original, if a little faster.
 This is great news, but remember: the new function only works on 2 lines so is much simpler.
 More work needed!</p>
@@ -236,7 +236,7 @@ That will (hopefully) be the topic of the next blog post.</p>
 <p>4. Pebesma, E. Simple Features for R: Standardized Support for Spatial Vector Data. <em>The R Journal</em> (2018).</p>
 </div>
 <div id="ref-lovelace_geocomputation_2019">
-<p>5. Lovelace, R., Nowosad, J. &amp; Meunchow, J. <em>Geocomputation with R</em>. (CRC Press, 2019).</p>
+<p>5. Lovelace, R., Nowosad, J. &amp; Muenchow, J. <em>Geocomputation with R</em>. (CRC Press, 2019).</p>
 </div>
 <div id="ref-knuth_computer_1974">
 <p>6. Knuth, D. E. Computer Programming As an Art. <em>Commun. ACM</em> <strong>17,</strong> 667–673 (1974).</p>

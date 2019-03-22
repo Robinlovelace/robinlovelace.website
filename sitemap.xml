@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/presentations/satrday-keynote/</loc>
+    <lastmod>2019-04-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/2019/02/25/sustainable-transport-planning-with-r-stplanr-paper-published/</loc>
     <lastmod>2019-02-25T00:00:00+00:00</lastmod>
   </url>
@@ -15,6 +20,11 @@
   <url>
     <loc>/2018/10/27/aggregating-lines/</loc>
     <lastmod>2018-10-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/presentations/icts-inclusion/</loc>
+    <lastmod>2018-10-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -175,12 +185,13 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2019-02-25T00:00:00+00:00</lastmod>
+    <lastmod>2019-04-06T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/presentations/</loc>
+    <lastmod>2019-04-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>

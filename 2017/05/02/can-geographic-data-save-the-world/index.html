@@ -47,9 +47,9 @@
     
     <li><a href="https://github.com/robinlovelace">GitHub</a></li>
     
-    <li><a href="../../../../presentations/index.html">Presentations</a></li>
-    
     <li><a href="../../../../publications/">Publications</a></li>
+    
+    <li><a href="../../../../presentations/">Seminars</a></li>
     
     <li><a href="https://twitter.com/robinlovelace">Twitter</a></li>
     
@@ -95,6 +95,8 @@
 <div id="what-is-geographic-data-science" class="section level2">
 <h2>What is Geographic Data Science</h2>
 <p>The talk started with an introduction that defined terms, in which I set-out what I thought made GDS different from its older brother GIS:</p>
+<pre><code>## Warning: `frame_data()` is deprecated, use `tribble()`.
+## This warning is displayed once per session.</code></pre>
 <table>
 <caption><span id="tab:unnamed-chunk-2">Table 1: </span>Comparison between Geographic Information Systems (GIS) and Geographic Data Science (GDS) research.</caption>
 <thead>
@@ -169,7 +171,7 @@ plot(l_walk, add = T, col = &quot;red&quot;, lwd = 3)</code></pre>
 <p>Doh! That code nice ‘clean’ (well certainly consistent) code does not work because <code>Spatial</code> objects are not compatible with the pipe operator <code>%&gt;%</code> syntax.</p>
 <p>Enter the <a href="https://github.com/edzer/sfr"><strong>sf</strong></a> package, which represents a step change in how R handles spatial data. First let’s convert that <code>l</code> object into a ‘simple feature’ object:</p>
 <pre class="r"><code>library(sf)</code></pre>
-<pre><code>## Linking to GEOS 3.6.2, GDAL 2.2.3, PROJ 4.9.3</code></pre>
+<pre><code>## Linking to GEOS 3.7.0, GDAL 2.3.2, PROJ 5.2.0</code></pre>
 <pre class="r"><code>l_sf = st_as_sf(l)
 class(l_sf)</code></pre>
 <pre><code>## [1] &quot;sf&quot;         &quot;data.frame&quot;</code></pre>
