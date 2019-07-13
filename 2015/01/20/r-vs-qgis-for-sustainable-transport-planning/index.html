@@ -3,11 +3,12 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Hugo 0.54.0" />
+<meta name="generator" content="Hugo 0.55.6" />
 
 
 <title>R vs QGIS for sustainable transport planning - Robin Lovelace&#39;s website. Energy. Transport. Technology. Change the World.</title>
 <meta property="og:title" content="R vs QGIS for sustainable transport planning - Robin Lovelace&#39;s website. Energy. Transport. Technology. Change the World.">
+
 
 
 
@@ -69,7 +70,7 @@
     <h1 class="article-title">R vs QGIS for sustainable transport planning</h1>
 
     
-    <span class="article-date">2015/01/20</span>
+    <span class="article-date">2015-01-20</span>
     
 
     <div class="article-content">
@@ -155,8 +156,7 @@ routing in R, as well as an excellent
 <p>The practical demonstrated 2 ways of routing in R:</p>
 
 <ol>
-<li>Using <strong>ggmap</strong>. The following code was used to navigate to the event!</li>
-</ol>
+<li><p>Using <strong>ggmap</strong>. The following code was used to navigate to the event!</p>
 
 <pre><code>from &lt;- 'Leeds station, New Station Street, Leeds LS1 5DL, United Kingdom'
 to &lt;- 'LS2 9JT'
@@ -164,22 +164,23 @@ route_df &lt;- route(from, to, structure = 'route', mode = 'walking')
 </code></pre>
 
 <pre><code>qmap('Merrion Centre', zoom = 15) +
-  geom_path(
-    aes(x = lon, y = lat),  colour = 'red', size = 1.5,
-    data = route_df, lineend = 'round')
-</code></pre>
+geom_path(
+aes(x = lon, y = lat),  colour = 'red', size = 1.5,
+data = route_df, lineend = 'round')
+</code></pre></li>
+</ol>
 
 <p><img src="https://github.com/Robinlovelace/robinlovelace.github.io/raw/master/_posts/writeup_files/figure-html/unnamed-chunk-2-1.png" alt="" /></p>
 
 <ol>
-<li>The <a href="https://github.com/Robinlovelace/stplanr">package I created, <strong>stplanr</strong></a>,
-to get routes optimised for cyclists (see <a href="https://github.com/nickbearman/transport-workshop/blob/master/transport-workshop.Rmd">transport-workshop.Rmd</a> for a working version):</li>
-</ol>
+<li><p>The <a href="https://github.com/Robinlovelace/stplanr">package I created, <strong>stplanr</strong></a>,
+to get routes optimised for cyclists (see <a href="https://github.com/nickbearman/transport-workshop/blob/master/transport-workshop.Rmd">transport-workshop.Rmd</a> for a working version):</p>
 
 <pre><code>rquiet &lt;- gLines2CyclePath(l = rlines, plan = &quot;quietest&quot;)
 plot(rquiet[1,]) # route from Leeds station to Leeds University (North - South)
 plot(rquiet[2,]) # route from Leeds to Manchester!
-</code></pre>
+</code></pre></li>
+</ol>
 
 <p><img src="https://github.com/Robinlovelace/robinlovelace.github.io/raw/master/_posts/writeup_files/figure-html/unnamed-chunk-4-1.png" alt="" /></p>
 

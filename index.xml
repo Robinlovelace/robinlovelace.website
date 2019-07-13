@@ -6,10 +6,19 @@
     <description>Recent content in test on Robin Lovelace&#39;s website. Energy. Transport. Technology. Change the World.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 30 Apr 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 13 Jul 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Three great things about UseR 2019 (and six assorted observations)</title>
+      <link>/2019/07/13/user2019/</link>
+      <pubDate>Sat, 13 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/07/13/user2019/</guid>
+      <description>UseR! is the highest profile and, I believe, popular annual meeting for R afficionados, known affectionately as ‘UseRs’ for the purposes of the event. For those who have been living under a stone for the past decade ;) R is an open source statistical programming language that has seen explosive growth since ‘data science’ became a buzzword.</description>
+    </item>
     
     <item>
       <title>Geocomputation with R: from inception to physical book</title>
@@ -65,7 +74,7 @@ This is the result of around 3 years of work: it took us (co-author Richard Elli
       
       <guid>/2018/10/27/aggregating-lines/</guid>
       <description>Introduction It’s been a busy 12 months but with the Geocomputation with R book nearing completion1 I’ve finally found some time to update my blog and do a bit of thinking, about the tangled topic of line aggregation.
- Why aggregate lines? The transport ‘flow’ on any particular segment of the transport networks is the aggregate (sum) of trips that pass through it1. Finding the flow across a transport network based on input data composed of individual routes, is therefore an aggregation problem.</description>
+ Why aggregate lines? The transport ‘flow’ on any particular segment of the transport networks is the aggregate (sum) of trips that pass through it (Hollander 2016). Finding the flow across a transport network based on input data composed of individual routes, is therefore an aggregation problem.</description>
     </item>
     
     <item>
@@ -224,6 +233,16 @@ Based at the Leeds Institute for Transport Studies (ITS) I have a strong interes
       <description>Books  Lovelace, R., Nowosad, J., Meunchow, J., 2019. Geocomputation with R. CRC Press. Available in physical form on Amazon and Wordery and online at robinlovelace.net. Solutions website: geocompr.github.io Source code: github.com/robinlovelace/geocompr
  Gillespie, C., Lovelace, R., 2016. Efficient R Programming: A Practical Guide to Smarter Programming. O’Reilly Media, and as a free learning resource from its website.
  Lovelace, R., Dumont, M., 2016. Spatial microsimulation with R. CRC Press and (to see source code) github.</description>
+    </item>
+    
+    <item>
+      <title>Selected presentations</title>
+      <link>/presentations/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/presentations/</guid>
+      <description>I’ve done dozens of presentations over the years. This is a list of slides and further information from some of my favourites:
+ Geocomputation with R Empower yourself with free software and geo* data  Keynote lecture for the Northwest Universities R Day, 2018-10-31 Audio  ICTs para la (ciclo)inclusión  Invited lecture in Chile at the Seminario del Transporte a la Movilidad y Accesibilidad (in Spanish), 2018-10-05  Severance, parallels and integration  Plenary lecture at the Cycling &amp;amp; Society conference, Bristol, 2018-09-06 Audio from the talk is available here.</description>
     </item>
     
   </channel>

@@ -3,11 +3,12 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Hugo 0.54.0" />
+<meta name="generator" content="Hugo 0.55.6" />
 
 
 <title>Aggregating lines, Part I - Robin Lovelace&#39;s website. Energy. Transport. Technology. Change the World.</title>
 <meta property="og:title" content="Aggregating lines, Part I - Robin Lovelace&#39;s website. Energy. Transport. Technology. Change the World.">
+
 
 
 
@@ -63,13 +64,13 @@
 
   <article class="article">
     
-    <span class="article-duration">7 min read</span>
+    <span class="article-duration">8 min read</span>
     
 
     <h1 class="article-title">Aggregating lines, Part I</h1>
 
     
-    <span class="article-date">2018/10/27</span>
+    <span class="article-date">2018-10-27</span>
     
 
     <div class="article-content">
@@ -83,9 +84,9 @@ I’ve finally found some time to update my blog and do a bit of thinking, about
 </div>
 <div id="why-aggregate-lines" class="section level2">
 <h2>Why aggregate lines?</h2>
-<p>The transport ‘flow’ on any particular segment of the transport networks is the aggregate (sum) of trips that pass through it<span class="citation"><sup>1</sup></span>.
+<p>The transport ‘flow’ on any particular segment of the transport networks is the aggregate (sum) of trips that pass through it <span class="citation">(Hollander 2016)</span>.
 Finding the flow across a transport network based on input data composed of individual routes, is therefore an aggregation problem.
-It requires a more complex solution than that provided by the <code>aggregate()</code> function in the base R<span class="citation"><sup>2</sup></span> package <strong>stats</strong>, however, because the geometry of the output <code>LINESTRING</code>s will be fundamentally different than the input <code>LINESTRINGS</code> of the routes: a route network is composed of many small way segments, but a route is a single long <code>LINESTRING</code>.</p>
+It requires a more complex solution than that provided by the <code>aggregate()</code> function in the base R <span class="citation">(R Core Team 2018)</span> package <strong>stats</strong>, however, because the geometry of the output <code>LINESTRING</code>s will be fundamentally different than the input <code>LINESTRINGS</code> of the routes: a route network is composed of many small way segments, but a route is a single long <code>LINESTRING</code>.</p>
 </div>
 <div id="aggregating-lines-with-overline-mki" class="section level2">
 <h2>Aggregating lines with overline() MKI</h2>
@@ -119,8 +120,8 @@ Figure 2: Illustration of the overline() function for line aggregation in action
 Figure 3: Early version of the route network layer in the Propensity to Cycle Tool.
 </p>
 </div>
-<p>This works great and the resulting network is used for strategic network planning: you can download route network data in the ‘Region data’ tab of the PCT<span class="citation"><sup>3</sup></span>. The route network data for Leeds can, for example, be downloaded as a <code>.geojson</code> file from <a href="https://github.com/npct/pct-outputs-regional-notR/raw/master/commute/msoa/west-yorkshire/rnet.geojson">here</a>.</p>
-<p>But there are some issues: the function works on the older <code>SpatialLinesDataFrame</code> class defined in the <strong>sp</strong> package<span class="citation"><sup>4</sup></span>.
+<p>This works great and the resulting network is used for strategic network planning: you can download route network data in the ‘Region data’ tab of the PCT <span class="citation">(Lovelace et al. 2017)</span>. The route network data for Leeds can, for example, be downloaded as a <code>.geojson</code> file from <a href="https://github.com/npct/pct-outputs-regional-notR/raw/master/commute/msoa/west-yorkshire/rnet.geojson">here</a>.</p>
+<p>But there are some issues: the function works on the older <code>SpatialLinesDataFrame</code> class defined in the <strong>sp</strong> package <span class="citation">(<span class="citeproc-not-found" data-reference-id="pebesma_simple_2018"><strong>???</strong></span>)</span>.
 This data class has been superseded by the simpler <code>sf</code> class in the <a href="https://github.com/r-spatial/sf"><strong>sf</strong></a> package, which is faster than <strong>sp</strong> for <a href="https://github.com/ATFutures/geobench">some</a> (if not many) operations.
 Another issue with <code>overline()</code> is that in some cases when 2 lines meet, the resulting aggregated line can be longer than it should be.
 So there are performance and functionality issues to address.
@@ -192,7 +193,7 @@ Figure 5: Illustration of a route network generated with sf functions.
   rnet = rbind(sl_intersection, sl_seg)
   return(rnet)
 }</code></pre>
-<p>If you are new to scripts/algorithms/functions, it may be worth taking a look at the new <a href="https://geocompr.robinlovelace.net/algorithms.html">Algorithms</a> chapter in our near-complete book that teaches a range of geographic methods that use R<span class="citation"><sup>5</sup></span>.
+<p>If you are new to scripts/algorithms/functions, it may be worth taking a look at the new <a href="https://geocompr.robinlovelace.net/algorithms.html">Algorithms</a> chapter in our near-complete book that teaches a range of geographic methods that use R <span class="citation">(Lovelace, Nowosad, and Muenchow 2019)</span>.
 Now the method has been put in a function, we can compare its performance with the per-existing <code>overline()</code> function for comparison:</p>
 <pre class="r"><code>bench::mark(check = F,
             overline.sp = overline(sl_sp, attrib = &quot;value&quot;),
@@ -200,11 +201,11 @@ Now the method has been put in a function, we can compare its performance with t
             overline_sf2 = overline_sf2(sl, attrib = &quot;value&quot;)
             )</code></pre>
 <pre><code>## # A tibble: 3 x 10
-##   expression      min   mean median    max `itr/sec` mem_alloc  n_gc n_itr
-##   &lt;bch:expr&gt;   &lt;bch:&gt; &lt;bch:&gt; &lt;bch:&gt; &lt;bch:&gt;     &lt;dbl&gt; &lt;bch:byt&gt; &lt;dbl&gt; &lt;int&gt;
-## 1 overline.sp  14.7ms 15.9ms 15.1ms 27.7ms      62.8    71.3KB     3    26
-## 2 overline.sf  18.3ms 19.3ms 18.6ms 32.8ms      51.9   369.9KB     3    23
-## 3 overline_sf2 12.2ms 12.7ms 12.6ms 18.3ms      78.5     125KB     6    32
+##   expression    min   mean median    max `itr/sec` mem_alloc  n_gc n_itr
+##   &lt;chr&gt;      &lt;bch:&gt; &lt;bch:&gt; &lt;bch:&gt; &lt;bch:&gt;     &lt;dbl&gt; &lt;bch:byt&gt; &lt;dbl&gt; &lt;int&gt;
+## 1 overline.… 12.6ms 13.4ms 12.8ms 16.7ms      74.7    71.3KB     3    33
+## 2 overline.… 15.6ms 15.9ms 15.8ms 18.1ms      63.0   365.5KB     5    26
+## 3 overline_… 10.2ms 10.5ms 10.4ms 11.5ms      95.2     125KB     6    41
 ## # … with 1 more variable: total_time &lt;bch:tm&gt;</code></pre>
 <p>The results are not Earth-shattering: the new function seems to be around the same speed as the original, if a little faster.
 This is great news, but remember: the new function only works on 2 lines so is much simpler.
@@ -213,7 +214,7 @@ More work needed!</p>
 <div id="next-steps" class="section level2">
 <h2>Next steps</h2>
 <p>The next step is to generalist this method so it works for many (potentially thousands) of lines in a way that scales, something that should help on the visualization side, a topic that attracts much interest (see for example this <a href="https://gis.stackexchange.com/questions/778/representation-of-network-flows">gis.stackexchange post</a> on the subject and, more broadly, a recent <a href="https://nowosad.github.io/post/maps-distortion/">article</a> showing how to make animated maps by Jakub Nowosad).
-There is also work to do on performance but, as Donald Knuth said<span class="citation"><sup>6</sup></span>:</p>
+There is also work to do on performance but, as Donald Knuth said <span class="citation">(Knuth 1974)</span>:</p>
 <blockquote>
 <p>premature optimization is the root of all evil (or at least most of it) in programming</p>
 </blockquote>
@@ -224,22 +225,19 @@ That will (hopefully) be the topic of the next blog post.</p>
 <h2>References</h2>
 <div id="refs" class="references">
 <div id="ref-hollander_transport_2016">
-<p>1. Hollander, Y. <em>Transport Modelling for a Complete Beginner</em>. (CTthink!, 2016).</p>
-</div>
-<div id="ref-rcoreteam_language_2018">
-<p>2. R Core Team. <em>R: A Language and Environment for Statistical Computing</em>. (R Foundation for Statistical Computing, 2018).</p>
-</div>
-<div id="ref-lovelace_propensity_2017">
-<p>3. Lovelace, R. <em>et al.</em> The Propensity to Cycle Tool: An open source online system for sustainable transport planning. <em>Journal of Transport and Land Use</em> <strong>10,</strong> (2017).</p>
-</div>
-<div id="ref-pebesma_simple_2018">
-<p>4. Pebesma, E. Simple Features for R: Standardized Support for Spatial Vector Data. <em>The R Journal</em> (2018).</p>
-</div>
-<div id="ref-lovelace_geocomputation_2019">
-<p>5. Lovelace, R., Nowosad, J. &amp; Muenchow, J. <em>Geocomputation with R</em>. (CRC Press, 2019).</p>
+<p>Hollander, Yaron. 2016. <em>Transport Modelling for a Complete Beginner</em>. CTthink!</p>
 </div>
 <div id="ref-knuth_computer_1974">
-<p>6. Knuth, D. E. Computer Programming As an Art. <em>Commun. ACM</em> <strong>17,</strong> 667–673 (1974).</p>
+<p>Knuth, Donald E. 1974. “Computer Programming as an Art.” <em>Commun. ACM</em> 17 (12): 667–73. <a href="https://doi.org/10.1145/361604.361612">https://doi.org/10.1145/361604.361612</a>.</p>
+</div>
+<div id="ref-lovelace_propensity_2017">
+<p>Lovelace, Robin, Anna Goodman, Rachel Aldred, Nikolai Berkoff, Ali Abbas, and James Woodcock. 2017. “The Propensity to Cycle Tool: An Open Source Online System for Sustainable Transport Planning.” <em>Journal of Transport and Land Use</em> 10 (1). <a href="https://doi.org/10.5198/jtlu.2016.862">https://doi.org/10.5198/jtlu.2016.862</a>.</p>
+</div>
+<div id="ref-lovelace_geocomputation_2019">
+<p>Lovelace, Robin, Jakub Nowosad, and Jannes Muenchow. 2019. <em>Geocomputation with R</em>. CRC Press.</p>
+</div>
+<div id="ref-rcoreteam_language_2018">
+<p>R Core Team. 2018. <em>R: A Language and Environment for Statistical Computing</em>. Vienna, Austria: R Foundation for Statistical Computing.</p>
 </div>
 </div>
 </div>

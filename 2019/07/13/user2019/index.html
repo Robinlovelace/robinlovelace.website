@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.55.6" />
+
+
+<title>Three great things about UseR 2019 (and six assorted observations) - A write-up from transport and geographic data research perspectives  - Robin Lovelace&#39;s website. Energy. Transport. Technology. Change the World.</title>
+<meta property="og:title" content="Three great things about UseR 2019 (and six assorted observations) - Robin Lovelace&#39;s website. Energy. Transport. Technology. Change the World.">
+
+
+
+
+  
+
+
+
+
+
+
+
+
+<link href='//cdn.bootcss.com/highlight.js/9.10.0/styles/github.min.css' rel='stylesheet' type='text/css' />
+
+
+
+<link rel="stylesheet" href="../../../../css/fonts.css" media="all">
+<link rel="stylesheet" href="../../../../css/main.css" media="all">
+
+
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="../../../../" class="nav-logo">
+    <img src="../../../../images/logo.png"
+         width="50"
+         height="50"
+         alt="Logo">
+  </a>
+
+  <ul class="nav-links">
+    
+    <li><a href="../../../../about/">About</a></li>
+    
+    <li><a href="../../../../post/">Posts</a></li>
+    
+    <li><a href="../../../../publications/">Publications</a></li>
+    
+    <li><a href="../../../../presentations/">Seminars</a></li>
+    
+    <li><a href="https://twitter.com/robinlovelace">Twitter</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+
+  <article class="article">
+    
+    <span class="article-duration">14 min read</span>
+    
+
+    <h1 class="article-title">Three great things about UseR 2019 (and six assorted observations)</h1>
+
+    
+    <span class="article-date">2019-07-13</span>
+    
+
+    <div class="article-content">
+      
+<script src="../../../../rmarkdown-libs/htmlwidgets/htmlwidgets.js"></script>
+<script src="../../../../rmarkdown-libs/jquery/jquery.min.js"></script>
+<link href="../../../../rmarkdown-libs/leaflet/leaflet.css" rel="stylesheet" />
+<script src="../../../../rmarkdown-libs/leaflet/leaflet.js"></script>
+<link href="../../../../rmarkdown-libs/leafletfix/leafletfix.css" rel="stylesheet" />
+<script src="../../../../rmarkdown-libs/Proj4Leaflet/proj4-compressed.js"></script>
+<script src="../../../../rmarkdown-libs/Proj4Leaflet/proj4leaflet.js"></script>
+<link href="../../../../rmarkdown-libs/rstudio_leaflet/rstudio_leaflet.css" rel="stylesheet" />
+<script src="../../../../rmarkdown-libs/leaflet-binding/leaflet.js"></script>
+<script src="../../../../rmarkdown-libs/leaflet-providers/leaflet-providers.js"></script>
+<script src="../../../../rmarkdown-libs/leaflet-providers-plugin/leaflet-providers-plugin.js"></script>
+<link href="../../../../rmarkdown-libs/HomeButton/home-button.css" rel="stylesheet" />
+<script src="../../../../rmarkdown-libs/HomeButton/home-button.js"></script>
+<script src="../../../../rmarkdown-libs/HomeButton/easy-button-src.min.js"></script>
+<link href="../../../../rmarkdown-libs/PopupTable/popup.css" rel="stylesheet" />
+<link href="../../../../rmarkdown-libs/datatables-css/datatables-crosstalk.css" rel="stylesheet" />
+<script src="../../../../rmarkdown-libs/datatables-binding/datatables.js"></script>
+<link href="../../../../rmarkdown-libs/dt-core/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="../../../../rmarkdown-libs/dt-core/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="../../../../rmarkdown-libs/dt-core/js/jquery.dataTables.min.js"></script>
+<link href="../../../../rmarkdown-libs/crosstalk/css/crosstalk.css" rel="stylesheet" />
+<script src="../../../../rmarkdown-libs/crosstalk/js/crosstalk.min.js"></script>
+
+
+<p>UseR! is the highest profile and, I believe, popular annual meeting for R afficionados, known affectionately as ‘UseRs’ for the purposes of the event.
+For those who have been living under a stone for the past decade ;) R is an open source statistical programming language that has seen explosive growth since ‘data science’ became a buzzword.
+Although I’ve been using R for around a decade, and heavily for around five years, <a href="http://user2019.r-project.org/">UseR! 2019</a> was the first UseR! I attended.
+I went with some preconceptions: I thought it would be like previous R events that I had attended, including the European R Users Meeting (ERUM) and SatRdays, but bigger.</p>
+<p><img src="http://user2019.r-project.org/static/img/useR2019.png" /></p>
+<p>It exceeded my expectations in many ways.
+Despite only seeing part of it (I missed the tutorials on the Tuesday and the latter part of the final day on Friday), I learned many things from it.
+Inspired by the ‘useR aftRglow’, I wrote some notes, some of which are worth sharing.
+The <a href="http://user2019.r-project.org/organization/">organising committee of User! 2019</a> (hats off to you for an amazing event) has lessons for anyone thinking of putting on a successful event for research, software development, or anything aiming to encourage a friendly symposium vibe.
+Here are some of the things that made it such an enlightening event.</p>
+<div id="diverse-formats" class="section level1">
+<h1>1. Diverse formats</h1>
+<p>Sometimes going to events, and especially academic conferences (mentioning no names <code>*cough*</code> take note organisers of <a href="https://annualmeeting.aag.org/">AAAG</a>/<a href="https://www.rgs.org/research/annual-international-conference/">RGS-IBG</a> and other events with many presentation sessions), can feel undergoing ‘death by powerpoint’.
+A very slow, boring death.</p>
+<p>UseR! was not like this at all.
+Aside from the fact that many of presenters wouldn’t <em>be seen dead</em> in front of PowerPoint slides, preferring instead more reproducible and flexible formats enabled by packages such as <code>xaringan</code> and <code>ioslides</code>, the diversity of formats and quality of the talks kept me on my toes in every session I attended.</p>
+<p>The organisers had clearly given some thought to tackle this issue.
+Instead of having only a couple of talk types (e.g. 15 minute presentation, 1 hour keynote) a range of formats were supported, including:</p>
+<ul>
+<li>Morning/afternoon tutorials, which took place on the Tuesday, allowing people to learn in depth about new methods/packages/approaches.</li>
+<li>A ‘tidyverse development’ day, which apparently involved physically taking issues and working on them in parallel, with a gong struck for every Pull Request accepted (this makes me wonder if the same technique can be used in other software ecosystems).</li>
+<li>Poster sessions, perhaps not an innovative thing in its own right, but at UseR! the poster showing event was preceded by Lightning Talks of ~1 minute each, so participants could identify which posters they would most like to visit.</li>
+<li>Lightning talk sessions, where participants had 5 minutes to convey the core message of their research.
+These sessions were organised in themes and I chaired ‘Applications and Methods’ session, which contained some fascinating work.</li>
+</ul>
+<p>There were still plenting of standard presentation sessions, but even in those sessions, the diversity kept things engaging.
+Colin Gillespie went into stand-up comedy mode to deliver a vital message: that simple changes can improve the security of computer systems using R.
+<a href="https://en.wikipedia.org/wiki/Mine_%C3%87etinkaya-Rundel">Mine Çetinkaya-Rundel</a> used the metaphore of cooking to highlight the importance of digital learning environments for effective classrooms: would you rather cook in a unfinished kitchen or a complete one?
+Use of a stable, in browser interface, as shown in the <a href="https://twitter.com/minebocek/status/1148904275550121984">Data Science in a Box</a> project, can overcome the barrier of software installation to research, with clear implications for organisations: get a working instance of RStudio Server.</p>
+<p>Event the Keynotes were diverse, as can be seen from the <a href="http://user2019.r-project.org/program/">UseR website</a>.
+There wasn’t just one central ‘keynote speaker’ at the event but 6, half of whom were women, and with representatives from commercial, academic and <a href="http://user2019.r-project.org/program/#julien">non-profit</a> organsiations.
+The diversity of topics they covered was also impressive.
+They ranged from Bettina Grün’s highly technical yet accessible keynote on new models and packages for clustering data to Joe Cheng’s talk on <a href="https://github.com/rstudio/shinymeta">shinymeta</a>.
+It was rollercoaster ride to the publication of this just open-sourced package, which enables shiny apps to generate scripts underlying the dynamic results.
+This could enable step change in the level of reproducibility of interactive web applications (vested interest: I’m the lead developer of the large shiny application, the <a href="http://www.pct.bike/">Propensity to Cycle Tool</a> that would benefit from being more reproducible).</p>
+</div>
+<div id="worldwide-dissemination" class="section level1">
+<h1>2. Worldwide dissemination</h1>
+<p>Not everyone has the time, energy or money to go to UseR!.
+Some ‘<a href="https://www.theguardian.com/travel/2019/may/22/could-you-give-up-flying-meet-the-no-plane-pioneers">no fly pioneers</a>’ have given up flying to support global efforts to tackle the climate crisis.
+I was very impressed to see acknowledgement of the conference’s climate impacts, with a <a href="https://enquetes.inra.fr/index.php/136679?lang=en">form</a> used to help calculate its carbon impact:</p>
+<p><img src="../../../../post/2019-07-13-4-great-things-user2019_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<p>Whatever the reason, it is certain that the contents of UseR! will be of great interest to many more people than the ~2000 people who attended in person.
+By recording and (eventually) releasing the videos of the talk, a much larger audience, into the millions, can be reached, as highlighted on the <a href="http://user2019.r-project.org/">website</a>:</p>
+<blockquote>
+<p>All talks will be recorded and all keynote sessions will be live streamed. Everything will be made avalaible on <a href="https://www.youtube.com/channel/UC_R5smHVXRYGhZYDJsnXTwg" target="_blank">R Consortium YouTube channel</a>. Thanks to R Consortium for supporting that initiative.</p>
+</blockquote>
+<p>Also, UseRs are excellent communicators, as can be seen from the a quick glance at the buzzing <a href="https://twitter.com/hashtag/user2019?lang=en-gb">#UseR2019 hashtag</a>, three of which are shown below.</p>
+<p><blockquote class="twitter-tweet"><p lang="en" dir="ltr">Dear everyone at <a href="https://twitter.com/hashtag/useR2019?src=hash&amp;ref_src=twsrc%5Etfw">#useR2019</a>,<br>We thank you very much for your R-enthusiasm 😃.<br>We hope that you as much fun as we had😋.<br>See you in Saint-Louis next year for <a href="https://twitter.com/hashtag/useR2020?src=hash&amp;ref_src=twsrc%5Etfw">#useR2020</a>! 🇫🇷🔜🇺🇸<br>On vous aime !</p>&mdash; useR! 2019 (@UseR2019_Conf) <a href="https://twitter.com/UseR2019_Conf/status/1149790615963615232?ref_src=twsrc%5Etfw">July 12, 2019</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">MASSIVE thank you 🙏🌟💜🌍 to <a href="https://twitter.com/HeathrTurnr?ref_src=twsrc%5Etfw">@HeathrTurnr</a> for her AMAZING and continued championing of making the <a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a> community so diverse and welcoming, for all from work on <a href="https://twitter.com/hashtag/useR?src=hash&amp;ref_src=twsrc%5Etfw">#useR</a>, <a href="https://twitter.com/hashtag/RLadies?src=hash&amp;ref_src=twsrc%5Etfw">#RLadies</a> , <a href="https://twitter.com/hashtag/LatinR?src=hash&amp;ref_src=twsrc%5Etfw">#LatinR</a> and more. We owe a lot to Heather’s hard work &amp; dedication 🏆 (<a href="https://twitter.com/hashtag/useR2019?src=hash&amp;ref_src=twsrc%5Etfw">#useR2019</a>) <a href="https://t.co/Aisw11SKjc">pic.twitter.com/Aisw11SKjc</a></p>&mdash; Alice Data (@alice_data) <a href="https://twitter.com/alice_data/status/1149680375817494529?ref_src=twsrc%5Etfw">July 12, 2019</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">vroom <a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a> 📦, because life is too short to read slow! 🏎️💨<br><br>slides 📽️ from my <a href="https://twitter.com/hashtag/useR2019?src=hash&amp;ref_src=twsrc%5Etfw">#useR2019</a> talk available at <a href="https://t.co/3h6b2m7lQO">https://t.co/3h6b2m7lQO</a></p>&mdash; Jim Hester (@jimhester_) <a href="https://twitter.com/jimhester_/status/1149651592884285441?ref_src=twsrc%5Etfw">July 12, 2019</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</p>
+</div>
+<div id="relaxed-atmosphere" class="section level1">
+<h1>3. Relaxed atmosphere</h1>
+<p>The final great thing about UseR! 2019 was less objective but equally important: the social atmosphere.
+The most reason why it had such a good vibe, I guess, was the attendees: in my experience R users, and people involved in the open source community in general, tend to friendly, humble and team-orientated.
+Of course, this is how how conferences should be and many are, but I couldn’t help notice a contrast between the humility of by ‘big names’ in the R community and the sense of self importance of some (albeit a small minority) high profile academics.</p>
+<p>UseRs seem to have a great sense of humour and don’t take themselves too seriously, which contributed to a friendly, inviting and non-hierarchical atmosphere.
+This friendliness is self organising, but is also built into the constitution of UseR! in its <a href="http://user2019.r-project.org/coc/">Code of Conduct</a>.
+Take note future conference organisers: it’s easy to add a CoC and +s of doing so could be great.</p>
+<p>The final reason for the relaxed atmosphere I noticed was more objective: all the equipment worked well, session chairs were well briefed on what they needed to and when, there were floating mics to allow clear questions from the audience, and the rooms were large enough such that at no point did I feel crammed into a session.
+Furthermore, the arrangement and audio system of the rooms made it feel easy to change session, in case there were two talks in parallel sessions you really wanted to see.
+Again, hats off to the organisers: it was VERY well organised.</p>
+</div>
+<div id="other-assorted-notes-and-observations" class="section level1">
+<h1>Other assorted notes and observations</h1>
+<div id="the-host-city-of-toulouse" class="section level2">
+<h2>The host city of Toulouse</h2>
+<p>I liked the host city but, due to recent University of Leeds regulations blocking AirBnB, I had to change accommodation plans at late notice.
+This involved a ~3km trek out to the West of the city.
+Instead of spending 2 hours each day walking there and back, I decided to hire a bike.
+To my surprise, the system just worked: I typed in some details in the nearest bike hire station I could find and had my own wheels for the week (which looked like those in the photos below).
+All for the bargain price of €5 for the week!</p>
+<p><img src="https://images.ladepeche.fr/api/v1/images/view/5c34e8ca8fe56f09063e1f8f/large/image.jpg" /><!-- --></p>
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/BtvyxGfIf9L/" data-instgrm-version="12" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
+<div style="padding:16px;">
+<a href="https://www.instagram.com/p/BtvyxGfIf9L/" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank">
+<div style=" display: flex; flex-direction: row; align-items: center;">
+<div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;">
+
+</div>
+<div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;">
+<div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;">
+
+</div>
+<div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;">
+
+</div>
+</div>
+</div>
+<div style="padding: 19% 0;">
+
+</div>
+<div style="display:block; height:50px; margin:0 auto 12px; width:50px;">
+<svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink">
+<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g>
+</svg>
+</div>
+<div style="padding-top: 8px;">
+<div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">
+View this post on Instagram
+</div>
+</div>
+<div style="padding: 12.5% 0;">
+
+</div>
+<div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;">
+<div>
+<div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);">
+
+</div>
+<div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;">
+
+</div>
+<div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);">
+
+</div>
+</div>
+<div style="margin-left: 8px;">
+<div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;">
+
+</div>
+<div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)">
+
+</div>
+</div>
+<div style="margin-left: auto;">
+<div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);">
+
+</div>
+<div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);">
+
+</div>
+<div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);">
+
+</div>
+</div>
+</div>
+</a>
+<p style=" margin:8px 0 0 0; padding:0 4px;">
+<a href="https://www.instagram.com/p/BtvyxGfIf9L/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">Commencez la semaine avec VélÔToulouse pour faciliter vos trajets ! 😎 🚲 #velotoulouse #toulousemaville #bikelife #toulouse Belle semaine à tous ☀️ Thank you <span class="citation">(<span class="citeproc-not-found" data-reference-id="viktoriia_naumi"><strong>???</strong></span>)</span> for your picture 🙂</a>
+</p>
+<p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">
+A post shared by <a href="https://www.instagram.com/velotoulouse31000/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px;" target="_blank"> VélÔToulouse Officiel</a> (<span class="citation">(<span class="citeproc-not-found" data-reference-id="velotoulouse31000"><strong>???</strong></span>)</span>) on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2019-02-11T15:36:54+00:00">Feb 11, 2019 at 7:36am PST</time>
+</p>
+</div>
+</blockquote>
+<script async src="//www.instagram.com/embed.js"></script>
+<p>I managed to find time to go running on two of the mornings, making me realise how car-dominated Toulouse, like many other cities, is.
+The car dominated nature of the city is shown in the images below, which show my running route that dodged giant roads, and a photo of one of the main roads, which was not particularly friendly to people walking and cycling to say the least!</p>
+<a data-flickr-embed="true"  href="https://www.flickr.com/photos/97888609@N02/48247285282/in/photostream/" title="Screenshot_2019-07-10-06-53-00-088_net.osmand.plus"><img src="https://live.staticflickr.com/65535/48247285282_21b35c313b_c.jpg" width="400" height="800" alt="Screenshot_2019-07-10-06-53-00-088_net.osmand.plus"></a>
+<script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+<a data-flickr-embed="true"  href="https://www.flickr.com/photos/97888609@N02/48247197386/in/photostream/" title="IMG_20190710_063516"><img src="https://live.staticflickr.com/65535/48247197386_391eb748b5_c.jpg" width="800" height="600" alt="IMG_20190710_063516"></a>
+<script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+<p>Despite the car traffic, the cycleways in Toulouse were great.
+I recommend anyone visiting a city for a few days to get a bike, a great way to see the city close up, and get from A to B efficiently, avoiding traffic congestion and with the freedom to get off the beaten (road) track.
+For fun, I recorded some of my routes in Toulouse and uploaded them to OSM, the free and open access community made global mapping database (which I fully endorse over Google Maps ;), allowing reproducible code to show my everyday trip to the conference and back:</p>
+<pre class="r"><code>download.file(&quot;https://www.openstreetmap.org/trace/3046619/data&quot;, &quot;track1.gpx&quot;)
+sf::st_layers(&quot;track1.gpx&quot;)</code></pre>
+<pre><code>## Driver: GPX 
+## Available layers:
+##     layer_name     geometry_type features fields
+## 1    waypoints             Point        0     23
+## 2       routes       Line String        0     12
+## 3       tracks Multi Line String        1     12
+## 4 route_points             Point        0     25
+## 5 track_points             Point      152     27</code></pre>
+<pre class="r"><code>track = sf::read_sf(&quot;track1.gpx&quot;, layer = &quot;tracks&quot;)
+mapview::mapview(track)</code></pre>
+<div id="htmlwidget-1" style="width:672px;height:480px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"options":{"minZoom":1,"maxZoom":100,"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}},"preferCanvas":false,"bounceAtZoomLimits":false,"maxBounds":[[[-90,-370]],[[90,370]]]},"calls":[{"method":"addProviderTiles","args":["CartoDB.Positron",1,"CartoDB.Positron",{"errorTileUrl":"","noWrap":false,"detectRetina":false}]},{"method":"addProviderTiles","args":["CartoDB.DarkMatter",2,"CartoDB.DarkMatter",{"errorTileUrl":"","noWrap":false,"detectRetina":false}]},{"method":"addProviderTiles","args":["OpenStreetMap",3,"OpenStreetMap",{"errorTileUrl":"","noWrap":false,"detectRetina":false}]},{"method":"addProviderTiles","args":["Esri.WorldImagery",4,"Esri.WorldImagery",{"errorTileUrl":"","noWrap":false,"detectRetina":false}]},{"method":"addProviderTiles","args":["OpenTopoMap",5,"OpenTopoMap",{"errorTileUrl":"","noWrap":false,"detectRetina":false}]},{"method":"createMapPane","args":["line",430]},{"method":"addPolylines","args":[[[[{"lng":[1.400506,1.4006889,1.4007832,1.400683,1.4006602,1.4005251,1.400484,1.4005088,1.4007603,1.4010393,1.401267,1.4014611,1.4018177,1.4021275,1.4025796,1.4029969,1.4036092,1.4039726,1.4043514,1.4046799,1.4049264,1.4051744,1.4054378,1.4056694,1.4059087,1.4061291,1.4063419,1.4065754,1.4068117,1.4070478,1.4071941,1.4072091,1.4072379,1.4073143,1.4073843,1.4074604,1.4075272,1.4076321,1.4078188,1.4080745,1.4083397,1.4086052,1.4088915,1.4091065,1.409369,1.4097115,1.4101483,1.4106225,1.4110997,1.4111954,1.4109534,1.4109835,1.411223,1.4115138,1.4118245,1.4121433,1.4124222,1.4127341,1.4130401,1.4128176,1.4126221,1.4124203,1.4121979,1.4125378,1.4127518,1.41298,1.4135993,1.413874,1.4140961,1.4143976,1.4148247,1.4151264,1.4153615,1.4156107,1.4158784,1.4161339,1.4165603,1.4168287,1.4171691,1.4174351,1.4177088,1.417982,1.4182537,1.4185344,1.419263,1.4195111,1.4197766,1.4200856,1.4204674,1.4208365,1.4211473,1.4215132,1.4217384,1.4220957,1.4225408,1.4228799,1.4230849,1.4234496,1.4237093,1.4238463,1.4239208,1.4238005,1.4236883,1.4239385,1.4242242,1.4245101,1.4247684,1.4250772,1.4253445,1.4255234,1.4257759,1.4259649,1.4261808,1.426402,1.4266341,1.4268318,1.4270289,1.4272602,1.427444,1.4277168,1.4279732,1.4282314,1.428482,1.4287865,1.4290637,1.4293718,1.4296592,1.4300627,1.4304569,1.430709,1.4311231,1.4314097,1.4317594,1.4319881,1.432236,1.4324832,1.4327659,1.433001,1.4331084,1.433165,1.4331345,1.4331961,1.4333423,1.4334665,1.4335608,1.4337393,1.4340082,1.434249,1.4344912,1.4347306,1.4349818,1.4349452],"lat":[43.6057735,43.6054551,43.6052884,43.6054591,43.6056613,43.6059605,43.6061691,43.6063873,43.6063477,43.6061643,43.606021,43.6058989,43.6057571,43.6056363,43.6054479,43.6052723,43.6050985,43.6048724,43.6046683,43.6044945,43.6045481,43.6044707,43.6043981,43.6042952,43.6042107,43.6041141,43.6040063,43.6038925,43.6038023,43.6039354,43.6042589,43.6045611,43.604811,43.6051093,43.6053569,43.6056185,43.6058346,43.6060314,43.6062175,43.6063931,43.6065538,43.6067143,43.6069352,43.607101,43.6072562,43.6074517,43.6076036,43.6077986,43.6079583,43.6081255,43.6082053,43.6083839,43.6084973,43.6086482,43.6087966,43.6089424,43.6090696,43.6092024,43.6093297,43.6094365,43.6095728,43.6097072,43.6098247,43.6097834,43.6096694,43.6095187,43.609333,43.6094028,43.6095258,43.6096657,43.6097886,43.6097975,43.6098744,43.6099695,43.6100222,43.6100764,43.6101649,43.6101938,43.6102833,43.6102942,43.6103424,43.6103936,43.6103947,43.6103537,43.6101626,43.610038,43.6099459,43.6098048,43.609652,43.609526,43.6094204,43.6093219,43.6092126,43.6091031,43.6089466,43.6088313,43.6086773,43.6085818,43.6085224,43.6086867,43.6088689,43.6090299,43.6091929,43.6093412,43.6094855,43.6096801,43.6098381,43.610032,43.610028,43.6098624,43.6096618,43.6094755,43.6092891,43.6090951,43.6088907,43.6087302,43.608556,43.6083525,43.6081587,43.6081203,43.6082041,43.6082101,43.6082597,43.6083702,43.6084624,43.6085817,43.6087528,43.6088219,43.6089356,43.6089602,43.6091512,43.6092884,43.6094538,43.6095247,43.6096219,43.6096969,43.6097306,43.6098208,43.6099845,43.6101808,43.6104616,43.6106517,43.6108931,43.6110814,43.6112491,43.6113794,43.6114408,43.6115166,43.6115946,43.6116463,43.6116963,43.6115106]}]]],null,"track",{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}},"pane":"line","stroke":true,"color":"#6666FF","weight":2,"opacity":0.9,"fill":false,"fillColor":"#6666FF","fillOpacity":1,"smoothFactor":1,"noClip":false},"<html><head><link rel=\"stylesheet\" type=\"text/css\" href=\"lib/popup/popup.css\"><\/head><body><div class=\"scrollableContainer\"><table class=\"popup scrollable\" id=\"popup\"><tr class='coord'><td><\/td><td><b>Feature ID<\/b><\/td><td align='right'>1&emsp;<\/td><\/tr><tr class='alt'><td>1<\/td><td><b>name&emsp;<\/b><\/td><td align='right'>NA&emsp;<\/td><\/tr><tr><td>2<\/td><td><b>cmt&emsp;<\/b><\/td><td align='right'>NA&emsp;<\/td><\/tr><tr class='alt'><td>3<\/td><td><b>desc&emsp;<\/b><\/td><td align='right'>NA&emsp;<\/td><\/tr><tr><td>4<\/td><td><b>src&emsp;<\/b><\/td><td align='right'>NA&emsp;<\/td><\/tr><tr class='alt'><td>5<\/td><td><b>link1_href&emsp;<\/b><\/td><td align='right'>NA&emsp;<\/td><\/tr><tr><td>6<\/td><td><b>link1_text&emsp;<\/b><\/td><td align='right'>NA&emsp;<\/td><\/tr><tr class='alt'><td>7<\/td><td><b>link1_type&emsp;<\/b><\/td><td align='right'>NA&emsp;<\/td><\/tr><tr><td>8<\/td><td><b>link2_href&emsp;<\/b><\/td><td align='right'>NA&emsp;<\/td><\/tr><tr class='alt'><td>9<\/td><td><b>link2_text&emsp;<\/b><\/td><td align='right'>NA&emsp;<\/td><\/tr><tr><td>10<\/td><td><b>link2_type&emsp;<\/b><\/td><td align='right'>NA&emsp;<\/td><\/tr><tr class='alt'><td>11<\/td><td><b>number&emsp;<\/b><\/td><td align='right'>NA&emsp;<\/td><\/tr><tr><td>12<\/td><td><b>type&emsp;<\/b><\/td><td align='right'>NA&emsp;<\/td><\/tr><tr class='alt'><td>13<\/td><td><b>geometry&emsp;<\/b><\/td><td align='right'>sfc_MULTILINESTRING&emsp;<\/td><\/tr><\/table><\/div><\/body><\/html>",{"maxWidth":800,"minWidth":50,"autoPan":true,"keepInView":false,"closeButton":true,"closeOnClick":true,"className":""},"1",{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},{"stroke":true,"weight":3,"opacity":1,"fill":false,"fillOpacity":0,"bringToFront":false,"sendToBack":false}]},{"method":"addScaleBar","args":[{"maxWidth":100,"metric":true,"imperial":true,"updateWhenIdle":true,"position":"bottomleft"}]},{"method":"addHomeButton","args":[1.400484,43.6038023,1.4349818,43.6116963,"Zoom to track","<strong> track <\/strong>","bottomright"]},{"method":"addLayersControl","args":[["CartoDB.Positron","CartoDB.DarkMatter","OpenStreetMap","Esri.WorldImagery","OpenTopoMap"],"track",{"collapsed":true,"autoZIndex":true,"position":"topleft"}]},{"method":"addLegend","args":[{"colors":["#6666FF"],"labels":["track"],"na_color":null,"na_label":"NA","opacity":1,"position":"topright","type":"factor","title":"track","extra":null,"layerId":null,"className":"info legend","group":"track"}]}],"limits":{"lat":[43.6038023,43.6116963],"lng":[1.400484,1.4349818]}},"evals":[],"jsHooks":{"render":[{"code":"function(el, x, data) {\n  return (\n      function(el, x, data) {\n      // get the leaflet map\n      var map = this; //HTMLWidgets.find('#' + el.id);\n      // we need a new div element because we have to handle\n      // the mouseover output separately\n      // debugger;\n      function addElement () {\n      // generate new div Element\n      var newDiv = $(document.createElement('div'));\n      // append at end of leaflet htmlwidget container\n      $(el).append(newDiv);\n      //provide ID and style\n      newDiv.addClass('lnlt');\n      newDiv.css({\n      'position': 'relative',\n      'bottomleft':  '0px',\n      'background-color': 'rgba(255, 255, 255, 0.7)',\n      'box-shadow': '0 0 2px #bbb',\n      'background-clip': 'padding-box',\n      'margin': '0',\n      'padding-left': '5px',\n      'color': '#333',\n      'font': '9px/1.5 \"Helvetica Neue\", Arial, Helvetica, sans-serif',\n      'z-index': '700',\n      });\n      return newDiv;\n      }\n\n\n      // check for already existing lnlt class to not duplicate\n      var lnlt = $(el).find('.lnlt');\n\n      if(!lnlt.length) {\n      lnlt = addElement();\n\n      // grab the special div we generated in the beginning\n      // and put the mousmove output there\n\n      map.on('mousemove', function (e) {\n      if (e.originalEvent.ctrlKey) {\n      if (document.querySelector('.lnlt') === null) lnlt = addElement();\n      lnlt.text(\n                           ' lon: ' + (e.latlng.lng).toFixed(5) +\n                           ' | lat: ' + (e.latlng.lat).toFixed(5) +\n                           ' | zoom: ' + map.getZoom() +\n                           ' | x: ' + L.CRS.EPSG3857.project(e.latlng).x.toFixed(0) +\n                           ' | y: ' + L.CRS.EPSG3857.project(e.latlng).y.toFixed(0) +\n                           ' | epsg: 3857 ' +\n                           ' | proj4: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs ');\n      } else {\n      if (document.querySelector('.lnlt') === null) lnlt = addElement();\n      lnlt.text(\n                      ' lon: ' + (e.latlng.lng).toFixed(5) +\n                      ' | lat: ' + (e.latlng.lat).toFixed(5) +\n                      ' | zoom: ' + map.getZoom() + ' ');\n      }\n      });\n\n      // remove the lnlt div when mouse leaves map\n      map.on('mouseout', function (e) {\n      var strip = document.querySelector('.lnlt');\n      strip.remove();\n      });\n\n      };\n\n      //$(el).keypress(67, function(e) {\n      map.on('preclick', function(e) {\n      if (e.originalEvent.ctrlKey) {\n      if (document.querySelector('.lnlt') === null) lnlt = addElement();\n      lnlt.text(\n                      ' lon: ' + (e.latlng.lng).toFixed(5) +\n                      ' | lat: ' + (e.latlng.lat).toFixed(5) +\n                      ' | zoom: ' + map.getZoom() + ' ');\n      var txt = document.querySelector('.lnlt').textContent;\n      console.log(txt);\n      //txt.innerText.focus();\n      //txt.select();\n      setClipboardText('\"' + txt + '\"');\n      }\n      });\n\n      //map.on('click', function (e) {\n      //  var txt = document.querySelector('.lnlt').textContent;\n      //  console.log(txt);\n      //  //txt.innerText.focus();\n      //  //txt.select();\n      //  setClipboardText(txt);\n      //});\n\n      function setClipboardText(text){\n      var id = 'mycustom-clipboard-textarea-hidden-id';\n      var existsTextarea = document.getElementById(id);\n\n      if(!existsTextarea){\n      console.log('Creating textarea');\n      var textarea = document.createElement('textarea');\n      textarea.id = id;\n      // Place in top-left corner of screen regardless of scroll position.\n      textarea.style.position = 'fixed';\n      textarea.style.top = 0;\n      textarea.style.left = 0;\n\n      // Ensure it has a small width and height. Setting to 1px / 1em\n      // doesn't work as this gives a negative w/h on some browsers.\n      textarea.style.width = '1px';\n      textarea.style.height = '1px';\n\n      // We don't need padding, reducing the size if it does flash render.\n      textarea.style.padding = 0;\n\n      // Clean up any borders.\n      textarea.style.border = 'none';\n      textarea.style.outline = 'none';\n      textarea.style.boxShadow = 'none';\n\n      // Avoid flash of white box if rendered for any reason.\n      textarea.style.background = 'transparent';\n      document.querySelector('body').appendChild(textarea);\n      console.log('The textarea now exists :)');\n      existsTextarea = document.getElementById(id);\n      }else{\n      console.log('The textarea already exists :3')\n      }\n\n      existsTextarea.value = text;\n      existsTextarea.select();\n\n      try {\n      var status = document.execCommand('copy');\n      if(!status){\n      console.error('Cannot copy text');\n      }else{\n      console.log('The text is now on the clipboard');\n      }\n      } catch (err) {\n      console.log('Unable to copy.');\n      }\n      }\n\n\n      }\n      ).call(this.getMap(), el, x, data);\n}","data":null}]}}</script>
+<p>Doing this route each day was a great way to clear my head and prepare for my talk on Wednesday morning.</p>
+</div>
+<div id="my-talk-transport-planning-with-r" class="section level2">
+<h2>My talk: transport planning with R</h2>
+<p>My talk was part of a session entitled ‘Movement &amp; transport’, that contained the following talks:</p>
+<div id="htmlwidget-2" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-2">{"x":{"filter":"none","data":[["85","87","89","91"],["Movement &amp; transport","Movement &amp; transport","Movement &amp; transport","Movement &amp; transport"],["Rocio Joo","Mohammad Mehdi Moradi","Christine Thomas-Agnan","Robin Lovelace"],["Navigating through the R packages for movement","Classes, methods and data analysis for trajectories","Modelling spatial flows with R","R for Transport Planning"],["http://www.user2019.fr/static/pres/t258615.pdf","http://www.user2019.fr/static/pres/t251784.pdf","http://www.user2019.fr/static/pres/t256726.pdf","https://www.robinlovelace.net/presentations/user2019-r-for-transport-planning.html"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Session<\/th>\n      <th>Speaker<\/th>\n      <th>Title<\/th>\n      <th>link<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"order":[],"autoWidth":false,"orderClasses":false,"columnDefs":[{"orderable":false,"targets":0}]}},"evals":[],"jsHooks":[]}</script>
+<p>I won’t go into the details of my talk because you can see the <a href="https://www.robinlovelace.net/presentations/user2019-r-for-transport-planning.html#1">slides for yourself at the URL</a>.
+However, it raised many questions and makes me wonder if it’s worth creating an ‘r-transport’ type organisation.
+Another question, that I didn’t get to answer, is where should reproducible transport questions go, now that my attempts to create a ‘Transport Planning’ StackExchange site seemed to have failed, as shown in the slide below : ( Any ideas on that, welcome : )</p>
+<iframe src="https://www.robinlovelace.net/presentations/user2019-r-for-transport-planning.html#28" width="672" height="400px">
+</iframe>
+</div>
+<div id="user-2019-socials" class="section level2">
+<h2>UseR! 2019 socials</h2>
+<p>I’ve often heard that the most valuable parts of conferences take place outside the formal sessions and there were ample opportunities for this to happen at UseR! 2019, with plentiful coffee breaks (and plentiful coffee!) and a range of fringe events and social events on a spectrum from the official Gala Dinner to spontaneous social trips to explore the night life in Toulouse.
+The Gala Dinner was frankly amazing: it’s not everyday that you get to explore and internation space station and listen to Flemanco music in the same evening (the photos and video below prove it is possible)!</p>
+<a data-flickr-embed="true"  href="https://www.flickr.com/photos/97888609@N02/48256753957/in/photostream/" title="PANO_20190710_203925.jpg"><img src="https://live.staticflickr.com/65535/48256753957_e76846ea55_c.jpg" width="800" height="356" alt="PANO_20190710_203925.jpg"></a>
+<script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+<a data-flickr-embed="true"  href="https://www.flickr.com/photos/97888609@N02/48256682626/in/album-72157709543796761/" title="IMG_20190710_201757"><img src="https://live.staticflickr.com/65535/48256682626_35e1995fdb_c.jpg" width="800" height="600" alt="IMG_20190710_201757"></a>
+<script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+<a data-flickr-embed="true"  href="https://www.flickr.com/photos/97888609@N02/48256686546/in/photostream/" title="VID_20190710_202540"><img src="https://live.staticflickr.com/31337/48256686546_9048fc1278_h.jpg" width="1600" height="900" alt="VID_20190710_202540"></a>
+<script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+</div>
+<div id="catching-up-with-collaborators-and-online-acquaintances" class="section level2">
+<h2>Catching up with collaborators and online acquaintances</h2>
+<p>The event was a great opportunity to catch up with R collaborators.
+Jakub Nowosad and I did some important thinking on our <a href="https://geocompr.robinlovelace.net/"><em>Geocomputation with R</em></a> open source book (<a href="https://geocompr.github.io/user_19/presentation/#1">see the slides from Jakub’s talk here</a>), and a photo taken just before the talk below.</p>
+<a data-flickr-embed="true"  href="https://www.flickr.com/photos/97888609@N02/48272563561/" title="IMG_20190712_110533"><img src="https://live.staticflickr.com/65535/48272563561_d2e9a5654b_c.jpg" width="800" height="600" alt="IMG_20190712_110533"></a>
+<script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+<p>I finally managed to pursuade Colin Gillespie that we need to update our open source book <a href="https://csgillespie.github.io/efficientR/"><em>Efficient R Programming</em></a>.
+Watch this space…</p>
+<p>And I met many people whose work I’ve seen online but never had the pleasure of meeting in person, including Timothée Giraud (author of <a href="https://github.com/rCarto/osrm">osrm</a> and many other excellent geo* packages), Enrico Spinielli (who is pushing the boundaries of 3d trajectory analysis in R with packages such as <a href="https://github.com/euctrl-pru/trrrj">trjjj</a>) and Angela Li (who is pushing <a href="https://twitter.com/hashtag/rspatial">#rspatial</a> to new levels on the other side of the Atlantic).</p>
+</div>
+<div id="serendipities" class="section level2">
+<h2>Serendipities</h2>
+<p>Of course there was much serendipity which is probably inevitable at an event of this size.
+I had the honour of meeting many of my R heroes, who were all fun and friendly, demonstrating that it is possible to be high flying while humble.
+On the train back I sat next R Core Team member Michael Meachler, and learned about the messages emitted every time packages such as <code>stplanr</code>, which depend on packages that use <code>R.oo</code>, are loaded:</p>
+<pre class="r"><code>library(stplanr)</code></pre>
+<pre><code>## Registered S3 method overwritten by &#39;R.oo&#39;:
+##   method        from       
+##   throw.default R.methodsS3</code></pre>
+<p>We got on so well we decided to walk through part of Paris where we both had to change trains as shown below:</p>
+<a data-flickr-embed="true"  href="https://www.flickr.com/photos/97888609@N02/48272643002/in/photostream/" title="IMG_20190712_171219"><img src="https://live.staticflickr.com/65535/48272643002_bda5773a2a_c.jpg" width="800" height="600" alt="IMG_20190712_171219"></a>
+<script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+</div>
+<div id="reflections-on-when-to-go-to-conferences" class="section level2">
+<h2>Reflections on when to go to conferences</h2>
+<p>The only negative part of the conference for me was that it was too short.
+Reflecting on it, I’ve decided to try to attend fewer conference but give them 100%, rather than attending many and feeling pressed for time.
+“Quality over quantity” should be guiding principle of conference attendance I’ve decided.</p>
+</div>
+</div>
+<div id="conclusion" class="section level1">
+<h1>Conclusion</h1>
+<p>Overall, UseR! 2019 was a fun, enlightening and inspiring event.
+I wish more conferences were like this.
+This small write up is designed as a reminder to my future self, and anyone else reading, to remember how good conferences <em>can be</em>.
+The example set by this outstanding conference provides some pointers in that direction.</p>
+<!-- I missed the train back home, the third time I've missed the Eurostar. -->
+<!-- It's due to my habit of getting caught-up in the moment and simple poor calculation. -->
+<!-- My train arrived in Paris Montparnasse at 16:13 giving me 2 hours before the train from Paris du Nord at 18:13. -->
+<!-- It seems like ample time in which to make the walk, which Google calculated at around 2 hours. -->
+<!-- For some reason I decided that the train departed at 18:48, meaning that I needed to be there by around 18:00. -->
+<!-- If that were true I'd have got the train: I arrived at around 17:55. -->
+<!-- In any case, the episode made me feel down. -->
+<!-- I cursed myself for such bad timing, and getting lost in the moment. -->
+<!-- But now I'm on the train home well fed and watered, and with support from my amazing fiancee Katy, I'm feeling better. -->
+<!-- I don't have internet. -->
+<!-- My reaction to this, constantly trying to connect, and checking my phone repeatedly, I think highlights a problem I have: I'm addicted to the quickfire feedback that the internet provides. -->
+<!-- My attention span is too short. -->
+<!-- But being away from the internet is also an opportunity, to write up the event, and shift to longer attention span activities. -->
+<!-- I got some great photos from the event and want to do a write-up of it, especially the cycling part, that was awesome. -->
+<!-- So I have a plan: comment out these three paragraphs and start over, with a write-up of #UseR2019 for public consumption, including the bike, my talk, meeting Michael Meachler and everthing. -->
+<!-- A worthy use of time? -->
+<!-- I cannot think a better one at the moment. -->
+</div>
+
+    </div>
+  </article>
+
+  
+<section id="comments">
+  <div id="disqus_thread"></div>
+  <script>
+  var disqus_config = function () {
+  
+  };
+  (function() {
+    var inIFrame = function() {
+      var iframe = true;
+      try { iframe = window.self !== window.top; } catch (e) {}
+      return iframe;
+    };
+    if (inIFrame()) return;
+    var d = document, s = d.createElement('script');
+    s.src = '//robinlovelace.disqus.com/embed.js'; s.async = true;
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+
+
+
+</main>
+
+      <footer class="footer">
+        <ul class="footer-links">
+          <li>
+            <a href="../../../../index.xml" type="application/rss+xml" target="_blank">RSS feed</a>
+          </li>
+          <li>
+            <a href="https://gohugo.io/" class="footer-links-kudos">Made with <img src="../../../../images/hugo-logo.png" alt="Img link to Hugo website" width="22" height="22"></a>
+          </li>
+        </ul>
+      </footer>
+
+    </div>
+    
+
+
+
+<script src="//cdn.bootcss.com/highlight.js/9.10.0/highlight.min.js"></script>
+
+
+
+<script src="//cdn.bootcss.com/highlight.js/9.10.0/languages/r.min.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.10.0/languages/yaml.min.js"></script>
+<script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+
+
+
+    
+<script src="../../../../js/math-code.js"></script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+    
+  </body>
+</html>
+

@@ -3,13 +3,64 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/post/</loc>
+    <lastmod>2019-07-13T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/2019/07/13/user2019/</loc>
+    <lastmod>2019-07-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2019-07-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/presentations/geocompr-launch/</loc>
+    <lastmod>2019-04-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/presentations/</loc>
     <lastmod>2019-04-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/presentations/satrday-keynote/</loc>
     <lastmod>2019-04-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/</loc>
+    <lastmod>2019-02-25T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2019-02-25T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/paper/</loc>
+    <lastmod>2019-02-25T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/planning/</loc>
+    <lastmod>2019-02-25T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/r/</loc>
+    <lastmod>2019-02-25T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -63,8 +114,32 @@
   </url>
   
   <url>
+    <loc>/tags/blogging/</loc>
+    <lastmod>2017-04-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/2016/12/21/cyclestreets.net-in-the-propensity-to-cycle-tool/</loc>
     <lastmod>2016-12-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/r/</loc>
+    <lastmod>2016-12-21T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/maps/</loc>
+    <lastmod>2016-12-21T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/geostat/</loc>
+    <lastmod>2016-09-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -78,32 +153,19 @@
   </url>
   
   <url>
+    <loc>/tags/gis/</loc>
+    <lastmod>2015-01-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/2015/01/20/r-vs-qgis-for-sustainable-transport-planning/</loc>
     <lastmod>2015-01-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/2014/01/28/the-future-is-not-what-it-used-to-be-book-review/</loc>
-    <lastmod>2014-01-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/2013/10/13/moving-house-by-bicycle-trailer/</loc>
-    <lastmod>2013-10-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/2013/09/22/presentation-at-foss4g-2013/</loc>
-    <lastmod>2013-09-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/about/</loc>
-  </url>
-  
-  <url>
-    <loc>/tags/blogging/</loc>
-    <lastmod>2017-04-30T00:00:00+00:00</lastmod>
+    <loc>/tags/open-source/</loc>
+    <lastmod>2015-01-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -114,96 +176,13 @@
   </url>
   
   <url>
-    <loc>/categories/</loc>
+    <loc>/2014/01/28/the-future-is-not-what-it-used-to-be-book-review/</loc>
     <lastmod>2014-01-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/collapse/</loc>
     <lastmod>2014-01-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/categories/conferences/</loc>
-    <lastmod>2013-09-22T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/categories/ecotech/</loc>
-    <lastmod>2013-10-13T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/geostat/</loc>
-    <lastmod>2016-09-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/gis/</loc>
-    <lastmod>2015-01-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/maps/</loc>
-    <lastmod>2016-12-21T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/categories/open-source/</loc>
-    <lastmod>2013-09-22T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/open-source/</loc>
-    <lastmod>2015-01-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/paper/</loc>
-    <lastmod>2019-02-25T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/planning/</loc>
-    <lastmod>2019-02-25T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/post/</loc>
-    <lastmod>2019-02-25T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/categories/presentation/</loc>
-    <lastmod>2013-09-22T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/publications/</loc>
-  </url>
-  
-  <url>
-    <loc>/categories/r/</loc>
-    <lastmod>2019-02-25T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/r/</loc>
-    <lastmod>2016-12-21T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -214,14 +193,37 @@
   </url>
   
   <url>
-    <loc>/presentations/</loc>
-    <lastmod>2019-04-30T00:00:00+00:00</lastmod>
+    <loc>/categories/ecotech/</loc>
+    <lastmod>2013-10-13T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/</loc>
-    <lastmod>2017-04-30T00:00:00+00:00</lastmod>
+    <loc>/2013/10/13/moving-house-by-bicycle-trailer/</loc>
+    <lastmod>2013-10-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/conferences/</loc>
+    <lastmod>2013-09-22T00:00:00+00:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/open-source/</loc>
+    <lastmod>2013-09-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/presentation/</loc>
+    <lastmod>2013-09-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/2013/09/22/presentation-at-foss4g-2013/</loc>
+    <lastmod>2013-09-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -231,8 +233,15 @@
   </url>
   
   <url>
-    <loc>/</loc>
-    <lastmod>2019-04-30T00:00:00+00:00</lastmod>
+    <loc>/about/</loc>
+  </url>
+  
+  <url>
+    <loc>/publications/</loc>
+  </url>
+  
+  <url>
+    <loc>/presentations/</loc>
   </url>
   
 </urlset>

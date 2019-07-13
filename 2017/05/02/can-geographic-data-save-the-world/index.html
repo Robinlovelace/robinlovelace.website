@@ -3,11 +3,12 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Hugo 0.54.0" />
+<meta name="generator" content="Hugo 0.55.6" />
 
 
 <title>Can Geographic Data Save the World? - Robin Lovelace&#39;s website. Energy. Transport. Technology. Change the World.</title>
 <meta property="og:title" content="Can Geographic Data Save the World? - Robin Lovelace&#39;s website. Energy. Transport. Technology. Change the World.">
+
 
 
 
@@ -69,7 +70,7 @@
     <h1 class="article-title">Can Geographic Data Save the World?</h1>
 
     
-    <span class="article-date">2017/05/02</span>
+    <span class="article-date">2017-05-02</span>
     
 
     <div class="article-content">
@@ -150,7 +151,7 @@ Figure 1: The Route Network layer illustrating the shifting spatial distribution
 <blockquote>
 <p>Talk is cheap. Show me the code.</p>
 </blockquote>
-<p>On that basis, to show what I meant by reproducibility and ‘data carpentry’ <span class="citation">(Gillespie and Lovelace 2016)</span> (a concept mentioned in the slides not discussed in audio for lack of time) I provided some some example code that illustrated the kinds of techniques underlying the PCT.</p>
+<p>On that basis, to show what I meant by reproducibility and ‘data carpentry’ <span class="citation">(<span class="citeproc-not-found" data-reference-id="gillespie_efficient_2016"><strong>???</strong></span>)</span> (a concept mentioned in the slides not discussed in audio for lack of time) I provided some some example code that illustrated the kinds of techniques underlying the PCT.</p>
 <p>First download and visualise some transport data (from the Isle of Wight as, the smallest region in the PCT):</p>
 <pre class="r"><code>u_pct = &quot;https://github.com/npct/pct-data/raw/master/isle-of-wight/l.Rds&quot;
 if(!file.exists(&quot;l.Rds&quot;))
@@ -192,8 +193,10 @@ plot(l_walk2, add = T, lwd = 3)</code></pre>
 l_drive_short = l_sf %&gt;% 
   filter(distsf &lt; 1000) %&gt;% 
   filter(car_driver &gt; foot)</code></pre>
-<pre class="r"><code>library(tmap)
-tmap_mode(&quot;view&quot;)</code></pre>
+<pre class="r"><code>library(tmap)</code></pre>
+<pre><code>## Warning in fun(libname, pkgname): rgeos: versions of GEOS runtime 3.7.0-CAPI-1.11.0
+## and GEOS at installation 3.6.2-CAPI-1.10.2differ</code></pre>
+<pre class="r"><code>tmap_mode(&quot;view&quot;)</code></pre>
 <pre><code>## tmap mode set to interactive viewing</code></pre>
 <pre class="r"><code>qtm(l_drive_short)</code></pre>
 <div id="htmlwidget-1" style="width:672px;height:480px;" class="leaflet html-widget"></div>
@@ -216,9 +219,6 @@ tmap_mode(&quot;view&quot;)</code></pre>
 <div id="refs" class="references">
 <div id="ref-arribas-bel_accidental_2014">
 <p>Arribas-Bel, Daniel. 2014. “Accidental, Open and Everywhere: Emerging Data Sources for the Understanding of Cities.” <em>Applied Geography</em> 49: 45–53.</p>
-</div>
-<div id="ref-gillespie_efficient_2016">
-<p>Gillespie, Colin, and Robin Lovelace. 2016. <em>Efficient R Programming: A Practical Guide to Smarter Programming</em>. O’Reilly Media.</p>
 </div>
 <div id="ref-lovelace_big_2016">
 <p>Lovelace, Robin, Mark Birkin, Philip Cross, and Martin Clarke. 2016. “From Big Noise to Big Data: Toward the Verification of Large Data Sets for Understanding Regional Retail Flows.” <em>Geographical Analysis</em> 48 (1): 59–81. <a href="https://doi.org/10.1111/gean.12081">https://doi.org/10.1111/gean.12081</a>.</p>
