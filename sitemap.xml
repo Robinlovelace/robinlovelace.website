@@ -3,6 +3,12 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/categories/</loc>
+    <lastmod>2019-07-13T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/post/</loc>
     <lastmod>2019-07-13T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -14,8 +20,32 @@
   </url>
   
   <url>
+    <loc>/tags/</loc>
+    <lastmod>2019-07-13T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/conference/</loc>
+    <lastmod>2019-07-13T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/r/</loc>
+    <lastmod>2019-07-13T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/</loc>
     <lastmod>2019-07-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/toulouse/</loc>
+    <lastmod>2019-07-13T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -31,24 +61,6 @@
   <url>
     <loc>/presentations/satrday-keynote/</loc>
     <lastmod>2019-04-06T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/</loc>
-    <lastmod>2019-02-25T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/categories/r/</loc>
-    <lastmod>2019-02-25T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
-    <lastmod>2019-02-25T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -71,6 +83,12 @@
   <url>
     <loc>/2019/02/14/aggregating-lines-part-ii/</loc>
     <lastmod>2019-02-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/stplanr/</loc>
+    <lastmod>2019-02-14T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>

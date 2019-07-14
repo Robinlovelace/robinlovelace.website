@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>conference on Robin Lovelace&#39;s website. Energy. Transport. Technology. Change the World.</title>
+    <link>/tags/conference/</link>
+    <description>Recent content in conference on Robin Lovelace&#39;s website. Energy. Transport. Technology. Change the World.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 13 Jul 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/conference/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Six great things about UseR! 2019</title>
+      <link>/2019/07/13/user2019/</link>
+      <pubDate>Sat, 13 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/07/13/user2019/</guid>
+      <description>UseR! is the highest profile and, I believe, most popular annual meeting for R afficionados, known affectionately as ‘UseRs’ for the purposes of the event. For those who have been living under a stone for the past decade ;) R is an open source statistical programming language that has seen explosive growth since ‘data science’ became a buzzword.</description>
+    </item>
+    
+  </channel>
+</rss>

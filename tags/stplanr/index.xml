@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>stplanr on Robin Lovelace&#39;s website. Energy. Transport. Technology. Change the World.</title>
+    <link>/tags/stplanr/</link>
+    <description>Recent content in stplanr on Robin Lovelace&#39;s website. Energy. Transport. Technology. Change the World.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 14 Feb 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/stplanr/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Aggregating lines, part II</title>
+      <link>/2019/02/14/aggregating-lines-part-ii/</link>
+      <pubDate>Thu, 14 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/02/14/aggregating-lines-part-ii/</guid>
+      <description>The previous post demonstrated a new method to aggregate overlapping lines. It showed how to combine 2 lines that have an area of overlap. More excitingly, it led to the creation of a new function in stplanr, overline_sf(), that lives in the development version of the package. The purpose of this post is to provide an update on the status of the work to refactor the overline() function, in a human friendly alternative to discussion in the relevant GitHub issue: https://github.</description>
+    </item>
+    
+    <item>
+      <title>Aggregating lines, Part I</title>
+      <link>/2018/10/27/aggregating-lines/</link>
+      <pubDate>Sat, 27 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/10/27/aggregating-lines/</guid>
+      <description>Introduction It’s been a busy 12 months but with the Geocomputation with R book nearing completion1 I’ve finally found some time to update my blog and do a bit of thinking, about the tangled topic of line aggregation.
+ Why aggregate lines? The transport ‘flow’ on any particular segment of the transport networks is the aggregate (sum) of trips that pass through it (Hollander 2016). Finding the flow across a transport network based on input data composed of individual routes, is therefore an aggregation problem.</description>
+    </item>
+    
+  </channel>
+</rss>

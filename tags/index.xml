@@ -6,10 +6,28 @@
     <description>Recent content in Tags on Robin Lovelace&#39;s website. Energy. Transport. Technology. Change the World.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 25 Feb 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 13 Jul 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>conference</title>
+      <link>/tags/conference/</link>
+      <pubDate>Sat, 13 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/conference/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>toulouse</title>
+      <link>/tags/toulouse/</link>
+      <pubDate>Sat, 13 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/toulouse/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>paper</title>
@@ -26,6 +44,15 @@
       <pubDate>Mon, 25 Feb 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/planning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>stplanr</title>
+      <link>/tags/stplanr/</link>
+      <pubDate>Thu, 14 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/stplanr/</guid>
       <description></description>
     </item>
     
