@@ -8,7 +8,7 @@
     <language>en-us</language>
     <lastBuildDate>Sun, 22 Sep 2013 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/categories/presentation/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="/categories/presentation/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -17,7 +17,19 @@
       <pubDate>Sun, 22 Sep 2013 00:00:00 +0000</pubDate>
       
       <guid>/2013/09/22/presentation-at-foss4g-2013/</guid>
-      <description>&lt;p&gt;I presented last Thursday at &lt;a href=&#34;http://2013.foss4g.org/&#34;&gt;FOSS4G&lt;/a&gt;, THE conference to go to for Free Open Source Software for Geo applications (get it?). It was an interesting event, with hundreds of delegates dressing up in one form or another as Robin Hood, fantastic food and a very wide range of talks. Just take a look at the &lt;a href=&#34;http://2013.foss4g.org/conf/programme/daily/2/&#34;&gt;second day&lt;/a&gt; of talks: packed to the rafters with sessions, including &lt;a href=&#34;http://2013.foss4g.org/conf/programme/sessions/36/&#34;&gt;mine&lt;/a&gt;, on visualisation.&lt;/p&gt;</description>
+      <description>&lt;p&gt;I presented last Thursday at &lt;a href=&#34;http://2013.foss4g.org/&#34;&gt;FOSS4G&lt;/a&gt;, THE conference to go to for Free Open Source Software for Geo applications (get it?). It was an interesting event, with hundreds of delegates dressing up in one form or another as Robin Hood, fantastic food and a very wide range of talks. Just take a look at the &lt;a href=&#34;http://2013.foss4g.org/conf/programme/daily/2/&#34;&gt;second day&lt;/a&gt; of talks: packed to the rafters with sessions, including &lt;a href=&#34;http://2013.foss4g.org/conf/programme/sessions/36/&#34;&gt;mine&lt;/a&gt;, on visualisation.&lt;/p&gt;
+
+&lt;p&gt;A link to the slides is provided below. With these as a backdrop, I discussed the various techniques I had used to &amp;lsquo;get my work out there&amp;rsquo;, to make it as accessible as possible to other people, especially those not involved in the stuffy world of academia. There was good feedback from the audience. Ben Hennig suggesting that I coloured only populated areas on my visualisations, to avoid attributing excessive visual importance to large uninhabited spaces. This technique can be witnessed to great effect on &lt;a href=&#34;http://oliverobrien.co.uk/2012/02/&#34;&gt;Oliver O&amp;rsquo;brien&amp;rsquo;s blog&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;An illustration of visualisation to understand the spatial distribution of transport energy use, taken from my &lt;a href=&#34;http://etheses.whiterose.ac.uk/5027/&#34;&gt;thesis&lt;/a&gt;, is shown below:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/Robinlovelace/thesis-reproducible/master/Figures/prop-trans-energy.png&#34; alt=&#34;prop-trans-energy.png&#34; width=&#34;100%&#34;&gt;&lt;/p&gt;
+
+&lt;p&gt;All of the talks were recorded, so if you are REALLY interested in the talk, you should also be able to listen to it - keep an eye out on the FOSS4G website to see when these go up live. For now, sit back and enjoy the visuals (see the slides at &lt;a href=&#34;https://www.slideshare.net/robinlovelace1985/visualising-the-energy-costs-of-commuting-26396493&#34;&gt;slideshare.net&lt;/a&gt;).&lt;/p&gt;
+
+&lt;!--
+&lt;iframe src=&#34;http://www.slideshare.net/slideshow/embed_code/26396493&#34; width=&#34;427&#34; height=&#34;356&#34; frameborder=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; style=&#34;border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px&#34; allowfullscreen webkitallowfullscreen mozallowfullscreen&gt; &lt;/iframe&gt; &lt;div style=&#34;margin-bottom:5px&#34;&gt; &lt;strong&gt; &lt;a href=&#34;https://www.slideshare.net/robinlovelace1985/visualising-the-energy-costs-of-commuting-26396493&#34; title=&#34;Visualising the energy costs of commuting&#34; target=&#34;_blank&#34;&gt;Visualising the energy costs of commuting&lt;/a&gt; &lt;/strong&gt; from &lt;strong&gt;&lt;a href=&#34;http://www.slideshare.net/robinlovelace1985&#34; target=&#34;_blank&#34;&gt;Robin Lovelace&lt;/a&gt;&lt;/strong&gt; &lt;/div&gt;
+--&gt;</description>
     </item>
     
   </channel>
