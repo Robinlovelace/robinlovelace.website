@@ -40,6 +40,12 @@
   </url>
   
   <url>
+    <loc>/categories/r/</loc>
+    <lastmod>2019-02-25T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/</loc>
     <lastmod>2019-02-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -53,12 +59,6 @@
   
   <url>
     <loc>/tags/planning/</loc>
-    <lastmod>2019-02-25T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/categories/r/</loc>
     <lastmod>2019-02-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -125,13 +125,13 @@
   </url>
   
   <url>
-    <loc>/tags/r/</loc>
+    <loc>/tags/maps/</loc>
     <lastmod>2016-12-21T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/maps/</loc>
+    <loc>/tags/r/</loc>
     <lastmod>2016-12-21T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
