@@ -490,9 +490,9 @@ Figure 5: Illustration of a route network generated with sf functions.
 &lt;pre&gt;&lt;code&gt;## # A tibble: 3 x 6
 ##   expression        min   median `itr/sec` mem_alloc `gc/sec`
 ##   &amp;lt;bch:expr&amp;gt;   &amp;lt;bch:tm&amp;gt; &amp;lt;bch:tm&amp;gt;     &amp;lt;dbl&amp;gt; &amp;lt;bch:byt&amp;gt;    &amp;lt;dbl&amp;gt;
-## 1 overline.sp   11.88ms  12.26ms      81.6  727.76KB     2.04
-## 2 overline.sf   16.09ms  16.73ms      59.8    2.32MB     9.20
-## 3 overline_sf2   9.03ms   9.28ms     108.    97.62KB     4.14&lt;/code&gt;&lt;/pre&gt;
+## 1 overline.sp   11.76ms  11.98ms      82.9  727.76KB     2.02
+## 2 overline.sf   16.03ms  16.47ms      60.7    2.32MB     9.34
+## 3 overline_sf2   8.93ms   9.23ms     107.    97.62KB     4.20&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;The results are not Earth-shattering: the new function seems to be around the same speed as the original, if a little faster. This is great news, but remember: the new function only works on 2 lines so is much simpler. More work needed!&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;next-steps&#34; class=&#34;section level2&#34;&gt;
@@ -1739,6 +1739,7 @@ below, sounds and all.&lt;/p&gt;
 &lt;p&gt;This website was built using open source software. It uses &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;, a static website generator written in Go, and &lt;a href=&#34;https://bookdown.org/yihui/blogdown/&#34;&gt;blogdown&lt;/a&gt;, an R package by Yihui Xie writing posts that contain embedded code. Its source code can be found at &lt;a href=&#34;https://github.com/rbind/robinlovelace&#34;&gt;github.com/rbind/robinlovelace&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;If you’re interested in my earlier work, please check-out:&lt;/p&gt;
 &lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Other posts by me on &lt;a href=&#34;https://www.r-bloggers.com/author/robin-lovelace-r/&#34;&gt;R-Bloggers&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;My old Wordpress site at &lt;a href=&#34;https://robinlovelace.wordpress.com/&#34;&gt;robinlovelace.wordpress.com/&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Older posts hosted on an &lt;a href=&#34;http://robinlovelace.net/old-site.html&#34;&gt;earlier version of this website&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;My YouTube channel at &lt;a href=&#34;https://www.youtube.com/robinlovelace&#34;&gt;youtube.com/robinlovelace&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
