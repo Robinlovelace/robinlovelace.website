@@ -2,129 +2,129 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Robin Lovelace&#39;s website. Energy. Transport. Technology. Change the World.</title>
-    <link>/tags/</link>
+    <link>https://www.robinlovelace.net/tags/</link>
     <description>Recent content in Tags on Robin Lovelace&#39;s website. Energy. Transport. Technology. Change the World.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 13 Jul 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.robinlovelace.net/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>conference</title>
-      <link>/tags/conference/</link>
+      <link>https://www.robinlovelace.net/tags/conference/</link>
       <pubDate>Sat, 13 Jul 2019 00:00:00 +0000</pubDate>
       
-      <guid>/tags/conference/</guid>
+      <guid>https://www.robinlovelace.net/tags/conference/</guid>
       <description></description>
     </item>
     
     <item>
       <title>toulouse</title>
-      <link>/tags/toulouse/</link>
+      <link>https://www.robinlovelace.net/tags/toulouse/</link>
       <pubDate>Sat, 13 Jul 2019 00:00:00 +0000</pubDate>
       
-      <guid>/tags/toulouse/</guid>
+      <guid>https://www.robinlovelace.net/tags/toulouse/</guid>
       <description></description>
     </item>
     
     <item>
       <title>paper</title>
-      <link>/tags/paper/</link>
+      <link>https://www.robinlovelace.net/tags/paper/</link>
       <pubDate>Mon, 25 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>/tags/paper/</guid>
+      <guid>https://www.robinlovelace.net/tags/paper/</guid>
       <description></description>
     </item>
     
     <item>
       <title>planning</title>
-      <link>/tags/planning/</link>
+      <link>https://www.robinlovelace.net/tags/planning/</link>
       <pubDate>Mon, 25 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>/tags/planning/</guid>
+      <guid>https://www.robinlovelace.net/tags/planning/</guid>
       <description></description>
     </item>
     
     <item>
       <title>stplanr</title>
-      <link>/tags/stplanr/</link>
+      <link>https://www.robinlovelace.net/tags/stplanr/</link>
       <pubDate>Thu, 14 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>/tags/stplanr/</guid>
+      <guid>https://www.robinlovelace.net/tags/stplanr/</guid>
       <description></description>
     </item>
     
     <item>
       <title>blogging</title>
-      <link>/tags/blogging/</link>
+      <link>https://www.robinlovelace.net/tags/blogging/</link>
       <pubDate>Sun, 30 Apr 2017 00:00:00 +0000</pubDate>
       
-      <guid>/tags/blogging/</guid>
+      <guid>https://www.robinlovelace.net/tags/blogging/</guid>
       <description></description>
     </item>
     
     <item>
       <title>R</title>
-      <link>/tags/r/</link>
+      <link>https://www.robinlovelace.net/tags/r/</link>
       <pubDate>Wed, 21 Dec 2016 00:00:00 +0000</pubDate>
       
-      <guid>/tags/r/</guid>
+      <guid>https://www.robinlovelace.net/tags/r/</guid>
       <description></description>
     </item>
     
     <item>
       <title>maps</title>
-      <link>/tags/maps/</link>
+      <link>https://www.robinlovelace.net/tags/maps/</link>
       <pubDate>Wed, 21 Dec 2016 00:00:00 +0000</pubDate>
       
-      <guid>/tags/maps/</guid>
+      <guid>https://www.robinlovelace.net/tags/maps/</guid>
       <description></description>
     </item>
     
     <item>
       <title>GEOSTAT</title>
-      <link>/tags/geostat/</link>
+      <link>https://www.robinlovelace.net/tags/geostat/</link>
       <pubDate>Wed, 28 Sep 2016 00:00:00 +0000</pubDate>
       
-      <guid>/tags/geostat/</guid>
+      <guid>https://www.robinlovelace.net/tags/geostat/</guid>
       <description></description>
     </item>
     
     <item>
       <title>GIS</title>
-      <link>/tags/gis/</link>
+      <link>https://www.robinlovelace.net/tags/gis/</link>
       <pubDate>Tue, 20 Jan 2015 00:00:00 +0000</pubDate>
       
-      <guid>/tags/gis/</guid>
+      <guid>https://www.robinlovelace.net/tags/gis/</guid>
       <description></description>
     </item>
     
     <item>
       <title>open source</title>
-      <link>/tags/open-source/</link>
+      <link>https://www.robinlovelace.net/tags/open-source/</link>
       <pubDate>Tue, 20 Jan 2015 00:00:00 +0000</pubDate>
       
-      <guid>/tags/open-source/</guid>
+      <guid>https://www.robinlovelace.net/tags/open-source/</guid>
       <description></description>
     </item>
     
     <item>
       <title>collapse</title>
-      <link>/tags/collapse/</link>
+      <link>https://www.robinlovelace.net/tags/collapse/</link>
       <pubDate>Tue, 28 Jan 2014 00:00:00 +0000</pubDate>
       
-      <guid>/tags/collapse/</guid>
+      <guid>https://www.robinlovelace.net/tags/collapse/</guid>
       <description></description>
     </item>
     
     <item>
       <title>reviews</title>
-      <link>/tags/reviews/</link>
+      <link>https://www.robinlovelace.net/tags/reviews/</link>
       <pubDate>Tue, 28 Jan 2014 00:00:00 +0000</pubDate>
       
-      <guid>/tags/reviews/</guid>
+      <guid>https://www.robinlovelace.net/tags/reviews/</guid>
       <description></description>
     </item>
     
