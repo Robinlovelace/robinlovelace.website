@@ -171,7 +171,10 @@ plot(l_walk, add = T, col = &quot;red&quot;, lwd = 3)</code></pre>
 <p>Doh! That code nice ‘clean’ (well certainly consistent) code does not work because <code>Spatial</code> objects are not compatible with the pipe operator <code>%&gt;%</code> syntax.</p>
 <p>Enter the <a href="https://github.com/edzer/sfr"><strong>sf</strong></a> package, which represents a step change in how R handles spatial data. First let’s convert that <code>l</code> object into a ‘simple feature’ object:</p>
 <pre class="r"><code>library(sf)</code></pre>
-<pre><code>## Linking to GEOS 3.7.0, GDAL 2.4.0, PROJ 5.2.0</code></pre>
+<pre><code>## Linking to GEOS 3.7.1, GDAL 2.4.0, PROJ 5.2.0</code></pre>
+<pre><code>## WARNING: different compile-time and runtime versions for GEOS found:</code></pre>
+<pre><code>## Linked against: 3.7.1-CAPI-1.11.1 27a5e771 compiled against: 3.7.0-CAPI-1.11.0</code></pre>
+<pre><code>## It is probably a good idea to reinstall sf, and maybe rgeos and rgdal too</code></pre>
 <pre class="r"><code>l_sf = st_as_sf(l)
 class(l_sf)</code></pre>
 <pre><code>## [1] &quot;sf&quot;         &quot;data.frame&quot;</code></pre>
@@ -192,8 +195,10 @@ plot(l_walk2, add = T, lwd = 3)</code></pre>
 l_drive_short = l_sf %&gt;% 
   filter(distsf &lt; 1000) %&gt;% 
   filter(car_driver &gt; foot)</code></pre>
-<pre class="r"><code>library(tmap)
-tmap_mode(&quot;view&quot;)</code></pre>
+<pre class="r"><code>library(tmap)</code></pre>
+<pre><code>## Warning in fun(libname, pkgname): rgeos: versions of GEOS runtime 3.7.1-CAPI-1.11.1
+## and GEOS at installation 3.7.0-CAPI-1.11.0differ</code></pre>
+<pre class="r"><code>tmap_mode(&quot;view&quot;)</code></pre>
 <pre><code>## tmap mode set to interactive viewing</code></pre>
 <pre class="r"><code>qtm(l_drive_short)</code></pre>
 <div id="htmlwidget-1" style="width:672px;height:480px;" class="leaflet html-widget"></div>

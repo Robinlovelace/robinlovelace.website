@@ -140,6 +140,8 @@ mapview::mapview(track)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## Registered S3 method overwritten by &amp;#39;R.oo&amp;#39;:
 ##   method        from       
 ##   throw.default R.methodsS3&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning in fun(libname, pkgname): rgeos: versions of GEOS runtime 3.7.1-CAPI-1.11.1
+## and GEOS at installation 3.7.0-CAPI-1.11.0differ&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;We got on so well we decided to walk through part of Paris where we both had to change trains as shown below:&lt;/p&gt;
 &lt;a data-flickr-embed=&#34;true&#34;  href=&#34;https://www.flickr.com/photos/97888609@N02/48272643002/in/photostream/&#34; title=&#34;IMG_20190712_171219&#34;&gt;&lt;img src=&#34;https://live.staticflickr.com/65535/48272643002_bda5773a2a_c.jpg&#34; width=&#34;800&#34; height=&#34;600&#34; alt=&#34;IMG_20190712_171219&#34;&gt;&lt;/a&gt;
 &lt;script async src=&#34;//embedr.flickr.com/assets/client-code.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
@@ -428,9 +430,9 @@ Figure 5: Illustration of a route network generated with sf functions.
 &lt;pre&gt;&lt;code&gt;## # A tibble: 3 x 6
 ##   expression        min   median `itr/sec` mem_alloc `gc/sec`
 ##   &amp;lt;bch:expr&amp;gt;   &amp;lt;bch:tm&amp;gt; &amp;lt;bch:tm&amp;gt;     &amp;lt;dbl&amp;gt; &amp;lt;bch:byt&amp;gt;    &amp;lt;dbl&amp;gt;
-## 1 overline.sp    11.8ms  12.13ms      82.4  727.76KB     2.06
-## 2 overline.sf   16.23ms  16.77ms      59.6    2.32MB     9.17
-## 3 overline_sf2   9.04ms   9.37ms     106.    97.62KB     4.16&lt;/code&gt;&lt;/pre&gt;
+## 1 overline.sp   12.19ms  12.53ms      79.8  727.76KB     2.05
+## 2 overline.sf   16.62ms  17.11ms      58.0    2.32MB     9.28
+## 3 overline_sf2   9.34ms   9.51ms     105.    97.62KB     4.20&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;The results are not Earth-shattering: the new function seems to be around the same speed as the original, if a little faster. This is great news, but remember: the new function only works on 2 lines so is much simpler. More work needed!&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;next-steps&#34; class=&#34;section level2&#34;&gt;
