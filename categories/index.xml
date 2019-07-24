@@ -12,9 +12,18 @@
     
     
     <item>
+      <title>Conferences</title>
+      <link>/categories/conferences/</link>
+      <pubDate>Sat, 13 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/conferences/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>r</title>
       <link>/categories/r/</link>
-      <pubDate>Sat, 13 Jul 2019 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 25 Feb 2019 00:00:00 +0000</pubDate>
       
       <guid>/categories/r/</guid>
       <description></description>
@@ -35,15 +44,6 @@
       <pubDate>Sun, 13 Oct 2013 00:00:00 +0000</pubDate>
       
       <guid>/categories/ecotech/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Conferences</title>
-      <link>/categories/conferences/</link>
-      <pubDate>Sun, 22 Sep 2013 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/conferences/</guid>
       <description></description>
     </item>
     
