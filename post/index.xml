@@ -2,69 +2,69 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Robin Lovelace&#39;s website. Energy. Transport. Technology. Change the World.</title>
-    <link>https://www.robinlovelace.net/post/</link>
+    <link>/post/</link>
     <description>Recent content in Posts on Robin Lovelace&#39;s website. Energy. Transport. Technology. Change the World.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 13 Jul 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://www.robinlovelace.net/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Six great things about UseR! 2019</title>
-      <link>https://www.robinlovelace.net/2019/07/13/user2019/</link>
+      <link>/2019/07/13/user2019/</link>
       <pubDate>Sat, 13 Jul 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://www.robinlovelace.net/2019/07/13/user2019/</guid>
+      <guid>/2019/07/13/user2019/</guid>
       <description>UseR! is the highest profile and, I believe, most popular annual meeting for R enthusiasts, known affectionately as ‘UseRs’ for the purposes of the event. For those who have been living under a stone for the past decade ;) R is an open source statistical programming language that has seen explosive growth since ‘data science’ became a buzzword.</description>
     </item>
     
     <item>
       <title>stplanr paper published</title>
-      <link>https://www.robinlovelace.net/2019/02/25/sustainable-transport-planning-with-r-stplanr-paper-published/</link>
+      <link>/2019/02/25/sustainable-transport-planning-with-r-stplanr-paper-published/</link>
       <pubDate>Mon, 25 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://www.robinlovelace.net/2019/02/25/sustainable-transport-planning-with-r-stplanr-paper-published/</guid>
+      <guid>/2019/02/25/sustainable-transport-planning-with-r-stplanr-paper-published/</guid>
       <description>I am very happy to announce that the paper stplanr: A package for transport planning has been published in The R Journal (Lovelace and Ellison 2018) 🎉.
 This is the result of around 3 years of work: it took us (co-author Richard Ellison and me) over a year to get round to writing the paper after the stplanr package was first released on CRAN in November 2015 (see its archive on CRAN for details); it wasn’t until March 2017 that the paper was formally submitted.</description>
     </item>
     
     <item>
       <title>Aggregating lines, part II</title>
-      <link>https://www.robinlovelace.net/2019/02/14/aggregating-lines-part-ii/</link>
+      <link>/2019/02/14/aggregating-lines-part-ii/</link>
       <pubDate>Thu, 14 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://www.robinlovelace.net/2019/02/14/aggregating-lines-part-ii/</guid>
+      <guid>/2019/02/14/aggregating-lines-part-ii/</guid>
       <description>The previous post demonstrated a new method to aggregate overlapping lines. It showed how to combine 2 lines that have an area of overlap. More excitingly, it led to the creation of a new function in stplanr, overline_sf(), that lives in the development version of the package. The purpose of this post is to provide an update on the status of the work to refactor the overline() function, in a human friendly alternative to discussion in the relevant GitHub issue: https://github.</description>
     </item>
     
     <item>
       <title>Aggregating lines, Part I</title>
-      <link>https://www.robinlovelace.net/2018/10/27/aggregating-lines/</link>
+      <link>/2018/10/27/aggregating-lines/</link>
       <pubDate>Sat, 27 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://www.robinlovelace.net/2018/10/27/aggregating-lines/</guid>
+      <guid>/2018/10/27/aggregating-lines/</guid>
       <description>Introduction It’s been a busy 12 months but with the Geocomputation with R book nearing completion1 I’ve finally found some time to update my blog and do a bit of thinking, about the tangled topic of line aggregation.
  Why aggregate lines? The transport ‘flow’ on any particular segment of the transport networks is the aggregate (sum) of trips that pass through it (Hollander 2016). Finding the flow across a transport network based on input data composed of individual routes, is therefore an aggregation problem.</description>
     </item>
     
     <item>
       <title>Can Geographic Data Save the World?</title>
-      <link>https://www.robinlovelace.net/2017/05/02/can-geographic-data-save-the-world/</link>
+      <link>/2017/05/02/can-geographic-data-save-the-world/</link>
       <pubDate>Tue, 02 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://www.robinlovelace.net/2017/05/02/can-geographic-data-save-the-world/</guid>
+      <guid>/2017/05/02/can-geographic-data-save-the-world/</guid>
       <description>I presented yesterday on the use of geographic data in policy in a flamboyantly named talk: Can geographic data save the world (slides available from rpubs.com/Robinlovelace). The purpose of this post is to share the slides, audio and some of the ideas resulting from the talk, for the benefit of people interested in the topic but unable to attend.
 If you just want to sit back and enjoy the slides with audio, rather than read this article, click here for the audio and enjoy the slides below.</description>
     </item>
     
     <item>
       <title>Switching to blogdown</title>
-      <link>https://www.robinlovelace.net/2017/04/30/switching-to-blogdown/</link>
+      <link>/2017/04/30/switching-to-blogdown/</link>
       <pubDate>Sun, 30 Apr 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://www.robinlovelace.net/2017/04/30/switching-to-blogdown/</guid>
+      <guid>/2017/04/30/switching-to-blogdown/</guid>
       <description>I’ve finally got a new blog post, to test that my new set-up is working, using the wonderful new blogdown package.
 Here’s a test plot, to show how it allows R code to be embedded:
 plot(1:9) Now that I have a quick-fire and fun way of getting new content onto the web I expect to be blogging lots more.
@@ -73,47 +73,47 @@ Watch this space!</description>
     
     <item>
       <title>CycleStreets.net in the Propensity to Cycle Tool</title>
-      <link>https://www.robinlovelace.net/2016/12/21/cyclestreets.net-in-the-propensity-to-cycle-tool/</link>
+      <link>/2016/12/21/cyclestreets.net-in-the-propensity-to-cycle-tool/</link>
       <pubDate>Wed, 21 Dec 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://www.robinlovelace.net/2016/12/21/cyclestreets.net-in-the-propensity-to-cycle-tool/</guid>
+      <guid>/2016/12/21/cyclestreets.net-in-the-propensity-to-cycle-tool/</guid>
       <description>After 2 years in the making, the paper describing the Propensity to Cycle Tool (PCT), and the thinking behind it, has finally been published (Lovelace et al. 2016). The PCT is an online tool for helping to decide where to prioritise cycling policies such as new cycle paths.
 The PCT would not have been possible without CycleStreets.net, so as well as describing the PCT and it&amp;rsquo;s use of their routing services, this article serves as a big Thank You from PCT to CycleStreets.</description>
     </item>
     
     <item>
       <title>Geostat2016 Albacete: a write-up</title>
-      <link>https://www.robinlovelace.net/2016/09/28/geostat2016-albacete-a-write-up/</link>
+      <link>/2016/09/28/geostat2016-albacete-a-write-up/</link>
       <pubDate>Wed, 28 Sep 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://www.robinlovelace.net/2016/09/28/geostat2016-albacete-a-write-up/</guid>
+      <guid>/2016/09/28/geostat2016-albacete-a-write-up/</guid>
       <description>Last week I went to GEOSTAT 2016. Given the amount of fun had at GEOSTAT 2015, expectations were high. The local organisers did not disappoint, with a week of lectures, workshops, spatial data competitions and of course lots of Geostatistics. It would be unwise to try to systematically document such a diverse range of activities, and the GEOSTAT website provides much further info. Instead this &amp;lsquo;miniwriteup&amp;rsquo; is designed to summarise some of my memories from the event, and encourage you to get involved for GEOSTAT 2017.</description>
     </item>
     
     <item>
       <title>R vs QGIS for sustainable transport planning</title>
-      <link>https://www.robinlovelace.net/2015/01/20/r-vs-qgis-for-sustainable-transport-planning/</link>
+      <link>/2015/01/20/r-vs-qgis-for-sustainable-transport-planning/</link>
       <pubDate>Tue, 20 Jan 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://www.robinlovelace.net/2015/01/20/r-vs-qgis-for-sustainable-transport-planning/</guid>
+      <guid>/2015/01/20/r-vs-qgis-for-sustainable-transport-planning/</guid>
       <description>The 23rd iteration of the GIS Research UK conference (#GISRUK) conference was the largest ever. 250 researchers, industry representatives and academics attended from the vibrant geospatial research communities in the UK, Europe and beyond. GISRUK has become a centrepoint for discussion of new methods, software and applications in the field. I was on the organising committee, reviewed some excellent papers for the event (a full list of these is available for download here) and attended some truly ground-breaking talks.</description>
     </item>
     
     <item>
       <title>The Future Is Not What It Used To Be - Book review</title>
-      <link>https://www.robinlovelace.net/2014/01/28/the-future-is-not-what-it-used-to-be-book-review/</link>
+      <link>/2014/01/28/the-future-is-not-what-it-used-to-be-book-review/</link>
       <pubDate>Tue, 28 Jan 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://www.robinlovelace.net/2014/01/28/the-future-is-not-what-it-used-to-be-book-review/</guid>
+      <guid>/2014/01/28/the-future-is-not-what-it-used-to-be-book-review/</guid>
       <description>This is a review I was invited to write for Environmental Values, a journal for academics to publish their musings on the state of the environment and what is to be done about it. I found the book good, but was perhaps overly gushing in my review on their website in hindsight. Why? Well since my review there have been another couple of assessments from respected sources that are mixed to say the least.</description>
     </item>
     
     <item>
       <title>Moving house by bicycle trailer</title>
-      <link>https://www.robinlovelace.net/2013/10/13/moving-house-by-bicycle-trailer/</link>
+      <link>/2013/10/13/moving-house-by-bicycle-trailer/</link>
       <pubDate>Sun, 13 Oct 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://www.robinlovelace.net/2013/10/13/moving-house-by-bicycle-trailer/</guid>
+      <guid>/2013/10/13/moving-house-by-bicycle-trailer/</guid>
       <description>&lt;p&gt;Back in 2009 I moved from York to Sheffield to start a PhD on the &lt;a href=&#34;http://e-futures.group.shef.ac.uk/page/home/&#34;&gt;Energy Futures&lt;/a&gt; 4 year Doctoral Training Centre.
 Young and naive, some friends and I decided to do it by bicycle, with one bicycle trailer filled to the brim and 4 large panniers carrying most of my stuff.&lt;/p&gt;
 
@@ -130,10 +130,10 @@ See the map, words, images and video below for the full low-down on this epic ri
     
     <item>
       <title>Presentation at FOSS4G 2013</title>
-      <link>https://www.robinlovelace.net/2013/09/22/presentation-at-foss4g-2013/</link>
+      <link>/2013/09/22/presentation-at-foss4g-2013/</link>
       <pubDate>Sun, 22 Sep 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://www.robinlovelace.net/2013/09/22/presentation-at-foss4g-2013/</guid>
+      <guid>/2013/09/22/presentation-at-foss4g-2013/</guid>
       <description>&lt;p&gt;I presented last Thursday at &lt;a href=&#34;http://2013.foss4g.org/&#34;&gt;FOSS4G&lt;/a&gt;, THE conference to go to for Free Open Source Software for Geo applications (get it?). It was an interesting event, with hundreds of delegates dressing up in one form or another as Robin Hood, fantastic food and a very wide range of talks. Just take a look at the &lt;a href=&#34;http://2013.foss4g.org/conf/programme/daily/2/&#34;&gt;second day&lt;/a&gt; of talks: packed to the rafters with sessions, including &lt;a href=&#34;http://2013.foss4g.org/conf/programme/sessions/36/&#34;&gt;mine&lt;/a&gt;, on visualisation.&lt;/p&gt;</description>
     </item>
     

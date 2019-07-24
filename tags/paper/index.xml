@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>paper on Robin Lovelace&#39;s website. Energy. Transport. Technology. Change the World.</title>
-    <link>https://www.robinlovelace.net/tags/paper/</link>
+    <link>/tags/paper/</link>
     <description>Recent content in paper on Robin Lovelace&#39;s website. Energy. Transport. Technology. Change the World.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 25 Feb 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://www.robinlovelace.net/tags/paper/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/paper/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>stplanr paper published</title>
-      <link>https://www.robinlovelace.net/2019/02/25/sustainable-transport-planning-with-r-stplanr-paper-published/</link>
+      <link>/2019/02/25/sustainable-transport-planning-with-r-stplanr-paper-published/</link>
       <pubDate>Mon, 25 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://www.robinlovelace.net/2019/02/25/sustainable-transport-planning-with-r-stplanr-paper-published/</guid>
+      <guid>/2019/02/25/sustainable-transport-planning-with-r-stplanr-paper-published/</guid>
       <description>I am very happy to announce that the paper stplanr: A package for transport planning has been published in The R Journal (Lovelace and Ellison 2018) 🎉.
 This is the result of around 3 years of work: it took us (co-author Richard Ellison and me) over a year to get round to writing the paper after the stplanr package was first released on CRAN in November 2015 (see its archive on CRAN for details); it wasn’t until March 2017 that the paper was formally submitted.</description>
     </item>
