@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>talks on Robin Lovelace&#39;s website. Energy. Transport. Technology. Change the World.</title>
+    <link>https://www.robinlovelace.net/categories/talks/</link>
+    <description>Recent content in talks on Robin Lovelace&#39;s website. Energy. Transport. Technology. Change the World.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 28 Aug 2019 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://www.robinlovelace.net/categories/talks/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>CASA summer school on geographic data</title>
+      <link>https://www.robinlovelace.net/2019/08/28/casa-summer-school-on-geographic-data/</link>
+      <pubDate>Wed, 28 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.robinlovelace.net/2019/08/28/casa-summer-school-on-geographic-data/</guid>
+      <description>
+
+
+&lt;p&gt;Last week I presented at UCL’s summer school which, by all accounts, was a very successful event in which many people learned many new skills. The presentation format was a refreshing changes from the PowerPoint slides you’re often asked to prepare. Instead, each presenter was asked to create a reproducible RMarkdown document to present. The source code was shared with the students, who were encouraged to test the code.&lt;/p&gt;
+&lt;p&gt;The source code of my RMarkdown document can be found here, on the website support the Geocomputation with R book: &lt;a href=&#34;https://github.com/geocompr/geocompr.github.io/blob/source/content/post/2019/crs-projections-transformations.Rmd&#34; class=&#34;uri&#34;&gt;https://github.com/geocompr/geocompr.github.io/blob/source/content/post/2019/crs-projections-transformations.Rmd&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;To see the article itself, head here: &lt;a href=&#34;https://geocompr.github.io/post/2019/crs-projections-transformations/&#34; class=&#34;uri&#34;&gt;https://geocompr.github.io/post/2019/crs-projections-transformations/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;A very summary of the content is shown below.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;blogdown::shortcode_html(&amp;quot;tweet&amp;quot;, &amp;quot;1166628966410719232&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Too long didn&amp;#39;t read (TLDR) summary of CRSs.&lt;br&gt;&lt;br&gt;Additional resources:&lt;br&gt;&lt;br&gt;Blog post: &lt;a href=&#34;https://t.co/k3FDKqxp3E&#34;&gt;https://t.co/k3FDKqxp3E&lt;/a&gt;&lt;br&gt;Chapter in upcoming book by &lt;a href=&#34;https://twitter.com/edzerpebesma?ref_src=twsrc%5Etfw&#34;&gt;@edzerpebesma&lt;/a&gt;: &lt;a href=&#34;https://t.co/D919MPwMam&#34;&gt;https://t.co/D919MPwMam&lt;/a&gt;&lt;br&gt;Chapter in &lt;a href=&#34;https://twitter.com/hashtag/geocompr?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#geocompr&lt;/a&gt; book: &lt;a href=&#34;https://t.co/pffHqeF8YT&#34;&gt;https://t.co/pffHqeF8YT&lt;/a&gt; &lt;a href=&#34;https://t.co/Slu1jT88ok&#34;&gt;pic.twitter.com/Slu1jT88ok&lt;/a&gt;&lt;/p&gt;&amp;mdash; Robin Lovelace (@robinlovelace) &lt;a href=&#34;https://twitter.com/robinlovelace/status/1166628966410719232?ref_src=twsrc%5Etfw&#34;&gt;August 28, 2019&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;For more on the CASA summer school itself, see here.&lt;/p&gt;
+&lt;p&gt;In summary, great event and look forward to more partipatory workshops, the next one upcoming being the OpenGeoHub summer school: &lt;a href=&#34;https://opengeohub.org/summer_school_2019&#34; class=&#34;uri&#34;&gt;https://opengeohub.org/summer_school_2019&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

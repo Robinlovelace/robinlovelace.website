@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CRSs on Robin Lovelace&#39;s website. Energy. Transport. Technology. Change the World.</title>
+    <link>https://www.robinlovelace.net/tags/crss/</link>
+    <description>Recent content in CRSs on Robin Lovelace&#39;s website. Energy. Transport. Technology. Change the World.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 28 Aug 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.robinlovelace.net/tags/crss/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>CASA summer school on geographic data</title>
+      <link>https://www.robinlovelace.net/2019/08/28/casa-summer-school-on-geographic-data/</link>
+      <pubDate>Wed, 28 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.robinlovelace.net/2019/08/28/casa-summer-school-on-geographic-data/</guid>
+      <description>Last week I presented at UCL’s summer school which, by all accounts, was a very successful event in which many people learned many new skills. The presentation format was a refreshing changes from the PowerPoint slides you’re often asked to prepare. Instead, each presenter was asked to create a reproducible RMarkdown document to present. The source code was shared with the students, who were encouraged to test the code.</description>
+    </item>
+    
+  </channel>
+</rss>
