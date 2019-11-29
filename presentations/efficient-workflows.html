@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <title>Efficient WoRkflows</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Robin Lovelace" />
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/robot.css" rel="stylesheet" />
+    <link href="libs/remark-css/robot-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Efficient WoRkflows
+## 🚀<br/>getting more done with R
+### Robin Lovelace
+### University of Leeds
+### 2019-12-05 (updated: 2019-11-29)
+
+---
+
+
+
+background-image: url(https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gh-self-help-books-1551713371.png)
+
+
+
+--
+
+## Source [goodhousekeeping.com](https://www.goodhousekeeping.com/life/entertainment/g26588504/best-self-help-books/)
+
+--
+
+The Best Self-Help Books to Read in 2019, According to Amazon and Goodreads
+
+
+???
+
+There are loads of self help books out there
+
+---
+
+background-image: url(https://images-na.ssl-images-amazon.com/images/I/41R3etYqvBL._SX326_BO1,204,203,200_.jpg)
+
+???
+
+Originally published in 2001, it has gained huge popularity
+
+---
+
+background-image: url(https://images-na.ssl-images-amazon.com/images/I/51inoqTDRML._SX379_BO1,204,203,200_.jpg)
+
+???
+
+2008 book by Scott Burkun aimed at software architects
+
+Too techy for me, about managing 100s of people!
+
+---
+
+background-image: url(https://images-na.ssl-images-amazon.com/images/I/414PFUnar-L._SX324_BO1,204,203,200_.jpg)
+
+???
+
+2015 book by Daniel Levitin
+
+Too techy for me, about managing 100s of people!
+
+---
+
+.pull-left[
+
+![](https://csgillespie.github.io/efficientR/figures/f0_web.png)&lt;!-- --&gt;
+
+]
+
+--
+
+.pull-right[
+
+## Open source book
+
+### Published early 2016
+
+### All the things I wish I knew
+
+### Handy chapters:
+
+#### Efficient set-up
+
+#### Efficient workflow
+
+#### Efficient collaboration
+
+]
+
+---
+
+## From code to impact
+
+&lt;img src="https://raw.githubusercontent.com/npct/pct-team/master/figures/front-page-leeds-pct-demo.png" width="90%" /&gt;
+
+--
+
+Source - https://github.com/npct which hosts national web tool PCT [www.pct.bike](http://www.pct.bike/)
+
+
+&lt;!-- background-imag: url(https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1507165449l/36355673._SX318_.jp) --&gt;
+
+???
+
+2017 book by Mark Reed
+
+---
+
+# Types of efficiency
+
+--
+
+.pull-left[
+
+## Programmer efficiency
+
+This is the amount of useful work a person (not a computer) can do per unit time
+
+]
+
+--
+
+.pull-right[
+
+## Computational efficiency
+
+How quickly the computer can undertake a piece of work
+
+]
+
+--
+
+One essential object is to choose that arrangement which shall tend to reduce to a minimum the time necessary for completing the calculation. (Ada Lovelace, [1842](https://csgillespie.github.io/efficientR/introduction.html#ref-lovelace1842translator))
+
+--
+
+An efficient light shines bright with a minimum of energy consumption. In this final sense, efficiency has a formal definition as the ratio of work done per unit effort:
+
+$$
+\eta = \frac{W}{Q}
+$$
+
+---
+class: inverse, center, middle
+
+# Efficient set-up
+
+---
+
+## R and package versions
+
+.pull-left[
+
+
+```r
+R.version
+```
+
+```
+##                _                           
+## platform       x86_64-pc-linux-gnu         
+## arch           x86_64                      
+## os             linux-gnu                   
+## system         x86_64, linux-gnu           
+## status                                     
+## major          3                           
+## minor          6.1                         
+## year           2019                        
+## month          07                          
+## day            05                          
+## svn rev        76782                       
+## language       R                           
+## version.string R version 3.6.1 (2019-07-05)
+## nickname       Action of the Toes
+```
+
+```r
+packageVersion("dplyr")
+```
+
+```
+## [1] '0.8.3'
+```
+
+]
+
+--
+
+.pull-left[
+
+
+### Who cares?
+
+![](devtools-issue.png)
+
+Source: https://github.com/r-lib/devtools/issues/2153
+
+]
+---
+
+
+class: inverse, center, middle
+
+# Efficient workflow
+
+---
+class: inverse, center, middle
+
+# Efficient collaboration
+
+---
+
+
+---
+
+# Community
+
+&lt;blockquote class="twitter-tweet"&gt;&lt;p lang="en" dir="ltr"&gt;Probably the most productivity-improving thing you do can for a data science team is to create and maintain a strong, inclusive community of practice. If people on your team aren’t constantly learning from each other, you’re leaving a ton of value on the table.&lt;/p&gt;&amp;mdash; Sean J. Taylor (@seanjtaylor) &lt;a href="https://twitter.com/seanjtaylor/status/1197964523237335040?ref_src=twsrc%5Etfw"&gt;November 22, 2019&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt; 
+
+### Community tips ([Geocomputation with R](https://github.com/Robinlovelace/geocompr/community))
+
+![](community-guidelines-github.png)
+---
+
+# Magic Touch: typing
+
+![](https://csgillespie.github.io/efficientR/figures/f1_1_800px-QWERTY-home-keys-position.png)
+
+
+--
+
+Source - Efficient R Programming [1.5.1](https://csgillespie.github.io/efficientR/introduction.html#touch-typing) 
+
+???
+
+The evidence suggests that good diet, physical activity, plenty of sleep and a healthy work-life balance can all boost your speed and effectiveness at work (Jensen 2011; Pereira et al. 2015; Grant, Wallace, and Spurgeon 2013).
+
+While we recommend the reader to reflect on this evidence and their own well-being, this is not a self help book. It is about programming. However, there is one non-programming skill that can have a huge impact on productivity: touch typing. 
+
+---
+
+class: center, middle
+
+# Thanks!
+
+Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan).
+
+The chakra comes from [remark.js](https://remarkjs.com), [**knitr**](http://yihui.name/knitr), and [R Markdown](https://rmarkdown.rstudio.com).
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="https://platform.twitter.com/widgets.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
