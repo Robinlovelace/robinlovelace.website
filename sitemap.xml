@@ -1,282 +1,262 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://www.robinlovelace.net/2019/08/28/casa-summer-school-on-geographic-data/</loc>
+    <loc>/presentations/</loc>
+    <lastmod>2020-02-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2020-02-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/presentations/tds-regional-workshop/</loc>
+    <lastmod>2020-02-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/2019/08/28/casa-summer-school-on-geographic-data/</loc>
     <lastmod>2019-08-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.robinlovelace.net/tags/crss/</loc>
-    <lastmod>2019-08-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.robinlovelace.net/categories/</loc>
-    <lastmod>2019-08-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.robinlovelace.net/post/</loc>
-    <lastmod>2019-08-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.robinlovelace.net/tags/</loc>
-    <lastmod>2019-08-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.robinlovelace.net/categories/r/</loc>
-    <lastmod>2019-08-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.robinlovelace.net/categories/talks/</loc>
-    <lastmod>2019-08-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.robinlovelace.net/</loc>
+    <loc>/categories/</loc>
     <lastmod>2019-08-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.robinlovelace.net/categories/conferences/</loc>
-    <lastmod>2019-07-13T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+    <loc>/tags/crss/</loc>
+    <lastmod>2019-08-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.robinlovelace.net/2019/07/13/user2019/</loc>
+    <loc>/post/</loc>
+    <lastmod>2019-08-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/r/</loc>
+    <lastmod>2019-08-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2019-08-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/talks/</loc>
+    <lastmod>2019-08-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/conference/</loc>
     <lastmod>2019-07-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.robinlovelace.net/tags/conference/</loc>
+    <loc>/categories/conferences/</loc>
     <lastmod>2019-07-13T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://www.robinlovelace.net/tags/toulouse/</loc>
+    <loc>/2019/07/13/user2019/</loc>
     <lastmod>2019-07-13T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://www.robinlovelace.net/presentations/geocompr-launch/</loc>
+    <loc>/tags/toulouse/</loc>
+    <lastmod>2019-07-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/presentations/geocompr-launch/</loc>
     <lastmod>2019-04-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.robinlovelace.net/presentations/</loc>
-    <lastmod>2019-04-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.robinlovelace.net/presentations/satrday-keynote/</loc>
+    <loc>/presentations/satrday-keynote/</loc>
     <lastmod>2019-04-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.robinlovelace.net/tags/paper/</loc>
-    <lastmod>2019-02-25T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.robinlovelace.net/tags/planning/</loc>
-    <lastmod>2019-02-25T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.robinlovelace.net/2019/02/25/sustainable-transport-planning-with-r-stplanr-paper-published/</loc>
+    <loc>/tags/paper/</loc>
     <lastmod>2019-02-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.robinlovelace.net/2019/02/14/aggregating-lines-part-ii/</loc>
+    <loc>/tags/planning/</loc>
+    <lastmod>2019-02-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/2019/02/25/sustainable-transport-planning-with-r-stplanr-paper-published/</loc>
+    <lastmod>2019-02-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/2019/02/14/aggregating-lines-part-ii/</loc>
     <lastmod>2019-02-14T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.robinlovelace.net/tags/stplanr/</loc>
+    <loc>/tags/stplanr/</loc>
     <lastmod>2019-02-14T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://www.robinlovelace.net/presentations/nurd-keynote/</loc>
+    <loc>/presentations/nurd-keynote/</loc>
     <lastmod>2018-10-31T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.robinlovelace.net/2018/10/27/aggregating-lines/</loc>
+    <loc>/2018/10/27/aggregating-lines/</loc>
     <lastmod>2018-10-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.robinlovelace.net/presentations/icts-inclusion/</loc>
+    <loc>/presentations/icts-inclusion/</loc>
     <lastmod>2018-10-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.robinlovelace.net/presentations/cycling-and-society-plenary/</loc>
+    <loc>/presentations/cycling-and-society-plenary/</loc>
     <lastmod>2018-09-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.robinlovelace.net/presentations/geocompr-jena/</loc>
+    <loc>/presentations/geocompr-jena/</loc>
     <lastmod>2018-04-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.robinlovelace.net/2017/05/02/can-geographic-data-save-the-world/</loc>
+    <loc>/2017/05/02/can-geographic-data-save-the-world/</loc>
     <lastmod>2017-05-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.robinlovelace.net/presentations/gds-seminar/</loc>
+    <loc>/presentations/gds-seminar/</loc>
     <lastmod>2017-05-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.robinlovelace.net/2017/04/30/switching-to-blogdown/</loc>
+    <loc>/tags/blogging/</loc>
     <lastmod>2017-04-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.robinlovelace.net/tags/blogging/</loc>
+    <loc>/2017/04/30/switching-to-blogdown/</loc>
     <lastmod>2017-04-30T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://www.robinlovelace.net/2016/12/21/cyclestreets.net-in-the-propensity-to-cycle-tool/</loc>
+    <loc>/2016/12/21/cyclestreets.net-in-the-propensity-to-cycle-tool/</loc>
     <lastmod>2016-12-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.robinlovelace.net/tags/r/</loc>
+    <loc>/tags/maps/</loc>
     <lastmod>2016-12-21T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://www.robinlovelace.net/tags/maps/</loc>
+    <loc>/tags/r/</loc>
     <lastmod>2016-12-21T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://www.robinlovelace.net/tags/geostat/</loc>
-    <lastmod>2016-09-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.robinlovelace.net/2016/09/28/geostat2016-albacete-a-write-up/</loc>
+    <loc>/tags/geostat/</loc>
     <lastmod>2016-09-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.robinlovelace.net/presentations/hackney-keynote/</loc>
+    <loc>/2016/09/28/geostat2016-albacete-a-write-up/</loc>
+    <lastmod>2016-09-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/presentations/hackney-keynote/</loc>
     <lastmod>2016-06-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.robinlovelace.net/tags/gis/</loc>
-    <lastmod>2015-01-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.robinlovelace.net/2015/01/20/r-vs-qgis-for-sustainable-transport-planning/</loc>
+    <loc>/tags/gis/</loc>
     <lastmod>2015-01-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.robinlovelace.net/tags/open-source/</loc>
+    <loc>/tags/open-source/</loc>
     <lastmod>2015-01-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://www.robinlovelace.net/categories/books/</loc>
-    <lastmod>2014-01-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+    <loc>/2015/01/20/r-vs-qgis-for-sustainable-transport-planning/</loc>
+    <lastmod>2015-01-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.robinlovelace.net/2014/01/28/the-future-is-not-what-it-used-to-be-book-review/</loc>
+    <loc>/categories/books/</loc>
     <lastmod>2014-01-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.robinlovelace.net/tags/collapse/</loc>
+    <loc>/tags/collapse/</loc>
     <lastmod>2014-01-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://www.robinlovelace.net/tags/reviews/</loc>
+    <loc>/tags/reviews/</loc>
     <lastmod>2014-01-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://www.robinlovelace.net/categories/ecotech/</loc>
-    <lastmod>2013-10-13T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+    <loc>/2014/01/28/the-future-is-not-what-it-used-to-be-book-review/</loc>
+    <lastmod>2014-01-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.robinlovelace.net/2013/10/13/moving-house-by-bicycle-trailer/</loc>
+    <loc>/categories/ecotech/</loc>
     <lastmod>2013-10-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.robinlovelace.net/categories/open-source/</loc>
-    <lastmod>2013-09-22T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+    <loc>/2013/10/13/moving-house-by-bicycle-trailer/</loc>
+    <lastmod>2013-10-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.robinlovelace.net/categories/presentation/</loc>
-    <lastmod>2013-09-22T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.robinlovelace.net/2013/09/22/presentation-at-foss4g-2013/</loc>
+    <loc>/categories/open-source/</loc>
     <lastmod>2013-09-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.robinlovelace.net/categories/visualisation/</loc>
+    <loc>/categories/presentation/</loc>
     <lastmod>2013-09-22T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://www.robinlovelace.net/about/</loc>
+    <loc>/2013/09/22/presentation-at-foss4g-2013/</loc>
+    <lastmod>2013-09-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.robinlovelace.net/publications/</loc>
+    <loc>/categories/visualisation/</loc>
+    <lastmod>2013-09-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.robinlovelace.net/slides/</loc>
+    <loc>/about/</loc>
+  </url>
+  
+  <url>
+    <loc>/publications/</loc>
+  </url>
+  
+  <url>
+    <loc>/slides/</loc>
   </url>
   
 </urlset>

@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>r on Robin Lovelace&#39;s website. Energy. Transport. Technology. Change the World.</title>
-    <link>https://www.robinlovelace.net/categories/r/</link>
-    <description>Recent content in r on Robin Lovelace&#39;s website. Energy. Transport. Technology. Change the World.</description>
+    <title>R on Robin Lovelace&#39;s website. Energy. Transport. Technology. Change the World.</title>
+    <link>/categories/r/</link>
+    <description>Recent content in R on Robin Lovelace&#39;s website. Energy. Transport. Technology. Change the World.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 28 Aug 2019 00:00:00 +0000</lastBuildDate>
     
-        <atom:link href="https://www.robinlovelace.net/categories/r/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="/categories/r/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>CASA summer school on geographic data</title>
-      <link>https://www.robinlovelace.net/2019/08/28/casa-summer-school-on-geographic-data/</link>
+      <link>/2019/08/28/casa-summer-school-on-geographic-data/</link>
       <pubDate>Wed, 28 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://www.robinlovelace.net/2019/08/28/casa-summer-school-on-geographic-data/</guid>
+      <guid>/2019/08/28/casa-summer-school-on-geographic-data/</guid>
       <description>
 
 
@@ -35,10 +35,10 @@
     
     <item>
       <title>Six great things about UseR! 2019</title>
-      <link>https://www.robinlovelace.net/2019/07/13/user2019/</link>
+      <link>/2019/07/13/user2019/</link>
       <pubDate>Sat, 13 Jul 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://www.robinlovelace.net/2019/07/13/user2019/</guid>
+      <guid>/2019/07/13/user2019/</guid>
       <description>
 &lt;script src=&#34;../../rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;../../rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
@@ -187,10 +187,10 @@ mapview::mapview(track)&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>stplanr paper published</title>
-      <link>https://www.robinlovelace.net/2019/02/25/sustainable-transport-planning-with-r-stplanr-paper-published/</link>
+      <link>/2019/02/25/sustainable-transport-planning-with-r-stplanr-paper-published/</link>
       <pubDate>Mon, 25 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://www.robinlovelace.net/2019/02/25/sustainable-transport-planning-with-r-stplanr-paper-published/</guid>
+      <guid>/2019/02/25/sustainable-transport-planning-with-r-stplanr-paper-published/</guid>
       <description>
 
 
@@ -227,10 +227,10 @@ mapview::mapview(track)&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>Aggregating lines, part II</title>
-      <link>https://www.robinlovelace.net/2019/02/14/aggregating-lines-part-ii/</link>
+      <link>/2019/02/14/aggregating-lines-part-ii/</link>
       <pubDate>Thu, 14 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://www.robinlovelace.net/2019/02/14/aggregating-lines-part-ii/</guid>
+      <guid>/2019/02/14/aggregating-lines-part-ii/</guid>
       <description>
 
 
@@ -332,10 +332,10 @@ plot(rnet6)&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>Aggregating lines, Part I</title>
-      <link>https://www.robinlovelace.net/2018/10/27/aggregating-lines/</link>
+      <link>/2018/10/27/aggregating-lines/</link>
       <pubDate>Sat, 27 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://www.robinlovelace.net/2018/10/27/aggregating-lines/</guid>
+      <guid>/2018/10/27/aggregating-lines/</guid>
       <description>
 
 
@@ -494,10 +494,10 @@ Figure 5: Illustration of a route network generated with sf functions.
     
     <item>
       <title>Switching to blogdown</title>
-      <link>https://www.robinlovelace.net/2017/04/30/switching-to-blogdown/</link>
+      <link>/2017/04/30/switching-to-blogdown/</link>
       <pubDate>Sun, 30 Apr 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://www.robinlovelace.net/2017/04/30/switching-to-blogdown/</guid>
+      <guid>/2017/04/30/switching-to-blogdown/</guid>
       <description>
 
 
@@ -512,10 +512,10 @@ Figure 5: Illustration of a route network generated with sf functions.
     
     <item>
       <title>Geostat2016 Albacete: a write-up</title>
-      <link>https://www.robinlovelace.net/2016/09/28/geostat2016-albacete-a-write-up/</link>
+      <link>/2016/09/28/geostat2016-albacete-a-write-up/</link>
       <pubDate>Wed, 28 Sep 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://www.robinlovelace.net/2016/09/28/geostat2016-albacete-a-write-up/</guid>
+      <guid>/2016/09/28/geostat2016-albacete-a-write-up/</guid>
       <description>
 
 &lt;p&gt;Last week I went to &lt;a href=&#34;http://geostat-course.org/2016&#34;&gt;GEOSTAT 2016&lt;/a&gt;. Given the amount of fun had at &lt;a href=&#34;http://robinlovelace.net/r/2015/08/31/geostat-writeup.html&#34;&gt;GEOSTAT 2015&lt;/a&gt;, expectations were high. The local organisers did not disappoint, with a week of lectures, workshops, spatial data competitions and of course lots of Geostatistics. It would be unwise to try to systematically document such a diverse range of activities, and the &lt;a href=&#34;http://geostat-course.org/node&#34;&gt;GEOSTAT website&lt;/a&gt; provides much further info. Instead this &amp;lsquo;miniwriteup&amp;rsquo; is designed to summarise some of my memories from the event, and encourage you to get involved for GEOSTAT 2017.&lt;/p&gt;
@@ -888,10 +888,10 @@ x = 1:3 * m/s
     
     <item>
       <title>R vs QGIS for sustainable transport planning</title>
-      <link>https://www.robinlovelace.net/2015/01/20/r-vs-qgis-for-sustainable-transport-planning/</link>
+      <link>/2015/01/20/r-vs-qgis-for-sustainable-transport-planning/</link>
       <pubDate>Tue, 20 Jan 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://www.robinlovelace.net/2015/01/20/r-vs-qgis-for-sustainable-transport-planning/</guid>
+      <guid>/2015/01/20/r-vs-qgis-for-sustainable-transport-planning/</guid>
       <description>
 
 &lt;p&gt;The 23rd iteration of the GIS Research UK conference
