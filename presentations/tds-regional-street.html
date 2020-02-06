@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Transport Data Science: from regional to street levels</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Robin Lovelace" />
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/robot.css" rel="stylesheet" />
+    <link href="libs/remark-css/robot-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Transport Data Science: from regional to street levels
+## 🚀<br/>Emerging discipline and community of practice?
+### Robin Lovelace
+### University of Leeds
+### Louvain-la-Neuve, 2020-02-07 (updated: 2020-02-06)
+
+---
+
+
+background-image: url(https://d3l4am9dimtbet.cloudfront.net/wp-content/uploads/2018/07/In-Pics_-These-Mind-Blowing-Aerial-Shots-of-Mumbai-Were-Taken-by-a-Drone.jpg)
+
+&lt;!-- 14h30-15h30 lecture part (this could already drift towards the practical part but doesn't have to ...) --&gt;
+
+&lt;!-- 15:30-16h00 coffee break --&gt;
+
+&lt;!-- 16h00-17h00 hands-on workshop (could be somewhat open-ended, we'll have the room all afternoon - but if we would go into extra time, we should make a short 'cut' around 17h such that those who have/want to go home can do so). --&gt;
+
+
+# Introduction
+
+Source: [thebetterindia.com](https://www.thebetterindia.com/148450/mumbai-aerial-shots/)
+
+&lt;!-- Mumbai is by [some](https://www.independent.co.uk/travel/worlds-biggest-cities-mexico-city-new-york-karachi-tokyo-lagos-kolkata-kinshasa-dhaka-delhi-a8158426.html) measures the world's largest city --&gt;
+
+
+--
+
+Abstract: 
+Data Science has emerged as an area of high and consistent growth in many sectors. High tech industries such as search engine optimisation, marketing and retail analytics have been quick to adopt new workflows. Transport has arguably been slow to adapt to the transformations towards open source software (as opposed to proprietary products that still dominate), command line and scriptable interfaces (unlike the graphical user interfaces of tools such as Excel) and code sharing and version development via platforms such as GitHub.
+
+This talk demonstrates these new workflows, building on the [Transport chapter in the open source book Geocomputation with R](https://geocompr.robinlovelace.net/transport.html) and experience developing and deploying data science tools that are having a real world impact on transport policy and practice. It will provide insight into how multiple geographic scales of analysis were used to develop the [Propensity to Cycle Tool](http://www.pct.bike/), which Robin developed in collaboration with colleagues from 4 universities and which is being used by dozens of Local Authorities to develop strategic cycle networks. Furthermore, a live demo of the recently release [stats19](https://docs.ropensci.org/stats19/) package, which provides fast access to crash data for road safety research, will highlight the power of reproducibility and that transport data science is a practical field best discovered by doing it and collaboration using reproducible code.
+
+
+```r
+# to reproduce these slides do:
+pkgs = c("rgdal", "sf", "geojsonsf")
+install.packages(pkgs)
+```
+
+--
+
+
+
+
+---
+
+## whoami
+
+
+```r
+system("whoami")
+```
+
+--
+
+.pull-left[
+- Environmental geographer
+- Learned R for PhD on energy and transport
+- Now work at the University of Leeds (ITS and LIDA)
+- Focus: Applied geocomputation
+- Strong interest in technology + reproducibility, e.g.:
+
+
+```r
+devtools::install_github("r-rust/gifski")
+system("youtube-dl https://youtu.be/CzxeJlgePV4 -o v.mp4")
+system("ffmpeg -i v.mp4 -t 00:00:03 -c copy out.mp4")
+system("ffmpeg -i out.mp4 frame%04d.png ")
+f = list.files(pattern = "frame")
+gifski::gifski(f, gif_file = "g.gif", width = 200, height = 200)
+```
+
+]
+
+--
+
+.pull-right[
+Image credit: Jeroen Ooms + others
+
+
+```r
+knitr::include_graphics("https://user-images.githubusercontent.com/1825120/39661313-534efd66-5047-11e8-8d99-a5597fe160ff.gif")
+```
+
+&lt;img src="https://user-images.githubusercontent.com/1825120/39661313-534efd66-5047-11e8-8d99-a5597fe160ff.gif" width="100%" /&gt;
+
+]
+
+---
+
+## Importance of Geographic data
+
+.pull-left[
+
+### Geographic data is everywhere
+
+### Underlies some of society's biggest issues
+
+### Can give general analyses local (actionable) meaning
+
+]
+
+--
+
+.pull-right[
+
+![](https://raw.githubusercontent.com/npct/pct-team/master/figures/Leeds-network.png)&lt;!-- --&gt;
+
+Example: Propensity to Cycle Tool (PCT) in Manchester: http://pct.bike/m/?r=greater-manchester
+
+]
+
+---
+
+# Classifying transport data
+
+Source: https://www.openstreetmap.org/edit#map=14/50.6711/4.6185
+
+![](https://user-images.githubusercontent.com/1825120/73912683-0f369980-48ad-11ea-9139-e24919a45368.png)&lt;!-- --&gt;
+
+--
+
+
+---
+
+
+---
+
+## Information and data pyramids
+
+Data science is climbing the DIKW pyramid
+
+&lt;img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/DIKW_Pyramid.svg/220px-DIKW_Pyramid.svg.png" width="70%" /&gt;
+
+--
+
+Data science *can* convert data to information and graphics but *cannot*, on its own, create knowledge, let alone wisdom
+
+---
+
+## A geographic availability pyramid
+
+- Recommendations
+- Build this here!
+
+- City-specific datasets
+  - Bristol cycle count data
+
+- Hard-to-access national data
+
+- Open international/national datasets
+  - Open origin-destination data from UK Census
+
+- Globally available, low-grade data (bottom)
+  - OpenStreetMap, Elevation data
+
+---
+
+## An ease-of access pyramid
+
+- Data provision packages
+  - Use the pct package
+  - stats19 package
+
+- Pre-processed data
+  - E.g. downloading data from website www.pct.bike
+
+- Messy official data
+  - Raw STATS19 data
+
+---
+
+## A geographic level of detail pyramid
+
+- Agents
+- Route networks
+- Nodes
+- Routes
+- Desire lines
+- Transport zones
+
+
+---
+
+## Observations
+
+- Official sources are often smaller in sizes but higher in Quality
+
+- Unofficial sources provide higher volumes but tend to be noisy, e.g.: https://onlinelibrary.wiley.com/doi/full/10.1111/gean.12081
+
+- Another way to classify data is by quality: signal/noise ratios
+
+- Globally available datasets would be at the bottom of this pyramid; local surveys at the top.
+
+Source: https://geocompr.robinlovelace.net/read-write.html
+
+
+- Which would be best to inform policy?
+
+---
+
+## Portals
+
+- UK geoportal, providing geographic data at many levels: https://geoportal.statistics.gov.uk
+- Other national geoportals exist, such as this: http://www.geoportal.org/
+- A good source of cleaned origin destination data is the Region downloads tab in the Propensity to Cycle Tool - see the Region data tab for West Yorkshire here, for example: http://www.pct.bike/m/?r=west-yorkshire
+- OpenStreetMap is an excellent source of geographic data with global coverage. You can download data on specific queries (e.g. highway=cycleway) from the overpass-turbo service: https://overpass-turbo.eu/ or with the **osmdata** package
+
+---
+
+## Online lists
+
+For other datasets, search online! Good starting points in your research may be:
+
+- The open data section in Geocomputation with R - https://geocompr.robinlovelace.net/read-write.html#retrieving-data
+- Transport datasets mentioned here: https://data.world/datasets/transportation
+- UK government transport data: https://ckan.publishing.service.gov.uk/publisher/department-for-transport
+
+---
+
+## Data packages
+
+- The **openrouteservice** github package provides routing data
+- The stats19 package can get road crash data for anywhere in Great Britain [@lovelace_stats19_2019] see here for info: https://itsleeds.github.io/stats19/
+- The pct package provides access to data in the PCT: https://github.com/ITSLeeds/pct
+- There are many other R packages to help access data
+
+---
+
+## Example: osmdata
+
+
+
+
+
+
+.pull-left[
+
+
+``` r
+library(osmdata)
+library(sf)
+system.time({ # around 2 seconds
+  n = "louvain-la-neuve"
+  v = "primary|secondary|cycleway"
+  louvain = opq(n) %&gt;% 
+  add_osm_feature("highway", v,
+    value_exact = F) %&gt;%
+  osmdata_sf()
+  })
+#&gt;    user  system elapsed 
+#&gt;   0.125   0.020   1.814
+louvain_highway = louvain$osm_lines
+plot(louvain_highway)
+```
+]
+
+--
+
+.pull-right[
+
+
+![](https://i.imgur.com/09yWU7V.png)&lt;!-- --&gt;
+
+]
+
+---
+
+## Example: geofabrik
+
+
+
+
+``` r
+# remotes::install_github("itsleeds/geofabrik")
+library(geofabrik)
+lvn_centroid = tmaptools::geocode_OSM("louvain-la-neuve", as.sf = T)
+system.time({
+  # belgium = get_geofabrik(lvn_centroid) # warning: downloads giant file
+  belgium = get_geofabrik("Beligium") # equivalent code
+  })
+#&gt; although coordinates are longitude/latitude, st_contains assumes that they are planar
+#&gt; The place is within these geofabrik zones: Europe, Belgium
+#&gt; Selecting the smallest: Belgium
+#&gt; Downloading http://download.geofabrik.de/europe/belgium-latest.osm.pbf to 
+#&gt; ~/h/data/osm/Belgium.osm.pbf
+#&gt; Old attributes: attributes=name,highway,waterway,aerialway,barrier,man_made
+#&gt; New attributes: attributes=name,highway,waterway,aerialway,barrier,man_made,maxspeed,oneway,building,surface,landuse,natural,start_date,wall,service,lanes,layer,tracktype,bridge,foot,bicycle,lit,railway,footway
+#&gt; Using ini file that can can be edited with file.edit(/tmp/RtmprktWUQ/ini_new.ini)
+#&gt;    user  system elapsed 
+#&gt;  72.514  18.150 269.507
+plot(louvain_highway)
+```
+
+&lt;sup&gt;Created on 2020-02-06 by the [reprex package](https://reprex.tidyverse.org) (v0.3.0)&lt;/sup&gt;
+
+--
+
+#### We made our code 100+ times slower!
+
+--
+
+#### ~30 times slower excluding download time
+
+---
+
+## Geofabrik II: pre-downloaded data and filtering
+
+
+```r
+belgium_filename = geofabrik::gf_filename("Belgium")
+belgium_filename
+```
+
+```
+## [1] "~/h/data/osm/Belgium.osm.pbf"
+```
+
+```r
+utils:::format.object_size(file.size(belgium_filename), units = "MB")
+```
+
+```
+## [1] "348.3 Mb"
+```
+
+```r
+# Around 1 GB in RAM...
+```
+
+
+```r
+library(geofabrik)
+system.time({
+    belgium_cycleway = get_geofabrik("Belgium", key = "highway", value = "cycleway")
+})
+#&gt;    user  system elapsed 
+#&gt;  23.658   1.933  23.130 
+format(object.size(belgium_cycleway), units = "MB")
+#&gt; [1] "36.9 Mb"
+```
+
+
+
+
+--
+
+## 'Only' ~10 times slower now 
+
+---
+
+## Preprocessing bulk OSM extracts
+
+
+```r
+# piggyback::pb_download_url("belgium_cycleway.Rds")
+u = "https://github.com/Robinlovelace/presentations/releases/download/2020-02/belgium_cycleway.Rds"
+f = "belgium_cycleway.Rds"
+if(!file.exists(f)) {
+  download.file(url = u, destfile = f)
+}
+system.time({
+  belgium_cycleway = readRDS("belgium_cycleway.Rds")
+})
+```
+
+```
+##    user  system elapsed 
+##   0.284   0.000   0.284
+```
+
+```r
+format(object.size(belgium_cycleway), units = "MB")
+```
+
+```
+## [1] "36.9 Mb"
+```
+
+#### Now ~10 times faster!
+
+--
+
+#### And 10 times more useful?
+---
+
+## Spatial subsetting
+
+
+
+```r
+lvn_box = stplanr::geo_bb(louvain_highway)
+mapview::mapview(lvn_box)
+system.time({
+  lvn_lines = belgium[lvn_box, ]
+})   
+#&gt;   user  system elapsed 
+#&gt;  8.767   0.142   8.911
+```
+
+
+
+
+```r
+piggyback::pb_download_url("lvn_lines.Rds")
+```
+
+```
+## [1] "https://github.com/Robinlovelace/presentations/releases/download/2020-02/lvn_lines.Rds"
+```
+
+```r
+u = "https://github.com/Robinlovelace/presentations/releases/download/2020-02/lvn_lines.Rds"
+f = "lvn_lines.Rds"
+if(!file.exists(f)) download.file(url = u, destfile = f)
+system.time({
+  lvn_lines = readRDS("belgium_cycleway.Rds")
+})
+```
+
+```
+##    user  system elapsed 
+##   0.282   0.000   0.283
+```
+
+```r
+format(object.size(lvn_lines), units = "MB")
+```
+
+```
+## [1] "36.9 Mb"
+```
+
+---
+
+## Spatial networks
+
+
+```r
+remotes::install_github("luukvdmeer/sfnetworks")
+```
+
+
+
+
+---
+
+## National route network dataset
+
+
+```r
+plot(sf::st_geometry(belgium_cycleway))
+```
+
+![](https://user-images.githubusercontent.com/1825120/73952495-e3400600-48f6-11ea-8e52-33df6f15613f.png)
+
+
+
+---
+
+# TDS for policy
+
+Source: the Propensity to Cycle Tool (PCT) project, demo at www.pct.bike
+
+&lt;img src="https://raw.githubusercontent.com/npct/pct-team/master/figures/front-page-leeds-pct-demo.png" width="90%" /&gt;
+
+--
+
+Source - https://github.com/npct which hosts national web tool PCT [www.pct.bike](http://www.pct.bike/)
+
+---
+
+## Tools for reproducible research
+
+Transport data science is simply the application of 'data science' to transport
+
+- In terms of technique this means command-line tools for scalable analysis
+- Principles: reproducibility, generalisability, (public) accessibility
+
+### Example II: **stats19**
+
+---
+
+# The practical session
+
+Three main options, in ascending order of difficulty
+
+1. Work through an introduction to road safety analysis with R: 
+
+
+---
+
+# Invite
+
+### Interested in spatial networks?
+
+Join us for the first official Spatial Networks Hackathon, May 2020: https://www.eventbrite.it/e/erum2020-satellite-event-hackathon-on-spatial-networks-tickets-90976873277
+
+![](https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F90338799%2F337777217491%2F1%2Foriginal.20200131-160934?w=1080&amp;auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;rect=0%2C0%2C7744%2C3872&amp;s=77d35c39dbff7c770180ff3c01c98606)
+
+---
+
+# Thanks!
+
+Contact me at r. lovelace at leeds ac dot uk (email), `@robinlovelace` (twitter + github)
+
+--
+
+Check-out my repos at https://github.com/robinlovelace/
+
+--
+
+For more information on efficient workflows, see our book [*Efficient R Programming*](https://csgillespie.github.io/efficientR/)
+
+--
+
+Thanks to all the R developers who made this possible, including (for this presentation):
+
+[remark.js](https://remarkjs.com), [**knitr**](http://yihui.name/knitr), and [R Markdown](https://rmarkdown.rstudio.com).
+
+Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan).
+
+--
+
+Thanks to everyone for building a open and collaborative communities!
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="https://platform.twitter.com/widgets.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
