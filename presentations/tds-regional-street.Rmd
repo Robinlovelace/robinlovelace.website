@@ -375,7 +375,7 @@ piggyback::pb_upload("belgium_cycleway.Rds")
 
 --
 
-## 'Only' ~10 times slower now 
+#### 'Only' ~10 times slower now 
 
 ---
 
@@ -425,9 +425,75 @@ u = "https://github.com/Robinlovelace/presentations/releases/download/2020-02/lv
 f = "lvn_lines.Rds"
 if(!file.exists(f)) download.file(url = u, destfile = f)
 system.time({
-  lvn_lines = readRDS("belgium_cycleway.Rds")
+  lvn_lines = readRDS("lvn_lines.Rds")
 })
 format(object.size(lvn_lines), units = "MB")
+```
+
+---
+
+## Visualising spatial networks
+
+```{r}
+library(sf)
+plot(lvn_lines["highway"])
+```
+
+---
+
+## Highway types + data cleaning
+
+```{r}
+summary(as.factor(lvn_lines$highway))
+```
+
+```{r, message=FALSE}
+# the tidyverse way:
+library(dplyr)
+lvn_lines = lvn_lines %>% mutate(highway2 = case_when(
+  stringr::str_detect(highway, "const|corri|eleva|_link|plat|unc") ~ as.character(NA),
+  TRUE ~ lvn_lines$highway
+  ))
+```
+
+---
+
+## Cleaning II
+
+```{r}
+# (a) base R way
+lvn_lines_highway_table = table(lvn_lines$highway)
+lvn_lines_highway_table
+lvn_lines_to_remove = names(lvn_lines_highway_table)[lvn_lines_highway_table < 89]
+lvn_lines_to_remove
+lvn_lines$highway3 = lvn_lines$highway
+lvn_lines$highway3[lvn_lines$highway3 %in% lvn_lines_to_remove] = NA
+```
+
+---
+
+## Results...
+
+```{r}
+plot(lvn_lines %>% select(contains("high")))
+```
+
+---
+
+## Mapping packages
+
+```{r}
+library(tmap)
+tm_shape(lvn_lines) + tm_lines("highway3")
+```
+
+---
+
+## Interactive mapping
+
+```{r}
+tmap_mode("view")
+tm_shape(lvn_lines) + tm_lines("highway3")
 ```
 
 ---
@@ -436,6 +502,10 @@ format(object.size(lvn_lines), units = "MB")
 
 ```{r, eval=FALSE}
 remotes::install_github("luukvdmeer/sfnetworks")
+```
+
+```{r}
+library(sfnetworks)
 ```
 
 
