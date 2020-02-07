@@ -478,23 +478,31 @@ Transport data science is simply the application of 'data science' to transport
 
 ### Example II: **stats19**
 
+- Package providing access to open access road casualty dataset: https://docs.ropensci.org/stats19/
+
+Used by the Parliamentary library to provide evidence for Members of Parliament (MPs): https://commonslibrary.parliament.uk/economy-business/transport/roads/constituency-data-traffic-accidents/
+
 ---
 
 # The practical session
 
 It depends on you level of R skills, in ascending order of difficulty
 
-1. Work through an introduction to road safety analysis with R: https://docs.ropensci.org/stats19/articles/stats19-training.html
+1. Work through the Transport Chapter (12) in Geocompuation with R
 
-2. Work through the Transport Chapter (12) in Geocompuation with R
+2. Work through an introduction to road safety analysis with R: https://docs.ropensci.org/stats19/articles/stats19-training.html
 
-3. Apply the methods in that chapter to a differen UK city (advanced)
+3. Apply the methods in that chapter to a different UK city (advanced)
 
 4. Have a play with the OSM data for Louvain-la-Neuve, hosted in the releases page of https://github.com/Robinlovelace/presentations (easy-to-hard)
   - Visualise the dataset with tmap and other packages (see Chapter 8)
   - Undertake spatial network analysis of the data (advanced, see sfnetworks package)
   - Devise your own research questions using available data (PhD!)
+5. Technical issues: how to convert road network into polygons (see https://github.com/ropensci/stplanr/issues/362 ), how to do 'kriging' on a spatial network (see https://github.com/luukvdmeer/sfnetworks/issues/11 )
 
+<!-- specific stats - kriging on network -->
+
+<!-- geo question -->
 
 
 ---
