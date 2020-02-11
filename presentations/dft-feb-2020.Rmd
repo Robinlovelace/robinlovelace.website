@@ -408,7 +408,7 @@ knitr::include_graphics("https://raw.githubusercontent.com/cyipt/stars/master/fi
 # Potential future work
 
 ```{r}
-knitr::include_graphics("./multipurpose-thin.png")
+knitr::include_graphics("https://raw.githubusercontent.com/cyipt/stars/master/slides/multipurpose-thin.png")
 ```
 
 - Combine with cycling potential for other trip purposes, to create integrated cycle potential layer
