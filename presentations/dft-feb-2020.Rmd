@@ -3,7 +3,7 @@ title: "Cycle potential to Bedfordshire rail stations"
 subtitle: "`r emojifont::emoji('bike')` `r emojifont::emoji('train')`  <br/>STARS Phase 2"
 author: "Joey Talbot, Robin Lovelace and Malcolm Morgan"
 institute: "Institute for Transport Studies, University of Leeds"
-date: "07/02/2020"
+date: "Department for Transport, 2020-02-12"
 output:
   xaringan::moon_reader:
     lib_dir: libs
