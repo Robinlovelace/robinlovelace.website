@@ -6,10 +6,35 @@
     <description>Recent content in R on Robin Lovelace&#39;s website. Energy. Transport. Technology. Change the World.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 28 Aug 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 30 Mar 2020 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="/categories/r/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Installing spatial R packages on Ubuntu</title>
+      <link>/2020/03/30/installing-spatial-r-packages-on-ubuntu/</link>
+      <pubDate>Mon, 30 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/2020/03/30/installing-spatial-r-packages-on-ubuntu/</guid>
+      <description>
+&lt;script src=&#34;../../rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;p&gt;Having recently acquired a new laptop, an &lt;a href=&#34;https://www.entroware.com/store/laptops/proteus&#34;&gt;Entroware Proteus&lt;/a&gt; (shown below), I had to remind myself how to set-it-up for my needs.
+This includes the usual things like document editing, web browsing and email.
+But as much of my work involves developing and using R for geographic research it had to have R installed.&lt;/p&gt;
+&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:unnamed-chunk-1&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;https://www.entroware.com/store/image/cache/catalog/entroware/products/laptops/el07r3/proteus-el07r3-front-open-400x500.jpg&#34; alt=&#34;The Etroware Proteus, my new Linux laptop&#34;  /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 1: The Etroware Proteus, my new Linux laptop
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;I documented the process of upgrading Ubuntu, adding the appropriate software repositories and installing packages in a recent blogpost on the website &lt;a href=&#34;https://geocompr.github.io/&#34;&gt;geocompr.github.io&lt;/a&gt;, the website supporting our open source book &lt;a href=&#34;https://geocompr.robinlovelace.net/&#34;&gt;Geocomputation with R&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;If you use Ubuntu, or are thinking of switching to Ubuntu (a sensible choice for someone looking for a user-friendly and stable mostly open source operating system), check-out the details here: &lt;a href=&#34;https://geocompr.github.io/post/2020/installing-r-spatial-ubuntu/&#34; class=&#34;uri&#34;&gt;https://geocompr.github.io/post/2020/installing-r-spatial-ubuntu/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Enjoy!&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>CASA summer school on geographic data</title>

@@ -6,10 +6,19 @@
     <description>Recent content in test on Robin Lovelace&#39;s website. Energy. Transport. Technology. Change the World.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 07 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 30 Mar 2020 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Posts</title>
+      <link>/post/</link>
+      <pubDate>Mon, 30 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Seminars, invited talks and workshops</title>
@@ -19,15 +28,6 @@
       <guid>/presentations/</guid>
       <description>&lt;p&gt;This is a selection of seminars, invited talks and workshops I&amp;rsquo;ve delivered, or will be delivering, ordered by date:&lt;/p&gt;
 </description>
-    </item>
-    
-    <item>
-      <title>Posts</title>
-      <link>/post/</link>
-      <pubDate>Wed, 28 Aug 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/post/</guid>
-      <description></description>
     </item>
     
     <item>
