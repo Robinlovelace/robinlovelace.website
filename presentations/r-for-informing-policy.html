@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="" xml:lang="">
   <head>
-    <title>Transport Data Science: from regional to street levels</title>
+    <title>From writing code to infoRming policy</title>
     <meta charset="utf-8" />
     <meta name="author" content="Robin Lovelace" />
     <link href="libs/remark-css/default.css" rel="stylesheet" />
@@ -12,30 +12,34 @@
     <textarea id="source">
 class: center, middle, inverse, title-slide
 
-# Transport Data Science: from regional to street levels
-## 🚀<br/>writing code for impact, a case study of transport and road safety data
+# From writing code to infoRming policy
+## 🚀<br/>a case study of reproducible research in transport planning
 ### Robin Lovelace
 ### University of Leeds
-### 2020-05-28 (updated: 2020-01-29)
+### 2020-05-28 (updated: 2020-01-30)
 
 ---
 
 
-background-image: url(https://d3l4am9dimtbet.cloudfront.net/wp-content/uploads/2018/07/In-Pics_-These-Mind-Blowing-Aerial-Shots-of-Mumbai-Were-Taken-by-a-Drone.jpg)
 
-## Transport is a global issue
 
-Source: [thebetterindia.com](https://www.thebetterindia.com/148450/mumbai-aerial-shots/)
-
-&lt;!-- Mumbai is by [some](https://www.independent.co.uk/travel/worlds-biggest-cities-mexico-city-new-york-karachi-tokyo-lagos-kolkata-kinshasa-dhaka-delhi-a8158426.html) measures the world's largest city --&gt;
-
+background-image: url()
 
 --
 
-Abstract: 
-Data Science has emerged as an area of high and consistent growth in many sectors. High tech industries such as search engine optimisation, marketing and retail analytics have been quick to adopt new workflows. Transport has arguably been slow to adapt to the transformations towards open source software (as opposed to proprietary products that still dominate), command line and scriptable interfaces (unlike the graphical user interfaces of tools such as Excel) and code sharing and version development via platforms such as GitHub.
+From writing code to infoRming policy: a case study of reproducible research in transport planning
 
-This talk demonstrates these new workflows, building on the [Transport chapter in the open source book Geocomputation with R](https://geocompr.robinlovelace.net/transport.html) and experience developing and deploying data science tools that are having a real world impact on transport policy and practice. It will provide insight into how multiple geographic scales of analysis were used to develop the [Propensity to Cycle Tool](http://www.pct.bike/), which Robin developed in collaboration with colleagues from 4 universities and which is being used by dozens of Local Authorities to develop strategic cycle networks. Furthermore, a live demo of the recently release [stats19](https://docs.ropensci.org/stats19/) package, which provides fast access to crash data for road safety research, will highlight the power of reproducibility and that transport data science is a practical field best discovered by doing it and collaboration using reproducible code.
+R provides unparalleled support for reproducible research.
+Its command-line interface and scriptable nature is revolutionary for people who previously relied on explaining a long series of steps in a graphical user interface to enable others to reproduce their work.
+Furthermore, R has many tools to enable the efficient replication of results in everything ranging from minimal examples (e.g. via the function `dput()` and the package `reprex`) to large projects (e.g. via `Makefile`s and workflow management packages such as `drake`).
+
+It has been well-known that reproducibility (and its corollary falsifiability) are cornerstones of science since the time of Karl Popper, but few have considered the implications for policy.
+This presentation will outline ways in which research design decisions can maximise the chances of informing evidence-based policies.
+This includes choice of software and the way in which code underlying research is written, maintained and disseminated.
+Case studies from my work on the Propensity to Cycle Tool (the results of which are freely available at [www.pct.bike](http://www.pct.bike/)), which has informed government transport policies, and the package for accessing road traffic casualty data `stats19` will illustrate these points.
+The talk will conclude with concrete steps that everyone can take to maximise the reproducibility of not only their code but also the key results of research to encourage scientific debate and evidence-based decisions.
+
+--
 
 
 ```r
@@ -49,6 +53,10 @@ install.packages(pkgs)
 
 
 
+
+---
+
+class: center, middle
 
 # Thanks!
 
