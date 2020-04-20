@@ -6,10 +6,21 @@
     <description>Recent content in Seminars, invited talks and workshops on Robin Lovelace&#39;s website. Energy. Transport. Technology. Change the World.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 06 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 23 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/presentations/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Seminar for the online Why R conference</title>
+      <link>/presentations/why-r-2020/</link>
+      <pubDate>Thu, 23 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/presentations/why-r-2020/</guid>
+      <description>I was invited to co-present on the topic of Recent changes in R spatial at the Why R conference which, like many other events, has moved on-line.
+ Event link: meetup.com Video link: YouTube Source code: github.com/Nowosad/whyr_webinar004  And on social media
+New @Docker images for reproducible geographic data analysis seem to be working 🎉 Just ran all #geocompr code with #RStats 4.0.0, and you can to (feedback on this welcome) 🚀 Details: https://t.</description>
+    </item>
     
     <item>
       <title>Invited seminar at the University of Pennsylvania</title>

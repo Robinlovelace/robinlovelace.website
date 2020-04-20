@@ -6,7 +6,7 @@
     <description>Recent content in test on Robin Lovelace&#39;s website. Energy. Transport. Technology. Change the World.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 06 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 23 Apr 2020 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>Seminars, invited talks and workshops</title>
       <link>/presentations/</link>
-      <pubDate>Mon, 06 Apr 2020 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 23 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>/presentations/</guid>
       <description>&lt;p&gt;This is a selection of seminars, invited talks and workshops I&amp;rsquo;ve delivered, or will be delivering, ordered by date:&lt;/p&gt;
@@ -37,6 +37,7 @@
       
       <guid>/about/</guid>
       <description>
+&lt;script src=&#34;./rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;div id=&#34;welcome&#34; class=&#34;section level2&#34;&gt;
@@ -75,12 +76,12 @@
 &lt;/div&gt;
 &lt;div id=&#34;references&#34; class=&#34;section level2 unnumbered&#34;&gt;
 &lt;h2&gt;References&lt;/h2&gt;
-&lt;div id=&#34;refs&#34; class=&#34;references&#34;&gt;
+&lt;div id=&#34;refs&#34; class=&#34;references hanging-indent&#34;&gt;
 &lt;div id=&#34;ref-boyce_forecasting_2015&#34;&gt;
 &lt;p&gt;Boyce, David E., and Huw C. W. L. Williams. 2015. &lt;em&gt;Forecasting Urban Travel: Past, Present and Future&lt;/em&gt;. Edward Elgar Publishing.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;ref-lovelace_propensity_2017&#34;&gt;
-&lt;p&gt;Lovelace, Robin, Anna Goodman, Rachel Aldred, Nikolai Berkoff, Ali Abbas, and James Woodcock. 2017. “The Propensity to Cycle Tool: An Open Source Online System for Sustainable Transport Planning.” &lt;em&gt;Journal of Transport and Land Use&lt;/em&gt; 10 (1). doi:&lt;a href=&#34;https://doi.org/10.5198/jtlu.2016.862&#34;&gt;10.5198/jtlu.2016.862&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Lovelace, Robin, Anna Goodman, Rachel Aldred, Nikolai Berkoff, Ali Abbas, and James Woodcock. 2017. “The Propensity to Cycle Tool: An Open Source Online System for Sustainable Transport Planning.” &lt;em&gt;Journal of Transport and Land Use&lt;/em&gt; 10 (1). &lt;a href=&#34;https://doi.org/10.5198/jtlu.2016.862&#34;&gt;https://doi.org/10.5198/jtlu.2016.862&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
