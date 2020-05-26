@@ -6,10 +6,20 @@
     <description>Recent content in Posts on Robin Lovelace&#39;s website. Energy. Transport. Technology. Change the World.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 30 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 26 May 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Evidence to prioritise pop-up cycleways</title>
+      <link>/2020/05/26/evidence-to-prioritise-pop-up-cycleways/</link>
+      <pubDate>Tue, 26 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/2020/05/26/evidence-to-prioritise-pop-up-cycleways/</guid>
+      <description>I gave a talk yesterday at the ‘Ideas with Beers’ seminar series, hosted each Tuesday for the past several months by Brian Deegan, an experienced transport infrastructure engineer and Principal Design Engineer at Urban Movement.
+The seminar series started as a physical weekly pub meeting between Brian and anyone who wanted to share ideas, over a beer of course, in a local pub. Now that pubs are closed, it has moved on-line opening-it-up to a more diverse audience of speakers and attendees, and allowing the talks to be recorded to benefit everyone.</description>
+    </item>
     
     <item>
       <title>Installing spatial R packages on Ubuntu</title>
