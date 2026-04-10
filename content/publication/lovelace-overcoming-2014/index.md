@@ -1,0 +1,34 @@
+---
+# Documentation: https://wowchemy.com/docs/managing-content/
+
+title: 'Overcoming Car Dependence: Review of “The Car Dependent Society–a European
+  Perspective”'
+subtitle: ''
+summary: ''
+authors:
+- Robin Lovelace
+tags:
+- Book review
+categories: []
+date: '2014-01-01'
+lastmod: 2024-09-30T12:19:27+01:00
+featured: false
+draft: false
+
+# Featured image
+# To use, add an image named `featured.jpg/png` to your page's folder.
+# Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: false
+
+# Projects (optional).
+#   Associate this post with one or more of your projects.
+projects: []
+publishDate: '2024-09-30T11:19:27.454717Z'
+publication_types:
+- '2'
+abstract: '  In this podcast, ICE''s Adam Kirkup interviews~Dr. Robin Lovelace, University of Leeds, discussing the development of the Propensity to Cycle Toolkit (PCT), and how it can be used to prioritise investments and interventions which promote cycling.'
+publication: ''
+---

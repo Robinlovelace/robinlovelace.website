@@ -1,0 +1,93 @@
+---
+title: 'Public Transport and School Location Impacts on Educational Inequalities:
+  Insights from São Paulo'
+
+# Authors
+# A YAML list of author names
+# If you created a profile for a user (e.g. the default `admin` user at `content/authors/admin/`), 
+# write the username (folder name) here, and it will be replaced with their full name and linked to their profile.
+authors:
+- Ana I. Moreno-Monroy
+- Robin Lovelace
+- Frederico R. Ramos
+
+# Author notes (such as 'Equal Contribution')
+# A YAML list of notes for each author in the above `authors` list
+author_notes: []
+
+date: '2017-09-15'
+
+# Date to publish webpage (NOT necessarily Bibtex publication's date).
+publishDate: '2026-03-12T13:11:19.685186Z'
+
+# Publication type.
+# A single CSL publication type but formatted as a YAML list (for Hugo requirements).
+publication_types:
+- "2"
+
+# Publication name and optional abbreviated publication name.
+publication: ''
+publication_short: ''
+
+doi: 10.1016/j.jtrangeo.2017.08.012
+
+abstract: In many large Latin American urban areas such as the São Paulo Metropolitan
+  Region (SPMR), growing social and economic inequalities are embedded through high
+  spatial inequality in the provision of state schools and affordable public transport
+  to these schools. This paper sheds light on the transport-education inequality nexus
+  with reference to school accessibility by public transport in the SPMR. To assess
+  school accessibility, we develop an accessibility index which combines information
+  on the spatial distribution of adolescents, the location of existing schools, and
+  the public transport provision serving the school catchment area into a single measure.
+  The index is used to measure school accessibility locally across 633 areas within
+  the SPMR. We use the index to simulate the impact of a policy aiming at increasing
+  the centralisation of public secondary education provision, and find that it negatively
+  affects public transport accessibility for students with the lowest levels of accessibility.
+  These results illustrate how existing inequalities can be amplified by variable
+  accessibility to schools across income groups and geographical space. The research
+  suggests that educational inequality impacts of school agglomeration policies should
+  be considered before centralisation takes place.
+
+# Summary. An optional shortened abstract.
+summary: ''
+
+tags:
+- Accessibility
+- Inequality
+- Latin america
+- Public transport
+- Schools
+
+# Display this page in a list of Featured pages?
+featured: false
+
+# Links
+url_pdf: ''
+url_code: ''
+url_dataset: ''
+url_poster: ''
+url_project: ''
+url_slides: ''
+url_source: ''
+url_video: ''
+
+# Custom links (uncomment lines below)
+# links:
+# - name: Custom Link
+#   url: http://example.org
+
+# Publication image
+# Add an image named `featured.jpg/png` to your page's folder then add a caption below.
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: false
+
+# Associated Projects (optional).
+#   Associate this publication with one or more of your projects.
+projects: []
+links:
+- name: URL
+  url: http://www.sciencedirect.com/science/article/pii/S0966692316303453
+---
+

@@ -1,16 +1,90 @@
-This is a minimal example of a Jekyll-based website using **knitr** and R
-Markdown. The interesting bit of this repo is that you can actually serve the
-Jekyll website locally with R, and R Markdown posts can be compiled
-automatically, with the web pages automatically refreshed as well.
 
-After you are satisfied with the local preview, you can either just push the
-Markdown blog posts to your Github repo (e.g. the `gh-pages` branch), and let
-Github generate the website for you, or host the HTML files generated under the
-`_site/` directory on your own server.
+<!-- README.md is generated from README.Rmd. Please edit that file -->
 
-The original website was created from `jekyll new .` under the root directory,
-which was part of the [official Jekyll repo](https://github.com/jekyll/jekyll).
-The additional code (R, Makefile) in this repo is under the MIT License, and the
-[blog post](http://yihui.name/knitr-jekyll/2014/09/jekyll-with-knitr.html) I
-wrote is under the [CC-BY 4.0](http://creativecommons.org/licenses/by/4.0/)
-International License.
+# robinlovelace
+
+This is the source code of my website. I plan to store notes on how to
+use it here.
+
+New talk:
+
+``` bash
+hugo new  --kind event event/ogh23
+cp -Rv content/event/glasgow2024 content/event/st-andrews2025
+code content/event/st-andrews2025/index.md
+```
+
+``` r
+# Equivalent copying code in R:
+system("cp -Rv content/event/glasgow2024 content/event/st-andrews-2025")
+file.copy("content/event/st-andrews-2025/index.qmd", "content/event/st-andrews-2025/index.Rmd", overwrite = TRUE)
+#> [1] TRUE
+```
+
+``` r
+remotes::install_cran("blogdown")
+file.edit("content/event/modeshift-2022/index.md")
+blogdown::install_hugo()
+
+# new blog post:
+blogdown::new_post(title = "2024-retrospective", ext = ".Rmd")
+
+blogdown::new_content(path = "software/index.Rmd")
+
+# serve site
+blogdown::serve_site()
+blogdown::stop_server()
+
+# build site
+blogdown::build_site()
+```
+
+To update publications:
+
+``` bash
+pip install --upgrade academic
+
+# 1. Update the BibTeX file with new entries (from Zotero or manually)
+academic import --overwrite --normalize --bibtex static/bibs/my-citations-for-web.bib content/publication/
+```
+
+**⚠️ Known issues with `academic import --overwrite`:**
+
+- **Abstracts are cleared** — the import sets `abstract: ''` for all
+  pages. Restore from Git:
+
+  ``` bash
+  # Restore publication pages from before the import (commit first so you can diff)
+  git diff HEAD -- content/publication/ > /tmp/import-changes.diff
+  git checkout HEAD~1 -- content/publication/
+  # Then re-run import with --bibtex and selectively merge changes
+  ```
+
+- **`publication_types` must be integers** — import may output strings
+  like `"article-journal"`. Wowchemy requires: `0` = uncategorized, `2`
+  = journal article, `5` = book. Fix:
+
+  ``` bash
+  find content/publication/ -name "index.md" -exec sed -i.bak 's/- article-journal$/- "2"/' {} \; && find content/publication/ -name "*.bak" -delete
+  ```
+
+- **Featured publications reset** — `--overwrite` sets `featured: false`
+  on all pages. Re-enable:
+
+  ``` bash
+  # Set featured: true in index.md for key publications
+  ```
+
+- **Template placeholders** — import leaves `Add the **full text**...`
+  placeholder text. Remove:
+
+  ``` bash
+  find content/publication/ -name "index.md" -exec sed -i.bak '/Add the \*\*full text\*\*/d' {} \; && find content/publication/ -name "*.bak" -delete
+  ```
+
+**Adding new papers from Zotero:**
+
+``` bash
+# Export from Zotero, compare DOIs, add missing entries to my-citations-for-web.bib
+# Then run import and fix issues above
+```
