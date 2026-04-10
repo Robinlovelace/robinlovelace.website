@@ -1,7 +1,7 @@
 # Netlify redirects
 # Automatically generated
 # Documentation: https://docs.netlify.com/routing/redirects/
-/2017/05/02/can-geographic-data-save-the-world/ /post/2017-05-02-can-geographic-data-save-the-world/
-/r/2014/07/29/clipping-with-r.html /post/2014-07-29-clipping-with-r/
-/r/2013/12/27/coxcomb-plots-spiecharts-R.html /post/2013-12-27-coxcomb-plots-spiecharts-r/
-/2013/09/22/presentation-at-foss4g-2013/ /post/2013-09-22-foss4g-presentation/
+/2017/05/02/can-geographic-data-save-the-world/ /old-site/post/2017-05-02-can-geographic-data-save-the-world/
+/r/2014/07/29/clipping-with-r.html /old-site/post/2014-07-29-clipping-with-r/
+/r/2013/12/27/coxcomb-plots-spiecharts-R.html /old-site/post/2013-12-27-coxcomb-plots-spiecharts-r/
+/2013/09/22/presentation-at-foss4g-2013/ /old-site/post/2013-09-22-foss4g-presentation/

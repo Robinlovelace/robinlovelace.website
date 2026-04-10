@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>computing | Robin Lovelace</title><link>https://www.robinlovelace.net/tag/computing/</link><atom:link href="https://www.robinlovelace.net/tag/computing/index.xml" rel="self" type="application/rss+xml"/><description>computing</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 30 Mar 2020 00:00:00 +0000</lastBuildDate><image><url>https://www.robinlovelace.net/media/icon_hu93dbabadc2a9bdd4930d1377c0b338b2_5137_512x512_fill_lanczos_center_3.png</url><title>computing</title><link>https://www.robinlovelace.net/tag/computing/</link></image><item><title>Installing spatial R packages on Ubuntu</title><link>https://www.robinlovelace.net/post/installing-spatial-r-packages-on-ubuntu/</link><pubDate>Mon, 30 Mar 2020 00:00:00 +0000</pubDate><guid>https://www.robinlovelace.net/post/installing-spatial-r-packages-on-ubuntu/</guid><description>&lt;p>Having recently acquired a new laptop, an &lt;a href="https://www.entroware.com/store/laptops/proteus" target="_blank" rel="noopener">Entroware Proteus&lt;/a> (shown below), I had to remind myself how to set-it-up for my needs.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>computing | Robin Lovelace</title><link>https://robinlovelace.net/old-site/tag/computing/</link><atom:link href="https://robinlovelace.net/old-site/tag/computing/index.xml" rel="self" type="application/rss+xml"/><description>computing</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 30 Mar 2020 00:00:00 +0000</lastBuildDate><image><url>https://robinlovelace.net/old-site/media/icon_hu93dbabadc2a9bdd4930d1377c0b338b2_5137_512x512_fill_lanczos_center_3.png</url><title>computing</title><link>https://robinlovelace.net/old-site/tag/computing/</link></image><item><title>Installing spatial R packages on Ubuntu</title><link>https://robinlovelace.net/old-site/post/installing-spatial-r-packages-on-ubuntu/</link><pubDate>Mon, 30 Mar 2020 00:00:00 +0000</pubDate><guid>https://robinlovelace.net/old-site/post/installing-spatial-r-packages-on-ubuntu/</guid><description>&lt;p>Having recently acquired a new laptop, an &lt;a href="https://www.entroware.com/store/laptops/proteus" target="_blank" rel="noopener">Entroware Proteus&lt;/a> (shown below), I had to remind myself how to set-it-up for my needs.
 This includes the usual things like document editing, web browsing and email.
 But as much of my work involves developing and using R for geographic research it had to have R installed.&lt;/p>
 &lt;div class="figure">
@@ -7,7 +7,7 @@ But as much of my work involves developing and using R for geographic research i
 &lt;/div>
 &lt;p>I documented the process of upgrading Ubuntu, adding the appropriate software repositories and installing packages in a recent blogpost on the website &lt;a href="https://geocompr.github.io/" target="_blank" rel="noopener">geocompr.github.io&lt;/a>, the website supporting our open source book &lt;a href="https://geocompr.robinlovelace.net/" target="_blank" rel="noopener">Geocomputation with R&lt;/a>.&lt;/p>
 &lt;p>If you use Ubuntu, or are thinking of switching to Ubuntu (a sensible choice for someone looking for a user-friendly and stable mostly open source operating system), check-out the details here: &lt;a href="https://geocompr.github.io/post/2020/installing-r-spatial-ubuntu/" target="_blank" rel="noopener">https://geocompr.github.io/post/2020/installing-r-spatial-ubuntu/&lt;/a>&lt;/p>
-&lt;p>Enjoy!&lt;/p></description></item><item><title>Coxcomb plots and 'spiecharts' in R</title><link>https://www.robinlovelace.net/post/2013-12-27-coxcomb-plots-spiecharts-r/</link><pubDate>Fri, 27 Dec 2013 00:00:00 +0000</pubDate><guid>https://www.robinlovelace.net/post/2013-12-27-coxcomb-plots-spiecharts-r/</guid><description>&lt;p>After switching to a new site I decided to revive some old posts.
+&lt;p>Enjoy!&lt;/p></description></item><item><title>Coxcomb plots and 'spiecharts' in R</title><link>https://robinlovelace.net/old-site/post/2013-12-27-coxcomb-plots-spiecharts-r/</link><pubDate>Fri, 27 Dec 2013 00:00:00 +0000</pubDate><guid>https://robinlovelace.net/old-site/post/2013-12-27-coxcomb-plots-spiecharts-r/</guid><description>&lt;p>After switching to a new site I decided to revive some old posts.
 I found this one that was written back 7 years ago (in January 2021 when this update was written), back in December 2013.
 The results of the book are now published in the book &lt;a href="https://www.routledge.com/Low-Impact-Living-A-Field-Guide-to-Ecological-Affordable-Community-Building/Chatterton/p/book/9780415661614">Low Impact Living: A Field Guide to Ecological, Affordable Community Building&lt;/a> (Chatterton, 2015, for more info on the Lilac project in particular and cohousing in general see &lt;a href="https://www.lilac.coop/resources/">lilac.coop/resources/&lt;/a>).
 I was amazed to find that, with some tweaks, the &lt;code>ggplot2&lt;/code> code still ran.&lt;/p>
@@ -99,13 +99,13 @@ data so it would better fit in a coxcomb plot.&lt;/p>
 &lt;pre class="r">&lt;code>library(ggplot2)
 (p &amp;lt;- ggplot(f, aes(x = H, y = Allocation)) + geom_bar(color = &amp;quot;black&amp;quot;, stat = &amp;quot;identity&amp;quot;,
 width = 1))&lt;/code>&lt;/pre>
-&lt;p>&lt;img src="https://www.robinlovelace.net/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-2-1.png" width="672" />&lt;/p>
+&lt;p>&lt;img src="https://robinlovelace.net/old-site/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-2-1.png" width="672" />&lt;/p>
 &lt;div class="figure">
 &lt;img src="" alt="" />
 &lt;p class="caption">plot of chunk unnamed-chunk-2&lt;/p>
 &lt;/div>
 &lt;pre class="r">&lt;code>p + coord_polar()&lt;/code>&lt;/pre>
-&lt;p>&lt;img src="https://www.robinlovelace.net/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-3-1.png" width="672" />&lt;/p>
+&lt;p>&lt;img src="https://robinlovelace.net/old-site/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-3-1.png" width="672" />&lt;/p>
 &lt;!-- ![plot of chunk unnamed-chunk-2](https://raw.github.com/Robinlovelace/robinlovelace.github.io/master/figure/unnamed-chunk-22.png) -->
 &lt;p>The above example works well, but notice that all the bars are of equal widths.
 What we want is to be proportional to a value (variable “Value”) of each observation.
@@ -115,10 +115,10 @@ answer to a &lt;a href="http://stackoverflow.com/questions/20688376/how-to-make-
 pos &amp;lt;- 0.5 * (cumsum(w) + cumsum(c(0, w[-length(w)])))
 (p &amp;lt;- ggplot(f, aes(x = pos)) + geom_bar(aes(y = Allocation), width = w, color = &amp;quot;black&amp;quot;,
 stat = &amp;quot;identity&amp;quot;))&lt;/code>&lt;/pre>
-&lt;p>&lt;img src="https://www.robinlovelace.net/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-4-1.png" width="672" />&lt;/p>
+&lt;p>&lt;img src="https://robinlovelace.net/old-site/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-4-1.png" width="672" />&lt;/p>
 &lt;!-- ![plot of chunk unnamed-chunk-3](https://raw.github.com/Robinlovelace/robinlovelace.github.io/master/figure/unnamed-chunk-31.png) -->
 &lt;pre class="r">&lt;code>p + coord_polar(theta = &amp;quot;x&amp;quot;) + scale_x_continuous(labels = f$H, breaks = pos)&lt;/code>&lt;/pre>
-&lt;p>&lt;img src="https://www.robinlovelace.net/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-5-1.png" width="672" />&lt;/p>
+&lt;p>&lt;img src="https://robinlovelace.net/old-site/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-5-1.png" width="672" />&lt;/p>
 &lt;!-- ![plot of chunk unnamed-chunk-3](https://raw.github.com/Robinlovelace/robinlovelace.github.io/master/figure/unnamed-chunk-32.png) -->
 &lt;p>Finally a spie chart has been created. After that revelation, it was essentially about adding the ‘bells and
 whistles’, including a 10% line to represent how much more or less than their share each observation was
@@ -136,7 +136,7 @@ p &amp;lt;- ggplot(f)
 p + geom_bar(aes(x = pos, y = Allocation), width = w, color = &amp;quot;black&amp;quot;, stat = &amp;quot;identity&amp;quot;) +
 geom_bar(aes(x = pos, y = 0.1), width = w, color = &amp;quot;black&amp;quot;, stat = &amp;quot;identity&amp;quot;,
 fill = &amp;quot;green&amp;quot;) + coord_polar()&lt;/code>&lt;/pre>
-&lt;p>&lt;img src="https://www.robinlovelace.net/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-7-1.png" width="672" />&lt;/p>
+&lt;p>&lt;img src="https://robinlovelace.net/old-site/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-7-1.png" width="672" />&lt;/p>
 &lt;!-- ![plot of chunk unnamed-chunk-4](https://raw.github.com/Robinlovelace/robinlovelace.github.io/master/figure/unnamed-chunk-41.png) -->
 &lt;pre class="r">&lt;code># make proportional to area
 f$Allo &amp;lt;- sqrt(f$Allocation)
@@ -146,7 +146,7 @@ geom_bar(aes(x = pos, y = sqrt(0.1), width = w), color = &amp;quot;black&amp;quo
 fill = &amp;quot;green&amp;quot;) + coord_polar()&lt;/code>&lt;/pre>
 &lt;pre>&lt;code>## Warning: Ignoring unknown aesthetics: width
 ## Warning: Ignoring unknown aesthetics: width&lt;/code>&lt;/pre>
-&lt;p>&lt;img src="https://www.robinlovelace.net/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-8-1.png" width="672" />&lt;/p>
+&lt;p>&lt;img src="https://robinlovelace.net/old-site/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-8-1.png" width="672" />&lt;/p>
 &lt;!-- ![plot of chunk unnamed-chunk-4](https://raw.github.com/Robinlovelace/robinlovelace.github.io/master/figure/unnamed-chunk-42.png) -->
 &lt;pre class="r">&lt;code># add capital
 capital &amp;lt;- (f$Captial + f$Deposit)/(f$Value) * f$Allocation
@@ -159,7 +159,7 @@ breaks = pos)&lt;/code>&lt;/pre>
 &lt;pre>&lt;code>## Warning: Ignoring unknown aesthetics: width
 ## Warning: Ignoring unknown aesthetics: width
 ## Warning: Ignoring unknown aesthetics: width&lt;/code>&lt;/pre>
-&lt;p>&lt;img src="https://www.robinlovelace.net/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-9-1.png" width="672" />&lt;/p>
+&lt;p>&lt;img src="https://robinlovelace.net/old-site/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-9-1.png" width="672" />&lt;/p>
 &lt;!-- ![plot of chunk unnamed-chunk-4](https://raw.github.com/Robinlovelace/robinlovelace.github.io/master/figure/unnamed-chunk-43.png) -->
 &lt;pre class="r">&lt;code># add ablines
 p + geom_bar(aes(x = pos, y = Allo, width = w), color = &amp;quot;grey40&amp;quot;, stat = &amp;quot;identity&amp;quot;,
@@ -171,7 +171,7 @@ linetype = 3) + geom_abline(intercept = sqrt(0.9), slope = 0, linetype = 3)&lt;/
 &lt;pre>&lt;code>## Warning: Ignoring unknown aesthetics: width
 ## Warning: Ignoring unknown aesthetics: width
 ## Warning: Ignoring unknown aesthetics: width&lt;/code>&lt;/pre>
-&lt;p>&lt;img src="https://www.robinlovelace.net/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-10-1.png" width="672" />&lt;/p>
+&lt;p>&lt;img src="https://robinlovelace.net/old-site/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-10-1.png" width="672" />&lt;/p>
 &lt;div class="figure">
 &lt;img src="https://raw.github.com/Robinlovelace/robinlovelace.github.io/master/figure/unnamed-chunk-44.png" alt="" />
 &lt;p class="caption">plot of chunk unnamed-chunk-4&lt;/p>
@@ -190,7 +190,7 @@ coord_polar()&lt;/code>&lt;/pre>
 &lt;pre>&lt;code>## Warning: Ignoring unknown parameters: x
 ## Warning: Ignoring unknown parameters: x
 ## Warning: Ignoring unknown parameters: x&lt;/code>&lt;/pre>
-&lt;p>&lt;img src="https://www.robinlovelace.net/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-11-1.png" width="672" />&lt;/p>
+&lt;p>&lt;img src="https://robinlovelace.net/old-site/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-11-1.png" width="672" />&lt;/p>
 &lt;pre class="r">&lt;code># putting it all together
 p &amp;lt;- ggplot(f)
 p + geom_bar(aes(x = pos, y = Allo, width = w), color = &amp;quot;grey40&amp;quot;, stat = &amp;quot;identity&amp;quot;,
@@ -210,7 +210,7 @@ theme_classic()&lt;/code>&lt;/pre>
 &lt;pre>&lt;code>## Warning: Ignoring unknown parameters: x
 ## Warning: Ignoring unknown parameters: x
 ## Warning: Ignoring unknown parameters: x&lt;/code>&lt;/pre>
-&lt;p>&lt;img src="https://www.robinlovelace.net/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-12-1.png" width="672" />&lt;/p>
+&lt;p>&lt;img src="https://robinlovelace.net/old-site/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-12-1.png" width="672" />&lt;/p>
 &lt;p>The above looks great, but ideally, for an ‘infographic’ feel, it would
 have no annoying axes clogging up the visuals. This was done by creating an
 entirely new ggpot theme.&lt;/p>
@@ -220,7 +220,7 @@ entirely new ggpot theme.&lt;/p>
 &lt;pre class="r">&lt;code>theme_infog &amp;lt;- theme_classic() + theme(axis.line = element_blank(), axis.title = element_blank(),
 axis.ticks = element_blank(), axis.text.y = element_blank())
 last_plot() + theme_infog&lt;/code>&lt;/pre>
-&lt;p>&lt;img src="https://www.robinlovelace.net/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-13-1.png" width="672" />&lt;/p>
+&lt;p>&lt;img src="https://robinlovelace.net/old-site/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-13-1.png" width="672" />&lt;/p>
 &lt;/div>
 &lt;div id="creating-a-ring" class="section level2">
 &lt;h2>Creating a ring&lt;/h2>
@@ -236,7 +236,7 @@ p &amp;lt;- ggplot(f)
 p + geom_bar(aes(x = pos, y = Allo, width = w), color = &amp;quot;grey40&amp;quot;, stat = &amp;quot;identity&amp;quot;,
 fill = &amp;quot;lightgrey&amp;quot;)&lt;/code>&lt;/pre>
 &lt;pre>&lt;code>## Warning: Ignoring unknown aesthetics: width&lt;/code>&lt;/pre>
-&lt;p>&lt;img src="https://www.robinlovelace.net/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-14-1.png" width="672" />&lt;/p>
+&lt;p>&lt;img src="https://robinlovelace.net/old-site/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-14-1.png" width="672" />&lt;/p>
 &lt;!-- ![plot of chunk unnamed-chunk-6](https://raw.github.com/Robinlovelace/robinlovelace.github.io/master/figure/unnamed-chunk-61.png) -->
 &lt;pre class="r">&lt;code># we need the axes to be bigger for starters - try 1.3 to 1.5
 p + geom_bar(aes(x = pos, y = Cap.r, width = w), color = &amp;quot;grey40&amp;quot;, stat = &amp;quot;identity&amp;quot;,
@@ -248,7 +248,7 @@ y = 1.196, width = w), color = &amp;quot;white&amp;quot;, stat = &amp;quot;ident
 ## Warning: Ignoring unknown aesthetics: width
 ## Warning: Ignoring unknown aesthetics: width
 ## Warning: Ignoring unknown aesthetics: width&lt;/code>&lt;/pre>
-&lt;p>&lt;img src="https://www.robinlovelace.net/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-15-1.png" width="672" />&lt;/p>
+&lt;p>&lt;img src="https://robinlovelace.net/old-site/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-15-1.png" width="672" />&lt;/p>
 &lt;pre class="r">&lt;code>last_plot() + geom_bar(aes(x = pos, y = Allo, width = w), color = &amp;quot;grey40&amp;quot;,
 stat = &amp;quot;identity&amp;quot;, fill = &amp;quot;grey80&amp;quot;) + geom_bar(aes(x = pos, y = capital,
 width = w), color = &amp;quot;grey40&amp;quot;, stat = &amp;quot;identity&amp;quot;, fill = &amp;quot;grey30&amp;quot;) + geom_bar(aes(x = pos,
@@ -260,7 +260,7 @@ theme_infog&lt;/code>&lt;/pre>
 &lt;pre>&lt;code>## Warning: Ignoring unknown aesthetics: width
 ## Warning: Ignoring unknown aesthetics: width
 ## Warning: Ignoring unknown aesthetics: width&lt;/code>&lt;/pre>
-&lt;p>&lt;img src="https://www.robinlovelace.net/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-16-1.png" width="672" />&lt;/p>
+&lt;p>&lt;img src="https://robinlovelace.net/old-site/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-16-1.png" width="672" />&lt;/p>
 &lt;!-- ![plot of chunk unnamed-chunk-6](https://raw.github.com/Robinlovelace/robinlovelace.github.io/master/figure/unnamed-chunk-63.png) -->
 &lt;/div>
 &lt;div id="just-inner" class="section level2">
@@ -278,7 +278,7 @@ coord_polar() + scale_x_continuous(labels = f$H, breaks = pos) + theme_infog&lt;
 &lt;pre>&lt;code>## Warning: Ignoring unknown aesthetics: width
 ## Warning: Ignoring unknown aesthetics: width
 ## Warning: Ignoring unknown aesthetics: width&lt;/code>&lt;/pre>
-&lt;p>&lt;img src="https://www.robinlovelace.net/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-17-1.png" width="672" />&lt;/p>
+&lt;p>&lt;img src="https://robinlovelace.net/old-site/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-17-1.png" width="672" />&lt;/p>
 &lt;!-- ![plot of chunk unnamed-chunk-7](https://raw.github.com/Robinlovelace/robinlovelace.github.io/master/figure/unnamed-chunk-7.png) -->
 &lt;pre class="r">&lt;code>ggsave(&amp;quot;just-inner.png&amp;quot;, width = 7, height = 7, dpi = 800)&lt;/code>&lt;/pre>
 &lt;/div></description></item></channel></rss>

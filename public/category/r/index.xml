@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>R | Robin Lovelace</title><link>https://www.robinlovelace.net/category/r/</link><atom:link href="https://www.robinlovelace.net/category/r/index.xml" rel="self" type="application/rss+xml"/><description>R</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 17 Mar 2026 00:00:00 +0000</lastBuildDate><image><url>https://www.robinlovelace.net/media/icon_hu93dbabadc2a9bdd4930d1377c0b338b2_5137_512x512_fill_lanczos_center_3.png</url><title>R</title><link>https://www.robinlovelace.net/category/r/</link></image><item><title>stats19 v4.0.0: 45 Years of UK Road Crash Data, Unified</title><link>https://www.robinlovelace.net/post/stats19-v4/</link><pubDate>Tue, 17 Mar 2026 00:00:00 +0000</pubDate><guid>https://www.robinlovelace.net/post/stats19-v4/</guid><description>&lt;p>The stats19 R package has been updated to version 4.0.0. The main change is a unified column schema that lets you work with 45 years of UK road crash data (1979 to 2024) without running into mismatched column names.&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>R | Robin Lovelace</title><link>https://robinlovelace.net/old-site/category/r/</link><atom:link href="https://robinlovelace.net/old-site/category/r/index.xml" rel="self" type="application/rss+xml"/><description>R</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 17 Mar 2026 00:00:00 +0000</lastBuildDate><image><url>https://robinlovelace.net/old-site/media/icon_hu93dbabadc2a9bdd4930d1377c0b338b2_5137_512x512_fill_lanczos_center_3.png</url><title>R</title><link>https://robinlovelace.net/old-site/category/r/</link></image><item><title>stats19 v4.0.0: 45 Years of UK Road Crash Data, Unified</title><link>https://robinlovelace.net/old-site/post/stats19-v4/</link><pubDate>Tue, 17 Mar 2026 00:00:00 +0000</pubDate><guid>https://robinlovelace.net/old-site/post/stats19-v4/</guid><description>&lt;p>The stats19 R package has been updated to version 4.0.0. The main change is a unified column schema that lets you work with 45 years of UK road crash data (1979 to 2024) without running into mismatched column names.&lt;/p>
 &lt;h2 id="unified-schema">Unified schema&lt;/h2>
 &lt;p>Older data files have columns like &lt;code>carriageway_hazards_historic&lt;/code> while newer ones use &lt;code>carriageway_hazards&lt;/code>. v4.0.0 detects these variants, merges them into the modern names, and drops the redundant columns.&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-r" data-lang="r">&lt;span class="line">&lt;span class="cl">&lt;span class="nf">library&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">stats19&lt;/span>&lt;span class="p">)&lt;/span>
@@ -27,7 +27,7 @@
 &lt;li>&lt;a href="https://github.com/ropensci/stats19" target="_blank" rel="noopener">GitHub&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://docs.ropensci.org/stats19/" target="_blank" rel="noopener">Documentation&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://github.com/ropensci/stats19/blob/main/NEWS.md" target="_blank" rel="noopener">Changelog&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>Installing spatial R packages on Ubuntu</title><link>https://www.robinlovelace.net/post/installing-spatial-r-packages-on-ubuntu/</link><pubDate>Mon, 30 Mar 2020 00:00:00 +0000</pubDate><guid>https://www.robinlovelace.net/post/installing-spatial-r-packages-on-ubuntu/</guid><description>&lt;p>Having recently acquired a new laptop, an &lt;a href="https://www.entroware.com/store/laptops/proteus" target="_blank" rel="noopener">Entroware Proteus&lt;/a> (shown below), I had to remind myself how to set-it-up for my needs.
+&lt;/ul></description></item><item><title>Installing spatial R packages on Ubuntu</title><link>https://robinlovelace.net/old-site/post/installing-spatial-r-packages-on-ubuntu/</link><pubDate>Mon, 30 Mar 2020 00:00:00 +0000</pubDate><guid>https://robinlovelace.net/old-site/post/installing-spatial-r-packages-on-ubuntu/</guid><description>&lt;p>Having recently acquired a new laptop, an &lt;a href="https://www.entroware.com/store/laptops/proteus" target="_blank" rel="noopener">Entroware Proteus&lt;/a> (shown below), I had to remind myself how to set-it-up for my needs.
 This includes the usual things like document editing, web browsing and email.
 But as much of my work involves developing and using R for geographic research it had to have R installed.&lt;/p>
 &lt;div class="figure">
@@ -36,7 +36,7 @@ But as much of my work involves developing and using R for geographic research i
 &lt;/div>
 &lt;p>I documented the process of upgrading Ubuntu, adding the appropriate software repositories and installing packages in a recent blogpost on the website &lt;a href="https://geocompr.github.io/" target="_blank" rel="noopener">geocompr.github.io&lt;/a>, the website supporting our open source book &lt;a href="https://geocompr.robinlovelace.net/" target="_blank" rel="noopener">Geocomputation with R&lt;/a>.&lt;/p>
 &lt;p>If you use Ubuntu, or are thinking of switching to Ubuntu (a sensible choice for someone looking for a user-friendly and stable mostly open source operating system), check-out the details here: &lt;a href="https://geocompr.github.io/post/2020/installing-r-spatial-ubuntu/" target="_blank" rel="noopener">https://geocompr.github.io/post/2020/installing-r-spatial-ubuntu/&lt;/a>&lt;/p>
-&lt;p>Enjoy!&lt;/p></description></item><item><title>CASA summer school on geographic data</title><link>https://www.robinlovelace.net/post/casa-summer-school-on-geographic-data/</link><pubDate>Wed, 28 Aug 2019 00:00:00 +0000</pubDate><guid>https://www.robinlovelace.net/post/casa-summer-school-on-geographic-data/</guid><description>&lt;p>Last week I presented at UCL’s summer school which, by all accounts, was a very successful event in which many people learned many new skills.
+&lt;p>Enjoy!&lt;/p></description></item><item><title>CASA summer school on geographic data</title><link>https://robinlovelace.net/old-site/post/casa-summer-school-on-geographic-data/</link><pubDate>Wed, 28 Aug 2019 00:00:00 +0000</pubDate><guid>https://robinlovelace.net/old-site/post/casa-summer-school-on-geographic-data/</guid><description>&lt;p>Last week I presented at UCL’s summer school which, by all accounts, was a very successful event in which many people learned many new skills.
 The presentation format was a refreshing changes from the PowerPoint slides you’re often asked to prepare.
 Instead, each presenter was asked to create a reproducible RMarkdown document to present.
 The source code was shared with the students, who were encouraged to test the code.&lt;/p>
@@ -47,7 +47,7 @@ The source code was shared with the students, who were encouraged to test the co
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;blockquote class="twitter-tweet">&lt;p lang="en" dir="ltr">Too long didn&amp;#39;t read (TLDR) summary of CRSs.&lt;br>&lt;br>Additional resources:&lt;br>&lt;br>Blog post: &lt;a href="https://t.co/k3FDKqxp3E">https://t.co/k3FDKqxp3E&lt;/a>&lt;br>Chapter in upcoming book by @edzerpebesma: &lt;a href="https://t.co/D919MPwMam">https://t.co/D919MPwMam&lt;/a>&lt;br>Chapter in &lt;a href="https://twitter.com/hashtag/geocompr?src=hash&amp;amp;ref_src=twsrc%5Etfw">#geocompr&lt;/a> book: &lt;a href="https://t.co/pffHqeF8YT">https://t.co/pffHqeF8YT&lt;/a> &lt;a href="https://t.co/Slu1jT88ok">pic.twitter.com/Slu1jT88ok&lt;/a>&lt;/p>&amp;mdash; Robin Lovelace (@robinlovelace) &lt;a href="https://twitter.com/robinlovelace/status/1166628966410719232?ref_src=twsrc%5Etfw">August 28, 2019&lt;/a>&lt;/blockquote>
 &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8">&lt;/script>
 &lt;p>For more on the CASA summer school itself, see here.&lt;/p>
-&lt;p>In summary, great event and look forward to more partipatory workshops, the next one upcoming being the OpenGeoHub summer school: &lt;a href="https://opengeohub.org/summer_school_2019" target="_blank" rel="noopener">https://opengeohub.org/summer_school_2019&lt;/a>&lt;/p></description></item><item><title>Six great things about UseR! 2019</title><link>https://www.robinlovelace.net/post/user2019/</link><pubDate>Sat, 13 Jul 2019 00:00:00 +0000</pubDate><guid>https://www.robinlovelace.net/post/user2019/</guid><description>&lt;p>UseR! is the highest profile and, I believe, most popular annual meeting for R enthusiasts, known affectionately as ‘UseRs’ for the purposes of the event.
+&lt;p>In summary, great event and look forward to more partipatory workshops, the next one upcoming being the OpenGeoHub summer school: &lt;a href="https://opengeohub.org/summer_school_2019" target="_blank" rel="noopener">https://opengeohub.org/summer_school_2019&lt;/a>&lt;/p></description></item><item><title>Six great things about UseR! 2019</title><link>https://robinlovelace.net/old-site/post/user2019/</link><pubDate>Sat, 13 Jul 2019 00:00:00 +0000</pubDate><guid>https://robinlovelace.net/old-site/post/user2019/</guid><description>&lt;p>UseR! is the highest profile and, I believe, most popular annual meeting for R enthusiasts, known affectionately as ‘UseRs’ for the purposes of the event.
 For those who have been living under a stone for the past decade ;) R is an open source statistical programming language that has seen explosive growth since ‘data science’ became a buzzword.
 Although I’ve been using R for around a decade, and heavily for around five years, &lt;a href="http://user2019.r-project.org/" target="_blank" rel="noopener">UseR! 2019&lt;/a> was the first UseR! I attended.
 I went with some preconceptions: I thought it would be like previous R events that I had attended, including the European R Users Meeting (ERUM) and SatRdays, but bigger.
@@ -220,7 +220,7 @@ Another question, that I didn’t get to answer, is where should reproducible tr
 &lt;p>Overall, UseR! 2019 was a fun, enlightening and inspiring event, and I hope to attend future UseRs, in person or remotely.
 I wish more conferences were like this.
 This small write up is designed as a reminder to my future self, and anyone else reading, to remember how good conferences &lt;em>can be&lt;/em>.
-The example set by this outstanding conference provides some pointers in that direction.&lt;/p></description></item><item><title>stplanr paper published</title><link>https://www.robinlovelace.net/post/sustainable-transport-planning-with-r-stplanr-paper-published/</link><pubDate>Mon, 25 Feb 2019 00:00:00 +0000</pubDate><guid>https://www.robinlovelace.net/post/sustainable-transport-planning-with-r-stplanr-paper-published/</guid><description>&lt;p>I am very happy to announce that the paper &lt;em>stplanr: A package for transport planning&lt;/em> has been published in The R Journal (Lovelace and Ellison 2018) 🎉.&lt;/p>
+The example set by this outstanding conference provides some pointers in that direction.&lt;/p></description></item><item><title>stplanr paper published</title><link>https://robinlovelace.net/old-site/post/sustainable-transport-planning-with-r-stplanr-paper-published/</link><pubDate>Mon, 25 Feb 2019 00:00:00 +0000</pubDate><guid>https://robinlovelace.net/old-site/post/sustainable-transport-planning-with-r-stplanr-paper-published/</guid><description>&lt;p>I am very happy to announce that the paper &lt;em>stplanr: A package for transport planning&lt;/em> has been published in The R Journal (Lovelace and Ellison 2018) 🎉.&lt;/p>
 &lt;p>This is the result of around 3 years of work:
 it took us (co-author &lt;a href="https://business.sydney.edu.au/staff/richard.ellison" target="_blank" rel="noopener">Richard Ellison&lt;/a> and me) over a year to get round to writing the paper after the &lt;strong>stplanr&lt;/strong> package was first released on &lt;a href="https://cran.r-project.org/package=stplanr" target="_blank" rel="noopener">CRAN&lt;/a> in November 2015 (see its &lt;a href="https://cran.r-project.org/src/contrib/Archive/stplanr/" target="_blank" rel="noopener">archive on CRAN&lt;/a> for details); it wasn’t until March 2017 that the paper was formally submitted.&lt;/p>
 &lt;p>After that, it was in the review process for almost 2 years, before finally being published last week.&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>
@@ -253,7 +253,7 @@ For more on that, please head-over to the issue tracker (input welcome) or take 
 I asked for it to be put on hold while I completed the mammoth task of re-writing dozens of functions to support sf (see the pull request in which the &lt;a href="https://github.com/ropensci/stplanr/pull/198" target="_blank" rel="noopener">&lt;code>sfr&lt;/code>&lt;/a> branch was merged into &lt;code>master&lt;/code> for the grizzly details).&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;/div></description></item><item><title>Aggregating lines, part II</title><link>https://www.robinlovelace.net/post/aggregating-lines-part-ii/</link><pubDate>Thu, 14 Feb 2019 00:00:00 +0000</pubDate><guid>https://www.robinlovelace.net/post/aggregating-lines-part-ii/</guid><description>&lt;p>The &lt;a href="https://www.robinlovelace.net/2018/10/27/aggregating-lines/" target="_blank" rel="noopener">previous post&lt;/a> demonstrated a new method to aggregate overlapping lines.
+&lt;/div></description></item><item><title>Aggregating lines, part II</title><link>https://robinlovelace.net/old-site/post/aggregating-lines-part-ii/</link><pubDate>Thu, 14 Feb 2019 00:00:00 +0000</pubDate><guid>https://robinlovelace.net/old-site/post/aggregating-lines-part-ii/</guid><description>&lt;p>The &lt;a href="https://www.robinlovelace.net/2018/10/27/aggregating-lines/" target="_blank" rel="noopener">previous post&lt;/a> demonstrated a new method to aggregate overlapping lines.
 It showed how to combine 2 lines that have an area of overlap.
 More excitingly, it led to the creation of a new function in &lt;strong>stplanr&lt;/strong>, &lt;code>overline_sf()&lt;/code>, that lives in the development version of the package.
 The purpose of this post is to provide an update on the status of the work to refactor the &lt;code>overline()&lt;/code> function, in a human friendly alternative to discussion in the relevant GitHub issue: &lt;a href="https://github.com/ropensci/stplanr/issues/273" target="_blank" rel="noopener">https://github.com/ropensci/stplanr/issues/273&lt;/a>&lt;/p>
@@ -364,7 +364,7 @@ Again, we use &lt;code>bench::mark()&lt;/code> to benchmark each approach:&lt;/p
 The same principle is used in the benchmarking section of the &lt;a href="https://h2oai.github.io/db-benchmark/" target="_blank" rel="noopener">h2oai website&lt;/a>: focus on benchmarks that apply to the datasets you will actually be using.
 In this case, my hypothesis is that the geometric functions &lt;code>overline()&lt;/code> and &lt;code>overline_sf()&lt;/code> will perform disproportionately badly as the size of the input dataset grows (to be tested).
 Still, it is interesting to note that the new &lt;code>overline2()&lt;/code> function uses way more memory than the other functions.
-More next time!&lt;/p></description></item><item><title>Aggregating lines, Part I</title><link>https://www.robinlovelace.net/post/aggregating-lines/</link><pubDate>Sat, 27 Oct 2018 00:00:00 +0000</pubDate><guid>https://www.robinlovelace.net/post/aggregating-lines/</guid><description>&lt;h2 id="introduction">Introduction&lt;/h2>
+More next time!&lt;/p></description></item><item><title>Aggregating lines, Part I</title><link>https://robinlovelace.net/old-site/post/aggregating-lines/</link><pubDate>Sat, 27 Oct 2018 00:00:00 +0000</pubDate><guid>https://robinlovelace.net/old-site/post/aggregating-lines/</guid><description>&lt;h2 id="introduction">Introduction&lt;/h2>
 &lt;p>It’s been a busy 12 months but with the &lt;a href="https://geocompr.robinlovelace.net/" target="_blank" rel="noopener">Geocomputation with R&lt;/a> book nearing completion&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>
 I’ve finally found some time to update my blog and do a bit of thinking, about the tangled topic of line aggregation.&lt;/p>
 &lt;h2 id="why-aggregate-lines">Why aggregate lines?&lt;/h2>
@@ -485,12 +485,12 @@ That will (hopefully) be the topic of the next blog post.&lt;/p>
 &lt;p>Any input on that still welcome - see the &lt;a href="https://geocompr.robinlovelace.net/index.html#how-to-contribute" target="_blank" rel="noopener">contributing&lt;/a> section for more.&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;/div></description></item><item><title>Switching to blogdown</title><link>https://www.robinlovelace.net/post/2017-04-30-switching-to-blogdown/</link><pubDate>Sun, 30 Apr 2017 00:00:00 +0000</pubDate><guid>https://www.robinlovelace.net/post/2017-04-30-switching-to-blogdown/</guid><description>&lt;p>I&amp;rsquo;ve finally got a new blog post, to test that my new set-up is working, using the wonderful new &lt;a href="https://bookdown.org/yihui/blogdown/" target="_blank" rel="noopener">blogdown&lt;/a> package.&lt;/p>
+&lt;/div></description></item><item><title>Switching to blogdown</title><link>https://robinlovelace.net/old-site/post/2017-04-30-switching-to-blogdown/</link><pubDate>Sun, 30 Apr 2017 00:00:00 +0000</pubDate><guid>https://robinlovelace.net/old-site/post/2017-04-30-switching-to-blogdown/</guid><description>&lt;p>I&amp;rsquo;ve finally got a new blog post, to test that my new set-up is working, using the wonderful new &lt;a href="https://bookdown.org/yihui/blogdown/" target="_blank" rel="noopener">blogdown&lt;/a> package.&lt;/p>
 &lt;p>Here&amp;rsquo;s a test plot, to show how it allows R code to be embedded:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-r" data-lang="r">&lt;span class="line">&lt;span class="cl">&lt;span class="nf">plot&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="m">1&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="m">9&lt;/span>&lt;span class="p">)&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;img src="https://www.robinlovelace.net/post/2017-04-30-switching-to-blogdown_files/figure-html/unnamed-chunk-1-1.png" width="672" />
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;img src="https://robinlovelace.net/old-site/post/2017-04-30-switching-to-blogdown_files/figure-html/unnamed-chunk-1-1.png" width="672" />
 &lt;p>Now that I have a quick-fire and fun way of getting new content onto the web I expect to be blogging lots more.&lt;/p>
-&lt;p>Watch this space!&lt;/p></description></item><item><title>Geostat2016 Albacete: a write-up</title><link>https://www.robinlovelace.net/post/2016-09-28-geostat-2016/</link><pubDate>Wed, 28 Sep 2016 00:00:00 +0000</pubDate><guid>https://www.robinlovelace.net/post/2016-09-28-geostat-2016/</guid><description>&lt;p>Last week I went to &lt;a href="http://geostat-course.org/2016" target="_blank" rel="noopener">GEOSTAT 2016&lt;/a>. Given the amount of fun had at &lt;a href="http://robinlovelace.net/r/2015/08/31/geostat-writeup.html" target="_blank" rel="noopener">GEOSTAT 2015&lt;/a>, expectations were high. The local organisers did not disappoint, with a week of lectures, workshops, spatial data competitions and of course lots of Geostatistics. It would be unwise to try to systematically document such a diverse range of activities, and the &lt;a href="http://geostat-course.org/node" target="_blank" rel="noopener">GEOSTAT website&lt;/a> provides much further info. Instead this &amp;lsquo;miniwriteup&amp;rsquo; is designed to summarise some of my memories from the event, and encourage you to get involved for GEOSTAT 2017.&lt;/p>
+&lt;p>Watch this space!&lt;/p></description></item><item><title>Geostat2016 Albacete: a write-up</title><link>https://robinlovelace.net/old-site/post/2016-09-28-geostat-2016/</link><pubDate>Wed, 28 Sep 2016 00:00:00 +0000</pubDate><guid>https://robinlovelace.net/old-site/post/2016-09-28-geostat-2016/</guid><description>&lt;p>Last week I went to &lt;a href="http://geostat-course.org/2016" target="_blank" rel="noopener">GEOSTAT 2016&lt;/a>. Given the amount of fun had at &lt;a href="http://robinlovelace.net/r/2015/08/31/geostat-writeup.html" target="_blank" rel="noopener">GEOSTAT 2015&lt;/a>, expectations were high. The local organisers did not disappoint, with a week of lectures, workshops, spatial data competitions and of course lots of Geostatistics. It would be unwise to try to systematically document such a diverse range of activities, and the &lt;a href="http://geostat-course.org/node" target="_blank" rel="noopener">GEOSTAT website&lt;/a> provides much further info. Instead this &amp;lsquo;miniwriteup&amp;rsquo; is designed to summarise some of my memories from the event, and encourage you to get involved for GEOSTAT 2017.&lt;/p>
 &lt;p>To put things in context, the first session was a brief overview of the history of GEOSTAT. This is the 12&lt;sup>th&lt;/sup> GEOSTAT summer school. In some ways GEOSTAT can be seen as a physical manifestation of the lively &lt;a href="https://stat.ethz.ch/mailman/listinfo/r-sig-geo" target="_blank" rel="noopener">R-SIG-GEO email list&lt;/a>. That may not sound very exciting. But there is a strong community spirit at the event and, unlike other academic conferences, the focus is on practical learning rather than transmitting research findings or theories. And the event was so much more than that.&lt;/p>
 &lt;p>There were 5 action packed days covering many topics within the broad field of Geostatistics. What follows is an overview of each that I went to (there were 2 streams), with links to the source material. It is hoped that this will be of use to people who were not present in person.&lt;/p>
 &lt;h2 id="day-1">Day 1&lt;/h2>
@@ -720,7 +720,7 @@ That will (hopefully) be the topic of the next blog post.&lt;/p>
 &lt;p>One of the most exciting sessions was the revelation of the results of the spatial prediction game. Interestingly, a team using a relatively simple approach with &lt;a href="https://cran.r-project.org/web/packages/randomForestSRC/index.html" target="_blank" rel="noopener">&lt;strong>randomForestSRC&lt;/strong>&lt;/a> (and &lt;a href="https://github.com/ehrlinger/ggRandomForests" target="_blank" rel="noopener">&lt;strong>ggRandomForests&lt;/strong>&lt;/a> for visualisation) one against others who had spent hours training complex multi-level models.&lt;/p>
 &lt;h2 id="summary">Summary&lt;/h2>
 &lt;p>Overall it was an amazing event and inspiring to spend time with so many researchers using open geospatial software for tackling &lt;a href="https://t.co/UqMyCnXOsG" target="_blank" rel="noopener">pressing real world issues&lt;/a>. Furthermore, it was great fun. I strongly recommend people dipping their toes in the &lt;a href="https://cran.r-project.org/web/views/Spatial.html" target="_blank" rel="noopener">sea of spatial capabilities&lt;/a> provided by R check out the &lt;a href="http://geostat-course.org/node" target="_blank" rel="noopener">GEOSTAT website&lt;/a>, not least for the excellent &lt;a href="http://archive.org/search.php?query=GEOSTAT" target="_blank" rel="noopener">video resources to be found there&lt;/a>.&lt;/p>
-&lt;p>I look forward to hearing plans for future GEOSTATs and recommend the event, and associated materials, to researchers interested in using free geospatial software for the greater good.&lt;/p></description></item><item><title>R vs QGIS for sustainable transport planning</title><link>https://www.robinlovelace.net/post/2015-04-20-r-vs-qgis-for-transport/</link><pubDate>Tue, 20 Jan 2015 00:00:00 +0000</pubDate><guid>https://www.robinlovelace.net/post/2015-04-20-r-vs-qgis-for-transport/</guid><description>&lt;p>The 23rd iteration of the GIS Research UK conference
+&lt;p>I look forward to hearing plans for future GEOSTATs and recommend the event, and associated materials, to researchers interested in using free geospatial software for the greater good.&lt;/p></description></item><item><title>R vs QGIS for sustainable transport planning</title><link>https://robinlovelace.net/old-site/post/2015-04-20-r-vs-qgis-for-transport/</link><pubDate>Tue, 20 Jan 2015 00:00:00 +0000</pubDate><guid>https://robinlovelace.net/old-site/post/2015-04-20-r-vs-qgis-for-transport/</guid><description>&lt;p>The 23rd iteration of the GIS Research UK conference
 (&lt;a href="https://github.com/Robinlovelace/stplanr" target="_blank" rel="noopener">#GISRUK&lt;/a>)
 conference was the largest ever. 250 researchers,
 industry representatives and academics attended from the
@@ -871,7 +871,7 @@ happen.&lt;/p>
 &lt;p>Gössling, Stefan, and Scott Cohen. 2014. “Why sustainable transport policies will fail: EU climate policy in the light of transport taboos.” Journal of Transport Geography 39 (July). Elsevier Ltd: 197–207. doi:10.1016/j.jtrangeo.2014.07.010.&lt;/p>
 &lt;p>Kahle, D, and Hadley Wickham. 2013. “ggmap: Spatial Visualization with ggplot2.” The R Journal 5: 144–61. &lt;a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.375.8693&amp;amp;rep=rep1&amp;amp;type=pdf" target="_blank" rel="noopener">citeseerx.ist.psu.edu&lt;/a>.&lt;/p>
 &lt;p>McGlade, Christophe, and Paul Ekins. 2015. “The geographical distribution of fossil fuels unused when limiting global warming to 2 °C.” Nature 517 (7533). Nature Publishing Group: 187–90. doi:10.1038/nature14016.&lt;/p>
-&lt;p>Tamminga, Guus, Marc Miska, Edgar Santos, Hans van Lint, Arturo Nakasone, Helmut Prendinger, and Serge Hoogendoorn. 2012. “Design of Open Source Framework for Traffic and Travel Simulation.” Transportation Research Record: Journal of the Transportation Research Board 2291 (-1): 44–52. doi:10.3141/2291-06.&lt;/p></description></item><item><title>Clipping spatial data in R</title><link>https://www.robinlovelace.net/post/2014-07-29-clipping-with-r/</link><pubDate>Tue, 29 Jul 2014 00:00:00 +0000</pubDate><guid>https://www.robinlovelace.net/post/2014-07-29-clipping-with-r/</guid><description>&lt;h1 id="heading">&lt;/h1>
+&lt;p>Tamminga, Guus, Marc Miska, Edgar Santos, Hans van Lint, Arturo Nakasone, Helmut Prendinger, and Serge Hoogendoorn. 2012. “Design of Open Source Framework for Traffic and Travel Simulation.” Transportation Research Record: Journal of the Transportation Research Board 2291 (-1): 44–52. doi:10.3141/2291-06.&lt;/p></description></item><item><title>Clipping spatial data in R</title><link>https://robinlovelace.net/old-site/post/2014-07-29-clipping-with-r/</link><pubDate>Tue, 29 Jul 2014 00:00:00 +0000</pubDate><guid>https://robinlovelace.net/old-site/post/2014-07-29-clipping-with-r/</guid><description>&lt;h1 id="heading">&lt;/h1>
 &lt;p>This miniature vignette shows how to clip spatial data based on different spatial objects in R and a &amp;lsquo;bounding box&amp;rsquo;. Spatial overlays are common in GIS applications and R users are fortunate that the clipping and spatial subsetting functions are mature and fairly fast. We&amp;rsquo;ll also write a new function called &lt;code>gClip()&lt;/code>, that will make clipping by bounding boxes easier.&lt;/p>
 &lt;p>
 &lt;figure >
@@ -979,7 +979,7 @@ R&lt;/a>
 tutorial that &lt;a href="http://spatial.ly/" target="_blank" rel="noopener">James Cheshire&lt;/a> and I are maintaining. The source code of this post can also be viewed &lt;a href="https://github.com/Robinlovelace/Creating-maps-in-R/blob/master/vignettes/clipping-with-bounding-box.Rmd" target="_blank" rel="noopener">online&lt;/a> as just one of a series of &lt;a href="https://github.com/Robinlovelace/Creating-maps-in-R/tree/master/vignettes" target="_blank" rel="noopener">vignettes&lt;/a> to showcase some of R&amp;rsquo;s impressive spatial capabilities.&lt;/p>
 &lt;h2 id="update">Update&lt;/h2>
 &lt;p>There was a lively discussion of this post when it was first published in 2016.
-Although I&amp;rsquo;ve switched to a new commenting system, the comments, which include more history and a link to the commit that added spatial subsetting to the sp package, can be found here: &lt;a href="https://disqus.com/home/discussion/robinlovelace/clipping_spatial_data_in_r/" target="_blank" rel="noopener">https://disqus.com/home/discussion/robinlovelace/clipping_spatial_data_in_r/&lt;/a>&lt;/p></description></item><item><title>Coxcomb plots and 'spiecharts' in R</title><link>https://www.robinlovelace.net/post/2013-12-27-coxcomb-plots-spiecharts-r/</link><pubDate>Fri, 27 Dec 2013 00:00:00 +0000</pubDate><guid>https://www.robinlovelace.net/post/2013-12-27-coxcomb-plots-spiecharts-r/</guid><description>&lt;p>After switching to a new site I decided to revive some old posts.
+Although I&amp;rsquo;ve switched to a new commenting system, the comments, which include more history and a link to the commit that added spatial subsetting to the sp package, can be found here: &lt;a href="https://disqus.com/home/discussion/robinlovelace/clipping_spatial_data_in_r/" target="_blank" rel="noopener">https://disqus.com/home/discussion/robinlovelace/clipping_spatial_data_in_r/&lt;/a>&lt;/p></description></item><item><title>Coxcomb plots and 'spiecharts' in R</title><link>https://robinlovelace.net/old-site/post/2013-12-27-coxcomb-plots-spiecharts-r/</link><pubDate>Fri, 27 Dec 2013 00:00:00 +0000</pubDate><guid>https://robinlovelace.net/old-site/post/2013-12-27-coxcomb-plots-spiecharts-r/</guid><description>&lt;p>After switching to a new site I decided to revive some old posts.
 I found this one that was written back 7 years ago (in January 2021 when this update was written), back in December 2013.
 The results of the book are now published in the book &lt;a href="https://www.routledge.com/Low-Impact-Living-A-Field-Guide-to-Ecological-Affordable-Community-Building/Chatterton/p/book/9780415661614">Low Impact Living: A Field Guide to Ecological, Affordable Community Building&lt;/a> (Chatterton, 2015, for more info on the Lilac project in particular and cohousing in general see &lt;a href="https://www.lilac.coop/resources/">lilac.coop/resources/&lt;/a>).
 I was amazed to find that, with some tweaks, the &lt;code>ggplot2&lt;/code> code still ran.&lt;/p>
@@ -1071,13 +1071,13 @@ data so it would better fit in a coxcomb plot.&lt;/p>
 &lt;pre class="r">&lt;code>library(ggplot2)
 (p &amp;lt;- ggplot(f, aes(x = H, y = Allocation)) + geom_bar(color = &amp;quot;black&amp;quot;, stat = &amp;quot;identity&amp;quot;,
 width = 1))&lt;/code>&lt;/pre>
-&lt;p>&lt;img src="https://www.robinlovelace.net/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-2-1.png" width="672" />&lt;/p>
+&lt;p>&lt;img src="https://robinlovelace.net/old-site/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-2-1.png" width="672" />&lt;/p>
 &lt;div class="figure">
 &lt;img src="" alt="" />
 &lt;p class="caption">plot of chunk unnamed-chunk-2&lt;/p>
 &lt;/div>
 &lt;pre class="r">&lt;code>p + coord_polar()&lt;/code>&lt;/pre>
-&lt;p>&lt;img src="https://www.robinlovelace.net/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-3-1.png" width="672" />&lt;/p>
+&lt;p>&lt;img src="https://robinlovelace.net/old-site/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-3-1.png" width="672" />&lt;/p>
 &lt;!-- ![plot of chunk unnamed-chunk-2](https://raw.github.com/Robinlovelace/robinlovelace.github.io/master/figure/unnamed-chunk-22.png) -->
 &lt;p>The above example works well, but notice that all the bars are of equal widths.
 What we want is to be proportional to a value (variable “Value”) of each observation.
@@ -1087,10 +1087,10 @@ answer to a &lt;a href="http://stackoverflow.com/questions/20688376/how-to-make-
 pos &amp;lt;- 0.5 * (cumsum(w) + cumsum(c(0, w[-length(w)])))
 (p &amp;lt;- ggplot(f, aes(x = pos)) + geom_bar(aes(y = Allocation), width = w, color = &amp;quot;black&amp;quot;,
 stat = &amp;quot;identity&amp;quot;))&lt;/code>&lt;/pre>
-&lt;p>&lt;img src="https://www.robinlovelace.net/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-4-1.png" width="672" />&lt;/p>
+&lt;p>&lt;img src="https://robinlovelace.net/old-site/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-4-1.png" width="672" />&lt;/p>
 &lt;!-- ![plot of chunk unnamed-chunk-3](https://raw.github.com/Robinlovelace/robinlovelace.github.io/master/figure/unnamed-chunk-31.png) -->
 &lt;pre class="r">&lt;code>p + coord_polar(theta = &amp;quot;x&amp;quot;) + scale_x_continuous(labels = f$H, breaks = pos)&lt;/code>&lt;/pre>
-&lt;p>&lt;img src="https://www.robinlovelace.net/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-5-1.png" width="672" />&lt;/p>
+&lt;p>&lt;img src="https://robinlovelace.net/old-site/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-5-1.png" width="672" />&lt;/p>
 &lt;!-- ![plot of chunk unnamed-chunk-3](https://raw.github.com/Robinlovelace/robinlovelace.github.io/master/figure/unnamed-chunk-32.png) -->
 &lt;p>Finally a spie chart has been created. After that revelation, it was essentially about adding the ‘bells and
 whistles’, including a 10% line to represent how much more or less than their share each observation was
@@ -1108,7 +1108,7 @@ p &amp;lt;- ggplot(f)
 p + geom_bar(aes(x = pos, y = Allocation), width = w, color = &amp;quot;black&amp;quot;, stat = &amp;quot;identity&amp;quot;) +
 geom_bar(aes(x = pos, y = 0.1), width = w, color = &amp;quot;black&amp;quot;, stat = &amp;quot;identity&amp;quot;,
 fill = &amp;quot;green&amp;quot;) + coord_polar()&lt;/code>&lt;/pre>
-&lt;p>&lt;img src="https://www.robinlovelace.net/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-7-1.png" width="672" />&lt;/p>
+&lt;p>&lt;img src="https://robinlovelace.net/old-site/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-7-1.png" width="672" />&lt;/p>
 &lt;!-- ![plot of chunk unnamed-chunk-4](https://raw.github.com/Robinlovelace/robinlovelace.github.io/master/figure/unnamed-chunk-41.png) -->
 &lt;pre class="r">&lt;code># make proportional to area
 f$Allo &amp;lt;- sqrt(f$Allocation)
@@ -1118,7 +1118,7 @@ geom_bar(aes(x = pos, y = sqrt(0.1), width = w), color = &amp;quot;black&amp;quo
 fill = &amp;quot;green&amp;quot;) + coord_polar()&lt;/code>&lt;/pre>
 &lt;pre>&lt;code>## Warning: Ignoring unknown aesthetics: width
 ## Warning: Ignoring unknown aesthetics: width&lt;/code>&lt;/pre>
-&lt;p>&lt;img src="https://www.robinlovelace.net/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-8-1.png" width="672" />&lt;/p>
+&lt;p>&lt;img src="https://robinlovelace.net/old-site/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-8-1.png" width="672" />&lt;/p>
 &lt;!-- ![plot of chunk unnamed-chunk-4](https://raw.github.com/Robinlovelace/robinlovelace.github.io/master/figure/unnamed-chunk-42.png) -->
 &lt;pre class="r">&lt;code># add capital
 capital &amp;lt;- (f$Captial + f$Deposit)/(f$Value) * f$Allocation
@@ -1131,7 +1131,7 @@ breaks = pos)&lt;/code>&lt;/pre>
 &lt;pre>&lt;code>## Warning: Ignoring unknown aesthetics: width
 ## Warning: Ignoring unknown aesthetics: width
 ## Warning: Ignoring unknown aesthetics: width&lt;/code>&lt;/pre>
-&lt;p>&lt;img src="https://www.robinlovelace.net/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-9-1.png" width="672" />&lt;/p>
+&lt;p>&lt;img src="https://robinlovelace.net/old-site/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-9-1.png" width="672" />&lt;/p>
 &lt;!-- ![plot of chunk unnamed-chunk-4](https://raw.github.com/Robinlovelace/robinlovelace.github.io/master/figure/unnamed-chunk-43.png) -->
 &lt;pre class="r">&lt;code># add ablines
 p + geom_bar(aes(x = pos, y = Allo, width = w), color = &amp;quot;grey40&amp;quot;, stat = &amp;quot;identity&amp;quot;,
@@ -1143,7 +1143,7 @@ linetype = 3) + geom_abline(intercept = sqrt(0.9), slope = 0, linetype = 3)&lt;/
 &lt;pre>&lt;code>## Warning: Ignoring unknown aesthetics: width
 ## Warning: Ignoring unknown aesthetics: width
 ## Warning: Ignoring unknown aesthetics: width&lt;/code>&lt;/pre>
-&lt;p>&lt;img src="https://www.robinlovelace.net/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-10-1.png" width="672" />&lt;/p>
+&lt;p>&lt;img src="https://robinlovelace.net/old-site/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-10-1.png" width="672" />&lt;/p>
 &lt;div class="figure">
 &lt;img src="https://raw.github.com/Robinlovelace/robinlovelace.github.io/master/figure/unnamed-chunk-44.png" alt="" />
 &lt;p class="caption">plot of chunk unnamed-chunk-4&lt;/p>
@@ -1162,7 +1162,7 @@ coord_polar()&lt;/code>&lt;/pre>
 &lt;pre>&lt;code>## Warning: Ignoring unknown parameters: x
 ## Warning: Ignoring unknown parameters: x
 ## Warning: Ignoring unknown parameters: x&lt;/code>&lt;/pre>
-&lt;p>&lt;img src="https://www.robinlovelace.net/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-11-1.png" width="672" />&lt;/p>
+&lt;p>&lt;img src="https://robinlovelace.net/old-site/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-11-1.png" width="672" />&lt;/p>
 &lt;pre class="r">&lt;code># putting it all together
 p &amp;lt;- ggplot(f)
 p + geom_bar(aes(x = pos, y = Allo, width = w), color = &amp;quot;grey40&amp;quot;, stat = &amp;quot;identity&amp;quot;,
@@ -1182,7 +1182,7 @@ theme_classic()&lt;/code>&lt;/pre>
 &lt;pre>&lt;code>## Warning: Ignoring unknown parameters: x
 ## Warning: Ignoring unknown parameters: x
 ## Warning: Ignoring unknown parameters: x&lt;/code>&lt;/pre>
-&lt;p>&lt;img src="https://www.robinlovelace.net/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-12-1.png" width="672" />&lt;/p>
+&lt;p>&lt;img src="https://robinlovelace.net/old-site/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-12-1.png" width="672" />&lt;/p>
 &lt;p>The above looks great, but ideally, for an ‘infographic’ feel, it would
 have no annoying axes clogging up the visuals. This was done by creating an
 entirely new ggpot theme.&lt;/p>
@@ -1192,7 +1192,7 @@ entirely new ggpot theme.&lt;/p>
 &lt;pre class="r">&lt;code>theme_infog &amp;lt;- theme_classic() + theme(axis.line = element_blank(), axis.title = element_blank(),
 axis.ticks = element_blank(), axis.text.y = element_blank())
 last_plot() + theme_infog&lt;/code>&lt;/pre>
-&lt;p>&lt;img src="https://www.robinlovelace.net/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-13-1.png" width="672" />&lt;/p>
+&lt;p>&lt;img src="https://robinlovelace.net/old-site/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-13-1.png" width="672" />&lt;/p>
 &lt;/div>
 &lt;div id="creating-a-ring" class="section level2">
 &lt;h2>Creating a ring&lt;/h2>
@@ -1208,7 +1208,7 @@ p &amp;lt;- ggplot(f)
 p + geom_bar(aes(x = pos, y = Allo, width = w), color = &amp;quot;grey40&amp;quot;, stat = &amp;quot;identity&amp;quot;,
 fill = &amp;quot;lightgrey&amp;quot;)&lt;/code>&lt;/pre>
 &lt;pre>&lt;code>## Warning: Ignoring unknown aesthetics: width&lt;/code>&lt;/pre>
-&lt;p>&lt;img src="https://www.robinlovelace.net/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-14-1.png" width="672" />&lt;/p>
+&lt;p>&lt;img src="https://robinlovelace.net/old-site/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-14-1.png" width="672" />&lt;/p>
 &lt;!-- ![plot of chunk unnamed-chunk-6](https://raw.github.com/Robinlovelace/robinlovelace.github.io/master/figure/unnamed-chunk-61.png) -->
 &lt;pre class="r">&lt;code># we need the axes to be bigger for starters - try 1.3 to 1.5
 p + geom_bar(aes(x = pos, y = Cap.r, width = w), color = &amp;quot;grey40&amp;quot;, stat = &amp;quot;identity&amp;quot;,
@@ -1220,7 +1220,7 @@ y = 1.196, width = w), color = &amp;quot;white&amp;quot;, stat = &amp;quot;ident
 ## Warning: Ignoring unknown aesthetics: width
 ## Warning: Ignoring unknown aesthetics: width
 ## Warning: Ignoring unknown aesthetics: width&lt;/code>&lt;/pre>
-&lt;p>&lt;img src="https://www.robinlovelace.net/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-15-1.png" width="672" />&lt;/p>
+&lt;p>&lt;img src="https://robinlovelace.net/old-site/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-15-1.png" width="672" />&lt;/p>
 &lt;pre class="r">&lt;code>last_plot() + geom_bar(aes(x = pos, y = Allo, width = w), color = &amp;quot;grey40&amp;quot;,
 stat = &amp;quot;identity&amp;quot;, fill = &amp;quot;grey80&amp;quot;) + geom_bar(aes(x = pos, y = capital,
 width = w), color = &amp;quot;grey40&amp;quot;, stat = &amp;quot;identity&amp;quot;, fill = &amp;quot;grey30&amp;quot;) + geom_bar(aes(x = pos,
@@ -1232,7 +1232,7 @@ theme_infog&lt;/code>&lt;/pre>
 &lt;pre>&lt;code>## Warning: Ignoring unknown aesthetics: width
 ## Warning: Ignoring unknown aesthetics: width
 ## Warning: Ignoring unknown aesthetics: width&lt;/code>&lt;/pre>
-&lt;p>&lt;img src="https://www.robinlovelace.net/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-16-1.png" width="672" />&lt;/p>
+&lt;p>&lt;img src="https://robinlovelace.net/old-site/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-16-1.png" width="672" />&lt;/p>
 &lt;!-- ![plot of chunk unnamed-chunk-6](https://raw.github.com/Robinlovelace/robinlovelace.github.io/master/figure/unnamed-chunk-63.png) -->
 &lt;/div>
 &lt;div id="just-inner" class="section level2">
@@ -1250,7 +1250,7 @@ coord_polar() + scale_x_continuous(labels = f$H, breaks = pos) + theme_infog&lt;
 &lt;pre>&lt;code>## Warning: Ignoring unknown aesthetics: width
 ## Warning: Ignoring unknown aesthetics: width
 ## Warning: Ignoring unknown aesthetics: width&lt;/code>&lt;/pre>
-&lt;p>&lt;img src="https://www.robinlovelace.net/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-17-1.png" width="672" />&lt;/p>
+&lt;p>&lt;img src="https://robinlovelace.net/old-site/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-17-1.png" width="672" />&lt;/p>
 &lt;!-- ![plot of chunk unnamed-chunk-7](https://raw.github.com/Robinlovelace/robinlovelace.github.io/master/figure/unnamed-chunk-7.png) -->
 &lt;pre class="r">&lt;code>ggsave(&amp;quot;just-inner.png&amp;quot;, width = 7, height = 7, dpi = 800)&lt;/code>&lt;/pre>
 &lt;/div></description></item></channel></rss>

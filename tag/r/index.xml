@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>R | Robin Lovelace</title><link>https://www.robinlovelace.net/tag/r/</link><atom:link href="https://www.robinlovelace.net/tag/r/index.xml" rel="self" type="application/rss+xml"/><description>R</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 18 Sep 2025 10:00:00 +0100</lastBuildDate><image><url>https://www.robinlovelace.net/media/icon_hu93dbabadc2a9bdd4930d1377c0b338b2_5137_512x512_fill_lanczos_center_3.png</url><title>R</title><link>https://www.robinlovelace.net/tag/r/</link></image><item><title>Data Science for Transport Planning: 2 day course</title><link>https://www.robinlovelace.net/talk/data-science-for-transport-planning-2-day-course/</link><pubDate>Thu, 18 Sep 2025 10:00:00 +0100</pubDate><guid>https://www.robinlovelace.net/talk/data-science-for-transport-planning-2-day-course/</guid><description>&lt;!-- https://store.leeds.ac.uk/product-catalogue/environment/transport-studies/short-courses/0925dstp2-data-science-for-transport-planning -->
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>R | Robin Lovelace</title><link>https://robinlovelace.net/old-site/tag/r/</link><atom:link href="https://robinlovelace.net/old-site/tag/r/index.xml" rel="self" type="application/rss+xml"/><description>R</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 18 Sep 2025 10:00:00 +0100</lastBuildDate><image><url>https://robinlovelace.net/old-site/media/icon_hu93dbabadc2a9bdd4930d1377c0b338b2_5137_512x512_fill_lanczos_center_3.png</url><title>R</title><link>https://robinlovelace.net/old-site/tag/r/</link></image><item><title>Data Science for Transport Planning: 2 day course</title><link>https://robinlovelace.net/old-site/talk/data-science-for-transport-planning-2-day-course/</link><pubDate>Thu, 18 Sep 2025 10:00:00 +0100</pubDate><guid>https://robinlovelace.net/old-site/talk/data-science-for-transport-planning-2-day-course/</guid><description>&lt;!-- https://store.leeds.ac.uk/product-catalogue/environment/transport-studies/short-courses/0925dstp2-data-science-for-transport-planning -->
 &lt;h2 id="note-tickets-are-now-on-sale-get-yours-at-storeleedsacukhttpsstoreleedsacukproduct-catalogueenvironmenttransport-studiesshort-courses0925dstp2-data-science-for-transport-planning">Note: tickets are now on sale! Get yours at &lt;a href="https://store.leeds.ac.uk/product-catalogue/environment/transport-studies/short-courses/0925dstp2-data-science-for-transport-planning" target="_blank" rel="noopener">store.leeds.ac.uk&lt;/a>.&lt;/h2>
 &lt;p>Based on demand, I&amp;rsquo;m running a 2-day course with colleagues teaching modern data science skills for transport planning, focussed on transport planning practitioners and transport planning researchers looking to develop their skills for real-world applications.&lt;/p>
-&lt;p>Any questions welcome, looking forward to seeing you at the course!&lt;/p></description></item><item><title>Inaugural Lecture: Data Science for Future-Proof Transport Planning</title><link>https://www.robinlovelace.net/talk/inaugural-lecture-data-science-for-future-proof-transport-planning/</link><pubDate>Thu, 08 May 2025 16:30:00 +0100</pubDate><guid>https://www.robinlovelace.net/talk/inaugural-lecture-data-science-for-future-proof-transport-planning/</guid><description>&lt;!-- ![demo](image.png) --></description></item><item><title>Mapping, classifying, and integrating diverse street network datasets</title><link>https://www.robinlovelace.net/talk/mapping-classifying-and-integrating-diverse-street-network-datasets/</link><pubDate>Thu, 24 Apr 2025 14:30:00 +0100</pubDate><guid>https://www.robinlovelace.net/talk/mapping-classifying-and-integrating-diverse-street-network-datasets/</guid><description>&lt;p>See a video from the talk below:&lt;/p>
-&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/6mimz_gN-V8?si=L7Beog5C39LWCfUl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>&lt;/iframe></description></item><item><title>Street Networks in R</title><link>https://www.robinlovelace.net/publication/gilardi-street-2020/</link><pubDate>Fri, 29 May 2020 00:00:00 +0000</pubDate><guid>https://www.robinlovelace.net/publication/gilardi-street-2020/</guid><description/></item><item><title>CycleStreets.net in the Propensity to Cycle Tool</title><link>https://www.robinlovelace.net/post/2016-12-21-cyclestreets-pct/</link><pubDate>Wed, 21 Dec 2016 00:00:00 +0000</pubDate><guid>https://www.robinlovelace.net/post/2016-12-21-cyclestreets-pct/</guid><description>&lt;p>After 2 years in the making, the &lt;a href="https://www.jtlu.org/index.php/jtlu/article/view/862/824" target="_blank" rel="noopener">paper&lt;/a> describing the Propensity to Cycle Tool (PCT), and the thinking behind it, has finally been published (Lovelace et al. 2016). The PCT is an online tool for helping to decide where to prioritise cycling policies such as new cycle paths.&lt;/p>
+&lt;p>Any questions welcome, looking forward to seeing you at the course!&lt;/p></description></item><item><title>Inaugural Lecture: Data Science for Future-Proof Transport Planning</title><link>https://robinlovelace.net/old-site/talk/inaugural-lecture-data-science-for-future-proof-transport-planning/</link><pubDate>Thu, 08 May 2025 16:30:00 +0100</pubDate><guid>https://robinlovelace.net/old-site/talk/inaugural-lecture-data-science-for-future-proof-transport-planning/</guid><description>&lt;!-- ![demo](image.png) --></description></item><item><title>Mapping, classifying, and integrating diverse street network datasets</title><link>https://robinlovelace.net/old-site/talk/mapping-classifying-and-integrating-diverse-street-network-datasets/</link><pubDate>Thu, 24 Apr 2025 14:30:00 +0100</pubDate><guid>https://robinlovelace.net/old-site/talk/mapping-classifying-and-integrating-diverse-street-network-datasets/</guid><description>&lt;p>See a video from the talk below:&lt;/p>
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/6mimz_gN-V8?si=L7Beog5C39LWCfUl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>&lt;/iframe></description></item><item><title>Street Networks in R</title><link>https://robinlovelace.net/old-site/publication/gilardi-street-2020/</link><pubDate>Fri, 29 May 2020 00:00:00 +0000</pubDate><guid>https://robinlovelace.net/old-site/publication/gilardi-street-2020/</guid><description/></item><item><title>CycleStreets.net in the Propensity to Cycle Tool</title><link>https://robinlovelace.net/old-site/post/2016-12-21-cyclestreets-pct/</link><pubDate>Wed, 21 Dec 2016 00:00:00 +0000</pubDate><guid>https://robinlovelace.net/old-site/post/2016-12-21-cyclestreets-pct/</guid><description>&lt;p>After 2 years in the making, the &lt;a href="https://www.jtlu.org/index.php/jtlu/article/view/862/824" target="_blank" rel="noopener">paper&lt;/a> describing the Propensity to Cycle Tool (PCT), and the thinking behind it, has finally been published (Lovelace et al. 2016). The PCT is an online tool for helping to decide where to prioritise cycling policies such as new cycle paths.&lt;/p>
 &lt;p>The PCT would not have been possible without CycleStreets.net, so as well as describing the PCT and it&amp;rsquo;s use of their routing services, this article serves as a big Thank You from PCT to CycleStreets.net.&lt;/p>
 &lt;h2 id="what-is-the-propensity-to-cycle-tool">What is the Propensity to Cycle Tool?&lt;/h2>
 &lt;p>For those new to the PCT, it&amp;rsquo;s an online tool for helping to decide where to prioritise cycling policies such as new cycle paths. It lives at &lt;a href="http://www.pct.bike" target="_blank" rel="noopener">http://www.pct.bike&lt;/a> - check it out!&lt;/p>
@@ -82,7 +82,7 @@ With R installed, &lt;strong>stplanr&lt;/strong> can be installed with:&lt;/p>
 &lt;p>There is much more I could say about the technical side of things but at the request of the editors I will leave it there for now. For more info please see the &lt;a href="https://github.com/ropensci/stplanr/blob/master/vignettes/stplanr-paper.Rmd" target="_blank" rel="noopener">&lt;strong>stplanr&lt;/strong> vignette&lt;/a>.&lt;/p>
 &lt;p>I plan to follow this overview article up with a more technical blog post in the New Year. Watch this space!&lt;/p>
 &lt;h2 id="reference">Reference&lt;/h2>
-&lt;p>Lovelace, R., Goodman, A., Aldred, R., Berkoff, N., Abbas, A., &amp;amp; Woodcock, J. (2016). The Propensity to Cycle Tool: An open source online system for sustainable transport planning. Journal Of Transport And Land Use, 0. doi:http://dx.doi.org/10.5198/jtlu.2016.862&lt;/p></description></item><item><title>Coxcomb plots and 'spiecharts' in R</title><link>https://www.robinlovelace.net/post/2013-12-27-coxcomb-plots-spiecharts-r/</link><pubDate>Fri, 27 Dec 2013 00:00:00 +0000</pubDate><guid>https://www.robinlovelace.net/post/2013-12-27-coxcomb-plots-spiecharts-r/</guid><description>&lt;p>After switching to a new site I decided to revive some old posts.
+&lt;p>Lovelace, R., Goodman, A., Aldred, R., Berkoff, N., Abbas, A., &amp;amp; Woodcock, J. (2016). The Propensity to Cycle Tool: An open source online system for sustainable transport planning. Journal Of Transport And Land Use, 0. doi:http://dx.doi.org/10.5198/jtlu.2016.862&lt;/p></description></item><item><title>Coxcomb plots and 'spiecharts' in R</title><link>https://robinlovelace.net/old-site/post/2013-12-27-coxcomb-plots-spiecharts-r/</link><pubDate>Fri, 27 Dec 2013 00:00:00 +0000</pubDate><guid>https://robinlovelace.net/old-site/post/2013-12-27-coxcomb-plots-spiecharts-r/</guid><description>&lt;p>After switching to a new site I decided to revive some old posts.
 I found this one that was written back 7 years ago (in January 2021 when this update was written), back in December 2013.
 The results of the book are now published in the book &lt;a href="https://www.routledge.com/Low-Impact-Living-A-Field-Guide-to-Ecological-Affordable-Community-Building/Chatterton/p/book/9780415661614">Low Impact Living: A Field Guide to Ecological, Affordable Community Building&lt;/a> (Chatterton, 2015, for more info on the Lilac project in particular and cohousing in general see &lt;a href="https://www.lilac.coop/resources/">lilac.coop/resources/&lt;/a>).
 I was amazed to find that, with some tweaks, the &lt;code>ggplot2&lt;/code> code still ran.&lt;/p>
@@ -174,13 +174,13 @@ data so it would better fit in a coxcomb plot.&lt;/p>
 &lt;pre class="r">&lt;code>library(ggplot2)
 (p &amp;lt;- ggplot(f, aes(x = H, y = Allocation)) + geom_bar(color = &amp;quot;black&amp;quot;, stat = &amp;quot;identity&amp;quot;,
 width = 1))&lt;/code>&lt;/pre>
-&lt;p>&lt;img src="https://www.robinlovelace.net/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-2-1.png" width="672" />&lt;/p>
+&lt;p>&lt;img src="https://robinlovelace.net/old-site/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-2-1.png" width="672" />&lt;/p>
 &lt;div class="figure">
 &lt;img src="" alt="" />
 &lt;p class="caption">plot of chunk unnamed-chunk-2&lt;/p>
 &lt;/div>
 &lt;pre class="r">&lt;code>p + coord_polar()&lt;/code>&lt;/pre>
-&lt;p>&lt;img src="https://www.robinlovelace.net/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-3-1.png" width="672" />&lt;/p>
+&lt;p>&lt;img src="https://robinlovelace.net/old-site/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-3-1.png" width="672" />&lt;/p>
 &lt;!-- ![plot of chunk unnamed-chunk-2](https://raw.github.com/Robinlovelace/robinlovelace.github.io/master/figure/unnamed-chunk-22.png) -->
 &lt;p>The above example works well, but notice that all the bars are of equal widths.
 What we want is to be proportional to a value (variable “Value”) of each observation.
@@ -190,10 +190,10 @@ answer to a &lt;a href="http://stackoverflow.com/questions/20688376/how-to-make-
 pos &amp;lt;- 0.5 * (cumsum(w) + cumsum(c(0, w[-length(w)])))
 (p &amp;lt;- ggplot(f, aes(x = pos)) + geom_bar(aes(y = Allocation), width = w, color = &amp;quot;black&amp;quot;,
 stat = &amp;quot;identity&amp;quot;))&lt;/code>&lt;/pre>
-&lt;p>&lt;img src="https://www.robinlovelace.net/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-4-1.png" width="672" />&lt;/p>
+&lt;p>&lt;img src="https://robinlovelace.net/old-site/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-4-1.png" width="672" />&lt;/p>
 &lt;!-- ![plot of chunk unnamed-chunk-3](https://raw.github.com/Robinlovelace/robinlovelace.github.io/master/figure/unnamed-chunk-31.png) -->
 &lt;pre class="r">&lt;code>p + coord_polar(theta = &amp;quot;x&amp;quot;) + scale_x_continuous(labels = f$H, breaks = pos)&lt;/code>&lt;/pre>
-&lt;p>&lt;img src="https://www.robinlovelace.net/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-5-1.png" width="672" />&lt;/p>
+&lt;p>&lt;img src="https://robinlovelace.net/old-site/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-5-1.png" width="672" />&lt;/p>
 &lt;!-- ![plot of chunk unnamed-chunk-3](https://raw.github.com/Robinlovelace/robinlovelace.github.io/master/figure/unnamed-chunk-32.png) -->
 &lt;p>Finally a spie chart has been created. After that revelation, it was essentially about adding the ‘bells and
 whistles’, including a 10% line to represent how much more or less than their share each observation was
@@ -211,7 +211,7 @@ p &amp;lt;- ggplot(f)
 p + geom_bar(aes(x = pos, y = Allocation), width = w, color = &amp;quot;black&amp;quot;, stat = &amp;quot;identity&amp;quot;) +
 geom_bar(aes(x = pos, y = 0.1), width = w, color = &amp;quot;black&amp;quot;, stat = &amp;quot;identity&amp;quot;,
 fill = &amp;quot;green&amp;quot;) + coord_polar()&lt;/code>&lt;/pre>
-&lt;p>&lt;img src="https://www.robinlovelace.net/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-7-1.png" width="672" />&lt;/p>
+&lt;p>&lt;img src="https://robinlovelace.net/old-site/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-7-1.png" width="672" />&lt;/p>
 &lt;!-- ![plot of chunk unnamed-chunk-4](https://raw.github.com/Robinlovelace/robinlovelace.github.io/master/figure/unnamed-chunk-41.png) -->
 &lt;pre class="r">&lt;code># make proportional to area
 f$Allo &amp;lt;- sqrt(f$Allocation)
@@ -221,7 +221,7 @@ geom_bar(aes(x = pos, y = sqrt(0.1), width = w), color = &amp;quot;black&amp;quo
 fill = &amp;quot;green&amp;quot;) + coord_polar()&lt;/code>&lt;/pre>
 &lt;pre>&lt;code>## Warning: Ignoring unknown aesthetics: width
 ## Warning: Ignoring unknown aesthetics: width&lt;/code>&lt;/pre>
-&lt;p>&lt;img src="https://www.robinlovelace.net/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-8-1.png" width="672" />&lt;/p>
+&lt;p>&lt;img src="https://robinlovelace.net/old-site/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-8-1.png" width="672" />&lt;/p>
 &lt;!-- ![plot of chunk unnamed-chunk-4](https://raw.github.com/Robinlovelace/robinlovelace.github.io/master/figure/unnamed-chunk-42.png) -->
 &lt;pre class="r">&lt;code># add capital
 capital &amp;lt;- (f$Captial + f$Deposit)/(f$Value) * f$Allocation
@@ -234,7 +234,7 @@ breaks = pos)&lt;/code>&lt;/pre>
 &lt;pre>&lt;code>## Warning: Ignoring unknown aesthetics: width
 ## Warning: Ignoring unknown aesthetics: width
 ## Warning: Ignoring unknown aesthetics: width&lt;/code>&lt;/pre>
-&lt;p>&lt;img src="https://www.robinlovelace.net/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-9-1.png" width="672" />&lt;/p>
+&lt;p>&lt;img src="https://robinlovelace.net/old-site/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-9-1.png" width="672" />&lt;/p>
 &lt;!-- ![plot of chunk unnamed-chunk-4](https://raw.github.com/Robinlovelace/robinlovelace.github.io/master/figure/unnamed-chunk-43.png) -->
 &lt;pre class="r">&lt;code># add ablines
 p + geom_bar(aes(x = pos, y = Allo, width = w), color = &amp;quot;grey40&amp;quot;, stat = &amp;quot;identity&amp;quot;,
@@ -246,7 +246,7 @@ linetype = 3) + geom_abline(intercept = sqrt(0.9), slope = 0, linetype = 3)&lt;/
 &lt;pre>&lt;code>## Warning: Ignoring unknown aesthetics: width
 ## Warning: Ignoring unknown aesthetics: width
 ## Warning: Ignoring unknown aesthetics: width&lt;/code>&lt;/pre>
-&lt;p>&lt;img src="https://www.robinlovelace.net/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-10-1.png" width="672" />&lt;/p>
+&lt;p>&lt;img src="https://robinlovelace.net/old-site/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-10-1.png" width="672" />&lt;/p>
 &lt;div class="figure">
 &lt;img src="https://raw.github.com/Robinlovelace/robinlovelace.github.io/master/figure/unnamed-chunk-44.png" alt="" />
 &lt;p class="caption">plot of chunk unnamed-chunk-4&lt;/p>
@@ -265,7 +265,7 @@ coord_polar()&lt;/code>&lt;/pre>
 &lt;pre>&lt;code>## Warning: Ignoring unknown parameters: x
 ## Warning: Ignoring unknown parameters: x
 ## Warning: Ignoring unknown parameters: x&lt;/code>&lt;/pre>
-&lt;p>&lt;img src="https://www.robinlovelace.net/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-11-1.png" width="672" />&lt;/p>
+&lt;p>&lt;img src="https://robinlovelace.net/old-site/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-11-1.png" width="672" />&lt;/p>
 &lt;pre class="r">&lt;code># putting it all together
 p &amp;lt;- ggplot(f)
 p + geom_bar(aes(x = pos, y = Allo, width = w), color = &amp;quot;grey40&amp;quot;, stat = &amp;quot;identity&amp;quot;,
@@ -285,7 +285,7 @@ theme_classic()&lt;/code>&lt;/pre>
 &lt;pre>&lt;code>## Warning: Ignoring unknown parameters: x
 ## Warning: Ignoring unknown parameters: x
 ## Warning: Ignoring unknown parameters: x&lt;/code>&lt;/pre>
-&lt;p>&lt;img src="https://www.robinlovelace.net/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-12-1.png" width="672" />&lt;/p>
+&lt;p>&lt;img src="https://robinlovelace.net/old-site/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-12-1.png" width="672" />&lt;/p>
 &lt;p>The above looks great, but ideally, for an ‘infographic’ feel, it would
 have no annoying axes clogging up the visuals. This was done by creating an
 entirely new ggpot theme.&lt;/p>
@@ -295,7 +295,7 @@ entirely new ggpot theme.&lt;/p>
 &lt;pre class="r">&lt;code>theme_infog &amp;lt;- theme_classic() + theme(axis.line = element_blank(), axis.title = element_blank(),
 axis.ticks = element_blank(), axis.text.y = element_blank())
 last_plot() + theme_infog&lt;/code>&lt;/pre>
-&lt;p>&lt;img src="https://www.robinlovelace.net/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-13-1.png" width="672" />&lt;/p>
+&lt;p>&lt;img src="https://robinlovelace.net/old-site/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-13-1.png" width="672" />&lt;/p>
 &lt;/div>
 &lt;div id="creating-a-ring" class="section level2">
 &lt;h2>Creating a ring&lt;/h2>
@@ -311,7 +311,7 @@ p &amp;lt;- ggplot(f)
 p + geom_bar(aes(x = pos, y = Allo, width = w), color = &amp;quot;grey40&amp;quot;, stat = &amp;quot;identity&amp;quot;,
 fill = &amp;quot;lightgrey&amp;quot;)&lt;/code>&lt;/pre>
 &lt;pre>&lt;code>## Warning: Ignoring unknown aesthetics: width&lt;/code>&lt;/pre>
-&lt;p>&lt;img src="https://www.robinlovelace.net/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-14-1.png" width="672" />&lt;/p>
+&lt;p>&lt;img src="https://robinlovelace.net/old-site/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-14-1.png" width="672" />&lt;/p>
 &lt;!-- ![plot of chunk unnamed-chunk-6](https://raw.github.com/Robinlovelace/robinlovelace.github.io/master/figure/unnamed-chunk-61.png) -->
 &lt;pre class="r">&lt;code># we need the axes to be bigger for starters - try 1.3 to 1.5
 p + geom_bar(aes(x = pos, y = Cap.r, width = w), color = &amp;quot;grey40&amp;quot;, stat = &amp;quot;identity&amp;quot;,
@@ -323,7 +323,7 @@ y = 1.196, width = w), color = &amp;quot;white&amp;quot;, stat = &amp;quot;ident
 ## Warning: Ignoring unknown aesthetics: width
 ## Warning: Ignoring unknown aesthetics: width
 ## Warning: Ignoring unknown aesthetics: width&lt;/code>&lt;/pre>
-&lt;p>&lt;img src="https://www.robinlovelace.net/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-15-1.png" width="672" />&lt;/p>
+&lt;p>&lt;img src="https://robinlovelace.net/old-site/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-15-1.png" width="672" />&lt;/p>
 &lt;pre class="r">&lt;code>last_plot() + geom_bar(aes(x = pos, y = Allo, width = w), color = &amp;quot;grey40&amp;quot;,
 stat = &amp;quot;identity&amp;quot;, fill = &amp;quot;grey80&amp;quot;) + geom_bar(aes(x = pos, y = capital,
 width = w), color = &amp;quot;grey40&amp;quot;, stat = &amp;quot;identity&amp;quot;, fill = &amp;quot;grey30&amp;quot;) + geom_bar(aes(x = pos,
@@ -335,7 +335,7 @@ theme_infog&lt;/code>&lt;/pre>
 &lt;pre>&lt;code>## Warning: Ignoring unknown aesthetics: width
 ## Warning: Ignoring unknown aesthetics: width
 ## Warning: Ignoring unknown aesthetics: width&lt;/code>&lt;/pre>
-&lt;p>&lt;img src="https://www.robinlovelace.net/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-16-1.png" width="672" />&lt;/p>
+&lt;p>&lt;img src="https://robinlovelace.net/old-site/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-16-1.png" width="672" />&lt;/p>
 &lt;!-- ![plot of chunk unnamed-chunk-6](https://raw.github.com/Robinlovelace/robinlovelace.github.io/master/figure/unnamed-chunk-63.png) -->
 &lt;/div>
 &lt;div id="just-inner" class="section level2">
@@ -353,10 +353,10 @@ coord_polar() + scale_x_continuous(labels = f$H, breaks = pos) + theme_infog&lt;
 &lt;pre>&lt;code>## Warning: Ignoring unknown aesthetics: width
 ## Warning: Ignoring unknown aesthetics: width
 ## Warning: Ignoring unknown aesthetics: width&lt;/code>&lt;/pre>
-&lt;p>&lt;img src="https://www.robinlovelace.net/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-17-1.png" width="672" />&lt;/p>
+&lt;p>&lt;img src="https://robinlovelace.net/old-site/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-17-1.png" width="672" />&lt;/p>
 &lt;!-- ![plot of chunk unnamed-chunk-7](https://raw.github.com/Robinlovelace/robinlovelace.github.io/master/figure/unnamed-chunk-7.png) -->
 &lt;pre class="r">&lt;code>ggsave(&amp;quot;just-inner.png&amp;quot;, width = 7, height = 7, dpi = 800)&lt;/code>&lt;/pre>
-&lt;/div></description></item><item><title>Moving house by bicycle trailer</title><link>https://www.robinlovelace.net/post/2013-10-13-bicycle-trailer-move/</link><pubDate>Sun, 13 Oct 2013 00:00:00 +0000</pubDate><guid>https://www.robinlovelace.net/post/2013-10-13-bicycle-trailer-move/</guid><description>&lt;p>Back in 2009 I moved from York to Sheffield to start a PhD on the &lt;a href="http://e-futures.group.shef.ac.uk/page/home/" target="_blank" rel="noopener">Energy Futures&lt;/a> 4 year Doctoral Training Centre.
+&lt;/div></description></item><item><title>Moving house by bicycle trailer</title><link>https://robinlovelace.net/old-site/post/2013-10-13-bicycle-trailer-move/</link><pubDate>Sun, 13 Oct 2013 00:00:00 +0000</pubDate><guid>https://robinlovelace.net/old-site/post/2013-10-13-bicycle-trailer-move/</guid><description>&lt;p>Back in 2009 I moved from York to Sheffield to start a PhD on the &lt;a href="http://e-futures.group.shef.ac.uk/page/home/" target="_blank" rel="noopener">Energy Futures&lt;/a> 4 year Doctoral Training Centre.
 Young and naive, some friends and I decided to do it by bicycle, with one bicycle trailer filled to the brim and 4 large panniers carrying most of my stuff.&lt;/p>
 &lt;p>4 years later and I&amp;rsquo;ve moved again, this time to Leeds. I&amp;rsquo;ve got a new a job at Leeds University,
 working on the &lt;a href="http://www.geotalisman.org/" target="_blank" rel="noopener">Geotalisman&lt;/a> project in the department of geography.
