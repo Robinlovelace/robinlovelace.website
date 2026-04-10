@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>maps | Robin Lovelace</title><link>https://www.robinlovelace.net/tag/maps/</link><atom:link href="https://www.robinlovelace.net/tag/maps/index.xml" rel="self" type="application/rss+xml"/><description>maps</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 21 Dec 2016 00:00:00 +0000</lastBuildDate><image><url>https://www.robinlovelace.net/media/icon_hu93dbabadc2a9bdd4930d1377c0b338b2_5137_512x512_fill_lanczos_center_3.png</url><title>maps</title><link>https://www.robinlovelace.net/tag/maps/</link></image><item><title>CycleStreets.net in the Propensity to Cycle Tool</title><link>https://www.robinlovelace.net/post/2016-12-21-cyclestreets-pct/</link><pubDate>Wed, 21 Dec 2016 00:00:00 +0000</pubDate><guid>https://www.robinlovelace.net/post/2016-12-21-cyclestreets-pct/</guid><description>&lt;p>After 2 years in the making, the &lt;a href="https://www.jtlu.org/index.php/jtlu/article/view/862/824" target="_blank" rel="noopener">paper&lt;/a> describing the Propensity to Cycle Tool (PCT), and the thinking behind it, has finally been published (Lovelace et al. 2016). The PCT is an online tool for helping to decide where to prioritise cycling policies such as new cycle paths.&lt;/p>
+&lt;p>The PCT would not have been possible without CycleStreets.net, so as well as describing the PCT and it&amp;rsquo;s use of their routing services, this article serves as a big Thank You from PCT to CycleStreets.net.&lt;/p>
+&lt;h2 id="what-is-the-propensity-to-cycle-tool">What is the Propensity to Cycle Tool?&lt;/h2>
+&lt;p>For those new to the PCT, it&amp;rsquo;s an online tool for helping to decide where to prioritise cycling policies such as new cycle paths. It lives at &lt;a href="http://www.pct.bike" target="_blank" rel="noopener">http://www.pct.bike&lt;/a> - check it out!&lt;/p>
+&lt;p>The context of its development is explained in the accompanying video on that page. This article reports how the tool itself works and how it uses data from CycleStreets.net.&lt;/p>
+&lt;p>The PCT is best understood by using it to explore current cycling levels, at regional, area, desire line, route and route network levels. We will take a look at how the PCT works at each of these levels, after a brief look at the scenario results at the regional level (the senarios are described in more detail in the &lt;a href="https://www.jtlu.org/index.php/jtlu/article/view/862/824" target="_blank" rel="noopener">paper&lt;/a>).&lt;/p>
+&lt;p>Under the 2011 Census scenario, the PCT represents levels of cycling to work based on the Census. This is a reasonable proxy for levels of utility cycling overall. We used origin-destination (OD) data from the Census as the basis of the PCT as this is best publicly available dataset on English travel patterns. The input data is described in the &lt;a href="https://www.jtlu.org/index.php/jtlu/article/view/862" target="_blank" rel="noopener">paper&lt;/a> and can be freely downloaded from the official &lt;a href="http://wicid.ukdataservice.ac.uk/" target="_blank" rel="noopener">http://wicid.ukdataservice.ac.uk/&lt;/a> website.&lt;/p>
+&lt;h3 id="the-regional-picture-and-scenarios">The regional picture and scenarios&lt;/h3>
+&lt;p>The first thing the user sees on the front page is a map of England, broken into 44 regions:&lt;/p>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://github.com/npct/pct/blob/master/figures/regions1.png?raw=true" alt="" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;p>We used deliberately large regions because successful cycling plans should be strategic and joined up, covering both large areas and large spans of time. This discourages the stop-start investment plans that have typified funding for active travel.&lt;/p>
+&lt;p>By hovering over different regions, the user can see what the current level of cycling to work is. We can discover that West Yorkshire has a low current level of cycling to work, 1.3% in the 2011 census, and that Cambridgeshire has a relatively high (but low by Dutch standards) level of cycling of 9.7%.&lt;/p>
+&lt;p>An exciting feature of the PCT is its ability to allow the user to imagine &amp;lsquo;cycling futures&amp;rsquo;. This can be seen on the front page map by clicking on the different scenarios (set to Census 2011 by default). We can see, for example, that under the Government Target to double cycling levels by 2025, West Yorkshire&amp;rsquo;s level would rise to 3.3% (more than a doubling) whereas Cambridgeshire would see cycling levels grow to 13.7% (a larger rise in absolute terms):&lt;/p>
+&lt;p>&lt;img src="https://github.com/npct/pct/blob/master/figures/regions2.png?raw=true" title="plot of chunk unnamed-chunk-2" alt="plot of chunk unnamed-chunk-2" width="50%" />&lt;img src="https://github.com/npct/pct/blob/master/figures/regions3.png?raw=true" title="plot of chunk unnamed-chunk-2" alt="plot of chunk unnamed-chunk-2" width="50%" />&lt;/p>
+&lt;p>Under the Go Dutch scenarios, these regions would see 23.1 and 13.5% of people cycling to work, respectively. This represents a huge leveling-out of cycling levels across the country, but still highlights the fact that some regions have higher cycling potentials than others, due to average trip distances and levels of hilliness.&lt;/p>
+&lt;h2 id="cycling-levels-at-the-area-level">Cycling levels at the area level&lt;/h2>
+&lt;p>To launch the PCT for a region, click on it. Try clicking on West Yorkshire. You should be presented with the following image, which shows the area-based level of cycling to work from the 2011 Census. (When using the PCT, it is worth remembering that the visualisations work for every scenario.)&lt;/p>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://github.com/npct/pct/blob/master/figures/west-yorkshire-front.png?raw=true" alt="" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;p>This shows that West Yorkshire has very low levels of cycling to work, hovering around 1% to 2% in most places. This suggests strongly that the region has low levels of utility cycling overall (despite the successes of the region&amp;rsquo;s sport cyclists). There is a cluster of zones with a higher level of cycling to the north of Leeds city centre (around Headingly) but even there the percentage of people cycling as their main mode of travel to work does not exceed 5%.&lt;/p>
+&lt;h2 id="cycling-potential-at-the-desire-line-level">Cycling potential at the desire line level&lt;/h2>
+&lt;p>This is all useful information, especially when we look at how the cycling potential could shift in the future. However, it provides little information about where current and future cyclists actually go. This is where the desire line level can be useful. This can be selected by clicking on the Straight Lines option from the Cycling Flows dropdown menu. The results (zoomed in for Leeds) are shown in the figures below (see Figure 3 in the paper).&lt;/p>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://github.com/npct/pct/blob/master/flow-model/od-data-leeds.png?raw=true" alt="" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://github.com/npct/pct/blob/master/figures/leeds-desire-godutch.png?raw=true" alt="" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;p>What the above figures show is that as the level of cycling increases in a city, the spatial distribution of cycling can be expected to change. Under current conditions (be they related to socio-demographics or infrastructure or other factors), cycling in Leeds is dominated by the travel corridor to the north of the city centre. Yet there are clearly many short trips taking place from the south into the centre, as illustrated by the high cycling potential south of the city under the Go Dutch scenario.&lt;/p>
+&lt;h2 id="allocating-cycling-potential-to-the-route-network">Allocating cycling potential to the route network&lt;/h2>
+&lt;p>This is where CycleStreets.net comes into play.&lt;/p>
+&lt;p>We know how many people go from A to B by cycling from Census data. But we have very little idea of how they are likely to travel. This is where the routing algorithm of CycleStreets.net comes in handy. We used their &lt;a href="https://www.cyclestreets.net/api/apply/" target="_blank" rel="noopener">routing API&lt;/a> to estimate the &amp;lsquo;fastest&amp;rsquo; route for all short (well, up to 20 km in Euclidean distance) desire lines in England.&lt;/p>
+&lt;p>Not only does CycleStreets.net allow us to find all the fastest routes, a good indication of where new infrastructure should be built as people (especially women and elderly) have a strong preference for cycling along the most direct routes.&lt;/p>
+&lt;p>The results of all this routing work is illustrated in the future below, which shows the fastest and quietest routes associated with the top cycled routes in Leeds.&lt;/p>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://github.com/npct/pct/blob/master/flow-model/od-data-fast-quiet.png?raw=true" alt="" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;p>Interestingly, the big fat line up to the north-west is Otley Road, well-known to have very high level of cycling. This also shows up in Strava data as having high current levels of cycling:&lt;/p>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://github.com/npct/pct/blob/master/figures/pct-vs-strava-for-leeds.png?raw=true" alt="" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;p>This is not formal validation but it is a good sign that the PCT and other data sources line-up for the current level of cycling. The big question is whether the PCT&amp;rsquo;s estimates of cycling levels under various cycling futures, including Go Dutch.&lt;/p>
+&lt;p>Here is not the place to answer such a question. Only the passage of time, and commitment from people (perhaps informed by models such as the PCT) to sustainable travel will help answer that one.&lt;/p>
+&lt;p>There is much more to say about the use of CycleStreets.net in the PCT but it gets rather technical very quickly.
+Suffice to say at this stage that it involved writing lots of code in R, a language for statistical programming, and that this has now resulted in the publication of &lt;strong>stplanr&lt;/strong>, &lt;a href="https://github.com/ropensci/stplanr" target="_blank" rel="noopener">an R package for sustainable transport&lt;/a>.
+(For more on how to
+&lt;a href="https://cran.r-project.org/" target="_blank" rel="noopener">install R&lt;/a> and (for bells and whistles) RStudio, which this blog post was written in, please see the relevant sections of the book &lt;a href="https://csgillespie.github.io/efficientR/set-up.html#installing-r" target="_blank" rel="noopener">Efficent R Programming&lt;/a> (Gillespie and Lovelace, 2016).)
+With R installed, &lt;strong>stplanr&lt;/strong> can be installed with:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-r" data-lang="r">&lt;span class="line">&lt;span class="cl">&lt;span class="nf">install.packages&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;stplanr&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>With this package installed, you can start using the CycleStreets.net routing algorithm with the following function:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-r" data-lang="r">&lt;span class="line">&lt;span class="cl">&lt;span class="nf">library&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">stplanr&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">route&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nf">route_cyclestreet&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">from&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s">&amp;#34;Leeds&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">to&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s">&amp;#34;Cambridge&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>which results in spatial data, which can be visualised as follows:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-r" data-lang="r">&lt;span class="line">&lt;span class="cl">&lt;span class="nf">library&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">leaflet&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">leaflet&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="o">%&amp;gt;%&lt;/span> &lt;span class="nf">addTiles&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="o">%&amp;gt;%&lt;/span> &lt;span class="nf">addPolylines&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">data&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">route&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div> &lt;iframe src="http://robinlovelace.net/leeds-cam-map.html">&lt;/iframe>
+&lt;p>There is much more I could say about the technical side of things but at the request of the editors I will leave it there for now. For more info please see the &lt;a href="https://github.com/ropensci/stplanr/blob/master/vignettes/stplanr-paper.Rmd" target="_blank" rel="noopener">&lt;strong>stplanr&lt;/strong> vignette&lt;/a>.&lt;/p>
+&lt;p>I plan to follow this overview article up with a more technical blog post in the New Year. Watch this space!&lt;/p>
+&lt;h2 id="reference">Reference&lt;/h2>
+&lt;p>Lovelace, R., Goodman, A., Aldred, R., Berkoff, N., Abbas, A., &amp;amp; Woodcock, J. (2016). The Propensity to Cycle Tool: An open source online system for sustainable transport planning. Journal Of Transport And Land Use, 0. doi:http://dx.doi.org/10.5198/jtlu.2016.862&lt;/p></description></item><item><title>Geostat2016 Albacete: a write-up</title><link>https://www.robinlovelace.net/post/2016-09-28-geostat-2016/</link><pubDate>Wed, 28 Sep 2016 00:00:00 +0000</pubDate><guid>https://www.robinlovelace.net/post/2016-09-28-geostat-2016/</guid><description>&lt;p>Last week I went to &lt;a href="http://geostat-course.org/2016" target="_blank" rel="noopener">GEOSTAT 2016&lt;/a>. Given the amount of fun had at &lt;a href="http://robinlovelace.net/r/2015/08/31/geostat-writeup.html" target="_blank" rel="noopener">GEOSTAT 2015&lt;/a>, expectations were high. The local organisers did not disappoint, with a week of lectures, workshops, spatial data competitions and of course lots of Geostatistics. It would be unwise to try to systematically document such a diverse range of activities, and the &lt;a href="http://geostat-course.org/node" target="_blank" rel="noopener">GEOSTAT website&lt;/a> provides much further info. Instead this &amp;lsquo;miniwriteup&amp;rsquo; is designed to summarise some of my memories from the event, and encourage you to get involved for GEOSTAT 2017.&lt;/p>
+&lt;p>To put things in context, the first session was a brief overview of the history of GEOSTAT. This is the 12&lt;sup>th&lt;/sup> GEOSTAT summer school. In some ways GEOSTAT can be seen as a physical manifestation of the lively &lt;a href="https://stat.ethz.ch/mailman/listinfo/r-sig-geo" target="_blank" rel="noopener">R-SIG-GEO email list&lt;/a>. That may not sound very exciting. But there is a strong community spirit at the event and, unlike other academic conferences, the focus is on practical learning rather than transmitting research findings or theories. And the event was so much more than that.&lt;/p>
+&lt;p>There were 5 action packed days covering many topics within the broad field of Geostatistics. What follows is an overview of each that I went to (there were 2 streams), with links to the source material. It is hoped that this will be of use to people who were not present in person.&lt;/p>
+&lt;h2 id="day-1">Day 1&lt;/h2>
+&lt;p>After an introduction to the course and spatial data by Tom Hengl, Roger Bivand delivered a technical and applied webinar on &lt;a href="http://geostat-course.org/system/files/geostat_talk16.pdf" target="_blank" rel="noopener">bridges between R and other GIS software&lt;/a>. With a focus on GRASS, we learned how R could be used as a &amp;lsquo;front end&amp;rsquo; to other programs. An example using the famous &amp;lsquo;Cholera pump&amp;rsquo; data mapped by &lt;a href="https://en.wikipedia.org/wiki/John_Snow" target="_blank" rel="noopener">John Snow&lt;/a> was used to demonstrate the potential benefits of &amp;lsquo;bridging&amp;rsquo; to other software. The data can be downloaded and partially plotted in R as follows:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-r" data-lang="r">&lt;span class="line">&lt;span class="cl">&lt;span class="n">u&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s">&amp;#34;http://geostat-course.org/system/files/data_0.zip&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">download.file&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">u&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s">&amp;#34;data_0.zip&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">unzip&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;data_0.zip&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-r" data-lang="r">&lt;span class="line">&lt;span class="cl">&lt;span class="n">old&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nf">setwd&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;~/repos/geostat2016-rl/&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">library&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">raster&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;pre>&lt;code>## Loading required package: sp
+&lt;/code>&lt;/pre>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-r" data-lang="r">&lt;span class="line">&lt;span class="cl">&lt;span class="n">bbo&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nf">shapefile&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;data/bbo.shp&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">buildings&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nf">shapefile&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;data/buildings.shp&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">deaths&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nf">shapefile&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;data/deaths.shp&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">b_pump&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nf">shapefile&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;data/b_pump.shp&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">nb_pump&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nf">shapefile&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;data/nb_pump.shp&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">plot&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">buildings&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://github.com/npct/pct/raw/master/figures/unnamed-chunk-3-1.png" alt="" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-r" data-lang="r">&lt;span class="line">&lt;span class="cl">&lt;span class="nf">setwd&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">old&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>In the afternoon Robert Hijmans gave a high level overview of software for spatial data analysis, with a discussion of the &lt;a href="http://www.diva-gis.org/" target="_blank" rel="noopener">Diva GIS&lt;/a> software he developed and why he now uses R for most of his geospatial analysis.&lt;/p>
+&lt;p>The talk touched on the &lt;a href="https://cran.r-project.org/web/packages/gdistance/" target="_blank" rel="noopener">&lt;strong>gdistance&lt;/strong>&lt;/a> package, and many others. Robert showcased the power of R for understanding major civilisational problems such as the impacts of climate change on agriculture. His animated global maps of agricultural productivity and precipitation showed how R can scale to tackle large datasets, up to the global level involving spatial and temporal data simultaneously.&lt;/p>
+&lt;p>There were a few political asides. Robert mentioned how agrotech giant Monsanto paid almost &lt;a href="https://www.fastcoexist.com/3019387/why-monsanto-just-spent-1-billion-to-buy-a-climate-data-company" target="_blank" rel="noopener">$1 billion&lt;/a> for a weather prediction company. He detoured deftly through a discussion of &amp;lsquo;big data&amp;rsquo;, making the observation that often ensembles of models can provide better predictions than any single model working on its own, with political analogies about the importance of democracy.&lt;/p>
+&lt;p>More examples included health and estimates of dietary deficiencies at high levels of geographic resolution. A paper showing fish and fruit consumption across Rwanda illustrated how map making in R, used intelligently, can save lives.&lt;/p>
+&lt;p>It was revealing to learn how Robert got into R. While he was working at the &lt;a href="http://irri.org/" target="_blank" rel="noopener">International Rice Research Institute&lt;/a>. &amp;ldquo;It forces you to write scripts.&amp;rdquo; This is good for ensuring reproducibility, a critical component of scientific research. It encourages you to focus on and understand the data primarily, rather than visualising it. On the other hand, R is not always the fastest way to do things, although &amp;ldquo;people often worry too much about this&amp;rdquo;. Your time is more important than your computers, so setting an analysis running is fine. Plus there are ways to make things run faster, as mentioned in a book that I&amp;rsquo;m working on, &lt;a href="https://csgillespie.github.io/efficientR/" target="_blank" rel="noopener">Efficient R Programming&lt;/a>.&lt;/p>
+&lt;blockquote>
+&lt;p>R is great if you use it every data, but if you only use it less than once a week it becomes difficult.&lt;/p>
+&lt;/blockquote>
+&lt;p>If you just want a one-off spatial analysis data program, Robert recommended QGIS. After a brief overview of spatial data in R, Robert moved on to talk about the &lt;a href="https://cran.r-project.org/web/packages/raster/index.html" target="_blank" rel="noopener">&lt;strong>raster&lt;/strong>&lt;/a> package, which he developed. This package was developed to overcome some of the limitations with &lt;strong>sp&lt;/strong>, the foundational package for spatial data in R.&lt;/p>
+&lt;!-- This led on to discussion of C++ code, which Robert is increasingly developing in to extend **raster**. Here is a brief benchmark to show how much faster C++ code can be: -->
+&lt;!-- ```{r} -->
+&lt;!-- sumR = function(x){ -->
+&lt;!-- b = NULL -->
+&lt;!-- for(i in 1:length(x)){ -->
+&lt;!-- b = b + a[i] -->
+&lt;!-- } -->
+&lt;!-- } -->
+&lt;!-- ``` -->
+&lt;!-- ```{r, engine='cpp', eval=FALSE} -->
+&lt;!-- library(Rcpp) -->
+&lt;!-- cppFunction(code = -->
+&lt;!-- "// [[Rcpp::export]] -->
+&lt;!-- double cumulater(std::vector&lt;doubl>d) { -->
+&lt;!-- int n = x.size(); -->
+&lt;!-- double result = 0; -->
+&lt;!-- for (int i=0;i &lt; n; i++) { -->
+&lt;!-- result = result + d[i]; -->
+&lt;!-- } -->
+&lt;!-- double r = cumulater(v) -->
+&lt;!-- }return r;") -->
+&lt;!-- ``` -->
+&lt;!-- According to Robert, once you can write R functions, "writing C++ functions is relatively easy". While I'm not quite convinced, based on the number of characters needed to write a simple sum code, he certainly convinced me of the merits of developing new spatial functions in this low level language, because of its speed and the fact that it's the main development language of GDAL. -->
+&lt;p>A final resource that Robert promoted was &lt;a href="http://www.rspatial.org/" target="_blank" rel="noopener">RSpatial.org&lt;/a>, a free online resource for teaching R as a command line GIS.&lt;/p>
+&lt;p>Edzer Pebesmer delivered the final session of the first day, on &lt;strong>Free and Open Source Software (FOSS) for Geoinformatics and Geosciences&lt;/strong>. After the highly technical final C++ examples from the previous talk, I was expecting a high level overview of the landscape. Instead Edzer went straight in to talk about source code, the raw material that defines all software. The fundamental feature of open source software is that its source code is free, and will remain free.&lt;/p>
+&lt;!-- An example of this is Apple, the most profitable computer company on Earth, used parts of the BSD kernel in its proprietary operating system. -->
+&lt;!-- Another feature of open source software is that it must have a license. It has a legal meaning, the details of which vary from licence to license. By deciding a license, you can choose whether you use a more *restrictive* license (which prevents people from using the software in software that is solved) or a more *permisive* license. R's 'backend' is licensed -->
+&lt;!-- GPL is used for R's. ESRI is now using R as a back-end in commercial software. Its lawers have explored the legal implications of this and concluded that it is not breaking the law by doing so. -->
+&lt;!-- GitHub is an online system for developing open source software. It is free to use, but some of the best things in GitHub are not open source. Edzer says that the advantages of using their service, in terms of community engagement and ease of use and accessibility, currently outweigh any potential future disbenefits of GitHub not being completely open source. -->
+&lt;!-- Another example is open source software for geosciences. Researchers may want to make their software open for anyone to use, while remaining protected from exploitation from large companies like oil com -->
+&lt;h2 id="day-2">Day 2&lt;/h2>
+&lt;p>The second day of the course was divided in two: stream A focussed on environmental modelling and stream B compositional data. I attended the environmental modelling course taught by Robert Hijmans. The course was based on his teaching material at &lt;a href="http://rspatial.org/spatial/index.html" target="_blank" rel="noopener">rspatial.org&lt;/a> and can be found &lt;a href="http://gfc.ucdavis.edu/events/albacete/day2.html" target="_blank" rel="noopener">online&lt;/a>.&lt;/p>
+&lt;p>We started off by looking at the fundamental data structures underlying spatial data in R. Why? It&amp;rsquo;s useful to be able to create simple example datasets from scratch, to understand them.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-r" data-lang="r">&lt;span class="line">&lt;span class="cl">&lt;span class="nf">library&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">sp&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">x&lt;/span> &lt;span class="o">&amp;lt;-&lt;/span> &lt;span class="nf">c&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="m">4&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="m">7&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="m">3&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="m">8&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">y&lt;/span> &lt;span class="o">&amp;lt;-&lt;/span> &lt;span class="nf">c&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="m">9&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="m">6&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="m">12&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="m">11&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">xy&lt;/span> &lt;span class="o">&amp;lt;-&lt;/span> &lt;span class="nf">data.frame&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">y&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">SpatialPoints&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">xy&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;pre>&lt;code>## class : SpatialPoints
+## features : 4
+## extent : 3, 8, 6, 12 (xmin, xmax, ymin, ymax)
+## coord. ref. : NA
+&lt;/code>&lt;/pre>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-r" data-lang="r">&lt;span class="line">&lt;span class="cl">&lt;span class="n">d&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nf">data.frame&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">v1&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="m">1&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="m">4&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">v2&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kc">LETTERS&lt;/span>&lt;span class="n">[1&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="m">4&lt;/span>&lt;span class="n">]&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">spd&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nf">SpatialPointsDataFrame&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">coords&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">xy&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">data&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">d&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">plot&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">spd&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://github.com/npct/pct/raw/master/figures/unnamed-chunk-6-1.png" alt="" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;p>The basic functions of the &lt;strong>raster&lt;/strong> package are similar.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-r" data-lang="r">&lt;span class="line">&lt;span class="cl">&lt;span class="nf">library&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">raster&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">r&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nf">raster&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">nc&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="m">10&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">nr&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="m">10&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">values&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">r&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="m">1&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="nf">ncell&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">r&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">plot&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">r&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://github.com/npct/pct/raw/master/figures/unnamed-chunk-7-1.png" alt="" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-r" data-lang="r">&lt;span class="line">&lt;span class="cl">&lt;span class="nf">as.matrix&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">r&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;pre>&lt;code>## [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9] [,10]
+## [1,] 1 2 3 4 5 6 7 8 9 10
+## [2,] 11 12 13 14 15 16 17 18 19 20
+## [3,] 21 22 23 24 25 26 27 28 29 30
+## [4,] 31 32 33 34 35 36 37 38 39 40
+## [5,] 41 42 43 44 45 46 47 48 49 50
+## [6,] 51 52 53 54 55 56 57 58 59 60
+## [7,] 61 62 63 64 65 66 67 68 69 70
+## [8,] 71 72 73 74 75 76 77 78 79 80
+## [9,] 81 82 83 84 85 86 87 88 89 90
+## [10,] 91 92 93 94 95 96 97 98 99 100
+&lt;/code>&lt;/pre>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-r" data-lang="r">&lt;span class="line">&lt;span class="cl">&lt;span class="n">q&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nf">sqrt&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">r&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">plot&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">q&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://github.com/npct/pct/raw/master/figures/unnamed-chunk-7-2.png" alt="" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-r" data-lang="r">&lt;span class="line">&lt;span class="cl">&lt;span class="n">x&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">q&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="n">r&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">s&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nf">stack&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">r&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">q&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">x&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">ss&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">s&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">r&lt;/span> &lt;span class="c1"># r is recycled so each layer is multiplied by r&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="m">1&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="m">3&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="m">2&lt;/span> &lt;span class="c1"># here 2 is recycled&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;pre>&lt;code>## [1] 2 4 6
+&lt;/code>&lt;/pre>
+&lt;p>Raster also provides simple yet powerful functions for manipulating and analysing raster data, including &lt;code>crop()&lt;/code>, &lt;code>merge()&lt;/code> for manipulation and &lt;code>predict()&lt;/code>, &lt;code>focal()&lt;/code> and &lt;code>distance()&lt;/code>. &lt;code>predict()&lt;/code> is particularly interesting as it allows raster values to be estimated using any of R&amp;rsquo;s powerful statistical methods.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-r" data-lang="r">&lt;span class="line">&lt;span class="cl">&lt;span class="nf">library&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">dismo&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">g&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nf">gmap&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;Albacete, Spain&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">scale&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="bp">T&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">lonlat&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="bp">T&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;pre>&lt;code>## Loading required namespace: XML
+&lt;/code>&lt;/pre>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-r" data-lang="r">&lt;span class="line">&lt;span class="cl">&lt;span class="nf">plot&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">g&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">interpolate&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="bp">T&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://github.com/npct/pct/raw/master/figures/unnamed-chunk-9-1.png" alt="" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://github.com/npct/pct/raw/master/figures/unnamed-chunk-9-2.png" alt="" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-r" data-lang="r">&lt;span class="line">&lt;span class="cl">&lt;span class="n">dismo&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="nf">geocode&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;Universidad Castilla la Mancha&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;pre>&lt;code>## originalPlace
+## 1 Universidad Castilla la Mancha
+## interpretedPlace longitude
+## 1 Paseo Universidad, 13005 Ciudad Real, Cdad. Real, Spain -3.921711
+## latitude xmin xmax ymin ymax uncertainty
+## 1 38.99035 -3.922007 -3.919309 38.98919 38.99189 131
+&lt;/code>&lt;/pre>
+&lt;!-- Supervised learning is the process of allowing a computer to estimate predictor variables based on explanatory variables. -->
+&lt;!-- There are 2 main things to consider when model fitting: the functional form to use and the explanatory variables X. -->
+&lt;!-- We worked through a practical on spatial interpolation from [rspatial.org](http://rspatial.org/analysis/rst/4-interpolation.html): -->
+&lt;!-- ```{r} -->
+&lt;!-- dir.create("data") -->
+&lt;!-- download.file("http://rspatial.org/analysis/data/precipitation.csv", "data/precipitation.csv") -->
+&lt;!-- d = read.csv("data/precipitation.csv") -->
+&lt;!-- d$prec &lt;- rowSums(d[, c(6:17)]) -->
+&lt;!-- plot(sort(d$prec), ylab='Annual precipitation (mm)', las=1, xlab='Stations') -->
+&lt;!-- library(sp) -->
+&lt;!-- dsp &lt;- SpatialPoints(d[,4:3], proj4string=CRS("+proj=longlat +datum=NAD83")) -->
+&lt;!-- dsp &lt;- SpatialPointsDataFrame(dsp, d) -->
+&lt;!-- download.file("http://rspatial.org/analysis/data/counties.rds", "data/counties.rds") -->
+&lt;!-- CA &lt;- readRDS("data/counties.rds") -->
+&lt;!-- # define groups for mapping -->
+&lt;!-- cuts &lt;- c(0,200,300,500,1000,3000) -->
+&lt;!-- # set up a palette of interpolated colors -->
+&lt;!-- blues &lt;- colorRampPalette(c('yellow', 'orange', 'blue', 'dark blue')) -->
+&lt;!-- pols &lt;- list("sp.polygons", CA, fill = "lightgray") -->
+&lt;!-- spplot(dsp, 'prec', cuts=cuts, col.regions=blues(5), sp.layout=pols, pch=20, cex=2) -->
+&lt;!-- TA &lt;- CRS("+proj=aea +lat_1=34 +lat_2=40.5 +lat_0=0 +lon_0=-120 +x_0=0 +y_0=-4000000 +datum=NAD83 +units=m +ellps=GRS80 +towgs84=0,0,0") -->
+&lt;!-- library(rgdal) -->
+&lt;!-- dta &lt;- spTransform(dsp, TA) -->
+&lt;!-- cata &lt;- spTransform(CA, TA) -->
+&lt;!-- ``` -->
+&lt;!-- Now the modelling work can begin. -->
+&lt;!-- ```{r} -->
+&lt;!-- # First create a function to calculate the error: -->
+&lt;!-- RMSE &lt;- function(observed, predicted) { -->
+&lt;!-- sqrt(mean((predicted - observed)^2, na.rm=TRUE)) -->
+&lt;!-- } -->
+&lt;!-- null &lt;- RMSE(mean(dsp$prec), dsp$prec) -->
+&lt;!-- null -->
+&lt;!-- library(dismo) -->
+&lt;!-- v &lt;- voronoi(dta) -->
+&lt;!-- ## Loading required namespace: deldir -->
+&lt;!-- plot(dsp) -->
+&lt;!-- plot(v) -->
+&lt;!-- points(dta, col = "red") -->
+&lt;!-- ca = aggregate(cata) -->
+&lt;!-- plot(ca) -->
+&lt;!-- vca = intersect(v, ca) -->
+&lt;!-- plot(vca) -->
+&lt;!-- vca2 = rgeos::gIntersection(v, ca, byid = T) -->
+&lt;!-- names(vca2) -->
+&lt;!-- plot(vca2) # not the same! -->
+&lt;!-- plot(vca) -->
+&lt;!-- names(vca) -->
+&lt;!-- ``` -->
+&lt;!-- Testing a first model -->
+&lt;!-- ```{r} -->
+&lt;!-- kf = kfold(dta@data) -->
+&lt;!-- rmse = NULL -->
+&lt;!-- for(k in 1:length(unique(kf))){ -->
+&lt;!-- test = dta[kf == k,] -->
+&lt;!-- train = dta[kf != k,] -->
+&lt;!-- v = voronoi(train) -->
+&lt;!-- p = extract(v, test) -->
+&lt;!-- rmse[k] = RMSE(observed = test$prec, predicted = p$prec) -->
+&lt;!-- } -->
+&lt;!-- rmse -->
+&lt;!-- ``` -->
+&lt;h2 id="day-3">Day 3&lt;/h2>
+&lt;p>The third day started with a live R demo by Edzer Pebesmer on &lt;a href="https://edzer.github.io/UseR2016/" target="_blank" rel="noopener">space-time data&lt;/a>. Refreshingly for a conference primarily on spatial data, it started with an in-depth discussion of time. While base R natively supports temporal units (knowing the difference between days and seconds, for example) it does not know the difference between metres and miles.&lt;/p>
+&lt;p>This led to the creation of the &lt;strong>units&lt;/strong> library, an taster of which is shown below:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-r" data-lang="r">&lt;span class="line">&lt;span class="cl">&lt;span class="nf">install.packages&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;units&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-r" data-lang="r">&lt;span class="line">&lt;span class="cl">&lt;span class="nf">library&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">units&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">m&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nf">with&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">ud_units&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">m&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">s&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nf">with&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">ud_units&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">s&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">km&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nf">with&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">ud_units&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">km&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">h&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nf">with&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">ud_units&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">h&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">x&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="m">1&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="m">3&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">m&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">s&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>The rest of the day was spent analysing a range of spatio-temporal datasets using &lt;strong>spacetime&lt;/strong>, &lt;strong>trajectories&lt;/strong> and &lt;strong>rgl&lt;/strong> for interactive 3d spacetime plots.&lt;/p>
+&lt;p>In the parallel session there were sessions on &lt;a href="http://geostat-course.org/node/1328" target="_blank" rel="noopener">CARTO&lt;/a> and the &lt;a href="http://geostat-course.org/node/1329" target="_blank" rel="noopener">R gvSIG bridge&lt;/a>.&lt;/p>
+&lt;h2 id="day-4">Day 4&lt;/h2>
+&lt;p>Day 4 was a highlight for me as I&amp;rsquo;ve wanted to learn how to use the &lt;strong>INLA&lt;/strong> package for ages. It was explained lucidly by Marta Blangiardo and Michela Cameletti, who have written an excellent book on the subject, which has a &lt;a href="https://sites.google.com/a/r-inla.org/stbook/" target="_blank" rel="noopener">website that I recommend checking out&lt;/a>. Their materials can be found here: &lt;a href="http://geostat-course.org/node/1330" target="_blank" rel="noopener">http://geostat-course.org/node/1330&lt;/a> .&lt;/p>
+&lt;p>In parallel to this there was a session on &lt;a href="http://geostat-course.org/node/1326" target="_blank" rel="noopener">Spatial and Spatiotemporal point process analysis in R&lt;/a> data in R by Virgilio Gomez Rubio and one on automated &lt;a href="http://geostat-course.org/node/1323" target="_blank" rel="noopener">spatial prediction and visualisation&lt;/a> by Tom Hengl.&lt;/p>
+&lt;h2 id="day-5">Day 5&lt;/h2>
+&lt;p>After all that intense geospatial analysis and programming activity, and a night out in Albacete for some participants, we were relieved to learn that this final day of learning was more relaxed. Furthermore, by tradition, it was largely participant-led. I gave a talk on &lt;a href="https://csgillespie.github.io/efficientR/" target="_blank" rel="noopener">Efficient R Programming&lt;/a>, a book I&amp;rsquo;ve written in collaboration with Colin Gillespie; Teresa Rojos gave a fascinating talk about her research into the spatial distribution of cancer rates in Peru; and S.J. Norder gave us the low-down on the Biogeography of islands with R.&lt;/p>
+&lt;p>One of the most exciting sessions was the revelation of the results of the spatial prediction game. Interestingly, a team using a relatively simple approach with &lt;a href="https://cran.r-project.org/web/packages/randomForestSRC/index.html" target="_blank" rel="noopener">&lt;strong>randomForestSRC&lt;/strong>&lt;/a> (and &lt;a href="https://github.com/ehrlinger/ggRandomForests" target="_blank" rel="noopener">&lt;strong>ggRandomForests&lt;/strong>&lt;/a> for visualisation) one against others who had spent hours training complex multi-level models.&lt;/p>
+&lt;h2 id="summary">Summary&lt;/h2>
+&lt;p>Overall it was an amazing event and inspiring to spend time with so many researchers using open geospatial software for tackling &lt;a href="https://t.co/UqMyCnXOsG" target="_blank" rel="noopener">pressing real world issues&lt;/a>. Furthermore, it was great fun. I strongly recommend people dipping their toes in the &lt;a href="https://cran.r-project.org/web/views/Spatial.html" target="_blank" rel="noopener">sea of spatial capabilities&lt;/a> provided by R check out the &lt;a href="http://geostat-course.org/node" target="_blank" rel="noopener">GEOSTAT website&lt;/a>, not least for the excellent &lt;a href="http://archive.org/search.php?query=GEOSTAT" target="_blank" rel="noopener">video resources to be found there&lt;/a>.&lt;/p>
+&lt;p>I look forward to hearing plans for future GEOSTATs and recommend the event, and associated materials, to researchers interested in using free geospatial software for the greater good.&lt;/p></description></item><item><title>R vs QGIS for sustainable transport planning</title><link>https://www.robinlovelace.net/post/2015-04-20-r-vs-qgis-for-transport/</link><pubDate>Tue, 20 Jan 2015 00:00:00 +0000</pubDate><guid>https://www.robinlovelace.net/post/2015-04-20-r-vs-qgis-for-transport/</guid><description>&lt;p>The 23rd iteration of the GIS Research UK conference
+(&lt;a href="https://github.com/Robinlovelace/stplanr" target="_blank" rel="noopener">#GISRUK&lt;/a>)
+conference was the largest ever. 250 researchers,
+industry representatives and academics attended from the
+vibrant geospatial research communities in the
+UK, Europe and beyond. GISRUK has become a centrepoint for discussion
+of new methods, software and applications in the field. I
+was on the &lt;a href="http://leeds.gisruk.org/contact.html" target="_blank" rel="noopener">organising committee&lt;/a>,
+reviewed some excellent papers for the event
+(a full list of these is
+&lt;a href="http://leeds.gisruk.org/programme.html" target="_blank" rel="noopener">available for download here&lt;/a>) and
+attended some truly ground-breaking talks.
+This experience has shown that the geospatial community
+in the UK is strong,
+especially with regards to growth in open access
+data and open source software in the field.&lt;/p>
+&lt;p>&lt;a href="https://www.flickr.com/photos/97888609@N02/17025120518" title="img_2814 by Robin Lovelace, on Flickr">&lt;img src="https://farm6.staticflickr.com/5450/17025120518_ebfba47bff_s.jpg" width="75" height="75" alt="img_2814">&lt;/a>&lt;/p>
+&lt;p>This article is about one part of GISRUK and insights gleaned from it
+about R, QGIS and other tools for sustainable transport planning.
+&lt;a href="https://github.com/Robinlovelace/GIS4TA" target="_blank" rel="noopener">GIS for Transport Applications&lt;/a>
+(&lt;a href="https://twitter.com/hashtag/gis4ta?src=hash" target="_blank" rel="noopener">#GIS4TA for short&lt;/a>) was a practical day-long workshop
+that preceded the main event.
+I organised the workshop and (with help from
+&lt;a href="http://www.geog.leeds.ac.uk/people/e.odiari" target="_blank" rel="noopener">Eusebio Odiari&lt;/a>,
+&lt;a href="https://tgrg.wordpress.com/" target="_blank" rel="noopener">The Transport Geography Research Group&lt;/a>
+and the
+&lt;a href="http://www.rgs.org/HomePage.htm" target="_blank" rel="noopener">Royal Geographical Society&lt;/a>)
+it seems to have been a great success. More than 30
+people attended, including a decent portion
+from transport consultancies such as
+&lt;a href="http://www.itpworld.net/index.html" target="_blank" rel="noopener">Integrated Transport Planning Ltd&lt;/a>
+&lt;a href="http://www.trpconsult.com/" target="_blank" rel="noopener">TRP Consulting&lt;/a> and the
+&lt;a href="http://www.era.europa.eu/Pages/Home.aspx" target="_blank" rel="noopener">European Railway Association (ERA)&lt;/a>.
+Specifically, it is about the use of R
+and QGIS tools for transport planning and the potential for their
+adoption in academic, public and private-sector transport planning.
+The focus of the workshop was deliberately on open source software
+and sustainable transport because these are growth
+areas in the field that are essential for
+democratic
+and healthy
+transport systems compatible with the
+science of climate change (&lt;a href="http://www.opentraffic.net/en/">&lt;span class="citation">Tamminga, 2012&lt;/span>&lt;/a>).
+A recent report, for example, suggests we need to almost completely
+transition away from fossil fuels by 2050
+(&lt;a href="http://dx.doi.org/10.1038/nature14016" target="_blank" rel="noopener">McGlade et al., 2015&lt;/a>).
+New datasets and methods for analysing and modelling them can
+help get us there in the recalcitrant transport sector
+(&lt;a href="http://dx.doi.org/10.1016/j.jtrangeo.2014.07.010" target="_blank" rel="noopener">Gossling, 2014&lt;/a>).&lt;/p>
+&lt;h1 id="r-for-transport-applications">R for transport applications&lt;/h1>
+&lt;p>The workshop kicked-off with a short
+talk on &amp;lsquo;R and QGIS for transport applications&amp;rsquo;,
+which laid out some of the motivations for running the
+workshop outlined above. Other than a few
+&amp;rsquo;early adopters&amp;rsquo;, the transport modelling community
+is generally conservative, based largely on mature
+proprietary products such as
+&lt;a href="http://www.saturnsoftware.co.uk/7.html" target="_blank" rel="noopener">SATURN&lt;/a>
+and
+&lt;a href="http://vision-traffic.ptvgroup.com/en-us/products/ptv-vissim/" target="_blank" rel="noopener">Vissim&lt;/a>.&lt;/p>
+&lt;p>The slides from this talk are available here:&lt;/p>
+&lt;script async class="speakerdeck-embed" data-id="91fce9cf5c36405b8969c6b6954c4fe6" data-ratio="1.41436464088398" src="//speakerdeck.com/assets/embed.js">&lt;/script>
+&lt;p>&lt;strong>Tutorial: &lt;a href="https://github.com/Robinlovelace/GIS4TA/releases/download/0.1/intro-r-qgis-4ta.pdf" target="_blank" rel="noopener">Introduction to R and QGIS for transport applications&lt;/a>&lt;/strong>&lt;/p>
+&lt;h1 id="routing-with-r">Routing with R&lt;/h1>
+&lt;p>The second talk was by Nick Bearman, who provided an overview of
+routing in R, as well as an excellent
+&lt;a href="https://github.com/nickbearman/transport-workshop/blob/master/transport-workshop.pdf" target="_blank" rel="noopener">practical tutorial&lt;/a>.&lt;/p>
+&lt;p>The practical demonstrated 2 ways of routing in R:&lt;/p>
+&lt;ol>
+&lt;li>Using &lt;strong>ggmap&lt;/strong>. The following code was used to navigate to the event!&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">from &amp;lt;- &amp;#39;Leeds station, New Station Street, Leeds LS1 5DL, United Kingdom&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">to &amp;lt;- &amp;#39;LS2 9JT&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">route_df &amp;lt;- route(from, to, structure = &amp;#39;route&amp;#39;, mode = &amp;#39;walking&amp;#39;)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">qmap(&amp;#39;Merrion Centre&amp;#39;, zoom = 15) +
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> geom_path(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> aes(x = lon, y = lat), colour = &amp;#39;red&amp;#39;, size = 1.5,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> data = route_df, lineend = &amp;#39;round&amp;#39;)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://github.com/Robinlovelace/robinlovelace.github.io/raw/master/_posts/writeup_files/figure-html/unnamed-chunk-2-1.png" alt="" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;ol start="2">
+&lt;li>The &lt;a href="https://github.com/Robinlovelace/stplanr" target="_blank" rel="noopener">package I created, &lt;strong>stplanr&lt;/strong>&lt;/a>,
+to get routes optimised for cyclists (see &lt;a href="https://github.com/nickbearman/transport-workshop/blob/master/transport-workshop.Rmd" target="_blank" rel="noopener">transport-workshop.Rmd&lt;/a> for a working version):&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">rquiet &amp;lt;- gLines2CyclePath(l = rlines, plan = &amp;#34;quietest&amp;#34;)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">plot(rquiet[1,]) # route from Leeds station to Leeds University (North - South)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">plot(rquiet[2,]) # route from Leeds to Manchester!
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://github.com/Robinlovelace/robinlovelace.github.io/raw/master/_posts/writeup_files/figure-html/unnamed-chunk-4-1.png" alt="" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;p>&lt;strong>Tutorial: &lt;a href="https://github.com/nickbearman/transport-workshop/blob/master/transport-workshop.pdf" target="_blank" rel="noopener">Route analysis using R&lt;/a>&lt;/strong>&lt;/p>
+&lt;h1 id="large-gps-datasets-with-postgis">Large gps datasets with PostGIS&lt;/h1>
+&lt;p>The most technical session involved using R to query huge datasets storing
+GPS data containing 100,000+ rows. Amazingly, Richard and Adrian Ellison
+set up a remotely accessible database instance &lt;strong>from their laptop&lt;/strong> which
+participants queried via
+&lt;a href="http://cran.r-project.org/web/packages/RPostgreSQL/index.html" target="_blank" rel="noopener">&lt;strong>RPostgreSQL&lt;/strong>&lt;/a>.
+Their session information can be seen here:&lt;/p>
+&lt;p>&lt;a href="https://github.com/richardellison/GIS4TA_GPS" target="_blank" rel="noopener">&lt;strong>github.com/richardellison/GIS4TA_GPS&lt;/strong>&lt;/a>&lt;/p>
+&lt;h1 id="a-hackathon">A hackathon&lt;/h1>
+&lt;p>Finally there was a miniature hackathon organised by Godwin Yeboah.
+Participants made progress in better understanding the travel
+patterns of cyclists using real data. The hackathon notes can be found here:&lt;/p>
+&lt;p>&lt;a href="https://github.com/spatialscientist/GIS4TA2015" target="_blank" rel="noopener">github.com/spatialscientist/GIS4TA2015&lt;/a>&lt;/p>
+&lt;h1 id="summary">Summary&lt;/h1>
+&lt;p>GIS is a field of knowledge that has a huge amount to offer transport
+planners and researchers, especially regarding new and open source
+software tools that can effectively generate, process and analyse
+transport-related data. R is well-suited to fill this research gap and
+has a wide range of tools to help. Packages such as &lt;strong>ggmap&lt;/strong>
+(Kahle and Wickham 2013),
+&lt;strong>RPostgreSQL&lt;/strong>
+and the new &lt;a href="https://github.com/Robinlovelace/stplanr" target="_blank" rel="noopener">&lt;strong>stplanr&lt;/strong>&lt;/a>
+have great potential to help plan the transport systems of the future.
+QGIS is also increasingly attractive for transport applications, with
+it inbuilt support for
+&lt;a href="http://planet.qgis.org/planet/tag/pgrouting/" target="_blank" rel="noopener">PGRouting&lt;/a>,
+&lt;a href="http://plugins.qgis.org/plugins/FlowMapper/" target="_blank" rel="noopener">flow analysis&lt;/a>
+and a friendly user interface that many will be used to.&lt;/p>
+&lt;p>Photos taken during the hackathon are testament to its role as a forum
+for not only learning but also debate about the future of GIS in transport.
+These can be seen here:&lt;/p>
+&lt;p>&lt;a href="https://www.flickr.com/photos/97888609@N02/sets/72157652012715766" target="_blank" rel="noopener">flickr.com/photos/97888609@N02/sets/72157652012715766&lt;/a>&lt;/p>
+&lt;p>Hearing feedback from users new to R using it to solve transport problems
+provided an insight into how it compares to traditional tools. The removal
+of &amp;lsquo;glass ceilings&amp;rsquo; imposed by restrictive licenses or the need to buy
+&amp;lsquo;add-on&amp;rsquo; features was one comment, but that applies equally to QGIS and
+other &lt;a href="http://foss4g.org/" target="_blank" rel="noopener">FOSS4G&lt;/a>
+offerings. The steep learning curve of R seems to still
+be an issue compared with QGIS, although this is becoming less of an issue
+with the evolution of RStudio as an GUI for R. In conclusion, both R and
+QGIS are coming of age as tools in the transport planner&amp;rsquo;s &amp;lsquo;war cabinet&amp;rsquo;.
+The latest evidence unequivocally shows the impact of transport decisions
+on obesity, environmental degradation and quality of life. So it is time,
+surely, to harness this new open source software to &amp;lsquo;save the world&amp;rsquo;!&lt;/p>
+&lt;h1 id="acknowledgements">Acknowledgements&lt;/h1>
+&lt;p>Thanks to the Consumer Data Research Centre and the Royal Geographical
+society for subsidising the event. Thanks to all the participants and
+especially the demonstrators Godwin, Nick, Adrian and Richard for making it
+happen.&lt;/p>
+&lt;h1 id="references">References&lt;/h1>
+&lt;p>Gössling, Stefan, and Scott Cohen. 2014. “Why sustainable transport policies will fail: EU climate policy in the light of transport taboos.” Journal of Transport Geography 39 (July). Elsevier Ltd: 197–207. doi:10.1016/j.jtrangeo.2014.07.010.&lt;/p>
+&lt;p>Kahle, D, and Hadley Wickham. 2013. “ggmap: Spatial Visualization with ggplot2.” The R Journal 5: 144–61. &lt;a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.375.8693&amp;amp;rep=rep1&amp;amp;type=pdf" target="_blank" rel="noopener">citeseerx.ist.psu.edu&lt;/a>.&lt;/p>
+&lt;p>McGlade, Christophe, and Paul Ekins. 2015. “The geographical distribution of fossil fuels unused when limiting global warming to 2 °C.” Nature 517 (7533). Nature Publishing Group: 187–90. doi:10.1038/nature14016.&lt;/p>
+&lt;p>Tamminga, Guus, Marc Miska, Edgar Santos, Hans van Lint, Arturo Nakasone, Helmut Prendinger, and Serge Hoogendoorn. 2012. “Design of Open Source Framework for Traffic and Travel Simulation.” Transportation Research Record: Journal of the Transportation Research Board 2291 (-1): 44–52. doi:10.3141/2291-06.&lt;/p></description></item></channel></rss>

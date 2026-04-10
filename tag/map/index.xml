@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>map | Robin Lovelace</title><link>https://www.robinlovelace.net/tag/map/</link><atom:link href="https://www.robinlovelace.net/tag/map/index.xml" rel="self" type="application/rss+xml"/><description>map</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 29 Jul 2014 00:00:00 +0000</lastBuildDate><image><url>https://www.robinlovelace.net/media/icon_hu93dbabadc2a9bdd4930d1377c0b338b2_5137_512x512_fill_lanczos_center_3.png</url><title>map</title><link>https://www.robinlovelace.net/tag/map/</link></image><item><title>Clipping spatial data in R</title><link>https://www.robinlovelace.net/post/2014-07-29-clipping-with-r/</link><pubDate>Tue, 29 Jul 2014 00:00:00 +0000</pubDate><guid>https://www.robinlovelace.net/post/2014-07-29-clipping-with-r/</guid><description>&lt;h1 id="heading">&lt;/h1>
+&lt;p>This miniature vignette shows how to clip spatial data based on different spatial objects in R and a &amp;lsquo;bounding box&amp;rsquo;. Spatial overlays are common in GIS applications and R users are fortunate that the clipping and spatial subsetting functions are mature and fairly fast. We&amp;rsquo;ll also write a new function called &lt;code>gClip()&lt;/code>, that will make clipping by bounding boxes easier.&lt;/p>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://raw.githubusercontent.com/Robinlovelace/Creating-maps-in-R/master/vignettes/clipping-with-bounding-box_files/figure-markdown_github/Westminster.png" alt="plot of chunk Westminster" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;h2 id="loading-the-data">Loading the data&lt;/h2>
+&lt;p>To start with let&amp;rsquo;s load some data. I&amp;rsquo;m working in the root directory of the &lt;a href="https://github.com/Robinlovelace/Creating-maps-in-R" target="_blank" rel="noopener">Creating-maps-in-R&lt;/a> github repository, so there are some spatial datasets available to play with:&lt;/p>
+&lt;pre>&lt;code>setwd(&amp;quot;../&amp;quot;)
+library(rgdal)
+stations &amp;lt;- readOGR(&amp;quot;data&amp;quot;, &amp;quot;lnd-stns&amp;quot;)
+## OGR data source with driver: ESRI Shapefile
+## Source: &amp;quot;data&amp;quot;, layer: &amp;quot;lnd-stns&amp;quot;
+## with 2532 features and 27 fields
+## Feature type: wkbPoint with 2 dimensions
+zones &amp;lt;- readOGR(&amp;quot;data&amp;quot;, &amp;quot;london_sport&amp;quot;)
+## OGR data source with driver: ESRI Shapefile
+## Source: &amp;quot;data&amp;quot;, layer: &amp;quot;london_sport&amp;quot;
+## with 33 features and 4 fields
+## Feature type: wkbPolygon with 2 dimensions
+&lt;/code>&lt;/pre>
+&lt;h2 id="the-wonder-of-spatial-subsetting-in-r">The wonder of spatial subsetting in R&lt;/h2>
+&lt;p>Now, it&amp;rsquo;s easy to &lt;strong>subset&lt;/strong> spatial data in R, using the same incredibly concise square bracket &lt;code>[]&lt;/code> notation as R uses for non spatial data. To re-confirm how this works on non-spatial data, here&amp;rsquo;s a mini example:&lt;/p>
+&lt;pre>&lt;code>M &amp;lt;- matrix(1:10, ncol = 5)
+M[2, 3:5]
+## [1] 6 8 10
+&lt;/code>&lt;/pre>
+&lt;p>The above code creates a matrix with 5 columns and 2 rows: the &lt;code>[2, 3:5]&lt;/code> part takes the subset of &lt;code>M&lt;/code> corresponding to 3rd to 5th columns in the second row.&lt;/p>
+&lt;p>Subsetting spatial data works in exactly the same way: note that &lt;code>zones&lt;/code> are far more extensive than the &lt;code>stations&lt;/code> points. (We have to change the projection of &lt;code>stations&lt;/code> before plotting, so the objects are on the same coordinate reference system.)&lt;/p>
+&lt;pre>&lt;code>stations &amp;lt;- spTransform(stations, CRS(proj4string(zones))) # transform CRS
+plot(zones)
+points(stations)
+&lt;/code>&lt;/pre>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://raw.githubusercontent.com/Robinlovelace/Creating-maps-in-R/master/vignettes/clipping-with-bounding-box_files/figure-markdown_github/unnamed-chunk-3.png" alt="plot of chunk unnamed-chunk-3" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;p>So how do we select only points that are are within the zones of London? Believe it or not, it&amp;rsquo;s as simple as subsetting the matrix &lt;code>M&lt;/code> above. This is an amazingly concise and convenient way of spatial subsetting that was added to R at some point between versions 1 and 2 of &lt;a href="http://www.asdar-book.org/" target="_blank" rel="noopener">Applied Spatial Data Analysis with R&lt;/a>. In the earlier (2008) book, one had to use &lt;code>overlay(x, y)&lt;/code> just to get the selection, and then another line of code was required to actually make the subset. Now things are much simpler. As Bivand et al. put it in the &lt;a href="http://www.springer.com/statistics/life&amp;#43;sciences,&amp;#43;medicine&amp;#43;%26&amp;#43;health/book/978-1-4614-7617-7" target="_blank" rel="noopener">latest edtion&lt;/a> (p. 131), &amp;ldquo;the selection syntax for features was extended such that it understands:&amp;rdquo;&lt;/p>
+&lt;pre>&lt;code>stations_subset &amp;lt;- stations[zones, ]
+&lt;/code>&lt;/pre>
+&lt;p>&lt;strong>This is so amazing and intuitive, whoever invented it should be given a medal!!&lt;/strong> Despite this simplicity, it seems many R users who I&amp;rsquo;ve taught spatial functions to are unaware of &lt;code>[]&lt;/code>&amp;rsquo;s spatial extension. So spread the word (and if anyone knows of the history of this innovation, please let us know). Now we have a sample of all stations zones: progress.&lt;/p>
+&lt;pre>&lt;code>plot(zones)
+points(stations_subset)
+&lt;/code>&lt;/pre>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://raw.githubusercontent.com/Robinlovelace/Creating-maps-in-R/master/vignettes/clipping-with-bounding-box_files/figure-markdown_github/unnamed-chunk-5.png" alt="plot of chunk unnamed-chunk-5" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;h2 id="clipping-by-a-bounding-box">Clipping by a bounding box&lt;/h2>
+&lt;p>But what if we want to &lt;em>clip&lt;/em> the polygons data, based on a bounding box? To start with, let&amp;rsquo;s look at and modify the existing bounding box for the zones, making it half the size:&lt;/p>
+&lt;pre>&lt;code>b &amp;lt;- bbox(zones)
+b[1, ] &amp;lt;- (b[1, ] - mean(b[1, ])) * 0.5 + mean(b[1, ])
+b[2, ] &amp;lt;- (b[2, ] - mean(b[2, ])) * 0.5 + mean(b[2, ])
+b &amp;lt;- bbox(t(b))
+plot(zones, xlim = b[1, ], ylim = b[2, ])
+&lt;/code>&lt;/pre>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://raw.githubusercontent.com/Robinlovelace/Creating-maps-in-R/master/vignettes/clipping-with-bounding-box_files/figure-markdown_github/unnamed-chunk-6.png" alt="plot of chunk unnamed-chunk-6" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;p>Now, to clip this area, we can use a custom function, which I&amp;rsquo;ve called &lt;code>gClip&lt;/code>, following the &lt;strong>rgeos&lt;/strong> function naming convention (this was inspired by an online &lt;a href="http://stackoverflow.com/questions/21883683/is-it-possible-to-clip-a-polygon-to-the-bounding-box-of-a-base-map" target="_blank" rel="noopener">answer&lt;/a> that didn&amp;rsquo;t work for me):&lt;/p>
+&lt;pre>&lt;code>library(raster)
+library(rgeos)
+## rgeos version: 0.3-5, (SVN revision 447)
+## GEOS runtime version: 3.4.2-CAPI-1.8.2 r3921
+## Polygon checking: TRUE
+gClip &amp;lt;- function(shp, bb){
+if(class(bb) == &amp;quot;matrix&amp;quot;) b_poly &amp;lt;- as(extent(as.vector(t(bb))), &amp;quot;SpatialPolygons&amp;quot;)
+else b_poly &amp;lt;- as(extent(bb), &amp;quot;SpatialPolygons&amp;quot;)
+gIntersection(shp, b_poly, byid = T)
+}
+zones_clipped &amp;lt;- gClip(zones, b)
+## Warning: spgeom1 and spgeom2 have different proj4 strings
+plot(zones_clipped)
+&lt;/code>&lt;/pre>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://raw.githubusercontent.com/Robinlovelace/Creating-maps-in-R/master/vignettes/clipping-with-bounding-box_files/figure-markdown_github/unnamed-chunk-7.png" alt="plot of chunk unnamed-chunk-7" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;p>Note that due to the &lt;code>if&lt;/code> statements in &lt;code>gClip&lt;/code>&amp;rsquo;s body, it can handle almost any spatial data input, and still work. Let&amp;rsquo;s clip to the borough of Westminster, one of London&amp;rsquo;s better known boroughs:&lt;/p>
+&lt;pre>&lt;code>westminster &amp;lt;- zones[grep(&amp;quot;West&amp;quot;, zones$name),]
+zones_clipped_w &amp;lt;- gClip(zones, westminster)
+## Warning: spgeom1 and spgeom2 have different proj4 strings
+plot(zones_clipped_w); plot(westminster, col = &amp;quot;red&amp;quot;, add = T)
+&lt;/code>&lt;/pre>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://raw.githubusercontent.com/Robinlovelace/Creating-maps-in-R/master/vignettes/clipping-with-bounding-box_files/figure-markdown_github/Westminster.png" alt="plot of chunk Westminster" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;h2 id="conclusion">Conclusion&lt;/h2>
+&lt;p>There are many more spatial tips available from the &lt;a href="https://github.com/Robinlovelace/Creating-maps-in-R/raw/master/intro-spatial-rl.pdf" target="_blank" rel="noopener">Introduction to visualising
+spatial data in
+R&lt;/a>
+tutorial that &lt;a href="http://spatial.ly/" target="_blank" rel="noopener">James Cheshire&lt;/a> and I are maintaining. The source code of this post can also be viewed &lt;a href="https://github.com/Robinlovelace/Creating-maps-in-R/blob/master/vignettes/clipping-with-bounding-box.Rmd" target="_blank" rel="noopener">online&lt;/a> as just one of a series of &lt;a href="https://github.com/Robinlovelace/Creating-maps-in-R/tree/master/vignettes" target="_blank" rel="noopener">vignettes&lt;/a> to showcase some of R&amp;rsquo;s impressive spatial capabilities.&lt;/p>
+&lt;h2 id="update">Update&lt;/h2>
+&lt;p>There was a lively discussion of this post when it was first published in 2016.
+Although I&amp;rsquo;ve switched to a new commenting system, the comments, which include more history and a link to the commit that added spatial subsetting to the sp package, can be found here: &lt;a href="https://disqus.com/home/discussion/robinlovelace/clipping_spatial_data_in_r/" target="_blank" rel="noopener">https://disqus.com/home/discussion/robinlovelace/clipping_spatial_data_in_r/&lt;/a>&lt;/p></description></item></channel></rss>

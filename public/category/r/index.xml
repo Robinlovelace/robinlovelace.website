@@ -1,0 +1,1256 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>R | Robin Lovelace</title><link>https://www.robinlovelace.net/category/r/</link><atom:link href="https://www.robinlovelace.net/category/r/index.xml" rel="self" type="application/rss+xml"/><description>R</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 17 Mar 2026 00:00:00 +0000</lastBuildDate><image><url>https://www.robinlovelace.net/media/icon_hu93dbabadc2a9bdd4930d1377c0b338b2_5137_512x512_fill_lanczos_center_3.png</url><title>R</title><link>https://www.robinlovelace.net/category/r/</link></image><item><title>stats19 v4.0.0: 45 Years of UK Road Crash Data, Unified</title><link>https://www.robinlovelace.net/post/stats19-v4/</link><pubDate>Tue, 17 Mar 2026 00:00:00 +0000</pubDate><guid>https://www.robinlovelace.net/post/stats19-v4/</guid><description>&lt;p>The stats19 R package has been updated to version 4.0.0. The main change is a unified column schema that lets you work with 45 years of UK road crash data (1979 to 2024) without running into mismatched column names.&lt;/p>
+&lt;h2 id="unified-schema">Unified schema&lt;/h2>
+&lt;p>Older data files have columns like &lt;code>carriageway_hazards_historic&lt;/code> while newer ones use &lt;code>carriageway_hazards&lt;/code>. v4.0.0 detects these variants, merges them into the modern names, and drops the redundant columns.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-r" data-lang="r">&lt;span class="line">&lt;span class="cl">&lt;span class="nf">library&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">stats19&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">crashes&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nf">get_stats19&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">year&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="m">1979&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="m">2024&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">type&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s">&amp;#34;crashes&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="parsing-fixes">Parsing fixes&lt;/h2>
+&lt;p>&lt;code>read_stats19()&lt;/code> now builds a custom parser from the CSV header, which removes the warnings about unmatched columns that appeared in previous versions. We also fixed a bug where 2024 latitude and longitude values were truncated to integers.&lt;/p>
+&lt;h2 id="missing-values">Missing values&lt;/h2>
+&lt;p>Codes like &lt;code>-1&lt;/code>, &amp;ldquo;Code deprecated&amp;rdquo;, and &amp;ldquo;Data missing or out of range&amp;rdquo; are now standardised to &lt;code>NA&lt;/code> during formatting, so &lt;code>is.na()&lt;/code> works consistently.&lt;/p>
+&lt;h2 id="performance">Performance&lt;/h2>
+&lt;p>The package now uses readr Edition 2 by default, which supports multi-threaded parsing. Loading large files is noticeably faster.&lt;/p>
+&lt;h2 id="new-functions">New functions&lt;/h2>
+&lt;ul>
+&lt;li>&lt;code>match_tag()&lt;/code> joins government TAG cost estimates (RAS4001) to collision data&lt;/li>
+&lt;li>&lt;code>clean_make()&lt;/code>, &lt;code>clean_model()&lt;/code>, and &lt;code>clean_make_model()&lt;/code> standardise the 2,400+ raw strings in the vehicle dataset&lt;/li>
+&lt;/ul>
+&lt;h2 id="multi-year-downloads">Multi-year downloads&lt;/h2>
+&lt;p>Year ranges now download bulk historic files once and filter efficiently. The 1979 file is also handled correctly (it used to be returned as a catch-all for any older year).&lt;/p>
+&lt;h2 id="feedback-wanted">Feedback wanted&lt;/h2>
+&lt;p>We plan to submit to CRAN soon. Please install, test, and report any issues:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-r" data-lang="r">&lt;span class="line">&lt;span class="cl">&lt;span class="n">pak&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="nf">pak&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;ropensci/stats19&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Issues: &lt;a href="https://github.com/ropensci/stats19/issues" target="_blank" rel="noopener">github.com/ropensci/stats19/issues&lt;/a>&lt;/p>
+&lt;h2 id="acknowledgements">Acknowledgements&lt;/h2>
+&lt;p>Contributions from David Ranzolin and Adam Sparks (rOpenSci review), Malcolm Morgan, Layik Hama, and Blaise Kelly. Funding from the RAC Foundation.&lt;/p>
+&lt;h2 id="links">Links&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/ropensci/stats19" target="_blank" rel="noopener">GitHub&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://docs.ropensci.org/stats19/" target="_blank" rel="noopener">Documentation&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/ropensci/stats19/blob/main/NEWS.md" target="_blank" rel="noopener">Changelog&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>Installing spatial R packages on Ubuntu</title><link>https://www.robinlovelace.net/post/installing-spatial-r-packages-on-ubuntu/</link><pubDate>Mon, 30 Mar 2020 00:00:00 +0000</pubDate><guid>https://www.robinlovelace.net/post/installing-spatial-r-packages-on-ubuntu/</guid><description>&lt;p>Having recently acquired a new laptop, an &lt;a href="https://www.entroware.com/store/laptops/proteus" target="_blank" rel="noopener">Entroware Proteus&lt;/a> (shown below), I had to remind myself how to set-it-up for my needs.
+This includes the usual things like document editing, web browsing and email.
+But as much of my work involves developing and using R for geographic research it had to have R installed.&lt;/p>
+&lt;div class="figure">
+&lt;img src="https://www.entroware.com/store/image/cache/catalog/entroware/products/laptops/el07r3/proteus-el07r3-front-open-400x500.jpg" alt="The Etroware Proteus, my new Linux laptop" />
+&lt;p class="caption">&lt;span id="fig:unnamed-chunk-1">&lt;/span>Figure 1: The Etroware Proteus, my new Linux laptop&lt;/p>
+&lt;/div>
+&lt;p>I documented the process of upgrading Ubuntu, adding the appropriate software repositories and installing packages in a recent blogpost on the website &lt;a href="https://geocompr.github.io/" target="_blank" rel="noopener">geocompr.github.io&lt;/a>, the website supporting our open source book &lt;a href="https://geocompr.robinlovelace.net/" target="_blank" rel="noopener">Geocomputation with R&lt;/a>.&lt;/p>
+&lt;p>If you use Ubuntu, or are thinking of switching to Ubuntu (a sensible choice for someone looking for a user-friendly and stable mostly open source operating system), check-out the details here: &lt;a href="https://geocompr.github.io/post/2020/installing-r-spatial-ubuntu/" target="_blank" rel="noopener">https://geocompr.github.io/post/2020/installing-r-spatial-ubuntu/&lt;/a>&lt;/p>
+&lt;p>Enjoy!&lt;/p></description></item><item><title>CASA summer school on geographic data</title><link>https://www.robinlovelace.net/post/casa-summer-school-on-geographic-data/</link><pubDate>Wed, 28 Aug 2019 00:00:00 +0000</pubDate><guid>https://www.robinlovelace.net/post/casa-summer-school-on-geographic-data/</guid><description>&lt;p>Last week I presented at UCL’s summer school which, by all accounts, was a very successful event in which many people learned many new skills.
+The presentation format was a refreshing changes from the PowerPoint slides you’re often asked to prepare.
+Instead, each presenter was asked to create a reproducible RMarkdown document to present.
+The source code was shared with the students, who were encouraged to test the code.&lt;/p>
+&lt;p>The source code of my RMarkdown document can be found here, on the website support the Geocomputation with R book: &lt;a href="https://github.com/geocompr/geocompr.github.io/blob/source/content/post/2019/crs-projections-transformations.Rmd" target="_blank" rel="noopener">https://github.com/geocompr/geocompr.github.io/blob/source/content/post/2019/crs-projections-transformations.Rmd&lt;/a>&lt;/p>
+&lt;p>To see the article itself, head here: &lt;a href="https://geocompr.github.io/post/2019/crs-projections-transformations/" target="_blank" rel="noopener">https://geocompr.github.io/post/2019/crs-projections-transformations/&lt;/a>&lt;/p>
+&lt;p>A very summary of the content is shown below.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-r" data-lang="r">&lt;span class="line">&lt;span class="cl">&lt;span class="n">blogdown&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="nf">shortcode_html&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;tweet&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s">&amp;#34;1166628966410719232&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;blockquote class="twitter-tweet">&lt;p lang="en" dir="ltr">Too long didn&amp;#39;t read (TLDR) summary of CRSs.&lt;br>&lt;br>Additional resources:&lt;br>&lt;br>Blog post: &lt;a href="https://t.co/k3FDKqxp3E">https://t.co/k3FDKqxp3E&lt;/a>&lt;br>Chapter in upcoming book by @edzerpebesma: &lt;a href="https://t.co/D919MPwMam">https://t.co/D919MPwMam&lt;/a>&lt;br>Chapter in &lt;a href="https://twitter.com/hashtag/geocompr?src=hash&amp;amp;ref_src=twsrc%5Etfw">#geocompr&lt;/a> book: &lt;a href="https://t.co/pffHqeF8YT">https://t.co/pffHqeF8YT&lt;/a> &lt;a href="https://t.co/Slu1jT88ok">pic.twitter.com/Slu1jT88ok&lt;/a>&lt;/p>&amp;mdash; Robin Lovelace (@robinlovelace) &lt;a href="https://twitter.com/robinlovelace/status/1166628966410719232?ref_src=twsrc%5Etfw">August 28, 2019&lt;/a>&lt;/blockquote>
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8">&lt;/script>
+&lt;p>For more on the CASA summer school itself, see here.&lt;/p>
+&lt;p>In summary, great event and look forward to more partipatory workshops, the next one upcoming being the OpenGeoHub summer school: &lt;a href="https://opengeohub.org/summer_school_2019" target="_blank" rel="noopener">https://opengeohub.org/summer_school_2019&lt;/a>&lt;/p></description></item><item><title>Six great things about UseR! 2019</title><link>https://www.robinlovelace.net/post/user2019/</link><pubDate>Sat, 13 Jul 2019 00:00:00 +0000</pubDate><guid>https://www.robinlovelace.net/post/user2019/</guid><description>&lt;p>UseR! is the highest profile and, I believe, most popular annual meeting for R enthusiasts, known affectionately as ‘UseRs’ for the purposes of the event.
+For those who have been living under a stone for the past decade ;) R is an open source statistical programming language that has seen explosive growth since ‘data science’ became a buzzword.
+Although I’ve been using R for around a decade, and heavily for around five years, &lt;a href="http://user2019.r-project.org/" target="_blank" rel="noopener">UseR! 2019&lt;/a> was the first UseR! I attended.
+I went with some preconceptions: I thought it would be like previous R events that I had attended, including the European R Users Meeting (ERUM) and SatRdays, but bigger.
+That was true, but it was bigger and better, exceeding my expectations in many ways.&lt;/p>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://user2019.r-project.org/static/img/useR2019.png" alt="" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;p>Despite only seeing part of it (I missed the tutorials on the Tuesday and the latter part of the final day on Friday), I learned many things from it.
+Inspired by the ‘useR aftRglow’, I wrote some of these down on the train journey back home.
+The result is this article.&lt;/p>
+&lt;p>The &lt;a href="http://user2019.r-project.org/organization/" target="_blank" rel="noopener">organising committee of User! 2019&lt;/a> (hats off to you for an amazing event) has lessons for anyone thinking of putting on a successful event for research, software development, or anything aiming to encourage a friendly symposium vibe.
+Here are the top six things that made User! 2019 great from my perspective.&lt;/p>
+&lt;h1 id="1-diverse-formats">1. Diverse formats&lt;/h1>
+&lt;p>Sometimes going to events, and especially academic conferences (mentioning no names &lt;code>*cough*&lt;/code> take note organisers of &lt;a href="https://annualmeeting.aag.org/" target="_blank" rel="noopener">AAAG&lt;/a>/&lt;a href="https://www.rgs.org/research/annual-international-conference/" target="_blank" rel="noopener">RGS-IBG&lt;/a> and other events with many presentation sessions), can feel undergoing &lt;a href="https://www.bbc.co.uk/news/technology-35038429" target="_blank" rel="noopener">death by PowerPoint&lt;/a>.
+A very slow, boring death.&lt;/p>
+&lt;p>UseR! was different.
+Aside from the fact that many of presenters wouldn’t &lt;em>be seen dead&lt;/em> in front of PowerPoint slides, preferring instead more reproducible and flexible formats enabled by packages such as &lt;a href="https://slides.yihui.name/xaringan/" target="_blank" rel="noopener">&lt;code>xaringan&lt;/code>&lt;/a> and &lt;code>ioslides&lt;/code>, the diversity of formats and quality of the talks kept me on my toes in every session I attended.&lt;/p>
+&lt;p>The organisers had clearly given some thought to tackle this issue.
+Instead of having only a couple of talk types (e.g. 15 minute presentation, 1 hour keynote) a range of formats were supported, including:&lt;/p>
+&lt;ul>
+&lt;li>Morning/afternoon tutorials, which took place on the Tuesday, allowing people to learn in depth about new methods/packages/approaches.&lt;/li>
+&lt;li>A ‘tidyverse development’ day, which apparently involved physically taking issues and working on them in parallel, with a gong struck for every Pull Request accepted (this makes me wonder if the same technique can be used in other software ecosystems).&lt;/li>
+&lt;li>Poster sessions, perhaps not an innovative thing in its own right, but at UseR! the poster showing session was preceded by Lightning Talks of ~1 minute each, so participants could identify which posters they would most like to visit.&lt;/li>
+&lt;li>Lightning talk sessions, where participants had 5 minutes to convey the core message of their research.
+These sessions were organised in themes and I chaired ‘Applications and Methods’ session, which contained some fascinating work.&lt;/li>
+&lt;/ul>
+&lt;p>There were still plenty of standard presentation sessions, but even in those sessions, the diversity kept things engaging.
+Colin Gillespie went into stand-up comedy mode to deliver a vital message: that simple changes can improve the security of computer systems using R.
+&lt;a href="https://en.wikipedia.org/wiki/Mine_%C3%87etinkaya-Rundel" target="_blank" rel="noopener">Mine Çetinkaya-Rundel&lt;/a> used the metaphor of cooking to highlight the importance of digital learning environments for effective classrooms: would you rather cook in a unfinished kitchen or a complete one?
+Use of a stable, in browser interface, as shown in the &lt;a href="https://twitter.com/minebocek/status/1148904275550121984" target="_blank" rel="noopener">Data Science in a Box&lt;/a> project, can overcome the barrier of software installation to research, with clear implications for organisations: get a working instance of RStudio Server.&lt;/p>
+&lt;p>Even the Keynotes were diverse, as can be seen from the &lt;a href="http://user2019.r-project.org/program/" target="_blank" rel="noopener">UseR website&lt;/a>.
+There wasn’t just one central ‘keynote speaker’ at the event but 6, half of whom were women, and with representatives from commercial, academic and &lt;a href="http://user2019.r-project.org/program/#julien" target="_blank" rel="noopener">non-profit&lt;/a> organsiations.
+The diversity of topics they covered was also impressive.
+They ranged from Bettina Grün’s highly technical yet accessible keynote on new models and packages for clustering data to Joe Cheng’s talk on &lt;a href="https://github.com/rstudio/shinymeta" target="_blank" rel="noopener">shinymeta&lt;/a>.
+It was roller coaster ride to the publication of this just open-sourced package, which enables shiny apps to generate scripts underlying the dynamic results.
+This could enable step change in the level of reproducibility of interactive web applications (vested interest: I’m the lead developer of the large shiny application, the &lt;a href="http://www.pct.bike/" target="_blank" rel="noopener">Propensity to Cycle Tool&lt;/a> that would benefit from being more reproducible).&lt;/p>
+&lt;p>All of the keynote speeches are available on YouTube, as disseminated in the Tweet below:&lt;/p>
+&lt;blockquote class="twitter-tweet">&lt;p lang="en" dir="ltr">All the keynote lectures were available live on &lt;a href="https://twitter.com/RConsortium?ref_src=twsrc%5Etfw">@RConsortium&lt;/a> &lt;a href="https://twitter.com/hashtag/YouTube?src=hash&amp;amp;ref_src=twsrc%5Etfw">#YouTube&lt;/a> channel here:&lt;a href="https://t.co/otDzmY2UND">https://t.co/otDzmY2UND&lt;/a>&lt;br>Very soon, you&amp;#39;ll find the edited version (with video). keep posted!&lt;a href="https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw">#rstats&lt;/a> &lt;a href="https://twitter.com/hashtag/useR2019?src=hash&amp;amp;ref_src=twsrc%5Etfw">#useR2019&lt;/a> &lt;a href="https://t.co/q6FsqsDI61">pic.twitter.com/q6FsqsDI61&lt;/a>&lt;/p>&amp;mdash; useR! 2019 (@UseR2019_Conf) &lt;a href="https://twitter.com/UseR2019_Conf/status/1150115187430760448?ref_src=twsrc%5Etfw">July 13, 2019&lt;/a>&lt;/blockquote>
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8">&lt;/script>
+&lt;h1 id="2-worldwide-dissemination">2. Worldwide dissemination&lt;/h1>
+&lt;p>Not everyone has the time, energy or money to go to UseR!.
+Some ‘&lt;a href="https://www.theguardian.com/travel/2019/may/22/could-you-give-up-flying-meet-the-no-plane-pioneers" target="_blank" rel="noopener">no fly pioneers&lt;/a>’ have given up flying to support global efforts to tackle the climate crisis.
+I was very impressed to see acknowledgement of the conference’s climate impacts, with a form used to help calculate its carbon impact.&lt;/p>
+&lt;p>Whatever the reason, it is certain that the contents of UseR! will be of great interest to many more people than the ~2000 people who attended in person.
+By recording and (eventually) releasing the videos of the talk, a much larger audience, into the millions, can be reached, as highlighted on the &lt;a href="http://user2019.r-project.org/" target="_blank" rel="noopener">website&lt;/a>:&lt;/p>
+&lt;blockquote>
+&lt;p>All talks will be recorded and all keynote sessions will be live streamed. Everything will be made available on &lt;a href="https://www.youtube.com/channel/UC_R5smHVXRYGhZYDJsnXTwg" target="_blank">R Consortium YouTube channel&lt;/a>. Thanks to R Consortium for supporting that initiative.&lt;/p>
+&lt;/blockquote>
+&lt;p>Also, UseRs are excellent communicators, as can be seen from a quick glance at the buzzing &lt;a href="https://twitter.com/hashtag/user2019?lang=en-gb" target="_blank" rel="noopener">#UseR2019 hashtag&lt;/a>, three of which are shown below.&lt;/p>
+&lt;blockquote class="twitter-tweet">&lt;p lang="en" dir="ltr">Dear everyone at &lt;a href="https://twitter.com/hashtag/useR2019?src=hash&amp;amp;ref_src=twsrc%5Etfw">#useR2019&lt;/a>,&lt;br>We thank you very much for your R-enthusiasm 😃.&lt;br>We hope that you as much fun as we had😋.&lt;br>See you in Saint-Louis next year for &lt;a href="https://twitter.com/hashtag/useR2020?src=hash&amp;amp;ref_src=twsrc%5Etfw">#useR2020&lt;/a>! 🇫🇷🔜🇺🇸&lt;br>On vous aime !&lt;/p>&amp;mdash; useR! 2019 (@UseR2019_Conf) &lt;a href="https://twitter.com/UseR2019_Conf/status/1149790615963615232?ref_src=twsrc%5Etfw">July 12, 2019&lt;/a>&lt;/blockquote>
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8">&lt;/script>
+&lt;blockquote class="twitter-tweet">&lt;p lang="en" dir="ltr">vroom &lt;a href="https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw">#rstats&lt;/a> 📦, because life is too short to read slow! 🏎️💨&lt;br>&lt;br>slides 📽️ from my &lt;a href="https://twitter.com/hashtag/useR2019?src=hash&amp;amp;ref_src=twsrc%5Etfw">#useR2019&lt;/a> talk available at &lt;a href="https://t.co/3h6b2m7lQO">https://t.co/3h6b2m7lQO&lt;/a>&lt;/p>&amp;mdash; Jim Hester (@jimhester_) &lt;a href="https://twitter.com/jimhester_/status/1149651592884285441?ref_src=twsrc%5Etfw">July 12, 2019&lt;/a>&lt;/blockquote>
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8">&lt;/script>
+&lt;p>The increasing proportion of content now available online, nearing 100% notwithstanding socials, raises the prospect of making future conferences more environmentally sustainable by encouraging remote participation.
+This could model the 2019 &lt;a href="https://stay-grounded.org/conference/" target="_blank" rel="noopener">Stay Grounded conference in Barcelona&lt;/a>, which was a “flight free conference”.
+I discussed the idea of having a single host location with Martin Maechler on the train journey home.
+This could involve the local organisers and people living nearby attending in person, and then allowing others to attend remotely via live streaming, perhaps in national ‘conference hubs’.&lt;/p>
+&lt;h1 id="3-relaxed-atmosphere">3. Relaxed atmosphere&lt;/h1>
+&lt;p>Another great thing about UseR! 2019 was less objective but equally important: the social atmosphere.
+The most reason why it had such a good vibe, I guess, was the attendees: in my experience R users, and people involved in the open source community in general, tend to friendly, humble and team-orientated.
+Of course, this is how conferences should be.
+Many are, but I couldn’t help notice a contrast between the humility of the ‘big names’ in the R community and the sense of self importance that some high profile academics have in some disciplines.&lt;/p>
+&lt;p>UseRs seem to have a great sense of humour and don’t take themselves too seriously, which contributed to a friendly, inviting and non-hierarchical atmosphere.
+This friendliness is self organising, but is also built into the constitution of UseR! in its &lt;a href="http://user2019.r-project.org/coc/" target="_blank" rel="noopener">Code of Conduct&lt;/a>.
+Take note future conference organisers: it’s easy to add a CoC and +s of doing so could be great.&lt;/p>
+&lt;p>The final reason for the relaxed atmosphere I noticed was more objective: all the equipment worked well, session chairs were well briefed on what they needed to and when, there were floating mics to allow clear questions from the audience, and the rooms were large enough such that at no point did I feel crammed into a session.
+Furthermore, the arrangement and audio system of the rooms made it feel easy to change session, in case there were two talks in parallel sessions you really wanted to see.
+Again, hats off to the organisers: it was VERY well organised.&lt;/p>
+&lt;h1 id="4-the-host-city-of-toulouse">4. The host city of Toulouse&lt;/h1>
+&lt;p>I liked the host city but, due to recent University of Leeds regulations blocking AirBnB, I had to change accommodation plans at late notice.
+This involved a ~3km trek out to the West of the city.
+Instead of spending 2 hours each day walking there and back, I decided to hire a bike.
+To my surprise, the system just worked: I typed in some details in the nearest bike hire station I could find and had my own wheels for the week (which looked like those in the photo below).
+All for the bargain price of €5 for the week!&lt;/p>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://images.ladepeche.fr/api/v1/images/view/5c34e8ca8fe56f09063e1f8f/large/image.jpg" alt="" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;!-- -->&lt;/p>
+&lt;!-- &lt;blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/BtvyxGfIf9L/" data-instgrm-version="12" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">&lt;div style="padding:16px;"> &lt;a href="https://www.instagram.com/p/BtvyxGfIf9L/" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> &lt;div style=" display: flex; flex-direction: row; align-items: center;"> &lt;div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;">&lt;/div> &lt;div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> &lt;div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;">&lt;/div> &lt;div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;">&lt;/div>&lt;/div>&lt;/div>&lt;div style="padding: 19% 0;">&lt;/div> &lt;div style="display:block; height:50px; margin:0 auto 12px; width:50px;">&lt;svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink">&lt;g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">&lt;g transform="translate(-511.000000, -20.000000)" fill="#000000">&lt;g>&lt;path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631">&lt;/path>&lt;/g>&lt;/g>&lt;/g>&lt;/svg>&lt;/div>&lt;div style="padding-top: 8px;"> &lt;div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;"> View this post on Instagram&lt;/div>&lt;/div>&lt;div style="padding: 12.5% 0;">&lt;/div> &lt;div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;">&lt;div> &lt;div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);">&lt;/div> &lt;div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;">&lt;/div> &lt;div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);">&lt;/div>&lt;/div>&lt;div style="margin-left: 8px;"> &lt;div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;">&lt;/div> &lt;div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)">&lt;/div>&lt;/div>&lt;div style="margin-left: auto;"> &lt;div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);">&lt;/div> &lt;div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);">&lt;/div> &lt;div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);">&lt;/div>&lt;/div>&lt;/div>&lt;/a> &lt;p style=" margin:8px 0 0 0; padding:0 4px;"> &lt;a href="https://www.instagram.com/p/BtvyxGfIf9L/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">Commencez la semaine avec VélÔToulouse pour faciliter vos trajets ! 😎 🚲 #velotoulouse #toulousemaville #bikelife #toulouse Belle semaine à tous ☀️ Thank you @viktoriia_naumi for your picture 🙂&lt;/a>&lt;/p> &lt;p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">A post shared by &lt;a href="https://www.instagram.com/velotoulouse31000/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px;" target="_blank"> VélÔToulouse Officiel&lt;/a> (@velotoulouse31000) on &lt;time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2019-02-11T15:36:54+00:00">Feb 11, 2019 at 7:36am PST&lt;/time>&lt;/p>&lt;/div>&lt;/blockquote> &lt;script async src="//www.instagram.com/embed.js">&lt;/script> -->
+&lt;p>I managed to find time to go running on two of the mornings, making me realise how car-dominated Toulouse, like many other cities, is.
+The car dominated nature of the city is shown in the images below, which show my running route that dodged giant roads, and a photo of one of the main roads, which was not particularly friendly to people walking and cycling to say the least!&lt;/p>
+&lt;p>&lt;a data-flickr-embed="true" href="https://www.flickr.com/photos/97888609@N02/48247285282/in/photostream/" title="Screenshot_2019-07-10-06-53-00-088_net.osmand.plus">&lt;img src="https://live.staticflickr.com/65535/48247285282_21b35c313b_c.jpg" width="400" height="800" alt="Screenshot_2019-07-10-06-53-00-088_net.osmand.plus">&lt;/a>&lt;/p>
+&lt;script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8">&lt;/script>
+&lt;p>&lt;a data-flickr-embed="true" href="https://www.flickr.com/photos/97888609@N02/48247197386/in/photostream/" title="IMG_20190710_063516">&lt;img src="https://live.staticflickr.com/65535/48247197386_391eb748b5_c.jpg" width="800" height="600" alt="IMG_20190710_063516">&lt;/a>&lt;/p>
+&lt;script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8">&lt;/script>
+&lt;p>Despite the car traffic, the cycleways in Toulouse were great.
+I recommend anyone visiting a city for a few days to get a bike, a great way to see the city close up, and get from A to B efficiently, avoiding traffic congestion and with the freedom to get off the beaten (road) track.
+For fun, I recorded some of my routes in Toulouse and uploaded them to OSM, the free and open access community made global mapping database (which I fully endorse over Google Maps ;), allowing reproducible code to show my everyday trip to the conference and back (not evaluated).&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-r" data-lang="r">&lt;span class="line">&lt;span class="cl">&lt;span class="nf">download.file&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;https://www.openstreetmap.org/trace/3046619/data&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s">&amp;#34;track1.gpx&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">sf&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="nf">st_layers&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;track1.gpx&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">track&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">sf&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="nf">read_sf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;track1.gpx&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">layer&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s">&amp;#34;tracks&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">mapview&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="nf">mapview&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">track&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Doing this route each day was a great way to clear my head and prepare for my talk on Wednesday morning.&lt;/p>
+&lt;h1 id="5-user-2019-socials">5. UseR! 2019 socials&lt;/h1>
+&lt;p>I’ve often heard that the most valuable parts of conferences take place outside the formal sessions and there were ample opportunities for this to happen at UseR! 2019, with plentiful coffee breaks (and plentiful coffee!) and a range of fringe events and social events on a spectrum from the official Gala Dinner to spontaneous social trips to explore the night life in Toulouse.
+The Gala Dinner was frankly amazing: it’s not everyday that you get to explore and inter nation space station and listen to Flamenco music in the same evening (the photos and video below prove it is possible)!&lt;/p>
+&lt;p>&lt;a data-flickr-embed="true" href="https://www.flickr.com/photos/97888609@N02/48256753957/in/photostream/" title="PANO_20190710_203925.jpg">&lt;img src="https://live.staticflickr.com/65535/48256753957_e76846ea55_c.jpg" width="800" height="356" alt="PANO_20190710_203925.jpg">&lt;/a>&lt;/p>
+&lt;script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8">&lt;/script>
+&lt;p>&lt;a data-flickr-embed="true" href="https://www.flickr.com/photos/97888609@N02/48256682626/in/album-72157709543796761/" title="IMG_20190710_201757">&lt;img src="https://live.staticflickr.com/65535/48256682626_35e1995fdb_c.jpg" width="800" height="600" alt="IMG_20190710_201757">&lt;/a>&lt;/p>
+&lt;script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8">&lt;/script>
+&lt;p>&lt;a data-flickr-embed="true" href="https://www.flickr.com/photos/97888609@N02/48256686546/in/photostream/" title="VID_20190710_202540">&lt;img src="https://live.staticflickr.com/31337/48256686546_9048fc1278_h.jpg" width="1600" height="900" alt="VID_20190710_202540">&lt;/a>&lt;/p>
+&lt;script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8">&lt;/script>
+&lt;h1 id="6-meeting-collaborators-and-online-acquaintances">6. Meeting collaborators and online acquaintances&lt;/h1>
+&lt;p>The event was a great opportunity to catch up with R collaborators.
+Jakub Nowosad and I did some important thinking on our &lt;a href="https://geocompr.robinlovelace.net/" target="_blank" rel="noopener">&lt;em>Geocomputation with R&lt;/em>&lt;/a> open source book (&lt;a href="https://geocompr.github.io/user_19/presentation/#1" target="_blank" rel="noopener">see the slides from Jakub’s talk here&lt;/a>), and a photo taken just before the talk below.&lt;/p>
+&lt;p>&lt;a data-flickr-embed="true" href="https://www.flickr.com/photos/97888609@N02/48272563561/" title="IMG_20190712_110533">&lt;img src="https://live.staticflickr.com/65535/48272563561_d2e9a5654b_c.jpg" width="800" height="600" alt="IMG_20190712_110533">&lt;/a>&lt;/p>
+&lt;script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8">&lt;/script>
+&lt;p>I finally managed to persuade Colin Gillespie that we need to update our open source book &lt;a href="https://csgillespie.github.io/efficientR/" target="_blank" rel="noopener">&lt;em>Efficient R Programming&lt;/em>&lt;/a>.
+Watch this space…&lt;/p>
+&lt;p>I met many people whose work I’ve seen online but never had the pleasure of meeting in person, including Timothée Giraud (author of &lt;a href="https://github.com/rCarto/osrm" target="_blank" rel="noopener">osrm&lt;/a> and many other excellent geo* packages), Enrico Spinielli (who is pushing the boundaries of 3d trajectory analysis in R with packages such as &lt;a href="https://github.com/euctrl-pru/trrrj" target="_blank" rel="noopener">trjjj&lt;/a>) and Angela Li (who is pushing &lt;a href="https://twitter.com/hashtag/rspatial" target="_blank" rel="noopener">#rspatial&lt;/a> to new levels on the other side of the Atlantic).&lt;/p>
+&lt;p>And of course there was much serendipity.
+I had the honour of meeting many of my R heroes, who were all fun and friendly, demonstrating that it is possible to be high flying while humble.
+On the train back I sat next R Core Team member Martin Meachler, and learned about the messages emitted every time packages such as &lt;code>stplanr&lt;/code>, which depend on packages that use &lt;code>R.oo&lt;/code>, are loaded:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-r" data-lang="r">&lt;span class="line">&lt;span class="cl">&lt;span class="nf">library&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">stplanr&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>We got on so well we decided to walk through part of Paris where we both had to change trains as shown below:&lt;/p>
+&lt;p>&lt;a data-flickr-embed="true" href="https://www.flickr.com/photos/97888609@N02/48272643002/in/photostream/" title="IMG_20190712_171219">&lt;img src="https://live.staticflickr.com/65535/48272643002_bda5773a2a_c.jpg" width="800" height="600" alt="IMG_20190712_171219">&lt;/a>&lt;/p>
+&lt;script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8">&lt;/script>
+&lt;h1 id="my-talk">My talk&lt;/h1>
+&lt;p>My talk was part of a session entitled ‘Movement &amp;amp; transport’, that contained the following talks:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">Session&lt;/th>
+&lt;th style="text-align:left">Speaker&lt;/th>
+&lt;th style="text-align:left">Title&lt;/th>
+&lt;th style="text-align:left">link&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">Movement &amp;amp; transport&lt;/td>
+&lt;td style="text-align:left">Rocio Joo&lt;/td>
+&lt;td style="text-align:left">Navigating through the R packages for movement&lt;/td>
+&lt;td style="text-align:left">&lt;a href="http://www.user2019.fr/static/pres/t258615.pdf" target="_blank" rel="noopener">http://www.user2019.fr/static/pres/t258615.pdf&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Movement &amp;amp; transport&lt;/td>
+&lt;td style="text-align:left">Mohammad Mehdi Moradi&lt;/td>
+&lt;td style="text-align:left">Classes, methods and data analysis for trajectories&lt;/td>
+&lt;td style="text-align:left">&lt;a href="http://www.user2019.fr/static/pres/t251784.pdf" target="_blank" rel="noopener">http://www.user2019.fr/static/pres/t251784.pdf&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Movement &amp;amp; transport&lt;/td>
+&lt;td style="text-align:left">Christine Thomas-Agnan&lt;/td>
+&lt;td style="text-align:left">Modelling spatial flows with R&lt;/td>
+&lt;td style="text-align:left">&lt;a href="http://www.user2019.fr/static/pres/t256726.pdf" target="_blank" rel="noopener">http://www.user2019.fr/static/pres/t256726.pdf&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Movement &amp;amp; transport&lt;/td>
+&lt;td style="text-align:left">Robin Lovelace&lt;/td>
+&lt;td style="text-align:left">R for Transport Planning&lt;/td>
+&lt;td style="text-align:left">&lt;a href="https://www.robinlovelace.net/presentations/user2019-r-for-transport-planning.html" target="_blank" rel="noopener">https://www.robinlovelace.net/presentations/user2019-r-for-transport-planning.html&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>I won’t go into the details of my talk because you can see the &lt;a href="https://www.robinlovelace.net/presentations/user2019-r-for-transport-planning.html#1" target="_blank" rel="noopener">slides for yourself at the URL&lt;/a>.
+However, it raised many questions and makes me wonder if it’s worth creating an ‘r-transport’ type organisation.
+Another question, that I didn’t get to answer, is where should reproducible transport questions go, now that my attempts to create a ‘Transport Planning’ StackExchange site seemed to have failed, as shown in the slide below : ( Any ideas on that, welcome : )&lt;/p>
+&lt;iframe src="https://www.robinlovelace.net/presentations/user2019-r-for-transport-planning.html#28" width="672" height="400px" data-external="1">
+&lt;/iframe>
+&lt;h1 id="conclusion">Conclusion&lt;/h1>
+&lt;!-- The only negative part of the conference for me was that it felt too short. -->
+&lt;!-- That's partly my own fault for attend fewer conference but give them 100%, rather than attending many and feeling pressed for time. -->
+&lt;!-- "Quality over quantity" should be guiding principle of conference attendance I've decided. -->
+&lt;p>Overall, UseR! 2019 was a fun, enlightening and inspiring event, and I hope to attend future UseRs, in person or remotely.
+I wish more conferences were like this.
+This small write up is designed as a reminder to my future self, and anyone else reading, to remember how good conferences &lt;em>can be&lt;/em>.
+The example set by this outstanding conference provides some pointers in that direction.&lt;/p></description></item><item><title>stplanr paper published</title><link>https://www.robinlovelace.net/post/sustainable-transport-planning-with-r-stplanr-paper-published/</link><pubDate>Mon, 25 Feb 2019 00:00:00 +0000</pubDate><guid>https://www.robinlovelace.net/post/sustainable-transport-planning-with-r-stplanr-paper-published/</guid><description>&lt;p>I am very happy to announce that the paper &lt;em>stplanr: A package for transport planning&lt;/em> has been published in The R Journal (Lovelace and Ellison 2018) 🎉.&lt;/p>
+&lt;p>This is the result of around 3 years of work:
+it took us (co-author &lt;a href="https://business.sydney.edu.au/staff/richard.ellison" target="_blank" rel="noopener">Richard Ellison&lt;/a> and me) over a year to get round to writing the paper after the &lt;strong>stplanr&lt;/strong> package was first released on &lt;a href="https://cran.r-project.org/package=stplanr" target="_blank" rel="noopener">CRAN&lt;/a> in November 2015 (see its &lt;a href="https://cran.r-project.org/src/contrib/Archive/stplanr/" target="_blank" rel="noopener">archive on CRAN&lt;/a> for details); it wasn’t until March 2017 that the paper was formally submitted.&lt;/p>
+&lt;p>After that, it was in the review process for almost 2 years, before finally being published last week.&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>
+Confusingly, the paper has an official publication date of 2018, despite the second volume of The R Journal in 2018 actually being finished in 2019!
+See the &lt;a href="https://journal.r-project.org/archive/2018-1/" target="_blank" rel="noopener">current issue&lt;/a> of The R Journal for all papers in this second 2018 volume.
+There are some interesting papers in there, not least an explanation of methods for visualising point density by Evangelista and Beskow (2018), and an explanation of &lt;em>another&lt;/em> pipe (Mount and Zumel 2018).&lt;/p>
+&lt;p>Instead of going into the details of what the paper says (see the nicely formatted &lt;a href="https://journal.r-project.org/archive/2018/RJ-2018-053/RJ-2018-053.pdf" target="_blank" rel="noopener">pdf&lt;/a> for that), I’d like to finish this post by saying a big THANK YOU to the editorial team behind The R Journal for such a high standard (better than many expensive journals I might add, The R Journal is volunteer-run to the best of my knowledge), especially Roger Bivand and John Verzani.&lt;/p>
+&lt;p>Plans are afoot to build on the moment behind &lt;strong>stplanr&lt;/strong>, which originated as a place to store code that I was using to develop the Propensity to Cycle Tool (PCT, hosted at &lt;a href="http://www.pct.bike/" target="_blank" rel="noopener">www.pct.bike&lt;/a>) (Lovelace et al. 2017) and make additional, overdue improvements to the package.
+For more on that, please head-over to the issue tracker (input welcome) or take a read of the &lt;a href="https://journal.r-project.org/archive/2018/RJ-2018-053/RJ-2018-053.pdf#page=14" target="_blank" rel="noopener">final section&lt;/a> of the just-publised paper.&lt;/p>
+&lt;h2 id="references">References&lt;/h2>
+&lt;div id="refs" class="references csl-bib-body hanging-indent">
+&lt;div id="ref-evangelista_geospatial_2018" class="csl-entry">
+&lt;p>Evangelista, Paul F., and David Beskow. 2018. “Geospatial Point Density.” &lt;em>The R Journal&lt;/em>.&lt;/p>
+&lt;/div>
+&lt;div id="ref-lovelace_stplanr_2018" class="csl-entry">
+&lt;p>Lovelace, Robin, and Richard Ellison. 2018. “Stplanr: A Package for Transport Planning.” &lt;em>The R Journal&lt;/em> 10 (2): 7–23. &lt;a href="https://doi.org/10.32614/RJ-2018-053" target="_blank" rel="noopener">https://doi.org/10.32614/RJ-2018-053&lt;/a>.&lt;/p>
+&lt;/div>
+&lt;div id="ref-lovelace_propensity_2017" class="csl-entry">
+&lt;p>Lovelace, Robin, Anna Goodman, Rachel Aldred, Nikolai Berkoff, Ali Abbas, and James Woodcock. 2017. “The Propensity to Cycle Tool: An Open Source Online System for Sustainable Transport Planning.” &lt;em>Journal of Transport and Land Use&lt;/em> 10 (1). &lt;a href="https://doi.org/10.5198/jtlu.2016.862" target="_blank" rel="noopener">https://doi.org/10.5198/jtlu.2016.862&lt;/a>.&lt;/p>
+&lt;/div>
+&lt;div id="ref-mount_dotpipe_2018" class="csl-entry">
+&lt;p>Mount, John, and Nina Zumel. 2018. “Dot-Pipe: An S3 Extensible Pipe for R.” &lt;em>The R Journal&lt;/em> 10 (2): 309–16.&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="footnotes" role="doc-endnotes">
+&lt;hr>
+&lt;ol>
+&lt;li id="fn:1">
+&lt;p>I should say, that it was not the fault of The R Journal’s editorial team that it took so long to publish the paper:
+I asked for it to be put on hold while I completed the mammoth task of re-writing dozens of functions to support sf (see the pull request in which the &lt;a href="https://github.com/ropensci/stplanr/pull/198" target="_blank" rel="noopener">&lt;code>sfr&lt;/code>&lt;/a> branch was merged into &lt;code>master&lt;/code> for the grizzly details).&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;/div></description></item><item><title>Aggregating lines, part II</title><link>https://www.robinlovelace.net/post/aggregating-lines-part-ii/</link><pubDate>Thu, 14 Feb 2019 00:00:00 +0000</pubDate><guid>https://www.robinlovelace.net/post/aggregating-lines-part-ii/</guid><description>&lt;p>The &lt;a href="https://www.robinlovelace.net/2018/10/27/aggregating-lines/" target="_blank" rel="noopener">previous post&lt;/a> demonstrated a new method to aggregate overlapping lines.
+It showed how to combine 2 lines that have an area of overlap.
+More excitingly, it led to the creation of a new function in &lt;strong>stplanr&lt;/strong>, &lt;code>overline_sf()&lt;/code>, that lives in the development version of the package.
+The purpose of this post is to provide an update on the status of the work to refactor the &lt;code>overline()&lt;/code> function, in a human friendly alternative to discussion in the relevant GitHub issue: &lt;a href="https://github.com/ropensci/stplanr/issues/273" target="_blank" rel="noopener">https://github.com/ropensci/stplanr/issues/273&lt;/a>&lt;/p>
+&lt;h2 id="set-up">Set-up&lt;/h2>
+&lt;p>To re-cap, these are the package versions we&amp;rsquo;ll be using in this post (run this line to get the development version of stplanr if you want to reproduce the results):&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-r" data-lang="r">&lt;span class="line">&lt;span class="cl">&lt;span class="n">remotes&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="nf">install_github&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;ropensci/stplanr&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">ref&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s">&amp;#34;refactor-overline&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>The library is loaded and the input data from the previous post was loaded as follows:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-r" data-lang="r">&lt;span class="line">&lt;span class="cl">&lt;span class="nf">library&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">stplanr&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">routes_fast_sf&lt;/span>&lt;span class="o">$&lt;/span>&lt;span class="n">value&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="m">1&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">sl&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">routes_fast_sf[2&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="m">3&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">sl&lt;/span>&lt;span class="o">$&lt;/span>&lt;span class="n">value&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nf">c&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="m">2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="m">5&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">overline_sf2&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nf">function&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">sl&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">attrib&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">attrib&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s">&amp;#34;value&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">attrib1&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nf">paste0&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">attrib&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s">&amp;#34;.1&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">sl_intersection&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">sf&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="nf">st_intersection&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">sl[1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">attrib]&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">sl[2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">attrib]&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">sl_intersection[[attrib]]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">sl_intersection[[attrib]]&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="n">sl_intersection[[attrib1]]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">sl_intersection[[attrib1]]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kc">NULL&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">sl_seg&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">sf&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="nf">st_difference&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">sl[attrib]&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">sf&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="nf">st_geometry&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">sl_intersection&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">rnet&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nf">rbind&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">sl_intersection&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">sl_seg&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nf">return&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">rnet&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>This was used as the basis of a demonstration of how overline works, demonstrated in the following code chunk and resulting plot:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-r" data-lang="r">&lt;span class="line">&lt;span class="cl">&lt;span class="n">rnet&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nf">overline_sf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">sl&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s">&amp;#34;value&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">plot&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">rnet[&lt;/span>&lt;span class="s">&amp;#34;value&amp;#34;&lt;/span>&lt;span class="n">]&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">lwd&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">rnet&lt;/span>&lt;span class="o">$&lt;/span>&lt;span class="n">value&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">plot&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">sl[&lt;/span>&lt;span class="s">&amp;#34;value&amp;#34;&lt;/span>&lt;span class="n">]&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">lwd&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">sl&lt;/span>&lt;span class="o">$&lt;/span>&lt;span class="n">value&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">col&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">sf&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="nf">sf.colors&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="m">2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">alpha&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="m">0.5&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="dealing-with-many-lines">Dealing with many lines&lt;/h2>
+&lt;p>The above method worked with 2 lines but how can it be used to process many lines?
+Clearly the same function could be implemented on another line, but it would need to work from the 3 lines of the newly created &lt;code>rnet&lt;/code> object rather than the original 2 routes.
+Let&amp;rsquo;s introduce a 3^rd^ route into the equation, that does not intersect with this newly created &lt;strong>rnet&lt;/strong> object:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-r" data-lang="r">&lt;span class="line">&lt;span class="cl">&lt;span class="n">sl3&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">routes_fast_sf[4&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">rnet&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nf">overline_sf2&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">rnet&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">sl&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">plot&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">rnet&lt;/span>&lt;span class="o">$&lt;/span>&lt;span class="n">geometry&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">lwd&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">rnet&lt;/span>&lt;span class="o">$&lt;/span>&lt;span class="n">value&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">plot&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">sl3&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">col&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s">&amp;#34;red&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">add&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kc">TRUE&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>In this case the method of adding to rnet is simple: just add the entirety of the line to the &lt;code>rnet&lt;/code> object:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-r" data-lang="r">&lt;span class="line">&lt;span class="cl">&lt;span class="n">attrib&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s">&amp;#34;value&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">rnet3&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nf">rbind&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">rnet&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">sl3[attrib]&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">plot&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">rnet3&lt;/span>&lt;span class="o">$&lt;/span>&lt;span class="n">geometry&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">lwd&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">rnet3&lt;/span>&lt;span class="o">$&lt;/span>&lt;span class="n">value&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>This works fine.
+In fact it works better than the original &lt;code>overline&lt;/code> function because it does not add the value of the existing thickest line in the previous figure onto the new line, a problem associated with &lt;code>overline.sp()&lt;/code> that is illustrated in the following code chunk and resulting figure:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-r" data-lang="r">&lt;span class="line">&lt;span class="cl">&lt;span class="n">sl1_3&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nf">as&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">routes_fast_sf[2&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="m">4&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">]&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s">&amp;#34;Spatial&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">rnet3_sp&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nf">overline&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">sl1_3&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">attrib&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s">&amp;#34;value&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">plot&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">rnet3_sp&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">lwd&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">rnet3_sp&lt;/span>&lt;span class="o">$&lt;/span>&lt;span class="n">value&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>A question that arises from the previous example is this: what if the next line intersects with the route network?
+It is no longer possible to simply add together two values.
+This can be illustrated by introducing 2 more lines:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-r" data-lang="r">&lt;span class="line">&lt;span class="cl">&lt;span class="n">sl4_5&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">routes_fast_sf[5&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="m">6&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">plot&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">rnet3&lt;/span>&lt;span class="o">$&lt;/span>&lt;span class="n">geometry&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">lwd&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">rnet3&lt;/span>&lt;span class="o">$&lt;/span>&lt;span class="n">value&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">plot&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">sl4_5&lt;/span>&lt;span class="o">$&lt;/span>&lt;span class="n">geometry&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">col&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s">&amp;#34;red&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">add&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kc">TRUE&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Both the new lines intersect with the newest part of the route network.
+This means that we cannot simply &lt;code>rbind()&lt;/code> them to it as we did for &lt;code>sl3&lt;/code>.
+They need to be dealt with separately.&lt;/p>
+&lt;p>Before we deal with them, it&amp;rsquo;s worth taking some time to consider what we mean by &amp;lsquo;intersect&amp;rsquo;.
+Intersection is actuall a specific type of geometric relation between 2 sets of features.
+We can see the type of relation by using the function &lt;code>st_relate()&lt;/code>:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-r" data-lang="r">&lt;span class="line">&lt;span class="cl">&lt;span class="n">relations&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">sf&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="nf">st_relate&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">sl4_5&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">rnet3&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">relations&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">unique&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nf">as.vector&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">relations&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>This shows us something important: although 2 elements (1 and 4) of &lt;code>rnet&lt;/code> relate &lt;em>in some way&lt;/em> to the new lines, only the 4^th^ feature has a linear, overlapping relation with it.
+That relation is &lt;code>1F1F00102&lt;/code> which, as far as I can tell, is not a &lt;a href="https://en.wikipedia.org/wiki/DE-9IM#Spatial_predicates" target="_blank" rel="noopener">named spatial predicate&lt;/a> (&lt;code>FF1F00102&lt;/code> means &amp;lsquo;intersects and touches&amp;rsquo; but does not have a linear overlap).
+This relation is what we need to decide whether or not to simply bind a new feature to the growing &lt;code>rnet&lt;/code>, whether we need to break it up (or at least part of it) into smaller lines before doing so (it also raises the wider question of which order should we do things).&lt;/p>
+&lt;p>In the simple case of &lt;em>whether&lt;/em> to simply bind the next line (4) onto &lt;code>rnet3&lt;/code> the answer is simple now we know the string code associated with linear overlaps.
+First we&amp;rsquo;ll test it on the previous example of &lt;code>sl3&lt;/code> and the original &lt;code>rnet&lt;/code> composed of 3 features:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-r" data-lang="r">&lt;span class="line">&lt;span class="cl">&lt;span class="n">relate_rnet_3&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">sf&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="nf">st_relate&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">rnet&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">sl3&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">pattern&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s">&amp;#34;1F1F00102&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">relate_rnet_3&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">any&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nf">lengths&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">relate_rnet_3&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>The &lt;code>FALSE&lt;/code> meant there was no linear overlaps. So we simply used &lt;code>rbind()&lt;/code>.
+When we ask the same question of &lt;code>rnet3&lt;/code> and &lt;code>sl4&lt;/code>, however, the answer is &lt;code>TRUE&lt;/code>:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-r" data-lang="r">&lt;span class="line">&lt;span class="cl">&lt;span class="n">sl4&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">sl4_5[1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">relate_rnet_4&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">sf&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="nf">st_relate&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">rnet3&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">sl4&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">pattern&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s">&amp;#34;1F1F00102&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">relate_rnet_4&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">any&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nf">lengths&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">relate_rnet_4&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>How to proceed? We need to avoid &lt;code>rnet&lt;/code> objects containing any overlapping lines.
+Because &lt;code>sl4&lt;/code> overlaps with part of &lt;code>rnet3&lt;/code> we will need to remove the overlapping line, run the &lt;code>overline_sf2()&lt;/code> function, and then re-combine the result with the pre-existing route network object.
+We can split-up the &lt;code>rnet3&lt;/code> object into overlapping and non-overlapping features as follows:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-r" data-lang="r">&lt;span class="line">&lt;span class="cl">&lt;span class="n">sel_overlaps&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nf">lengths&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">relate_rnet_4&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">&amp;gt;&lt;/span> &lt;span class="m">0&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">rnet_overlaps&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">rnet3[sel_overlaps&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">rnet3_tmp&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">rnet3[&lt;/span>&lt;span class="o">!&lt;/span>&lt;span class="n">sel_overlaps&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">]&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>We can check that there is only one overlapping feature as follows:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-r" data-lang="r">&lt;span class="line">&lt;span class="cl">&lt;span class="nf">nrow&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">rnet_overlaps&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>And we can proceed to join the two features together using our new function:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-r" data-lang="r">&lt;span class="line">&lt;span class="cl">&lt;span class="n">rnet_overlaps4&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nf">overline_sf2&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nf">rbind&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">rnet_overlaps&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">sl4[attrib]&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Adding this back to the &lt;code>rnet3&lt;/code> object results in an larger &lt;code>rnet&lt;/code> object incorporating all the &lt;code>value&lt;/code> and &lt;code>geometry&lt;/code> column data we have so far:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-r" data-lang="r">&lt;span class="line">&lt;span class="cl">&lt;span class="n">rnet&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nf">rbind&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">rnet3_tmp&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">rnet_overlaps4&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">plot&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">rnet&lt;/span>&lt;span class="o">$&lt;/span>&lt;span class="n">geometry&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">lwd&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">rnet&lt;/span>&lt;span class="o">$&lt;/span>&lt;span class="n">value&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>The information provided so far informed the creation of the following function:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-r" data-lang="r">&lt;span class="line">&lt;span class="cl">&lt;span class="n">stplanr&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="n">overline_sf&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>This function made use of the slightly simpler individual route-joining function, and associated helper functions:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-r" data-lang="r">&lt;span class="line">&lt;span class="cl">&lt;span class="n">stplanr&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="n">overline_sf2&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">stplanr&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="n">overlaps&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">stplanr&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="n">to_linestring&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Aside from being clunky, this approach has the additional flaw of not working.
+It works fine for lines 2 to 6 in &lt;code>routes_fast_sf&lt;/code>, as illustrated below.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-r" data-lang="r">&lt;span class="line">&lt;span class="cl">&lt;span class="n">r6&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">routes_fast_sf[2&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="m">6&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">rnet6&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nf">overline_sf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">r6&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">attrib&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s">&amp;#34;value&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">plot&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">rnet6&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>A problem arises when we try to run the same command on the same data, but with one more line added.
+That will be the topic of the next post on aggregating lines to form route networks, which will also introduce a new function &lt;code>overline2()&lt;/code>, developed by my colleague &lt;a href="https://environment.leeds.ac.uk/transport/staff/964/dr-malcolm-morgan" target="_blank" rel="noopener">Malcolm Morgan&lt;/a>.&lt;/p>
+&lt;h2 id="another-benchmark">Another benchmark&lt;/h2>
+&lt;p>To provide a taster of the new function, let&amp;rsquo;s see it in action in a benchmark on this latest route network consisting of the five lines illustrated in the previous plot.
+Again, we use &lt;code>bench::mark()&lt;/code> to benchmark each approach:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-r" data-lang="r">&lt;span class="line">&lt;span class="cl">&lt;span class="n">bench&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="nf">mark&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">check&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kc">FALSE&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">overline&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">stplanr&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="nf">overline&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">r6&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s">&amp;#34;value&amp;#34;&lt;/span>&lt;span class="p">),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">overline_sf&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">stplanr&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="nf">overline_sf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">r6&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s">&amp;#34;value&amp;#34;&lt;/span>&lt;span class="p">),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">overline2&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">stplanr&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="nf">overline2&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">r6&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s">&amp;#34;value&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Again the results are not Earth-shattering and should be taken with a large pinch of salt: performance should not be evaluated against these relatively tiny datasets, but against the scale of datasets that the functions were designed to handle: city scale route networks involving thousands of overlapping lines.
+The same principle is used in the benchmarking section of the &lt;a href="https://h2oai.github.io/db-benchmark/" target="_blank" rel="noopener">h2oai website&lt;/a>: focus on benchmarks that apply to the datasets you will actually be using.
+In this case, my hypothesis is that the geometric functions &lt;code>overline()&lt;/code> and &lt;code>overline_sf()&lt;/code> will perform disproportionately badly as the size of the input dataset grows (to be tested).
+Still, it is interesting to note that the new &lt;code>overline2()&lt;/code> function uses way more memory than the other functions.
+More next time!&lt;/p></description></item><item><title>Aggregating lines, Part I</title><link>https://www.robinlovelace.net/post/aggregating-lines/</link><pubDate>Sat, 27 Oct 2018 00:00:00 +0000</pubDate><guid>https://www.robinlovelace.net/post/aggregating-lines/</guid><description>&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>It’s been a busy 12 months but with the &lt;a href="https://geocompr.robinlovelace.net/" target="_blank" rel="noopener">Geocomputation with R&lt;/a> book nearing completion&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>
+I’ve finally found some time to update my blog and do a bit of thinking, about the tangled topic of line aggregation.&lt;/p>
+&lt;h2 id="why-aggregate-lines">Why aggregate lines?&lt;/h2>
+&lt;p>The transport ‘flow’ on any particular segment of the transport networks is the aggregate (sum) of trips that pass through it (Hollander 2016).
+Finding the flow across a transport network based on input data composed of individual routes, is therefore an aggregation problem.
+It requires a more complex solution than that provided by the &lt;code>aggregate()&lt;/code> function in the base R (R Core Team 2018) package &lt;strong>stats&lt;/strong>, however, because the geometry of the output &lt;code>LINESTRING&lt;/code>s will be fundamentally different than the input &lt;code>LINESTRINGS&lt;/code> of the routes: a route network is composed of many small way segments, but a route is a single long &lt;code>LINESTRING&lt;/code>.&lt;/p>
+&lt;h2 id="aggregating-lines-with-overline-mki">Aggregating lines with overline() MKI&lt;/h2>
+&lt;p>Creating such a route network, with aggregated values per segment, is the problem that the &lt;a href="https://ropensci.github.io/stplanr/reference/overline.html" target="_blank" rel="noopener">&lt;code>overline()&lt;/code>&lt;/a> function in the R package &lt;a href="https://github.com/ropensci/stplanr" target="_blank" rel="noopener">&lt;strong>stplanr&lt;/strong>&lt;/a> was designed to solve (see a 3.5 yr-old question on &lt;a href="https://gis.stackexchange.com/questions/139681/overlaying-lines-and-aggregating-their-values-for-overlapping-segments" target="_blank" rel="noopener">gis.stackexchange.com&lt;/a> for more context).&lt;/p>
+&lt;p>The function works well and is the basis of the Route Network layer (MSOA) in the Propensity to Cycle Tool (&lt;a href="http://www.pct.bike/" target="_blank" rel="noopener">PCT&lt;/a>).
+In fact it was developed precisely for this purpose, as illustrated in the image below, which shows a common visualization/analysis problem encountered by transport researchers when working with multiple routes: overlapping routes are not easy to identify from non-overlapping routes:
+notice the red lines in the centre of Leeds in the image look the same as the red lines on the outskirts, despite representing much more movement.&lt;/p>
+&lt;p>To overcome the problem &lt;code>overline()&lt;/code> was born (credit to Barry Rowlingson who wrote the foundations of the function), and it works (on a tiny dataset of 2 lines) as follows:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-r" data-lang="r">&lt;span class="line">&lt;span class="cl">&lt;span class="nf">library&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">stplanr&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">sl_sp&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">routes_fast[2&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="m">3&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">sl_sp&lt;/span>&lt;span class="o">@&lt;/span>&lt;span class="n">data&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nf">data.frame&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">value&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nf">c&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="m">2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="m">5&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">plot&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">sl_sp&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">lwd&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="m">9&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">col&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s">&amp;#34;yellow&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">rnet_sp&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nf">overline&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">sl_sp&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">attr&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s">&amp;#34;value&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">plot&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">rnet_sp&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">add&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kc">TRUE&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">lwd&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">rnet_sp&lt;/span>&lt;span class="o">$&lt;/span>&lt;span class="n">value&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>The utility of such a function is illustrated in the figure below, which shows the original route network layer of the PCT in action over a similar area of Leeds:&lt;/p>
+&lt;p>This works great and the resulting network is used for strategic network planning: you can download route network data in the ‘Region data’ tab of the PCT (Lovelace et al. 2017). The route network data for Leeds can, for example, be downloaded as a &lt;code>.geojson&lt;/code> file from &lt;a href="https://github.com/npct/pct-outputs-regional-notR/raw/master/commute/msoa/west-yorkshire/rnet.geojson" target="_blank" rel="noopener">here&lt;/a>.&lt;/p>
+&lt;p>But there are some issues: the function works on the older &lt;code>SpatialLinesDataFrame&lt;/code> class defined in the &lt;strong>sp&lt;/strong> package (Pebesma 2018).
+This data class has been superseded by the simpler &lt;code>sf&lt;/code> class in the &lt;a href="https://github.com/r-spatial/sf" target="_blank" rel="noopener">&lt;strong>sf&lt;/strong>&lt;/a> package, which is faster than &lt;strong>sp&lt;/strong> for &lt;a href="https://github.com/ATFutures/geobench" target="_blank" rel="noopener">some&lt;/a> (if not many) operations.
+Another issue with &lt;code>overline()&lt;/code> is that in some cases when 2 lines meet, the resulting aggregated line can be longer than it should be.
+So there are performance and functionality issues to address.
+Rather than solve them all here, this post sets-out the issue using reproducible code and suggests next steps for a new &lt;code>overline()&lt;/code> function (or perhaps just an updated &lt;code>overline.sf()&lt;/code> function which currently just wraps &lt;code>overline.sp()&lt;/code>).&lt;/p>
+&lt;h2 id="aggregating-lines-with-sf">Aggregating lines with sf&lt;/h2>
+&lt;p>Rather that starting from scratch and writing a geographic algorithm from the ground-up, we will start by exploring solutions provided by existing packages, notably &lt;strong>sf&lt;/strong>, which provides an interface to the &lt;code>GEOS&lt;/code> library.&lt;/p>
+&lt;p>Let’s start simple, with just 2 lines, which have an associated amount of flow (with illustrative values of 2 and 5 in this case):&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-r" data-lang="r">&lt;span class="line">&lt;span class="cl">&lt;span class="nf">library&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">stplanr&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">sl&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">routes_fast_sf[2&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="m">3&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">sl&lt;/span>&lt;span class="o">$&lt;/span>&lt;span class="n">value&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nf">c&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="m">2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="m">5&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>These lines clearly have a decent amount of overlap, which can be extracted using the function &lt;code>st_intersection()&lt;/code>:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-r" data-lang="r">&lt;span class="line">&lt;span class="cl">&lt;span class="n">sl_intersection&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">sf&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="nf">st_intersection&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">sl[1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">]&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">sl[2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">]&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">plot&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">sl&lt;/span>&lt;span class="o">$&lt;/span>&lt;span class="n">geometry&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">lwd&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="m">9&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">col&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">sf&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="nf">sf.colors&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="m">2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">alpha&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="m">0.5&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">plot&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">sl_intersection&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">add&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kc">TRUE&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Furthermore, we can find the aggregated value associated with this new segment as follows:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-r" data-lang="r">&lt;span class="line">&lt;span class="cl">&lt;span class="n">sl_intersection&lt;/span>&lt;span class="o">$&lt;/span>&lt;span class="n">value&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nf">sum&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">sl_intersection&lt;/span>&lt;span class="o">$&lt;/span>&lt;span class="n">value&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">sl_intersection&lt;/span>&lt;span class="o">$&lt;/span>&lt;span class="n">value.1&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>We still do not have a full route network composed of 3 non-overlapping lines, however:
+the original lines need to be ‘clipped’ so that they do not overlap with &lt;code>sl_intersection&lt;/code>.
+This can be done as follows:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-r" data-lang="r">&lt;span class="line">&lt;span class="cl">&lt;span class="n">sl_seg1&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">sf&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="nf">st_difference&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">sl[1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">]&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">sl_intersection&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">sl_seg2&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">sf&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="nf">st_difference&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">sl[2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">]&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">sl_intersection&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">plot&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">sl&lt;/span>&lt;span class="o">$&lt;/span>&lt;span class="n">geometry&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">lwd&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="m">9&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">col&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">sf&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="nf">sf.colors&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="m">2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">alpha&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="m">0.5&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">plot&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">sl_seg1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">add&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kc">TRUE&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">plot&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">sl_seg2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">add&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kc">TRUE&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>We now have all the geographic components needed for a route network.
+The only remaining task is to combine them, using &lt;code>rbind&lt;/code>, right?
+Not quite: the following command fails:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-r" data-lang="r">&lt;span class="line">&lt;span class="cl">&lt;span class="n">rnet&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nf">rbind&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">sl_seg1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">sl_seg2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">sl_intersection&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Lesson: we need to be more careful in isolating the value to aggregate.
+We will therefore run the previous stages again, but with &lt;code>attrib&lt;/code> set to the attribute we would like to aggregate over (&lt;code>value&lt;/code> in this case):&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-r" data-lang="r">&lt;span class="line">&lt;span class="cl">&lt;span class="n">attrib&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s">&amp;#34;value&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">attrib1&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nf">paste0&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">attrib&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s">&amp;#34;.1&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">sl_intersection&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">sf&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="nf">st_intersection&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">sl[1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">attrib]&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">sl[2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">attrib]&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">sl_intersection[[attrib]]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">sl_intersection[[attrib]]&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="n">sl_intersection[[attrib1]]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">sl_intersection[[attrib1]]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kc">NULL&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>That leaves us with a ‘clean’ object that only has a value (7) for the attribute column name we want (&lt;code>value&lt;/code>).&lt;/p>
+&lt;p>On this basis we can proceed to create the other segments, keeping only the column we’re interested in. To save time and typing, we’ll create both segments in a single command:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-r" data-lang="r">&lt;span class="line">&lt;span class="cl">&lt;span class="n">sl_seg&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">sf&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="nf">st_difference&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">sl[attrib]&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">sf&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="nf">st_geometry&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">sl_intersection&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">rnet&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nf">rbind&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">sl_intersection&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">sl_seg&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>It worked! Now we’re in a position to plot the resulting route network, with ‘width’ proportional to the flow along each segment:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-r" data-lang="r">&lt;span class="line">&lt;span class="cl">&lt;span class="nf">plot&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">rnet&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">lwd&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">rnet&lt;/span>&lt;span class="o">$&lt;/span>&lt;span class="n">value&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="a-benchmark">A benchmark&lt;/h2>
+&lt;p>To test that the method is fast, or is at least not slower than the original &lt;code>overline()&lt;/code> function, at least for this task, we’ll package-up the method in a new function:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-r" data-lang="r">&lt;span class="line">&lt;span class="cl">&lt;span class="n">overline_sf2&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nf">function&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">sl&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">attrib&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">attrib&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s">&amp;#34;value&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">attrib1&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nf">paste0&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">attrib&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s">&amp;#34;.1&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">sl_intersection&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">sf&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="nf">st_intersection&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">sl[1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">attrib]&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">sl[2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">attrib]&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">sl_intersection[[attrib]]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">sl_intersection[[attrib]]&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="n">sl_intersection[[attrib1]]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">sl_intersection[[attrib1]]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kc">NULL&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">sl_seg&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">sf&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="nf">st_difference&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">sl[attrib]&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">sf&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="nf">st_geometry&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">sl_intersection&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">rnet&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nf">rbind&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">sl_intersection&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">sl_seg&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nf">return&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">rnet&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>If you are new to scripts/algorithms/functions, it may be worth taking a look at the new &lt;a href="https://geocompr.robinlovelace.net/algorithms.html" target="_blank" rel="noopener">Algorithms&lt;/a> chapter in our near-complete book that teaches a range of geographic methods that use R (Lovelace, Nowosad, and Muenchow 2019).
+Now the method has been put in a function, we can compare its performance with the per-existing &lt;code>overline()&lt;/code> function for comparison:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-r" data-lang="r">&lt;span class="line">&lt;span class="cl">&lt;span class="n">bench&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="nf">mark&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">check&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="bp">F&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">overline.sp&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nf">overline&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">sl_sp&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">attrib&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s">&amp;#34;value&amp;#34;&lt;/span>&lt;span class="p">),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">overline.sf&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nf">overline&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">sl&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">attrib&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s">&amp;#34;value&amp;#34;&lt;/span>&lt;span class="p">),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">overline_sf2&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nf">overline_sf2&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">sl&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">attrib&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s">&amp;#34;value&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>The results are not Earth-shattering: the new function seems to be around the same speed as the original, if a little faster.
+This is great news, but remember: the new function only works on 2 lines so is much simpler.
+More work needed!&lt;/p>
+&lt;h2 id="next-steps">Next steps&lt;/h2>
+&lt;p>The next step is to generalist this method so it works for many (potentially thousands) of lines in a way that scales, something that should help on the visualization side, a topic that attracts much interest (see for example this &lt;a href="https://gis.stackexchange.com/questions/778/representation-of-network-flows" target="_blank" rel="noopener">gis.stackexchange post&lt;/a> on the subject and, more broadly, a recent &lt;a href="https://nowosad.github.io/post/maps-distortion/" target="_blank" rel="noopener">article&lt;/a> showing how to make animated maps by Jakub Nowosad).
+There is also work to do on performance but, as Donald Knuth said (Knuth 1974):&lt;/p>
+&lt;blockquote>
+&lt;p>premature optimization is the root of all evil (or at least most of it) in programming&lt;/p>
+&lt;/blockquote>
+&lt;p>So a more complete &lt;code>overline.sf()&lt;/code> function is needed.
+That will (hopefully) be the topic of the next blog post.&lt;/p>
+&lt;h2 id="references">References&lt;/h2>
+&lt;div id="refs" class="references csl-bib-body hanging-indent">
+&lt;div id="ref-hollander_transport_2016" class="csl-entry">
+&lt;p>Hollander, Yaron. 2016. &lt;em>Transport Modelling for a Complete Beginner&lt;/em>. CTthink!&lt;/p>
+&lt;/div>
+&lt;div id="ref-knuth_computer_1974" class="csl-entry">
+&lt;p>Knuth, Donald E. 1974. “Computer Programming As an Art.” &lt;em>Commun. ACM&lt;/em> 17 (12): 667–73. &lt;a href="https://doi.org/10.1145/361604.361612" target="_blank" rel="noopener">https://doi.org/10.1145/361604.361612&lt;/a>.&lt;/p>
+&lt;/div>
+&lt;div id="ref-lovelace_propensity_2017" class="csl-entry">
+&lt;p>Lovelace, Robin, Anna Goodman, Rachel Aldred, Nikolai Berkoff, Ali Abbas, and James Woodcock. 2017. “The Propensity to Cycle Tool: An Open Source Online System for Sustainable Transport Planning.” &lt;em>Journal of Transport and Land Use&lt;/em> 10 (1). &lt;a href="https://doi.org/10.5198/jtlu.2016.862" target="_blank" rel="noopener">https://doi.org/10.5198/jtlu.2016.862&lt;/a>.&lt;/p>
+&lt;/div>
+&lt;div id="ref-lovelace_geocomputation_2019" class="csl-entry">
+&lt;p>Lovelace, Robin, Jakub Nowosad, and Jannes Muenchow. 2019. &lt;em>Geocomputation with R&lt;/em>. CRC Press.&lt;/p>
+&lt;/div>
+&lt;div id="ref-pebesma_simple_2018" class="csl-entry">
+&lt;p>Pebesma, Edzer. 2018. “Simple Features for R: Standardized Support for Spatial Vector Data.” &lt;em>The R Journal&lt;/em>.&lt;/p>
+&lt;/div>
+&lt;div id="ref-rcoreteam_language_2018" class="csl-entry">
+&lt;p>R Core Team. 2018. &lt;em>R: A Language and Environment for Statistical Computing&lt;/em>. Vienna, Austria: R Foundation for Statistical Computing.&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div class="footnotes" role="doc-endnotes">
+&lt;hr>
+&lt;ol>
+&lt;li id="fn:1">
+&lt;p>Any input on that still welcome - see the &lt;a href="https://geocompr.robinlovelace.net/index.html#how-to-contribute" target="_blank" rel="noopener">contributing&lt;/a> section for more.&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;/div></description></item><item><title>Switching to blogdown</title><link>https://www.robinlovelace.net/post/2017-04-30-switching-to-blogdown/</link><pubDate>Sun, 30 Apr 2017 00:00:00 +0000</pubDate><guid>https://www.robinlovelace.net/post/2017-04-30-switching-to-blogdown/</guid><description>&lt;p>I&amp;rsquo;ve finally got a new blog post, to test that my new set-up is working, using the wonderful new &lt;a href="https://bookdown.org/yihui/blogdown/" target="_blank" rel="noopener">blogdown&lt;/a> package.&lt;/p>
+&lt;p>Here&amp;rsquo;s a test plot, to show how it allows R code to be embedded:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-r" data-lang="r">&lt;span class="line">&lt;span class="cl">&lt;span class="nf">plot&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="m">1&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="m">9&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;img src="https://www.robinlovelace.net/post/2017-04-30-switching-to-blogdown_files/figure-html/unnamed-chunk-1-1.png" width="672" />
+&lt;p>Now that I have a quick-fire and fun way of getting new content onto the web I expect to be blogging lots more.&lt;/p>
+&lt;p>Watch this space!&lt;/p></description></item><item><title>Geostat2016 Albacete: a write-up</title><link>https://www.robinlovelace.net/post/2016-09-28-geostat-2016/</link><pubDate>Wed, 28 Sep 2016 00:00:00 +0000</pubDate><guid>https://www.robinlovelace.net/post/2016-09-28-geostat-2016/</guid><description>&lt;p>Last week I went to &lt;a href="http://geostat-course.org/2016" target="_blank" rel="noopener">GEOSTAT 2016&lt;/a>. Given the amount of fun had at &lt;a href="http://robinlovelace.net/r/2015/08/31/geostat-writeup.html" target="_blank" rel="noopener">GEOSTAT 2015&lt;/a>, expectations were high. The local organisers did not disappoint, with a week of lectures, workshops, spatial data competitions and of course lots of Geostatistics. It would be unwise to try to systematically document such a diverse range of activities, and the &lt;a href="http://geostat-course.org/node" target="_blank" rel="noopener">GEOSTAT website&lt;/a> provides much further info. Instead this &amp;lsquo;miniwriteup&amp;rsquo; is designed to summarise some of my memories from the event, and encourage you to get involved for GEOSTAT 2017.&lt;/p>
+&lt;p>To put things in context, the first session was a brief overview of the history of GEOSTAT. This is the 12&lt;sup>th&lt;/sup> GEOSTAT summer school. In some ways GEOSTAT can be seen as a physical manifestation of the lively &lt;a href="https://stat.ethz.ch/mailman/listinfo/r-sig-geo" target="_blank" rel="noopener">R-SIG-GEO email list&lt;/a>. That may not sound very exciting. But there is a strong community spirit at the event and, unlike other academic conferences, the focus is on practical learning rather than transmitting research findings or theories. And the event was so much more than that.&lt;/p>
+&lt;p>There were 5 action packed days covering many topics within the broad field of Geostatistics. What follows is an overview of each that I went to (there were 2 streams), with links to the source material. It is hoped that this will be of use to people who were not present in person.&lt;/p>
+&lt;h2 id="day-1">Day 1&lt;/h2>
+&lt;p>After an introduction to the course and spatial data by Tom Hengl, Roger Bivand delivered a technical and applied webinar on &lt;a href="http://geostat-course.org/system/files/geostat_talk16.pdf" target="_blank" rel="noopener">bridges between R and other GIS software&lt;/a>. With a focus on GRASS, we learned how R could be used as a &amp;lsquo;front end&amp;rsquo; to other programs. An example using the famous &amp;lsquo;Cholera pump&amp;rsquo; data mapped by &lt;a href="https://en.wikipedia.org/wiki/John_Snow" target="_blank" rel="noopener">John Snow&lt;/a> was used to demonstrate the potential benefits of &amp;lsquo;bridging&amp;rsquo; to other software. The data can be downloaded and partially plotted in R as follows:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-r" data-lang="r">&lt;span class="line">&lt;span class="cl">&lt;span class="n">u&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s">&amp;#34;http://geostat-course.org/system/files/data_0.zip&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">download.file&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">u&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s">&amp;#34;data_0.zip&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">unzip&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;data_0.zip&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-r" data-lang="r">&lt;span class="line">&lt;span class="cl">&lt;span class="n">old&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nf">setwd&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;~/repos/geostat2016-rl/&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">library&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">raster&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;pre>&lt;code>## Loading required package: sp
+&lt;/code>&lt;/pre>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-r" data-lang="r">&lt;span class="line">&lt;span class="cl">&lt;span class="n">bbo&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nf">shapefile&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;data/bbo.shp&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">buildings&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nf">shapefile&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;data/buildings.shp&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">deaths&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nf">shapefile&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;data/deaths.shp&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">b_pump&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nf">shapefile&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;data/b_pump.shp&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">nb_pump&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nf">shapefile&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;data/nb_pump.shp&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">plot&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">buildings&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://github.com/npct/pct/raw/master/figures/unnamed-chunk-3-1.png" alt="" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-r" data-lang="r">&lt;span class="line">&lt;span class="cl">&lt;span class="nf">setwd&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">old&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>In the afternoon Robert Hijmans gave a high level overview of software for spatial data analysis, with a discussion of the &lt;a href="http://www.diva-gis.org/" target="_blank" rel="noopener">Diva GIS&lt;/a> software he developed and why he now uses R for most of his geospatial analysis.&lt;/p>
+&lt;p>The talk touched on the &lt;a href="https://cran.r-project.org/web/packages/gdistance/" target="_blank" rel="noopener">&lt;strong>gdistance&lt;/strong>&lt;/a> package, and many others. Robert showcased the power of R for understanding major civilisational problems such as the impacts of climate change on agriculture. His animated global maps of agricultural productivity and precipitation showed how R can scale to tackle large datasets, up to the global level involving spatial and temporal data simultaneously.&lt;/p>
+&lt;p>There were a few political asides. Robert mentioned how agrotech giant Monsanto paid almost &lt;a href="https://www.fastcoexist.com/3019387/why-monsanto-just-spent-1-billion-to-buy-a-climate-data-company" target="_blank" rel="noopener">$1 billion&lt;/a> for a weather prediction company. He detoured deftly through a discussion of &amp;lsquo;big data&amp;rsquo;, making the observation that often ensembles of models can provide better predictions than any single model working on its own, with political analogies about the importance of democracy.&lt;/p>
+&lt;p>More examples included health and estimates of dietary deficiencies at high levels of geographic resolution. A paper showing fish and fruit consumption across Rwanda illustrated how map making in R, used intelligently, can save lives.&lt;/p>
+&lt;p>It was revealing to learn how Robert got into R. While he was working at the &lt;a href="http://irri.org/" target="_blank" rel="noopener">International Rice Research Institute&lt;/a>. &amp;ldquo;It forces you to write scripts.&amp;rdquo; This is good for ensuring reproducibility, a critical component of scientific research. It encourages you to focus on and understand the data primarily, rather than visualising it. On the other hand, R is not always the fastest way to do things, although &amp;ldquo;people often worry too much about this&amp;rdquo;. Your time is more important than your computers, so setting an analysis running is fine. Plus there are ways to make things run faster, as mentioned in a book that I&amp;rsquo;m working on, &lt;a href="https://csgillespie.github.io/efficientR/" target="_blank" rel="noopener">Efficient R Programming&lt;/a>.&lt;/p>
+&lt;blockquote>
+&lt;p>R is great if you use it every data, but if you only use it less than once a week it becomes difficult.&lt;/p>
+&lt;/blockquote>
+&lt;p>If you just want a one-off spatial analysis data program, Robert recommended QGIS. After a brief overview of spatial data in R, Robert moved on to talk about the &lt;a href="https://cran.r-project.org/web/packages/raster/index.html" target="_blank" rel="noopener">&lt;strong>raster&lt;/strong>&lt;/a> package, which he developed. This package was developed to overcome some of the limitations with &lt;strong>sp&lt;/strong>, the foundational package for spatial data in R.&lt;/p>
+&lt;!-- This led on to discussion of C++ code, which Robert is increasingly developing in to extend **raster**. Here is a brief benchmark to show how much faster C++ code can be: -->
+&lt;!-- ```{r} -->
+&lt;!-- sumR = function(x){ -->
+&lt;!-- b = NULL -->
+&lt;!-- for(i in 1:length(x)){ -->
+&lt;!-- b = b + a[i] -->
+&lt;!-- } -->
+&lt;!-- } -->
+&lt;!-- ``` -->
+&lt;!-- ```{r, engine='cpp', eval=FALSE} -->
+&lt;!-- library(Rcpp) -->
+&lt;!-- cppFunction(code = -->
+&lt;!-- "// [[Rcpp::export]] -->
+&lt;!-- double cumulater(std::vector&lt;doubl>d) { -->
+&lt;!-- int n = x.size(); -->
+&lt;!-- double result = 0; -->
+&lt;!-- for (int i=0;i &lt; n; i++) { -->
+&lt;!-- result = result + d[i]; -->
+&lt;!-- } -->
+&lt;!-- double r = cumulater(v) -->
+&lt;!-- }return r;") -->
+&lt;!-- ``` -->
+&lt;!-- According to Robert, once you can write R functions, "writing C++ functions is relatively easy". While I'm not quite convinced, based on the number of characters needed to write a simple sum code, he certainly convinced me of the merits of developing new spatial functions in this low level language, because of its speed and the fact that it's the main development language of GDAL. -->
+&lt;p>A final resource that Robert promoted was &lt;a href="http://www.rspatial.org/" target="_blank" rel="noopener">RSpatial.org&lt;/a>, a free online resource for teaching R as a command line GIS.&lt;/p>
+&lt;p>Edzer Pebesmer delivered the final session of the first day, on &lt;strong>Free and Open Source Software (FOSS) for Geoinformatics and Geosciences&lt;/strong>. After the highly technical final C++ examples from the previous talk, I was expecting a high level overview of the landscape. Instead Edzer went straight in to talk about source code, the raw material that defines all software. The fundamental feature of open source software is that its source code is free, and will remain free.&lt;/p>
+&lt;!-- An example of this is Apple, the most profitable computer company on Earth, used parts of the BSD kernel in its proprietary operating system. -->
+&lt;!-- Another feature of open source software is that it must have a license. It has a legal meaning, the details of which vary from licence to license. By deciding a license, you can choose whether you use a more *restrictive* license (which prevents people from using the software in software that is solved) or a more *permisive* license. R's 'backend' is licensed -->
+&lt;!-- GPL is used for R's. ESRI is now using R as a back-end in commercial software. Its lawers have explored the legal implications of this and concluded that it is not breaking the law by doing so. -->
+&lt;!-- GitHub is an online system for developing open source software. It is free to use, but some of the best things in GitHub are not open source. Edzer says that the advantages of using their service, in terms of community engagement and ease of use and accessibility, currently outweigh any potential future disbenefits of GitHub not being completely open source. -->
+&lt;!-- Another example is open source software for geosciences. Researchers may want to make their software open for anyone to use, while remaining protected from exploitation from large companies like oil com -->
+&lt;h2 id="day-2">Day 2&lt;/h2>
+&lt;p>The second day of the course was divided in two: stream A focussed on environmental modelling and stream B compositional data. I attended the environmental modelling course taught by Robert Hijmans. The course was based on his teaching material at &lt;a href="http://rspatial.org/spatial/index.html" target="_blank" rel="noopener">rspatial.org&lt;/a> and can be found &lt;a href="http://gfc.ucdavis.edu/events/albacete/day2.html" target="_blank" rel="noopener">online&lt;/a>.&lt;/p>
+&lt;p>We started off by looking at the fundamental data structures underlying spatial data in R. Why? It&amp;rsquo;s useful to be able to create simple example datasets from scratch, to understand them.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-r" data-lang="r">&lt;span class="line">&lt;span class="cl">&lt;span class="nf">library&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">sp&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">x&lt;/span> &lt;span class="o">&amp;lt;-&lt;/span> &lt;span class="nf">c&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="m">4&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="m">7&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="m">3&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="m">8&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">y&lt;/span> &lt;span class="o">&amp;lt;-&lt;/span> &lt;span class="nf">c&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="m">9&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="m">6&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="m">12&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="m">11&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">xy&lt;/span> &lt;span class="o">&amp;lt;-&lt;/span> &lt;span class="nf">data.frame&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">y&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">SpatialPoints&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">xy&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;pre>&lt;code>## class : SpatialPoints
+## features : 4
+## extent : 3, 8, 6, 12 (xmin, xmax, ymin, ymax)
+## coord. ref. : NA
+&lt;/code>&lt;/pre>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-r" data-lang="r">&lt;span class="line">&lt;span class="cl">&lt;span class="n">d&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nf">data.frame&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">v1&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="m">1&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="m">4&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">v2&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kc">LETTERS&lt;/span>&lt;span class="n">[1&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="m">4&lt;/span>&lt;span class="n">]&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">spd&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nf">SpatialPointsDataFrame&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">coords&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">xy&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">data&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">d&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">plot&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">spd&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://github.com/npct/pct/raw/master/figures/unnamed-chunk-6-1.png" alt="" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;p>The basic functions of the &lt;strong>raster&lt;/strong> package are similar.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-r" data-lang="r">&lt;span class="line">&lt;span class="cl">&lt;span class="nf">library&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">raster&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">r&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nf">raster&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">nc&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="m">10&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">nr&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="m">10&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">values&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">r&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="m">1&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="nf">ncell&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">r&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">plot&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">r&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://github.com/npct/pct/raw/master/figures/unnamed-chunk-7-1.png" alt="" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-r" data-lang="r">&lt;span class="line">&lt;span class="cl">&lt;span class="nf">as.matrix&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">r&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;pre>&lt;code>## [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9] [,10]
+## [1,] 1 2 3 4 5 6 7 8 9 10
+## [2,] 11 12 13 14 15 16 17 18 19 20
+## [3,] 21 22 23 24 25 26 27 28 29 30
+## [4,] 31 32 33 34 35 36 37 38 39 40
+## [5,] 41 42 43 44 45 46 47 48 49 50
+## [6,] 51 52 53 54 55 56 57 58 59 60
+## [7,] 61 62 63 64 65 66 67 68 69 70
+## [8,] 71 72 73 74 75 76 77 78 79 80
+## [9,] 81 82 83 84 85 86 87 88 89 90
+## [10,] 91 92 93 94 95 96 97 98 99 100
+&lt;/code>&lt;/pre>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-r" data-lang="r">&lt;span class="line">&lt;span class="cl">&lt;span class="n">q&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nf">sqrt&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">r&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nf">plot&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">q&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://github.com/npct/pct/raw/master/figures/unnamed-chunk-7-2.png" alt="" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-r" data-lang="r">&lt;span class="line">&lt;span class="cl">&lt;span class="n">x&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">q&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="n">r&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">s&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nf">stack&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">r&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">q&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">x&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">ss&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">s&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">r&lt;/span> &lt;span class="c1"># r is recycled so each layer is multiplied by r&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="m">1&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="m">3&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="m">2&lt;/span> &lt;span class="c1"># here 2 is recycled&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;pre>&lt;code>## [1] 2 4 6
+&lt;/code>&lt;/pre>
+&lt;p>Raster also provides simple yet powerful functions for manipulating and analysing raster data, including &lt;code>crop()&lt;/code>, &lt;code>merge()&lt;/code> for manipulation and &lt;code>predict()&lt;/code>, &lt;code>focal()&lt;/code> and &lt;code>distance()&lt;/code>. &lt;code>predict()&lt;/code> is particularly interesting as it allows raster values to be estimated using any of R&amp;rsquo;s powerful statistical methods.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-r" data-lang="r">&lt;span class="line">&lt;span class="cl">&lt;span class="nf">library&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">dismo&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">g&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nf">gmap&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;Albacete, Spain&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">scale&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="bp">T&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">lonlat&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="bp">T&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;pre>&lt;code>## Loading required namespace: XML
+&lt;/code>&lt;/pre>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-r" data-lang="r">&lt;span class="line">&lt;span class="cl">&lt;span class="nf">plot&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">g&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">interpolate&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="bp">T&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://github.com/npct/pct/raw/master/figures/unnamed-chunk-9-1.png" alt="" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://github.com/npct/pct/raw/master/figures/unnamed-chunk-9-2.png" alt="" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-r" data-lang="r">&lt;span class="line">&lt;span class="cl">&lt;span class="n">dismo&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="nf">geocode&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;Universidad Castilla la Mancha&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;pre>&lt;code>## originalPlace
+## 1 Universidad Castilla la Mancha
+## interpretedPlace longitude
+## 1 Paseo Universidad, 13005 Ciudad Real, Cdad. Real, Spain -3.921711
+## latitude xmin xmax ymin ymax uncertainty
+## 1 38.99035 -3.922007 -3.919309 38.98919 38.99189 131
+&lt;/code>&lt;/pre>
+&lt;!-- Supervised learning is the process of allowing a computer to estimate predictor variables based on explanatory variables. -->
+&lt;!-- There are 2 main things to consider when model fitting: the functional form to use and the explanatory variables X. -->
+&lt;!-- We worked through a practical on spatial interpolation from [rspatial.org](http://rspatial.org/analysis/rst/4-interpolation.html): -->
+&lt;!-- ```{r} -->
+&lt;!-- dir.create("data") -->
+&lt;!-- download.file("http://rspatial.org/analysis/data/precipitation.csv", "data/precipitation.csv") -->
+&lt;!-- d = read.csv("data/precipitation.csv") -->
+&lt;!-- d$prec &lt;- rowSums(d[, c(6:17)]) -->
+&lt;!-- plot(sort(d$prec), ylab='Annual precipitation (mm)', las=1, xlab='Stations') -->
+&lt;!-- library(sp) -->
+&lt;!-- dsp &lt;- SpatialPoints(d[,4:3], proj4string=CRS("+proj=longlat +datum=NAD83")) -->
+&lt;!-- dsp &lt;- SpatialPointsDataFrame(dsp, d) -->
+&lt;!-- download.file("http://rspatial.org/analysis/data/counties.rds", "data/counties.rds") -->
+&lt;!-- CA &lt;- readRDS("data/counties.rds") -->
+&lt;!-- # define groups for mapping -->
+&lt;!-- cuts &lt;- c(0,200,300,500,1000,3000) -->
+&lt;!-- # set up a palette of interpolated colors -->
+&lt;!-- blues &lt;- colorRampPalette(c('yellow', 'orange', 'blue', 'dark blue')) -->
+&lt;!-- pols &lt;- list("sp.polygons", CA, fill = "lightgray") -->
+&lt;!-- spplot(dsp, 'prec', cuts=cuts, col.regions=blues(5), sp.layout=pols, pch=20, cex=2) -->
+&lt;!-- TA &lt;- CRS("+proj=aea +lat_1=34 +lat_2=40.5 +lat_0=0 +lon_0=-120 +x_0=0 +y_0=-4000000 +datum=NAD83 +units=m +ellps=GRS80 +towgs84=0,0,0") -->
+&lt;!-- library(rgdal) -->
+&lt;!-- dta &lt;- spTransform(dsp, TA) -->
+&lt;!-- cata &lt;- spTransform(CA, TA) -->
+&lt;!-- ``` -->
+&lt;!-- Now the modelling work can begin. -->
+&lt;!-- ```{r} -->
+&lt;!-- # First create a function to calculate the error: -->
+&lt;!-- RMSE &lt;- function(observed, predicted) { -->
+&lt;!-- sqrt(mean((predicted - observed)^2, na.rm=TRUE)) -->
+&lt;!-- } -->
+&lt;!-- null &lt;- RMSE(mean(dsp$prec), dsp$prec) -->
+&lt;!-- null -->
+&lt;!-- library(dismo) -->
+&lt;!-- v &lt;- voronoi(dta) -->
+&lt;!-- ## Loading required namespace: deldir -->
+&lt;!-- plot(dsp) -->
+&lt;!-- plot(v) -->
+&lt;!-- points(dta, col = "red") -->
+&lt;!-- ca = aggregate(cata) -->
+&lt;!-- plot(ca) -->
+&lt;!-- vca = intersect(v, ca) -->
+&lt;!-- plot(vca) -->
+&lt;!-- vca2 = rgeos::gIntersection(v, ca, byid = T) -->
+&lt;!-- names(vca2) -->
+&lt;!-- plot(vca2) # not the same! -->
+&lt;!-- plot(vca) -->
+&lt;!-- names(vca) -->
+&lt;!-- ``` -->
+&lt;!-- Testing a first model -->
+&lt;!-- ```{r} -->
+&lt;!-- kf = kfold(dta@data) -->
+&lt;!-- rmse = NULL -->
+&lt;!-- for(k in 1:length(unique(kf))){ -->
+&lt;!-- test = dta[kf == k,] -->
+&lt;!-- train = dta[kf != k,] -->
+&lt;!-- v = voronoi(train) -->
+&lt;!-- p = extract(v, test) -->
+&lt;!-- rmse[k] = RMSE(observed = test$prec, predicted = p$prec) -->
+&lt;!-- } -->
+&lt;!-- rmse -->
+&lt;!-- ``` -->
+&lt;h2 id="day-3">Day 3&lt;/h2>
+&lt;p>The third day started with a live R demo by Edzer Pebesmer on &lt;a href="https://edzer.github.io/UseR2016/" target="_blank" rel="noopener">space-time data&lt;/a>. Refreshingly for a conference primarily on spatial data, it started with an in-depth discussion of time. While base R natively supports temporal units (knowing the difference between days and seconds, for example) it does not know the difference between metres and miles.&lt;/p>
+&lt;p>This led to the creation of the &lt;strong>units&lt;/strong> library, an taster of which is shown below:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-r" data-lang="r">&lt;span class="line">&lt;span class="cl">&lt;span class="nf">install.packages&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;units&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-r" data-lang="r">&lt;span class="line">&lt;span class="cl">&lt;span class="nf">library&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">units&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">m&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nf">with&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">ud_units&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">m&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">s&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nf">with&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">ud_units&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">s&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">km&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nf">with&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">ud_units&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">km&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">h&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nf">with&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">ud_units&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">h&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">x&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="m">1&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="m">3&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">m&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">s&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>The rest of the day was spent analysing a range of spatio-temporal datasets using &lt;strong>spacetime&lt;/strong>, &lt;strong>trajectories&lt;/strong> and &lt;strong>rgl&lt;/strong> for interactive 3d spacetime plots.&lt;/p>
+&lt;p>In the parallel session there were sessions on &lt;a href="http://geostat-course.org/node/1328" target="_blank" rel="noopener">CARTO&lt;/a> and the &lt;a href="http://geostat-course.org/node/1329" target="_blank" rel="noopener">R gvSIG bridge&lt;/a>.&lt;/p>
+&lt;h2 id="day-4">Day 4&lt;/h2>
+&lt;p>Day 4 was a highlight for me as I&amp;rsquo;ve wanted to learn how to use the &lt;strong>INLA&lt;/strong> package for ages. It was explained lucidly by Marta Blangiardo and Michela Cameletti, who have written an excellent book on the subject, which has a &lt;a href="https://sites.google.com/a/r-inla.org/stbook/" target="_blank" rel="noopener">website that I recommend checking out&lt;/a>. Their materials can be found here: &lt;a href="http://geostat-course.org/node/1330" target="_blank" rel="noopener">http://geostat-course.org/node/1330&lt;/a> .&lt;/p>
+&lt;p>In parallel to this there was a session on &lt;a href="http://geostat-course.org/node/1326" target="_blank" rel="noopener">Spatial and Spatiotemporal point process analysis in R&lt;/a> data in R by Virgilio Gomez Rubio and one on automated &lt;a href="http://geostat-course.org/node/1323" target="_blank" rel="noopener">spatial prediction and visualisation&lt;/a> by Tom Hengl.&lt;/p>
+&lt;h2 id="day-5">Day 5&lt;/h2>
+&lt;p>After all that intense geospatial analysis and programming activity, and a night out in Albacete for some participants, we were relieved to learn that this final day of learning was more relaxed. Furthermore, by tradition, it was largely participant-led. I gave a talk on &lt;a href="https://csgillespie.github.io/efficientR/" target="_blank" rel="noopener">Efficient R Programming&lt;/a>, a book I&amp;rsquo;ve written in collaboration with Colin Gillespie; Teresa Rojos gave a fascinating talk about her research into the spatial distribution of cancer rates in Peru; and S.J. Norder gave us the low-down on the Biogeography of islands with R.&lt;/p>
+&lt;p>One of the most exciting sessions was the revelation of the results of the spatial prediction game. Interestingly, a team using a relatively simple approach with &lt;a href="https://cran.r-project.org/web/packages/randomForestSRC/index.html" target="_blank" rel="noopener">&lt;strong>randomForestSRC&lt;/strong>&lt;/a> (and &lt;a href="https://github.com/ehrlinger/ggRandomForests" target="_blank" rel="noopener">&lt;strong>ggRandomForests&lt;/strong>&lt;/a> for visualisation) one against others who had spent hours training complex multi-level models.&lt;/p>
+&lt;h2 id="summary">Summary&lt;/h2>
+&lt;p>Overall it was an amazing event and inspiring to spend time with so many researchers using open geospatial software for tackling &lt;a href="https://t.co/UqMyCnXOsG" target="_blank" rel="noopener">pressing real world issues&lt;/a>. Furthermore, it was great fun. I strongly recommend people dipping their toes in the &lt;a href="https://cran.r-project.org/web/views/Spatial.html" target="_blank" rel="noopener">sea of spatial capabilities&lt;/a> provided by R check out the &lt;a href="http://geostat-course.org/node" target="_blank" rel="noopener">GEOSTAT website&lt;/a>, not least for the excellent &lt;a href="http://archive.org/search.php?query=GEOSTAT" target="_blank" rel="noopener">video resources to be found there&lt;/a>.&lt;/p>
+&lt;p>I look forward to hearing plans for future GEOSTATs and recommend the event, and associated materials, to researchers interested in using free geospatial software for the greater good.&lt;/p></description></item><item><title>R vs QGIS for sustainable transport planning</title><link>https://www.robinlovelace.net/post/2015-04-20-r-vs-qgis-for-transport/</link><pubDate>Tue, 20 Jan 2015 00:00:00 +0000</pubDate><guid>https://www.robinlovelace.net/post/2015-04-20-r-vs-qgis-for-transport/</guid><description>&lt;p>The 23rd iteration of the GIS Research UK conference
+(&lt;a href="https://github.com/Robinlovelace/stplanr" target="_blank" rel="noopener">#GISRUK&lt;/a>)
+conference was the largest ever. 250 researchers,
+industry representatives and academics attended from the
+vibrant geospatial research communities in the
+UK, Europe and beyond. GISRUK has become a centrepoint for discussion
+of new methods, software and applications in the field. I
+was on the &lt;a href="http://leeds.gisruk.org/contact.html" target="_blank" rel="noopener">organising committee&lt;/a>,
+reviewed some excellent papers for the event
+(a full list of these is
+&lt;a href="http://leeds.gisruk.org/programme.html" target="_blank" rel="noopener">available for download here&lt;/a>) and
+attended some truly ground-breaking talks.
+This experience has shown that the geospatial community
+in the UK is strong,
+especially with regards to growth in open access
+data and open source software in the field.&lt;/p>
+&lt;p>&lt;a href="https://www.flickr.com/photos/97888609@N02/17025120518" title="img_2814 by Robin Lovelace, on Flickr">&lt;img src="https://farm6.staticflickr.com/5450/17025120518_ebfba47bff_s.jpg" width="75" height="75" alt="img_2814">&lt;/a>&lt;/p>
+&lt;p>This article is about one part of GISRUK and insights gleaned from it
+about R, QGIS and other tools for sustainable transport planning.
+&lt;a href="https://github.com/Robinlovelace/GIS4TA" target="_blank" rel="noopener">GIS for Transport Applications&lt;/a>
+(&lt;a href="https://twitter.com/hashtag/gis4ta?src=hash" target="_blank" rel="noopener">#GIS4TA for short&lt;/a>) was a practical day-long workshop
+that preceded the main event.
+I organised the workshop and (with help from
+&lt;a href="http://www.geog.leeds.ac.uk/people/e.odiari" target="_blank" rel="noopener">Eusebio Odiari&lt;/a>,
+&lt;a href="https://tgrg.wordpress.com/" target="_blank" rel="noopener">The Transport Geography Research Group&lt;/a>
+and the
+&lt;a href="http://www.rgs.org/HomePage.htm" target="_blank" rel="noopener">Royal Geographical Society&lt;/a>)
+it seems to have been a great success. More than 30
+people attended, including a decent portion
+from transport consultancies such as
+&lt;a href="http://www.itpworld.net/index.html" target="_blank" rel="noopener">Integrated Transport Planning Ltd&lt;/a>
+&lt;a href="http://www.trpconsult.com/" target="_blank" rel="noopener">TRP Consulting&lt;/a> and the
+&lt;a href="http://www.era.europa.eu/Pages/Home.aspx" target="_blank" rel="noopener">European Railway Association (ERA)&lt;/a>.
+Specifically, it is about the use of R
+and QGIS tools for transport planning and the potential for their
+adoption in academic, public and private-sector transport planning.
+The focus of the workshop was deliberately on open source software
+and sustainable transport because these are growth
+areas in the field that are essential for
+democratic
+and healthy
+transport systems compatible with the
+science of climate change (&lt;a href="http://www.opentraffic.net/en/">&lt;span class="citation">Tamminga, 2012&lt;/span>&lt;/a>).
+A recent report, for example, suggests we need to almost completely
+transition away from fossil fuels by 2050
+(&lt;a href="http://dx.doi.org/10.1038/nature14016" target="_blank" rel="noopener">McGlade et al., 2015&lt;/a>).
+New datasets and methods for analysing and modelling them can
+help get us there in the recalcitrant transport sector
+(&lt;a href="http://dx.doi.org/10.1016/j.jtrangeo.2014.07.010" target="_blank" rel="noopener">Gossling, 2014&lt;/a>).&lt;/p>
+&lt;h1 id="r-for-transport-applications">R for transport applications&lt;/h1>
+&lt;p>The workshop kicked-off with a short
+talk on &amp;lsquo;R and QGIS for transport applications&amp;rsquo;,
+which laid out some of the motivations for running the
+workshop outlined above. Other than a few
+&amp;rsquo;early adopters&amp;rsquo;, the transport modelling community
+is generally conservative, based largely on mature
+proprietary products such as
+&lt;a href="http://www.saturnsoftware.co.uk/7.html" target="_blank" rel="noopener">SATURN&lt;/a>
+and
+&lt;a href="http://vision-traffic.ptvgroup.com/en-us/products/ptv-vissim/" target="_blank" rel="noopener">Vissim&lt;/a>.&lt;/p>
+&lt;p>The slides from this talk are available here:&lt;/p>
+&lt;script async class="speakerdeck-embed" data-id="91fce9cf5c36405b8969c6b6954c4fe6" data-ratio="1.41436464088398" src="//speakerdeck.com/assets/embed.js">&lt;/script>
+&lt;p>&lt;strong>Tutorial: &lt;a href="https://github.com/Robinlovelace/GIS4TA/releases/download/0.1/intro-r-qgis-4ta.pdf" target="_blank" rel="noopener">Introduction to R and QGIS for transport applications&lt;/a>&lt;/strong>&lt;/p>
+&lt;h1 id="routing-with-r">Routing with R&lt;/h1>
+&lt;p>The second talk was by Nick Bearman, who provided an overview of
+routing in R, as well as an excellent
+&lt;a href="https://github.com/nickbearman/transport-workshop/blob/master/transport-workshop.pdf" target="_blank" rel="noopener">practical tutorial&lt;/a>.&lt;/p>
+&lt;p>The practical demonstrated 2 ways of routing in R:&lt;/p>
+&lt;ol>
+&lt;li>Using &lt;strong>ggmap&lt;/strong>. The following code was used to navigate to the event!&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">from &amp;lt;- &amp;#39;Leeds station, New Station Street, Leeds LS1 5DL, United Kingdom&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">to &amp;lt;- &amp;#39;LS2 9JT&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">route_df &amp;lt;- route(from, to, structure = &amp;#39;route&amp;#39;, mode = &amp;#39;walking&amp;#39;)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">qmap(&amp;#39;Merrion Centre&amp;#39;, zoom = 15) +
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> geom_path(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> aes(x = lon, y = lat), colour = &amp;#39;red&amp;#39;, size = 1.5,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> data = route_df, lineend = &amp;#39;round&amp;#39;)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://github.com/Robinlovelace/robinlovelace.github.io/raw/master/_posts/writeup_files/figure-html/unnamed-chunk-2-1.png" alt="" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;ol start="2">
+&lt;li>The &lt;a href="https://github.com/Robinlovelace/stplanr" target="_blank" rel="noopener">package I created, &lt;strong>stplanr&lt;/strong>&lt;/a>,
+to get routes optimised for cyclists (see &lt;a href="https://github.com/nickbearman/transport-workshop/blob/master/transport-workshop.Rmd" target="_blank" rel="noopener">transport-workshop.Rmd&lt;/a> for a working version):&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">rquiet &amp;lt;- gLines2CyclePath(l = rlines, plan = &amp;#34;quietest&amp;#34;)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">plot(rquiet[1,]) # route from Leeds station to Leeds University (North - South)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">plot(rquiet[2,]) # route from Leeds to Manchester!
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://github.com/Robinlovelace/robinlovelace.github.io/raw/master/_posts/writeup_files/figure-html/unnamed-chunk-4-1.png" alt="" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;p>&lt;strong>Tutorial: &lt;a href="https://github.com/nickbearman/transport-workshop/blob/master/transport-workshop.pdf" target="_blank" rel="noopener">Route analysis using R&lt;/a>&lt;/strong>&lt;/p>
+&lt;h1 id="large-gps-datasets-with-postgis">Large gps datasets with PostGIS&lt;/h1>
+&lt;p>The most technical session involved using R to query huge datasets storing
+GPS data containing 100,000+ rows. Amazingly, Richard and Adrian Ellison
+set up a remotely accessible database instance &lt;strong>from their laptop&lt;/strong> which
+participants queried via
+&lt;a href="http://cran.r-project.org/web/packages/RPostgreSQL/index.html" target="_blank" rel="noopener">&lt;strong>RPostgreSQL&lt;/strong>&lt;/a>.
+Their session information can be seen here:&lt;/p>
+&lt;p>&lt;a href="https://github.com/richardellison/GIS4TA_GPS" target="_blank" rel="noopener">&lt;strong>github.com/richardellison/GIS4TA_GPS&lt;/strong>&lt;/a>&lt;/p>
+&lt;h1 id="a-hackathon">A hackathon&lt;/h1>
+&lt;p>Finally there was a miniature hackathon organised by Godwin Yeboah.
+Participants made progress in better understanding the travel
+patterns of cyclists using real data. The hackathon notes can be found here:&lt;/p>
+&lt;p>&lt;a href="https://github.com/spatialscientist/GIS4TA2015" target="_blank" rel="noopener">github.com/spatialscientist/GIS4TA2015&lt;/a>&lt;/p>
+&lt;h1 id="summary">Summary&lt;/h1>
+&lt;p>GIS is a field of knowledge that has a huge amount to offer transport
+planners and researchers, especially regarding new and open source
+software tools that can effectively generate, process and analyse
+transport-related data. R is well-suited to fill this research gap and
+has a wide range of tools to help. Packages such as &lt;strong>ggmap&lt;/strong>
+(Kahle and Wickham 2013),
+&lt;strong>RPostgreSQL&lt;/strong>
+and the new &lt;a href="https://github.com/Robinlovelace/stplanr" target="_blank" rel="noopener">&lt;strong>stplanr&lt;/strong>&lt;/a>
+have great potential to help plan the transport systems of the future.
+QGIS is also increasingly attractive for transport applications, with
+it inbuilt support for
+&lt;a href="http://planet.qgis.org/planet/tag/pgrouting/" target="_blank" rel="noopener">PGRouting&lt;/a>,
+&lt;a href="http://plugins.qgis.org/plugins/FlowMapper/" target="_blank" rel="noopener">flow analysis&lt;/a>
+and a friendly user interface that many will be used to.&lt;/p>
+&lt;p>Photos taken during the hackathon are testament to its role as a forum
+for not only learning but also debate about the future of GIS in transport.
+These can be seen here:&lt;/p>
+&lt;p>&lt;a href="https://www.flickr.com/photos/97888609@N02/sets/72157652012715766" target="_blank" rel="noopener">flickr.com/photos/97888609@N02/sets/72157652012715766&lt;/a>&lt;/p>
+&lt;p>Hearing feedback from users new to R using it to solve transport problems
+provided an insight into how it compares to traditional tools. The removal
+of &amp;lsquo;glass ceilings&amp;rsquo; imposed by restrictive licenses or the need to buy
+&amp;lsquo;add-on&amp;rsquo; features was one comment, but that applies equally to QGIS and
+other &lt;a href="http://foss4g.org/" target="_blank" rel="noopener">FOSS4G&lt;/a>
+offerings. The steep learning curve of R seems to still
+be an issue compared with QGIS, although this is becoming less of an issue
+with the evolution of RStudio as an GUI for R. In conclusion, both R and
+QGIS are coming of age as tools in the transport planner&amp;rsquo;s &amp;lsquo;war cabinet&amp;rsquo;.
+The latest evidence unequivocally shows the impact of transport decisions
+on obesity, environmental degradation and quality of life. So it is time,
+surely, to harness this new open source software to &amp;lsquo;save the world&amp;rsquo;!&lt;/p>
+&lt;h1 id="acknowledgements">Acknowledgements&lt;/h1>
+&lt;p>Thanks to the Consumer Data Research Centre and the Royal Geographical
+society for subsidising the event. Thanks to all the participants and
+especially the demonstrators Godwin, Nick, Adrian and Richard for making it
+happen.&lt;/p>
+&lt;h1 id="references">References&lt;/h1>
+&lt;p>Gössling, Stefan, and Scott Cohen. 2014. “Why sustainable transport policies will fail: EU climate policy in the light of transport taboos.” Journal of Transport Geography 39 (July). Elsevier Ltd: 197–207. doi:10.1016/j.jtrangeo.2014.07.010.&lt;/p>
+&lt;p>Kahle, D, and Hadley Wickham. 2013. “ggmap: Spatial Visualization with ggplot2.” The R Journal 5: 144–61. &lt;a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.375.8693&amp;amp;rep=rep1&amp;amp;type=pdf" target="_blank" rel="noopener">citeseerx.ist.psu.edu&lt;/a>.&lt;/p>
+&lt;p>McGlade, Christophe, and Paul Ekins. 2015. “The geographical distribution of fossil fuels unused when limiting global warming to 2 °C.” Nature 517 (7533). Nature Publishing Group: 187–90. doi:10.1038/nature14016.&lt;/p>
+&lt;p>Tamminga, Guus, Marc Miska, Edgar Santos, Hans van Lint, Arturo Nakasone, Helmut Prendinger, and Serge Hoogendoorn. 2012. “Design of Open Source Framework for Traffic and Travel Simulation.” Transportation Research Record: Journal of the Transportation Research Board 2291 (-1): 44–52. doi:10.3141/2291-06.&lt;/p></description></item><item><title>Clipping spatial data in R</title><link>https://www.robinlovelace.net/post/2014-07-29-clipping-with-r/</link><pubDate>Tue, 29 Jul 2014 00:00:00 +0000</pubDate><guid>https://www.robinlovelace.net/post/2014-07-29-clipping-with-r/</guid><description>&lt;h1 id="heading">&lt;/h1>
+&lt;p>This miniature vignette shows how to clip spatial data based on different spatial objects in R and a &amp;lsquo;bounding box&amp;rsquo;. Spatial overlays are common in GIS applications and R users are fortunate that the clipping and spatial subsetting functions are mature and fairly fast. We&amp;rsquo;ll also write a new function called &lt;code>gClip()&lt;/code>, that will make clipping by bounding boxes easier.&lt;/p>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://raw.githubusercontent.com/Robinlovelace/Creating-maps-in-R/master/vignettes/clipping-with-bounding-box_files/figure-markdown_github/Westminster.png" alt="plot of chunk Westminster" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;h2 id="loading-the-data">Loading the data&lt;/h2>
+&lt;p>To start with let&amp;rsquo;s load some data. I&amp;rsquo;m working in the root directory of the &lt;a href="https://github.com/Robinlovelace/Creating-maps-in-R" target="_blank" rel="noopener">Creating-maps-in-R&lt;/a> github repository, so there are some spatial datasets available to play with:&lt;/p>
+&lt;pre>&lt;code>setwd(&amp;quot;../&amp;quot;)
+library(rgdal)
+stations &amp;lt;- readOGR(&amp;quot;data&amp;quot;, &amp;quot;lnd-stns&amp;quot;)
+## OGR data source with driver: ESRI Shapefile
+## Source: &amp;quot;data&amp;quot;, layer: &amp;quot;lnd-stns&amp;quot;
+## with 2532 features and 27 fields
+## Feature type: wkbPoint with 2 dimensions
+zones &amp;lt;- readOGR(&amp;quot;data&amp;quot;, &amp;quot;london_sport&amp;quot;)
+## OGR data source with driver: ESRI Shapefile
+## Source: &amp;quot;data&amp;quot;, layer: &amp;quot;london_sport&amp;quot;
+## with 33 features and 4 fields
+## Feature type: wkbPolygon with 2 dimensions
+&lt;/code>&lt;/pre>
+&lt;h2 id="the-wonder-of-spatial-subsetting-in-r">The wonder of spatial subsetting in R&lt;/h2>
+&lt;p>Now, it&amp;rsquo;s easy to &lt;strong>subset&lt;/strong> spatial data in R, using the same incredibly concise square bracket &lt;code>[]&lt;/code> notation as R uses for non spatial data. To re-confirm how this works on non-spatial data, here&amp;rsquo;s a mini example:&lt;/p>
+&lt;pre>&lt;code>M &amp;lt;- matrix(1:10, ncol = 5)
+M[2, 3:5]
+## [1] 6 8 10
+&lt;/code>&lt;/pre>
+&lt;p>The above code creates a matrix with 5 columns and 2 rows: the &lt;code>[2, 3:5]&lt;/code> part takes the subset of &lt;code>M&lt;/code> corresponding to 3rd to 5th columns in the second row.&lt;/p>
+&lt;p>Subsetting spatial data works in exactly the same way: note that &lt;code>zones&lt;/code> are far more extensive than the &lt;code>stations&lt;/code> points. (We have to change the projection of &lt;code>stations&lt;/code> before plotting, so the objects are on the same coordinate reference system.)&lt;/p>
+&lt;pre>&lt;code>stations &amp;lt;- spTransform(stations, CRS(proj4string(zones))) # transform CRS
+plot(zones)
+points(stations)
+&lt;/code>&lt;/pre>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://raw.githubusercontent.com/Robinlovelace/Creating-maps-in-R/master/vignettes/clipping-with-bounding-box_files/figure-markdown_github/unnamed-chunk-3.png" alt="plot of chunk unnamed-chunk-3" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;p>So how do we select only points that are are within the zones of London? Believe it or not, it&amp;rsquo;s as simple as subsetting the matrix &lt;code>M&lt;/code> above. This is an amazingly concise and convenient way of spatial subsetting that was added to R at some point between versions 1 and 2 of &lt;a href="http://www.asdar-book.org/" target="_blank" rel="noopener">Applied Spatial Data Analysis with R&lt;/a>. In the earlier (2008) book, one had to use &lt;code>overlay(x, y)&lt;/code> just to get the selection, and then another line of code was required to actually make the subset. Now things are much simpler. As Bivand et al. put it in the &lt;a href="http://www.springer.com/statistics/life&amp;#43;sciences,&amp;#43;medicine&amp;#43;%26&amp;#43;health/book/978-1-4614-7617-7" target="_blank" rel="noopener">latest edtion&lt;/a> (p. 131), &amp;ldquo;the selection syntax for features was extended such that it understands:&amp;rdquo;&lt;/p>
+&lt;pre>&lt;code>stations_subset &amp;lt;- stations[zones, ]
+&lt;/code>&lt;/pre>
+&lt;p>&lt;strong>This is so amazing and intuitive, whoever invented it should be given a medal!!&lt;/strong> Despite this simplicity, it seems many R users who I&amp;rsquo;ve taught spatial functions to are unaware of &lt;code>[]&lt;/code>&amp;rsquo;s spatial extension. So spread the word (and if anyone knows of the history of this innovation, please let us know). Now we have a sample of all stations zones: progress.&lt;/p>
+&lt;pre>&lt;code>plot(zones)
+points(stations_subset)
+&lt;/code>&lt;/pre>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://raw.githubusercontent.com/Robinlovelace/Creating-maps-in-R/master/vignettes/clipping-with-bounding-box_files/figure-markdown_github/unnamed-chunk-5.png" alt="plot of chunk unnamed-chunk-5" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;h2 id="clipping-by-a-bounding-box">Clipping by a bounding box&lt;/h2>
+&lt;p>But what if we want to &lt;em>clip&lt;/em> the polygons data, based on a bounding box? To start with, let&amp;rsquo;s look at and modify the existing bounding box for the zones, making it half the size:&lt;/p>
+&lt;pre>&lt;code>b &amp;lt;- bbox(zones)
+b[1, ] &amp;lt;- (b[1, ] - mean(b[1, ])) * 0.5 + mean(b[1, ])
+b[2, ] &amp;lt;- (b[2, ] - mean(b[2, ])) * 0.5 + mean(b[2, ])
+b &amp;lt;- bbox(t(b))
+plot(zones, xlim = b[1, ], ylim = b[2, ])
+&lt;/code>&lt;/pre>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://raw.githubusercontent.com/Robinlovelace/Creating-maps-in-R/master/vignettes/clipping-with-bounding-box_files/figure-markdown_github/unnamed-chunk-6.png" alt="plot of chunk unnamed-chunk-6" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;p>Now, to clip this area, we can use a custom function, which I&amp;rsquo;ve called &lt;code>gClip&lt;/code>, following the &lt;strong>rgeos&lt;/strong> function naming convention (this was inspired by an online &lt;a href="http://stackoverflow.com/questions/21883683/is-it-possible-to-clip-a-polygon-to-the-bounding-box-of-a-base-map" target="_blank" rel="noopener">answer&lt;/a> that didn&amp;rsquo;t work for me):&lt;/p>
+&lt;pre>&lt;code>library(raster)
+library(rgeos)
+## rgeos version: 0.3-5, (SVN revision 447)
+## GEOS runtime version: 3.4.2-CAPI-1.8.2 r3921
+## Polygon checking: TRUE
+gClip &amp;lt;- function(shp, bb){
+if(class(bb) == &amp;quot;matrix&amp;quot;) b_poly &amp;lt;- as(extent(as.vector(t(bb))), &amp;quot;SpatialPolygons&amp;quot;)
+else b_poly &amp;lt;- as(extent(bb), &amp;quot;SpatialPolygons&amp;quot;)
+gIntersection(shp, b_poly, byid = T)
+}
+zones_clipped &amp;lt;- gClip(zones, b)
+## Warning: spgeom1 and spgeom2 have different proj4 strings
+plot(zones_clipped)
+&lt;/code>&lt;/pre>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://raw.githubusercontent.com/Robinlovelace/Creating-maps-in-R/master/vignettes/clipping-with-bounding-box_files/figure-markdown_github/unnamed-chunk-7.png" alt="plot of chunk unnamed-chunk-7" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;p>Note that due to the &lt;code>if&lt;/code> statements in &lt;code>gClip&lt;/code>&amp;rsquo;s body, it can handle almost any spatial data input, and still work. Let&amp;rsquo;s clip to the borough of Westminster, one of London&amp;rsquo;s better known boroughs:&lt;/p>
+&lt;pre>&lt;code>westminster &amp;lt;- zones[grep(&amp;quot;West&amp;quot;, zones$name),]
+zones_clipped_w &amp;lt;- gClip(zones, westminster)
+## Warning: spgeom1 and spgeom2 have different proj4 strings
+plot(zones_clipped_w); plot(westminster, col = &amp;quot;red&amp;quot;, add = T)
+&lt;/code>&lt;/pre>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://raw.githubusercontent.com/Robinlovelace/Creating-maps-in-R/master/vignettes/clipping-with-bounding-box_files/figure-markdown_github/Westminster.png" alt="plot of chunk Westminster" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;h2 id="conclusion">Conclusion&lt;/h2>
+&lt;p>There are many more spatial tips available from the &lt;a href="https://github.com/Robinlovelace/Creating-maps-in-R/raw/master/intro-spatial-rl.pdf" target="_blank" rel="noopener">Introduction to visualising
+spatial data in
+R&lt;/a>
+tutorial that &lt;a href="http://spatial.ly/" target="_blank" rel="noopener">James Cheshire&lt;/a> and I are maintaining. The source code of this post can also be viewed &lt;a href="https://github.com/Robinlovelace/Creating-maps-in-R/blob/master/vignettes/clipping-with-bounding-box.Rmd" target="_blank" rel="noopener">online&lt;/a> as just one of a series of &lt;a href="https://github.com/Robinlovelace/Creating-maps-in-R/tree/master/vignettes" target="_blank" rel="noopener">vignettes&lt;/a> to showcase some of R&amp;rsquo;s impressive spatial capabilities.&lt;/p>
+&lt;h2 id="update">Update&lt;/h2>
+&lt;p>There was a lively discussion of this post when it was first published in 2016.
+Although I&amp;rsquo;ve switched to a new commenting system, the comments, which include more history and a link to the commit that added spatial subsetting to the sp package, can be found here: &lt;a href="https://disqus.com/home/discussion/robinlovelace/clipping_spatial_data_in_r/" target="_blank" rel="noopener">https://disqus.com/home/discussion/robinlovelace/clipping_spatial_data_in_r/&lt;/a>&lt;/p></description></item><item><title>Coxcomb plots and 'spiecharts' in R</title><link>https://www.robinlovelace.net/post/2013-12-27-coxcomb-plots-spiecharts-r/</link><pubDate>Fri, 27 Dec 2013 00:00:00 +0000</pubDate><guid>https://www.robinlovelace.net/post/2013-12-27-coxcomb-plots-spiecharts-r/</guid><description>&lt;p>After switching to a new site I decided to revive some old posts.
+I found this one that was written back 7 years ago (in January 2021 when this update was written), back in December 2013.
+The results of the book are now published in the book &lt;a href="https://www.routledge.com/Low-Impact-Living-A-Field-Guide-to-Ecological-Affordable-Community-Building/Chatterton/p/book/9780415661614">Low Impact Living: A Field Guide to Ecological, Affordable Community Building&lt;/a> (Chatterton, 2015, for more info on the Lilac project in particular and cohousing in general see &lt;a href="https://www.lilac.coop/resources/">lilac.coop/resources/&lt;/a>).
+I was amazed to find that, with some tweaks, the &lt;code>ggplot2&lt;/code> code still ran.&lt;/p>
+&lt;p>I was contacted recently by a housing organisation who wanted
+an attractive visualisation of their finances, arranged in a circular
+form. Because there were two 4 continuous variables to include, all
+of which were proportions of each other, the client suggested a plot
+similar to a pie chart, but with each segment extending out a different
+radius from the segment. I realised later that what I had been asked to
+make was a modified &lt;a href="http://en.wikipedia.org/wiki/Coxcomb_diagram#Polar_area_diagram">coxcomb&lt;/a>
+plot, invented by
+&lt;a href="http://en.wikipedia.org/wiki/Florence_Nightingale">Florence Nightingale&lt;/a>
+to represent statistics on cause of death during the Crimean War.
+In fact, I had been asked to make a “&lt;a href="http://www.cs.huji.ac.il/~feit/papers/Spie03TR.pdf">spie chart&lt;/a>.”
+This post demonstrates, for the first time to my knowledge, how it can be done
+using ggplot2. A reproducible example of this, including sample data input, can be
+found on the project’s github repository: &lt;a href="https://github.com/Robinlovelace/lilacPlot" class="uri">https://github.com/Robinlovelace/lilacPlot&lt;/a> . Please fork and attribute as appropriate!&lt;/p>
+&lt;div id="reading-and-looking-at-the-data" class="section level2">
+&lt;h2>Reading and looking at the data&lt;/h2>
+&lt;p>This is the original dataset I was given:&lt;/p>
+&lt;pre class="r">&lt;code>u &amp;lt;- &amp;quot;https://github.com/Robinlovelace/lilacPlot/raw/master/F2.csv&amp;quot;
+f &amp;lt;- read.csv(u)
+knitr::kable(f[1:3, ])&lt;/code>&lt;/pre>
+&lt;table>
+&lt;thead>
+&lt;tr class="header">
+&lt;th align="left">H&lt;/th>
+&lt;th align="right">Value&lt;/th>
+&lt;th align="right">Value.P&lt;/th>
+&lt;th align="right">Allocation&lt;/th>
+&lt;th align="right">Deposit&lt;/th>
+&lt;th align="right">Captial&lt;/th>
+&lt;th align="right">Debt&lt;/th>
+&lt;th align="right">Cap&lt;/th>
+&lt;th align="right">Contribution&lt;/th>
+&lt;th align="right">Repayments&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr class="odd">
+&lt;td align="left">q&lt;/td>
+&lt;td align="right">163827&lt;/td>
+&lt;td align="right">0.065&lt;/td>
+&lt;td align="right">0.979&lt;/td>
+&lt;td align="right">16382&lt;/td>
+&lt;td align="right">147445&lt;/td>
+&lt;td align="right">0&lt;/td>
+&lt;td align="right">2457.405&lt;/td>
+&lt;td align="right">1287.24&lt;/td>
+&lt;td align="right">0.00&lt;/td>
+&lt;/tr>
+&lt;tr class="even">
+&lt;td align="left">a&lt;/td>
+&lt;td align="right">165994&lt;/td>
+&lt;td align="right">0.066&lt;/td>
+&lt;td align="right">1.022&lt;/td>
+&lt;td align="right">16599&lt;/td>
+&lt;td align="right">5488&lt;/td>
+&lt;td align="right">138847&lt;/td>
+&lt;td align="right">2489.910&lt;/td>
+&lt;td align="right">208.02&lt;/td>
+&lt;td align="right">208.02&lt;/td>
+&lt;/tr>
+&lt;tr class="odd">
+&lt;td align="left">z&lt;/td>
+&lt;td align="right">159425&lt;/td>
+&lt;td align="right">0.063&lt;/td>
+&lt;td align="right">0.933&lt;/td>
+&lt;td align="right">15943&lt;/td>
+&lt;td align="right">76632&lt;/td>
+&lt;td align="right">63601&lt;/td>
+&lt;td align="right">2391.375&lt;/td>
+&lt;td align="right">995.46&lt;/td>
+&lt;td align="right">995.46&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>Without worrying too much about the details, the basics of the dataset are
+as follows:&lt;/p>
+&lt;ul>
+&lt;li>One observation per row, these will later be bars on the box plot&lt;/li>
+&lt;li>Two components of data - captital and revenue&lt;/li>
+&lt;li>Different orders of magnitude: some data is in absolute monetary terms, some in percentages&lt;/li>
+&lt;/ul>
+&lt;p>Base on the above points, a prerequisite was to create preliminary plots and manipulate the
+data so it would better fit in a coxcomb plot.&lt;/p>
+&lt;p>The first stage, however, is to demonstrate how the addition of
+&lt;code>coord_polar&lt;/code> to a barchart can conver it into a pie chart:&lt;/p>
+&lt;pre class="r">&lt;code>library(ggplot2)
+(p &amp;lt;- ggplot(f, aes(x = H, y = Allocation)) + geom_bar(color = &amp;quot;black&amp;quot;, stat = &amp;quot;identity&amp;quot;,
+width = 1))&lt;/code>&lt;/pre>
+&lt;p>&lt;img src="https://www.robinlovelace.net/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-2-1.png" width="672" />&lt;/p>
+&lt;div class="figure">
+&lt;img src="" alt="" />
+&lt;p class="caption">plot of chunk unnamed-chunk-2&lt;/p>
+&lt;/div>
+&lt;pre class="r">&lt;code>p + coord_polar()&lt;/code>&lt;/pre>
+&lt;p>&lt;img src="https://www.robinlovelace.net/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-3-1.png" width="672" />&lt;/p>
+&lt;!-- ![plot of chunk unnamed-chunk-2](https://raw.github.com/Robinlovelace/robinlovelace.github.io/master/figure/unnamed-chunk-22.png) -->
+&lt;p>The above example works well, but notice that all the bars are of equal widths.
+What we want is to be proportional to a value (variable “Value”) of each observation.
+To do this we use the age-old function &lt;code>cumsum&lt;/code>, as described in an
+answer to a &lt;a href="http://stackoverflow.com/questions/20688376/how-to-make-variable-bar-widths-in-ggplot2-not-overlap-or-gap">stackexchange question&lt;/a>.&lt;/p>
+&lt;pre class="r">&lt;code>w &amp;lt;- f$Value
+pos &amp;lt;- 0.5 * (cumsum(w) + cumsum(c(0, w[-length(w)])))
+(p &amp;lt;- ggplot(f, aes(x = pos)) + geom_bar(aes(y = Allocation), width = w, color = &amp;quot;black&amp;quot;,
+stat = &amp;quot;identity&amp;quot;))&lt;/code>&lt;/pre>
+&lt;p>&lt;img src="https://www.robinlovelace.net/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-4-1.png" width="672" />&lt;/p>
+&lt;!-- ![plot of chunk unnamed-chunk-3](https://raw.github.com/Robinlovelace/robinlovelace.github.io/master/figure/unnamed-chunk-31.png) -->
+&lt;pre class="r">&lt;code>p + coord_polar(theta = &amp;quot;x&amp;quot;) + scale_x_continuous(labels = f$H, breaks = pos)&lt;/code>&lt;/pre>
+&lt;p>&lt;img src="https://www.robinlovelace.net/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-5-1.png" width="672" />&lt;/p>
+&lt;!-- ![plot of chunk unnamed-chunk-3](https://raw.github.com/Robinlovelace/robinlovelace.github.io/master/figure/unnamed-chunk-32.png) -->
+&lt;p>Finally a spie chart has been created. After that revelation, it was essentially about adding the ‘bells and
+whistles’, including a 10% line to represent how much more or less than their share each observation was
+paying.&lt;/p>
+&lt;/div>
+&lt;div id="adding-the-10" class="section level2">
+&lt;h2>Adding the 10 %&lt;/h2>
+&lt;pre class="r">&lt;code>f$Deposit/f$Value&lt;/code>&lt;/pre>
+&lt;pre>&lt;code>## [1] 0.09999573 0.09999759 0.10000314 0.09999837 0.10000120 0.10000000
+## [7] 0.10000311 0.10000085 0.10000511 0.10000356 0.09999676 0.09999700
+## [13] 0.09999812 0.10000511 0.10000085 0.10000240 0.10000000 0.10000694
+## [19] 0.09999901 0.09999883&lt;/code>&lt;/pre>
+&lt;pre class="r">&lt;code># add 10% in there
+p &amp;lt;- ggplot(f)
+p + geom_bar(aes(x = pos, y = Allocation), width = w, color = &amp;quot;black&amp;quot;, stat = &amp;quot;identity&amp;quot;) +
+geom_bar(aes(x = pos, y = 0.1), width = w, color = &amp;quot;black&amp;quot;, stat = &amp;quot;identity&amp;quot;,
+fill = &amp;quot;green&amp;quot;) + coord_polar()&lt;/code>&lt;/pre>
+&lt;p>&lt;img src="https://www.robinlovelace.net/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-7-1.png" width="672" />&lt;/p>
+&lt;!-- ![plot of chunk unnamed-chunk-4](https://raw.github.com/Robinlovelace/robinlovelace.github.io/master/figure/unnamed-chunk-41.png) -->
+&lt;pre class="r">&lt;code># make proportional to area
+f$Allo &amp;lt;- sqrt(f$Allocation)
+p &amp;lt;- ggplot(f)
+p + geom_bar(aes(x = pos, y = Allo, width = w), color = &amp;quot;black&amp;quot;, stat = &amp;quot;identity&amp;quot;) +
+geom_bar(aes(x = pos, y = sqrt(0.1), width = w), color = &amp;quot;black&amp;quot;, stat = &amp;quot;identity&amp;quot;,
+fill = &amp;quot;green&amp;quot;) + coord_polar()&lt;/code>&lt;/pre>
+&lt;pre>&lt;code>## Warning: Ignoring unknown aesthetics: width
+## Warning: Ignoring unknown aesthetics: width&lt;/code>&lt;/pre>
+&lt;p>&lt;img src="https://www.robinlovelace.net/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-8-1.png" width="672" />&lt;/p>
+&lt;!-- ![plot of chunk unnamed-chunk-4](https://raw.github.com/Robinlovelace/robinlovelace.github.io/master/figure/unnamed-chunk-42.png) -->
+&lt;pre class="r">&lt;code># add capital
+capital &amp;lt;- (f$Captial + f$Deposit)/(f$Value) * f$Allocation
+capital &amp;lt;- sqrt(capital)
+p + geom_bar(aes(x = pos, y = Allo, width = w), color = &amp;quot;black&amp;quot;, stat = &amp;quot;identity&amp;quot;) +
+geom_bar(aes(x = pos, y = capital, width = w), color = &amp;quot;black&amp;quot;, stat = &amp;quot;identity&amp;quot;,
+fill = &amp;quot;red&amp;quot;) + geom_bar(aes(x = pos, y = sqrt(0.1), width = w), color = &amp;quot;black&amp;quot;,
+stat = &amp;quot;identity&amp;quot;, fill = &amp;quot;green&amp;quot;) + coord_polar() + scale_x_continuous(labels = f$H,
+breaks = pos)&lt;/code>&lt;/pre>
+&lt;pre>&lt;code>## Warning: Ignoring unknown aesthetics: width
+## Warning: Ignoring unknown aesthetics: width
+## Warning: Ignoring unknown aesthetics: width&lt;/code>&lt;/pre>
+&lt;p>&lt;img src="https://www.robinlovelace.net/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-9-1.png" width="672" />&lt;/p>
+&lt;!-- ![plot of chunk unnamed-chunk-4](https://raw.github.com/Robinlovelace/robinlovelace.github.io/master/figure/unnamed-chunk-43.png) -->
+&lt;pre class="r">&lt;code># add ablines
+p + geom_bar(aes(x = pos, y = Allo, width = w), color = &amp;quot;grey40&amp;quot;, stat = &amp;quot;identity&amp;quot;,
+fill = &amp;quot;lightgrey&amp;quot;) + geom_bar(aes(x = pos, y = capital, width = w), color = &amp;quot;grey40&amp;quot;,
+stat = &amp;quot;identity&amp;quot;, fill = &amp;quot;red&amp;quot;) + geom_bar(aes(x = pos, y = sqrt(0.1),
+width = w), color = &amp;quot;grey40&amp;quot;, stat = &amp;quot;identity&amp;quot;, fill = &amp;quot;green&amp;quot;) + geom_abline(intercept = 1,
+slope = 0, linetype = 2) + geom_abline(intercept = sqrt(1.1), slope = 0,
+linetype = 3) + geom_abline(intercept = sqrt(0.9), slope = 0, linetype = 3)&lt;/code>&lt;/pre>
+&lt;pre>&lt;code>## Warning: Ignoring unknown aesthetics: width
+## Warning: Ignoring unknown aesthetics: width
+## Warning: Ignoring unknown aesthetics: width&lt;/code>&lt;/pre>
+&lt;p>&lt;img src="https://www.robinlovelace.net/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-10-1.png" width="672" />&lt;/p>
+&lt;div class="figure">
+&lt;img src="https://raw.github.com/Robinlovelace/robinlovelace.github.io/master/figure/unnamed-chunk-44.png" alt="" />
+&lt;p class="caption">plot of chunk unnamed-chunk-4&lt;/p>
+&lt;/div>
+&lt;pre class="r">&lt;code># calculate vertical ablines of divisions
+v1 &amp;lt;- 0.51 * f$Value[1]
+v2 &amp;lt;- cumsum(f$Value)[17] + f$Value[18] * 0.31
+v3 &amp;lt;- cumsum(f$Value)[17] + f$Value[18] * 0.64
+p + geom_bar(aes(x = pos, y = Allo, width = w), color = &amp;quot;grey40&amp;quot;, stat = &amp;quot;identity&amp;quot;,
+fill = &amp;quot;lightgrey&amp;quot;) +
+geom_vline(x = v1, linetype = 5, xintercept = 0) +
+geom_vline(x = v2, linetype = 5, xintercept = 0) +
+geom_vline(x = v3, linetype = 5, xintercept = 0) +
+coord_polar()&lt;/code>&lt;/pre>
+&lt;pre>&lt;code>## Warning: Ignoring unknown aesthetics: width&lt;/code>&lt;/pre>
+&lt;pre>&lt;code>## Warning: Ignoring unknown parameters: x
+## Warning: Ignoring unknown parameters: x
+## Warning: Ignoring unknown parameters: x&lt;/code>&lt;/pre>
+&lt;p>&lt;img src="https://www.robinlovelace.net/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-11-1.png" width="672" />&lt;/p>
+&lt;pre class="r">&lt;code># putting it all together
+p &amp;lt;- ggplot(f)
+p + geom_bar(aes(x = pos, y = Allo, width = w), color = &amp;quot;grey40&amp;quot;, stat = &amp;quot;identity&amp;quot;,
+fill = &amp;quot;lightgrey&amp;quot;) + geom_bar(aes(x = pos, y = capital, width = w), color = &amp;quot;grey40&amp;quot;,
+stat = &amp;quot;identity&amp;quot;, fill = &amp;quot;red&amp;quot;) + geom_bar(aes(x = pos, y = sqrt(0.1),
+width = w), color = &amp;quot;grey40&amp;quot;, stat = &amp;quot;identity&amp;quot;, fill = &amp;quot;green&amp;quot;) + geom_abline(intercept = 1,
+slope = 0, linetype = 2) + geom_abline(intercept = sqrt(1.1), slope = 0,
+linetype = 3) + geom_abline(intercept = sqrt(0.9), slope = 0, linetype = 3) +
+geom_vline(x = v1, linetype = 5, xintercept = 0) +
+geom_vline(x = v2, linetype = 5, xintercept = 0) +
+geom_vline(x = v3, linetype = 5, xintercept = 0) +
+coord_polar() + scale_x_continuous(labels = f$H, breaks = pos) +
+theme_classic()&lt;/code>&lt;/pre>
+&lt;pre>&lt;code>## Warning: Ignoring unknown aesthetics: width
+## Warning: Ignoring unknown aesthetics: width
+## Warning: Ignoring unknown aesthetics: width&lt;/code>&lt;/pre>
+&lt;pre>&lt;code>## Warning: Ignoring unknown parameters: x
+## Warning: Ignoring unknown parameters: x
+## Warning: Ignoring unknown parameters: x&lt;/code>&lt;/pre>
+&lt;p>&lt;img src="https://www.robinlovelace.net/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-12-1.png" width="672" />&lt;/p>
+&lt;p>The above looks great, but ideally, for an ‘infographic’ feel, it would
+have no annoying axes clogging up the visuals. This was done by creating an
+entirely new ggpot theme.&lt;/p>
+&lt;/div>
+&lt;div id="create-theme-with-no-axes" class="section level2">
+&lt;h2>Create theme with no axes&lt;/h2>
+&lt;pre class="r">&lt;code>theme_infog &amp;lt;- theme_classic() + theme(axis.line = element_blank(), axis.title = element_blank(),
+axis.ticks = element_blank(), axis.text.y = element_blank())
+last_plot() + theme_infog&lt;/code>&lt;/pre>
+&lt;p>&lt;img src="https://www.robinlovelace.net/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-13-1.png" width="672" />&lt;/p>
+&lt;/div>
+&lt;div id="creating-a-ring" class="section level2">
+&lt;h2>Creating a ring&lt;/h2>
+&lt;p>To add the revenue element to the graph is not a task to be taken likely.
+This was how I tackled the problem, by creating a tall, variable-width
+bar chart first, and later adding the original spie chart after:&lt;/p>
+&lt;pre class="r">&lt;code>f$Cap.r &amp;lt;- f$Cap/mean(f$Cap) * 0.1 + 1.2
+f$Cont.r &amp;lt;- f$Contribution/mean(f$Cap) * 0.1 + 1.2
+f$Rep.r &amp;lt;- f$Cont.r + f$Repayments/mean(f$Cap) * 0.1
+f$H &amp;lt;- c(&amp;quot;a&amp;quot;, &amp;quot;b&amp;quot;, &amp;quot;c&amp;quot;, &amp;quot;d&amp;quot;, &amp;quot;e&amp;quot;, &amp;quot;f&amp;quot;, &amp;quot;g&amp;quot;, &amp;quot;h&amp;quot;, &amp;quot;i&amp;quot;, &amp;quot;j&amp;quot;, &amp;quot;k&amp;quot;, &amp;quot;l&amp;quot;, &amp;quot;m&amp;quot;, &amp;quot;n&amp;quot;,
+&amp;quot;o&amp;quot;, &amp;quot;p&amp;quot;, &amp;quot;q&amp;quot;, &amp;quot;r&amp;quot;, &amp;quot;s&amp;quot;, &amp;quot;t&amp;quot;)
+p &amp;lt;- ggplot(f)
+p + geom_bar(aes(x = pos, y = Allo, width = w), color = &amp;quot;grey40&amp;quot;, stat = &amp;quot;identity&amp;quot;,
+fill = &amp;quot;lightgrey&amp;quot;)&lt;/code>&lt;/pre>
+&lt;pre>&lt;code>## Warning: Ignoring unknown aesthetics: width&lt;/code>&lt;/pre>
+&lt;p>&lt;img src="https://www.robinlovelace.net/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-14-1.png" width="672" />&lt;/p>
+&lt;!-- ![plot of chunk unnamed-chunk-6](https://raw.github.com/Robinlovelace/robinlovelace.github.io/master/figure/unnamed-chunk-61.png) -->
+&lt;pre class="r">&lt;code># we need the axes to be bigger for starters - try 1.3 to 1.5
+p + geom_bar(aes(x = pos, y = Cap.r, width = w), color = &amp;quot;grey40&amp;quot;, stat = &amp;quot;identity&amp;quot;,
+fill = &amp;quot;white&amp;quot;) + geom_bar(aes(x = pos, y = Rep.r, width = w), color = &amp;quot;grey40&amp;quot;,
+stat = &amp;quot;identity&amp;quot;, fill = &amp;quot;grey80&amp;quot;) + geom_bar(aes(x = pos, y = Cont.r,
+width = w), color = &amp;quot;grey40&amp;quot;, stat = &amp;quot;identity&amp;quot;, fill = &amp;quot;grey30&amp;quot;) + geom_bar(aes(x = pos,
+y = 1.196, width = w), color = &amp;quot;white&amp;quot;, stat = &amp;quot;identity&amp;quot;, fill = &amp;quot;white&amp;quot;)&lt;/code>&lt;/pre>
+&lt;pre>&lt;code>## Warning: Ignoring unknown aesthetics: width
+## Warning: Ignoring unknown aesthetics: width
+## Warning: Ignoring unknown aesthetics: width
+## Warning: Ignoring unknown aesthetics: width&lt;/code>&lt;/pre>
+&lt;p>&lt;img src="https://www.robinlovelace.net/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-15-1.png" width="672" />&lt;/p>
+&lt;pre class="r">&lt;code>last_plot() + geom_bar(aes(x = pos, y = Allo, width = w), color = &amp;quot;grey40&amp;quot;,
+stat = &amp;quot;identity&amp;quot;, fill = &amp;quot;grey80&amp;quot;) + geom_bar(aes(x = pos, y = capital,
+width = w), color = &amp;quot;grey40&amp;quot;, stat = &amp;quot;identity&amp;quot;, fill = &amp;quot;grey30&amp;quot;) + geom_bar(aes(x = pos,
+y = sqrt(0.1), width = w), color = &amp;quot;grey40&amp;quot;, stat = &amp;quot;identity&amp;quot;, fill = &amp;quot;black&amp;quot;) +
+geom_abline(intercept = 1, slope = 0, linetype = 5) + geom_abline(intercept = sqrt(1.1),
+slope = 0, linetype = 3) + geom_abline(intercept = sqrt(0.9), slope = 0,
+linetype = 3) + coord_polar() + scale_x_continuous(labels = f$H, breaks = pos) +
+theme_infog&lt;/code>&lt;/pre>
+&lt;pre>&lt;code>## Warning: Ignoring unknown aesthetics: width
+## Warning: Ignoring unknown aesthetics: width
+## Warning: Ignoring unknown aesthetics: width&lt;/code>&lt;/pre>
+&lt;p>&lt;img src="https://www.robinlovelace.net/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-16-1.png" width="672" />&lt;/p>
+&lt;!-- ![plot of chunk unnamed-chunk-6](https://raw.github.com/Robinlovelace/robinlovelace.github.io/master/figure/unnamed-chunk-63.png) -->
+&lt;/div>
+&lt;div id="just-inner" class="section level2">
+&lt;h2>Just inner&lt;/h2>
+&lt;p>After all that it was decided it looked nicer with only the inner ring anyway.
+Here is the finished product:&lt;/p>
+&lt;pre class="r">&lt;code>p &amp;lt;- ggplot(f)
+p + geom_bar(aes(x = pos, y = Allo, width = w), color = &amp;quot;grey40&amp;quot;, stat = &amp;quot;identity&amp;quot;,
+fill = &amp;quot;grey80&amp;quot;) + geom_bar(aes(x = pos, y = capital, width = w), color = &amp;quot;grey40&amp;quot;,
+stat = &amp;quot;identity&amp;quot;, fill = &amp;quot;grey30&amp;quot;) + geom_bar(aes(x = pos, y = sqrt(0.1),
+width = w), color = &amp;quot;grey40&amp;quot;, stat = &amp;quot;identity&amp;quot;, fill = &amp;quot;black&amp;quot;) + geom_abline(intercept = 1,
+slope = 0, linetype = 5) + geom_abline(intercept = sqrt(1.1), slope = 0,
+linetype = 3) + geom_abline(intercept = sqrt(0.9), slope = 0, linetype = 3) +
+coord_polar() + scale_x_continuous(labels = f$H, breaks = pos) + theme_infog&lt;/code>&lt;/pre>
+&lt;pre>&lt;code>## Warning: Ignoring unknown aesthetics: width
+## Warning: Ignoring unknown aesthetics: width
+## Warning: Ignoring unknown aesthetics: width&lt;/code>&lt;/pre>
+&lt;p>&lt;img src="https://www.robinlovelace.net/post/2013-12-27-coxcomb-plots-spiecharts-R_files/figure-html/unnamed-chunk-17-1.png" width="672" />&lt;/p>
+&lt;!-- ![plot of chunk unnamed-chunk-7](https://raw.github.com/Robinlovelace/robinlovelace.github.io/master/figure/unnamed-chunk-7.png) -->
+&lt;pre class="r">&lt;code>ggsave(&amp;quot;just-inner.png&amp;quot;, width = 7, height = 7, dpi = 800)&lt;/code>&lt;/pre>
+&lt;/div></description></item></channel></rss>

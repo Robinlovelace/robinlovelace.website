@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Análisis de redes de transporte con R</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Robin Lovelace" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
+    <script src="libs/htmlwidgets/htmlwidgets.js"></script>
+    <script src="libs/jquery/jquery.min.js"></script>
+    <link href="libs/leaflet/leaflet.css" rel="stylesheet" />
+    <script src="libs/leaflet/leaflet.js"></script>
+    <link href="libs/leafletfix/leafletfix.css" rel="stylesheet" />
+    <script src="libs/proj4/proj4.min.js"></script>
+    <script src="libs/Proj4Leaflet/proj4leaflet.js"></script>
+    <link href="libs/rstudio_leaflet/rstudio_leaflet.css" rel="stylesheet" />
+    <script src="libs/leaflet-binding/leaflet.js"></script>
+    <script src="libs/leaflet-providers/leaflet-providers_1.9.0.js"></script>
+    <script src="libs/leaflet-providers-plugin/leaflet-providers-plugin.js"></script>
+    <script src="libs/clipboard/setClipboardText.js"></script>
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Análisis de redes de transporte con R
+## y la búsqueda para espacio libre
+### Robin Lovelace
+### University of Leeds, 2021-05-18<br/><img class="img-footer" alt="" src="http://www.stephanehess.me.uk/images/picture3.png">
+
+---
+
+
+background-image: url(https://c1.staticflickr.com/2/1216/1096671706_571a263b63_b.jpg)
+background-position: 50% 50%
+class: center, bottom, inverse
+
+# Credit: Mandeep Lota via [flickr](https://www.flickr.com/photos/deepster2k/1096671706)
+
+
+
+---
+
+&lt;!-- # Notes --&gt;
+
+&lt;!-- - Jerarquización del viario o viaria o mejor la jerarchia de las vias --&gt;
+&lt;!-- - Jerarquia de los datos --&gt;
+&lt;!-- - Diapos o diapositivas --&gt;
+&lt;!-- - Priorizar via cyclistas --&gt;
+&lt;!-- - Fue financiado por el departamento de transporte --&gt;
+&lt;!-- - Es un poco anticuado --&gt;
+&lt;!-- - Cuantos carriles --&gt;
+&lt;!-- - La distribucion del espacio --&gt;
+
+
+
+---
+
+## Mi historia
+
+<div id="htmlwidget-c6c73f6985286baebddc" style="width:504px;height:504px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-c6c73f6985286baebddc">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"createMapPane","args":["tmap401",401]},{"method":"createMapPane","args":["tmap402",402]},{"method":"addProviderTiles","args":["Esri.WorldGrayCanvas",null,"Esri.WorldGrayCanvas",{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"pane":"tilePane"}]},{"method":"addProviderTiles","args":["OpenStreetMap",null,"OpenStreetMap",{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"pane":"tilePane"}]},{"method":"addProviderTiles","args":["Esri.WorldTopoMap",null,"Esri.WorldTopoMap",{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"pane":"tilePane"}]},{"method":"addCircleMarkers","args":[[52.0553813,40.9651572,53.7974185],[-2.7151735,-5.6640182,-1.5437941],[2.82842712474619,2.82842712474619,2.82842712474619],[null,null,null],"places$point",{"interactive":true,"className":"","pane":"tmap401","stroke":true,"color":"#666666","weight":1,"opacity":0.5,"fill":true,"fillColor":["#000000","#000000","#000000"],"fillOpacity":[1,1,1]},null,null,null,null,[null,null,null],{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addLayersControl","args":[["Esri.WorldGrayCanvas","OpenStreetMap","Esri.WorldTopoMap"],"places$point",{"collapsed":true,"autoZIndex":true,"position":"topleft"}]},{"method":"addScaleBar","args":[{"maxWidth":100,"metric":true,"imperial":false,"updateWhenIdle":true,"position":"bottomright"}]}],"limits":{"lat":[40.9651572,53.7974185],"lng":[-5.6640182,-1.5437941]},"fitBounds":[40.9651572,-5.6640182,53.7974185,-1.5437941,[]]},"evals":[],"jsHooks":{"render":[{"code":"function(el, x, data) {\n  return (\n      function(el, x, data) {\n      // get the leaflet map\n      var map = this; //HTMLWidgets.find('#' + el.id);\n      // we need a new div element because we have to handle\n      // the mouseover output separately\n      // debugger;\n      function addElement () {\n      // generate new div Element\n      var newDiv = $(document.createElement('div'));\n      // append at end of leaflet htmlwidget container\n      $(el).append(newDiv);\n      //provide ID and style\n      newDiv.addClass('lnlt');\n      newDiv.css({\n      'position': 'relative',\n      'bottomleft':  '0px',\n      'background-color': 'rgba(255, 255, 255, 0.7)',\n      'box-shadow': '0 0 2px #bbb',\n      'background-clip': 'padding-box',\n      'margin': '0',\n      'padding-left': '5px',\n      'color': '#333',\n      'font': '9px/1.5 \"Helvetica Neue\", Arial, Helvetica, sans-serif',\n      'z-index': '700',\n      });\n      return newDiv;\n      }\n\n\n      // check for already existing lnlt class to not duplicate\n      var lnlt = $(el).find('.lnlt');\n\n      if(!lnlt.length) {\n      lnlt = addElement();\n\n      // grab the special div we generated in the beginning\n      // and put the mousmove output there\n\n      map.on('mousemove', function (e) {\n      if (e.originalEvent.ctrlKey) {\n      if (document.querySelector('.lnlt') === null) lnlt = addElement();\n      lnlt.text(\n                           ' lon: ' + (e.latlng.lng).toFixed(5) +\n                           ' | lat: ' + (e.latlng.lat).toFixed(5) +\n                           ' | zoom: ' + map.getZoom() +\n                           ' | x: ' + L.CRS.EPSG3857.project(e.latlng).x.toFixed(0) +\n                           ' | y: ' + L.CRS.EPSG3857.project(e.latlng).y.toFixed(0) +\n                           ' | epsg: 3857 ' +\n                           ' | proj4: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs ');\n      } else {\n      if (document.querySelector('.lnlt') === null) lnlt = addElement();\n      lnlt.text(\n                      ' lon: ' + (e.latlng.lng).toFixed(5) +\n                      ' | lat: ' + (e.latlng.lat).toFixed(5) +\n                      ' | zoom: ' + map.getZoom() + ' ');\n      }\n      });\n\n      // remove the lnlt div when mouse leaves map\n      map.on('mouseout', function (e) {\n      var strip = document.querySelector('.lnlt');\n      if( strip !==null) strip.remove();\n      });\n\n      };\n\n      //$(el).keypress(67, function(e) {\n      map.on('preclick', function(e) {\n      if (e.originalEvent.ctrlKey) {\n      if (document.querySelector('.lnlt') === null) lnlt = addElement();\n      lnlt.text(\n                      ' lon: ' + (e.latlng.lng).toFixed(5) +\n                      ' | lat: ' + (e.latlng.lat).toFixed(5) +\n                      ' | zoom: ' + map.getZoom() + ' ');\n      var txt = document.querySelector('.lnlt').textContent;\n      console.log(txt);\n      //txt.innerText.focus();\n      //txt.select();\n      setClipboardText('\"' + txt + '\"');\n      }\n      });\n\n      }\n      ).call(this.getMap(), el, x, data);\n}","data":null}]}}</script>
+
+---
+
+## Proyectos
+
+- Geographer (BSc 2008) and Environmental Scientist (MSc 2009) by training
+- Interest in energy led to PhD in transport (PhD in energy costs of commuting [2014](http://etheses.whiterose.ac.uk/5027/))
+- Limitations of [GUIs](https://twitter.com/robinlovelace/status/1129404652150243329) for modelling -&gt; Spatial Microsimulation with R ([2016](https://spatial-microsim-book.robinlovelace.net/))
+- Co-authored Efficient R Programming ([2016](https://csgillespie.github.io/efficientR/))
+- Lead Developer of Propensity to Cycle Tool (PCT) ([2017](https://www.jtlu.org/index.php/jtlu/article/view/862))
+- Application of methods, e.g. to school accessibility ([2018](http://eprints.whiterose.ac.uk/121439/))
+- Co-author of Geocomputation with R ([2019](http://geocompr.robinlovelace.net/transport.html))
+
+---
+
+### La necesidad de evidencia durante y despues de la pandemia
+
+https://findingspress.org/article/13421-methods-to-prioritise-pop-up-active-transport-infrastructure
+
+![](https://s3.amazonaws.com/production.scholastica/attachment/36921/large/image_1_.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAQP35HG4CYCAIE5XO%2F20210518%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20210518T182447Z&amp;X-Amz-Expires=10000&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=233d04ee028191dcb61f9a350c00e7124fa69f45c06e5b544b48a810717e3f99)
+
+---
+
+### La historia de la heramienta 'Rapid'
+
+![](https://www.cyclinguk.org/sites/default/files/styles/hero_desktop/public/media/2020/04/a.jpg?itok=kYSpU54q&amp;timestamp=1588161258)
+
+https://www.cyclinguk.org/article/10-cities-where-pop-bike-lanes-could-benefit-millions-explore-maps#1
+
+---
+
+## Infraestructura
+
+- Sheffield [infrastructure](https://www.cyclesheffield.org.uk/2018/01/01/cyclesheffield-response-to-portobello-trippet-lane-cycle-route-designs/)
+
+- Article on Yorkshire Voice on the Leeds-Bradford [Cycle Superhighway](http://www.yorkshire-voice.com/mixed-views-as-29m-cycle-superhighway-linking-leeds-and-bradford-nears-completion/)
+
+- A detailed article on the same cycleway by [Mark Strong](https://aseasyasridingabike.wordpress.com/2016/08/11/a-visit-to-the-leeds-bradford-cycle-superhighway/)
+
+- Academic article on thinking at level of cycleway networks (Buehler and Dill [2015](https://www.tandfonline.com/doi/full/10.1080/01441647.2015.1069908?journalCode=ttrv20))
+
+- The Propensity to Cycle Tool ([pct.bike](https://www.pct.bike/))
+
+- The Cycling Infrastructure Prioritisation Toolkit ([CyIPT.bike](https://www.cyipt.bike/existing/#13/53.4690/-2.2506/mapnik))
+
+- Consultation on the Torrington Place / Tavistock Place 'pop-up' cycleway from [Cambden.gov.uk](https://www.camden.gov.uk/documents/20142/3452947/Consultation+leaflet+FINAL.pdf/f628d6e8-c47b-82f1-cb40-8e24db78bea6)
+
+---
+
+# La Heramienta
+
+- Map of pop-up interventions in response to COVID-19 from [CyclingUK](https://www.cyclinguk.org/covid-19-safe-space-social-distancing)
+
+- Maps of roads with 'spare lanes' in 10 cities from our our 'cyipt' [website](https://www.cyclinguk.org/article/10-cities-where-pop-bike-lanes-could-benefit-millions-explore-maps)
+
+- New statutory [guidance from DfT on road space reallocation](https://www.gov.uk/government/publications/reallocating-road-space-in-response-to-covid-19-statutory-guidance-for-local-authorities)
+
+- Analysis to support [road space reallocation in Manchester](https://github.com/cyipt/popupCycleways/blob/master/code/mcr-safe-streets-analysis.md#analysis-of-cycling-potential-around-key-corridors-in-greater-manchester)
+
+- Image of new [pop-up going in in Greater Manchester](https://github.com/cyipt/popupCycleways/issues/27)
+
+---
+
+## La hermienta
+
+https://www.cyipt.bike/rapid/
+
+---
+
+## Infrastructura en Chile
+
+https://rpubs.com/RobinLovelace/771169
+
+---
+
+## Infrastructurea en Santiago
+
+https://rpubs.com/RobinLovelace/771185
+
+---
+
+# References
+
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

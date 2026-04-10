@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>book review | Robin Lovelace</title><link>https://www.robinlovelace.net/tag/book-review/</link><atom:link href="https://www.robinlovelace.net/tag/book-review/index.xml" rel="self" type="application/rss+xml"/><description>book review</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 22 Feb 2021 00:00:00 +0000</lastBuildDate><image><url>https://www.robinlovelace.net/media/icon_hu93dbabadc2a9bdd4930d1377c0b338b2_5137_512x512_fill_lanczos_center_3.png</url><title>book review</title><link>https://www.robinlovelace.net/tag/book-review/</link></image><item><title>Human compatible book review</title><link>https://www.robinlovelace.net/post/human-compatible-book-review/</link><pubDate>Mon, 22 Feb 2021 00:00:00 +0000</pubDate><guid>https://www.robinlovelace.net/post/human-compatible-book-review/</guid><description>
+&lt;script src="https://www.robinlovelace.net/post/human-compatible-book-review/index_files/header-attrs/header-attrs.js">&lt;/script>
+&lt;div id="rating" class="section level2">
+&lt;h2>Rating&lt;/h2>
+&lt;p>Highly recommended, 5/5.&lt;/p>
+&lt;/div>
+&lt;div id="one-sentence-review" class="section level2">
+&lt;h2>One sentence review&lt;/h2>
+&lt;p>Outstanding and original description of artificial intelligence (AI) in the 21st Century, the problems it could pose, and a lucid proposal for ‘provably beneficial AI.’&lt;/p>
+&lt;/div>
+&lt;div id="review" class="section level2">
+&lt;h2>Review&lt;/h2>
+&lt;p>I recently completed the book &lt;a href="https://en.wikipedia.org/wiki/Human_Compatible">Human Compatible&lt;/a> by Professor of Computer Science at Berkeley, &lt;a href="https://en.wikipedia.org/wiki/Stuart_J._Russell">Stuart Russell&lt;/a> &lt;span class="citation">(&lt;a href="#ref-russell_human_2019" role="doc-biblioref">Russell 2019&lt;/a>)&lt;/span>.
+The first book on the subject I have read, it greatly enhanced my understanding of a complex subject and made me feel compelled to write a brief review, for the benefit of myself (I’m still consolidating my understanding of the books key ideas and find that writing them down helps) and others.&lt;/p>
+&lt;p>I first encountered Stuart Russell and his ideas in a podcast for The Guardian’s Science weekly in October 2019, which is still &lt;a href="https://www.theguardian.com/technology/audio/2019/oct/18/stuart-russell-on-why-now-is-the-time-to-start-thinking-about-superintelligent-ai-science-weekly-podcast">available and well worth a listen&lt;/a>.
+As someone who has spent much time thinking about, using and to some extent developing technologies to support a small but influential area of human activity (Transport Planning), I am acutely aware of the potential for technologies to have really world impacts.
+In my case, the technology is fairly narrow and, as far as I am aware, can only be used for the definitively benign activity of cycle network planning &lt;span class="citation">(&lt;a href="#ref-lovelace_propensity_2017" role="doc-biblioref">Lovelace et al. 2017&lt;/a>)&lt;/span>.&lt;/p>
+&lt;p>But imagine you were developing a much more ambitious and generally applicable technology with the explicit objective of becoming more intelligent than humans in increasing range of areas: to develop general computer intelligence.
+That is the starting point of Stuart’s book, the history of the academic field of AI and the astounding progress AI researchers have made in the last couple of years.&lt;/p>
+&lt;p>Stuart delves into the issues that AI researchers have themselves been grappling with, starting with ‘father of AI’ Alan Turing:&lt;/p>
+&lt;blockquote>
+&lt;p>Even before the birth of AI in 1956, august intellectuals were harrumphing and saying that intelligent machines were impossible. Alan Turing devoted much of his seminal 1950 paper, “Computing Machinery and Intelligence,” to refuting these arguments. Ever since, the AI community has been fending off similar claims of impossibility.&lt;/p>
+&lt;/blockquote>
+&lt;p>The point is that the great Alan Turing and AI researchers since then have had to debunk simplistic arguments to the effect that ‘AI is impossible,’ from a range of perspectives.
+Paradoxically, it seems that as AI researchers have actually got closer to achieving general intelligence their willingness to discuss the wider implications have reduced (or at least not increased as one would have expected).
+Surprisingly, some AI researchers have even began to deny the possibility of succeeding in &lt;em>own area&lt;/em>.
+This is despite rapid growth of the range of tasks at which machines outperform humans, from playing games such as Go to commercially valuable services such as (in some contexts) human language translation and medical diagnosis of diseases.&lt;/p>
+&lt;p>A striking example of this denial is from &lt;a href="https://ai100.stanford.edu/">Stanford University’s prominent AI100 report&lt;/a>, which states simply that&lt;/p>
+&lt;blockquote>
+&lt;p>unlike in the movies, there is no race of superhuman robots on the horizon or probably even possible.&lt;/p>
+&lt;/blockquote>
+&lt;p>This is astonishing because of the context: much of the rest of the report is focussed on the impacts and benefits of AI, and progress made in the field.
+Russell sees this statement as reflective of a wider problem: unwillingness to engage in possible negative consequences if AI systems get out of control:&lt;/p>
+&lt;blockquote>
+&lt;p>To my knowledge, this is the first time that serious AI researchers have publicly espoused the view that human-level or superhuman AI is impossible—and this in the middle of a period of extremely rapid progress in AI research, when barrier after barrier is being breached. It’s as if a group of leading cancer biologists announced that they had been fooling us all along: they’ve always known that there will never be a cure for cancer.&lt;/p>
+&lt;/blockquote>
+&lt;p>Prof Russell uses the book as an opportunity to call for more open-minded debate &lt;em>among the AI community&lt;/em> of which he is a part and in wider society.
+Of course the future is uncertain, meaning we should explore a range of possible futures and act to minimise the probability of highly undesirable outcomes.
+In various scenarios of the future sketched out concisely (and somehow entertainingly) in the book, superintelligent AI leads to the demise of humanity.&lt;/p>
+&lt;p>This outcome is thankfully not guaranteed but if it at least &lt;em>may be possible&lt;/em> surely it is worthy of consideration?
+Another common objection to debate of or research into AI risks is that the threat is far in the future so we don’t need to worry.
+Russell uses the metaphor of asteroid collision to debunk this argument:&lt;/p>
+&lt;blockquote>
+&lt;p>For example, if we were to detect a large asteroid on course to collide with Earth in 2069, would we say it’s too soon to worry? Quite the opposite! There would be a worldwide emergency project to develop the means to counter the threat. We wouldn’t wait until 2068 to start working on a solution, because we can’t say in advance how much time is needed. Indeed, NASA’s Planetary Defense project is already working on possible solutions&lt;/p>
+&lt;/blockquote>
+&lt;p>The good news is that there are solutions, the subject of Chapter 7 on &lt;em>AI: A different approach&lt;/em> in which Russell sets out principles for beneficial AI:&lt;/p>
+&lt;blockquote>
+&lt;p>[beneficial machines are those] whose actions can be expected to achieve our objectives rather than their objectives. … The resulting approach should lead eventually to machines that present no threat to us, no matter how intelligent they are.&lt;/p>
+&lt;/blockquote>
+&lt;p>The approach is based on three broad principles:&lt;/p>
+&lt;blockquote>
+&lt;ol style="list-style-type: decimal">
+&lt;li>The machine’s only objective is to maximize the realization of human preferences.&lt;/li>
+&lt;/ol>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;ol start="2" style="list-style-type: decimal">
+&lt;li>The machine is initially uncertain about what those preferences are.&lt;/li>
+&lt;/ol>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;ol start="3" style="list-style-type: decimal">
+&lt;li>The ultimate source of information about human preferences is human behavior.&lt;/li>
+&lt;/ol>
+&lt;/blockquote>
+&lt;p>More good news: recent progress in AI research and processing uncertainty help make these things possible.
+The result of implementing these principles could be machines that regularly check-in to find out if what they &lt;em>think&lt;/em> is wanted is &lt;em>actually&lt;/em> what the human wants.&lt;/p>
+&lt;p>To me, the approach also has another advantage
+it leads to humility.
+Even the most intelligent people change what they want from time-to-time, and it makes sense to imbue machines with this humility. Instead of telling machines “do this at any expense,” it makes sense to say something more like “try to do this, but precede with caution and check in if you have any doubts.”
+The resulting two-way human-machine communication could lead to more evidence-based and informed decisions.&lt;/p>
+&lt;p>Judging by the &lt;a href="https://www.amazon.co.uk/Human-Compatible-AI-Problem-Control/dp/0241335205#customerReviews">169 reviews of the book on Amazon UK&lt;/a>, many of them glowing, at the time of writing, it seems that people are taking notice of Russell’s ideas.
+A Brit in the USA, Russell, he has an audience over the Atlantic also (although perhaps not quite as large or vocal an audience, with 164 reviews on the American &lt;a href="https://www.amazon.com/Human-Compatible-AI-Problem-Control/dp/0241335205#customerReviews">amazon.com&lt;/a>).
+As an informed data scientist who has seen the benefits of digital technology I am open to the possibility that there could be unintended consequences of my work.&lt;/p>
+&lt;p>I sincerely hope that AI researchers are equally open to critique:
+even if Russell’s principles get implemented to the letter, there are still risks ranging from rogue researchers to superintelligent AIs persuading us to unleash it from our control.
+But if debate/research/investment follows the lines suggests in Stuart Russell’s lucid and entertaining &lt;em>Human compatible&lt;/em>, the probability of catastrophic AI malfunction will decrease, raising the hope of using our ever more sophisticated technologies to free us rather than enslave us.&lt;/p>
+&lt;blockquote>
+&lt;p>If we succeed in creating provably beneficial AI systems, we would eliminate the risk that we might lose control over superintelligent machines. Humanity could proceed with their development and reap the almost unimaginable benefits that would flow from the ability to wield far greater intelligence in advancing our civilization. We would be released from millennia of servitude as agricultural, industrial, and clerical robots and we would be free to make the best of life’s potential.&lt;/p>
+&lt;/blockquote>
+&lt;/div>
+&lt;div id="references" class="section level2 unnumbered">
+&lt;h2>References&lt;/h2>
+&lt;div id="refs" class="references csl-bib-body hanging-indent">
+&lt;div id="ref-lovelace_propensity_2017" class="csl-entry">
+Lovelace, Robin, Anna Goodman, Rachel Aldred, Nikolai Berkoff, Ali Abbas, and James Woodcock. 2017. &lt;span>“The &lt;span>Propensity&lt;/span> to &lt;span>Cycle Tool&lt;/span>: &lt;span>An&lt;/span> Open Source Online System for Sustainable Transport Planning.”&lt;/span> &lt;em>Journal of Transport and Land Use&lt;/em> 10 (1). &lt;a href="https://doi.org/10.5198/jtlu.2016.862">https://doi.org/10.5198/jtlu.2016.862&lt;/a>.
+&lt;/div>
+&lt;div id="ref-russell_human_2019" class="csl-entry">
+Russell, Stuart. 2019. &lt;em>Human &lt;span>Compatible&lt;/span>: &lt;span>AI&lt;/span> and the &lt;span>Problem&lt;/span> of &lt;span>Control&lt;/span>&lt;/em>. 1st edition. &lt;span>London; New York&lt;/span>: &lt;span>Allen Lane&lt;/span>.
+&lt;/div>
+&lt;/div>
+&lt;/div></description></item><item><title>David Boyce and Huw Williams, Forecasting Urban Travel: Past, Present and Future</title><link>https://www.robinlovelace.net/publication/lovelace-david-2017/</link><pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate><guid>https://www.robinlovelace.net/publication/lovelace-david-2017/</guid><description/></item><item><title>Review: Sage Handbook of Transport Studies, Jean-Paul Rodrigue, Theo Notteboom, Jon Shaw (Eds.). Sage, London (2013). £95, Hardback, ISBN: 978-1-84920-789-8</title><link>https://www.robinlovelace.net/publication/lovelace-review-2014/</link><pubDate>Thu, 01 May 2014 00:00:00 +0000</pubDate><guid>https://www.robinlovelace.net/publication/lovelace-review-2014/</guid><description/></item><item><title>Overcoming Car Dependence: Review of “The Car Dependent Society–a European Perspective”</title><link>https://www.robinlovelace.net/publication/lovelace-overcoming-2014/</link><pubDate>Wed, 01 Jan 2014 00:00:00 +0000</pubDate><guid>https://www.robinlovelace.net/publication/lovelace-overcoming-2014/</guid><description/></item><item><title>Sacred Economics</title><link>https://www.robinlovelace.net/publication/lovelace-sacred-2013/</link><pubDate>Fri, 01 Feb 2013 00:00:00 +0000</pubDate><guid>https://www.robinlovelace.net/publication/lovelace-sacred-2013/</guid><description/></item></channel></rss>

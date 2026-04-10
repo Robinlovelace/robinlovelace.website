@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>fatherhood | Robin Lovelace</title><link>https://www.robinlovelace.net/tag/fatherhood/</link><atom:link href="https://www.robinlovelace.net/tag/fatherhood/index.xml" rel="self" type="application/rss+xml"/><description>fatherhood</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Fri, 30 Dec 2022 00:00:00 +0000</lastBuildDate><image><url>https://www.robinlovelace.net/media/icon_hu93dbabadc2a9bdd4930d1377c0b338b2_5137_512x512_fill_lanczos_center_3.png</url><title>fatherhood</title><link>https://www.robinlovelace.net/tag/fatherhood/</link></image><item><title>Reflections on 2022</title><link>https://www.robinlovelace.net/post/2022-reflections/</link><pubDate>Fri, 30 Dec 2022 00:00:00 +0000</pubDate><guid>https://www.robinlovelace.net/post/2022-reflections/</guid><description>
+&lt;p>It’s been a whirlwind year.
+It was my first full year being a dad, I moved house, and got a new job.
+All this left precious little time for reflection during most of 2022, let alone a write of them.
+This post rights that wrong!
+It outlines some of the key things that have happened over the past 12 months in my world, celebrates the successes and, as tradition dictates, speculates on 2023.
+More prosaically it provides a heads-up on what I’ve been up to.&lt;/p>
+&lt;p>Like last &lt;a href="https://www.robinlovelace.net/post/2021-reflections/">years reflections&lt;/a> I’ll focus on professional/vocational/technical things that I think will be of most interest to people.
+There are a few personal/family updates worth putting out there also.
+On every level it’s been an amazing year.
+Let’s dive in!&lt;/p>
+&lt;div id="jittering" class="section level1">
+&lt;h1>Jittering&lt;/h1>
+&lt;p>Much of my work has involved processing origin-destination (OD) data.
+OD data underlies the highest impact project I have worked on, the Propensity to Cycle Tool (hosted at &lt;a href="https://www.pct.bike/">pct.bike&lt;/a>) and follow-on projects&lt;span class="citation">&lt;sup>&lt;a href="#ref-lovelace_propensity_2017" role="doc-biblioref">1&lt;/a>&lt;/sup>&lt;/span> &lt;span class="citation">&lt;sup>&lt;a href="#ref-goodman_scenarios_2019" role="doc-biblioref">2&lt;/a>&lt;/sup>&lt;/span>&lt;span class="citation">&lt;sup>&lt;a href="#ref-lovelace_methods_2020" role="doc-biblioref">3&lt;/a>&lt;/sup>&lt;/span>. To re-cap, the PCT uses open access OD data representing trips between small administrative zones in England as the basis of a model that estimates cycling potential at zone, desire line, route and, most importantly, route network levels.
+As outlined in the figure below&lt;/p>
+&lt;ol class="example" style="list-style-type: decimal">
+&lt;li>&lt;/li>
+&lt;/ol>
+&lt;/div>
+&lt;div id="moving-house" class="section level1">
+&lt;h1>Moving house&lt;/h1>
+&lt;p>This last milestone of 2022 was in many ways the biggest.
+A house is more than just a place sleep: it can be a foundation, a source of strength, a place to call home.
+So it was a big moment for me and Katy when we got the keys to our new place, on 5th December.&lt;/p>
+&lt;p>&lt;img src="https://www.robinlovelace.net/media/new-house-keys.jpg" />&lt;/p>
+&lt;p>Getting the keys was just the start of the moving process though.
+Thanks to Leeds City Council, and City Connect which is joining up Leeds’ patchy active travel network, we borrowed an electric cargo cycle, Raleigh’s &lt;a href="https://www.raleigh.co.uk/gb/en/pro-electric-cargo-trike/">Pro Electric Cargo Trike&lt;/a>.
+With a 900 litre front carrier, this futuristic machine had the capacity to make our move a lot easier than if we had relied on a car alone.&lt;/p>
+&lt;p>I’m grateful to CityConnect and encourage anyone needing to regularly shift moderate loads, up to around 100 kg, to do some research into the revolutionary potential of e-cargos to increase the efficiency and fun of moving stuff.
+You can sign-up for a trial at &lt;a href="https://www.leeds.gov.uk/business-support-and-advice/trial-electric-vehicles-at-your-organisation/trial-an-electric-cargo-bike">leeds.gov.uk/evtrials&lt;/a>.&lt;/p>
+&lt;/div>
+&lt;div id="references" class="section level1 unnumbered">
+&lt;h1>References&lt;/h1>
+&lt;div id="refs" class="references csl-bib-body" line-spacing="2">
+&lt;div id="ref-lovelace_propensity_2017" class="csl-entry">
+&lt;div class="csl-left-margin">1. &lt;/div>&lt;div class="csl-right-inline">Lovelace, R. &lt;em>et al.&lt;/em> &lt;a href="https://doi.org/10.5198/jtlu.2016.862">The &lt;span>Propensity&lt;/span> to &lt;span>Cycle Tool&lt;/span>: &lt;span>An&lt;/span> open source online system for sustainable transport planning&lt;/a>. &lt;em>Journal of Transport and Land Use&lt;/em> &lt;strong>10&lt;/strong>, (2017).&lt;/div>
+&lt;/div>
+&lt;div id="ref-goodman_scenarios_2019" class="csl-entry">
+&lt;div class="csl-left-margin">2. &lt;/div>&lt;div class="csl-right-inline">Goodman, A. &lt;em>et al.&lt;/em> &lt;a href="https://doi.org/10.1016/j.jth.2019.01.008">Scenarios of cycling to school in &lt;span>England&lt;/span>, and associated health and carbon impacts: &lt;span>Application&lt;/span> of the &lt;span>‘&lt;span>Propensity&lt;/span> to &lt;span>Cycle Tool&lt;/span>’&lt;/span>&lt;/a>. &lt;em>Journal of Transport &amp;amp; Health&lt;/em> &lt;strong>12&lt;/strong>, 263–278 (2019).&lt;/div>
+&lt;/div>
+&lt;div id="ref-lovelace_methods_2020" class="csl-entry">
+&lt;div class="csl-left-margin">3. &lt;/div>&lt;div class="csl-right-inline">Lovelace, R., Talbot, J., Morgan, M. &amp;amp; Lucas-Smith, M. Methods to &lt;span class="nocase">Prioritise Pop-up Active Transport Infrastructure&lt;/span>. &lt;em>Transport Findings&lt;/em> 13421 (2020) doi:&lt;a href="https://doi.org/10.32866/001c.13421">10.32866/001c.13421&lt;/a>.&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div></description></item><item><title>Reflections on 2021 🎇</title><link>https://www.robinlovelace.net/post/2021-reflections/</link><pubDate>Sat, 01 Jan 2022 00:00:00 +0000</pubDate><guid>https://www.robinlovelace.net/post/2021-reflections/</guid><description>
+&lt;script src="https://www.robinlovelace.net/post/2021-reflections/index_files/header-attrs/header-attrs.js">&lt;/script>
+&lt;div id="TOC">
+&lt;ul>
+&lt;li>&lt;a href="#actdev">ActDev&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#first-solo-authored-paper">First solo authored paper&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#new-fellowship-placement-in-the-no.-10-data-science-team-10ds">New fellowship: placement in the No. 10 Data Science team (10DS)&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#software-development">Software development&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#geocomputation-with-r-second-edition">Geocomputation with R Second Edition&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#becoming-a-father">Becoming a father&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#just-look-up">Just look up ☄&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#references">References&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;p>It’s been another crazy year for many people with lifestyles still disrupted by COVID, huge advances, setbacks and challenges faced collectively by people worldwide.&lt;/p>
+&lt;p>It has been an amazing year for me and my family.
+Before the hectic rush (and sometimes grind) of daily working life returns, I wanted to put together a few thoughts on things that happened in 2021 and hopes for 2022 and beyond.&lt;/p>
+&lt;p>Long story short, it involved various academic and practical accomplishments plus the most rewarding event of my life so far, becoming a dad (skip to the end for more on that)!&lt;/p>
+&lt;div id="actdev" class="section level2">
+&lt;h2>ActDev&lt;/h2>
+&lt;p>In the first few months of 2021 I led a project called ActDev, which involved research into the levels of transport sustainability associated with new housing developments.
+The 4 month project resulted in a web application that is publicly available at &lt;a href="https://actdev.cyipt.bike/">cyipt.actdev.bike&lt;/a>.
+Currently this is just a prototype of a larger tool that we hope to develop in 2022.
+The research and thinking underlying the tool is outlined in a pre-print led by my colleague Joey Talbot&lt;span class="citation">&lt;sup>&lt;a href="#ref-talbot_active_2021" role="doc-biblioref">1&lt;/a>&lt;/sup>&lt;/span> and showcased in the promotional video shown below.&lt;/p>
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/nNYroA16JEQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+&lt;/iframe>
+&lt;p>The project also involved working with Dustin Carlino and using &lt;a href="https://github.com/a-b-street/abstreet#ab-street">A/B Street&lt;/a> a traffic simulation tool that allows you to redesign streets and transport patterns to inform policies.
+Building on the ‘zonebuilder paper’ co-authored by Dustin,&lt;span class="citation">&lt;sup>&lt;a href="#ref-lovelace_clockboard_2021" role="doc-biblioref">2&lt;/a>&lt;/sup>&lt;/span> which inspired the tweet below, I hope do more work with A/B Street in 2022.&lt;/p>
+&lt;blockquote class="twitter-tweet">
+&lt;p lang="en" dir="ltr">
+Choices of zones + boundaries affect research findings + maps. Choose wisely! &lt;a href="https://t.co/ga8NZesPoX">pic.twitter.com/ga8NZesPoX&lt;/a>
+&lt;/p>
+— Robin Lovelace (&lt;span class="citation">&lt;sup>&lt;a href="#ref-robinlovelace" role="doc-biblioref">&lt;strong>robinlovelace?&lt;/strong>&lt;/a>&lt;/sup>&lt;/span>) &lt;a href="https://twitter.com/robinlovelace/status/1423555975110397953?ref_src=twsrc%5Etfw">August 6, 2021&lt;/a>
+&lt;/blockquote>
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8">&lt;/script>
+&lt;/div>
+&lt;div id="first-solo-authored-paper" class="section level2">
+&lt;h2>First solo authored paper&lt;/h2>
+&lt;p>Collaborating with others is one of the most rewarding parts of academic research.
+I have published over two dozen papers with many people over the years, and 5 fully peer reviewed papers in 2021.
+These include a paper on modelling the health impacts of active travel led by James Woodcock at the University of Cambridge,,&lt;span class="citation">&lt;sup>&lt;a href="#ref-woodcock_health_2021a" role="doc-biblioref">3&lt;/a>&lt;/sup>&lt;/span> and three papers led by Eugeni Vidal-Tortosa;&lt;span class="citation">&lt;sup>&lt;a href="#ref-vidaltortosa_infrastructure_2021" role="doc-biblioref">4&lt;/a>&lt;/sup>&lt;/span>;&lt;span class="citation">&lt;sup>&lt;a href="#ref-vidaltortosa_cycling_2021" role="doc-biblioref">5&lt;/a>&lt;/sup>&lt;/span>.&lt;span class="citation">&lt;sup>&lt;a href="#ref-vidaltortosa_socioeconomic_2021" role="doc-biblioref">6&lt;/a>&lt;/sup>&lt;/span>
+As lead supervisor I was very happy to see Eugeni pass his viva in November (another 2021 milestone for me).
+Additional papers from 2021, including pre-prints, can be seen on &lt;a href="https://www.robinlovelace.net/publication/">my website&lt;/a> and &lt;a href="https://scholar.google.com/citations?hl=en&amp;amp;user=xDJHVCAAAAAJ&amp;amp;view_op=list_works&amp;amp;alert_preview_top_rm=2&amp;amp;sortby=pubdate">here&lt;/a>.&lt;/p>
+&lt;p>One of the most rewarding papers, however, was on that I authored solo.&lt;span class="citation">&lt;sup>&lt;a href="#ref-lovelace_open_2021" role="doc-biblioref">7&lt;/a>&lt;/sup>&lt;/span>
+In it, I review 25 open source tools for geographic analysis in transport planning and discuss the future potential of open source software for guiding effective policy interventions.
+The paper has received some attention online, as can be seen in the Tweet below, and not just from the academic research community: experienced transport modeller Tom Van Vuren, for example, picked-up on the paper and we hope to take the conversation about uptake of open and transparent software for transport modelling forward in 2022.&lt;/p>
+&lt;blockquote class="twitter-tweet">
+&lt;p lang="en" dir="ltr">
+Stoked to announce that the new &lt;a href="https://twitter.com/hashtag/openaccess?src=hash&amp;amp;ref_src=twsrc%5Etfw">#openaccess&lt;/a> paper “Open source tools for geographic analysis in transport planning” has just been published 🎉&lt;br>&lt;br>Paper: &lt;a href="https://t.co/kZy2kkyjDy">https://t.co/kZy2kkyjDy&lt;/a>&lt;br>Code: &lt;a href="https://t.co/yOFtKbBbYc">https://t.co/yOFtKbBbYc&lt;/a>&lt;br>My first ever solo-authored paper! &lt;a href="https://t.co/3fHSbP0UTG">pic.twitter.com/3fHSbP0UTG&lt;/a>
+&lt;/p>
+— Robin Lovelace (&lt;span class="citation">&lt;sup>&lt;a href="#ref-robinlovelace" role="doc-biblioref">&lt;strong>robinlovelace?&lt;/strong>&lt;/a>&lt;/sup>&lt;/span>) &lt;a href="https://twitter.com/robinlovelace/status/1351477455203299328?ref_src=twsrc%5Etfw">January 19, 2021&lt;/a>
+&lt;/blockquote>
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8">&lt;/script>
+&lt;p>I also hope to do more research that is policy relevant, leading to the next topic in my reflections on the year just gone by.&lt;/p>
+&lt;/div>
+&lt;div id="new-fellowship-placement-in-the-no.-10-data-science-team-10ds" class="section level2">
+&lt;h2>New fellowship: placement in the No. 10 Data Science team (10DS)&lt;/h2>
+&lt;p>An exciting new project started for me in 2021, as I was awarded an 18 month ‘10DS Fellowship’ to help central government make better use data science to support evidence-based decision-making.&lt;/p>
+&lt;blockquote class="twitter-tweet">
+&lt;p lang="en" dir="ltr">
+Really excited about this: for the next ~18 months I will be working with the &lt;a href="https://twitter.com/10DowningStreet?ref_src=twsrc%5Etfw">&lt;span class="citation">&lt;sup>&lt;a href="#ref-10DowningStreet" role="doc-biblioref">&lt;strong>10DowningStreet?&lt;/strong>&lt;/a>&lt;/sup>&lt;/span>&lt;/a> Data Science team, &lt;a href="https://twitter.com/DataSciCampus?ref_src=twsrc%5Etfw">&lt;span class="citation">&lt;sup>&lt;a href="#ref-DataSciCampus" role="doc-biblioref">&lt;strong>DataSciCampus?&lt;/strong>&lt;/a>&lt;/sup>&lt;/span>&lt;/a>, &lt;a href="https://twitter.com/ESRC?ref_src=twsrc%5Etfw">&lt;span class="citation">&lt;sup>&lt;a href="#ref-ESRC" role="doc-biblioref">&lt;strong>ESRC?&lt;/strong>&lt;/a>&lt;/sup>&lt;/span>&lt;/a> and others on the new 10DS Fellowship. Looking forward to working with Federico, Alex and everyone on data science in government 🚀 &lt;a href="https://t.co/h7skJ0rbwA">https://t.co/h7skJ0rbwA&lt;/a>
+&lt;/p>
+— Robin Lovelace (&lt;span class="citation">&lt;sup>&lt;a href="#ref-robinlovelace" role="doc-biblioref">&lt;strong>robinlovelace?&lt;/strong>&lt;/a>&lt;/sup>&lt;/span>) &lt;a href="https://twitter.com/robinlovelace/status/1461294156626726914?ref_src=twsrc%5Etfw">November 18, 2021&lt;/a>
+&lt;/blockquote>
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8">&lt;/script>
+&lt;p>The responses replying to that tweet from acquaintances working in related fields, plus emails from colleagues at the University of Leeds, provide a strong motivation to work hard to move things forward.
+New methods and datasets have great potential to be harnessed to help tackle entrenched challenges in the 21&lt;sup>st&lt;/sup> century.
+I hope my background and skills will enable me to make a positive difference.&lt;/p>
+&lt;p>Watch this space for projects that I end up working on as part of this fellowship (that can be published after clearance from No. 10).
+The placement phase of the fellowship starts in January, and it looks like there will be many exciting opportunities for high impact research.
+I hope to document lessons learned from the experience in articles for the organisations supporting the fellowship: the ESRC, ADR UK, the Alan Turing Institute (where I was also awarded a fellowship in 2021) and the ONS’s Data Science Campus.&lt;/p>
+&lt;/div>
+&lt;div id="software-development" class="section level2">
+&lt;h2>Software development&lt;/h2>
+&lt;p>In addition to research published in academic papers, I have also worked hard on software development and teaching materials.
+I was amazed and slightly humbled to hear that &lt;code>stplanr&lt;/code>, an R package I developed to support strategical cycle network planning in the UK, had been used in research into access to potentially life-saving TB clinics in Malawi.&lt;/p>
+&lt;blockquote class="twitter-tweet">
+&lt;p lang="en" dir="ltr">
+When a tool first built for one purpose (cycle network planning in Europe) gets used for something totally different (calculating distance to tuberculosis clinics in Africa) 🚀&lt;br>&lt;br>Paper: &lt;a href="https://t.co/8gaRigYXVK">https://t.co/8gaRigYXVK&lt;/a>&lt;br>Package: &lt;a href="https://t.co/t8UC0JGjNg">https://t.co/t8UC0JGjNg&lt;/a>&lt;a href="https://twitter.com/hashtag/RStats?src=hash&amp;amp;ref_src=twsrc%5Etfw">#RStats&lt;/a> package {stplanr} in action! &lt;a href="https://t.co/JqBgv7CE9r">pic.twitter.com/JqBgv7CE9r&lt;/a>
+&lt;/p>
+— Robin Lovelace (&lt;span class="citation">&lt;sup>&lt;a href="#ref-robinlovelace" role="doc-biblioref">&lt;strong>robinlovelace?&lt;/strong>&lt;/a>&lt;/sup>&lt;/span>) &lt;a href="https://twitter.com/robinlovelace/status/1436253002525028362?ref_src=twsrc%5Etfw">September 10, 2021&lt;/a>
+&lt;/blockquote>
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8">&lt;/script>
+&lt;p>What better motivation could there be for developing open source software for reproducible data analysis and policy interventions?&lt;/p>
+&lt;/div>
+&lt;div id="geocomputation-with-r-second-edition" class="section level2">
+&lt;h2>Geocomputation with R Second Edition&lt;/h2>
+&lt;p>Perhaps less exciting than starting new projects is ‘finishing’ existing ones.
+In this case the project is the popular book Geocomputation with R which, alongside other open source teaching materials of the type published on &lt;a href="https://bookdown.org/">bookdown.org&lt;/a>, helps reduce financial barriers to accessing textbooks by providing teaching content that anyone can read.&lt;/p>
+&lt;p>Jakub, Jannes and I have signed a contract to work on a second edition and we’ve made good progress, as shown below (one new year’s resolution: publish the 2nd edition!).&lt;/p>
+&lt;blockquote class="twitter-tweet">
+&lt;p lang="en" dir="ltr">
+🏗️ Geocomputation with R update 🏗️ we've recently updated key parts of Chapter 7 on the key topic of coordinate reference systems (CRSs). Updated figure below, plus lots more in the chapter, shows importance of understanding them! &lt;a href="https://t.co/pffHqeF8YT">https://t.co/pffHqeF8YT&lt;/a> &lt;a href="https://twitter.com/hashtag/Rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw">#Rstats&lt;/a> &lt;a href="https://twitter.com/hashtag/rspatial?src=hash&amp;amp;ref_src=twsrc%5Etfw">#rspatial&lt;/a> &lt;a href="https://t.co/DVgHU5lvn1">pic.twitter.com/DVgHU5lvn1&lt;/a>
+&lt;/p>
+— Robin Lovelace (&lt;span class="citation">&lt;sup>&lt;a href="#ref-robinlovelace" role="doc-biblioref">&lt;strong>robinlovelace?&lt;/strong>&lt;/a>&lt;/sup>&lt;/span>) &lt;a href="https://twitter.com/robinlovelace/status/1476620093601812482?ref_src=twsrc%5Etfw">December 30, 2021&lt;/a>
+&lt;/blockquote>
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8">&lt;/script>
+&lt;/div>
+&lt;div id="becoming-a-father" class="section level2">
+&lt;h2>Becoming a father&lt;/h2>
+&lt;p>The most important event in the year for me was becoming a dad.&lt;/p>
+&lt;blockquote class="twitter-tweet">
+&lt;p lang="en" dir="ltr">
+Big personal news: &lt;a href="https://twitter.com/katylvlace?ref_src=twsrc%5Etfw">&lt;span class="citation">&lt;sup>&lt;a href="#ref-katylvlace" role="doc-biblioref">&lt;strong>katylvlace?&lt;/strong>&lt;/a>&lt;/sup>&lt;/span>&lt;/a> and I have had a baby, welcome to the world Kit 🎉 Focussed on nappies and supporting the family for the next while 💚💚💚 Parenthood is amazing, makes me more committed to research for a sustainable future 🌱 Looking forward to it all! &lt;a href="https://t.co/sJJZNZZV04">pic.twitter.com/sJJZNZZV04&lt;/a>
+&lt;/p>
+— Robin Lovelace (&lt;span class="citation">&lt;sup>&lt;a href="#ref-robinlovelace" role="doc-biblioref">&lt;strong>robinlovelace?&lt;/strong>&lt;/a>&lt;/sup>&lt;/span>) &lt;a href="https://twitter.com/robinlovelace/status/1448594909376696322?ref_src=twsrc%5Etfw">October 14, 2021&lt;/a>
+&lt;/blockquote>
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8">&lt;/script>
+&lt;p>It has been a life-changing experience: being responsible for another (little and very cute) person has certainly shifted my perspective on the world, made me prioritise my time more carefully, and made it harder to plan.&lt;/p>
+&lt;p>My wife Katy and I have worked closely as a team and, despite talk of the ‘&lt;a href="https://www.goodreads.com/en/book/show/54670274-baby-bomb">baby bomb&lt;/a>’ impacting our relationship, little Kit has brought us closer together ♥&lt;/p>
+&lt;p>Despite inevitable challenges, it’s been the most rewarding thing we’ve done so far, and we’re only 3 months in!
+Having a little one around encourages long-term thinking, and Kit has strengthened my commitment to research supporting a more sustainable world.&lt;/p>
+&lt;/div>
+&lt;div id="just-look-up" class="section level2">
+&lt;h2>Just look up ☄&lt;/h2>
+&lt;p>Having a baby around on New Year’s Eve, plus the fact that we start the new year in the midst of a pandemic, led to scaled-back plans to celebrate the arrival of 2022.
+To celebrate, Katy and I watched Don’t Look Up, a sci-fi film satirising so-far sluggish policy responses to threats identified thanks to scientific research, such as climate change.&lt;/p>
+&lt;p>Having heard great things about it from friends talking about it and seeing positive and provoking comments on social media, with the hashtag &lt;a href="https://twitter.com/hashtag/DontLookUp">#DontLookUp☄&lt;/a>, we decided to watch it as part of our NYE celebrations.
+The film contains the humorous yet inspiring song below by Ariana Grande.&lt;/p>
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/wFeZ2EOc8KY?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+&lt;/iframe>
+&lt;p>Never thought I would hear these lyrics in a catchy pop song in 2021:&lt;/p>
+&lt;blockquote>
+&lt;p>Get your head out of your ass, listen to the goddam qualified scientists&lt;/p>
+&lt;/blockquote>
+&lt;p>So I’m prepared for anything in the coming year.
+Optimistic that with hard work, collective intelligence, empathy, and a desire to collaborate on solving tricky problems, the future can be bright.
+Bring on 2022!&lt;/p>
+&lt;/div>
+&lt;div id="references" class="section level2 unnumbered">
+&lt;h2>References&lt;/h2>
+&lt;div id="refs" class="references csl-bib-body" line-spacing="2">
+&lt;div id="ref-talbot_active_2021" class="csl-entry">
+&lt;div class="csl-left-margin">1. &lt;/div>&lt;div class="csl-right-inline">Talbot, J. &lt;em>et al.&lt;/em> Active &lt;span>Travel Oriented Development&lt;/span>: &lt;span>Assessing&lt;/span> the suitability of sites for new homes. (2021) doi:&lt;a href="https://doi.org/10.31219/osf.io/7fuq5">10.31219/osf.io/7fuq5&lt;/a>.&lt;/div>
+&lt;/div>
+&lt;div id="ref-lovelace_clockboard_2021" class="csl-entry">
+&lt;div class="csl-left-margin">2. &lt;/div>&lt;div class="csl-right-inline">Lovelace, R., Tennekes, M. &amp;amp; Carlino, D. &lt;span>ClockBoard&lt;/span>: A zoning system for urban analysis. (2021) doi:&lt;a href="https://doi.org/10.31219/osf.io/vncgw">10.31219/osf.io/vncgw&lt;/a>.&lt;/div>
+&lt;/div>
+&lt;div id="ref-woodcock_health_2021a" class="csl-entry">
+&lt;div class="csl-left-margin">3. &lt;/div>&lt;div class="csl-right-inline">Woodcock, J., Aldred, R., Lovelace, R., Strain, T. &amp;amp; Goodman, A. Health, environmental and distributional impacts of cycling uptake: &lt;span>The&lt;/span> model underlying the &lt;span>Propensity&lt;/span> to &lt;span>Cycle&lt;/span> tool for &lt;span>England&lt;/span> and &lt;span>Wales&lt;/span>. &lt;em>Journal of Transport &amp;amp; Health&lt;/em> &lt;strong>22&lt;/strong>, 101066 (2021).&lt;/div>
+&lt;/div>
+&lt;div id="ref-vidaltortosa_infrastructure_2021" class="csl-entry">
+&lt;div class="csl-left-margin">4. &lt;/div>&lt;div class="csl-right-inline">Vidal Tortosa, E., Lovelace, R., Heinen, E. &amp;amp; Mann, R. P. Infrastructure is not enough: Interactions between the environment, socioeconomic disadvantage and cycling participation in &lt;span>England&lt;/span>. &lt;em>Journal of Transport and Land Use&lt;/em> (2021) doi:&lt;a href="https://doi.org/10.5198/jtlu.2021.1781">10.5198/jtlu.2021.1781&lt;/a>.&lt;/div>
+&lt;/div>
+&lt;div id="ref-vidaltortosa_cycling_2021" class="csl-entry">
+&lt;div class="csl-left-margin">5. &lt;/div>&lt;div class="csl-right-inline">Vidal Tortosa, E., Lovelace, R., Heinen, E. &amp;amp; Mann, R. P. Cycling behaviour and socioeconomic disadvantage: &lt;span>An&lt;/span> investigation based on the &lt;span>English National Travel Survey&lt;/span>. &lt;em>Transportation Research Part A: Policy and Practice&lt;/em> &lt;strong>152&lt;/strong>, 173–185 (2021).&lt;/div>
+&lt;/div>
+&lt;div id="ref-vidaltortosa_socioeconomic_2021" class="csl-entry">
+&lt;div class="csl-left-margin">6. &lt;/div>&lt;div class="csl-right-inline">Vidal Tortosa, E., Lovelace, R., Heinen, E. &amp;amp; Mann, R. P. Socioeconomic inequalities in cycling safety: &lt;span>An&lt;/span> analysis of cycling injury risk by residential deprivation level in &lt;span>England&lt;/span>. &lt;em>Journal of Transport &amp;amp; Health&lt;/em> &lt;strong>23&lt;/strong>, 101291 (2021).&lt;/div>
+&lt;/div>
+&lt;div id="ref-lovelace_open_2021" class="csl-entry">
+&lt;div class="csl-left-margin">7. &lt;/div>&lt;div class="csl-right-inline">Lovelace, R. Open source tools for geographic analysis in transport planning. &lt;em>Journal of Geographical Systems&lt;/em> (2021) doi:&lt;a href="https://doi.org/10.1007/s10109-020-00342-2">10.1007/s10109-020-00342-2&lt;/a>.&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div></description></item></channel></rss>

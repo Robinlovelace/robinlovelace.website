@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Fill the Gap:</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Robin Lovelace" />
+    <script src="ccac-2022-gaps_files/header-attrs-2.14/header-attrs.js"></script>
+    <link href="ccac-2022-gaps_files/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="ccac-2022-gaps_files/remark-css-0.0.1/robot.css" rel="stylesheet" />
+    <link href="ccac-2022-gaps_files/remark-css-0.0.1/robot-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+.title[
+# Fill the Gap:
+]
+.subtitle[
+## methods to identify missing links in emerging regional cycle networks
+]
+.author[
+### Robin Lovelace
+]
+.institute[
+### Leeds <a href="https://environment.leeds.ac.uk/transport">Institute for Transport Studies</a>
+]
+.date[
+### CCAC 2022, Sheffield 2022-07-05
+Reproducible source code: <a href="https://github.com/robinlovelace/presentations">github.com/robinlovelace/presentations</a>
+]
+
+---
+
+
+
+## Overview
+
+#### 1 Introduction to policy need and current evidence
+
+- Local knowledge
+- The [Propensity to Cycle Tool (PCT)](https://www.pct.bike/)
+- The [Cycling Infrastructure Prioritisation Tool (CyIPT)](https://www.cyipt.bike/) prototype
+- The [Rapid Cycleway Prioritisation Tool (Rapid)](https://www.cyipt.bike/rapid/)
+- The [ActDev Tool](https://actdev.cyipt.bike/) prototype
+
+--
+
+#### 2 Filling the gap
+
+--
+
+#### 3 Next steps
+
+
+???
+
+Rural active travel networks
+
+Chair: Rory McMullan, Head of Road Safety and Active Travel, Hertfordshire County Council
+
+Fill the Gap: methods to identify missing links in emerging regional cycle networks
+Robin Lovelace, Associate Professor of Transport Data Science, University of Leeds
+
+LCWIP refresh – new emerging principles particularly with respect to rural areas, market towns and walking
+Chris Sibthorpe, Director, PJA
+
+Unlocking active travel in rural regions – a plan for the East
+Andrew Summers, Strategic Director, Transport East
+
+Safe system principles for rural cycling
+Sarah Simpson, Director, Royal HaskoningDHV
+
+Rural cycle network planning
+Duncan Dollimore, Head of Campaigns, Cycling UK
+
+---
+
+## The Propensity to Cycle Tool + Filling Gaps
+
+![](https://user-images.githubusercontent.com/1825120/177321129-36f239f8-28e9-4bdc-8516-4a36b1c6caac.png)
+
+Source: https://www.pct.bike/m/?r=south-yorkshire
+
+???
+
+In many ways the PCT was first conceptualised in Sheffield
+
+At the time I saw it as an algorithm that would tell you where to build the 'next' cycleway
+
+Pennistone Road, London Road, Eccleshall Road
+
+Over time I realised that it's not that simple: what we really need is joined-up networks
+
+In a way new tools have allowed us to go full circle and prioritise
+
+---
+
+## The PCT in rural areas
+
+
+![](https://user-images.githubusercontent.com/1825120/177321646-2781df5c-2bdc-4924-9c1c-31f017f3173b.png)
+
+---
+
+## The PCT School Layer
+
+![](https://user-images.githubusercontent.com/1825120/177321498-2cf33219-22a7-41aa-91c7-eb86a69e05fd.png)
+
+---
+
+## Data limitation: size of zones
+
+![](https://user-images.githubusercontent.com/1825120/177325287-5e2aee0a-5d08-4d39-af60-25a3d0b58720.png)
+Some LSOA zones are 5+ km wide!
+
+Source: https://www.pct.bike/m/?r=hereford-and-worcester
+
+---
+
+## Impacts of input data and (lack of) preprocessing
+
+![](https://user-images.githubusercontent.com/1825120/177326416-a34a239c-5144-4046-86bf-812326dad05a.png)
+---
+
+## Travel to school data: not enough on its own
+
+![](https://user-images.githubusercontent.com/1825120/177327233-4fb6886e-ac53-4747-9039-c7895ab356af.png)
+
+---
+
+### Increasing spatial resolution for rural areas
+
+![](https://github.com/Robinlovelace/odjitter/raw/main/README_files/figure-gfm/jitters-1.png)
+Source: Lovelace, Robin, Rosa Félix, and Dustin Carlino. “Jittering: A Computationally Efficient Method for Generating Realistic Route Networks from Origin-Destination Data.” Findings, April 8, 2022, 33873. https://doi.org/10.32866/001c.33873.
+
+---
+
+## Results of jittering
+
+![](https://user-images.githubusercontent.com/1825120/177327971-b92c7d5e-dfd4-43f3-bb12-5350f7dcdb2d.png)
+Source: sample of 2021-2022 data representing travel to school potential in Leeds
+
+Part of the Estimating Active Travel Potential to Schools project at 10DS
+
+
+
+---
+
+## The Rapid tool
+
+![](https://user-images.githubusercontent.com/1825120/177315108-8e968603-3996-4ae6-924d-7c80f2bbd69e.png)
+Source: https://www.cyipt.bike/rapid/sheffield-city-region/
+
+???
+
+Developed for a very specific purpose
+
+---
+
+## Prioity links in Rapid
+
+![](https://user-images.githubusercontent.com/1825120/177318641-ed28e876-5ce7-4b54-84df-be60e145e70c.png)
+--
+
+Which criteria to use?
+
+- Road width
+- Segment length
+- Presence of spare lanes
+- Cycling levels (based on current of scenario levels of cycling)
+
+???
+
+William Stewart mentioned in the plenary session that there were plans for London Road
+
+---
+
+## Zooming in on priority links
+
+![](https://user-images.githubusercontent.com/1825120/177318235-b89ea681-8b4d-4fcf-947b-a075f1da56c7.png)
+
+--
+
+- Many factors to consider that are not captured in publicly available data
+
+---
+
+### Additional information 1
+
+Source: https://www.cyclestreets.net/journey/82479454/
+
+![](https://user-images.githubusercontent.com/1825120/177319991-4179114b-9f7e-449a-b746-b727fec351a9.png)
+---
+
+## Additional information 2
+
+![](https://user-images.githubusercontent.com/1825120/177320446-115aa07a-c4ba-43c8-bd36-94222a05ccb2.png)
+
+Source: https://goo.gl/maps/CiKR7U8iMLwfX3oX6
+
+---
+
+## The ActDev tool
+
+4 month UKRI funded project on high impact research in transport/planning
+
+Publicly prototype tool on potential and provision around new developments
+
+Further info: Search for [ActDev Tool](https://actdev.cyipt.bike/) and test it + [slides](https://www.robinlovelace.net/presentations/actdev-dft-slides.html)
+
+![](https://user-images.githubusercontent.com/1825120/110671502-79afbc80-81c6-11eb-9dc5-52046b1d04c8.gif)
+
+???
+
+Vital for filling gaps in rural networks in proximity to rural networks
+
+But also raises the question: should we be encouraging people to live in car dependent locations?
+
+---
+
+## Filling the gaps
+
+![](https://user-images.githubusercontent.com/1825120/177332070-85b55995-274f-46da-88f4-d571ea7983e2.png)
+
+---
+
+## Finding gaps based on potential
+
+![](https://user-images.githubusercontent.com/1825120/177333476-79cc6282-a90f-4d55-8544-46441b063203.png)
+
+Source: Ray Pritchard and Robin Lovelace: Sykkelpotensial og bysykler, report on strategic cycle network design for NORCE/Nord-Jæren regional government
+
+---
+
+### Gaps and current levels of service
+
+Source:  Exploring jittering and routing options for converting origin-destination data into route networks (data from Lisbon, Portugal)  [doi:10.31219/osf.io/4yxj7](https://doi.org/10.31219/osf.io/4yxj7)
+
+![](https://github.com/Robinlovelace/foss4g22/raw/main/figures/priority-segments.jpeg)
+
+---
+
+## Combining quietness with potential
+
+![](https://user-images.githubusercontent.com/1825120/175054496-c2009364-0309-44ea-a65d-4751e7ce7a8b.png)
+
+Source: In-development tool funded by Transport Infrastructure Ireland
+
+Data: Origin-destination data covering 8 purposes of travel
+
+---
+
+## Next steps: from data to action
+
+![](https://user-images.githubusercontent.com/52210872/175966305-720d2cdc-5786-4c6a-bb75-bdb3ac52bb01.png)
+
+---
+
+## Pulling out priority links
+
+![](https://user-images.githubusercontent.com/52210872/175968640-3ab01f36-5bb5-4a82-8737-9ea6b993ed53.png)
+
+---
+
+## Specific links: the key output?
+
+![](https://user-images.githubusercontent.com/1825120/177336416-b569d132-e5db-4380-afb1-2339a0137141.png)
+
+Source: Analysis of cycling uptake data for Kildare
+
+???
+
+This image goes full circle: you can provide detailed prioritisation
+---
+
+# References
+
+
+Beimborn, E., Kennedy, R., 1996. Inside the Blackbox: Making Transportation Models Work for Livable Communities. Citizens for a Better Environment.
+
+Lovelace, R., Parkin, J., Cohen, T., 2020. Open access transport models: A leverage point in sustainable transport planning. Transport Policy 97, 47–54. https://doi.org/10.1016/j.tranpol.2020.06.015
+
+---
+
+# Thanks
+
+
+Thanks to the University of Leeds' LSSI, the Institute for Transport Studies, UKRI and the Department for Transport
+
+[![](https://avatars3.githubusercontent.com/u/22447619?s=400&amp;u=2d566bedf62374d5066a50d2dd7c87c84470f69b&amp;v=4)](https://environment.leeds.ac.uk/transport)
+
+---
+
+## The ActDev Questionnaire
+
+![](https://user-images.githubusercontent.com/1825120/110797354-e5e6fa80-8270-11eb-8b9d-26b2ac1c0403.png)
+Your feedback will help improve our work
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="https://platform.twitter.com/widgets.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

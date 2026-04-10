@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>road-safety | Robin Lovelace</title><link>https://www.robinlovelace.net/category/road-safety/</link><atom:link href="https://www.robinlovelace.net/category/road-safety/index.xml" rel="self" type="application/rss+xml"/><description>road-safety</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 17 Mar 2026 00:00:00 +0000</lastBuildDate><image><url>https://www.robinlovelace.net/media/icon_hu93dbabadc2a9bdd4930d1377c0b338b2_5137_512x512_fill_lanczos_center_3.png</url><title>road-safety</title><link>https://www.robinlovelace.net/category/road-safety/</link></image><item><title>stats19 v4.0.0: 45 Years of UK Road Crash Data, Unified</title><link>https://www.robinlovelace.net/post/stats19-v4/</link><pubDate>Tue, 17 Mar 2026 00:00:00 +0000</pubDate><guid>https://www.robinlovelace.net/post/stats19-v4/</guid><description>&lt;p>The stats19 R package has been updated to version 4.0.0. The main change is a unified column schema that lets you work with 45 years of UK road crash data (1979 to 2024) without running into mismatched column names.&lt;/p>
+&lt;h2 id="unified-schema">Unified schema&lt;/h2>
+&lt;p>Older data files have columns like &lt;code>carriageway_hazards_historic&lt;/code> while newer ones use &lt;code>carriageway_hazards&lt;/code>. v4.0.0 detects these variants, merges them into the modern names, and drops the redundant columns.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-r" data-lang="r">&lt;span class="line">&lt;span class="cl">&lt;span class="nf">library&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">stats19&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">crashes&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nf">get_stats19&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">year&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="m">1979&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="m">2024&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">type&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s">&amp;#34;crashes&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="parsing-fixes">Parsing fixes&lt;/h2>
+&lt;p>&lt;code>read_stats19()&lt;/code> now builds a custom parser from the CSV header, which removes the warnings about unmatched columns that appeared in previous versions. We also fixed a bug where 2024 latitude and longitude values were truncated to integers.&lt;/p>
+&lt;h2 id="missing-values">Missing values&lt;/h2>
+&lt;p>Codes like &lt;code>-1&lt;/code>, &amp;ldquo;Code deprecated&amp;rdquo;, and &amp;ldquo;Data missing or out of range&amp;rdquo; are now standardised to &lt;code>NA&lt;/code> during formatting, so &lt;code>is.na()&lt;/code> works consistently.&lt;/p>
+&lt;h2 id="performance">Performance&lt;/h2>
+&lt;p>The package now uses readr Edition 2 by default, which supports multi-threaded parsing. Loading large files is noticeably faster.&lt;/p>
+&lt;h2 id="new-functions">New functions&lt;/h2>
+&lt;ul>
+&lt;li>&lt;code>match_tag()&lt;/code> joins government TAG cost estimates (RAS4001) to collision data&lt;/li>
+&lt;li>&lt;code>clean_make()&lt;/code>, &lt;code>clean_model()&lt;/code>, and &lt;code>clean_make_model()&lt;/code> standardise the 2,400+ raw strings in the vehicle dataset&lt;/li>
+&lt;/ul>
+&lt;h2 id="multi-year-downloads">Multi-year downloads&lt;/h2>
+&lt;p>Year ranges now download bulk historic files once and filter efficiently. The 1979 file is also handled correctly (it used to be returned as a catch-all for any older year).&lt;/p>
+&lt;h2 id="feedback-wanted">Feedback wanted&lt;/h2>
+&lt;p>We plan to submit to CRAN soon. Please install, test, and report any issues:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-r" data-lang="r">&lt;span class="line">&lt;span class="cl">&lt;span class="n">pak&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="nf">pak&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;ropensci/stats19&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Issues: &lt;a href="https://github.com/ropensci/stats19/issues" target="_blank" rel="noopener">github.com/ropensci/stats19/issues&lt;/a>&lt;/p>
+&lt;h2 id="acknowledgements">Acknowledgements&lt;/h2>
+&lt;p>Contributions from David Ranzolin and Adam Sparks (rOpenSci review), Malcolm Morgan, Layik Hama, and Blaise Kelly. Funding from the RAC Foundation.&lt;/p>
+&lt;h2 id="links">Links&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/ropensci/stats19" target="_blank" rel="noopener">GitHub&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://docs.ropensci.org/stats19/" target="_blank" rel="noopener">Documentation&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/ropensci/stats19/blob/main/NEWS.md" target="_blank" rel="noopener">Changelog&lt;/a>&lt;/li>
+&lt;/ul></description></item></channel></rss>

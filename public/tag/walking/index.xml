@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Walking | Robin Lovelace</title><link>https://www.robinlovelace.net/tag/walking/</link><atom:link href="https://www.robinlovelace.net/tag/walking/index.xml" rel="self" type="application/rss+xml"/><description>Walking</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Fri, 26 Jun 2026 09:00:00 +0100</lastBuildDate><image><url>https://www.robinlovelace.net/media/icon_hu93dbabadc2a9bdd4930d1377c0b338b2_5137_512x512_fill_lanczos_center_3.png</url><title>Walking</title><link>https://www.robinlovelace.net/tag/walking/</link></image><item><title>AUM2026: Applied Urban Modelling Symposium and Pre-conference Seminar</title><link>https://www.robinlovelace.net/talk/aum2026-applied-urban-modelling-symposium-and-pre-conference-seminar/</link><pubDate>Fri, 26 Jun 2026 09:00:00 +0100</pubDate><guid>https://www.robinlovelace.net/talk/aum2026-applied-urban-modelling-symposium-and-pre-conference-seminar/</guid><description>&lt;p>I&amp;rsquo;ll be presenting on &lt;strong>Modelling multi-modal traffic interactions, casualties, and safety risk for people walking and cycling&lt;/strong>.&lt;/p>
+&lt;h2 id="abstract">Abstract&lt;/h2>
+&lt;p>This talk presents data-driven approaches for modelling multi-modal traffic interactions, casualties, and safety risk for people walking and cycling, with the aim of informing government guidance on critical safety issues for walking, wheeling, and cycling. The presentation will cover: data engineering pipelines designed to ingest large volumes of pedestrian and cycle count data; the integration of casualty and traffic data to characterise risk; and open-source tools and reproducible methods used to build models capable of informing evidence-based policy and design guidance. The work draws on and extends existing transport modelling frameworks and speaks to the broader challenge of making active travel the natural choice for short trips in UK cities and towns.&lt;/p>
+&lt;!-- ## Event Details
+### Pre-conference Seminar: Modelling Active Mobility
+- **Dates:** 26-27 June 2026
+- **Venue:** Bateman Auditorium, Gonville &amp; Caius College (Old Courts)
+- **Format:** Day 1 presentations by invitation; Day 2 group discussion
+- **Sponsor:** VREF (Volvo Research and Educational Foundations)
+### Main AUM2026 Symposium
+- **Dates:** 29 June - 1 July 2026
+- **Venue:** Cavonius Centre, Gonville &amp; Caius College (Harvey Court)
+- **Organisers:** Department of Land Economy and Martin Centre, University of Cambridge
+### Registration
+Registration covers symposium organisation, refreshments, and buffet lunches. Accommodation not included (limited college guestrooms available).
+### Contact
+[aum@landecon.cam.ac.uk](mailto:aum@landecon.cam.ac.uk) --></description></item><item><title>Development of the Impacts of Cycling Tool (ICT): A Modelling Study and Web Tool for Evaluating Health and Environmental Impacts of Cycling Uptake</title><link>https://www.robinlovelace.net/publication/woodcock-development-2018/</link><pubDate>Tue, 31 Jul 2018 00:00:00 +0000</pubDate><guid>https://www.robinlovelace.net/publication/woodcock-development-2018/</guid><description/></item></channel></rss>

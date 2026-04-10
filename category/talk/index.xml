@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>talk | Robin Lovelace</title><link>https://www.robinlovelace.net/category/talk/</link><atom:link href="https://www.robinlovelace.net/category/talk/index.xml" rel="self" type="application/rss+xml"/><description>talk</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 21 Jan 2021 00:00:00 +0000</lastBuildDate><image><url>https://www.robinlovelace.net/media/icon_hu93dbabadc2a9bdd4930d1377c0b338b2_5137_512x512_fill_lanczos_center_3.png</url><title>talk</title><link>https://www.robinlovelace.net/category/talk/</link></image><item><title>Open Science In Transportation Workshop</title><link>https://www.robinlovelace.net/post/open-science-in-transportation-workshop/</link><pubDate>Thu, 21 Jan 2021 00:00:00 +0000</pubDate><guid>https://www.robinlovelace.net/post/open-science-in-transportation-workshop/</guid><description>
+&lt;script src="https://www.robinlovelace.net/post/open-science-in-transportation-workshop/index_files/header-attrs/header-attrs.js">&lt;/script>
+&lt;p>Today I am presenting at the &lt;a href="http://www.trb.org/AnnualMeeting/AnnualMeeting.aspx">Transport Research Board’s 2021 Annual&lt;/a> meeting, aka &lt;a href="https://twitter.com/search?q=%23TRB2021">#TRB2021&lt;/a>.
+I say ‘presenting’ but in fact, the talk was a pre-record - see the video below!&lt;/p>
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/mpqNW9ePVtw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+&lt;/iframe>
+&lt;p>Information on the talk can be found &lt;a href="https://www.robinlovelace.net/talk/open-access-transport-models-from-collaborative-code-to-citizen-science/">here&lt;/a>.&lt;/p>
+&lt;p>It’s based on a recently published paper on ‘open access models’ which are both based on open source code and, vitally, are available for use by the public without needing specialist training &lt;span class="citation">(&lt;a href="#ref-lovelace_open_2020" role="doc-biblioref">Lovelace, Parkin, and Cohen 2020&lt;/a>)&lt;/span>.&lt;/p>
+&lt;p>It also links to a just-published paper in which I review a range of open source transport planning tools &lt;span class="citation">(&lt;a href="#ref-lovelace_open_2021" role="doc-biblioref">Lovelace 2021&lt;/a>)&lt;/span>.&lt;/p>
+&lt;p>See the interactive slides &lt;a href="https://www.robinlovelace.net/presentations/2021-01-21-open-source-transport-tools.html">here&lt;/a>.&lt;/p>
+&lt;p>And &lt;a href="https://www.robinlovelace.net/talk/open-access-transport-models-from-collaborative-code-to-citizen-science/">here&lt;/a> for a link to the code, video and more!&lt;/p>
+&lt;div id="references" class="section level1 unnumbered">
+&lt;h1>References&lt;/h1>
+&lt;div id="refs" class="references csl-bib-body hanging-indent">
+&lt;div id="ref-lovelace_open_2021" class="csl-entry">
+Lovelace, Robin. 2021. &lt;span>“Open Source Tools for Geographic Analysis in Transport Planning.”&lt;/span> &lt;em>Journal of Geographical Systems&lt;/em>, January. &lt;a href="https://doi.org/10.1007/s10109-020-00342-2">https://doi.org/10.1007/s10109-020-00342-2&lt;/a>.
+&lt;/div>
+&lt;div id="ref-lovelace_open_2020" class="csl-entry">
+Lovelace, Robin, John Parkin, and Tom Cohen. 2020. &lt;span>“Open Access Transport Models: &lt;span>A&lt;/span> Leverage Point in Sustainable Transport Planning.”&lt;/span> &lt;em>Transport Policy&lt;/em> 97 (October): 47–54. &lt;a href="https://doi.org/10.1016/j.tranpol.2020.06.015">https://doi.org/10.1016/j.tranpol.2020.06.015&lt;/a>.
+&lt;/div>
+&lt;/div>
+&lt;/div></description></item></channel></rss>

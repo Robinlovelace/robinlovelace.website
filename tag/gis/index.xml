@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GIS | Robin Lovelace</title><link>https://www.robinlovelace.net/tag/gis/</link><atom:link href="https://www.robinlovelace.net/tag/gis/index.xml" rel="self" type="application/rss+xml"/><description>GIS</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 20 Jan 2015 00:00:00 +0000</lastBuildDate><image><url>https://www.robinlovelace.net/media/icon_hu93dbabadc2a9bdd4930d1377c0b338b2_5137_512x512_fill_lanczos_center_3.png</url><title>GIS</title><link>https://www.robinlovelace.net/tag/gis/</link></image><item><title>R vs QGIS for sustainable transport planning</title><link>https://www.robinlovelace.net/post/2015-04-20-r-vs-qgis-for-transport/</link><pubDate>Tue, 20 Jan 2015 00:00:00 +0000</pubDate><guid>https://www.robinlovelace.net/post/2015-04-20-r-vs-qgis-for-transport/</guid><description>&lt;p>The 23rd iteration of the GIS Research UK conference
+(&lt;a href="https://github.com/Robinlovelace/stplanr" target="_blank" rel="noopener">#GISRUK&lt;/a>)
+conference was the largest ever. 250 researchers,
+industry representatives and academics attended from the
+vibrant geospatial research communities in the
+UK, Europe and beyond. GISRUK has become a centrepoint for discussion
+of new methods, software and applications in the field. I
+was on the &lt;a href="http://leeds.gisruk.org/contact.html" target="_blank" rel="noopener">organising committee&lt;/a>,
+reviewed some excellent papers for the event
+(a full list of these is
+&lt;a href="http://leeds.gisruk.org/programme.html" target="_blank" rel="noopener">available for download here&lt;/a>) and
+attended some truly ground-breaking talks.
+This experience has shown that the geospatial community
+in the UK is strong,
+especially with regards to growth in open access
+data and open source software in the field.&lt;/p>
+&lt;p>&lt;a href="https://www.flickr.com/photos/97888609@N02/17025120518" title="img_2814 by Robin Lovelace, on Flickr">&lt;img src="https://farm6.staticflickr.com/5450/17025120518_ebfba47bff_s.jpg" width="75" height="75" alt="img_2814">&lt;/a>&lt;/p>
+&lt;p>This article is about one part of GISRUK and insights gleaned from it
+about R, QGIS and other tools for sustainable transport planning.
+&lt;a href="https://github.com/Robinlovelace/GIS4TA" target="_blank" rel="noopener">GIS for Transport Applications&lt;/a>
+(&lt;a href="https://twitter.com/hashtag/gis4ta?src=hash" target="_blank" rel="noopener">#GIS4TA for short&lt;/a>) was a practical day-long workshop
+that preceded the main event.
+I organised the workshop and (with help from
+&lt;a href="http://www.geog.leeds.ac.uk/people/e.odiari" target="_blank" rel="noopener">Eusebio Odiari&lt;/a>,
+&lt;a href="https://tgrg.wordpress.com/" target="_blank" rel="noopener">The Transport Geography Research Group&lt;/a>
+and the
+&lt;a href="http://www.rgs.org/HomePage.htm" target="_blank" rel="noopener">Royal Geographical Society&lt;/a>)
+it seems to have been a great success. More than 30
+people attended, including a decent portion
+from transport consultancies such as
+&lt;a href="http://www.itpworld.net/index.html" target="_blank" rel="noopener">Integrated Transport Planning Ltd&lt;/a>
+&lt;a href="http://www.trpconsult.com/" target="_blank" rel="noopener">TRP Consulting&lt;/a> and the
+&lt;a href="http://www.era.europa.eu/Pages/Home.aspx" target="_blank" rel="noopener">European Railway Association (ERA)&lt;/a>.
+Specifically, it is about the use of R
+and QGIS tools for transport planning and the potential for their
+adoption in academic, public and private-sector transport planning.
+The focus of the workshop was deliberately on open source software
+and sustainable transport because these are growth
+areas in the field that are essential for
+democratic
+and healthy
+transport systems compatible with the
+science of climate change (&lt;a href="http://www.opentraffic.net/en/">&lt;span class="citation">Tamminga, 2012&lt;/span>&lt;/a>).
+A recent report, for example, suggests we need to almost completely
+transition away from fossil fuels by 2050
+(&lt;a href="http://dx.doi.org/10.1038/nature14016" target="_blank" rel="noopener">McGlade et al., 2015&lt;/a>).
+New datasets and methods for analysing and modelling them can
+help get us there in the recalcitrant transport sector
+(&lt;a href="http://dx.doi.org/10.1016/j.jtrangeo.2014.07.010" target="_blank" rel="noopener">Gossling, 2014&lt;/a>).&lt;/p>
+&lt;h1 id="r-for-transport-applications">R for transport applications&lt;/h1>
+&lt;p>The workshop kicked-off with a short
+talk on &amp;lsquo;R and QGIS for transport applications&amp;rsquo;,
+which laid out some of the motivations for running the
+workshop outlined above. Other than a few
+&amp;rsquo;early adopters&amp;rsquo;, the transport modelling community
+is generally conservative, based largely on mature
+proprietary products such as
+&lt;a href="http://www.saturnsoftware.co.uk/7.html" target="_blank" rel="noopener">SATURN&lt;/a>
+and
+&lt;a href="http://vision-traffic.ptvgroup.com/en-us/products/ptv-vissim/" target="_blank" rel="noopener">Vissim&lt;/a>.&lt;/p>
+&lt;p>The slides from this talk are available here:&lt;/p>
+&lt;script async class="speakerdeck-embed" data-id="91fce9cf5c36405b8969c6b6954c4fe6" data-ratio="1.41436464088398" src="//speakerdeck.com/assets/embed.js">&lt;/script>
+&lt;p>&lt;strong>Tutorial: &lt;a href="https://github.com/Robinlovelace/GIS4TA/releases/download/0.1/intro-r-qgis-4ta.pdf" target="_blank" rel="noopener">Introduction to R and QGIS for transport applications&lt;/a>&lt;/strong>&lt;/p>
+&lt;h1 id="routing-with-r">Routing with R&lt;/h1>
+&lt;p>The second talk was by Nick Bearman, who provided an overview of
+routing in R, as well as an excellent
+&lt;a href="https://github.com/nickbearman/transport-workshop/blob/master/transport-workshop.pdf" target="_blank" rel="noopener">practical tutorial&lt;/a>.&lt;/p>
+&lt;p>The practical demonstrated 2 ways of routing in R:&lt;/p>
+&lt;ol>
+&lt;li>Using &lt;strong>ggmap&lt;/strong>. The following code was used to navigate to the event!&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">from &amp;lt;- &amp;#39;Leeds station, New Station Street, Leeds LS1 5DL, United Kingdom&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">to &amp;lt;- &amp;#39;LS2 9JT&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">route_df &amp;lt;- route(from, to, structure = &amp;#39;route&amp;#39;, mode = &amp;#39;walking&amp;#39;)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">qmap(&amp;#39;Merrion Centre&amp;#39;, zoom = 15) +
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> geom_path(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> aes(x = lon, y = lat), colour = &amp;#39;red&amp;#39;, size = 1.5,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> data = route_df, lineend = &amp;#39;round&amp;#39;)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://github.com/Robinlovelace/robinlovelace.github.io/raw/master/_posts/writeup_files/figure-html/unnamed-chunk-2-1.png" alt="" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;ol start="2">
+&lt;li>The &lt;a href="https://github.com/Robinlovelace/stplanr" target="_blank" rel="noopener">package I created, &lt;strong>stplanr&lt;/strong>&lt;/a>,
+to get routes optimised for cyclists (see &lt;a href="https://github.com/nickbearman/transport-workshop/blob/master/transport-workshop.Rmd" target="_blank" rel="noopener">transport-workshop.Rmd&lt;/a> for a working version):&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">rquiet &amp;lt;- gLines2CyclePath(l = rlines, plan = &amp;#34;quietest&amp;#34;)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">plot(rquiet[1,]) # route from Leeds station to Leeds University (North - South)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">plot(rquiet[2,]) # route from Leeds to Manchester!
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://github.com/Robinlovelace/robinlovelace.github.io/raw/master/_posts/writeup_files/figure-html/unnamed-chunk-4-1.png" alt="" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;p>&lt;strong>Tutorial: &lt;a href="https://github.com/nickbearman/transport-workshop/blob/master/transport-workshop.pdf" target="_blank" rel="noopener">Route analysis using R&lt;/a>&lt;/strong>&lt;/p>
+&lt;h1 id="large-gps-datasets-with-postgis">Large gps datasets with PostGIS&lt;/h1>
+&lt;p>The most technical session involved using R to query huge datasets storing
+GPS data containing 100,000+ rows. Amazingly, Richard and Adrian Ellison
+set up a remotely accessible database instance &lt;strong>from their laptop&lt;/strong> which
+participants queried via
+&lt;a href="http://cran.r-project.org/web/packages/RPostgreSQL/index.html" target="_blank" rel="noopener">&lt;strong>RPostgreSQL&lt;/strong>&lt;/a>.
+Their session information can be seen here:&lt;/p>
+&lt;p>&lt;a href="https://github.com/richardellison/GIS4TA_GPS" target="_blank" rel="noopener">&lt;strong>github.com/richardellison/GIS4TA_GPS&lt;/strong>&lt;/a>&lt;/p>
+&lt;h1 id="a-hackathon">A hackathon&lt;/h1>
+&lt;p>Finally there was a miniature hackathon organised by Godwin Yeboah.
+Participants made progress in better understanding the travel
+patterns of cyclists using real data. The hackathon notes can be found here:&lt;/p>
+&lt;p>&lt;a href="https://github.com/spatialscientist/GIS4TA2015" target="_blank" rel="noopener">github.com/spatialscientist/GIS4TA2015&lt;/a>&lt;/p>
+&lt;h1 id="summary">Summary&lt;/h1>
+&lt;p>GIS is a field of knowledge that has a huge amount to offer transport
+planners and researchers, especially regarding new and open source
+software tools that can effectively generate, process and analyse
+transport-related data. R is well-suited to fill this research gap and
+has a wide range of tools to help. Packages such as &lt;strong>ggmap&lt;/strong>
+(Kahle and Wickham 2013),
+&lt;strong>RPostgreSQL&lt;/strong>
+and the new &lt;a href="https://github.com/Robinlovelace/stplanr" target="_blank" rel="noopener">&lt;strong>stplanr&lt;/strong>&lt;/a>
+have great potential to help plan the transport systems of the future.
+QGIS is also increasingly attractive for transport applications, with
+it inbuilt support for
+&lt;a href="http://planet.qgis.org/planet/tag/pgrouting/" target="_blank" rel="noopener">PGRouting&lt;/a>,
+&lt;a href="http://plugins.qgis.org/plugins/FlowMapper/" target="_blank" rel="noopener">flow analysis&lt;/a>
+and a friendly user interface that many will be used to.&lt;/p>
+&lt;p>Photos taken during the hackathon are testament to its role as a forum
+for not only learning but also debate about the future of GIS in transport.
+These can be seen here:&lt;/p>
+&lt;p>&lt;a href="https://www.flickr.com/photos/97888609@N02/sets/72157652012715766" target="_blank" rel="noopener">flickr.com/photos/97888609@N02/sets/72157652012715766&lt;/a>&lt;/p>
+&lt;p>Hearing feedback from users new to R using it to solve transport problems
+provided an insight into how it compares to traditional tools. The removal
+of &amp;lsquo;glass ceilings&amp;rsquo; imposed by restrictive licenses or the need to buy
+&amp;lsquo;add-on&amp;rsquo; features was one comment, but that applies equally to QGIS and
+other &lt;a href="http://foss4g.org/" target="_blank" rel="noopener">FOSS4G&lt;/a>
+offerings. The steep learning curve of R seems to still
+be an issue compared with QGIS, although this is becoming less of an issue
+with the evolution of RStudio as an GUI for R. In conclusion, both R and
+QGIS are coming of age as tools in the transport planner&amp;rsquo;s &amp;lsquo;war cabinet&amp;rsquo;.
+The latest evidence unequivocally shows the impact of transport decisions
+on obesity, environmental degradation and quality of life. So it is time,
+surely, to harness this new open source software to &amp;lsquo;save the world&amp;rsquo;!&lt;/p>
+&lt;h1 id="acknowledgements">Acknowledgements&lt;/h1>
+&lt;p>Thanks to the Consumer Data Research Centre and the Royal Geographical
+society for subsidising the event. Thanks to all the participants and
+especially the demonstrators Godwin, Nick, Adrian and Richard for making it
+happen.&lt;/p>
+&lt;h1 id="references">References&lt;/h1>
+&lt;p>Gössling, Stefan, and Scott Cohen. 2014. “Why sustainable transport policies will fail: EU climate policy in the light of transport taboos.” Journal of Transport Geography 39 (July). Elsevier Ltd: 197–207. doi:10.1016/j.jtrangeo.2014.07.010.&lt;/p>
+&lt;p>Kahle, D, and Hadley Wickham. 2013. “ggmap: Spatial Visualization with ggplot2.” The R Journal 5: 144–61. &lt;a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.375.8693&amp;amp;rep=rep1&amp;amp;type=pdf" target="_blank" rel="noopener">citeseerx.ist.psu.edu&lt;/a>.&lt;/p>
+&lt;p>McGlade, Christophe, and Paul Ekins. 2015. “The geographical distribution of fossil fuels unused when limiting global warming to 2 °C.” Nature 517 (7533). Nature Publishing Group: 187–90. doi:10.1038/nature14016.&lt;/p>
+&lt;p>Tamminga, Guus, Marc Miska, Edgar Santos, Hans van Lint, Arturo Nakasone, Helmut Prendinger, and Serge Hoogendoorn. 2012. “Design of Open Source Framework for Traffic and Travel Simulation.” Transportation Research Record: Journal of the Transportation Research Board 2291 (-1): 44–52. doi:10.3141/2291-06.&lt;/p></description></item><item><title>Clipping spatial data in R</title><link>https://www.robinlovelace.net/post/2014-07-29-clipping-with-r/</link><pubDate>Tue, 29 Jul 2014 00:00:00 +0000</pubDate><guid>https://www.robinlovelace.net/post/2014-07-29-clipping-with-r/</guid><description>&lt;h1 id="heading">&lt;/h1>
+&lt;p>This miniature vignette shows how to clip spatial data based on different spatial objects in R and a &amp;lsquo;bounding box&amp;rsquo;. Spatial overlays are common in GIS applications and R users are fortunate that the clipping and spatial subsetting functions are mature and fairly fast. We&amp;rsquo;ll also write a new function called &lt;code>gClip()&lt;/code>, that will make clipping by bounding boxes easier.&lt;/p>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://raw.githubusercontent.com/Robinlovelace/Creating-maps-in-R/master/vignettes/clipping-with-bounding-box_files/figure-markdown_github/Westminster.png" alt="plot of chunk Westminster" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;h2 id="loading-the-data">Loading the data&lt;/h2>
+&lt;p>To start with let&amp;rsquo;s load some data. I&amp;rsquo;m working in the root directory of the &lt;a href="https://github.com/Robinlovelace/Creating-maps-in-R" target="_blank" rel="noopener">Creating-maps-in-R&lt;/a> github repository, so there are some spatial datasets available to play with:&lt;/p>
+&lt;pre>&lt;code>setwd(&amp;quot;../&amp;quot;)
+library(rgdal)
+stations &amp;lt;- readOGR(&amp;quot;data&amp;quot;, &amp;quot;lnd-stns&amp;quot;)
+## OGR data source with driver: ESRI Shapefile
+## Source: &amp;quot;data&amp;quot;, layer: &amp;quot;lnd-stns&amp;quot;
+## with 2532 features and 27 fields
+## Feature type: wkbPoint with 2 dimensions
+zones &amp;lt;- readOGR(&amp;quot;data&amp;quot;, &amp;quot;london_sport&amp;quot;)
+## OGR data source with driver: ESRI Shapefile
+## Source: &amp;quot;data&amp;quot;, layer: &amp;quot;london_sport&amp;quot;
+## with 33 features and 4 fields
+## Feature type: wkbPolygon with 2 dimensions
+&lt;/code>&lt;/pre>
+&lt;h2 id="the-wonder-of-spatial-subsetting-in-r">The wonder of spatial subsetting in R&lt;/h2>
+&lt;p>Now, it&amp;rsquo;s easy to &lt;strong>subset&lt;/strong> spatial data in R, using the same incredibly concise square bracket &lt;code>[]&lt;/code> notation as R uses for non spatial data. To re-confirm how this works on non-spatial data, here&amp;rsquo;s a mini example:&lt;/p>
+&lt;pre>&lt;code>M &amp;lt;- matrix(1:10, ncol = 5)
+M[2, 3:5]
+## [1] 6 8 10
+&lt;/code>&lt;/pre>
+&lt;p>The above code creates a matrix with 5 columns and 2 rows: the &lt;code>[2, 3:5]&lt;/code> part takes the subset of &lt;code>M&lt;/code> corresponding to 3rd to 5th columns in the second row.&lt;/p>
+&lt;p>Subsetting spatial data works in exactly the same way: note that &lt;code>zones&lt;/code> are far more extensive than the &lt;code>stations&lt;/code> points. (We have to change the projection of &lt;code>stations&lt;/code> before plotting, so the objects are on the same coordinate reference system.)&lt;/p>
+&lt;pre>&lt;code>stations &amp;lt;- spTransform(stations, CRS(proj4string(zones))) # transform CRS
+plot(zones)
+points(stations)
+&lt;/code>&lt;/pre>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://raw.githubusercontent.com/Robinlovelace/Creating-maps-in-R/master/vignettes/clipping-with-bounding-box_files/figure-markdown_github/unnamed-chunk-3.png" alt="plot of chunk unnamed-chunk-3" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;p>So how do we select only points that are are within the zones of London? Believe it or not, it&amp;rsquo;s as simple as subsetting the matrix &lt;code>M&lt;/code> above. This is an amazingly concise and convenient way of spatial subsetting that was added to R at some point between versions 1 and 2 of &lt;a href="http://www.asdar-book.org/" target="_blank" rel="noopener">Applied Spatial Data Analysis with R&lt;/a>. In the earlier (2008) book, one had to use &lt;code>overlay(x, y)&lt;/code> just to get the selection, and then another line of code was required to actually make the subset. Now things are much simpler. As Bivand et al. put it in the &lt;a href="http://www.springer.com/statistics/life&amp;#43;sciences,&amp;#43;medicine&amp;#43;%26&amp;#43;health/book/978-1-4614-7617-7" target="_blank" rel="noopener">latest edtion&lt;/a> (p. 131), &amp;ldquo;the selection syntax for features was extended such that it understands:&amp;rdquo;&lt;/p>
+&lt;pre>&lt;code>stations_subset &amp;lt;- stations[zones, ]
+&lt;/code>&lt;/pre>
+&lt;p>&lt;strong>This is so amazing and intuitive, whoever invented it should be given a medal!!&lt;/strong> Despite this simplicity, it seems many R users who I&amp;rsquo;ve taught spatial functions to are unaware of &lt;code>[]&lt;/code>&amp;rsquo;s spatial extension. So spread the word (and if anyone knows of the history of this innovation, please let us know). Now we have a sample of all stations zones: progress.&lt;/p>
+&lt;pre>&lt;code>plot(zones)
+points(stations_subset)
+&lt;/code>&lt;/pre>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://raw.githubusercontent.com/Robinlovelace/Creating-maps-in-R/master/vignettes/clipping-with-bounding-box_files/figure-markdown_github/unnamed-chunk-5.png" alt="plot of chunk unnamed-chunk-5" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;h2 id="clipping-by-a-bounding-box">Clipping by a bounding box&lt;/h2>
+&lt;p>But what if we want to &lt;em>clip&lt;/em> the polygons data, based on a bounding box? To start with, let&amp;rsquo;s look at and modify the existing bounding box for the zones, making it half the size:&lt;/p>
+&lt;pre>&lt;code>b &amp;lt;- bbox(zones)
+b[1, ] &amp;lt;- (b[1, ] - mean(b[1, ])) * 0.5 + mean(b[1, ])
+b[2, ] &amp;lt;- (b[2, ] - mean(b[2, ])) * 0.5 + mean(b[2, ])
+b &amp;lt;- bbox(t(b))
+plot(zones, xlim = b[1, ], ylim = b[2, ])
+&lt;/code>&lt;/pre>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://raw.githubusercontent.com/Robinlovelace/Creating-maps-in-R/master/vignettes/clipping-with-bounding-box_files/figure-markdown_github/unnamed-chunk-6.png" alt="plot of chunk unnamed-chunk-6" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;p>Now, to clip this area, we can use a custom function, which I&amp;rsquo;ve called &lt;code>gClip&lt;/code>, following the &lt;strong>rgeos&lt;/strong> function naming convention (this was inspired by an online &lt;a href="http://stackoverflow.com/questions/21883683/is-it-possible-to-clip-a-polygon-to-the-bounding-box-of-a-base-map" target="_blank" rel="noopener">answer&lt;/a> that didn&amp;rsquo;t work for me):&lt;/p>
+&lt;pre>&lt;code>library(raster)
+library(rgeos)
+## rgeos version: 0.3-5, (SVN revision 447)
+## GEOS runtime version: 3.4.2-CAPI-1.8.2 r3921
+## Polygon checking: TRUE
+gClip &amp;lt;- function(shp, bb){
+if(class(bb) == &amp;quot;matrix&amp;quot;) b_poly &amp;lt;- as(extent(as.vector(t(bb))), &amp;quot;SpatialPolygons&amp;quot;)
+else b_poly &amp;lt;- as(extent(bb), &amp;quot;SpatialPolygons&amp;quot;)
+gIntersection(shp, b_poly, byid = T)
+}
+zones_clipped &amp;lt;- gClip(zones, b)
+## Warning: spgeom1 and spgeom2 have different proj4 strings
+plot(zones_clipped)
+&lt;/code>&lt;/pre>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://raw.githubusercontent.com/Robinlovelace/Creating-maps-in-R/master/vignettes/clipping-with-bounding-box_files/figure-markdown_github/unnamed-chunk-7.png" alt="plot of chunk unnamed-chunk-7" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;p>Note that due to the &lt;code>if&lt;/code> statements in &lt;code>gClip&lt;/code>&amp;rsquo;s body, it can handle almost any spatial data input, and still work. Let&amp;rsquo;s clip to the borough of Westminster, one of London&amp;rsquo;s better known boroughs:&lt;/p>
+&lt;pre>&lt;code>westminster &amp;lt;- zones[grep(&amp;quot;West&amp;quot;, zones$name),]
+zones_clipped_w &amp;lt;- gClip(zones, westminster)
+## Warning: spgeom1 and spgeom2 have different proj4 strings
+plot(zones_clipped_w); plot(westminster, col = &amp;quot;red&amp;quot;, add = T)
+&lt;/code>&lt;/pre>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://raw.githubusercontent.com/Robinlovelace/Creating-maps-in-R/master/vignettes/clipping-with-bounding-box_files/figure-markdown_github/Westminster.png" alt="plot of chunk Westminster" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;h2 id="conclusion">Conclusion&lt;/h2>
+&lt;p>There are many more spatial tips available from the &lt;a href="https://github.com/Robinlovelace/Creating-maps-in-R/raw/master/intro-spatial-rl.pdf" target="_blank" rel="noopener">Introduction to visualising
+spatial data in
+R&lt;/a>
+tutorial that &lt;a href="http://spatial.ly/" target="_blank" rel="noopener">James Cheshire&lt;/a> and I are maintaining. The source code of this post can also be viewed &lt;a href="https://github.com/Robinlovelace/Creating-maps-in-R/blob/master/vignettes/clipping-with-bounding-box.Rmd" target="_blank" rel="noopener">online&lt;/a> as just one of a series of &lt;a href="https://github.com/Robinlovelace/Creating-maps-in-R/tree/master/vignettes" target="_blank" rel="noopener">vignettes&lt;/a> to showcase some of R&amp;rsquo;s impressive spatial capabilities.&lt;/p>
+&lt;h2 id="update">Update&lt;/h2>
+&lt;p>There was a lively discussion of this post when it was first published in 2016.
+Although I&amp;rsquo;ve switched to a new commenting system, the comments, which include more history and a link to the commit that added spatial subsetting to the sp package, can be found here: &lt;a href="https://disqus.com/home/discussion/robinlovelace/clipping_spatial_data_in_r/" target="_blank" rel="noopener">https://disqus.com/home/discussion/robinlovelace/clipping_spatial_data_in_r/&lt;/a>&lt;/p></description></item></channel></rss>
